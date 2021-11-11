@@ -1,12 +1,5 @@
 public class player {
 
-    //need to add a login: user, pass, and history of previous attempts
-        //need to link history with the choice method
-        //make history method last, choice method is just numbers (in same order each time), maybe arrayList,
-            //maybe pop up as a text file after the end to see what you did
-
-    //getters and setters for inventory
-    //shoes, three booleans for cat, matches, coat, book, purple potion, letter opener
     private boolean shoes = false;
     private boolean petCat = false;
     private boolean ignoreCat = false;
@@ -17,6 +10,13 @@ public class player {
     private boolean purpPotion = false;
     private boolean letterOpen = false;
 
+    //need to add a login: user, pass, and history of previous attempts
+        //need to link history with the choice method
+        //make history method last, choice method is just numbers (in same order each time), maybe arrayList,
+            //maybe pop up as a text file after the end to see what you did
+
+    //getters and setters for inventory:
+    //shoes, three booleans for cat, matches, coat, book, purple potion, letter opener
     /*********** SHOES *************/
     public boolean setShoes() {
         if (call room method and see if choice shoes){
@@ -28,19 +28,31 @@ public class player {
     }
 
     /*********** CAT ***********/
-    public boolean setCat() {
+    public boolean setPetCat() {
         if (call room method and see if choice pet){
             petCat = true;
-        } else if (call room and see if choice kick){
+        }
+    }
+    public boolean setKickCat() {
+        if (call room method and see if choice kick){
             kickCat = true;
-        } else {
+        }
+    }
+    public boolean setIgnoreCat() {
+        if (call room method and see if choice ignore){
             ignoreCat = true;
         }
     }
- /** public boolean getCat() {
-        return ;
+
+    public boolean getPetCat() {
+        return petCat;
     }
- **/
+    public boolean getKickCat() {
+        return kickCat;
+    }
+    public boolean getIgnoreCat() {
+        return ignoreCat;
+    }
 
     /*********** MATCHES ***********/
     public boolean setMatches() {
@@ -93,11 +105,6 @@ public class player {
     }
 
     //choice method: equals next keyboard input, var named choice, adds choice to arrayList then returns
-
-
-    public static void main (String[] args){
-
-    }
 
 }
 
