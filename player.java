@@ -18,73 +18,37 @@ public class player {
     //getters and setters for inventory:
     //shoes, three booleans for cat, matches, coat, book, purple potion, letter opener
     /*********** SHOES *************/
-    public void setShoes() {
-            shoes = true;
-    }
-    public boolean getShoes() {
-        return shoes;
-    }
+    public void setShoes() { shoes = true; }
+    public boolean getShoes() { return shoes; }
 
     /*********** CAT ***********/
-    public void setPetCat() {
-           petCat = true;
-    }
-    public void setKickCat() {
-            kickCat = true;
-    }
-    public void setIgnoreCat() {
-            ignoreCat = true;
-    }
+    public void setPetCat() { petCat = true; }
+    public void setKickCat() { kickCat = true; }
+    public void setIgnoreCat() { ignoreCat = true; }
 
-    public boolean getPetCat() {
-        return petCat;
-    }
-    public boolean getKickCat() {
-        return kickCat;
-    }
-    public boolean getIgnoreCat() {
-        return ignoreCat;
-    }
+    public boolean getPetCat() { return petCat; }
+    public boolean getKickCat() { return kickCat; }
+    public boolean getIgnoreCat() { return ignoreCat; }
 
     /*********** MATCHES ***********/
-    public void setMatches() {
-            matches = true;
-    }
-    public boolean getMatches() {
-        return matches;
-    }
+    public void setMatches() { matches = true; }
+    public boolean getMatches() { return matches; }
 
     /*********** COAT ***********/
-    public void setCoat() {
-         coat = true;
-    }
-    public boolean getCoat() {
-        return coat;
-    }
+    public void setCoat() { coat = true; }
+    public boolean getCoat() { return coat; }
 
     /*********** BOOK ***********/
-    public void setBook() {
-            book = true;
-    }
-    public boolean getBook() {
-        return book;
-    }
+    public void setBook() { book = true; }
+    public boolean getBook() { return book; }
 
     /*********** PURPLE POTION ***********/
-    public void setPurpPotion() {
-        purpPotion = true;
-    }
-    public boolean getPurpPotion() {
-        return purpPotion;
-    }
+    public void setPurpPotion() { purpPotion = true; }
+    public boolean getPurpPotion() { return purpPotion; }
 
     /*********** LETTER OPENER ***********/
-    public void setLetterOpen() {
-            letterOpen = true;
-    }
-    public boolean getLetterOpen() {
-        return letterOpen;
-    }
+    public void setLetterOpen() { letterOpen = true; }
+    public boolean getLetterOpen() { return letterOpen; }
 
     //choice method: equals next keyboard input, var named choice, adds choice to arrayList then returns
 
