@@ -18,30 +18,22 @@ public class player {
     //getters and setters for inventory:
     //shoes, three booleans for cat, matches, coat, book, purple potion, letter opener
     /*********** SHOES *************/
-    public boolean setShoes() {
-        if (call room method and see if choice shoes){
+    public void setShoes() {
             shoes = true;
-        }
     }
     public boolean getShoes() {
         return shoes;
     }
 
     /*********** CAT ***********/
-    public boolean setPetCat() {
-        if (call room method and see if choice pet){
-            petCat = true;
-        }
+    public void setPetCat() {
+           petCat = true;
     }
-    public boolean setKickCat() {
-        if (call room method and see if choice kick){
+    public void setKickCat() {
             kickCat = true;
-        }
     }
-    public boolean setIgnoreCat() {
-        if (call room method and see if choice ignore){
+    public void setIgnoreCat() {
             ignoreCat = true;
-        }
     }
 
     public boolean getPetCat() {
@@ -55,50 +47,40 @@ public class player {
     }
 
     /*********** MATCHES ***********/
-    public boolean setMatches() {
-        if (call room method and see if choice matches){
+    public void setMatches() {
             matches = true;
-        }
     }
     public boolean getMatches() {
         return matches;
     }
 
     /*********** COAT ***********/
-    public boolean setCoat() {
-        if (call room method and see if choice coat){
-            coat = true;
-        }
+    public void setCoat() {
+         coat = true;
     }
     public boolean getCoat() {
         return coat;
     }
 
     /*********** BOOK ***********/
-    public boolean setBook() {
-        if (call room method and see if choice book){
+    public void setBook() {
             book = true;
-        }
     }
     public boolean getBook() {
         return book;
     }
 
     /*********** PURPLE POTION ***********/
-    public boolean setPurpPotion() {
-        if (call room method and see if choice purpPotion){
-            purpPotion = true;
-        }
+    public void setPurpPotion() {
+        purpPotion = true;
     }
     public boolean getPurpPotion() {
         return purpPotion;
     }
 
     /*********** LETTER OPENER ***********/
-    public boolean setLetterOpen() {
-        if (call room method and see if choice letterOpen){
+    public void setLetterOpen() {
             letterOpen = true;
-        }
     }
     public boolean getLetterOpen() {
         return letterOpen;
