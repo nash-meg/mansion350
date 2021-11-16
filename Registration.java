@@ -2,6 +2,7 @@ public class Registration {
     private String user;
     private String pass;
 
+    /*********** comment ***********/
     public Registration(String user, String pass){
         this.user = user;
         this.pass = pass;
@@ -22,11 +23,6 @@ public class Registration {
     public void setPass(String pass) {
         this.pass = pass;
     }
-
-
-
-
-
 }
 
 

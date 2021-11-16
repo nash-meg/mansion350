@@ -1,5 +1,4 @@
 public class player {
-
     private boolean shoes = false;
     private boolean petCat = false;
     private boolean ignoreCat = false;
