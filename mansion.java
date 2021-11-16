@@ -1,28 +1,35 @@
 public class mansion {
 
-    /*********** GENERAL FORMAT *************/
-    //println() the story
-        //kdnlfnw w elfnwf wkefiqw fwefwr hqthi5jt34 v dclvknerfnmqwd
-    //new println() for the quesitons
-        //do you want to:
-    //new println() for the options
-        //1 - pqfnqpfn
-        //2 - somfoefn
-        //3 - wqfnmefn
-    //println() tell user to type in
-        //Type the number of the option you choose or press m for map
-    //scan the keyboard input
-    //store in history
-    //if statements to generate where to go next
+    /*********** NOTES *************/
+    //outer methods are floors, inner methods are rooms
+        //put all the room methods in their respective floor method
+
+    //start of each room method:
+        //call the GUI for each floor to show where you have been
+        //call getters from player.class for inventory
+
+    //main part of each room method:
+        //println() the story
+            //println("asdfghjkl. qwertyuiop zxcvbnm.");
+        //println() the quesitons
+            //println("What do you want to do:");
+        //println() the options **USE LETTERS SO MAP INPUT EASIER**
+                                //or should we use numbers so we can do check if input == int, if not check if input == m?
+            //println("A - pqfnqpfn");
+            //println("B - somfoefn");
+            //println("C - wqfnmefn");
+        //println() tell user to type in their option
+            //println("Type the letter of the option you choose or press m for map");
+        //scan the keyboard input + store in history
+            //call playerChoice method from player.class
+
     //set any inventory
+        //call setters from player.class
+    //if statements to generate where to go next
 
     /*********** PROLOGUE *************/
     //prologue method - mostly text, there are options but they don't affect anything
         //show choices in history if time?
-
-    //floor methods
-        //put all the room methods on that floor in their respective floor method
-        //call the GUI for each floor in the methods
 
     /*********** FLOOR ONE *************/
     //room 1 - your bedroom
