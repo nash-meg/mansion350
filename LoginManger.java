@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class LoginManger {
-    String  userName;
-    String password;
+    String  user;
+    String pass;
     String action;
     Registration loginUser;
 
@@ -25,18 +25,18 @@ public class LoginManger {
     private boolean checkUserInput() {
         if (action.equals("L")) {
             for (Registration registration : registrations) {
-                if (registration.getUserName().equals(userName) && registration.getPassword().equals(password)) {
+                if (registration.getUser().equals(user) && registration.getPass().equals(pass)) {
                     System.out.println("You are logged in");
                     loginUser = registration;
                     return true;
                 }
             }
-            System.out.println(" Invalid username and or password, please try again");
+            System.out.println("Invalid username and or password, please try again");
             return false;
 
         }else{
 
-            Registration registration = new Registration(userName,password);
+            Registration registration = new Registration(user,pass);
             registrations.add(registration);
             loginUser = registration;
             System.out.println("Your registration has been completed and you have been automatically logged in");
@@ -51,10 +51,10 @@ public class LoginManger {
 
         action = reader.nextLine();
         System.out.print("Enter username: ");
-        userName = reader.nextLine();
+        user = reader.nextLine();
         System.out.println();
         System.out.print("Enter password: ");
-        password = reader.nextLine();
+        pass = reader.nextLine();
         System.out.println();
 
 

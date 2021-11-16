@@ -1,25 +1,26 @@
 public class Registration {
-    private String userName;
-    private String password;
+    private String user;
+    private String pass;
 
-    public Registration( String userName, String password){
-        this.userName = userName;
-        this.password = password;
+    public Registration(String user, String pass){
+        this.user = user;
+        this.pass = pass;
     }
 
-    public String getUserName() {
-        return userName;
+    /*********** USERNAME ***********/
+    public String getUser() {
+        return user;
     }
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
+    public void setUser(String user) {
+        this.user = user;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    /*********** PASSWORD ***********/
+    public String getPass() {
+        return pass;
+    }
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
 
