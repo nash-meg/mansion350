@@ -18,8 +18,8 @@ public class player {
         userLoggedIn = loginManger.login();
     }
 
-    //getters and setters for inventory:
-    //shoes, three booleans for cat, matches, coat, book, purple potion, letter opener
+    //Getters and setters for inventory:
+    //Shoes, three booleans for cat, matches, coat, book, purple potion, letter opener
     /*********** SHOES *************/
     public void setShoes() { shoes = true; }
     public boolean getShoes() { return shoes; }
@@ -53,7 +53,7 @@ public class player {
     public void setLetterOpen() { letterOpen = true; }
     public boolean getLetterOpen() { return letterOpen; }
 
-    //choice method: equals next keyboard input, var named choice, adds choice to arrayList then returns
+    //Choice method: equals next keyboard input, var named choice, adds choice to arrayList then returns
 }
 
 
