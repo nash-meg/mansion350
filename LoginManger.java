@@ -17,8 +17,7 @@ public class LoginManger {
     Scanner reader = new Scanner(System.in);
     List<Registration> regList = new ArrayList<>();
 
-    //comment describing code
-    //
+    //Prompting the user login
     public boolean login(){
         boolean userLoggedIn = false;
 
@@ -41,7 +40,7 @@ public class LoginManger {
             }
             System.out.println("Invalid username and/or password. Please try again.");
             return false;
-        }else{
+        } else{
             Registration r = new Registration(user, pass);
             regList.add(r);
             loginUser = r;
