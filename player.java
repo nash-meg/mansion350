@@ -17,7 +17,7 @@ public class player {
         while (!userLoggedIn) {
             userLoggedIn = loginManger.login();
         }
-
+    }
         //Getters and setters for inventory:
         //Shoes, three booleans for cat, matches, coat, book, purple potion, letter opener
         /*********** SHOES *************/
@@ -91,6 +91,6 @@ public class player {
 
         //Choice method: equals next keyboard input, var named choice, adds choice to arrayList then returns
     }
-}
+
 
 
