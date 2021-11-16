@@ -21,7 +21,7 @@ public class player {
         //Getters and setters for inventory:
         //Shoes, three booleans for cat, matches, coat, book, purple potion, letter opener
         /*********** SHOES *************/
-        public void setShoes() {
+        public void setShoes(){
             shoes = true;
         }
         public boolean getShoes() {
