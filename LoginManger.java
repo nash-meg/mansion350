@@ -18,6 +18,7 @@ public class LoginManger {
     List<Registration> regList = new ArrayList<>();
 
     //comment describing code
+    //
     public boolean login(){
         boolean userLoggedIn = false;
 
