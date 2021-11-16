@@ -2,6 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//login: user, pass, history of previous attempts
+    //link history with the choice method
+    //make history method last, choice method is just numbers (in same order each time), maybe arrayList,
+    //maybe pop up as a text file after the end to see what you did
+
 public class LoginManger {
     String user;
     String pass;
@@ -11,6 +16,7 @@ public class LoginManger {
     Scanner reader = new Scanner(System.in);
     List<Registration> registrations = new ArrayList<>();
 
+    //comment describing code
     public boolean login(){
         boolean userLoggedIn = false;
 
@@ -21,6 +27,7 @@ public class LoginManger {
         return true;
     }
 
+    //comment describing code
     private boolean checkUserInput() {
         if (action.equals("L")) {
             for (Registration registration : registrations) {
@@ -40,6 +47,8 @@ public class LoginManger {
             return true;
         }
     }
+
+    //comment describing code
     public void promptUser(){
         System.out.println("Please login if you are returning or register for an account if you are new.");
         System.out.println("Type L for login or R for register.");
