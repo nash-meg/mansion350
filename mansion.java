@@ -1,11 +1,4 @@
-import java.util.Scanner;
-
 public class mansion {
-    private int choice;
-
-    Scanner keyboard = new Scanner(System.in);
-    System.out.println("enter which option you choose");
-    choice = keyboard.nextInt();
 
     /*********** GENERAL FORMAT *************/
     //println() the story
@@ -33,24 +26,97 @@ public class mansion {
 
     /*********** FLOOR ONE *************/
     //room 1 - your bedroom
+    /*
+    public room1 (){
+
+    }
+     */
+
     //room 5a - hallway (a bc floor 1)
+    /*
+    public room5a (){
+
+    }
+     */
+
     //room 4 - mallory's bedroom
+    /*
+    public room4 (){
+
+    }
+     */
 
     /*********** FLOOR TWO *************/
     //room 5b - hallway (b bc floor 1)
+    /*
+    public room5b (){
+
+    }
+     */
+
     //room 9 - chamber (butler fight scene)
+    /*
+    public room9 (){
+
+    }
+     */
+
     //room 10 - chamber (potion room)
+    /*
+    public room10 (){
+
+    }
+     */
+
     //room 8 - hallway/stairway (no method for bathroom, just display)
+    /*
+    public room8 (){
+
+    }
+     */
 
     /*********** FLOOR THREE *************/
     //room 11 - kitchen
+    /*
+    public room11 (){
+
+    }
+     */
+
     //room 7 - greenhouse (not labeled on correct floor on pic)
+    /*
+    public room7 (){
+
+    }
+     */
+
     //hide from old man - crosses rooms, lots of booleans for if potion or spell book
+    /*
+    public hideFromMan (){
+
+    }
+     */
 
     /*********** CELLAR *************/
     //general (if not matches or pet cat)
-    //if matches
-    //if pet cat
+    /*
+    public generalCellar (){
 
+    }
+     */
+
+    //if matches
+    /*
+    public matchCellar (){
+
+    }
+     */
+
+    //if pet cat
+    /*
+    public petCatCellar (){
+
+    }
+     */
 
 }

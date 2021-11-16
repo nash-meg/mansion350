@@ -1,4 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class player {
+    //Boolean variables for inventory getters and setters
     private boolean shoes = false;
     private boolean petCat = false;
     private boolean ignoreCat = false;
@@ -8,9 +13,12 @@ public class player {
     private boolean book = false;
     private boolean purpPotion = false;
     private boolean letterOpen = false;
+    //Int variable + scanner for choice method
+    private int choice;
+    Scanner keyboard = new Scanner(System.in);
 
     public player() {
-        /* idek where to put this
+        /* idk where to put this
         System.out.println("The game has begun!");
         LoginManger loginManger = new LoginManger();
 
@@ -66,7 +74,13 @@ public class player {
 
     public boolean getLetterOpen () { return letterOpen; }
 
-    //Choice method: equals next keyboard input, var named choice, adds choice to arrayList then returns
+    //Choice method:
+    //Equals next keyboard input, var named choice, adds choice to arrayList then returns
+    public playerChoice() {
+        ArrayList<String> choiceList = new ArrayList<String>();
+        choice = keyboard.nextInt();
+        choiceList.add(choice);
+    }
 }
 
 
