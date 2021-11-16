@@ -14,8 +14,8 @@ public class player {
     private boolean purpPotion = false;
     private boolean letterOpen = false;
     //Int variable + scanner for choice method
-    private int choice;
     Scanner keyboard = new Scanner(System.in);
+    private char choice = 'x';
 
     public player() {
         /* idk where to put this
@@ -75,11 +75,20 @@ public class player {
     public boolean getLetterOpen () { return letterOpen; }
 
     //Choice method:
-    //Equals next keyboard input, var named choice, adds choice to arrayList then returns
+    //Equals next keyboard input, add choice to arrayList then returns
     public playerChoice() {
         ArrayList<String> choiceList = new ArrayList<String>();
-        choice = keyboard.nextInt();
-        choiceList.add(choice);
+        choice = keyboard.next().charAt(0);
+        if (choice == 'm') {
+            //show map
+            //redisplay keyboard input
+        } else if (choice == 'a' || choice == 'b' || choice == 'c') {
+            choiceList.add(choice);
+        } else {
+            System.out.println("Invalid choice, please type a letter from the options above or \"m\" to see the map.");
+            //redisplay keyboard input
+        }
+        return;
     }
 }
 
