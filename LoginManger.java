@@ -28,7 +28,7 @@ public class LoginManger {
         return true;
     }
 
-    //comment describing code
+    //Either logging in old users or registering new users
     private boolean checkUserInput() {
         if (action.equals("L")) {
             for (Registration r : regList) {r.getPass().equals(pass)) {
@@ -48,7 +48,7 @@ public class LoginManger {
         }
     }
 
-    //comment describing code
+    //Print statements for login/register actions
     public void promptUser(){
         System.out.println("Please login if you are returning or register for an account if you are new.");
         System.out.println("Type L for login or R for register.");
