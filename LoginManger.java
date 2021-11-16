@@ -30,10 +30,11 @@ public class LoginManger {
     }
 
     //Either logging in old users or registering new users
+
     private boolean checkUserInput() {
         if (action.equals("L")) {
             for (Registration r : regList) {
-                if(r.getUser().equals(pass) && r.getPass().equals(pass)) {
+                if(r.getUser().equals(user) && r.getPass().equals(pass)) {
                     System.out.println("You are logged in as " + user + ".");
                     loginUser = r;
                     return true;
