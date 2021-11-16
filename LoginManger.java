@@ -13,8 +13,9 @@ public class LoginManger {
     String action;
     Registration loginUser;
 
+    //Initiating the scanner + making ArrayList to receive username and password
     Scanner reader = new Scanner(System.in);
-    List<Registration> registrations = new ArrayList<>();
+    List<Registration> regList = new ArrayList<>();
 
     //comment describing code
     public boolean login(){
@@ -30,19 +31,18 @@ public class LoginManger {
     //comment describing code
     private boolean checkUserInput() {
         if (action.equals("L")) {
-            for (Registration registration : registrations) {
-                if (registration.getUser().equals(user) && registration.getPass().equals(pass)) {
+            for (Registration r : regList) {r.getPass().equals(pass)) {
                     System.out.println("You are logged in as " + user + ".");
-                    loginUser = registration;
+                    loginUser = r;
                     return true;
                 }
             }
             System.out.println("Invalid username and/or password. Please try again.");
             return false;
         }else{
-            Registration registration = new Registration(user, pass);
-            registrations.add(registration);
-            loginUser = registration;
+            Registration r = new Registration(user, pass);
+            regList.add(r);
+            loginUser = r;
             System.out.println("Your registration has been completed and you have been automatically logged in.");
             return true;
         }
