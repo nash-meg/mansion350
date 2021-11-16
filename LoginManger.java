@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-//Login: user, pass, history of previous attempts
-    //Link history with the choice method
-    //Make history method last, choice method is just numbers (in same order each time), maybe arrayList,
-    //Maybe pop up as a text file after the end to see what you did
+//login: user, pass, history of previous attempts
+    //link history with the choice method
+    //make history method last, choice method is just numbers (in same order each time), maybe arrayList,
+    //maybe pop up as a text file after the end to see what you did
 
 public class LoginManger {
     String user;
@@ -17,11 +17,11 @@ public class LoginManger {
     Scanner reader = new Scanner(System.in);
     List<Registration> regList = new ArrayList<>();
 
-    //Prompting the user to login if not logged in
+    //comment describing code
     public boolean login(){
         boolean userLoggedIn = false;
 
-        while (!userLoggedIn){
+        while (!userLoggedIn ){
             promptUser();
             userLoggedIn = checkUserInput();
         }
@@ -31,7 +31,8 @@ public class LoginManger {
     //comment describing code
     private boolean checkUserInput() {
         if (action.equals("L")) {
-            for (Registration r : regList) {r.getPass().equals(pass)) {
+            for (Registration r : regList) {
+                if(r.getUser().equals(pass) && r.getPass().equals(pass)) {
                     System.out.println("You are logged in as " + user + ".");
                     loginUser = r;
                     return true;

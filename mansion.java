@@ -1,7 +1,11 @@
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 public class mansion {
 
     /*********** GENERAL FORMAT *************/
         //println() the story
+
+
             //kdnlfnw w elfnwf wkefiqw fwefwr hqthi5jt34 v dclvknerfnmqwd
         //new println() for the quesitons
             //do you want to:
