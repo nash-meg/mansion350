@@ -1,5 +1,5 @@
 public class map {
 
-    //code goes here
+    //GUI code goes here
 
 }
