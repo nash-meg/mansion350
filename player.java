@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class player {
@@ -13,9 +12,10 @@ public class player {
     private boolean book = false;
     private boolean purpPotion = false;
     private boolean letterOpen = false;
+    ArrayList<Integer> choiceList = new ArrayList<Integer>();
     //Int variable + scanner for choice method
     Scanner keyboard = new Scanner(System.in);
-    private char choice = 'x';
+    private int choice = -1;
 
     public player() {
         // idk where to put this
@@ -66,20 +66,18 @@ public class player {
 
     //Choice method:
     //Equals next keyboard input, add choice to arrayList then returns
-    /*public playerChoice() {
-        ArrayList<String> choiceList = new ArrayList<String>();
-        choice = keyboard.next().charAt(0);
-        if (choice == 'm') {
-            //show map
-            //redisplay keyboard input
-        } else if (choice == 'a' || choice == 'b' || choice == 'c') {
+    public int playerChoice() {
+        choice = keyboard.nextInt();
+        if (choice == 0) {
+            return 0;
+        } else if (choice > 0 ) {
             choiceList.add(choice);
+            return choice;
         } else {
             System.out.println("Invalid choice, please type a letter from the options above or \"m\" to see the map.");
-            //redisplay keyboard input
+            return -2;
         }
-        return;
-    }*/
+    }
 }
 
 
