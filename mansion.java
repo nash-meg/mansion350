@@ -1,5 +1,6 @@
 public class mansion {
 
+    //little thing for prologue
     boolean plate = false;
     /*********** NOTES *************/
     //outer methods are floors, inner methods are rooms
