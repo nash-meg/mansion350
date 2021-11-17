@@ -45,7 +45,7 @@ public class mansion {
                 "To select an option, type the number on your keyboard and hit enter. Also, some sections of" +
                 "the story are longer than others, so you may need to hit enter to continue reading.\n" +
                 "The one graphic you do get to reap the benefits of is a map. You can pull up this map during" +
-                "given opportunities by typing “m” and hitting enter.\n" +
+                "given opportunities by typing “0” and hitting enter.\n" +
                 "We hope you enjoy, good luck, and don’t kick the cat.\n" +
                 "- The devious minds behind the code");
         System.out.println("Please choose an option below:");
@@ -60,7 +60,7 @@ public class mansion {
     public void prologue() {
         System.out.println("story goes here" +
                 "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type \"0\" for the map:");
         System.out.println("1 - choice.\n" +
                 "2 - choice.");
         //call choice method in player.class
@@ -72,7 +72,7 @@ public class mansion {
     public void room1 (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -84,7 +84,7 @@ public class mansion {
     public void room5a (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -96,7 +96,7 @@ public class mansion {
     public void room4 (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -109,7 +109,7 @@ public class mansion {
     public room5b (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -121,7 +121,7 @@ public class mansion {
     public void room9 (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -133,7 +133,7 @@ public class mansion {
     public void room10 (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -145,7 +145,7 @@ public class mansion {
     public void room8 (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -158,7 +158,7 @@ public class mansion {
     public void room11 (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -170,7 +170,7 @@ public class mansion {
     public void room7 (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -182,7 +182,7 @@ public class mansion {
     public void hideFromMan (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -195,7 +195,7 @@ public class mansion {
     public void generalCellar (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -207,7 +207,7 @@ public class mansion {
     public void matchCellar (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
@@ -219,7 +219,7 @@ public class mansion {
     public void petCatCellar (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below:");
+        System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         //call choice method in player.class
