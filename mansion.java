@@ -51,6 +51,7 @@ public class mansion {
     System.out.println("1 - Continue to game.\n" +
             "2 - Exit.");
     //call choice method in player.class
+    //some stuff here
 
     /*********** PROLOGUE *************/
     //prologue method - mostly text, there are options but they don't affect anything
