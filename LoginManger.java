@@ -1,5 +1,14 @@
+import org.omg.CORBA.portable.OutputStream;
+
+import javax.xml.xpath.XPath;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileReader;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 //login: user, pass, history of previous attempts
@@ -10,18 +19,19 @@ import java.util.Scanner;
 public class LoginManger {
     String user;
     String pass;
+    String email;
     String action;
     Registration loginUser;
 
     //Initiating the scanner + making ArrayList to receive username and password
     Scanner reader = new Scanner(System.in);
-    List<Registration> regList = new ArrayList<>();
+
 
     //Prompting the user login
-    public boolean login(){
+    public boolean login() {
         boolean userLoggedIn = false;
 
-        while (!userLoggedIn ){
+        while (!userLoggedIn) {
             promptUser();
             userLoggedIn = checkUserInput();
         }
@@ -30,9 +40,11 @@ public class LoginManger {
 
     //Either logging in old users or registering new users
     private boolean checkUserInput() {
-        if (action.equals("L")) {
-            for (Registration r : regList) {
-                if(r.getUser().equals(pass) && r.getPass().equals(pass)) {
+
+        if (action.equals("L".toLowerCase(Locale.ROOT))) {
+            Registration.Load();
+            for (Registration r : Registration.regList) {
+                if (r.getUser().equals(user) && r.getPass().equals(pass) && r.getEmail().equals(email)) {
                     System.out.println("You are logged in as " + user + ".");
                     loginUser = r;
                     return true;
@@ -40,17 +52,18 @@ public class LoginManger {
             }
             System.out.println("Invalid username and/or password. Please try again.");
             return false;
-        } else{
-            Registration r = new Registration(user, pass);
-            regList.add(r);
+        } else {
+            Registration r = new Registration(user, pass, email);
             loginUser = r;
+            r.Save();
             System.out.println("Your registration has been completed and you have been automatically logged in.");
             return true;
+
         }
     }
 
     //Print statements for login/register actions
-    public void promptUser(){
+    public void promptUser() {
         System.out.println("Please login if you are returning or register for an account if you are new.");
         System.out.println("Type L for login or R for register.");
 
@@ -62,4 +75,5 @@ public class LoginManger {
         pass = reader.nextLine();
         System.out.println();
     }
+
 }
