@@ -51,7 +51,7 @@ public class mansion {
         System.out.println("Please choose an option below:");
         System.out.println("1 - Continue to game.\n" +
                 "2 - Exit.");
-        //call choice method in player.class
+        player.playerChoice();
     }
 
     /*********** PROLOGUE *************/
@@ -63,7 +63,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type \"0\" for the map:");
         System.out.println("1 - choice.\n" +
                 "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
 
     /*********** FLOOR ONE *************/
@@ -75,7 +75,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -87,7 +87,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -99,7 +99,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -112,7 +112,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -124,7 +124,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -136,7 +136,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -148,7 +148,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -161,7 +161,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -173,7 +173,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -185,7 +185,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -198,7 +198,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -210,7 +210,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
@@ -222,7 +222,7 @@ public class mansion {
         System.out.println("Please choose an option below, or type "0" for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
-        //call choice method in player.class
+        player.playerChoice();
     }
      */
 
