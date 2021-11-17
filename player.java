@@ -12,9 +12,9 @@ public class player {
     private boolean book = false;
     private boolean purpPotion = false;
     private boolean letterOpen = false;
-    ArrayList<Integer> choiceList = new ArrayList<Integer>();
-    //Int variable + scanner for choice method
+    //Scanner, history ArrayList, + int variable for choice method
     Scanner keyboard = new Scanner(System.in);
+    ArrayList<Integer> choiceList = new ArrayList<Integer>();
     private int choice = -1;
 
     public player() {

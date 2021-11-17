@@ -1,6 +1,4 @@
 public class mansion {
-    //little thing for prologue
-    boolean plate = false;
 
     /*********** NOTES *************/
     //outer methods are floors, inner methods are rooms
@@ -11,18 +9,11 @@ public class mansion {
 
     //main part of each room method:
         //println() the story
-            //println("asdfghjkl. qwertyuiop zxcvbnm.");
         //println() the quesitons
-            //println("What do you want to do:");
         //println() the options
-            //println("1 - pqfnqpfn");
-            //println("2 - somfoefn");
-            //println("3 - wqfnmefn");
         //println() tell user to type in their option
-            //println("Type the letter of the option you choose or press m for map");
         //scan the keyboard input + store in history
             //call playerChoice method from player.class
-            //**check if input == int, if not check if input == m
         //if statements to generate where to go next
 
     //set any inventory
@@ -45,7 +36,7 @@ public class mansion {
                 "To select an option, type the number on your keyboard and hit enter. Also, some sections of" +
                 "the story are longer than others, so you may need to hit enter to continue reading.\n" +
                 "The one graphic you do get to reap the benefits of is a map. You can pull up this map during" +
-                "given opportunities by typing “0” and hitting enter.\n" +
+                "given opportunities by typing 0 and hitting enter.\n" +
                 "We hope you enjoy, good luck, and don’t kick the cat.\n" +
                 "- The devious minds behind the code");
         System.out.println("Please choose an option below:");
@@ -60,7 +51,7 @@ public class mansion {
     public void prologue() {
         System.out.println("story goes here" +
                 "and here");
-        System.out.println("Please choose an option below, or type \"0\" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
                 "2 - choice.");
         player.playerChoice();
@@ -72,7 +63,7 @@ public class mansion {
     public void room1 (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -84,7 +75,7 @@ public class mansion {
     public void room5a (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -94,9 +85,10 @@ public class mansion {
     //room 4 - mallory's bedroom
     /*
     public void room4 (){
+        //remember player.setShoes() and player.setCoat()
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -109,7 +101,7 @@ public class mansion {
     public room5b (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -119,9 +111,13 @@ public class mansion {
     //room 9 - chamber (butler fight scene)
     /*
     public void room9 (){
+        //remember player.setPetCat(), player.setKickCat(), or player.setIgnoreCat()
+        //remember player.setBook(), player.setLetterOpen(), player.setMatches()
+        //will need to call player.getPetCat(), player.getKickCat(), and player.getIgnoreCat() in different places later
+        //will need to call player.getLetterOpen() in two places later
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -131,9 +127,10 @@ public class mansion {
     //room 10 - chamber (potion room)
     /*
     public void room10 (){
+        //remember player.setPurpPotion()
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -143,9 +140,10 @@ public class mansion {
     //room 8 - hallway/stairway (no method for bathroom, just display)
     /*
     public void room8 (){
+        //need to call player.getShoes()
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -158,7 +156,7 @@ public class mansion {
     public void room11 (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -168,9 +166,10 @@ public class mansion {
     //room 7 - greenhouse (not labeled on correct floor on pic)
     /*
     public void room7 (){
+        //need to call player.getCoat()
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -180,9 +179,10 @@ public class mansion {
     //hide from old man - crosses rooms, lots of booleans for if potion or spell book
     /*
     public void hideFromMan (){
+        //need to call player.getPurpPotion() and player.getBook() to determine which plot
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -190,12 +190,14 @@ public class mansion {
      */
 
     /*********** CELLAR *************/
+    //need to call player.getMatches() and then player.getPetCat()
+
     //general (if not matches or pet cat)
     /*
     public void generalCellar (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -207,7 +209,7 @@ public class mansion {
     public void matchCellar (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
@@ -219,7 +221,7 @@ public class mansion {
     public void petCatCellar (){
         System.out.println("story goes here" +
              "and here");
-        System.out.println("Please choose an option below, or type "0" for the map:");
+        System.out.println("Please choose an option below, or type 0 for the map:");
         System.out.println("1 - choice.\n" +
             "2 - choice.");
         player.playerChoice();
