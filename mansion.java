@@ -784,63 +784,75 @@ public class mansion {
             //display map
         }
     }
-    //general (if not matches or pet cat)
-    /*
+
+    //general (if not matches or pet cat - catch all)
     public void generalCellar() {
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
-        player.playerChoice();
+        System.out.println("Old man makes you walk towards him, says something " +
+                "about how he almost lost you, and how he had been planning to save " +
+                "you for later, but this will do, you feel life get drained out of you, " +
+                "vision goes black, death :)");
     }
-     */
 
     //if matches
-    /*
     public void matchesCellar() {
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
+        System.out.println("Start walking towards him against your will, he’s " +
+                "monologuing, vision is fogging up, your hand brushes your pocket " +
+                "and you feel the matches\n");
+        System.out.println("1 - Use your matches!\n" +
+                "2 - Don't use your matches.");
         player.playerChoice();
+        if (playerChoice() == 1) { //matches
+            System.out.println("Struggle to grab them from your pocket, try to light the match, " +
+                    "first breaks. Try again?");
+            System.out.println("1 - Yes.\n" +
+                    "2 - No.");
+            player.playerChoice();
+            if (playerChoice() == 1) { //yes
+                System.out.println("Lights, throw it, doesn’t catch. Try again?");
+                System.out.println("1 - Yes.\n" +
+                        "2 - No.");
+                player.playerChoice();
+                if (playerChoice() == 1) { //yes
+                    System.out.println("Lights, throw, flame catches on dead friend’s " +
+                            "shirt, quickly spreads to old man’s robe, he bursts into " +
+                            "flames eerily fast, the spell breaks and your legs give " +
+                            "you, you scramble up, the boards on the door have fallen as " +
+                            "the old man screams in agony, the house begins to crumble " +
+                            "and you run out the door");
+                    if (player.petCat() == true) {
+                         System.out.println("see cat.");
+                    }
+                } else if (playerChoice() == 2) { //no
+                    System.out.println("Death");
+                    //death
+                }
+            } else if (playerChoice() == 2) { //no
+                System.out.println("Death");
+                //death
+            }
+        } else if (playerChoice() == 2) { //don't matches
+            generalCellar();
+        } else if (playerChoice() == 0) { //map
+            System.out.println("Bestie you're time is running out, don't waste it looking at the map.");
+            //redisplay options
+        }
     }
-     */
 
     //if pet cat
-    /*
     public void petCatCellar() {
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
-        player.playerChoice();
+        System.out.println("Turn around and feel yourself being pulled towards the old " +
+                "man, struggle against it.\n" +
+                "See human butler come quietly down stairs behind him, puts a finger to " +
+                "his lips as if to say \"shush\".\n" +
+                "Butler snaps old man's neck\n" +
+                "Old man crumples to floor, boards on door behind you fall down.\n" +
+                "Butler looks at you with a combination of sadness and triumph, weaky " +
+                "tells you to go before the whole place collapses, falls to his knees " +
+                "then into bodies, dies.\n" +
+                "Hear floorboards breaking and start to fall in.\n" +
+                "You run out the back door, mansion falls in.\n" +
+                "Hear birds chirping, it’s dawn now. You wonder whether it was just a " +
+                "few hours or if another whole day has passed.\n" +
+                "Run away, and never fully forget this experience.");
     }
-     */
-
 }
-
-/*
-        System.out.println("You now walk out into the hallway.\n" +
-        "What do you want to do? (Type a number below, or type 0 for the map).");
-        System.out.println("1 - Go down the stairs.\n" +
-        "2 - Try opening the door on your left.\n" +
-        "3 - Try opening the door straight ahead.\n" +
-        "4 - Try opening the boarded up door.");
-        player.playerChoice();
-        if (playerChoice() == 1) { //down stairs
-        room5b();
-        } else if (playerChoice() == 2) { //left door
-        System.out.println("This door is locked, you can't get in.");
-        //redisplay options
-        } else if (playerChoice() == 3) { //door ahead
-        room4();
-        } else if (playerChoice() == 4) { //boared door
-        System.out.println("You can’t bust through this door.");
-        //redisplay options
-        } else if (playerChoice() == 0) { //map
-        //display map
-        }
- */
