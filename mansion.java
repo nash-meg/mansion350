@@ -167,24 +167,72 @@ public class mansion {
                 }
             }
         } else if (playerChoice() == 3) { //desk
-            System.out.println("You can’t sleep. This is a horror game.");
-            //redisplay options
+            System.out.println("You see two items, which would you like to examine?");
+            System.out.println("1 - A picture.\n" +
+            "2 - A book.");
+            player.playerChoice();
+            if (playerChoice() == 1) { //picture
+                System.out.println("Description about the picture: health and date.");
+                //redisplay options (idk if do desk options or room4 options)
+            } else if (playerChoice() == 2) { //book
+                System.out.println("Description about the book: spells, trying to reverse.");
+                //redisplay options (idk if do desk options or room4 options)
+            }
         }
     }
      */
 
     /*********** FLOOR TWO *************/
-    //room void 5b - hallway (b bc floor 1)
-    /*
-    public room5b (){
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
+    //room void 5b - hallway (b bc floor 2)
+    public void room5b () {
+        System.out.println("You're now on a new level of the house. The board squeaks," +
+                "you feel as though you're being watch, and blades swing from ceiling");
+        System.out.println("QUICK! DO SOMETHING! (Type a number below, or type 0 for the map)");
+        System.out.println("1 - DUCK!\n" +
+                "2 - TRY DOORS!\n" +
+                "3 - RUN THROUGH HALL!");
+        /*
         player.playerChoice();
+        if (playerChoice() == 1) { //duck
+            System.out.println("Oh my god you ducked just in time! What now???");
+            System.out.println("1 - Crawl to open door!\n" +
+            "2 - Crawl to closed door!");
+            player.playerChoice();
+            if (playerChoice() == 1) { //open door
+                System.out.println("pitch black, recovery moment to breath, hand reaches " +
+                "out in front of you in hallway light, you rocket upright, hitting the " +
+                "lightswitch, see only a cat in the room with hUGEEE shadow (kinda butler-like?)");
+                System.out.println("How do you react to the cat?");
+                System.out.println("1 - Kick the cat away.\n" +
+                "2 - Reach out to pet the cat.\n" +
+                "3 - Ignore the cat.");
+                player.playerChoice();
+                if (playerChoice() == 1) { //kick
+                    player.setKickCat();
+                    room9();
+                } else if (playerChoice() == 2) { //pet
+                    player.setPetCat();
+                    room9();
+                } else if (playerChoice() == 3) { //ignore
+                    player.setIgnoreCat();
+                    room9();
+                }
+            } else if (playerChoice() == 2) { //closed door
+                System.out.println("Why would you crawl here?? The door doesn't open!" +
+                " Crawl back to the open door.");
+            }
+        } else if (playerChoice() == 2) { //doors
+            System.out.println("Death by blades");
+            //death screen, exit
+        } else if (playerChoice() == 3) { //run
+            System.out.println("Death by blades");
+            //death screen, exit
+        } else if (playerChoice() == 0) { //map
+            System.out.println("Blades are swinging from the ceiling!! This is no time to look at the map!");
+            //redisplay options
+        }
+         */
     }
-     */
 
     //room 9 - chamber (butler fight scene)
     /*
