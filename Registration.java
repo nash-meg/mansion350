@@ -17,12 +17,10 @@ public class Registration {
     }
 
     //Getters and setters
-
     /*********** USERNAME ***********/
     public String getUser() {
         return user;
     }
-
     public void setUser(String user) {
         this.user = user;
     }
@@ -31,7 +29,6 @@ public class Registration {
     public String getPass() {
         return pass;
     }
-
     public void setPass(String pass) {
         this.pass = pass;
     }
@@ -39,17 +36,15 @@ public class Registration {
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String pass) {
         this.email = pass;
     }
 
+    // Save method
     public void Save() {
-
         try {
             File file = new File("forAccounts.txt");
             file.createNewFile();// create a file
-
             FileWriter fileWriter = new FileWriter(file); // write to the file
             fileWriter.write(user, 0 ,user.length());// write the username to the file
             fileWriter.write("\n");
@@ -63,10 +58,10 @@ public class Registration {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-    public static void Load(){
 
+    //Load method
+    public static void Load(){
         try {
             File file = new File("forAccounts.txt");
             Scanner scanner = new Scanner(file); // write to the file
@@ -85,10 +80,8 @@ public class Registration {
                     email = scanner.nextLine();
                     registration = new Registration(user, pass, email);
                     regList.add(registration);
-
                 }
             }
-
             System.out.println("You have been logged in.");
         } catch (IOException e) {
             e.printStackTrace();
