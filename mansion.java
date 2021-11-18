@@ -221,7 +221,6 @@ public class mansion {
         }
     }
 
-
     //room 5a - hallway (a bc floor 1)
     public void room5a() {
         System.out.println("You now walk out into the hallway.\n" +
