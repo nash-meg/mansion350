@@ -294,7 +294,7 @@ public class mansion {
     }
 
     /*********** FLOOR ONE *************/
-    //room 1 - your bedroom
+  /*  //room 1 - your bedroom
     public void room1() {
         System.out.println("You start in your room.\n" +
                 "What do you want to do? (Type a number below, or type 0 for the map).");
@@ -411,7 +411,7 @@ public class mansion {
 
     /*********** FLOOR TWO *************/
     //room void 5b - hallway (b bc floor 2)
-    public void room5b() {
+  /*  public void room5b() {
         System.out.println("You're now on a new level of the house. The board squeaks, " +
                 "you feel as though you're being watched, and blades swing from ceiling");
         System.out.println("QUICK! DO SOMETHING! (Type a number below, or type 0 for the map)");
@@ -722,7 +722,7 @@ public class mansion {
 
     /*********** FLOOR THREE *************/
     //room 11 - kitchen
-    public void room11() {
+   /* public void room11() {
         System.out.println("You find yourself in the kitchen. Probably a good place to look " +
                 "for a weapon in case you get into another fight...\n" +
                 "What will you search? (Type a number below, or type 0 for the map).");
@@ -834,7 +834,7 @@ public class mansion {
 
     /*********** CELLAR *************/
     //need to call player.getMatches() and then player.getPetCat()
-    public void cellar() {
+   /* public void cellar() {
         System.out.println("Immediately when you get down off the stairs, you feel your " +
                 "socks become soaked with something dark and sticky, and you’re hit with " +
                 "a horrible smell that makes your eyes water. As your eyes adjust, you see " +
@@ -947,5 +947,5 @@ public class mansion {
                 "Hear birds chirping, it’s dawn now. You wonder whether it was just a " +
                 "few hours or if another whole day has passed.\n" +
                 "Run away, and never fully forget this experience.");
-    }
+    }*/
 }
