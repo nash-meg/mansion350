@@ -59,39 +59,117 @@ public class mansion {
 
     /*********** FLOOR ONE *************/
     //room 1 - your bedroom
-    /*
+
     public void room1 (){
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
+        System.out.println("You start in your room.");
+        System.out.println("What do you want to do? (Type a number below, or type 0 for the map)");
+        System.out.println("1 - Leave through the door.\n" +
+                "2 - Search the floor.\n" +
+                "3 - Go back to sleep");
+        /*
         player.playerChoice();
+        if (playerChoice() == 1) { //leave
+            room5a();
+        } else if (playerChoice() == 2) { //search floor
+            System.out.println("It’s a floor.");
+            //redisplay options - idk how?
+        } else if (playerChoice() == 3) { //back to sleep
+            System.out.println("You can’t sleep. This is a horror game.");
+            //redisplay options
+        } else if (playerChoice() == 0) { //map
+            //display map
+        }
+         */
     }
-     */
+
 
     //room 5a - hallway (a bc floor 1)
-    /*
     public void room5a (){
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
+        System.out.println("You now walk out into the hallway.");
+        System.out.println("What do you want to do? (Type a number below, or type 0 for the map)");
+        System.out.println("1 - Go down the stairs.\n" +
+                "2 - Try opening the door on your left.\n" +
+                "3 - Try opening the door straight ahead.\n" +
+                "4 - Try opening the boarded up door.");
+        /*
         player.playerChoice();
+        if (playerChoice() == 1) { //down stairs
+            room5b();
+        } else if (playerChoice() == 2) { //left door
+            System.out.println("This door is locked, you can't get in.");
+            //redisplay options
+        } else if (playerChoice() == 3) { //door ahead
+            room4();
+        } else if (playerChoice() == 4) { //boared door
+            System.out.println("You can’t bust through this door.");
+            //redisplay options
+        } else if (playerChoice() == 0) { //map
+            //display map
+        }
+         */
     }
-     */
 
     //room 4 - mallory's bedroom
     /*
     public void room4 (){
-        //remember player.setShoes() and player.setCoat()
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
+        //remember player.setCoat()
+        System.out.println("The door was unlocked. You enter what appears to be the other boy's room.\n" +
+                "What do you do?");
+        System.out.println("1 - Search the bed.\n" +
+                "2 - Search the closet.\n" +
+                "3 - Search the desk");
         player.playerChoice();
+        if (playerChoice() == 1) { //bed
+            System.out.println("Where specifically would you like to search?");
+            System.out.println("1 - Under the pillow.\n" +
+            "2 - Under the mattress.");
+            player.playerChoice();
+            if (playerChoice() == 1) { //pillow
+                System.out.println("There is nothing under here.");
+                //redisplay options (idk if do bed options or room4 options)
+            } else if (playerChoice() == 2) { //mattress
+                System.out.println("You find some iron shackles with what looks like blood on" +
+                " the wrists. They are bolted to the floor underneath the bed.");
+                //redisplay options (idk if do bed options or room4 options)
+            }
+        } else if (playerChoice() == 2) { //closet
+            System.out.println("You see two items, which would you like to examine?");
+            System.out.println("1 - A pair of shoes.\n" +
+            "2 - A worn coat.");
+            player.playerChoice();
+            if (playerChoice() == 1) { //shoes
+                System.out.println("Description about the shoes.");
+                System.out.println("Would you like to put them on?");
+                System.out.println("1 - Yes.\n" +
+                "2 - No.");
+                player.playerChoice();
+                if (playerChoice() == 1) { //yes
+                    System.out.println("You are now wearing shoes.");
+                    player.setShoes();
+                    //redisplay options (idk if do closet options or room4 options)
+                } else if (playerChoice() == 2) { //no
+                    System.out.println("You did not put on the shoes.");
+                    //redisplay options (idk if do closet options or room4 options)
+                }
+            } else if (playerChoice() == 2) { //coat
+                System.out.println("Description about the coat.");
+                System.out.println("Would you like to put it on?");
+                System.out.println("1 - Yes.\n" +
+                "2 - No.");
+                player.playerChoice();
+                if (playerChoice() == 1) { //yes
+                    System.out.println("You are now wearing the coat.");
+                    player.setCoat();
+                    //redisplay options (idk if do closet options or room4 options)
+                } else if (playerChoice() == 2) { //no
+                    System.out.println("You did not put on the coat.");
+                    //redisplay options (idk if do closet options or room4 options)
+                }
+            }
+        } else if (playerChoice() == 3) { //desk
+            System.out.println("You can’t sleep. This is a horror game.");
+            //redisplay options
+        }
     }
      */
 
