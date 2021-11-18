@@ -131,14 +131,43 @@ public class mansion {
                     "3 - Stand there awkwardly");
             choice = you.playerChoice();
             if(choice == 1){
+                System.out.println("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags under his eyes being heavy and " +
+                        "thick. Too heavy for someone his age.\n\n" +
+                        "He locks eye contact with you, his gaze requesting that you hold it as he speaks, 'I wouldn’t trade working here for the world!" +
+                        " I love the work I do, and he’s been extremely generous to let me stay here while I save up to get a place of my own.'\n\n" +
+                        "Despite the cheery tone, you feel a shiver of unease run down your spine as he talks. The words he’s saying are loud and " +
+                        "enthusiastic, and if the only thing in this interaction had been his voice, you may have actually believed him. But his eyes, " +
+                        "which have not faltered since locking with yours… \n\n" +
+                        "God, his eyes...\n\n" +
+                        "They tell a different story entirely. As he speaks, his brows knit together in a look of pain, despair, and exhaustion. " +
+                        "Regret drips from every movement he makes as he shakes his head while discussing the old man’s 'generosity.'\n\n" +
+                        "When he’s finished speaking, Mallory’s expression quickly switches to a smile, and he goes back to his work as if nothing happened.\n\n" +
+                        "You simply stand there, watching him in bewilderment, completely unsure of how to respond. Either Mallory always talks with his facial" +
+                        " expressions wildly mismatching his words, or he was trying to warn you of something. Or perhaps you’ve misinterpreted the" +
+                        " interaction entirely.\n\n" +
+                        "You glance around the dining room, with its chandelier hanging from the ceiling and ornate wallpaper smoothly covering its " +
+                        "walls. As Mallory sets the antique wooden table you notice its intricately-carved embellishments curling over each corner as " +
+                        "if it were being held up by many human hands. Why would a man like him help a person like you? What motivation could someone of this caliber " +
+                        "have for altruism? \n\n" +
+                        "You shake your head. This man was willing to help you when no one else would, and if he plans to exploit you, at the very least" +
+                        " you’ll have a roof over your head. At worst, you figure you could live here until things get bad. Besides, it’s not like an old" +
+                        " man like the one in the kitchen could beat you in a fight.\n\n" +
+                        "You hear the old man’s deep laughter echo from the other room, accompanied by another. He doesn’t sound evil. You sigh to yourself." +
+                        " You’ve always been paranoid, and at this point, you decide it’s best not to look a" +
+                        " gift-horse in the mouth. \n\n");
 
             }
             else if(choice == 2){
-
+                System.out.println("Mallory glances at you with what appears to be genuine fear in his eyes, quickly shaking his head, 'I’ve got it!' he says quickly," +
+                        " seemingly loud enough for those in the kitchen to hear.\n\n" +
+                        "Then he flashes you a small smile, nearly whispering, 'Thank you, though,' before returning to his work.\n\n");
             }
             else if (choice == 3) {
-
-
+                System.out.println("You stand there in a thick silence, neither of you moving to speak. After a moment, you watch as Mallory goes back " +
+                        "to setting the table. He doesn’t move the way you expect him to. Every gesture he makes is stiff, and even jerky at times. The " +
+                        "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but his actions" +
+                        " almost remind you of a deftly-controlled marionette without the strings. You chide yourself for the comparison. " +
+                        "He’s probably just tired. \n\n");
             }
         }
     }
