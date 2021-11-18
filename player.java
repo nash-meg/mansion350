@@ -19,13 +19,13 @@ public class player {
 
     public player() {
         // idk where to put this
-        System.out.println("The game has begun!");
+      /*  System.out.println("The game has begun!");
         LoginManger loginManger = new LoginManger();
 
         boolean userLoggedIn = loginManger.login();
         while (!userLoggedIn) {
             userLoggedIn = loginManger.login();
-        }
+        }*/
        // */
     }
 
