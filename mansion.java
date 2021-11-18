@@ -1,24 +1,4 @@
 public class mansion {
-
-    /*********** NOTES *************/
-    //outer methods are floors, inner methods are rooms
-    //put all the room methods in their respective floor method
-
-    //start of each room method:
-    //call getters from player.class for inventory
-
-    //main part of each room method:
-    //println() the story
-    //println() the quesitons
-    //println() the options
-    //println() tell user to type in their option
-    //scan the keyboard input + store in history
-    //call playerChoice method from player.class
-    //if statements to generate where to go next
-
-    //set any inventory
-    //call setters from player.class
-
     /*********** DIRECTIONS *************/
     public void directions() {
         System.out.println("Sinister Happenings at Huxley Manor\n" +
@@ -598,7 +578,8 @@ public class mansion {
 
 }
 
-System.out.println("You now walk out into the hallway.\n" +
+/*
+        System.out.println("You now walk out into the hallway.\n" +
         "What do you want to do? (Type a number below, or type 0 for the map).");
         System.out.println("1 - Go down the stairs.\n" +
         "2 - Try opening the door on your left.\n" +
@@ -618,3 +599,4 @@ System.out.println("You now walk out into the hallway.\n" +
         } else if (playerChoice() == 0) { //map
         //display map
         }
+ */
