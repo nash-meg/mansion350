@@ -282,12 +282,40 @@ public class mansion {
     public void room9Fight (){
         //will need to call player.getPetCat(), player.getKickCat(), and player.getIgnoreCat() in different places later
         //will need to call player.getLetterOpen() in two places later
-        System.out.println("story goes here" +
-                "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-                "2 - choice.");
+        System.out.println("You hear an *odd cat noise.* You urn around and see the cat " +
+                "growing into an eight-foot tall creature with way too many limbs that " +
+                "resembles the butler. As he’s growing, he mutters out some animalistic-like " +
+                "noises that you could’ve sworn sound like an “I’m sorry.” You’re backing " +
+                "up into the door/shuffling along the room to a door.\n" +
+                "The giant butler thing lunges STRAIGHT AT YOU! QUICK REACT! " +
+                "(Type a number below, or type 0 for the map).");
+        System.out.println("1 - DUCK!\n" +
+                "2 - MOVE TO THE SIDE!");
+        if (player.getLetterOpen() ==  true) {
+            System.out.println("3 - USE LETTER OPENER!\n"
+        }
         player.playerChoice();
+        if (playerChoice() == 1) { //duck
+            //here
+        } else if (playerChoice() == 2) { //move to side
+            //here
+        } else if (playerChoice() == 3) { //letter opener
+            System.out.println("Okay a letter opener is a good weapon!\n" +
+                    "Where do you strike him with it???");
+            System.out.println("1 - Aim for the throat!\n" +
+                    "2 - Aim for the hand!");
+            player.playerChoice();
+            if (playerChoice() == 1) { //throat
+                System.out.println("The butler’s hand grabs you, and slams you into the wall. " +
+                        "He crushes you");
+                //death
+            } else if (playerChoice() == 2) { //hand
+                //Same death as duck with letter opener (Aaiii)
+            }
+        } else if (playerChoice() == 0) { //map
+            System.out.println("The butler thing is coming at you!! Why are you trying to look at the map?!");
+            //redisplay options
+        }
     }
 
     //room 10 - chamber (potion room)
