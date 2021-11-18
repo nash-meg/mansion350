@@ -191,10 +191,36 @@ public class mansion {
                         "The butler smiles, though the smile takes a moment to reach his eyes as he glances at Mallory before" +
                         " seeming to return to the conversation, 'It’s a pleasure to have you here. I can’t wait to show you the ropes.'\n\n");
             }
-            if(choice == 2){
+            else if(choice == 2){
                 System.out.println("You glance apologetically at the butler’s hand, not entirely willing to shake it. He holds his hand" +
                         " out for a moment longer, but after a tight-lipped nod from you, he realizes that you’re not going to shake it " +
                         "and instead withdraws his hand and nods back.\n\n");
+            }
+            System.out.println("Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though" +
+                    " neither you nor Mallory seem to have heard anything of the sort.\n\n" +
+                    "You’re about to let him walk into the other room when you realize something, calling after him, 'Wait-'\n\n" +
+                    "The butler stops and turns to you.\n\n" +
+                    "'I didn’t catch your name,' you say, somewhat nervously. Usually, you wouldn’t ask, but you feel bad just referring to him as 'butler'. \n\n" +
+                    "He gives a small huff of amusement before responding, 'Names are unimportant,' he shrugs, smiling solemnly, 'I’m just the butler.'\n\n" +
+                    "With that, he turns and walks back into the kitchen.\n\n" +
+                    " After a moment, he and the old man emerge with various steaming plates making up an extravagant meal, all of which are arranged" +
+                    " on the table. After a moment, the butler pulls out a chair for the old man, and Mallory sits across from him. Then," +
+                    " the butler gestures for you to sit, seemingly allowing you to choose your spot.\n\n");
+            System.out.println("Where would you like to sit?\n");
+            System.out.println("1 - Sit next to the old man\n" +
+                    "2 - sit next to Mallory\n");
+            choice = you.playerChoice();
+            if(choice == 1){
+                System.out.println("The butler stays off to the side as you take up a seat next to the old man, who flashes" +
+                        " you a toothy grin as you sit down beside him. If you didn’t know any better, you would have thought you saw a " +
+                        "glimmer of pride in his eyes. \n\n" +
+                        "'Eat as much as you like,' he says warmly, passing you a piece of the main dish.\n\n" +
+                        "You smile thankfully, filling your plate as the others begin to eat.\n\n");
+            }
+            else if(choice == 2){
+                System.out.println("Mallory pulls out the chair beside him, flashing you a small smile as you move to sit next to him. " +
+                        "You see the butler smile as well as you sit down and Mallory passes you the tray of mashed potatoes, " +
+                        "'Eat,' he says cheerily, 'you’ll need it.' \n\n");
             }
         }
     }
