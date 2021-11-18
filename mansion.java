@@ -125,6 +125,21 @@ public class mansion {
                         "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he seems genuinely happy to meet you," +
                         " there is also an almost mournful disposition underneath. He goes back to setting the table before you can dwell on it too long. \n\n");
             }
+            System.out.println("What would you like to do?\n");
+            System.out.println("1 - Ask Mallory how he likes working at Huxley Manor\n" +
+                    "2 - Offer to help set the table" +
+                    "3 - Stand there awkwardly");
+            choice = you.playerChoice();
+            if(choice == 1){
+
+            }
+            else if(choice == 2){
+
+            }
+            else if (choice == 3) {
+
+
+            }
         }
     }
 
