@@ -8,8 +8,8 @@ public class Registration {
     private String pass;
     private String email;
     static List<Registration> regList = new ArrayList<>();
-    //Constructor and assigned input to variables
 
+    //Constructor and assigned input to variables
     public Registration(String user, String pass, String email) {
         this.user = user;
         this.pass = pass;
