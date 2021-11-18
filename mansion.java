@@ -167,7 +167,7 @@ public class mansion {
             else if (choice == 3) {
                 System.out.println("You stand there in a thick silence, neither of you moving to speak. After a moment, you watch as Mallory goes back " +
                         "to setting the table. He doesn’t move the way you expect him to. \nEvery gesture he makes is stiff, and even jerky at times. The " +
-                        "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but his actions" +
+                        "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but \nhis actions" +
                         " almost remind you of a deftly-controlled marionette without the strings. You chide yourself for the comparison. " +
                         "He’s probably just tired. \n\n");
             }
