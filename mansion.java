@@ -492,32 +492,61 @@ public class mansion {
 
     /*********** FLOOR THREE *************/
     //room 11 - kitchen
-    /*
     public void room11 (){
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
+        System.out.println("You find yourself in the kitchen. Probably a good place to look " +
+                "for a weapon in case you get into another fight...\n" +
+                "What will you search? (Type a number below, or type 0 for the map).");
+        System.out.println("1 - Search the drawers.\n" +
+                "2 - Look in the pantry.\n" +
+                "3 - Look in the cabinets.\n" +
+                "4 - Look in the fridge.\n" +
+                "5 - Try the far door.\n" +
+                "6 - Try the close door.\n" +
+                "7 - Go into the next room.");
         player.playerChoice();
+        if (playerChoice() == 1) { //search drawers
+            System.out.println("First drawer is an empty utensil drawer. You open the one next to it " +
+                    "to find an empty drawer with note that says \"Nice try\"");
+            //redisplay options
+        } else if (playerChoice() == 2) { //pantry
+            System.out.println("You open the pantry and see normal food - he likes goldfish too hehe.");
+            //redisplay options
+        } else if (playerChoice() == 3) { //cabinets
+            System.out.println("See a skull - have seen the skull before, realize that it was not decorative.");
+            //redisplay options
+        } else if (playerChoice() == 4) { //fridge
+            System.out.println("As you reach for the handle, you see bloody handprint on fridge door." +
+                    "Realizes cranberry juice is blood (knocked over and dripping on the " +
+                    "shelf, thicker/ congealed)");
+            //redisplay options
+        } else if (playerChoice() == 5) { //far door
+            room7();
+        } else if (playerChoice() == 6) { //close door
+            System.out.println("This door is very locked, you can't get in.");
+            //redisplay options
+        } else if (playerChoice() == 7) { //next room
+            hideFromMan();
+        } else if (playerChoice() == 0) { //map
+            //display map
+        }
     }
-     */
 
     //room 7 - greenhouse (not labeled on correct floor on pic)
-    /*
     public void room7 (){
-        //need to call player.getCoat()
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
-        player.playerChoice();
+        System.out.println("Going through this door leads you into a herb garden. " +
+                "See basil, thyme, oregano, an orchid, normal plants, and a carnivorous " +
+                "plant, other spooky plants");
+        if(player.getCoat() == true) {
+            System.out.println("The carnivorous plants start munching on your coat!! " +
+                    "You quickly slide out of your coat and leave the greenhouse.");
+            //redisplay options
+        } else {
+            System.out.println("The carnivorous plants eat you");
+            //death
+        }
     }
-     */
 
     //hide from old man - crosses rooms, lots of booleans for if potion or spell book
-    /*
     public void hideFromMan (){
         //need to call player.getPurpPotion() and player.getBook() to determine which plot
         System.out.println("story goes here" +
@@ -527,7 +556,6 @@ public class mansion {
             "2 - choice.");
         player.playerChoice();
     }
-     */
 
     /*********** CELLAR *************/
     //need to call player.getMatches() and then player.getPetCat()
