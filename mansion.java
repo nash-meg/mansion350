@@ -48,7 +48,7 @@ public class mansion {
                 "an hour ago, you had been on the streets, trying to scrounge whatever money \nyou could to save up for a " +
                 "proper coat for the coming winter. Less than an hour ago, an old man whose name you still don’t know had offered " +
                 "you a job and housing with the only \ncondition being that you came to live with him in his 'humble manor,' as he" +
-                " had called it. Less than an hour ago, against your better judgement and with nothing but your life to lose, " +
+                " had called it. Less than an hour ago, against your better judgement and with nothing but your life to \nlose, " +
                 "you had said yes. \n\n" +
                 "You’re not sure why you’d said yes. You know that you’re what they call 'high risk'. You know that a man" +
                 " like this has the money to cover up your disappearance if it gets noticed. \nHell, when you’d asked his name, " +
@@ -210,7 +210,7 @@ public class mansion {
                     " the butler gestures for you to sit, seemingly allowing you to choose your spot.\n\n");
             System.out.println("Where would you like to sit?\n");
             System.out.println("1 - Sit next to the old man\n" +
-                    "2 - sit next to Mallory\n");
+                    "2 - Sit next to Mallory\n");
             choice = you.playerChoice();
             if(choice == 1){
                 System.out.println("The butler stays off to the side as you take up a seat next to the old man, who flashes" +
@@ -260,7 +260,7 @@ public class mansion {
 
             System.out.println("Over the next few days, you begin to get your bearings at Huxley Manor, and you manage to fall into a bit of a routine. " +
                     "The work isn’t too hard, and Mallory and the butler are \nkind enough. The cat also seems to like you, though you’d be lying " +
-                    "if you said its tendency to sit and stare from the corner of the room doesn’t freak you out a little. Of course, you’ve never " +
+                    "if you said its tendency to sit and stare from the corner of the room doesn’t freak you out a little. Of course, \nyou’ve never " +
                     "been much of a cat person. \n\n" +
                     "You notice that Mallory seems to be getting more and more gaunt by the day, and though it worries you a little, he insists that " +
                     "it’s nothing to be concerned about, so you keep \nyour mouth shut. Besides, no one else in the manor seems to be worried. Overall," +
@@ -280,7 +280,7 @@ public class mansion {
             }
             if(choice == 2){
                 System.out.println("He waits a moment, seemingly expecting you to say something, but when you don’t respond, " +
-                        "he nods and seems to give you an understanding smile. Mallory draws in a breath, looking you over and" +
+                        "he nods and seems to give you an understanding smile. Mallory draws in a breath, looking \nyou over and" +
                         " looking around as if savoring the moment as he clearly fights back tears.\n\n");
             }
 
