@@ -210,7 +210,7 @@ public class mansion {
     }
 
     //room 9 - chamber (pre fight scene)
-    public void room9 () {
+    public void room9() {
         System.out.println("You have made it into some sort of chamber.\n" +
                 "What would you like to do? (Type a number below, or type 0 for the map).");
         System.out.println("1 - Explore the bookcase.\n" +
@@ -259,7 +259,7 @@ public class mansion {
     }
 
     //room 9 - chamber (butler fight scene)
-    public void room9Fight (){
+    public void room9Fight() {
         //will need to call player.getPetCat(), player.getKickCat(), and player.getIgnoreCat() in different places later
         //will need to call player.getLetterOpen() in two places later
         System.out.println("You hear an *odd cat noise.* You urn around and see the cat " +
@@ -362,7 +362,7 @@ public class mansion {
     }
 
     //room 10 - chamber (potion room)
-    public void room10 (){
+    public void room10() {
         System.out.println("You take a look around and see a room full of potions.\n" +
                 "What do you want to do? (Type a number below, or type 0 for the map).");
         System.out.println("1 - Examine the purple potion.\n" +
@@ -433,7 +433,7 @@ public class mansion {
     }
 
     //room 8 - hallway/stairway (no method for bathroom, just display)
-    public void room8 () {
+    public void room8() {
         System.out.println("You now walk down the hallway.\n" +
                 "What do you want to do? (Type a number below, or type 0 for the map).");
         System.out.println("1 - Try the boarded up door.\n" +
@@ -472,7 +472,7 @@ public class mansion {
 
     /*********** FLOOR THREE *************/
     //room 11 - kitchen
-    public void room11 (){
+    public void room11() {
         System.out.println("You find yourself in the kitchen. Probably a good place to look " +
                 "for a weapon in case you get into another fight...\n" +
                 "What will you search? (Type a number below, or type 0 for the map).");
@@ -512,7 +512,7 @@ public class mansion {
     }
 
     //room 7 - greenhouse (not labeled on correct floor on pic)
-    public void room7 (){
+    public void room7() {
         System.out.println("Going through this door leads you into a herb garden. " +
                 "See basil, thyme, oregano, an orchid, normal plants, and a carnivorous " +
                 "plant, other spooky plants");
@@ -527,7 +527,7 @@ public class mansion {
     }
 
     //hide from old man - crosses rooms, lots of booleans for if potion or spell book
-    public void hideFromMan (){
+    public void hideFromMan() {
         if (player.getPurpPotion() == true) {
             System.out.println("You see an image of the old man going up the stairs " +
                     "toward the kitchen in the mirror.\n" +
@@ -584,10 +584,52 @@ public class mansion {
 
     /*********** CELLAR *************/
     //need to call player.getMatches() and then player.getPetCat()
-
+    public void cellar() {
+        System.out.println("Immediately when you get down off the stairs, you feel your " +
+                "socks become soaked with something dark and sticky, and you’re hit with " +
+                "a horrible smell that makes your eyes water. As your eyes adjust, you see " +
+                "dozens of bodies in various stages of decomposition. At your feet, you see " +
+                "the body of the boy from earlier. His eyes are clouded over and his skin is " +
+                "so pale it’s almost turned blue. See a light from the boarded up window on " +
+                "the door at the other side of the cellar.");
+        System.out.println("What would you like to do? Type a number below, or type 0 for the map.");
+        System.out.println("1 - Examine body of other boy.\n" +
+                "2 - Go towards door.\n" +
+                "3 - Hide among the bodies.");
+        player.playerChoice();
+        if (playerChoice() == 1) { //examine the body
+            System.out.println("Describe dead body. \"He’s clearly dead, so you decide " +
+                    "to stop wasting time\"");
+            //redisplay options
+        } else if (playerChoice() == 2) { //door
+            System.out.println("Step over bodies, try door, sorcerer comes down, " +
+                    "you hear him come down, your body turns against your will, and " +
+                    "you’re looking right at him from across the cellar");
+            System.out.println("[villian monologue??]");
+            if (player.getMatches() == true) {
+                matchesCellar();
+            } else if (player.getPetCat() == true) {
+                petCatCellar();
+            } else {
+                generalCellar();
+            }
+        } else if (playerChoice() == 3) { //hide among bodies
+            System.out.println("Lay down among the bodies, try not to breath, feel " +
+                    "the death, old man makes you stand up magically");
+            if (player.getMatches() == true) {
+                matchesCellar();
+            } else if (player.getPetCat() == true) {
+                petCatCellar();
+            } else {
+                generalCellar();
+            }
+        } else if (playerChoice() == 0) { //map
+            //display map
+        }
+    }
     //general (if not matches or pet cat)
     /*
-    public void generalCellar (){
+    public void generalCellar() {
         System.out.println("story goes here" +
              "and here");
         System.out.println("Please choose an option below, or type 0 for the map:");
@@ -599,7 +641,7 @@ public class mansion {
 
     //if matches
     /*
-    public void matchCellar (){
+    public void matchesCellar() {
         System.out.println("story goes here" +
              "and here");
         System.out.println("Please choose an option below, or type 0 for the map:");
@@ -611,7 +653,7 @@ public class mansion {
 
     //if pet cat
     /*
-    public void petCatCellar (){
+    public void petCatCellar() {
         System.out.println("story goes here" +
              "and here");
         System.out.println("Please choose an option below, or type 0 for the map:");
