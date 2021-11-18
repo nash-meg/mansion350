@@ -301,16 +301,16 @@ public class mansion {
         System.out.println("1 - Leave through the door.\n" +
                 "2 - Search the floor.\n" +
                 "3 - Go back to sleep");
-        player.playerChoice();
-        if (playerChoice() == 1) { //leave
+        choice = you.playerChoice();
+        if (choice == 1) { //leave
             room5a();
-        } else if (playerChoice() == 2) { //search floor
+        } else if (choice == 2) { //search floor
             System.out.println("It’s a floor.");
             //redisplay options - idk how?
-        } else if (playerChoice() == 3) { //back to sleep
+        } else if (choice == 3) { //back to sleep
             System.out.println("You can’t sleep. This is a horror game.");
             //redisplay options
-        } else if (playerChoice() == 0) { //map
+        } else if (choice == 0) { //map
             //display map
         }
     }
@@ -323,18 +323,18 @@ public class mansion {
                 "2 - Try opening the door on your left.\n" +
                 "3 - Try opening the door straight ahead.\n" +
                 "4 - Try opening the boarded up door.");
-        player.playerChoice();
-        if (playerChoice() == 1) { //down stairs
+        choice = you.playerChoice();
+        if (choice == 1) { //down stairs
             room5b();
-        } else if (playerChoice() == 2) { //left door
+        } else if (choice == 2) { //left door
             System.out.println("This door is locked, you can't get in.");
             //redisplay options
-        } else if (playerChoice() == 3) { //door ahead
+        } else if (choice == 3) { //door ahead
             room4();
-        } else if (playerChoice() == 4) { //boared door
+        } else if (choice == 4) { //boared door
             System.out.println("You can’t bust through this door.");
             //redisplay options
-        } else if (playerChoice() == 0) { //map
+        } else if (choice == 0) { //map
             //display map
         }
     }
@@ -346,63 +346,63 @@ public class mansion {
         System.out.println("1 - Search the bed.\n" +
                 "2 - Search the closet.\n" +
                 "3 - Search the desk");
-        player.playerChoice();
-        if (playerChoice() == 1) { //bed
+        choice = you.playerChoice();
+        if (choice == 1) { //bed
             System.out.println("Where specifically would you like to search?");
             System.out.println("1 - Under the pillow.\n" +
                     "2 - Under the mattress.");
-            player.playerChoice();
-            if (playerChoice() == 1) { //pillow
+            choice = you.playerChoice();
+            if (choice == 1) { //pillow
                 System.out.println("There is nothing under here.");
                 //redisplay options (idk if do bed options or room4 options)
-            } else if (playerChoice() == 2) { //mattress
+            } else if (choice == 2) { //mattress
                 System.out.println("You find some iron shackles with what looks like blood on " +
                         "the wrists. They are bolted to the floor underneath the bed.");
                 //redisplay options (idk if do bed options or room4 options)
             }
-        } else if (playerChoice() == 2) { //closet
+        } else if (choice == 2) { //closet
             System.out.println("You see two items, which would you like to examine?");
             System.out.println("1 - A pair of shoes.\n" +
                     "2 - A worn coat.");
-            player.playerChoice();
-            if (playerChoice() == 1) { //shoes
+            choice = you.playerChoice();
+            if (choice == 1) { //shoes
                 System.out.println("Description about the shoes.");
                 System.out.println("Would you like to put them on?");
                 System.out.println("1 - Yes.\n" +
                         "2 - No.");
-                player.playerChoice();
-                if (playerChoice() == 1) { //yes
+                choice = you.playerChoice();
+                if (choice == 1) { //yes
                     System.out.println("You are now wearing shoes.");
                     player.setShoes();
                     //redisplay options (idk if do closet options or room4 options)
-                } else if (playerChoice() == 2) { //no
+                } else if (choice == 2) { //no
                     System.out.println("You did not put on the shoes.");
                     //redisplay options (idk if do closet options or room4 options)
                 }
-            } else if (playerChoice() == 2) { //coat
+            } else if (choice == 2) { //coat
                 System.out.println("Description about the coat.");
                 System.out.println("Would you like to put it on?");
                 System.out.println("1 - Yes.\n" +
                         "2 - No.");
-                player.playerChoice();
-                if (playerChoice() == 1) { //yes
+                choice = you.playerChoice();
+                if (choice == 1) { //yes
                     System.out.println("You are now wearing the coat.");
                     player.setCoat();
                     //redisplay options (idk if do closet options or room4 options)
-                } else if (playerChoice() == 2) { //no
+                } else if (choice == 2) { //no
                     System.out.println("You did not put on the coat.");
                     //redisplay options (idk if do closet options or room4 options)
                 }
             }
-        } else if (playerChoice() == 3) { //desk
+        } else if (choice == 3) { //desk
             System.out.println("You see two items, which would you like to examine?");
             System.out.println("1 - A picture.\n" +
                     "2 - A book.");
-            player.playerChoice();
-            if (playerChoice() == 1) { //picture
+            choice = you.playerChoice();
+            if (choice) == 1) { //picture
                 System.out.println("Description about the picture: health and date.");
                 //redisplay options (idk if do desk options or room4 options)
-            } else if (playerChoice() == 2) { //book
+            } else if (choice == 2) { //book
                 System.out.println("Description about the book: spells, trying to reverse.");
                 //redisplay options (idk if do desk options or room4 options)
             }
@@ -418,13 +418,13 @@ public class mansion {
         System.out.println("1 - DUCK!\n" +
                 "2 - TRY DOORS!\n" +
                 "3 - RUN THROUGH HALL!");
-        player.playerChoice();
-        if (playerChoice() == 1) { //duck
+        choice = you.playerChoice();
+        if (choice == 1) { //duck
             System.out.println("Oh my god you ducked just in time! What now???");
             System.out.println("1 - Crawl to open door!\n" +
                     "2 - Crawl to closed door!");
-            player.playerChoice();
-            if (playerChoice() == 1) { //open door
+            choice = you.playerChoice();
+            if (choice == 1) { //open door
                 System.out.println("pitch black, recovery moment to breath, hand reaches " +
                         "out in front of you in hallway light, you rocket upright, hitting the " +
                         "lightswitch, see only a cat in the room with hUGEEE shadow (kinda butler-like?)");
@@ -432,28 +432,28 @@ public class mansion {
                 System.out.println("1 - Kick the cat away.\n" +
                         "2 - Reach out to pet the cat.\n" +
                         "3 - Ignore the cat.");
-                player.playerChoice();
-                if (playerChoice() == 1) { //kick
+                choice = you.playerChoice();
+                if (choice == 1) { //kick
                     player.setKickCat();
                     room9();
-                } else if (playerChoice() == 2) { //pet
+                } else if (choice == 2) { //pet
                     player.setPetCat();
                     room9();
-                } else if (playerChoice() == 3) { //ignore
+                } else if (choice == 3) { //ignore
                     player.setIgnoreCat();
                     room9();
                 }
-            } else if (playerChoice() == 2) { //closed door
+            } else if (choice == 2) { //closed door
                 System.out.println("Why would you crawl here?? The door doesn't open!" +
                         " Crawl back to the open door.");
             }
-        } else if (playerChoice() == 2) { //doors
+        } else if (choice == 2) { //doors
             System.out.println("Death by blades");
             //death screen, exit
-        } else if (playerChoice() == 3) { //run
+        } else if (choice == 3) { //run
             System.out.println("Death by blades");
             //death screen, exit
-        } else if (playerChoice() == 0) { //map
+        } else if (choice == 0) { //map
             System.out.println("Blades are swinging from the ceiling!! This is no time to look at the map!");
             //redisplay options
         }
@@ -466,44 +466,44 @@ public class mansion {
         System.out.println("1 - Explore the bookcase.\n" +
                 "2 - Explore the coffee table.\n" +
                 "3 - Explore the fireplace.");
-        player.playerChoice();
-        if (playerChoice() == 1) { //bookcase
+        choice = you.playerChoice();
+        if (choice == 1) { //bookcase
             System.out.println("You see a book that looks so familiar to the one from Mallory's room.\n" +
                     "What do you do with it?");
             System.out.println("1 - Shove it in your pocket.\n" +
                     "2 - Leave it.");
-            player.playerChoice();
-            if (playerChoice() == 1) { //take
+            choice = you.playerChoice();
+            if (choice == 1) { //take
                 player.setBook();
                 room9Fight();
-            } else if (playerChoice() == 2) { //leave
+            } else if (choice == 2) { //leave
                 room9Fight();
             }
-        } else if (playerChoice() == 2) { //coffee table
+        } else if (choice == 2) { //coffee table
             System.out.println("You find a lette opener amongst other things.\n" +
                     "What do you do with it?");
             System.out.println("1 - Slide it into your pocket.\n" +
                     "2 - Leave it.");
-            player.playerChoice();
-            if (playerChoice() == 1) { //take
+            choice = you.playerChoice();
+            if (choice == 1) { //take
                 player.setLetterOpen();
                 room9Fight();
-            } else if (playerChoice() == 2) { //leave
+            } else if (choice == 2) { //leave
                 room9Fight();
             }
-        } else if (playerChoice() == 3) { //fireplace
+        } else if (choice == 3) { //fireplace
             System.out.println("You find a small box of matches atop the fireplace mantle.\n" +
                     "What do you do?");
             System.out.println("1 - Tuck it into your pocket.\n" +
                     "2 - Leave it.");
-            player.playerChoice();
-            if (playerChoice() == 1) { //take
+            choice = you.playerChoice();
+            if (choice == 1) { //take
                 player.setMatches();
                 room9Fight();
-            } else if (playerChoice() == 2) { //leave
+            } else if (choice == 2) { //leave
                 room9Fight();
             }
-        } else if (playerChoice() == 0) { //map
+        } else if (choice == 0) { //map
             //display map
         }
     }
@@ -524,16 +524,16 @@ public class mansion {
         if (player.getLetterOpen() ==  true) {
             System.out.println("3 - USE LETTER OPENER!\n"
         }
-        player.playerChoice();
-        if (playerChoice() == 1) { //duck
+        choice = you.playerChoice();
+        if (choice == 1) { //duck
             System.out.println("You're on the floor! What now??");
             System.out.println("1 - Try to crawl away!\n" +
                     "2 - Be scared!");
             if (player.getLetterOpen() ==  true) {
                 System.out.println("3 - Use the letter opener!\n"
             }
-            player.playerChoice();
-            if (playerChoice() == 1) { //crawl
+            choice = you.playerChoice();
+            if (choice == 1) { //crawl
                 if (player.getPetCat() == true) {
                     System.out.println("The butler thing lets you crawl away, you " +
                             "open the door, he makes eye contact with you, then he " +
@@ -543,7 +543,7 @@ public class mansion {
                     System.out.println("Get grabbed, thrown in fire???");
                     //death
                 }
-            } else if (playerChoice() == 2) { //scared
+            } else if (choice == 2) { //scared
                 if (player.getPetCat() == true) {
                     System.out.println("The butler thing hesitates, you hear another " +
                             "sound that clearly sounds like “RUN!” before he goes after you, " +
@@ -553,17 +553,17 @@ public class mansion {
                     System.out.println("Neck breaks");
                     //death
                 }
-            } else if (playerChoice() == 3) { //letter opener
+            } else if (choice == 3) { //letter opener
                 System.out.println("Stab, absorbed into “butler” arm, comes out as claw");
                 //death
             }
-        } else if (playerChoice() == 2) { //move to side
+        } else if (choice) == 2) { //move to side
             System.out.println("What now??");
             System.out.println("1 - Grab some books and throw!\n" +
                     "2 - Grab some books and read the spells!\n" +
                     "3 - Climb the bookshelf!");
-            player.playerChoice();
-            if (playerChoice() == 1) { //throw books
+            choice = you.playerChoice();
+            if (choice == 1) { //throw books
                 if (player.getPetCat() == true || player.getIgnoreCat() == true) {
                     System.out.println("The butler thing rips up the books, gets " +
                             "disoriented, you run to the other room");
@@ -572,7 +572,7 @@ public class mansion {
                     System.out.println("Butler gets angry, charges you");
                     //death
                 }
-            } else if (playerChoice() == 2) { //read spells
+            } else if (choice == 2) { //read spells
                 if (player.getPetCat() == true) {
                     System.out.println("You read a good spell: changes him back to the " +
                             "normal butler, you run to the next room in case he changes back");
@@ -586,26 +586,26 @@ public class mansion {
                             "taller, torso opens and eats you");
                     //death
                 }
-            } else if (playerChoice() == 3) { //climb bookshelf
+            } else if (choice == 3) { //climb bookshelf
                 System.out.println("You fall, hit your head on the coffee table");
                 //death
             }
-        } else if (playerChoice() == 3) { //letter opener
+        } else if (choice == 3) { //letter opener
             System.out.println("Okay a letter opener is a good weapon!\n" +
                     "Where do you strike him with it???");
             System.out.println("1 - Aim for the throat!\n" +
                     "2 - Aim for the hand!");
-            player.playerChoice();
-            if (playerChoice() == 1) { //throat
+            choice = you.playerChoice();
+            if (choice == 1) { //throat
                 System.out.println("The butler’s hand grabs you, and slams you into the wall. " +
                         "He crushes you");
                 //death
-            } else if (playerChoice() == 2) { //hand
+            } else if (choice == 2) { //hand
                 //Same death as duck with letter opener
                 System.out.println("Stab, absorbed into “butler” arm, comes out as claw");
                 //death
             }
-        } else if (playerChoice() == 0) { //map
+        } else if (choice == 0) { //map
             System.out.println("The butler thing is coming at you!! Why are you trying to look at the map?!");
             //redisplay options
         }
