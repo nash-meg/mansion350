@@ -74,7 +74,7 @@ public class player {
             choiceList.add(choice);
             return choice;
         } else {
-            System.out.println("Invalid choice, please type a number from the options above or 0 to see the map.");
+           // System.out.println("Invalid choice, please type a number from the options above or 0 to see the map.");
             return -2;
         }
     }

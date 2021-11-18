@@ -60,9 +60,14 @@ public class mansion {
                 "The old man smiles, 'Welcome to Huxley Manor,' he says with a sweeping gesture before" +
                 " guiding you to the thick oaken front door.\n\n");
         System.out.println("Please choose an option below:\n");
-        System.out.println("1 - Go inside\n");
-        if (you.playerChoice() > -1){
-            System.out.println("The old man claps twice and the doors slowly creak open to reveal an ornate hallway" +
+        System.out.println("1 - Go inside\n" +
+                "2 - Leave\n");
+        choice = you.playerChoice();
+
+        if(choice > 1) {
+            System.out.println("The thought crosses your mind to turn back, but you decide against it.\n");
+        }
+        System.out.println("The old man claps twice and the doors slowly creak open to reveal an ornate hallway" +
                     " with beautiful vintage-looking wallpaper and dark wooden floors. As he guides you through, \nyou notice" +
                     " dozens of oil paintings, all of which look to be extremely old. A painting of a man in what looks to be renaissance" +
                     " garb, staring intensely outward with long black hair \ncatches your eye.\n\n" +
@@ -74,7 +79,7 @@ public class mansion {
             System.out.println("1 - Ask about the painting\n" +
                     "2 - Ask about the stairs\n");
             choice = you.playerChoice();
-            if (choice == 1){
+            if (choice <= 1){
                 System.out.println("The old man smiles as he turns to the portrait, an odd sentimentality washing over him.\n\n" +
                         "'He was a very good friend of mine.' he sighs, clearly beginning to reminisce, 'He had this commissioned " +
                         "shortly before he-'\n\n" +
@@ -96,7 +101,7 @@ public class mansion {
                         "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he " +
                         "seems genuinely happy to meet you, there is also an almost mournful \ndisposition underneath it all. \n\n");
             }
-            else if(choice == 2){
+            else if(choice >= 2){
                 System.out.println("The old man chuckles a little, 'The only things of interest that I keep down there are my old typewriters.'\n\n" +
                         "A pause \n\n" +
                         "'And the bodies, of course.' He stops a moment, staring at you rather intensely. \n\n" +
@@ -132,7 +137,7 @@ public class mansion {
                     "2 - Offer to help set the table\n" +
                     "3 - Stand there awkwardly");
             choice = you.playerChoice();
-            if(choice == 1){
+            if(choice <= 1){
                 System.out.println("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags under his eyes being heavy and " +
                         "thick. Too heavy for someone his age.\n\n" +
                         "He locks eye contact with you, his gaze requesting that you hold it as he speaks, 'I wouldn’t trade working here for the world!" +
@@ -164,7 +169,7 @@ public class mansion {
                         " seemingly loud enough for those in the kitchen to \nhear.\n\n" +
                         "Then he flashes you a small smile, nearly whispering, 'Thank you, though,' before returning to his work.\n\n");
             }
-            else if (choice == 3) {
+            else if (choice >= 3) {
                 System.out.println("You stand there in a thick silence, neither of you moving to speak. After a moment, you watch as Mallory goes back " +
                         "to setting the table. He doesn’t move the way you expect him to. \nEvery gesture he makes is stiff, and even jerky at times. The " +
                         "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but \nhis actions" +
@@ -181,7 +186,7 @@ public class mansion {
             System.out.println("1 - Shake his hand\n" +
                     "2 - Don't shake his hand\n");
             choice = you.playerChoice();
-            if(choice == 1){
+            if(choice <= 1){
                 System.out.println("You accept the handshake to find that the butler’s grasp is much firmer than you expected. He didn’t " +
                         "strike you as the type to hold onto a handshake for dear life.\n\n" +
                         "But...no...\n\n" +
@@ -193,7 +198,7 @@ public class mansion {
                         "The butler smiles, though the smile takes a moment to reach his eyes as he glances at Mallory before" +
                         " seeming to return to the conversation, 'It’s a pleasure to have you here. \nI can’t wait to show you the ropes.'\n\n");
             }
-            else if(choice == 2){
+            else if(choice >= 2){
                 System.out.println("You glance apologetically at the butler’s hand, not entirely willing to shake it. He holds his hand" +
                         " out for a moment longer, but after a tight-lipped nod from you, he realizes that \nyou’re not going to shake it " +
                         "and instead withdraws his hand and nods back.\n\n");
@@ -212,14 +217,14 @@ public class mansion {
             System.out.println("1 - Sit next to the old man\n" +
                     "2 - Sit next to Mallory\n");
             choice = you.playerChoice();
-            if(choice == 1){
+            if(choice <= 1){
                 System.out.println("The butler stays off to the side as you take up a seat next to the old man, who flashes" +
                         " you a toothy grin as you sit down beside him. If you didn’t know any better, you would have \nthought you saw a " +
                         "glimmer of pride in his eyes. \n\n" +
                         "'Eat as much as you like,' he says warmly, passing you a piece of the main dish.\n\n" +
                         "You smile thankfully, filling your plate as the others begin to eat.\n\n");
             }
-            else if(choice == 2){
+            else if(choice >= 2){
                 System.out.println("Mallory pulls out the chair beside him, flashing you a small smile as you move to sit next to him. " +
                         "You see the butler smile as well as you sit down and Mallory passes you the tray \nof mashed potatoes, " +
                         "'Eat,' he says cheerily, 'you’ll need it.' \n\n");
@@ -272,13 +277,13 @@ public class mansion {
             System.out.println("1 - Tell him you'll miss him too\n" +
                     "2 - Stay silent\n");
             choice = you.playerChoice();
-            if(choice ==  1){
+            if(choice <=  1){
                 System.out.println("You nod, taking hold of his hand, 'I’ll miss you too.' \n\n" +
                         "It’s a short response, but you mean every word of it. \n\n" +
                         "Mallory smiles, tightening his grip on your hand, 'We’ll have to keep in touch.'\n\n" +
                         "You nod. Though his eyes are watery with unshed tears, he seems content.\n\n");
             }
-            if(choice == 2){
+            if(choice >= 2){
                 System.out.println("He waits a moment, seemingly expecting you to say something, but when you don’t respond, " +
                         "he nods and seems to give you an understanding smile. Mallory draws in a breath, looking \nyou over and" +
                         " looking around as if savoring the moment as he clearly fights back tears.\n\n");
@@ -945,4 +950,4 @@ public class mansion {
                 "few hours or if another whole day has passed.\n" +
                 "Run away, and never fully forget this experience.");
     }*/
-}
+
