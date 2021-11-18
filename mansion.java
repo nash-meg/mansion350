@@ -296,9 +296,70 @@ public class mansion {
         }
         player.playerChoice();
         if (playerChoice() == 1) { //duck
-            //here
+            System.out.println("You're on the floor! What now??");
+            System.out.println("1 - Try to crawl away!\n" +
+                    "2 - Be scared!");
+            if (player.getLetterOpen() ==  true) {
+                System.out.println("3 - Use the letter opener!\n"
+            }
+            player.playerChoice();
+            if (playerChoice() == 1) { //crawl
+                if (player.getPetCat() == true) {
+                    System.out.println("The butler thing lets you crawl away, you " +
+                            "open the door, he makes eye contact with you, then he " +
+                            "walks away, you close the door without a sound");
+                    room10();
+                } else {
+                    System.out.println("Get grabbed, thrown in fire???");
+                    //death
+                }
+            } else if (playerChoice() == 2) { //scared
+                if (player.getPetCat() == true) {
+                    System.out.println("The butler thing hesitates, you hear another " +
+                            "sound that clearly sounds like “RUN!” before he goes after you, " +
+                            "you scramble towards the door, open it, slam it shut after you go in");
+                    room10();
+                } else {
+                    System.out.println("Neck breaks");
+                    //death
+                }
+            } else if (playerChoice() == 3) { //letter opener
+                System.out.println("Stab, absorbed into “butler” arm, comes out as claw");
+                //death
+            }
         } else if (playerChoice() == 2) { //move to side
-            //here
+            System.out.println("What now??");
+            System.out.println("1 - Grab some books and throw!\n" +
+                    "2 - Grab some books and read the spells!\n" +
+                    "3 - Climb the bookshelf!");
+            player.playerChoice();
+            if (playerChoice() == 1) { //throw books
+                if (player.getPetCat() == true || player.getIgnoreCat() == true) {
+                    System.out.println("The butler thing rips up the books, gets " +
+                            "disoriented, you run to the other room");
+                    room10();
+                } else {
+                    System.out.println("Butler gets angry, charges you");
+                    //death
+                }
+            } else if (playerChoice() == 2) { //read spells
+                if (player.getPetCat() == true) {
+                    System.out.println("You read a good spell: changes him back to the " +
+                            "normal butler, you run to the next room in case he changes back");
+                    room10();
+                } else if (player.getIgnoreCat() == true){
+                    System.out.println("The spell appears to do nothing, paralyzes butler, " +
+                            "you run to the next room before it wears off");
+                    room10();
+                } else {
+                    System.out.println("You read a bad spell: butler grows more limbs + " +
+                            "taller, torso opens and eats you");
+                    //death
+                }
+            } else if (playerChoice() == 3) { //climb bookshelf
+                System.out.println("You fall, hit your head on the coffee table");
+                //death
+            }
         } else if (playerChoice() == 3) { //letter opener
             System.out.println("Okay a letter opener is a good weapon!\n" +
                     "Where do you strike him with it???");
@@ -310,7 +371,9 @@ public class mansion {
                         "He crushes you");
                 //death
             } else if (playerChoice() == 2) { //hand
-                //Same death as duck with letter opener (Aaiii)
+                //Same death as duck with letter opener
+                System.out.println("Stab, absorbed into “butler” arm, comes out as claw");
+                //death
             }
         } else if (playerChoice() == 0) { //map
             System.out.println("The butler thing is coming at you!! Why are you trying to look at the map?!");
@@ -319,30 +382,113 @@ public class mansion {
     }
 
     //room 10 - chamber (potion room)
-    /*
     public void room10 (){
-        //remember player.setPurpPotion()
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
+        System.out.println("You take a look around and see a room full of potions.\n" +
+                "What do you want to do? (Type a number below, or type 0 for the map).");
+        System.out.println("1 - Examine the purple potion.\n" +
+                "2 - Examine the yellow potion.\n" +
+                "3 - Examine a clear, labeled potion.\n" +
+                "4 - Examine a clear, unlabeled potion.\n" +
+                "5 - Leave, go down the hall.");
         player.playerChoice();
+        if (playerChoice() == 1) { //purple
+            System.out.println("Label faded and says “Sight” in latin - aspectum");
+            System.out.println("Do you drink it?");
+            System.out.println("1 - Yes.\n" +
+                    "2 - No.");
+            player.playerChoice();
+            if (playerChoice() == 1) {
+                System.out.println("You turn your head towards the other potions and in " +
+                        "the reflection of the liquid, you see the old man on a stairway, " +
+                        "blood-covered, humming to himself. He stops, turns around, then " +
+                        "goes back down the stairs, you look away");
+                player.setPurpPotion();
+                System.out.println("You hear some thumping in the room over, so you decide " +
+                        "to skert down the hall and keep moving.");
+                room8();
+            } else if (playerChoice() == 2) {
+                //redisplay potion options
+            }
+        } else if (playerChoice() == 2) { //yellow
+            System.out.println("Label faded and says “Plan B” in cursive");
+            System.out.println("Do you drink it?");
+            System.out.println("1 - Yes.\n" +
+                    "2 - No.");
+            player.playerChoice();
+            if (playerChoice() == 1) {
+                System.out.println("It’s acid!");
+                //death
+            } else if (playerChoice() == 2) {
+                //redisplay potion options
+            }
+        } else if (playerChoice() == 3) { //clear labeled
+            System.out.println("Label faded and says “healing” in latin - sanitatem");
+            System.out.println("Do you drink it?");
+            System.out.println("1 - Yes.\n" +
+                    "2 - No.");
+            player.playerChoice();
+            if (playerChoice() == 1) {
+                System.out.println("It's alcohol!");
+                //redisplay potion options
+            } else if (playerChoice() == 2) {
+                //redisplay potion options
+            }
+        } else if (playerChoice() == 4) { //clear unlabeled
+            System.out.println("There is no label on this bottle.");
+            System.out.println("Do you drink it?");
+            System.out.println("1 - Yes.\n" +
+                    "2 - No.");
+            player.playerChoice();
+            if (playerChoice() == 1) {
+                System.out.println("Water, nothing happens");
+                //redisplay potion options
+            } else if (playerChoice() == 2) {
+                //redisplay potion options
+            }
+        } else if (playerChoice() == 5) { //leave
+            room8();
+        }else if (playerChoice() == 0) { //map
+            //display map
+        }
     }
-     */
 
     //room 8 - hallway/stairway (no method for bathroom, just display)
-    /*
-    public void room8 (){
-        //need to call player.getShoes()
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
+    public void room8 () {
+        System.out.println("You now walk down the hallway.\n" +
+                "What do you want to do? (Type a number below, or type 0 for the map).");
+        System.out.println("1 - Try the boarded up door.\n" +
+                "2 - Enter the open door.\n" +
+                "3 - Go down the stairs.");
         player.playerChoice();
+        if (playerChoice() == 1) { //boarded door
+            System.out.println("You can't break open this door.");
+            //redisplay options
+        } else if (playerChoice() == 2) { //open door
+            System.out.println("You walk into a bathroom.\n" +
+                    "What would you like to do?");
+            System.out.println("1 - Take a piss.\n" +
+                    "2 - Leave.");
+            player.playerChoice();
+            if (playerChoice() == 1) { //piss
+                System.out.println("You take a much needed piss.");
+                //redisplay options
+            } else if (playerChoice() == 2) { //leave
+                //redisplay options
+                //if you pick bathroom again, System.out.println(“It’s literally just a bathroom”); and redisplay
+            }
+        } else if (playerChoice() == 3) { //go downstairs
+            if (player.getShoes() == true) {
+                System.out.println("You hear the thump of your shoes and cringe, " +
+                        "hoping he doesn’t hear you clomping down.");
+                System.out.println("He kills you at the foot of the stairs.");
+                //death
+            } else {
+                room11();
+            }
+        } else if (playerChoice() == 0) { //map
+            //display map
+        }
     }
-     */
 
     /*********** FLOOR THREE *************/
     //room 11 - kitchen
@@ -423,3 +569,24 @@ public class mansion {
      */
 
 }
+
+System.out.println("You now walk out into the hallway.\n" +
+        "What do you want to do? (Type a number below, or type 0 for the map).");
+        System.out.println("1 - Go down the stairs.\n" +
+        "2 - Try opening the door on your left.\n" +
+        "3 - Try opening the door straight ahead.\n" +
+        "4 - Try opening the boarded up door.");
+        player.playerChoice();
+        if (playerChoice() == 1) { //down stairs
+        room5b();
+        } else if (playerChoice() == 2) { //left door
+        System.out.println("This door is locked, you can't get in.");
+        //redisplay options
+        } else if (playerChoice() == 3) { //door ahead
+        room4();
+        } else if (playerChoice() == 4) { //boared door
+        System.out.println("You can’t bust through this door.");
+        //redisplay options
+        } else if (playerChoice() == 0) { //map
+        //display map
+        }
