@@ -169,6 +169,33 @@ public class mansion {
                         " almost remind you of a deftly-controlled marionette without the strings. You chide yourself for the comparison. " +
                         "He’s probably just tired. \n\n");
             }
+            System.out.println("You watch as Mallory finishes setting the table, and a man with white gloves walks out from the kitchen," +
+                    " seemingly to check that things are going smoothly. \n\n" +
+                    "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash " +
+                    "for a moment with an emotion that is covered up too quickly to read, and instead he flashes you a smile, 'I’m sorry, " +
+                    "I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n\n" +
+                    "He smiles, extending a hand for you to shake. \n\n");
+            System.out.println("What do you do?\n");
+            System.out.println("1 - Shake his had\n" +
+                    "2 - Don't shake his hand\n");
+            choice = you.playerChoice();
+            if(choice == 1){
+                System.out.println("You accept the handshake to find that the butler’s grasp is much firmer than you expected. He didn’t " +
+                        "strike you as the type to hold onto a handshake for dear life.\n\n" +
+                        "But...no...\n\n" +
+                        "You realize that he’s actually holding your hand rather gently, yet his hand is much more...solid than it should be." +
+                        " Like the muscles in his hand are packed just a little too densely beneath his skin. \n\n" +
+                        "You decide it’s nothing to worry about as you release each others’ hands.\n\n" +
+                        "'So I’d take it you’re coming to work here?' he asks jovially.\n\n" +
+                        "You nod, 'That’s the plan, at least!'\n\n" +
+                        "The butler smiles, though the smile takes a moment to reach his eyes as he glances at Mallory before" +
+                        " seeming to return to the conversation, 'It’s a pleasure to have you here. I can’t wait to show you the ropes.'\n\n");
+            }
+            if(choice == 2){
+                System.out.println("You glance apologetically at the butler’s hand, not entirely willing to shake it. He holds his hand" +
+                        " out for a moment longer, but after a tight-lipped nod from you, he realizes that you’re not going to shake it " +
+                        "and instead withdraws his hand and nods back.\n\n");
+            }
         }
     }
 
