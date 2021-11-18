@@ -373,7 +373,7 @@ public class mansion {
                 choice = you.playerChoice();
                 if (choice == 1) { //yes
                     System.out.println("You are now wearing shoes.");
-                    player.setShoes();
+                    you.setShoes();
                     //redisplay options (idk if do closet options or room4 options)
                 } else if (choice == 2) { //no
                     System.out.println("You did not put on the shoes.");
@@ -387,7 +387,7 @@ public class mansion {
                 choice = you.playerChoice();
                 if (choice == 1) { //yes
                     System.out.println("You are now wearing the coat.");
-                    player.setCoat();
+                    you.setCoat();
                     //redisplay options (idk if do closet options or room4 options)
                 } else if (choice == 2) { //no
                     System.out.println("You did not put on the coat.");
@@ -434,13 +434,13 @@ public class mansion {
                         "3 - Ignore the cat.");
                 choice = you.playerChoice();
                 if (choice == 1) { //kick
-                    player.setKickCat();
+                    you.setKickCat();
                     room9();
                 } else if (choice == 2) { //pet
-                    player.setPetCat();
+                    you.setPetCat();
                     room9();
                 } else if (choice == 3) { //ignore
-                    player.setIgnoreCat();
+                    you.setIgnoreCat();
                     room9();
                 }
             } else if (choice == 2) { //closed door
@@ -474,7 +474,7 @@ public class mansion {
                     "2 - Leave it.");
             choice = you.playerChoice();
             if (choice == 1) { //take
-                player.setBook();
+                you.setBook();
                 room9Fight();
             } else if (choice == 2) { //leave
                 room9Fight();
@@ -486,7 +486,7 @@ public class mansion {
                     "2 - Leave it.");
             choice = you.playerChoice();
             if (choice == 1) { //take
-                player.setLetterOpen();
+                you.setLetterOpen();
                 room9Fight();
             } else if (choice == 2) { //leave
                 room9Fight();
@@ -498,7 +498,7 @@ public class mansion {
                     "2 - Leave it.");
             choice = you.playerChoice();
             if (choice == 1) { //take
-                player.setMatches();
+                you.setMatches();
                 room9Fight();
             } else if (choice == 2) { //leave
                 room9Fight();
@@ -510,8 +510,6 @@ public class mansion {
 
     //room 9 - chamber (butler fight scene)
     public void room9Fight() {
-        //will need to call player.getPetCat(), player.getKickCat(), and player.getIgnoreCat() in different places later
-        //will need to call player.getLetterOpen() in two places later
         System.out.println("You hear an *odd cat noise.* You urn around and see the cat " +
                 "growing into an eight-foot tall creature with way too many limbs that " +
                 "resembles the butler. As he’s growing, he mutters out some animalistic-like " +
@@ -521,7 +519,7 @@ public class mansion {
                 "(Type a number below, or type 0 for the map).");
         System.out.println("1 - DUCK!\n" +
                 "2 - MOVE TO THE SIDE!");
-        if (player.getLetterOpen() ==  true) {
+        if (you.getLetterOpen() ==  true) {
             System.out.println("3 - USE LETTER OPENER!\n"
         }
         choice = you.playerChoice();
@@ -529,12 +527,12 @@ public class mansion {
             System.out.println("You're on the floor! What now??");
             System.out.println("1 - Try to crawl away!\n" +
                     "2 - Be scared!");
-            if (player.getLetterOpen() ==  true) {
+            if (you.getLetterOpen() ==  true) {
                 System.out.println("3 - Use the letter opener!\n"
             }
             choice = you.playerChoice();
             if (choice == 1) { //crawl
-                if (player.getPetCat() == true) {
+                if (you.getPetCat() == true) {
                     System.out.println("The butler thing lets you crawl away, you " +
                             "open the door, he makes eye contact with you, then he " +
                             "walks away, you close the door without a sound");
@@ -544,7 +542,7 @@ public class mansion {
                     //death
                 }
             } else if (choice == 2) { //scared
-                if (player.getPetCat() == true) {
+                if (you.getPetCat() == true) {
                     System.out.println("The butler thing hesitates, you hear another " +
                             "sound that clearly sounds like “RUN!” before he goes after you, " +
                             "you scramble towards the door, open it, slam it shut after you go in");
@@ -564,7 +562,7 @@ public class mansion {
                     "3 - Climb the bookshelf!");
             choice = you.playerChoice();
             if (choice == 1) { //throw books
-                if (player.getPetCat() == true || player.getIgnoreCat() == true) {
+                if (you.getPetCat() == true || you.getIgnoreCat() == true) {
                     System.out.println("The butler thing rips up the books, gets " +
                             "disoriented, you run to the other room");
                     room10();
@@ -573,11 +571,11 @@ public class mansion {
                     //death
                 }
             } else if (choice == 2) { //read spells
-                if (player.getPetCat() == true) {
+                if (you.getPetCat() == true) {
                     System.out.println("You read a good spell: changes him back to the " +
                             "normal butler, you run to the next room in case he changes back");
                     room10();
-                } else if (player.getIgnoreCat() == true){
+                } else if (you.getIgnoreCat() == true){
                     System.out.println("The spell appears to do nothing, paralyzes butler, " +
                             "you run to the next room before it wears off");
                     room10();
@@ -632,7 +630,7 @@ public class mansion {
                         "the reflection of the liquid, you see the old man on a stairway, " +
                         "blood-covered, humming to himself. He stops, turns around, then " +
                         "goes back down the stairs, you look away");
-                player.setPurpPotion();
+                you.setPurpPotion();
                 System.out.println("You hear some thumping in the room over, so you decide " +
                         "to skert down the hall and keep moving.");
                 room8();
@@ -707,7 +705,7 @@ public class mansion {
                 //if you pick bathroom again, System.out.println(“It’s literally just a bathroom”); and redisplay
             }
         } else if (choice == 3) { //go downstairs
-            if (player.getShoes() == true) {
+            if (you.getShoes() == true) {
                 System.out.println("You hear the thump of your shoes and cringe, " +
                         "hoping he doesn’t hear you clomping down.");
                 System.out.println("He kills you at the foot of the stairs.");
@@ -766,7 +764,7 @@ public class mansion {
         System.out.println("Going through this door leads you into a herb garden. " +
                 "See basil, thyme, oregano, an orchid, normal plants, and a carnivorous " +
                 "plant, other spooky plants");
-        if(player.getCoat() == true) {
+        if(you.getCoat() == true) {
             System.out.println("The carnivorous plants start munching on your coat!! " +
                     "You quickly slide out of your coat and leave the greenhouse.");
             //redisplay options
@@ -778,7 +776,7 @@ public class mansion {
 
     //hide from old man - crosses rooms, lots of booleans for if potion or spell book
     public void hideFromMan() {
-        if (player.getPurpPotion() == true) {
+        if (you.getPurpPotion() == true) {
             System.out.println("You see an image of the old man going up the stairs " +
                     "toward the kitchen in the mirror.\n" +
                     "QUICK! Choose an option below!\"");
@@ -812,7 +810,7 @@ public class mansion {
                     "you dart into the next room");
             System.out.println("What do you do??");
             System.out.println("1 - HIDE!\n");
-            if (player.getBook() == true) {
+            if (you.getBook() == true) {
                 System.out.println("2 - OMG you have a spell book! Use it!\n");
             }
             choice = you.playerChoice();
@@ -833,7 +831,6 @@ public class mansion {
     }
 
     /*********** CELLAR *************/
-    //need to call player.getMatches() and then player.getPetCat()
    /* public void cellar() {
         System.out.println("Immediately when you get down off the stairs, you feel your " +
                 "socks become soaked with something dark and sticky, and you’re hit with " +
@@ -856,9 +853,9 @@ public class mansion {
                     "you hear him come down, your body turns against your will, and " +
                     "you’re looking right at him from across the cellar");
             System.out.println("[villian monologue??]");
-            if (player.getMatches() == true) {
+            if (you.getMatches() == true) {
                 matchesCellar();
-            } else if (player.getPetCat() == true) {
+            } else if (you.getPetCat() == true) {
                 petCatCellar();
             } else {
                 generalCellar();
@@ -866,9 +863,9 @@ public class mansion {
         } else if (choice == 3) { //hide among bodies
             System.out.println("Lay down among the bodies, try not to breath, feel " +
                     "the death, old man makes you stand up magically");
-            if (player.getMatches() == true) {
+            if (you.getMatches() == true) {
                 matchesCellar();
-            } else if (player.getPetCat() == true) {
+            } else if (you.getPetCat() == true) {
                 petCatCellar();
             } else {
                 generalCellar();
