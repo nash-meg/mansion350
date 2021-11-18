@@ -11,10 +11,10 @@ public class mansion {
                 "Before goosebumps plague your arms and your eyes cannot be ripped away from the screen, " +
                 "here are some things to know about our spooky little game:\n\n" +
                 "This is a text-based game, so there are very little graphics. If you don’t like reading, " +
-                "sorry bud, this isn’t the game for you. We want to let our words guide your imagination, " +
+                "sorry bud, this isn’t the game for you. We want to let our words guide your imagination, \n" +
                 "and we figure you know how to scare yourself better than we ever could.\n\n" +
                 "This is also a choose-your-own-adventure game, so you will read the story and choose from " +
-                "a handful of actions at specific moments to determine what happens next. Some of these " +
+                "a handful of actions at specific moments to determine what happens next. Some of these \n" +
                 "options will allow you to continue through the escape, but some may result in death. Choose " +
                 "wisely and you might make it out alive.\n\n" +
                 "To select an option, type the number on your keyboard and hit enter. Also, some sections of " +
