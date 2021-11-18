@@ -1,4 +1,6 @@
 public class mansion {
+    player you = new player();
+    int choice = -2;
     /*********** DIRECTIONS *************/
     public void directions() {
         System.out.println("Sinister Happenings at Huxley Manor\n" +
@@ -22,10 +24,10 @@ public class mansion {
         System.out.println("Please choose an option below:");
         System.out.println("1 - Continue to game.\n" +
                 "2 - Exit.");
-        player.playerChoice();
-        if (playerChoice() == 1) { //continue
+        choice = you.playerChoice();
+        if (choice == 1) { //continue
             prologue();
-        } else if (playerChoice() == 2) { //exit
+        } else if (choice == 2) { //exit
             //leave game
         }
     }
@@ -34,12 +36,140 @@ public class mansion {
     //prologue method - mostly text, there are options but they don't affect anything
     //show choices in history if time?
     public void prologue() {
-        System.out.println("story goes here" +
-                "and here");
-        System.out.println("Please choose an option below:");
-        System.out.println("1 - choice.\n" +
-                "2 - choice.");
-        player.playerChoice();
+        System.out.println("The man’s hand feels heavy on your back as you are guided up the driveway " +
+                "against your better judgement. A large mansion  - which you’re quite sure is the only dwelling" +
+                " for miles in this area - looms before you, decorated impeccably for Halloween. Cornstalks lean up " +
+                "against the pillars supporting the upper balconies, pumpkins and hay bales are scattered tastefully " +
+                "over the front porch, and a black cat sits somewhat ominously in the window by the door - though you’re " +
+                "sure that the cat is more of a year-round affair. \n\n" +
+                "You stop a moment, simply staring and struggling to take in the fact that this is all real. Less than " +
+                "an hour ago, you had been on the streets, trying to scrounge whatever money you could to save up for a " +
+                "proper coat for the coming winter. Less than an hour ago, an old man whose name you still don’t know had offered " +
+                "you a job and housing with the only condition being that you came to live with him in his 'humble manor,' as he" +
+                " had called it. Less than an hour ago, against your better judgement and with nothing but your life to lose, " +
+                "you had said yes. \n\n" +
+                "You’re not sure why you’d said yes. You know that you’re what they call 'high risk'. You know that a man" +
+                " like this has the money to cover up your disappearance if it gets noticed. Hell, when you’d asked his name, " +
+                "the man had simply stated, 'Names are unimportant,' before ushering you into his car. But something deep within " +
+                "you, which you decided to call a gut feeling, told you that this was the right move, and that going with him would" +
+                " help.\n\n" +
+                "'It’s beautiful, isn’t it?' The old man’s question snaps you back to the present. \n\n" +
+                "'Yes,' you mutter quietly, too awestruck to properly compliment the place.\n\n" +
+                "The old man smiles, 'Welcome to Huxley Manor,' he says with a sweeping gesture before" +
+                " guiding you to the thick oaken front door.\n\n");
+        System.out.println("Please choose an option below:\n");
+        System.out.println("1 - Go inside\n");
+        if (you.playerChoice() > -1){
+            System.out.println("The old man claps twice and the doors slowly creak open to reveal an ornate hallway" +
+                    " with beautiful vintage-looking wallpaper and dark wooden floors. As he guides you through, you notice" +
+                    " dozens of oil paintings, all of which look to be extremely old. A painting of a man in what looks to be renaissance" +
+                    " garb, staring intensely outward with long black hair catches your eye.\n\n" +
+                    "The cat brushes past you, pulling your attention away from the painting, and you look down " +
+                    "to see that you’re walking past a staircase to what you assume is the basement. The stairs, though still beautiful, " +
+                    "are clearly not as well-kept as the rest of the house, and the walls seem to get dustier the further down they go. " +
+                    "There’s a part of you that wonders what’s down there - what secrets this mansion might hide.  \n\n" );
+            System.out.println("What would you like to do?\n");
+            System.out.println("1 - Ask about the painting\n" +
+                    "2 - Ask about the stairs\n");
+            choice = you.playerChoice();
+            if (choice == 1){
+                System.out.println("The old man smiles as he turns to the portrait, an odd sentimentality washing over him.\n\n" +
+                        "'He was a very good friend of mine.' he sighs, clearly beginning to reminisce, 'He had this commissioned " +
+                        "shortly before he-'\n\n" +
+                        "The old man stops, taking a moment to collect himself before continuing, 'He passed shortly after this was" +
+                        " painted,' he huffs distantly, 'If it weren’t for him, none of this would have been possible,' the man gestures to " +
+                        "the mansion around him.\n\n " +
+                        "You nod solemnly. There’s a part of you that wonders how he died so young - he couldn’t have been more than 30 in the " +
+                        "picture - and what he did to help the old man. Even so, you know better than to ask. If he had wanted to say, he would " +
+                        "have. The old man lingers on the painting a moment more, his smile widening, before seeming to snap back to the present and " +
+                        "guiding you into the dining room.\n\n" +
+                        "You enter to see a boy who couldn’t be more than 19 or 20 setting the table. \n\n" +
+                        "The old man snaps his fingers and the boy is suddenly at attention, nearly dropping the plates\n\n" +
+                        "'This is Mallory,' the old man says, 'I found him in much the same situation I found you, and he’s " +
+                        "been living and working here until he finds his feet, isn’t that right Mallory?'\n\n" +
+                        "Mallory nods nervously, 'Yes, sir.'\n\n" +
+                        "The old man laughs and jovially clasps a hand on Mallory’s shoulder, 'He’s a bit shy, but he’ll warm up to you in no time,' he remarks.\n\n" +
+                        "Mallory smiles at you, nodding more genuinely this time, before the old man says something about allowing you to get acquainted before" +
+                        " going into the kitchen and leaving the two of you alone.\n\n" +
+                        "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he " +
+                        "seems genuinely happy to meet you, there is also an almost mournful disposition underneath it all. \n\n");
+            }
+            else if(choice == 2){
+                System.out.println("The old man chuckles a little, 'The only things of interest that I keep down there are my old typewriters.'\n\n" +
+                        "A pause \n\n" +
+                        "'And the bodies, of course.' He stops a moment, staring at you rather intensely. \n\n" +
+                        "Shit. Was that a joke or a threat?\n\n" +
+                        "The silence is broken with a hearty laugh from the old man, which you hesitantly join.\n\n" +
+                        "'I apologize,' the old man says, still laughing, 'My humor is sometimes...A bit crass.' \n\n" +
+                        "He continues to chuckle to himself as you hazard a glance down the stairs. There appears to be a" +
+                        " shiny puddle of something at the bottom, but the base of the steps is too dark to see what it is. It’s probably " +
+                        "just water, you tell yourself; an old place like this is bound to have leaks.\n\n" +
+                        "The sudden crash of china on wood jolts your attention to what you assume is the dining room. The old man quickly " +
+                        "moves to see what happened, gesturing for you to follow.\n\n" +
+                        "As you enter the room, the cat bolts past you into an entrance that likely leads to the kitchen, clearly scared by the crash." +
+                        " A moment later, a finely-dressed man with white gloves emerges from the same entrance with a broom and dustpan, immediately crouching " +
+                        "down and beginning to clean up the shards. \n\n" +
+                        "Near the dining table, apologizing profusely with the broken glass at his feet stands a boy who couldn't be more than 19 or 20. An odd relief" +
+                        " seems to momentarily wash over him when he sees you enter, though it’s quickly replaced by his original apprehension as the old man" +
+                        " approaches him.\n\n" +
+                        "Neither one speaks, though through eye-contact alone, it seems that in seconds an entire conversation takes place. The boy's posture shifts " +
+                        "fearfully as the old man’s brow furrows, then after a quick, wide-eyed shake of the head from the boy, both relax as if the situation " +
+                        "is resolved.\n\n" +
+                        "The man with white gloves wordlessly stands when he has finished sweeping up the glass and goes back into the kitchen.\n\n" +
+                        "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if ready to bolt in case any more plates" +
+                        " decide to come crashing down.\n\n" +
+                        "A smile returns to the old man’s face as he introduces you to the boy, who is apparently named Mallory, 'He can be a bit clumsy " +
+                        "sometimes, but he’s a good worker,' the old man says, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory." +
+                        " Even so, the boy seems to try to keep up a smile.\n\n" +
+                        "'I’ll let you two get acquainted,' says the old man, picking up the cat and heading into the kitchen, leaving the two of you alone.\n\n" +
+                        "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he seems genuinely happy to meet you," +
+                        " there is also an almost mournful disposition underneath. He goes back to setting the table before you can dwell on it too long. \n\n");
+            }
+            System.out.println("What would you like to do?\n");
+            System.out.println("1 - Ask Mallory how he likes working at Huxley Manor\n" +
+                    "2 - Offer to help set the table" +
+                    "3 - Stand there awkwardly");
+            choice = you.playerChoice();
+            if(choice == 1){
+                System.out.println("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags under his eyes being heavy and " +
+                        "thick. Too heavy for someone his age.\n\n" +
+                        "He locks eye contact with you, his gaze requesting that you hold it as he speaks, 'I wouldn’t trade working here for the world!" +
+                        " I love the work I do, and he’s been extremely generous to let me stay here while I save up to get a place of my own.'\n\n" +
+                        "Despite the cheery tone, you feel a shiver of unease run down your spine as he talks. The words he’s saying are loud and " +
+                        "enthusiastic, and if the only thing in this interaction had been his voice, you may have actually believed him. But his eyes, " +
+                        "which have not faltered since locking with yours… \n\n" +
+                        "God, his eyes...\n\n" +
+                        "They tell a different story entirely. As he speaks, his brows knit together in a look of pain, despair, and exhaustion. " +
+                        "Regret drips from every movement he makes as he shakes his head while discussing the old man’s 'generosity.'\n\n" +
+                        "When he’s finished speaking, Mallory’s expression quickly switches to a smile, and he goes back to his work as if nothing happened.\n\n" +
+                        "You simply stand there, watching him in bewilderment, completely unsure of how to respond. Either Mallory always talks with his facial" +
+                        " expressions wildly mismatching his words, or he was trying to warn you of something. Or perhaps you’ve misinterpreted the" +
+                        " interaction entirely.\n\n" +
+                        "You glance around the dining room, with its chandelier hanging from the ceiling and ornate wallpaper smoothly covering its " +
+                        "walls. As Mallory sets the antique wooden table you notice its intricately-carved embellishments curling over each corner as " +
+                        "if it were being held up by many human hands. Why would a man like him help a person like you? What motivation could someone of this caliber " +
+                        "have for altruism? \n\n" +
+                        "You shake your head. This man was willing to help you when no one else would, and if he plans to exploit you, at the very least" +
+                        " you’ll have a roof over your head. At worst, you figure you could live here until things get bad. Besides, it’s not like an old" +
+                        " man like the one in the kitchen could beat you in a fight.\n\n" +
+                        "You hear the old man’s deep laughter echo from the other room, accompanied by another. He doesn’t sound evil. You sigh to yourself." +
+                        " You’ve always been paranoid, and at this point, you decide it’s best not to look a" +
+                        " gift-horse in the mouth. \n\n");
+
+            }
+            else if(choice == 2){
+                System.out.println("Mallory glances at you with what appears to be genuine fear in his eyes, quickly shaking his head, 'I’ve got it!' he says quickly," +
+                        " seemingly loud enough for those in the kitchen to hear.\n\n" +
+                        "Then he flashes you a small smile, nearly whispering, 'Thank you, though,' before returning to his work.\n\n");
+            }
+            else if (choice == 3) {
+                System.out.println("You stand there in a thick silence, neither of you moving to speak. After a moment, you watch as Mallory goes back " +
+                        "to setting the table. He doesn’t move the way you expect him to. Every gesture he makes is stiff, and even jerky at times. The " +
+                        "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but his actions" +
+                        " almost remind you of a deftly-controlled marionette without the strings. You chide yourself for the comparison. " +
+                        "He’s probably just tired. \n\n");
+            }
+        }
     }
 
     /*********** FLOOR ONE *************/
