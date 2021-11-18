@@ -40,10 +40,10 @@ public class mansion {
     public void prologue() {
         System.out.println("The man’s hand feels heavy on your back as you are guided up the driveway " +
                 "against your better judgement. A large mansion  - which you’re quite sure is the only dwelling" +
-                " for miles \nin this area - looms before you, decorated impeccably for Halloween. Cornstalks lean up " +
-                "against the pillars supporting the upper balconies, pumpkins and hay bales are scattered \ntastefully " +
-                "over the front porch, and a black cat sits somewhat ominously in the window by the door - though you’re " +
-                "sure that the cat is more of a year-round affair. \n\n" +
+                " for miles \nin this area - looms before you, decorated impeccably for Halloween. Cornstalks lean " +
+                "up against the pillars supporting the upper balconies, pumpkins and hay bales are scattered " +
+                "\ntastefully over the front porch, and a black cat sits somewhat ominously in the window by the " +
+                "door - though you’re sure that the cat is more of a year-round affair. \n\n" +
                 "You stop a moment, simply staring and struggling to take in the fact that this is all real. Less than " +
                 "an hour ago, you had been on the streets, trying to scrounge whatever money \nyou could to save up for a " +
                 "proper coat for the coming winter. Less than an hour ago, an old man whose name you still don’t know had offered " +
@@ -104,28 +104,28 @@ public class mansion {
                         "The silence is broken with a hearty laugh from the old man, which you hesitantly join.\n\n" +
                         "'I apologize,' the old man says, still laughing, 'My humor is sometimes...A bit crass.' \n\n" +
                         "He continues to chuckle to himself as you hazard a glance down the stairs. There appears to be a" +
-                        " shiny puddle of something at the bottom, but the base of the steps is too dark to see what it is. It’s probably " +
+                        " shiny puddle of something at the bottom, but the base of the steps is too dark to \nsee what it is. It’s probably " +
                         "just water, you tell yourself; an old place like this is bound to have leaks.\n\n" +
                         "The sudden crash of china on wood jolts your attention to what you assume is the dining room. The old man quickly " +
                         "moves to see what happened, gesturing for you to follow.\n\n" +
                         "As you enter the room, the cat bolts past you into an entrance that likely leads to the kitchen, clearly scared by the crash." +
-                        " A moment later, a finely-dressed man with white gloves emerges from the same entrance with a broom and dustpan, immediately crouching " +
+                        " A moment later, a finely-dressed man with white gloves \nemerges from the same entrance with a broom and dustpan, immediately crouching " +
                         "down and beginning to clean up the shards. \n\n" +
                         "Near the dining table, apologizing profusely with the broken glass at his feet stands a boy who couldn't be more than 19 or 20. An odd relief" +
-                        " seems to momentarily wash over him when he sees you enter, though it’s quickly replaced by his original apprehension as the old man" +
+                        " seems to momentarily wash over him \nwhen he sees you enter, though it’s quickly replaced by his original apprehension as the old man" +
                         " approaches him.\n\n" +
                         "Neither one speaks, though through eye-contact alone, it seems that in seconds an entire conversation takes place. The boy's posture shifts " +
-                        "fearfully as the old man’s brow furrows, then after a quick, wide-eyed shake of the head from the boy, both relax as if the situation " +
+                        "fearfully as the old man’s brow furrows, \nthen after a quick, wide-eyed shake of the head from the boy, both relax as if the situation " +
                         "is resolved.\n\n" +
                         "The man with white gloves wordlessly stands when he has finished sweeping up the glass and goes back into the kitchen.\n\n" +
                         "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if ready to bolt in case any more plates" +
                         " decide to come crashing down.\n\n" +
                         "A smile returns to the old man’s face as he introduces you to the boy, who is apparently named Mallory, 'He can be a bit clumsy " +
-                        "sometimes, but he’s a good worker,' the old man says, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory." +
+                        "sometimes, but he’s a good worker,' the old man \nsays, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory." +
                         " Even so, the boy seems to try to keep up a smile.\n\n" +
                         "'I’ll let you two get acquainted,' says the old man, picking up the cat and heading into the kitchen, leaving the two of you alone.\n\n" +
                         "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he seems genuinely happy to meet you," +
-                        " there is also an almost mournful disposition underneath. He goes back to setting the table before you can dwell on it too long. \n\n");
+                        " there is also an almost mournful \ndisposition underneath. He goes back to setting the table before you can dwell on it too long. \n\n");
             }
             System.out.println("What would you like to do?\n");
             System.out.println("1 - Ask Mallory how he likes working at Huxley Manor\n" +
@@ -161,7 +161,7 @@ public class mansion {
             }
             else if(choice == 2){
                 System.out.println("Mallory glances at you with what appears to be genuine fear in his eyes, quickly shaking his head, 'I’ve got it!' he says quickly," +
-                        " seemingly loud enough for those in the kitchen to hear.\n\n" +
+                        " seemingly loud enough for those in the kitchen to \nhear.\n\n" +
                         "Then he flashes you a small smile, nearly whispering, 'Thank you, though,' before returning to his work.\n\n");
             }
             else if (choice == 3) {
@@ -195,7 +195,7 @@ public class mansion {
             }
             else if(choice == 2){
                 System.out.println("You glance apologetically at the butler’s hand, not entirely willing to shake it. He holds his hand" +
-                        " out for a moment longer, but after a tight-lipped nod from you, he realizes that you’re not going to shake it " +
+                        " out for a moment longer, but after a tight-lipped nod from you, he realizes that \nyou’re not going to shake it " +
                         "and instead withdraws his hand and nods back.\n\n");
             }
             System.out.println("Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though" +
@@ -221,7 +221,7 @@ public class mansion {
             }
             else if(choice == 2){
                 System.out.println("Mallory pulls out the chair beside him, flashing you a small smile as you move to sit next to him. " +
-                        "You see the butler smile as well as you sit down and Mallory passes you the tray of mashed potatoes, " +
+                        "You see the butler smile as well as you sit down and Mallory passes you the tray \nof mashed potatoes, " +
                         "'Eat,' he says cheerily, 'you’ll need it.' \n\n");
             }
             System.out.println("Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler standing attentively off to the side.\n" +
