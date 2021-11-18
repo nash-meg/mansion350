@@ -5,23 +5,23 @@ public class mansion {
     int choice = -2;
     /*********** DIRECTIONS *************/
     public void directions() {
-        System.out.println("Sinister Happenings at Huxley Manor\n" +
-                "This game contains themes gore, violence, and manipulation/mind control.\n" +
-                "Enter at your own risk...\n" +
+        System.out.println("Sinister Happenings at Huxley Manor\n\n" +
+                "This game contains themes gore, violence, and manipulation/mind control.\n\n" +
+                "Enter at your own risk...\n\n" +
                 "Before goosebumps plague your arms and your eyes cannot be ripped away from the screen, " +
-                "here are some things to know about our spooky little game:\n" +
+                "here are some things to know about our spooky little game:\n\n" +
                 "This is a text-based game, so there are very little graphics. If you don’t like reading, " +
                 "sorry bud, this isn’t the game for you. We want to let our words guide your imagination, " +
-                "and we figure you know how to scare yourself better than we ever could.\n" +
+                "and we figure you know how to scare yourself better than we ever could.\n\n" +
                 "This is also a choose-your-own-adventure game, so you will read the story and choose from " +
                 "a handful of actions at specific moments to determine what happens next. Some of these " +
                 "options will allow you to continue through the escape, but some may result in death. Choose " +
-                "wisely and you might make it out alive.\n" +
+                "wisely and you might make it out alive.\n\n" +
                 "To select an option, type the number on your keyboard and hit enter. Also, some sections of " +
-                "the story are longer than others, so you may need to hit enter to continue reading.\n" +
+                "the story are longer than others, so you may need to hit enter to continue reading.\n\n" +
                 "The one graphic you do get to reap the benefits of is a map. You can pull up this map during " +
-                "given opportunities by typing 0 and hitting enter.\n" +
-                "We hope you enjoy, good luck, and don’t kick the cat.\n" +
+                "given opportunities by typing 0 and hitting enter.\n\n" +
+                "We hope you enjoy, good luck, and don’t kick the cat.\n\n" +
                 "- The devious minds behind the code");
         System.out.println("Please choose an option below:");
         System.out.println("1 - Continue to game.\n" +
@@ -129,7 +129,7 @@ public class mansion {
             }
             System.out.println("What would you like to do?\n");
             System.out.println("1 - Ask Mallory how he likes working at Huxley Manor\n" +
-                    "2 - Offer to help set the table" +
+                    "2 - Offer to help set the table\n" +
                     "3 - Stand there awkwardly");
             choice = you.playerChoice();
             if(choice == 1){
@@ -178,7 +178,7 @@ public class mansion {
                     "I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n\n" +
                     "He smiles, extending a hand for you to shake. \n\n");
             System.out.println("What do you do?\n");
-            System.out.println("1 - Shake his had\n" +
+            System.out.println("1 - Shake his hand\n" +
                     "2 - Don't shake his hand\n");
             choice = you.playerChoice();
             if(choice == 1){
