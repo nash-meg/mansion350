@@ -528,13 +528,58 @@ public class mansion {
 
     //hide from old man - crosses rooms, lots of booleans for if potion or spell book
     public void hideFromMan (){
-        //need to call player.getPurpPotion() and player.getBook() to determine which plot
-        System.out.println("story goes here" +
-             "and here");
-        System.out.println("Please choose an option below, or type 0 for the map:");
-        System.out.println("1 - choice.\n" +
-            "2 - choice.");
-        player.playerChoice();
+        if (player.getPurpPotion() == true) {
+            System.out.println("You see an image of the old man going up the stairs " +
+                    "toward the kitchen in the mirror.\n" +
+                    "QUICK! Choose an option below!\"");
+            System.out.println("1 - Hide in the pantry!\n" +
+                    "2 - Hide behind the kitchen door!\n" +
+                    "3 - Hide in the cupboard under the sink!");
+            player.playerChoice();
+            if (playerChoice() == 1) { //pantry
+                System.out.println("You hear him rummaging around, see the shadow of " +
+                        "his feet just outside the door, hear door knob jiggle, Meow???, " +
+                        "he turns and walks upstairs instead\n");
+                System.out.println("You run out, try the front door, hear him coming " +
+                        "back downstairs, you run down to the basement/cellar.");
+                cellar();
+            } else if (playerChoice() == 2) { //kitchen door
+                System.out.println("Works but needs to be really creepy. Walks very " +
+                        "slowly, bends down to get something from drawer, could see you " +
+                        "but doesn’t turn head, goes upstairs\n");
+                System.out.println("You run out, try the front door, hear him coming " +
+                        "back downstairs, you run down to the basement/cellar.");
+                cellar();
+            } else if (playerChoice() == 3) { //under sink
+                System.out.println("Death bc cant fit");
+                //death
+            } else if (playerChoice() == 0) { //map
+                System.out.println("Oh my god the old man is coming!! There's no time for the map!!");
+                //redisplay options
+            }
+        } else {
+            System.out.println("The old man comes upstairs from cellar without warning, " +
+                    "you dart into the next room");
+            System.out.println("What do you do??");
+            System.out.println("1 - HIDE!\n");
+            if (player.getBook() == true) {
+                System.out.println("2 - OMG you have a spell book! Use it!\n");
+            }
+            player.playerChoice();
+            if (playerChoice() == 1) { //hide
+                System.out.println("Death bc he’s literally a sorcerer and you’re a normie");
+                //death
+            } else if (playerChoice() == 2) { //book
+                System.out.println("Read the spell in front of him. \"You think I’d have a " +
+                        "book with spells that work on me? (or something)\", read spell, " +
+                        "turns you invisible, book turns to ash in your hands, " +
+                        "you run down to the cellar\n");
+                cellar();
+            } else if (playerChoice() == 0) { //map
+                System.out.println("Oh my god the old man is coming!! There's no time for the map!!");
+                //redisplay options
+            }
+        }
     }
 
     /*********** CELLAR *************/
