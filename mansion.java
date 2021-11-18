@@ -41,19 +41,19 @@ public class mansion {
         System.out.println("The man’s hand feels heavy on your back as you are guided up the driveway " +
                 "against your better judgement. A large mansion  - which you’re quite sure is the only dwelling" +
                 " for miles \nin this area - looms before you, decorated impeccably for Halloween. Cornstalks lean up " +
-                "against the pillars supporting the upper balconies, pumpkins and hay bales are scattered tastefully " +
+                "against the pillars supporting the upper balconies, pumpkins and hay bales are scattered \ntastefully " +
                 "over the front porch, and a black cat sits somewhat ominously in the window by the door - though you’re " +
                 "sure that the cat is more of a year-round affair. \n\n" +
                 "You stop a moment, simply staring and struggling to take in the fact that this is all real. Less than " +
                 "an hour ago, you had been on the streets, trying to scrounge whatever money \nyou could to save up for a " +
                 "proper coat for the coming winter. Less than an hour ago, an old man whose name you still don’t know had offered " +
-                "you a job and housing with the only condition being that you came to live with him in his 'humble manor,' as he" +
+                "you a job and housing with the only \ncondition being that you came to live with him in his 'humble manor,' as he" +
                 " had called it. Less than an hour ago, against your better judgement and with nothing but your life to lose, " +
                 "you had said yes. \n\n" +
                 "You’re not sure why you’d said yes. You know that you’re what they call 'high risk'. You know that a man" +
                 " like this has the money to cover up your disappearance if it gets noticed. \nHell, when you’d asked his name, " +
                 "the man had simply stated, 'Names are unimportant,' before ushering you into his car. But something deep within " +
-                "you, which you decided to call a gut feeling, told you that this was the right move, and that going with him would" +
+                "you, which you decided to call a \ngut feeling, told you that this was the right move, and that going with him would" +
                 " help.\n\n" +
                 "'It’s beautiful, isn’t it?' The old man’s question snaps you back to the present. \n\n" +
                 "'Yes,' you mutter quietly, too awestruck to properly compliment the place.\n\n" +
@@ -65,11 +65,11 @@ public class mansion {
             System.out.println("The old man claps twice and the doors slowly creak open to reveal an ornate hallway" +
                     " with beautiful vintage-looking wallpaper and dark wooden floors. As he guides you through, \nyou notice" +
                     " dozens of oil paintings, all of which look to be extremely old. A painting of a man in what looks to be renaissance" +
-                    " garb, staring intensely outward with long black hair catches your eye.\n\n" +
+                    " garb, staring intensely outward with long black hair \ncatches your eye.\n\n" +
                     "The cat brushes past you, pulling your attention away from the painting, and you look down " +
                     "to see that you’re walking past a staircase to what you assume is the basement. The \nstairs, though still beautiful, " +
                     "are clearly not as well-kept as the rest of the house, and the walls seem to get dustier the further down they go. " +
-                    "There’s a part of you that wonders what’s down there - what secrets this mansion might hide.  \n\n" );
+                    "There’s a part of you that \nwonders what’s down there - what secrets this mansion might hide.  \n\n" );
             System.out.println("What would you like to do?\n");
             System.out.println("1 - Ask about the painting\n" +
                     "2 - Ask about the stairs\n");
@@ -80,10 +80,10 @@ public class mansion {
                         "shortly before he-'\n\n" +
                         "The old man stops, taking a moment to collect himself before continuing, 'He passed shortly after this was" +
                         " painted,' he huffs distantly, 'If it weren’t for him, none of this would \nhave been possible,' the man gestures to " +
-                        "the mansion around him.\n\n " +
+                        "the mansion around him.\n\n" +
                         "You nod solemnly. There’s a part of you that wonders how he died so young - he couldn’t have been more than 30 in the " +
                         "picture - and what he did to help the old man. Even so, you \nknow better than to ask. If he had wanted to say, he would " +
-                        "have. The old man lingers on the painting a moment more, his smile widening, before seeming to snap back to the present and " +
+                        "have. The old man lingers on the painting a moment more, his smile widening, before seeming to snap back to the present \nand " +
                         "guiding you into the dining room.\n\n" +
                         "You enter to see a boy who couldn’t be more than 19 or 20 setting the table. \n\n" +
                         "The old man snaps his fingers and the boy is suddenly at attention, nearly dropping the plates\n\n" +
@@ -149,7 +149,7 @@ public class mansion {
                         " interaction entirely.\n\n" +
                         "You glance around the dining room, with its chandelier hanging from the ceiling and ornate wallpaper smoothly covering its " +
                         "walls. As Mallory sets the antique wooden table you \nnotice its intricately-carved embellishments curling over each corner as " +
-                        "if it were being held up by many human hands. Why would a man like him help a person like you? What motivation could someone of this caliber " +
+                        "if it were being held up by many human hands. Why would a man like him help a person like you? What \nmotivation could someone of this caliber " +
                         "have for altruism? \n\n" +
                         "You shake your head. This man was willing to help you when no one else would, and if he plans to exploit you, at the very least" +
                         " you’ll have a roof over your head. At worst, you \nfigure you could live here until things get bad. Besides, it’s not like an old" +
@@ -226,9 +226,9 @@ public class mansion {
             }
             System.out.println("Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler standing attentively off to the side.\n" +
                     "\n" +
-                    " You realize with a little unease that these might be the only people in the mansion. Not that you have much experience with the habits of " +
+                    "You realize with a little unease that these might be the only people in the mansion. Not that you have much experience with the habits of " +
                     "the wealthy, but you expected him to have \nat least a few more staff to help things get done around the place. Then again, perhaps that’s why he " +
-                    "hired you. If it really is his goal to help people get back on their feet, it would make sense that if a few of them left at once, he would be " +
+                    "hired you. If it really is his goal to help people get back on their feet, it \nwould make sense that if a few of them left at once, he would be " +
                     "short-staffed.\n\n" +
                     "You push the issue out of your mind as the old man turns to you, 'If you’re going to be staying here,' he says, gesturing lazily with his fork," +
                     " 'there are a few rules you’re going \nto have to follow.'\n\n" +
@@ -259,14 +259,14 @@ public class mansion {
             choice = you.playerChoice();
 
             System.out.println("Over the next few days, you begin to get your bearings at Huxley Manor, and you manage to fall into a bit of a routine. " +
-                    "The work isn’t too hard, and Mallory and the butler are kind \nenough. The cat also seems to like you, though you’d be lying " +
+                    "The work isn’t too hard, and Mallory and the butler are \nkind enough. The cat also seems to like you, though you’d be lying " +
                     "if you said its tendency to sit and stare from the corner of the room doesn’t freak you out a little. Of course, you’ve never " +
                     "been much of a cat person. \n\n" +
                     "You notice that Mallory seems to be getting more and more gaunt by the day, and though it worries you a little, he insists that " +
-                    "it’s nothing to be concerned about, so you keep your \nmouth shut. Besides, no one else in the manor seems to be worried. Overall," +
+                    "it’s nothing to be concerned about, so you keep \nyour mouth shut. Besides, no one else in the manor seems to be worried. Overall," +
                     " you and Mallory have become fast friends.\n\n" +
                     "Your fifth night there, however, as the two of you are about to part ways and go to bed, he stops you, gently grabbing you by the arm." +
-                    " There are tears in his eyes, and he seems to \ntake a moment to gather himself before speaking.\n\n" +
+                    " There are tears in his eyes, and he seems \nto take a moment to gather himself before speaking.\n\n" +
                     "All he says is, 'I’ll miss you when we’re finally on our feet.'\n\n");
             System.out.println("What do you do?\n");
             System.out.println("1 - Tell him you'll miss him too\n" +
