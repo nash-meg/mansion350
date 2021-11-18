@@ -552,14 +552,14 @@ public class mansion {
                 "3 - Examine a clear, labeled potion.\n" +
                 "4 - Examine a clear, unlabeled potion.\n" +
                 "5 - Leave, go down the hall.");
-        player.playerChoice();
-        if (playerChoice() == 1) { //purple
+        choice = you.playerChoice();
+        if (choice == 1) { //purple
             System.out.println("Label faded and says “Sight” in latin - aspectum");
             System.out.println("Do you drink it?");
             System.out.println("1 - Yes.\n" +
                     "2 - No.");
-            player.playerChoice();
-            if (playerChoice() == 1) {
+            choice = you.playerChoice();
+            if (choice == 1) {
                 System.out.println("You turn your head towards the other potions and in " +
                         "the reflection of the liquid, you see the old man on a stairway, " +
                         "blood-covered, humming to himself. He stops, turns around, then " +
@@ -568,48 +568,48 @@ public class mansion {
                 System.out.println("You hear some thumping in the room over, so you decide " +
                         "to skert down the hall and keep moving.");
                 room8();
-            } else if (playerChoice() == 2) {
+            } else if (choice == 2) {
                 //redisplay potion options
             }
-        } else if (playerChoice() == 2) { //yellow
+        } else if (choice == 2) { //yellow
             System.out.println("Label faded and says “Plan B” in cursive");
             System.out.println("Do you drink it?");
             System.out.println("1 - Yes.\n" +
                     "2 - No.");
-            player.playerChoice();
-            if (playerChoice() == 1) {
+            choice = you.playerChoice();
+            if (choice == 1) {
                 System.out.println("It’s acid!");
                 //death
-            } else if (playerChoice() == 2) {
+            } else if (choice == 2) {
                 //redisplay potion options
             }
-        } else if (playerChoice() == 3) { //clear labeled
+        } else if (choice == 3) { //clear labeled
             System.out.println("Label faded and says “healing” in latin - sanitatem");
             System.out.println("Do you drink it?");
             System.out.println("1 - Yes.\n" +
                     "2 - No.");
-            player.playerChoice();
-            if (playerChoice() == 1) {
+            choice = you.playerChoice();
+            if (choice == 1) {
                 System.out.println("It's alcohol!");
                 //redisplay potion options
-            } else if (playerChoice() == 2) {
+            } else if (choice == 2) {
                 //redisplay potion options
             }
-        } else if (playerChoice() == 4) { //clear unlabeled
+        } else if (choice == 4) { //clear unlabeled
             System.out.println("There is no label on this bottle.");
             System.out.println("Do you drink it?");
             System.out.println("1 - Yes.\n" +
                     "2 - No.");
-            player.playerChoice();
-            if (playerChoice() == 1) {
+            choice = you.playerChoice();
+            if (choice == 1) {
                 System.out.println("Water, nothing happens");
                 //redisplay potion options
-            } else if (playerChoice() == 2) {
+            } else if (choice == 2) {
                 //redisplay potion options
             }
-        } else if (playerChoice() == 5) { //leave
+        } else if (choice == 5) { //leave
             room8();
-        }else if (playerChoice() == 0) { //map
+        }else if (choice == 0) { //map
             //display map
         }
     }
@@ -621,24 +621,24 @@ public class mansion {
         System.out.println("1 - Try the boarded up door.\n" +
                 "2 - Enter the open door.\n" +
                 "3 - Go down the stairs.");
-        player.playerChoice();
-        if (playerChoice() == 1) { //boarded door
+        choice = you.playerChoice();
+        if (choice == 1) { //boarded door
             System.out.println("You can't break open this door.");
             //redisplay options
-        } else if (playerChoice() == 2) { //open door
+        } else if (choice == 2) { //open door
             System.out.println("You walk into a bathroom.\n" +
                     "What would you like to do?");
             System.out.println("1 - Take a piss.\n" +
                     "2 - Leave.");
-            player.playerChoice();
-            if (playerChoice() == 1) { //piss
+            choice = you.playerChoice();
+            if (choice == 1) { //piss
                 System.out.println("You take a much needed piss.");
                 //redisplay options
-            } else if (playerChoice() == 2) { //leave
+            } else if (choice == 2) { //leave
                 //redisplay options
                 //if you pick bathroom again, System.out.println(“It’s literally just a bathroom”); and redisplay
             }
-        } else if (playerChoice() == 3) { //go downstairs
+        } else if (choice == 3) { //go downstairs
             if (player.getShoes() == true) {
                 System.out.println("You hear the thump of your shoes and cringe, " +
                         "hoping he doesn’t hear you clomping down.");
@@ -647,7 +647,7 @@ public class mansion {
             } else {
                 room11();
             }
-        } else if (playerChoice() == 0) { //map
+        } else if (choice == 0) { //map
             //display map
         }
     }
@@ -665,30 +665,30 @@ public class mansion {
                 "5 - Try the far door.\n" +
                 "6 - Try the close door.\n" +
                 "7 - Go into the next room.");
-        player.playerChoice();
-        if (playerChoice() == 1) { //search drawers
+        choice = you.playerChoice();
+        if (choice == 1) { //search drawers
             System.out.println("First drawer is an empty utensil drawer. You open the one next to it " +
                     "to find an empty drawer with note that says \"Nice try\"");
             //redisplay options
-        } else if (playerChoice() == 2) { //pantry
+        } else if (choice == 2) { //pantry
             System.out.println("You open the pantry and see normal food - he likes goldfish too hehe.");
             //redisplay options
-        } else if (playerChoice() == 3) { //cabinets
+        } else if (choice == 3) { //cabinets
             System.out.println("See a skull - have seen the skull before, realize that it was not decorative.");
             //redisplay options
-        } else if (playerChoice() == 4) { //fridge
+        } else if (choice == 4) { //fridge
             System.out.println("As you reach for the handle, you see bloody handprint on fridge door." +
                     "Realizes cranberry juice is blood (knocked over and dripping on the " +
                     "shelf, thicker/ congealed)");
             //redisplay options
-        } else if (playerChoice() == 5) { //far door
+        } else if (choice == 5) { //far door
             room7();
-        } else if (playerChoice() == 6) { //close door
+        } else if (choice == 6) { //close door
             System.out.println("This door is very locked, you can't get in.");
             //redisplay options
-        } else if (playerChoice() == 7) { //next room
+        } else if (choice == 7) { //next room
             hideFromMan();
-        } else if (playerChoice() == 0) { //map
+        } else if (choice == 0) { //map
             //display map
         }
     }
@@ -717,25 +717,25 @@ public class mansion {
             System.out.println("1 - Hide in the pantry!\n" +
                     "2 - Hide behind the kitchen door!\n" +
                     "3 - Hide in the cupboard under the sink!");
-            player.playerChoice();
-            if (playerChoice() == 1) { //pantry
+            choice = you.playerChoice();
+            if (choice == 1) { //pantry
                 System.out.println("You hear him rummaging around, see the shadow of " +
                         "his feet just outside the door, hear door knob jiggle, Meow???, " +
                         "he turns and walks upstairs instead\n");
                 System.out.println("You run out, try the front door, hear him coming " +
                         "back downstairs, you run down to the basement/cellar.");
                 cellar();
-            } else if (playerChoice() == 2) { //kitchen door
+            } else if (choice == 2) { //kitchen door
                 System.out.println("Works but needs to be really creepy. Walks very " +
                         "slowly, bends down to get something from drawer, could see you " +
                         "but doesn’t turn head, goes upstairs\n");
                 System.out.println("You run out, try the front door, hear him coming " +
                         "back downstairs, you run down to the basement/cellar.");
                 cellar();
-            } else if (playerChoice() == 3) { //under sink
+            } else if (choice == 3) { //under sink
                 System.out.println("Death bc cant fit");
                 //death
-            } else if (playerChoice() == 0) { //map
+            } else if (choice == 0) { //map
                 System.out.println("Oh my god the old man is coming!! There's no time for the map!!");
                 //redisplay options
             }
@@ -747,17 +747,17 @@ public class mansion {
             if (player.getBook() == true) {
                 System.out.println("2 - OMG you have a spell book! Use it!\n");
             }
-            player.playerChoice();
-            if (playerChoice() == 1) { //hide
+            choice = you.playerChoice();
+            if (choice == 1) { //hide
                 System.out.println("Death bc he’s literally a sorcerer and you’re a normie");
                 //death
-            } else if (playerChoice() == 2) { //book
+            } else if (choice == 2) { //book
                 System.out.println("Read the spell in front of him. \"You think I’d have a " +
                         "book with spells that work on me? (or something)\", read spell, " +
                         "turns you invisible, book turns to ash in your hands, " +
                         "you run down to the cellar\n");
                 cellar();
-            } else if (playerChoice() == 0) { //map
+            } else if (choice == 0) { //map
                 System.out.println("Oh my god the old man is coming!! There's no time for the map!!");
                 //redisplay options
             }
@@ -778,12 +778,12 @@ public class mansion {
         System.out.println("1 - Examine body of other boy.\n" +
                 "2 - Go towards door.\n" +
                 "3 - Hide among the bodies.");
-        player.playerChoice();
-        if (playerChoice() == 1) { //examine the body
+        choice = you.playerChoice();
+        if (choice == 1) { //examine the body
             System.out.println("Describe dead body. \"He’s clearly dead, so you decide " +
                     "to stop wasting time\"");
             //redisplay options
-        } else if (playerChoice() == 2) { //door
+        } else if (choice == 2) { //door
             System.out.println("Step over bodies, try door, sorcerer comes down, " +
                     "you hear him come down, your body turns against your will, and " +
                     "you’re looking right at him from across the cellar");
@@ -795,7 +795,7 @@ public class mansion {
             } else {
                 generalCellar();
             }
-        } else if (playerChoice() == 3) { //hide among bodies
+        } else if (choice == 3) { //hide among bodies
             System.out.println("Lay down among the bodies, try not to breath, feel " +
                     "the death, old man makes you stand up magically");
             if (player.getMatches() == true) {
@@ -805,7 +805,7 @@ public class mansion {
             } else {
                 generalCellar();
             }
-        } else if (playerChoice() == 0) { //map
+        } else if (choice == 0) { //map
             //display map
         }
     }
@@ -825,19 +825,19 @@ public class mansion {
                 "and you feel the matches\n");
         System.out.println("1 - Use your matches!\n" +
                 "2 - Don't use your matches.");
-        player.playerChoice();
-        if (playerChoice() == 1) { //matches
+        choice = you.playerChoice();
+        if (choice == 1) { //matches
             System.out.println("Struggle to grab them from your pocket, try to light the match, " +
                     "first breaks. Try again?");
             System.out.println("1 - Yes.\n" +
                     "2 - No.");
-            player.playerChoice();
-            if (playerChoice() == 1) { //yes
+            choice = you.playerChoice();
+            if (choice == 1) { //yes
                 System.out.println("Lights, throw it, doesn’t catch. Try again?");
                 System.out.println("1 - Yes.\n" +
                         "2 - No.");
-                player.playerChoice();
-                if (playerChoice() == 1) { //yes
+                choice = you.playerChoice();
+                if (choice == 1) { //yes
                     System.out.println("Lights, throw, flame catches on dead friend’s " +
                             "shirt, quickly spreads to old man’s robe, he bursts into " +
                             "flames eerily fast, the spell breaks and your legs give " +
@@ -847,17 +847,17 @@ public class mansion {
                     if (player.petCat() == true) {
                          System.out.println("see cat.");
                     }
-                } else if (playerChoice() == 2) { //no
+                } else if (choice == 2) { //no
                     System.out.println("Death");
                     //death
                 }
-            } else if (playerChoice() == 2) { //no
+            } else if (choice == 2) { //no
                 System.out.println("Death");
                 //death
             }
-        } else if (playerChoice() == 2) { //don't matches
+        } else if (choice == 2) { //don't matches
             generalCellar();
-        } else if (playerChoice() == 0) { //map
+        } else if (choice == 0) { //map
             System.out.println("Bestie you're time is running out, don't waste it looking at the map.");
             //redisplay options
         }
