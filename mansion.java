@@ -32,13 +32,12 @@ public class mansion {
         if (choice == 1) { //continue
             prologue();
         } else if (choice == 2) { //exit
-            //leave game
+            //games ends - no code needed
         }
     }
 
     /*********** PROLOGUE *************/
     //prologue method - mostly text, there are options but they don't affect anything
-    //show choices in history if time?
     public void prologue() {
         System.out.println("The man’s hand feels heavy on your back as you are guided up the driveway " +
                 "against your better judgement. A large mansion  - which you’re quite sure is the only " +
@@ -64,36 +63,40 @@ public class mansion {
                 "\"Yes,\" you mutter quietly, too awestruck to properly compliment the place.\n\n" +
                 "The old man smiles, \"Welcome to Huxley Manor,\" he says with a sweeping gesture before " +
                 "guiding you to the thick oaken front door.\n\n");
-        System.out.println("Please choose an option below:\n");
-        System.out.println("1 - Go inside\n" +
-                "2 - Leave\n");
+        System.out.println("What do you do?\n");
+        System.out.println("1 - Go inside.\n" +
+                "2 - Leave.\n");
         choice = you.playerChoice();
 
         if(choice > 1) {
             System.out.println("The thought crosses your mind to turn back, but you decide against it.\n");
         }
-        System.out.println("The old man claps twice and the doors slowly creak open to reveal an ornate hallway" +
-                    " with beautiful vintage-looking wallpaper and dark wooden floors. As he guides you through, \nyou notice" +
-                    " dozens of oil paintings, all of which look to be extremely old. A painting of a man in what looks to be renaissance" +
-                    " garb, staring intensely outward with long black hair \ncatches your eye.\n\n" +
-                    "The cat brushes past you, pulling your attention away from the painting, and you look down " +
-                    "to see that you’re walking past a staircase to what you assume is the basement. The \nstairs, though still beautiful, " +
-                    "are clearly not as well-kept as the rest of the house, and the walls seem to get dustier the further down they go. " +
-                    "There’s a part of you that \nwonders what’s down there - what secrets this mansion might hide.  \n\n" );
+        System.out.println("The old man claps twice and the doors slowly creak open to reveal an ornate " +
+                "hallway with beautiful vintage-looking wallpaper and dark wooden floors. As he guides you " +
+                "through, \nyou notice dozens of oil paintings, all of which look to be extremely old. A " +
+                "painting of a man in what looks to be renaissance garb, staring intensely outward with " +
+                "long black hair \ncatches your eye.\n\n" +
+                "The cat brushes past you, pulling your attention away from the painting, and you look down " +
+                "to see that you’re walking past a staircase to what you assume is the basement. The \nstairs, " +
+                "though still beautiful, are clearly not as well-kept as the rest of the house, and the walls " +
+                "seem to get dustier the further down they go. There’s a part of you that \nwonders what’s down " +
+                "there - what secrets this mansion might hide.\n\n" );
             System.out.println("What would you like to do?\n");
-            System.out.println("1 - Ask about the painting\n" +
-                    "2 - Ask about the stairs\n");
+            System.out.println("1 - Ask about the painting.\n" +
+                    "2 - Ask about the stairs.\n");
             choice = you.playerChoice();
             if (choice <= 1){
-                System.out.println("The old man smiles as he turns to the portrait, an odd sentimentality washing over him.\n\n" +
-                        "'He was a very good friend of mine.' he sighs, clearly beginning to reminisce, 'He had this commissioned " +
-                        "shortly before he-'\n\n" +
-                        "The old man stops, taking a moment to collect himself before continuing, 'He passed shortly after this was" +
-                        " painted,' he huffs distantly, 'If it weren’t for him, none of this would \nhave been possible,' the man gestures to " +
-                        "the mansion around him.\n\n" +
-                        "You nod solemnly. There’s a part of you that wonders how he died so young - he couldn’t have been more than 30 in the " +
-                        "picture - and what he did to help the old man. Even so, you \nknow better than to ask. If he had wanted to say, he would " +
-                        "have. The old man lingers on the painting a moment more, his smile widening, before seeming to snap back to the present \nand " +
+                System.out.println("The old man smiles as he turns to the portrait, an odd sentimentality washing " +
+                        "over him.\n\n" +
+                        "\"He was a very good friend of mine.\" he sighs, clearly beginning to reminisce, " +
+                        "\"He had this commissioned shortly before he-\"\n\n" +
+                        "The old man stops, taking a moment to collect himself before continuing, \"He passed " +
+                        "shortly after this was painted,\" he huffs distantly. \"If it weren’t for him, none " +
+                        "of this would \nhave been possible,\" the man gestures to the mansion around him.\n\n" +
+                        "You nod solemnly. There’s a part of you that wonders how he died so young - he couldn’t " +
+                        "have been more than 30 in the picture - and what he did to help the old man. Even so, " +
+                        "you \nknow better than to ask. If he had wanted to say, he would have. The old man lingers " +
+                        "on the painting a moment more, his smile widening, before seeming to snap back to the present \nand " +
                         "guiding you into the dining room.\n\n" +
                         "You enter to see a boy who couldn’t be more than 19 or 20 setting the table. \n\n" +
                         "The old man snaps his fingers and the boy is suddenly at attention, nearly dropping the plates\n\n" +
