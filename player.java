@@ -18,15 +18,7 @@ public class player {
     private int choice = -1;
 
     public player() {
-        // idk where to put this
-      /*  System.out.println("The game has begun!");
-        LoginManger loginManger = new LoginManger();
-
-        boolean userLoggedIn = loginManger.login();
-        while (!userLoggedIn) {
-            userLoggedIn = loginManger.login();
-        }*/
-       // */
+        System.out.println("The game has begun!");
     }
 
     //Getters and setters for inventory:
@@ -74,7 +66,7 @@ public class player {
             choiceList.add(choice);
             return choice;
         } else {
-           // System.out.println("Invalid choice, please type a number from the options above or 0 to see the map.");
+            System.out.println("Invalid choice, please type a number from the options above or 0 to see the map.");
             return -2;
         }
     }
