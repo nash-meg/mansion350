@@ -1,5 +1,8 @@
 public class map {
 
-    //GUI code goes here
+    /* GUI needed:
+    - map
+    - words look more like a game
+     */
 
 }
