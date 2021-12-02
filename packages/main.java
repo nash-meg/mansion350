@@ -1,4 +1,6 @@
-import java.util.Scanner;
+package packages;
+
+import packages.mansion;
 
 public class main {
 

@@ -1,4 +1,6 @@
-import java.awt.*;
+package packages;
+
+import packages.player;
 
 public class mansion {
     player you = new player();
@@ -21,8 +23,8 @@ public class mansion {
                 "To select an option, type the number on your keyboard and hit enter. Also, some " +
                 "sections of the story are longer than others, so you may need to hit enter to " +
                 "continue reading.\n\n" +
-                "The one graphic you do get to reap the benefits of is a map. You can pull up this " +
-                "map during given opportunities by typing 0 and hitting enter.\n\n" +
+                "The one graphic you do get to reap the benefits of is a packages.map. You can pull up this " +
+                "packages.map during given opportunities by typing 0 and hitting enter.\n\n" +
                 "We hope you enjoy, good luck, and don’t kick the cat.\n\n" +
                 "- The devious minds behind the code");
         System.out.println("Please choose an option below:");
@@ -40,7 +42,7 @@ public class mansion {
     //prologue method - mostly text, there are options but they don't affect anything
     public void prologue() {
         System.out.println("The man’s hand feels heavy on your back as you are guided up the driveway " +
-                "against your better judgement. A large mansion  - which you’re quite sure is the only " +
+                "against your better judgement. A large packages.mansion  - which you’re quite sure is the only " +
                 "dwelling for miles \nin this area - looms before you, decorated impeccably for " +
                 "Halloween. Cornstalks lean up against the pillars supporting the upper balconies, " +
                 "pumpkins and hay bales are scattered \ntastefully over the front porch, and a black " +
@@ -80,7 +82,7 @@ public class mansion {
                 "to see that you’re walking past a staircase to what you assume is the basement. The \nstairs, " +
                 "though still beautiful, are clearly not as well-kept as the rest of the house, and the walls " +
                 "seem to get dustier the further down they go. There’s a part of you that \nwonders what’s down " +
-                "there - what secrets this mansion might hide.\n\n" );
+                "there - what secrets this packages.mansion might hide.\n\n" );
             System.out.println("What would you like to do?\n");
             System.out.println("1 - Ask about the painting.\n" +
                     "2 - Ask about the stairs.\n");
@@ -92,7 +94,7 @@ public class mansion {
                         "\"He had this commissioned shortly before he-\"\n\n" +
                         "The old man stops, taking a moment to collect himself before continuing, \"He passed " +
                         "shortly after this was painted,\" he huffs distantly. \"If it weren’t for him, none " +
-                        "of this would \nhave been possible,\" the man gestures to the mansion around him.\n\n" +
+                        "of this would \nhave been possible,\" the man gestures to the packages.mansion around him.\n\n" +
                         "You nod solemnly. There’s a part of you that wonders how he died so young - he couldn’t " +
                         "have been more than 30 in the picture - and what he did to help the old man. Even so, " +
                         "you \nknow better than to ask. If he had wanted to say, he would have. The old man lingers " +
@@ -201,7 +203,7 @@ public class mansion {
                     "He smiles, extending a hand for you to shake. \n\n");
             System.out.println("What do you do?\n");
             System.out.println("1 - Shake his hand\n" +
-                    "2 - Don't shake his hand\n");
+                    "2 - Don't shake his hand\n" + "3 - Dine\n");
             choice = you.playerChoice();
             if(choice <= 1){
                 System.out.println("You accept the handshake to find that the butler’s grasp is much firmer than you expected. He didn’t " +
@@ -238,7 +240,7 @@ public class mansion {
                 System.out.println("The butler stays off to the side as you take up a seat next to the old man, who flashes" +
                         " you a toothy grin as you sit down beside him. If you didn’t know any better, you would have \nthought you saw a " +
                         "glimmer of pride in his eyes. \n\n" +
-                        "'Eat as much as you like,' he says warmly, passing you a piece of the main dish.\n\n" +
+                        "'Eat as much as you like,' he says warmly, passing you a piece of the packages.main dish.\n\n" +
                         "You smile thankfully, filling your plate as the others begin to eat.\n\n");
             }
             else if(choice >= 2){
@@ -248,7 +250,7 @@ public class mansion {
             }
             System.out.println("Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler standing attentively off to the side.\n" +
                     "\n" +
-                    "You realize with a little unease that these might be the only people in the mansion. Not that you have much experience with the habits of " +
+                    "You realize with a little unease that these might be the only people in the packages.mansion. Not that you have much experience with the habits of " +
                     "the wealthy, but you expected him to have \nat least a few more staff to help things get done around the place. Then again, perhaps that’s why he " +
                     "hired you. If it really is his goal to help people get back on their feet, it \nwould make sense that if a few of them left at once, he would be " +
                     "short-staffed.\n\n" +
@@ -319,7 +321,7 @@ public class mansion {
   /*  //room 1 - your bedroom
     public void room1() {
         System.out.println("You start in your room.\n" +
-                "What do you want to do? (Type a number below, or type 0 for the map).");
+                "What do you want to do? (Type a number below, or type 0 for the packages.map).");
         System.out.println("1 - Leave through the door.\n" +
                 "2 - Search the floor.\n" +
                 "3 - Go back to sleep");
@@ -332,15 +334,15 @@ public class mansion {
         } else if (choice == 3) { //back to sleep
             System.out.println("You can’t sleep. This is a horror game.");
             //redisplay options
-        } else if (choice == 0) { //map
-            //display map
+        } else if (choice == 0) { //packages.map
+            //display packages.map
         }
     }
 
     //room 5a - hallway (a bc floor 1)
     public void room5a() {
         System.out.println("You now walk out into the hallway.\n" +
-                "What do you want to do? (Type a number below, or type 0 for the map).");
+                "What do you want to do? (Type a number below, or type 0 for the packages.map).");
         System.out.println("1 - Go down the stairs.\n" +
                 "2 - Try opening the door on your left.\n" +
                 "3 - Try opening the door straight ahead.\n" +
@@ -356,15 +358,15 @@ public class mansion {
         } else if (choice == 4) { //boared door
             System.out.println("You can’t bust through this door.");
             //redisplay options
-        } else if (choice == 0) { //map
-            //display map
+        } else if (choice == 0) { //packages.map
+            //display packages.map
         }
     }
 
     //room 4 - mallory's bedroom
     public void room4() {
         System.out.println("The door was unlocked. You enter what appears to be the other boy's room.\n" +
-                "What do you do? (Type a number below, or type 0 for the map)");
+                "What do you do? (Type a number below, or type 0 for the packages.map)");
         System.out.println("1 - Search the bed.\n" +
                 "2 - Search the closet.\n" +
                 "3 - Search the desk");
@@ -436,7 +438,7 @@ public class mansion {
   /*  public void room5b() {
         System.out.println("You're now on a new level of the house. The board squeaks, " +
                 "you feel as though you're being watched, and blades swing from ceiling");
-        System.out.println("QUICK! DO SOMETHING! (Type a number below, or type 0 for the map)");
+        System.out.println("QUICK! DO SOMETHING! (Type a number below, or type 0 for the packages.map)");
         System.out.println("1 - DUCK!\n" +
                 "2 - TRY DOORS!\n" +
                 "3 - RUN THROUGH HALL!");
@@ -475,8 +477,8 @@ public class mansion {
         } else if (choice == 3) { //run
             System.out.println("Death by blades");
             //death screen, exit
-        } else if (choice == 0) { //map
-            System.out.println("Blades are swinging from the ceiling!! This is no time to look at the map!");
+        } else if (choice == 0) { //packages.map
+            System.out.println("Blades are swinging from the ceiling!! This is no time to look at the packages.map!");
             //redisplay options
         }
     }
@@ -484,7 +486,7 @@ public class mansion {
     //room 9 - chamber (pre fight scene)
     public void room9() {
         System.out.println("You have made it into some sort of chamber.\n" +
-                "What would you like to do? (Type a number below, or type 0 for the map).");
+                "What would you like to do? (Type a number below, or type 0 for the packages.map).");
         System.out.println("1 - Explore the bookcase.\n" +
                 "2 - Explore the coffee table.\n" +
                 "3 - Explore the fireplace.");
@@ -525,8 +527,8 @@ public class mansion {
             } else if (choice == 2) { //leave
                 room9Fight();
             }
-        } else if (choice == 0) { //map
-            //display map
+        } else if (choice == 0) { //packages.map
+            //display packages.map
         }
     }
 
@@ -538,7 +540,7 @@ public class mansion {
                 "noises that you could’ve sworn sound like an “I’m sorry.” You’re backing " +
                 "up into the door/shuffling along the room to a door.\n" +
                 "The giant butler thing lunges STRAIGHT AT YOU! QUICK REACT! " +
-                "(Type a number below, or type 0 for the map).");
+                "(Type a number below, or type 0 for the packages.map).");
         System.out.println("1 - DUCK!\n" +
                 "2 - MOVE TO THE SIDE!");
         if (you.getLetterOpen() ==  true) {
@@ -625,8 +627,8 @@ public class mansion {
                 System.out.println("Stab, absorbed into “butler” arm, comes out as claw");
                 //death
             }
-        } else if (choice == 0) { //map
-            System.out.println("The butler thing is coming at you!! Why are you trying to look at the map?!");
+        } else if (choice == 0) { //packages.map
+            System.out.println("The butler thing is coming at you!! Why are you trying to look at the packages.map?!");
             //redisplay options
         }
     }
@@ -634,7 +636,7 @@ public class mansion {
     //room 10 - chamber (potion room)
     public void room10() {
         System.out.println("You take a look around and see a room full of potions.\n" +
-                "What do you want to do? (Type a number below, or type 0 for the map).");
+                "What do you want to do? (Type a number below, or type 0 for the packages.map).");
         System.out.println("1 - Examine the purple potion.\n" +
                 "2 - Examine the yellow potion.\n" +
                 "3 - Examine a clear, labeled potion.\n" +
@@ -697,15 +699,15 @@ public class mansion {
             }
         } else if (choice == 5) { //leave
             room8();
-        }else if (choice == 0) { //map
-            //display map
+        }else if (choice == 0) { //packages.map
+            //display packages.map
         }
     }
 
     //room 8 - hallway/stairway (no method for bathroom, just display)
     public void room8() {
         System.out.println("You now walk down the hallway.\n" +
-                "What do you want to do? (Type a number below, or type 0 for the map).");
+                "What do you want to do? (Type a number below, or type 0 for the packages.map).");
         System.out.println("1 - Try the boarded up door.\n" +
                 "2 - Enter the open door.\n" +
                 "3 - Go down the stairs.");
@@ -735,8 +737,8 @@ public class mansion {
             } else {
                 room11();
             }
-        } else if (choice == 0) { //map
-            //display map
+        } else if (choice == 0) { //packages.map
+            //display packages.map
         }
     }
 
@@ -745,7 +747,7 @@ public class mansion {
    /* public void room11() {
         System.out.println("You find yourself in the kitchen. Probably a good place to look " +
                 "for a weapon in case you get into another fight...\n" +
-                "What will you search? (Type a number below, or type 0 for the map).");
+                "What will you search? (Type a number below, or type 0 for the packages.map).");
         System.out.println("1 - Search the drawers.\n" +
                 "2 - Look in the pantry.\n" +
                 "3 - Look in the cabinets.\n" +
@@ -776,8 +778,8 @@ public class mansion {
             //redisplay options
         } else if (choice == 7) { //next room
             hideFromMan();
-        } else if (choice == 0) { //map
-            //display map
+        } else if (choice == 0) { //packages.map
+            //display packages.map
         }
     }
 
@@ -823,8 +825,8 @@ public class mansion {
             } else if (choice == 3) { //under sink
                 System.out.println("Death bc cant fit");
                 //death
-            } else if (choice == 0) { //map
-                System.out.println("Oh my god the old man is coming!! There's no time for the map!!");
+            } else if (choice == 0) { //packages.map
+                System.out.println("Oh my god the old man is coming!! There's no time for the packages.map!!");
                 //redisplay options
             }
         } else {
@@ -845,8 +847,8 @@ public class mansion {
                         "turns you invisible, book turns to ash in your hands, " +
                         "you run down to the cellar\n");
                 cellar();
-            } else if (choice == 0) { //map
-                System.out.println("Oh my god the old man is coming!! There's no time for the map!!");
+            } else if (choice == 0) { //packages.map
+                System.out.println("Oh my god the old man is coming!! There's no time for the packages.map!!");
                 //redisplay options
             }
         }
@@ -861,7 +863,7 @@ public class mansion {
                 "the body of the boy from earlier. His eyes are clouded over and his skin is " +
                 "so pale it’s almost turned blue. See a light from the boarded up window on " +
                 "the door at the other side of the cellar.");
-        System.out.println("What would you like to do? Type a number below, or type 0 for the map.");
+        System.out.println("What would you like to do? Type a number below, or type 0 for the packages.map.");
         System.out.println("1 - Examine body of other boy.\n" +
                 "2 - Go towards door.\n" +
                 "3 - Hide among the bodies.");
@@ -892,8 +894,8 @@ public class mansion {
             } else {
                 generalCellar();
             }
-        } else if (choice == 0) { //map
-            //display map
+        } else if (choice == 0) { //packages.map
+            //display packages.map
         }
     }
 
@@ -931,7 +933,7 @@ public class mansion {
                             "you, you scramble up, the boards on the door have fallen as " +
                             "the old man screams in agony, the house begins to crumble " +
                             "and you run out the door");
-                    if (player.petCat() == true) {
+                    if (packages.player.petCat() == true) {
                          System.out.println("see cat.");
                     }
                 } else if (choice == 2) { //no
@@ -944,8 +946,8 @@ public class mansion {
             }
         } else if (choice == 2) { //don't matches
             generalCellar();
-        } else if (choice == 0) { //map
-            System.out.println("Bestie you're time is running out, don't waste it looking at the map.");
+        } else if (choice == 0) { //packages.map
+            System.out.println("Bestie you're time is running out, don't waste it looking at the packages.map.");
             //redisplay options
         }
     }
@@ -962,7 +964,7 @@ public class mansion {
                 "tells you to go before the whole place collapses, falls to his knees " +
                 "then into bodies, dies.\n" +
                 "Hear floorboards breaking and start to fall in.\n" +
-                "You run out the back door, mansion falls in.\n" +
+                "You run out the back door, packages.mansion falls in.\n" +
                 "Hear birds chirping, it’s dawn now. You wonder whether it was just a " +
                 "few hours or if another whole day has passed.\n" +
                 "Run away, and never fully forget this experience.");

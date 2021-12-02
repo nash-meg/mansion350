@@ -1,7 +1,9 @@
+package packages;
+
 public class map {
 
     /* GUI needed:
-    - map
+    - packages.map
     - words look more like a game
      */
 
