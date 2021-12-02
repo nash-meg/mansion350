@@ -9,3 +9,4 @@ We hope you enjoy, good luck, and don’t kick the cat.
 
 Also, as a warning, this game contains themes of gore, violence, and manipulation/mind control.
 
+Jodi, Emmit, + Meghan
