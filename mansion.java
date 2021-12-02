@@ -96,37 +96,46 @@ public class mansion {
                         "You nod solemnly. There’s a part of you that wonders how he died so young - he couldn’t " +
                         "have been more than 30 in the picture - and what he did to help the old man. Even so, " +
                         "you \nknow better than to ask. If he had wanted to say, he would have. The old man lingers " +
-                        "on the painting a moment more, his smile widening, before seeming to snap back to the present \nand " +
-                        "guiding you into the dining room.\n\n" +
+                        "on the painting a moment more, his smile widening, before seeming to snap back to the " +
+                        "present \nand guiding you into the dining room.\n\n" +
                         "You enter to see a boy who couldn’t be more than 19 or 20 setting the table. \n\n" +
-                        "The old man snaps his fingers and the boy is suddenly at attention, nearly dropping the plates\n\n" +
-                        "'This is Mallory,' the old man says, 'I found him in much the same situation I found you, and he’s " +
-                        "been living and working here until he finds his feet, isn’t that right Mallory?'\n\n" +
+                        "The old man snaps his fingers and the boy is suddenly at attention, nearly dropping " +
+                        "the plates\n\n" +
+                        "'This is Mallory,' the old man says, 'I found him in much the same situation I found " +
+                        "you, and he’s been living and working here until he finds his feet, isn’t that " +
+                        "right Mallory?'\n\n" +
                         "Mallory nods nervously, 'Yes, sir.'\n\n" +
-                        "The old man laughs and jovially clasps a hand on Mallory’s shoulder, 'He’s a bit shy, but he’ll warm up to you in no time,' he remarks.\n\n" +
-                        "Mallory smiles at you, nodding more genuinely this time, before the old man says something about allowing you to get acquainted before" +
-                        " going into the kitchen and leaving the two \nof you alone.\n\n" +
-                        "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he " +
-                        "seems genuinely happy to meet you, there is also an almost mournful \ndisposition underneath it all. \n\n");
+                        "The old man laughs and jovially clasps a hand on Mallory’s shoulder, 'He’s a bit shy, " +
+                        "but he’ll warm up to you in no time,' he remarks.\n\n" +
+                        "Mallory smiles at you, nodding more genuinely this time, before the old man says something " +
+                        "about allowing you to get acquainted before going into the kitchen and leaving the two " +
+                        "\nof you alone.\n\n" +
+                        "Mallory’s gaze seems to linger on you a moment before going back to his task, and " +
+                        "though on the surface he seems genuinely happy to meet you, there is also an almost " +
+                        "mournful \ndisposition underneath it all. \n\n");
             }
             else if(choice >= 2){
-                System.out.println("The old man chuckles a little, 'The only things of interest that I keep down there are my old typewriters.'\n\n" +
+                System.out.println("The old man chuckles a little, 'The only things of interest that I keep " +
+                        "down there are my old typewriters.'\n\n" +
                         "A pause \n\n" +
                         "'And the bodies, of course.' He stops a moment, staring at you rather intensely. \n\n" +
                         "Shit. Was that a joke or a threat?\n\n" +
                         "The silence is broken with a hearty laugh from the old man, which you hesitantly join.\n\n" +
                         "'I apologize,' the old man says, still laughing, 'My humor is sometimes...A bit crass.' \n\n" +
-                        "He continues to chuckle to himself as you hazard a glance down the stairs. There appears to be a" +
-                        " shiny puddle of something at the bottom, but the base of the steps is too dark to \nsee what it is. It’s probably " +
-                        "just water, you tell yourself; an old place like this is bound to have leaks.\n\n" +
-                        "The sudden crash of china on wood jolts your attention to what you assume is the dining room. The old man quickly " +
-                        "moves to see what happened, gesturing for you to follow.\n\n" +
-                        "As you enter the room, the cat bolts past you into an entrance that likely leads to the kitchen, clearly scared by the crash." +
-                        " A moment later, a finely-dressed man with white gloves \nemerges from the same entrance with a broom and dustpan, immediately crouching " +
-                        "down and beginning to clean up the shards. \n\n" +
-                        "Near the dining table, apologizing profusely with the broken glass at his feet stands a boy who couldn't be more than 19 or 20. An odd relief" +
-                        " seems to momentarily wash over him \nwhen he sees you enter, though it’s quickly replaced by his original apprehension as the old man" +
-                        " approaches him.\n\n" +
+                        "He continues to chuckle to himself as you hazard a glance down the stairs. There " +
+                        "appears to be a shiny puddle of something at the bottom, but the base of the " +
+                        "steps is too dark to \nsee what it is. It’s probably just water, you tell yourself; " +
+                        "an old place like this is bound to have leaks.\n\n" +
+                        "The sudden crash of china on wood jolts your attention to what you assume is the " +
+                        "dining room. The old man quickly moves to see what happened, gesturing for you to follow.\n\n" +
+                        "As you enter the room, the cat bolts past you into an entrance that likely leads to " +
+                        "the kitchen, clearly scared by the crash. A moment later, a finely-dressed man with " +
+                        "white gloves \nemerges from the same entrance with a broom and dustpan, immediately " +
+                        "crouching down and beginning to clean up the shards. \n\n" +
+                        "Near the dining table, apologizing profusely with the broken glass at his feet stands " +
+                        "a boy who couldn't be more than 19 or 20. An odd relief seems to momentarily wash over " +
+                        "him \nwhen he sees you enter, though it’s quickly replaced by his original apprehension " +
+                        "as the old man approaches him.\n\n" +
                         "Neither one speaks, though through eye-contact alone, it seems that in seconds an entire conversation takes place. The boy's posture shifts " +
                         "fearfully as the old man’s brow furrows, \nthen after a quick, wide-eyed shake of the head from the boy, both relax as if the situation " +
                         "is resolved.\n\n" +
