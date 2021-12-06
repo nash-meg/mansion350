@@ -5,10 +5,11 @@ import java.awt.event.ActionListener;
 
 public class Game {
 
-    TitleScreenHandler handlder = new TitleScreenHandler();
-
+    TitleScreenHandler handler = new TitleScreenHandler();// instantiate
     UI ui = new UI(); // sent this to the constructor in the story class method
-    map st = new map(ui);
+    map m = new map(ui);
+    Story st = new Story(this,ui, m); //this mean this Game class
+    String position1, position2, position3, position4;
 
     public static void main(String[] arg) {
         new Game();
@@ -16,8 +17,9 @@ public class Game {
 
     public Game() {
         // Game calls this createUI(handlder) method then call st.showTiltleScreen()
-        ui.createUI(handlder);
-        st.showTiltleScreen();
+        ui.createUI(handler);
+        st.defaultSetup(); // calling default set up in Story class
+        m.showTitleScreen();
 
     }
 
@@ -26,12 +28,13 @@ public class Game {
         public void actionPerformed(ActionEvent event) {
 
             String makeChoice = event.getActionCommand();// if you click on choice 1 then the setActionCommand will be called on put into makeChoice.
-
-            switch (makeChoice) {
-                case "Start": st.theMansion(); break;
-                case "c1": break;
-                case "c2": break;
-                case "c3": break;
+            // eg. when the click on a choice 1 it will send this st.choosePosition(position1) to  choosePosition method in the Story class
+            switch(makeChoice) {
+                case "Start": m.toTheMansion(); st.theMansion(); break;
+                case "c1": st.choosePosition(position1); break;
+                case "c2": st.choosePosition(position2); break;
+                case "c3": st.choosePosition(position3); break;
+                case "c4": st.choosePosition(position4); break;
 
 
             }

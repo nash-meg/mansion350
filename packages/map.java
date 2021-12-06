@@ -4,12 +4,12 @@ public class map {
 
     UI ui;
 
-    public map(UI userInterFace) {
-        ui = userInterFace;
+    public map(UI uInterFace) {
+        ui = uInterFace;
 
     }
 
-    public void showTiltleScreen() {
+    public void showTitleScreen() {
         //you this to access the title name panel in the UI class
         // this show the title screen
         ui.titleName.setVisible(true);
@@ -23,7 +23,7 @@ public class map {
 
     }
 
-    public void theMansion() {
+    public void toTheMansion() {
         //you this to access the title name panel in the UI class
         // this hide the title screen
         ui.titleName.setVisible(false);

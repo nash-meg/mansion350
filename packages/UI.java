@@ -5,24 +5,23 @@ import java.awt.*;
 
 public class UI {
     JFrame gameWindow;
-    //Container hold;
     JButton startButton, choice1, choice2, choice3, choice4;
     JTextArea mainTextArea;
-    JPanel titleName , startingButton, mainText, chooseButton,playerPanel;
-    JLabel titleLabel, weapon, weaponName, background ;
+    JPanel titleName , startingButton, mainText, chooseButton, playerPanel;
+    JLabel titleLabel, weapon, weaponName;
     Font titleFont = new Font("Times New Roman", Font.PLAIN,90);
     Font font = new Font("Times New Roman", Font.PLAIN,14);
 
-    //String weaponLabel, position;
 
 
-    public void createUI(Game.TitleScreenHandler handlder){
+
+    public void createUI(Game.TitleScreenHandler handler){
         gameWindow = new JFrame(); //initialize window
         gameWindow.setSize(900, 600);
         gameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminate game window
         gameWindow.getContentPane().setBackground(Color.black);	//set the color of the window
         gameWindow.setLayout(null);
-      //  hold = gameWindow.getContentPane();
+
 
         //title  name panel
         titleName  = new JPanel();
@@ -32,6 +31,7 @@ public class UI {
         titleLabel.setForeground(Color.white);
         titleLabel.setFont(titleFont);
         titleName.add(titleLabel);
+
         //Panel for the starting button ....backdrop
         startingButton = new JPanel();
         startingButton.setBounds(300, 400, 200, 100);
@@ -41,7 +41,7 @@ public class UI {
         startButton.setBackground(Color.black);
         startButton.setForeground(Color.white);
         startButton.setFont(font);
-        startButton.addActionListener(handlder); // when you click the START button it caller the handler
+        startButton.addActionListener(handler); // when you click the START button it caller the handler
         startButton.setActionCommand("Start");
         startButton.setFocusPainted(false);
         startingButton.add(startButton);
@@ -76,15 +76,15 @@ public class UI {
         choice1.setForeground(Color.white);
         choice1.setFont(font);
         choice1.setFocusPainted(false);
-        startButton.addActionListener(handlder);; // when you click the START button it caller the handler
-        choice1.setActionCommand("c1"); // the make the difference for each buttons
+        choice1.addActionListener(handler);; // when you click the START button it caller the handler
+        choice1.setActionCommand("c1");  // the make the difference for each buttons
         chooseButton.add(choice1); // when you click the START button it caller the handler
         choice2 = new JButton("choice 2");
         choice2.setBackground(Color.black);
         choice2.setForeground(Color.white);
         choice2.setFont(font);
         choice2.setFocusPainted(false);
-        startButton.addActionListener(handlder); // when you click the START button it caller the handler
+        choice2.addActionListener(handler); // when you click the START button it caller the handler
         choice2.setActionCommand("c2");
         chooseButton.add(choice2);; // when you click the START button it caller the handler
         choice3= new JButton("choice 3");
@@ -92,7 +92,7 @@ public class UI {
         choice3.setForeground(Color.white);
         choice3.setFont(font);
         choice3.setFocusPainted(false);
-        startButton.addActionListener(handlder); // when you click the START button it caller the handler
+        choice3.addActionListener(handler); // when you click the START button it caller the handler
         choice3.setActionCommand("c3");
         chooseButton.add(choice3); // when you click the START button it caller the handler
         choice4= new JButton("choice 4");
@@ -100,7 +100,7 @@ public class UI {
         choice4.setForeground(Color.white);
         choice4.setFont(font);
         choice4.setFocusPainted(false);
-        startButton.addActionListener(handlder);// when you click the START button it caller the handler
+        choice4.addActionListener(handler);// when you click the START button it caller the handler
         choice4.setActionCommand("c4");
         chooseButton.add(choice4); //
 

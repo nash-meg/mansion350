@@ -200,10 +200,10 @@ public class mansion {
                     "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash " +
                     "for a moment with an emotion that is covered up too quickly \nto read, and instead he flashes you a smile, 'I’m sorry, " +
                     "I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n\n" +
-                    "He smiles, extending a hand for you to shake. \n\n");
+                    "He smiles, extending a hand for you to shake.\n\n What do you do?\n");
             System.out.println("What do you do?\n");
             System.out.println("1 - Shake his hand\n" +
-                    "2 - Don't shake his hand\n" + "3 - Dine\n");
+                    "2 - Don't shake his hand\n");
             choice = you.playerChoice();
             if(choice <= 1){
                 System.out.println("You accept the handshake to find that the butler’s grasp is much firmer than you expected. He didn’t " +
