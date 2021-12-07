@@ -510,4 +510,9 @@ public class Story {
         game.position4 = "";
     }
 
+
+    /*********** FLOOR ONE *************/
+    public void room1() {}
+    public void room5() {}
+    public void room6() {}
 }
