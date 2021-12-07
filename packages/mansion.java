@@ -71,9 +71,9 @@ public class mansion {
                 "2 - Leave.\n");
         choice = you.playerChoice();
 
-        if(choice > 1) {
+        if(choice > 1) { //leave
             System.out.println("The thought crosses your mind to turn back, but you decide against it.\n");
-        }
+        } //else, go inside
         System.out.println("The old man claps twice and the doors slowly creak open to reveal an ornate " +
                 "hallway with beautiful vintage-looking wallpaper and dark wooden floors. As he guides you " +
                 "through, \nyou notice dozens of oil paintings, all of which look to be extremely old. A " +
@@ -88,7 +88,7 @@ public class mansion {
             System.out.println("1 - Ask about the painting.\n" +
                     "2 - Ask about the stairs.\n");
             choice = you.playerChoice();
-            if (choice <= 1){
+            if (choice <= 1){ //painting
                 System.out.println("The old man smiles as he turns to the portrait, an odd sentimentality washing " +
                         "over him.\n\n" +
                         "\"He was a very good friend of mine.\" he sighs, clearly beginning to reminisce, " +
@@ -118,7 +118,7 @@ public class mansion {
                         "though on the surface he seems genuinely happy to meet you, there is also an almost " +
                         "mournful \ndisposition underneath it all. \n\n");
             }
-            else if(choice >= 2){
+            else if(choice >= 2){ //stairs
                 System.out.println("The old man chuckles a little, \"The only things of interest that I keep " +
                         "down there are my old typewriters.\"\n\n" +
                         "A pause \n\n" +
@@ -165,7 +165,7 @@ public class mansion {
                     "2 - Offer to help set the table\n" +
                     "3 - Stand there awkwardly");
             choice = you.playerChoice();
-            if(choice <= 1){
+            if(choice <= 1){ //ask mal
                 System.out.println("Mallory smiles dryly, and you suddenly notice exactly how tired he is, " +
                         "the bags under his eyes being heavy and thick. Too heavy for someone his age.\n\n" +
                         "He locks eye contact with you, his gaze requesting that you hold it as he speaks, " +
@@ -199,14 +199,14 @@ public class mansion {
                         "point, \nyou decide it's best not to look a gift-horse in the mouth. \n\n");
 
             }
-            else if(choice == 2){
+            else if(choice == 2){ //set table
                 System.out.println("Mallory glances at you with what appears to be genuine fear in his eyes, " +
                         "quickly shaking his head, \"I've got it!\" he says quickly, seemingly loud enough for " +
                         "those in the kitchen to \nhear.\n\n" +
                         "Then he flashes you a small smile, nearly whispering, \"Thank you, though,\" before " +
                         "returning to his work.\n\n");
             }
-            else if (choice >= 3) {
+            else if (choice >= 3) { //stand awkward
                 System.out.println("You stand there in a thick silence, neither of you moving to speak. After " +
                         "a moment, you watch as Mallory goes back to setting the table. He doesn't move the way " +
                         "you expect him to. \nEvery gesture he makes is stiff, and even jerky at times. The " +
@@ -226,7 +226,7 @@ public class mansion {
             System.out.println("1 - Shake his hand\n" +
                     "2 - Don't shake his hand\n");
             choice = you.playerChoice();
-            if(choice <= 1){
+            if(choice <= 1){ //shake hand
                 System.out.println("You accept the handshake to find that the butler's grasp is much " +
                         "firmer than you expected. He didn't strike you as the type to hold onto a handshake " +
                         "for dear life.\n\n" +
@@ -241,7 +241,7 @@ public class mansion {
                         "glances at Mallory before seeming to return to the conversation, \"It's a pleasure " +
                         "to have you here. \nI can't wait to show you the ropes.\"\n\n");
             }
-            else if(choice >= 2){
+            else if(choice >= 2){ //dont shake
                 System.out.println("You glance apologetically at the butler's hand, not entirely willing " +
                         "to shake it. He holds his hand out for a moment longer, but after a tight-lipped " +
                         "nod from you, he realizes that \nyou're not going to shake it and instead " +
@@ -266,18 +266,18 @@ public class mansion {
             System.out.println("1 - Sit next to the old man\n" +
                     "2 - Sit next to Mallory\n");
             choice = you.playerChoice();
-            if(choice <= 1){
+            if(choice <= 1){ //sit old man
                 System.out.println("The butler stays off to the side as you take up a seat next to the old " +
                         "man, who flashes you a toothy grin as you sit down beside him. If you didn't know " +
                         "any better, you would have \nthought you saw a glimmer of pride in his eyes. \n\n" +
-                        "'Eat as much as you like,' he says warmly, passing you a piece of the mashed potatoes.\n\n" +
+                        "\"Eat as much as you like,\" he says warmly, passing you a piece of the mashed potatoes.\n\n" +
                         "You smile thankfully, filling your plate as the others begin to eat.\n\n");
             }
-            else if(choice >= 2){
+            else if(choice >= 2){ //sit mal
                 System.out.println("Mallory pulls out the chair beside him, flashing you a small smile " +
                         "as you move to sit next to him. You see the butler smile as well as you sit " +
                         "down and Mallory passes you the tray \nof mashed potatoes, 'Eat,' he says " +
-                        "cheerily, 'you'll need it.' \n\n");
+                        "cheerily, \"you'll need it.\"\n\n");
             }
             System.out.println("Surprisingly, the only people at dinner are you, Mallory, and the old man, " +
                     "with the butler standing attentively off to the side.\n\n" +
@@ -287,36 +287,36 @@ public class mansion {
                     "Then again, perhaps that's why he hired you. If it really is his goal to help people " +
                     "get back on their feet, it \nwould make sense that if a few of them left at once, he " +
                     "would be short-staffed.\n\n" +
-                    "You push the issue out of your mind as the old man turns to you, 'If you're going to " +
-                    "be staying here,' he says, gesturing lazily with his fork, 'there are a few rules " +
-                    "you're going \nto have to follow.'\n\n" +
+                    "You push the issue out of your mind as the old man turns to you, \"If you're going to " +
+                    "be staying here,\" he says, gesturing lazily with his fork, \"there are a few rules " +
+                    "you're going \nto have to follow.\"\n\n" +
                     "Here, he pauses, looking at you expectantly as if to make sure you're still on board.\n\n" +
                     "Not entirely sure what kind of response he's looking for, you nod.\n\n" +
                     "Apparently, that was the right response, because the old man grins as he continues, " +
-                    "'Things here run on a tight shift during work hours, but when you're not working, " +
+                    "\"Things here run on a tight shift during work hours, but when you're not working, " +
                     "your time is \nyour own to do as you please. You'll be paid by the hour for every " +
                     "task you complete around the Manor. You're allowed to take days off whenever you " +
-                    "need, no questions asked-'\n\n" +
+                    "need, no questions asked-\"\n\n" +
                     "At this, Mallory scoffs quietly. The old man doesn't seem to notice, but you catch the " +
                     "butler throwing a warning glance towards the boy. \n\n" +
-                    "'-Any locked or boarded up doors are to stay that way and under no circumstances are you " +
+                    "\"-Any locked or boarded up doors are to stay that way and under no circumstances are you " +
                     "to go into the herb garden next to the kitchen. Above all, you are never allowed to go down " +
                     "\ninto the cellar, no matter why, lest you wish for your time here to end. Do you " +
-                    "understand?'\n\n" +
-                    "'Yes, sir,' is all you can manage. There's a heaviness to the air that you didn't expect " +
+                    "understand?\"\n\n" +
+                    "\"Yes, sir,\" is all you can manage. There's a heaviness to the air that you didn't expect " +
                     "to feel over dinner, and instinct dictates that you respond as succinctly as possible. \n\n" +
-                    "The old man's grin widens, 'Then welcome to Huxley Manor!' he exclaims, the heaviness " +
+                    "The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
                     "of the mood suddenly dissipating.\n\n" +
-                    "'It's a wonderful place to be,' the butler adds, 'and if you have any questions at all, " +
-                    "feel free to ask me.'\n\n" +
+                    "\"It's a wonderful place to be,\" the butler adds, \"and if you have any questions at all, " +
+                    "feel free to ask me.\"\n\n" +
                     "The old man nods approvingly, and dinner continues rather normally.\n\n" +
                     "Once everyone has finished eating and the table is cleared, the old man takes you " +
-                    "upstairs and shows you to your bedroom on the top floor, 'This is where you'll be " +
+                    "upstairs and shows you to your bedroom on the top floor, \"This is where you'll be " +
                     "sleeping for the \nrest of your time here. Mallory's room is across the hall, and mine " +
-                    "is the one next to yours, so if you need anything, you know where to go.'\n\n" +
-                    "You nod, and the old man turns to leave before stopping himself, 'Oh, and just as a heads " +
+                    "is the one next to yours, so if you need anything, you know where to go.\"\n\n" +
+                    "You nod, and the old man turns to leave before stopping himself, \"Oh, and just as a heads " +
                     "up, the cat tends to be a little loud at night, so I suggest you keep your door " +
-                    "closed,' \nhe chuckles, 'You know how cats are.'\n\n" +
+                    "closed,\" \nhe chuckles, \"You know how cats are.\"\n\n" +
                     "After that, he says goodnight, and you open the door to your room. It's small, but " +
                     "comfortable, with a desk on one wall, a bed on the other, and beside that, a closet. " +
                     "A few tears \ncome to your eyes as you realize you'll be sleeping in a proper bed tonight." +
@@ -338,18 +338,18 @@ public class mansion {
                     "Your fifth night there, however, as the two of you are about to part ways and go to " +
                     "bed, he stops you, gently grabbing you by the arm. There are tears in his eyes, and " +
                     "he seems \nto take a moment to gather himself before speaking.\n\n" +
-                    "All he says is, 'I'll miss you when we're finally on our feet.'\n\n");
+                    "All he says is, \"I'll miss you when we're finally on our feet.\"\n\n");
             System.out.println("What do you do?\n");
             System.out.println("1 - Tell him you'll miss him too\n" +
                     "2 - Stay silent\n");
             choice = you.playerChoice();
-            if(choice <=  1){
-                System.out.println("You nod, taking hold of his hand, 'I'll miss you too.' \n\n" +
+            if(choice <=  1){ //miss him too
+                System.out.println("You nod, taking hold of his hand, \"I'll miss you too.\" \n\n" +
                         "It's a short response, but you mean every word of it. \n\n" +
-                        "Mallory smiles, tightening his grip on your hand, 'We'll have to keep in touch.'\n\n" +
+                        "Mallory smiles, tightening his grip on your hand, \"We'll have to keep in touch.\"\n\n" +
                         "You nod. Though his eyes are watery with unshed tears, he seems content.\n\n");
             }
-            if(choice >= 2){
+            if(choice >= 2){ //silent
                 System.out.println("He waits a moment, seemingly expecting you to say something, but when " +
                         "you don't respond, he nods and seems to give you an understanding smile. " +
                         "Mallory draws in a breath, looking \nyou over and looking around as if savoring " +
@@ -366,7 +366,8 @@ public class mansion {
     }
 
     /*********** FLOOR ONE *************/
-  /*  //room 1 - your bedroom
+    /*
+    //room 1 - your bedroom
     public void room1() {
         System.out.println("You start in your room.\n" +
                 "What do you want to do? (Type a number below, or type 0 for the map).");
@@ -386,7 +387,9 @@ public class mansion {
             //display map
         }
     }
+    */
 
+     /*
     //room 5a - hallway (a bc floor 1)
     public void room5a() {
         System.out.println("You now walk out into the hallway.\n" +
@@ -410,7 +413,9 @@ public class mansion {
             //display map
         }
     }
+    */
 
+    /*
     //room 4 - mallory's bedroom
     public void room4() {
         System.out.println("The door was unlocked. You enter what appears to be the other boy's room.\n" +
@@ -480,10 +485,12 @@ public class mansion {
             }
         }
     }
+     */
 
     /*********** FLOOR TWO *************/
+    /*
     //room void 5b - hallway (b bc floor 2)
-  /*  public void room5b() {
+    public void room5b() {
         System.out.println("You're now on a new level of the house. The board squeaks, " +
                 "you feel as though you're being watched, and blades swing from ceiling");
         System.out.println("QUICK! DO SOMETHING! (Type a number below, or type 0 for the map)");
@@ -528,11 +535,12 @@ public class mansion {
         } else if (choice == 0) { //map
             System.out.println("Blades are swinging from the ceiling!! This is no time to  " +
             "look at the map!");
-   */
             //redisplay options
         }
     }
+     */
 
+    /*
     //room 9 - chamber (pre fight scene)
     public void room9() {
         System.out.println("You have made it into some sort of chamber.\n" +
@@ -581,13 +589,15 @@ public class mansion {
             //display map
         }
     }
+     */
 
+    /*
     //room 9 - chamber (butler fight scene)
     public void room9Fight() {
         System.out.println("You hear an *odd cat noise.* You urn around and see the cat " +
                 "growing into an eight-foot tall creature with way too many limbs that " +
                 "resembles the butler. As he's growing, he mutters out some animalistic-like " +
-                "noises that you could've sworn sound like an “I'm sorry.” You're backing " +
+                "noises that you could've sworn sound like an \"I'm sorry.\" You're backing " +
                 "up into the door/shuffling along the room to a door.\n" +
                 "The giant butler thing lunges STRAIGHT AT YOU! QUICK REACT! " +
                 "(Type a number below, or type 0 for the map).");
@@ -683,7 +693,9 @@ public class mansion {
             //redisplay options
         }
     }
+     */
 
+    /*
     //room 10 - chamber (potion room)
     public void room10() {
         System.out.println("You take a look around and see a room full of potions.\n" +
@@ -754,7 +766,9 @@ public class mansion {
             //display map
         }
     }
+     */
 
+    /*
     //room 8 - hallway/stairway (no method for bathroom, just display)
     public void room8() {
         System.out.println("You now walk down the hallway.\n" +
@@ -777,7 +791,7 @@ public class mansion {
                 //redisplay options
             } else if (choice == 2) { //leave
                 //redisplay options
-                //if you pick bathroom again, System.out.println(“It's literally just a bathroom”);
+                //if you pick bathroom again, System.out.println("It's literally just a bathroom");
                 // and redisplay
             }
         } else if (choice == 3) { //go downstairs
@@ -793,10 +807,12 @@ public class mansion {
             //display map
         }
     }
+     */
 
     /*********** FLOOR THREE *************/
+    /*
     //room 11 - kitchen
-   /* public void room11() {
+    public void room11() {
         System.out.println("You find yourself in the kitchen. Probably a good place to look " +
                 "for a weapon in case you get into another fight...\n" +
                 "What will you search? (Type a number below, or type 0 for the map).");
@@ -818,7 +834,6 @@ public class mansion {
         } else if (choice == 3) { //cabinets
             System.out.println("See a skull - have seen the skull before, realize that it " +
              "was not decorative.");
-    */
             //redisplay options
         } else if (choice == 4) { //fridge
             System.out.println("As you reach for the handle, you see bloody handprint on fridge door." +
@@ -836,7 +851,9 @@ public class mansion {
             //display map
         }
     }
+     */
 
+    /*
     //room 7 - greenhouse (not labeled on correct floor on pic)
     public void room7() {
         System.out.println("Going through this door leads you into a herb garden. " +
@@ -851,7 +868,9 @@ public class mansion {
             //death
         }
     }
+     */
 
+    /*
     //hide from old man - crosses rooms, lots of booleans for if potion or spell book
     public void hideFromMan() {
         if (you.getPurpPotion() == true) {
@@ -907,9 +926,11 @@ public class mansion {
             }
         }
     }
+     */
 
     /*********** CELLAR *************/
-   /* public void cellar() {
+    /*
+    public void cellar() {
         System.out.println("Immediately when you get down off the stairs, you feel your " +
                 "socks become soaked with something dark and sticky, and you're hit with " +
                 "a horrible smell that makes your eyes water. As your eyes adjust, you see " +
@@ -952,7 +973,9 @@ public class mansion {
             //display map
         }
     }
+    */
 
+    /*
     //general (if not matches or pet cat - catch all)
     public void generalCellar() {
         System.out.println("Old man makes you walk towards him, says something " +
@@ -960,7 +983,9 @@ public class mansion {
                 "you for later, but this will do, you feel life get drained out of you, " +
                 "vision goes black, death :)");
     }
+    */
 
+    /*
     //if matches
     public void matchesCellar() {
         System.out.println("Start walking towards him against your will, he's " +
@@ -1005,7 +1030,9 @@ public class mansion {
             //redisplay options
         }
     }
+    */
 
+    /*
     //if pet cat
     public void petCatCellar() {
         System.out.println("Turn around and feel yourself being pulled towards the old " +
@@ -1022,5 +1049,6 @@ public class mansion {
                 "Hear birds chirping, it's dawn now. You wonder whether it was just a " +
                 "few hours or if another whole day has passed.\n" +
                 "Run away, and never fully forget this experience.");
-    }*/
+    }
+     */
 
