@@ -529,7 +529,7 @@ public class mansion {
             "look at the packages.map!");
    */
             //redisplay options
-        }
+/*        }
     }
 
     //room 9 - chamber (pre fight scene)
@@ -819,7 +819,7 @@ public class mansion {
              "was not decorative.");
     */
             //redisplay options
-        } else if (choice == 4) { //fridge
+  /*      } else if (choice == 4) { //fridge
             System.out.println("As you reach for the handle, you see bloody handprint on fridge door." +
                     "Realizes cranberry juice is blood (knocked over and dripping on the " +
                     "shelf, thicker/ congealed)");

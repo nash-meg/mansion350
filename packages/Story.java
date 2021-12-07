@@ -52,13 +52,13 @@ public class Story {
         ui.mainTextArea.setText("Sinister Happenings at Huxley Manor\n\n" + "This game contains themes gore, violence, and manipulation/mind control.\n\n" +
                 "Enter at your own risk...\n\n" +
                 "Before goosebumps plague your arms and your eyes cannot be ripped away from the screen, " + "here are some things to know about our spooky little game:\n\n" +
-                "This is a text-based game, so there are very little graphics. If you don’t like reading, " + "sorry bud, this isn’t \nthe game for you. We want to let our words guide your " +
-                "imagination, and we figure you know how to \nscare yourself better than we ever " + "could.\n\nThis is also a choose-your-own-adventure game, so you will read the story and " +
-                "choose from a handful of actions at specific moments to determine what happens next. Some " + "of these options will allow you to \ncontinue through the escape, but some may result " +
+                "This is a text-based game, so there are very little graphics. If you don’t like reading, " + "sorry bud, this isn’t the game for you. We want to let our words guide your " +
+                "imagination, and we figure you know how to scare yourself better than we ever " + "could.\n\nThis is also a choose-your-own-adventure game, so you will read the story and " +
+                "choose from a handful of actions at specific moments to determine what happens next. Some " + "of these options will allow you to continue through the escape, but some may result " +
                 "in death. Choose wisely and you might make it out alive.\n\n" +
                 "To select an option, type the number on your keyboard and hit enter. Also, some " + "sections of the story are longer than others, so you may need to hit enter to " +
                 "continue reading.\n\n" +
-                "The one graphic you do get to reap the benefits of is a map. You can pull up this " + "map during given \nopportunities by typing 0 and hitting enter.\n\n" +
+                "The one graphic you do get to reap the benefits of is a map. You can pull up this " + "map during given opportunities by typing 0 and hitting enter.\n\n" +
                 "We hope you enjoy, good luck, and don’t kick the cat.\n\n" +
                 "The devious minds behind the code.\n\nPlease choose an option:");
         ui.choice1.setText("Begin game");
@@ -79,29 +79,29 @@ public class Story {
     }
     public void towardsMansion(){
         ui.mainTextArea.setText("Welcome! The man’s hand feels heavy on your back as you are guided up the driveway " +
-                "against your better \njudgement. A large mansion  - which you’re quite sure is the only " +
-                "dwelling for miles in this area - looms \nbefore you, decorated impeccably for " +
-                "Halloween. Cornstalks lean up against the pillars supporting the \nupper balconies, " +
+                "against your better judgement. A large mansion  - which you’re quite sure is the only " +
+                "dwelling for miles in this area - looms before you, decorated impeccably for " +
+                "Halloween. Cornstalks lean up against the pillars supporting the upper balconies, " +
                 "pumpkins and hay bales are scattered tastefully over the front porch, and a black " +
-                "cat \nsits somewhat ominously in the window by the door - though you’re sure that the " +
-                "cat is more of a \nyear-round affair.\n\n" +
+                "cat sits somewhat ominously in the window by the door - though you’re sure that the " +
+                "cat is more of a year-round affair.\n\n" +
                 "You stop a moment, simply staring and struggling to take in the fact that this is all " +
-                "real. Less than an hour \nago, you had been on the streets, trying to scrounge whatever " +
-                "money you could to save up for a proper coat \nfor the coming winter. Less than an " +
+                "real. Less than an hour ago, you had been on the streets, trying to scrounge whatever " +
+                "money you could to save up for a proper coat for the coming winter. Less than an " +
                 "hour ago, an old man whose name you still don’t know had offered you a job and " +
                 "housing with the only condition being that you came to live with him in his " +
                 "\"humble manor,\" as he had called it. Less than an hour ago, against your better " +
-                "judgement and with nothing but your life to \nlose, you had said yes. \n\n" +
+                "judgement and with nothing but your life to lose, you had said yes. \n\n" +
                 "You’re not sure why you’d said yes. You know that you’re what they call \"high risk\". " +
-                "You know that a man \nlike this has the money to cover up your disappearance if it gets " +
-                "noticed. Hell, when you’d asked his \nname, the man had simply stated, \"Names are " +
+                "You know that a man like this has the money to cover up your disappearance if it gets " +
+                "noticed. Hell, when you’d asked his name, the man had simply stated, \"Names are " +
                 "unimportant,\" before ushering you into his car. But something deep within you," +
                 " a gut feeling , told you that this was the right move, and that " +
                 "going with him wouldn't be so bad.\n\n" +
                 "\"It’s beautiful, isn’t it?\" The old man’s question snaps you back to the present. \n\n" +
                 "\"Yes,\" you mutter quietly, too awestruck to properly compliment the place.\n\n" +
                 "The old man smiles, \"Welcome to Huxley Manor,\" he says with a sweeping gesture before " +
-                "guiding \nyou to the thick oaken front door.\n\n");
+                "guiding you to the thick oaken front door.\n\n");
         ui.choice1.setText("Go inside");
         ui.choice2.setText("Leave");
         ui.choice3.setText("");
@@ -130,7 +130,7 @@ public class Story {
 
     public void GoInsideMansion(){
         ui.mainTextArea.setText("The old man claps twice and the doors slowly creak open to reveal an ornate "
-                + "hallway with beautiful \nvintage-looking wallpaper and dark wooden floors. \n\nAs he guides you "
+                + "hallway with beautiful vintage-looking wallpaper and dark wooden floors. \n\nAs he guides you "
                 + "through, you notice dozens of oil paintings, all of which look to be extremely old. A\n"
                 + "painting of a man in what looks to be renaissance garb, staring intensely outward with long black hair \ncatches your eye."
                 + "\n\nThe cat brushes past you, pulling your attention away from the painting, and you look down \n"
@@ -166,7 +166,7 @@ public class Story {
         ui.mainTextArea.setText("The old man smiles as he turns to the portrait, an odd sentimentality washing " +
                 "over him.\n\n" +
                 "\"He was a very good friend of mine.\" he sighs, clearly beginning to reminisce, " +
-                "\"He had this commissioned \nshortly before he-"+ " "+ "The old man stops, taking a moment to collect himself before continuing, \"He passed " +
+                "\"He had this commissioned shortly before he-"+ " "+ "The old man stops, taking a moment to collect himself before continuing, \"He passed " +
                 "\nshortly after this was painted,\" he huffs distantly. \"If it weren’t for him, none " +
                 "of this would have been \npossible,\" the man gestures to the mansion around him.\n\n" +
                 "You nod solemnly. There’s a part of you that wonders how he died so young - he couldn’t " +
