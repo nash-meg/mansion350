@@ -78,7 +78,7 @@ public class Story {
 
     }
     public void towardsMansion(){
-        ui.mainTextArea.setText("Welcome! The man’s hand feels heavy on your back as you are guided up the driveway " +
+        ui.mainTextArea.setText("The man’s hand feels heavy on your back as you are guided up the driveway " +
                 "against your better judgement. A large mansion  - which you’re quite sure is the only " +
                 "dwelling for miles in this area - looms before you, decorated impeccably for " +
                 "Halloween. Cornstalks lean up against the pillars supporting the upper balconies, " +
@@ -243,14 +243,14 @@ public class Story {
                 "'So I’d take it you’re coming to work here?' he asks jovially.\n\n" +
                 "You nod, 'That’s the plan, at least!'\n\n" +
                 "The butler smiles, though the smile takes a moment to reach his eyes as he glances at Mallory before" +
-                " seeming to return to the conversation, 'It’s a pleasure to have you here. \nI can’t wait to show you the ropes.Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though neither you nor Mallory seem to have heard anything of the sort.\n" +
-                "You’re about to let him walk into the other room when you realize something, calling after him, 'Wait-'\n" +
+                " seeming to return to the conversation, 'It’s a pleasure to have you here. I can’t wait to show you the ropes. Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though neither you nor Mallory seem to have heard anything of the sort. " +
+                "You’re about to let him walk into the other room when you realize something, calling after him, 'Wait-'\n\n" +
                 "The butler stops and turns to you.\n\n" +
-                "'I didn’t catch your name,' you say, somewhat nervously. Usually, you wouldn’t ask, but you feel bad just referring to him as 'butler'. \n" +
-                "He gives a small huff of amusement before responding, 'Names are unimportant,' he shrugs, smiling solemnly, 'I’m just the butler.'\n" +
-                "With that, he turns and walks back into the kitchen.\n" +
-                "After a moment, he and the old man emerge with various steaming plates making up an extravagant meal, all of which are arranged on the table. After a moment, the butler pulls out \n" +
-                "a chair for the old man, and Mallory sits across from him. Then, the butler gestures for you to sit, seemingly allowing you to choose your spot.\n" +
+                "'I didn’t catch your name,' you say, somewhat nervously. Usually, you wouldn’t ask, but you feel bad just referring to him as 'butler'. \n\n" +
+                "He gives a small huff of amusement before responding, 'Names are unimportant,' he shrugs, smiling solemnly, 'I’m just the butler.'\n\n" +
+                "With that, he turns and walks back into the kitchen. " +
+                "After a moment, he and the old man emerge with various steaming plates making up an extravagant meal, all of which are arranged on the table. The butler pulls out " +
+                "a chair for the old man, and Mallory sits across from him. Then, the butler gestures for you to sit, seemingly allowing you to choose your spot." +
                 "\n\nWhere would you like to sit?\n");
         ui.choice1.setText("Sit next to the old man");
         ui.choice2.setText("Sit next to Mallory");
