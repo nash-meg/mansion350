@@ -513,6 +513,48 @@ public class Story {
 
     /*********** FLOOR ONE *************/
     public void room1() {}
-    public void room5() {}
-    public void room6() {}
+    //room 5a - hallway (a bc floor 1)
+    public void room5a() {}
+
+    //room 4 - mallory's bedroom
+    public void room4() {}
+
+    /*********** FLOOR TWO *************/
+    //room void 5b - hallway (b bc floor 2)
+    public void room5b() {}
+
+    //room 9 - chamber (pre fight scene)
+    public void room9() {}
+
+    //room 9 - chamber (butler fight scene)
+    public void room9Fight(){}
+
+    //room 10 - chamber (potion room)
+    public void room10() {}
+
+    //room 8 - hallway/stairway (no method for bathroom, just display)
+    public void room8() {}
+
+    /*********** FLOOR THREE *************/
+    //room 11 - kitchen
+    public void room11() {}
+
+    //room 7 - greenhouse (not labeled on correct floor on pic)
+    public void room7() {}
+
+    //hide from old man - crosses rooms, lots of booleans for if potion or spell book
+    public void hideFromMan() {}
+
+    /*********** CELLAR *************/
+    public void cellar() {}
+
+    //general (if not matches or pet cat - catch all)
+    public void generalCellar() {}
+
+    //if matches
+    public void matchesCellar() {}
+
+    //if pet cat
+    public void petCatCellar() {}
+
 }
