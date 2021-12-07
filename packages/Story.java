@@ -233,6 +233,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void shakeHand(){
         ui.mainTextArea.setText("You accept the handshake to find that the butler’s grasp is much firmer than you expected. He didn’t " +
                 "strike you as the type to hold onto a handshake for dear life.\n\n" +
@@ -243,7 +244,8 @@ public class Story {
                 "'So I’d take it you’re coming to work here?' he asks jovially.\n\n" +
                 "You nod, 'That’s the plan, at least!'\n\n" +
                 "The butler smiles, though the smile takes a moment to reach his eyes as he glances at Mallory before" +
-                " seeming to return to the conversation, 'It’s a pleasure to have you here. I can’t wait to show you the ropes. Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though neither you nor Mallory seem to have heard anything of the sort. " +
+                " seeming to return to the conversation, 'It’s a pleasure to have you here. I can’t wait to show you the ropes. Suddenly, the butler snaps to attention, dutifully" +
+                " walking into the kitchen as if called, though neither you nor Mallory seem to have heard anything of the sort. " +
                 "You’re about to let him walk into the other room when you realize something, calling after him, 'Wait-'\n\n" +
                 "The butler stops and turns to you.\n\n" +
                 "'I didn’t catch your name,' you say, somewhat nervously. Usually, you wouldn’t ask, but you feel bad just referring to him as 'butler'. \n\n" +
