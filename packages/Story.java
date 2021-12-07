@@ -61,7 +61,7 @@ public class Story {
                 "The one graphic you do get to reap the benefits of is a map. You can pull up this " + "map during given \nopportunities by typing 0 and hitting enter.\n\n" +
                 "We hope you enjoy, good luck, and don’t kick the cat.\n\n" +
                 "The devious minds behind the code.\n\nPlease choose an option:");
-        ui.choice1.setText("Continue to game");
+        ui.choice1.setText("Begin game");
         ui.choice2.setText("Exit the game");
         ui.choice3.setText("");
         ui.choice4.setText("");
@@ -185,7 +185,7 @@ public class Story {
                 "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the \nsurface he " +
                 "seems genuinely happy to meet you, there is also an almost mournful disposition \nunderneath it all. \n\n");
 
-        ui.choice1.setText("Mallory! how you likes working at Huxley Manor?");
+        ui.choice1.setText("Ask how he likes working here");
         ui.choice2.setText("Offer to help set the table");
         ui.choice3.setText("Stand there awkwardly");
         ui.choice4.setText("");
@@ -314,7 +314,7 @@ public class Story {
                         "Your fifth night there, however, as the two of you are about to part ways and go to bed, he stops you, gently grabbing you by the arm." +
                         " There are tears in his eyes, and he seems \nto take a moment to gather himself before speaking.\n\n" +
                         "All he says is, 'I’ll miss you when we’re finally on our feet.'\n\nWhat do you do?");
-        ui.choice1.setText("I will miss you too");
+        ui.choice1.setText("Tell him you'll miss him too");
         ui.choice2.setText("Stay silent");
         ui.choice3.setText("");
         ui.choice4.setText("");
