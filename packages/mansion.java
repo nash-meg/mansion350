@@ -536,7 +536,7 @@ public class mansion {
             System.out.println("Blades are swinging from the ceiling!! This is no time to  " +
             "look at the map!");
             //redisplay options
-        }
+/*        }
     }
      */
 
@@ -835,7 +835,7 @@ public class mansion {
             System.out.println("See a skull - have seen the skull before, realize that it " +
              "was not decorative.");
             //redisplay options
-        } else if (choice == 4) { //fridge
+  /*      } else if (choice == 4) { //fridge
             System.out.println("As you reach for the handle, you see bloody handprint on fridge door." +
                     "Realizes cranberry juice is blood (knocked over and dripping on the " +
                     "shelf, thicker/ congealed)");
