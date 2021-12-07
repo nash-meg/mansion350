@@ -185,7 +185,7 @@ public class Story {
                 "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the \nsurface he " +
                 "seems genuinely happy to meet you, there is also an almost mournful disposition \nunderneath it all. \n\n");
 
-        ui.choice1.setText("Ask Mallory how he likes working at Huxley Manor");
+        ui.choice1.setText("Ask how he likes working here");
         ui.choice2.setText("Offer to help set the table");
         ui.choice3.setText("Stand there awkwardly");
         ui.choice4.setText("");
