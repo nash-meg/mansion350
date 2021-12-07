@@ -9,7 +9,7 @@ public class UI {
     JTextArea mainTextArea;
     JPanel titleName , startingButton, mainText, chooseButton, playerPanel;
     JLabel titleLabel, weapon, weaponName;
-    Font titleFont = new Font("Times New Roman", Font.PLAIN,90);
+    Font titleFont = new Font("Times New Roman", Font.PLAIN,40);
     Font font = new Font("Times New Roman", Font.PLAIN,14);
 
 
@@ -27,7 +27,7 @@ public class UI {
         titleName  = new JPanel();
         titleName.setBounds(100, 100, 600, 150);
         titleName.setBackground(Color.black);
-        titleLabel = new JLabel("sPooky Mansion");
+        titleLabel = new JLabel("Sinister Happenings at Huxley Manor");
         titleLabel.setForeground(Color.white);
         titleLabel.setFont(titleFont);
         titleName.add(titleLabel);
