@@ -206,6 +206,7 @@ public class mansion {
                         "Then he flashes you a small smile, nearly whispering, \"Thank you, though,\" before " +
                         "returning to his work.\n\n");
             }
+
             else if (choice >= 3) { //stand awkward
                 System.out.println("You stand there in a thick silence, neither of you moving to speak. After " +
                         "a moment, you watch as Mallory goes back to setting the table. He doesn't move the way " +
