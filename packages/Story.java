@@ -543,7 +543,7 @@ public class Story {
         ui.choice4.setText("");
 
 
-        game.position1 = "startPlot";
+        game.position1 = "room1";
         game.position2 = "";
         game.position3 = "";
         game.position4 = "";
@@ -563,7 +563,7 @@ public class Story {
         ui.choice4.setText("");
 
 
-        game.position1 = "startPlot";
+        game.position1 = "room1";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -583,7 +583,7 @@ public class Story {
         ui.choice4.setText("");
 
 
-        game.position1 = "startPlot";
+        game.position1 = "room1";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
