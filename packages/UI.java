@@ -9,8 +9,10 @@ public class UI {
     JTextArea mainTextArea;
     JPanel titleName , startingButton, mainText, chooseButton, playerPanel;
     JLabel titleLabel, weapon, weaponName;
-    Font titleFont = new Font("Times New Roman", Font.PLAIN,40);
-    Font font = new Font("Serif", Font.PLAIN,15);
+    Font titleFont = new Font("MS Gothic", Font.BOLD,50);
+    Font subFont = new Font("MS Gothic", Font.PLAIN,30);
+    Font buttonFont = new Font("MS Gothic", Font.BOLD,15);
+    Font font = new Font("Courier", Font.PLAIN,15);
 
 
 
@@ -25,7 +27,7 @@ public class UI {
 
         //title  name panel
         titleName  = new JPanel();
-        titleName.setBounds(325, 200, 700, 200);
+        titleName.setBounds(180, 200, 1000, 400);
         titleName.setBackground(Color.black);
         titleLabel = new JLabel("Sinister Happenings at Huxley Manor");
         titleLabel.setForeground(Color.white);
@@ -40,7 +42,7 @@ public class UI {
         startButton = new JButton("START");
         startButton.setBackground(Color.black);
         startButton.setForeground(Color.white);
-        startButton.setFont(font);
+        startButton.setFont(subFont);
         startButton.addActionListener(handler); // when you click the START button it caller the handler
         startButton.setActionCommand("Start");
         startButton.setFocusPainted(false);
@@ -50,12 +52,12 @@ public class UI {
 
         // panel area that holds the main text message
         mainText = new JPanel();
-        mainText.setBounds(25, 100, 900, 700);
+        mainText.setBounds(100, 75, 600, 700);
         mainText.setBackground(Color.black);
         gameWindow.add(mainText);
         // this is for the main text message that display on the panel area
         mainTextArea = new JTextArea("This is the main text area. This game is going to be great. I'm sure of it.");
-        mainTextArea.setBounds(100, 500, 600, 450);
+        mainTextArea.setBounds(25, 200, 600, 450);
         mainTextArea.setBackground(Color.black);
         mainTextArea.setForeground(Color.white);
         mainTextArea.setFont(font);
@@ -66,7 +68,7 @@ public class UI {
 
         //Panel so that you can choose a button to make a choice
         chooseButton = new JPanel();
-        chooseButton.setBounds(950, 400, 250, 150);
+        chooseButton.setBounds(850, 500, 400, 150);
         chooseButton.setBackground(Color.black);
         chooseButton.setLayout(new GridLayout(5,1));
         gameWindow.add(chooseButton);
@@ -74,7 +76,7 @@ public class UI {
         choice1 = new JButton("choice 1");
         choice1.setBackground(Color.black);
         choice1.setForeground(Color.white);
-        choice1.setFont(font);
+        choice1.setFont(buttonFont);
         choice1.setFocusPainted(false);
         choice1.addActionListener(handler);; // when you click the START button it caller the handler
         choice1.setActionCommand("c1");  // the make the difference for each buttons
@@ -82,7 +84,7 @@ public class UI {
         choice2 = new JButton("choice 2");
         choice2.setBackground(Color.black);
         choice2.setForeground(Color.white);
-        choice2.setFont(font);
+        choice2.setFont(buttonFont);
         choice2.setFocusPainted(false);
         choice2.addActionListener(handler); // when you click the START button it caller the handler
         choice2.setActionCommand("c2");
@@ -90,7 +92,7 @@ public class UI {
         choice3= new JButton("choice 3");
         choice3.setBackground(Color.black);
         choice3.setForeground(Color.white);
-        choice3.setFont(font);
+        choice3.setFont(buttonFont);
         choice3.setFocusPainted(false);
         choice3.addActionListener(handler); // when you click the START button it caller the handler
         choice3.setActionCommand("c3");
@@ -98,7 +100,7 @@ public class UI {
         choice4= new JButton("choice 4");
         choice4.setBackground(Color.black);
         choice4.setForeground(Color.white);
-        choice4.setFont(font);
+        choice4.setFont(buttonFont);
         choice4.setFocusPainted(false);
         choice4.addActionListener(handler);// when you click the START button it caller the handler
         choice4.setActionCommand("c4");
@@ -106,7 +108,7 @@ public class UI {
         choice5 = new JButton("choice 5");
         choice5.setBackground(Color.black);
         choice5.setForeground(Color.white);
-        choice5.setFont(font);
+        choice5.setFont(buttonFont);
         choice5.setFocusPainted(false);
         choice5.addActionListener(handler);// when you click the START button it caller the handler
         choice5.setActionCommand("c5");
