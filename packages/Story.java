@@ -1320,16 +1320,17 @@ public class Story {
         ui.choice1.setText("Kick the cat away");
         ui.choice2.setText("Ignore the cat");
         ui.choice3.setText("Try to pet the cat");
-        ui.choice4.setText("Run through hall");
+        ui.choice4.setText("");
 
 
         game.position1 = "KickCat";
         game.position2= "IgnoreCat";
         game.position3 = "PetCat";
-        game.position4 = "RunThruHall";
+        game.position4 = "";
     }
     //Kick the cat away
     public void KickCat() {
+        kick = true;
         ui.mainTextArea.setText("You stare at the cat in disgust as it walks towards you. It slowly approaches your leg, and as it goes to sniff, you thrash out your foot, nailing it in the chin and sending it stumbling backwards and hissing. " +
                 "Its hair stands on end as it stares at you in shock for a moment before quickly limping into a corner of the room and painfully laying down, curling itself into as tight a ball as possible. You notice a bit of blood on its tongue as if it bit itself when you kicked it." +
                 " It crouches there for a moment, shaking and staring at you with wide, terrified eyes. You scoff and move to examine the room.\n\n" +
@@ -1350,6 +1351,7 @@ public class Story {
 
     //Ignore the cat
     public void IgnoreCat() {
+        ignore = true;
         ui.mainTextArea.setText("You don’t pay the cat any mind as it approaches you, sniffing you a little and then wandering off to do its own thing. You instead move to examine the room. \\n\\n\n" +
                 "To one wall is a bookcase, laden with various titles that appear to be rather esoteric. \\n\\n\n" +
                 "To an adjacent wall is an unlit fireplace that looks recently used. It seems to have a few small items on its mantel, but it’s too far away for you to properly see what’s on it. \\n\\n\n" +
@@ -1368,6 +1370,7 @@ public class Story {
     }
     //Try to pet the cat
        public void PetCat() {
+        pet = true;
         ui.mainTextArea.setText("You crouch down and extend a hand as the cat approaches you, allowing it to sniff. It takes a moment, thoroughly smelling your hand and up your arm before deciding that you’re a friend, beginning to purr as it pushes its face through your fingers. You can’t help but smile a bit as it flops down in front of you, showing you its belly and staring at you expectantly. You chuckle a little, scratching it as it purrs. You’ve never been too much of a cat person, but you’d be lying if you didn’t admit that this one was rather cute. \\n\\n\n" +
                 "After a while, the cat reaches down and nips your hand to tell you that it has finished being pet for the time being, thank you very much, then stands, rubbing against your hand one more time before walking off. \\n\\n\n" +
                 "You smile as you, too, get to your feet, glancing around the room. \\n\\n\n" +
