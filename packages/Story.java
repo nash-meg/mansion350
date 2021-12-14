@@ -472,9 +472,14 @@ public class Story {
         game.position4 = "";
     }
     public void readBook() {
-        ui.mainTextArea.setText("You light a candle on your bedside table and grab the book you started reading on your second night in the mansion. " +
-                "Dracula by Bram Stoker. You’ve always loved horror.  [insert part abt the first 10 chapters being your favorite here]." +
-                " You still worry about Mallory, but Stoker’s writing is enough to shift your focus enough to try to sleep. \n\n");
+        ui.mainTextArea.setText("You sigh, picking up a match - the last one in the pack - and lighting a candle on your bedside table." +
+                " You shimmy under the covers and grab the book you started reading the night before: Dracula by Bram Stoker. " +
+                "You’ve always loved horror, and though it’s not your first time reading it, you still can’t help but love the thrill " +
+                "of the buildup of the first four chapters of that book. You’re on chapter 3 now, " +
+                "when Jonathan gets his first proper glimpse of what’s actually going on in the castle. It’s a fun one to read, especially the second half. \n\n" +
+                "You’re still worried about Mallory, but Stoker’s writing allows you to get sucked into the novel enough to shift your focus for a while," +
+                " for which you’re rather grateful. Eventually, as you finish chapter 4, you feel your eyes begin to droop, and blowing out the candle," +
+                " you allow yourself to begin to drift off to sleep.\n\n");
 
         ui.choice1.setText(">");
         ui.choice2.setText("");
@@ -561,7 +566,7 @@ public class Story {
         ui.mainTextArea.setText("You simply stand there, frozen in shock as you try and process the scene before you. " +
                 "This is the old man who asked you to help him up the stairs earlier this week. He took you in. He took you both in, and now- \n\n" +
                 "Where is the butler? Did he know? Or did he simply not hear Mallory’s screams?\n\n " +
-                "\"Go. To. Bed.\" The old man’s voice is lower now, and clearly holds a threat." +
+                "\"Go. To bed.\" The old man’s voice is lower now, and clearly holds a threat." +
                 " You know you should follow his instructions, or if not that, at least try to stop him, but you just… can’t. \n\n" +
                 "Your feet are frozen in place and you can’t seem to take your eyes off of poor Mallory’s blood-soaked body as he gasps for what may be his final breaths.\n\n" +
                 "The old man scoffs, extending his free arm. Suddenly, an invisible force slams into you, " +
@@ -584,9 +589,10 @@ public class Story {
                 " Part of you wants to sob, the other part wants to throw up, and a third prays that you’re dreaming." +
                 " But this is not a dream, and you don’t have the energy right now to do either of those things." +
                 " Instead, you glance at the door. It doesn't lock, but after what just happened, you wouldn't be surprised if you were somehow locked in." +
-                " Mallory might be dead. And you might be next.After a moment you resolve that you have to get out of here. You’d rather be homeless than stuck with a murderer.\n\n" +
+                " Mallory might be dead. And you might be next.After a moment you resolve that you have to get out of here. " +
+                "You’d rather be homeless than stuck with a murderer.\n\n" +
                 "Shakily, you get to your feet and glance around the room.\n\n");
-        ui.choice1.setText(" I have to get out of here!");
+        ui.choice1.setText(" > ");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
@@ -675,7 +681,7 @@ public class Story {
                 "You watch as Mallory finishes setting the table," + " and a man with white gloves walks out from the kitchen," +
                 "seemingly to check that things are going smoothly. \n\n" +
                 "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash " +
-                "for a moment with an emotion that is covered up too quickly \nto read, and instead he flashes you a smile, 'I’m sorry, " +
+                "for a moment with an emotion that is covered up too quickly to read, and instead he flashes you a smile, 'I’m sorry, " +
                 "I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n\n" +
                 "He smiles, extending a hand for you to shake.\n\nWhat do you do?");
 
@@ -692,22 +698,25 @@ public class Story {
     }
     public void awkMoment() {
         ui.mainTextArea.setText("You stand there in a thick silence, neither of you moving to speak. After a moment, you watch as Mallory goes back " +
-                "to setting the table. He doesn’t move the way you expect him to. \nEvery gesture he makes is stiff, and even jerky at times. The " +
-                "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but \nhis actions" +
-                " almost remind you of a deftly-controlled marionette without the strings. You chide yourself for the comparison. " +
-                "He’s probably just tired. \n\nYou watch as Mallory finishes setting the table, and a man with white gloves walks out from the kitchen, seemingly to check that things are going smoothly. \n" +
-                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash for a moment with an emotion that is covered up too quickly \n" +
-                "to read, and instead he flashes you a smile, 'I’m sorry, I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n" +
-                "He smiles, extending a hand for you to shake.\n" +
-                " What do you do?");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
+                "to setting the table. He doesn’t move the way you expect him to. " +
+                "\n\nEvery gesture he makes is stiff, and even jerky at times. The " +
+                "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but his actions" +
+                " almost remind you of a deftly-controlled marionette without the strings. \n\n" +
+                "You chide yourself for the comparison. " +
+                "He’s probably just tired. \n\n" +
+                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from the kitchen, seemingly to check that things are going smoothly. \n\n" +
+                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash for a moment with an emotion that is covered up too quickly" +
+                "to read, and instead he flashes you a smile, \"I’m sorry, I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.\"\n" +
+                "He smiles, extending a hand for you to shake.\n\n" +
+                "Do you shake his hand?\n\n");
+        ui.choice1.setText("Shake his hand");
+        ui.choice2.setText("Don't shake his hand");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
 
         game.position1 = "shakeHand";
-        game.position2= "";
+        game.position2= "noShakeHand";
         game.position3 = "";
         game.position4 = "";
     }
