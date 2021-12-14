@@ -1331,21 +1331,23 @@ public class Story {
     //Kick the cat away
     public void KickCat() {
         kick = true;
-        ui.mainTextArea.setText("You stare at the cat in disgust as it walks towards you. It slowly approaches your leg, and as it goes to sniff, you thrash out your foot, nailing it in the chin and sending it stumbling backwards and hissing. " +
-                "Its hair stands on end as it stares at you in shock for a moment before quickly limping into a corner of the room and painfully laying down, curling itself into as tight a ball as possible. You notice a bit of blood on its tongue as if it bit itself when you kicked it." +
+        ui.mainTextArea.setText("You stare at the cat in disgust as it walks towards you." +
+                " It slowly approaches your leg, and as it goes to sniff, you thrash out your foot, nailing it in the chin and sending it stumbling backwards and hissing. " +
+                "Its hair stands on end as it stares at you in shock for a moment before quickly limping into a corner of the room and painfully laying down, " +
+                "curling itself into as tight a ball as possible. You notice a bit of blood on its tongue as if it bit itself when you kicked it." +
                 " It crouches there for a moment, shaking and staring at you with wide, terrified eyes. You scoff and move to examine the room.\n\n" +
                 "There’s a large bookcase to one wall, and an unlit fireplace to an adjacent one. In the middle of the room, surrounded by couches," +
-                " is a coffee table with a handful of writing materials and paper on it. \\n\\n\n" +
-                "What do you do?\\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
+                " is a coffee table with a handful of writing materials and paper on it. \n\n" +
+                "What do you do?\n\n");
+        ui.choice1.setText("Examine the bookcase ");
+        ui.choice2.setText("Examine the coffee table");
+        ui.choice3.setText("Examine the fireplace");
         ui.choice4.setText("");
 
 
-        game.position1 = "ExamineCoffeeTable";
-        game.position2= "";
-        game.position3 = "";
+        game.position1 = "ExamineBookcase";
+        game.position2= "ExamineCoffeeTable";
+        game.position3 = "ExamineFireplace";
         game.position4 = "";
     }
 
@@ -1357,15 +1359,15 @@ public class Story {
                 "To an adjacent wall is an unlit fireplace that looks recently used. It seems to have a few small items on its mantel, but it’s too far away for you to properly see what’s on it. \\n\\n\n" +
                 "In the middle of the room, surrounded by couches, sits a coffee table. It’s peppered with pens and paper and various other writing materials, including what looks like a feather pen.\\n\\n\n" +
                 "What do you do? \\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
+        ui.choice1.setText("Examine the bookcase ");
+        ui.choice2.setText("Examine the coffee table");
+        ui.choice3.setText("Examine the fireplace");
         ui.choice4.setText("");
 
 
-        game.position1 = "ExamineCoffeeTable";
-        game.position2= "";
-        game.position3 = "";
+        game.position1 = "ExamineBookcase";
+        game.position2= "ExamineCoffeeTable";
+        game.position3 = "ExamineFireplace";
         game.position4 = "";
     }
     //Try to pet the cat
