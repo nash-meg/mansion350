@@ -9,7 +9,7 @@ public class Game {
     UI ui = new UI(); // sent this to the constructor in the story class method
     map m = new map(ui);
     Story st = new Story(this,ui, m); //this mean this Game class
-    String position1, position2, position3, position4;
+    String position1, position2, position3, position4, position5;
 
     public static void main(String[] arg) {
         new Game();
@@ -18,7 +18,7 @@ public class Game {
     public Game() {
         // Game calls this createUI(handler) method then call st.showTitleScreen()
         ui.createUI(handler);
-        st.defaultSetup(); // calling default set up in Story class
+
         m.showTitleScreen();
 
     }
@@ -35,6 +35,7 @@ public class Game {
                 case "c2": st.choosePosition(position2); break;
                 case "c3": st.choosePosition(position3); break;
                 case "c4": st.choosePosition(position4); break;
+                case "c5": st.choosePosition(position5); break;
 
 
             }

@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class UI {
     JFrame gameWindow;
-    JButton startButton, choice1, choice2, choice3, choice4;
+    JButton startButton, choice1, choice2, choice3, choice4, choice5;
     JTextArea mainTextArea;
     JPanel titleName , startingButton, mainText, chooseButton, playerPanel;
     JLabel titleLabel, weapon, weaponName;
@@ -68,7 +68,7 @@ public class UI {
         chooseButton = new JPanel();
         chooseButton.setBounds(800, 410, 250, 150);
         chooseButton.setBackground(Color.black);
-        chooseButton.setLayout(new GridLayout(4,1));
+        chooseButton.setLayout(new GridLayout(5,1));
         gameWindow.add(chooseButton);
 
         choice1 = new JButton("choice 1");
@@ -102,7 +102,15 @@ public class UI {
         choice4.setFocusPainted(false);
         choice4.addActionListener(handler);// when you click the START button it caller the handler
         choice4.setActionCommand("c4");
-        chooseButton.add(choice4); //
+        chooseButton.add(choice4);
+        choice5 = new JButton("choice 5");
+        choice5.setBackground(Color.black);
+        choice5.setForeground(Color.white);
+        choice5.setFont(font);
+        choice5.setFocusPainted(false);
+        choice5.addActionListener(handler);// when you click the START button it caller the handler
+        choice5.setActionCommand("c5");
+        chooseButton.add(choice5); //
 
         playerPanel = new JPanel();
         playerPanel.setBounds(100, 25, 600, 70);
