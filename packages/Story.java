@@ -302,6 +302,12 @@ public class Story {
                 "man like the one in the kitchen could beat you in a fight.\n\n" +
                 "You hear the old man’s deep laughter echo from the other room, accompanied by another. He doesn't sound evil. You sigh to yourself." +
                 "You’ve always been paranoid, and at this point, you decide it’s best not to look gift-horse in the mouth.\n\n" +
+                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from the kitchen, seemingly to check that things are going smoothly. \n\n" +
+                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. " +
+                "His eyes flash for a moment with an emotion that is covered up too quickly\" " +
+                "to read, and instead he flashes you a smile, \"I’m sorry, I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.\""  +
+                "He smiles, extending a hand for you to shake.\n\n" +
+                "Do you shake his hand?\n\n" +
                 "What do you do? \n\n");
         ui.choice1.setText("Shake his hand");
         ui.choice2.setText("Don't shake his hand");
@@ -422,14 +428,14 @@ public class Story {
                 "You shake your head. You’re sure he’s fine.\n\n" +
                 "Too tired to think about it now, you go" +
                 "into your room and prepare to go to sleep.\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
+        ui.choice1.setText("Go right to sleep ");
+        ui.choice2.setText("Read a book to distract yourself");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
 
-        game.position1 = "StaySilent";
-        game.position2= "";
+        game.position1 = "goRightToSleep";
+        game.position2= "readBook";
         game.position3 = "";
         game.position4 = "";
     }
@@ -443,7 +449,7 @@ public class Story {
                 "Too tired to think about it now, you go into your room and prepare to go to sleep.\n\n");
 
         ui.choice1.setText("Go right to sleep ");
-        ui.choice2.setText("Read a book  ");
+        ui.choice2.setText("Read a book to distract yourself");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
@@ -664,14 +670,14 @@ public class Story {
                 " on the table. After a moment, the butler pulls out \na chair for the old man, and Mallory sits across from him. Then," +
                 " the butler gestures for you to sit, seemingly allowing you to choose your spot.\n\n");
 
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
+        ui.choice1.setText("Sit next to the old man");
+        ui.choice2.setText("Sit next to Mallory");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
 
-        game.position1 = "shakeHand";
-        game.position2= "";
+        game.position1 = "sitNxtToOldman";
+        game.position2= "sitNxtMallory";
         game.position3 = "";
         game.position4 = "";
     }
@@ -683,16 +689,17 @@ public class Story {
                 "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash " +
                 "for a moment with an emotion that is covered up too quickly to read, and instead he flashes you a smile, 'I’m sorry, " +
                 "I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n\n" +
-                "He smiles, extending a hand for you to shake.\n\nWhat do you do?");
+                "He smiles, extending a hand for you to shake.\n\n" +
+                "Do you shake his hand?\n\n");
 
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
+        ui.choice1.setText("Shake his hand");
+        ui.choice2.setText("Don't shake his hand");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
 
         game.position1 = "shakeHand";
-        game.position2= "";
+        game.position2= "noShakeHand";
         game.position3 = "";
         game.position4 = "";
     }
@@ -751,15 +758,15 @@ public class Story {
                 "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he seems genuinely happy to meet you," +
                 "there is also an almost mournful disposition underneath. He goes back to setting the table before you can dwell on it too long. \n\n");
 
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
+        ui.choice1.setText("Ask how he likes working here");
+        ui.choice2.setText("Offer to help set the table");
+        ui.choice3.setText("Stand there awkwardly");
         ui.choice4.setText("");
 
 
-        game.position1 = "painting";
-        game.position2= "";
-        game.position3 = "";
+        game.position1 = "askMallory";
+        game.position2= "offerToHelp";
+        game.position3 = "awkMoment";
         game.position4 = "";
     }
 
