@@ -19,7 +19,6 @@ public class map {
         // this mean
         ui.mainText.setVisible(false);
         ui.chooseButton.setVisible(false);
-        ui.playerPanel.setVisible(false);
 
     }
 
@@ -33,6 +32,6 @@ public class map {
         // this mean
         ui.mainText.setVisible(true);
         ui.chooseButton.setVisible(true);
-        ui.playerPanel.setVisible(true);
+
     }
 }
