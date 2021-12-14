@@ -136,22 +136,24 @@ public class Story {
 
     }
     public void theMansion() {
-        ui.mainTextArea.setText("-------------- Welcome to Sinister Happenings at Huxley Manor --------------\n\n\n" +
+        ui.mainTextArea.setText("___________________ Welcome to Sinister Happenings at Huxley Manor " +
+                "___________________\n\n" +
                 "Warning: This game contains themes of gore, violence, and manipulation/mind control.\n" +
-                "Enter at your own risk... \n ----------------------------------------------------- \n" +
+                "Enter at your own risk... \n" +
+                "_________________________________________________________________________________\n\n" +
                 "Before goosebumps plague your arms and your eyes cannot be ripped away from the screen, " +
-                "here are some things to know about our spooky little game.\n\nThis is a text-based game, so there are very little graphics. If you don’t like " +
-                "reading, sorry bud, this isn’t the game for you. We want to let our words guide your imagination, " +
-                "and we figure you know how to scare yourself better than we ever could.\n\nThis is also a " +
-                "choose-your-own-adventure game, so you will read the story and choose from a handful of actions " +
-                "at specific moments to determine what happens next. Some of these options will allow you to " +
-                "continue through the escape, but some may result in death. Choose wisely and you might make " +
-                "it out alive. To select an option, type the number on your keyboard and hit enter. Also, some " +
-                "sections of the story are longer than others, so you may need to hit enter to continue reading. " +
-                "The one graphic you do get to reap the benefits of is a map. You can pull up this " + "map during " +
-                "given opportunities by typing 0 and hitting enter.\n\n" +
-                "We hope you enjoy, good luck, and don’t kick the cat.\n\n" +
-                "The devious minds behind the code.\n\nPlease choose an option:");
+                "here are some things to know about our spooky little game.\n\nThis is a text-based game, so there " +
+                "are very little graphics. If you don’t like reading, sorry bud, this isn't the game for you. " +
+                "We want to let our words guide your imagination, and we figure you know how to scare " +
+                "yourself better than we ever could.\n\nThis is also a choose-your-own-adventure game, " +
+                "so you will read the story and then choose from a handful of actions at specific moments " +
+                "to determine what happens next. Some of these options will allow you to continue through " +
+                "the escape, but some may result in death. Choose wisely and you might make it out alive.\n\n" +
+                "To select an option, press one of the buttons in the bottom right of your screen. " +
+                "Also, some sections of the story are longer than others, so you may need to press the \">\" " +
+                "button to continue reading.\n\nThe one graphic you do get to reap the benefits of is a map. " +
+                "You can pull up this map during given opportunities by pressing the \"map\" button.\n\n" +
+                "We hope you enjoy, good luck, and don’t kick the cat.");
         ui.choice1.setText("Begin the game");
         ui.choice2.setText("Exit the game");
         ui.choice3.setText("");
