@@ -17,7 +17,7 @@ public class UI {
 
     public void createUI(Game.TitleScreenHandler handler){
         gameWindow = new JFrame(); //initialize window
-        gameWindow.setSize(900, 600);
+        gameWindow.setSize(1365, 730);
         gameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminate game window
         gameWindow.getContentPane().setBackground(Color.black);	//set the color of the window
         gameWindow.setLayout(null);
@@ -25,7 +25,7 @@ public class UI {
 
         //title  name panel
         titleName  = new JPanel();
-        titleName.setBounds(100, 100, 600, 150);
+        titleName.setBounds(325, 200, 700, 200);
         titleName.setBackground(Color.black);
         titleLabel = new JLabel("Sinister Happenings at Huxley Manor");
         titleLabel.setForeground(Color.white);
@@ -34,7 +34,7 @@ public class UI {
 
         //Panel for the starting button ....backdrop
         startingButton = new JPanel();
-        startingButton.setBounds(300, 400, 200, 100);
+        startingButton.setBounds(560, 400, 200, 100);
         startingButton.setBackground(Color.black);
         //Create a JButton for the start button
         startButton = new JButton("START");
@@ -50,7 +50,7 @@ public class UI {
 
         // panel area that holds the main text message
         mainText = new JPanel();
-        mainText.setBounds(100, 100, 600, 750);
+        mainText.setBounds(25, 100, 900, 700);
         mainText.setBackground(Color.black);
         gameWindow.add(mainText);
         // this is for the main text message that display on the panel area
@@ -66,7 +66,7 @@ public class UI {
 
         //Panel so that you can choose a button to make a choice
         chooseButton = new JPanel();
-        chooseButton.setBounds(800, 410, 250, 150);
+        chooseButton.setBounds(950, 400, 250, 150);
         chooseButton.setBackground(Color.black);
         chooseButton.setLayout(new GridLayout(5,1));
         gameWindow.add(chooseButton);
