@@ -117,14 +117,7 @@ public class UI {
         playerPanel.setBackground(Color.black);
         playerPanel.setLayout(new GridLayout(1,4));
         gameWindow.add(playerPanel);
-        weapon = new JLabel("Weapon:");
-        weapon.setForeground(Color.white);
-        weapon.setFont(font);
-        playerPanel.add(weapon);
-        weaponName = new JLabel();
-        weaponName.setForeground(Color.white);
-        weaponName.setFont(font);
-        playerPanel.add(weaponName);
+
 
         gameWindow.setVisible(true); // to see the window created
 
