@@ -14,6 +14,9 @@ public class Story {
     boolean purpPotion;
     boolean  matches;
     boolean littleBook;
+    boolean kick;
+    boolean pet;
+    boolean ignore;
 
     // Constructor instantiate
     public Story(Game g,UI userInterface, map mDisplay){
@@ -24,6 +27,9 @@ public class Story {
         purpPotion = false;
         matches = false;
         littleBook = false;
+        kick = false;
+        pet = false;
+        ignore = false;
     }
 
 
@@ -979,6 +985,7 @@ public class Story {
     public void Shoes() {
         ui.mainTextArea.setText("You glance down at your sock-covered feet. If you’re going to be running away tonight, you decide," +
                 " it’s probably best that you have some shoes. Luckily you and Mallory are nearly the same shoe-size, so they slip on easily. \n\n");
+        shoes = true;
         ui.choice1.setText("Put on the coat");
         ui.choice2.setText("Leave Closet");
         ui.choice3.setText("");
@@ -1179,26 +1186,27 @@ public class Story {
                 "The blood smeared across the room jolts you back to where you are, and the small smile drops from your face. " +
                 "There is no “when”. Not anymore.\n\n" +
                 "Clenching your jaw and, attempting to swallow back the rock in your throat, you turn your attention back to the room. \n\n");
-        ui.choice1.setText("Search ");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
+        ui.choice1.setText("Search closet");
+        ui.choice2.setText("Search bed");
+        ui.choice3.setText("Leave room");
         ui.choice4.setText("");
 
 
-        game.position1 = "LeaveRoom";
-        game.position2= "";
-        game.position3 = "";
+        game.position1 = "SearchCloset";
+        game.position2= "SearchBed";
+        game.position3 = "LeaveRoom";
         game.position4 = "";
     }
     //Leave room
     public void LeaveRoom() {
-        ui.mainTextArea.setText("You give one last sweeping glance to the room before stepping back out into the hallway and making your way over to the staircase.\\n\\n\n" +
-                "As you stand looking down the descending corridor, you feel a shiver of fear run up your spine, and for a moment, you hesitate. You’re certain that the old man dragged Mallory down these stairs, and at this point, he could be anywhere in the mansion. If he finds you…\\n\\n\n" +
-                "No. You can’t think like that, you decide.\\n\\n\n" +
-                "You have to get out of here. This is the only way down to the door on the main floor, and you’re not about to jump out of a third story window to try and escape. \\n\\n\n" +
+        ui.mainTextArea.setText("You give one last sweeping glance to the room before stepping back out into the hallway and making your way over to the staircase.\n\n" +
+                "As you stand looking down the descending corridor, you feel a shiver of fear run up your spine, and for a moment, you hesitate." +
+                " You’re certain that the old man dragged Mallory down these stairs, and at this point, he could be anywhere in the mansion. If he finds you...\n\n" +
+                "No. You can’t think like that, you decide.\n\n" +
+                "You have to get out of here. This is the only way down to the door on the main floor, " +
+                "and you’re not about to jump out of a third story window to try and escape.\n\n" +
                 "Though the fear of being caught still weighs heavily on your mind," +
-                "you steel yourself, stepping down into the darkness. \\n\\n\n" +
-                "\n");
+                "you steel yourself, stepping down into the darkness. \n\n");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
@@ -1221,14 +1229,16 @@ public class Story {
                 "Nearly tripping, you look down to see a pair of yellow eyes staring back at you from the darkness, and there’s a quiet meow" +
                 "from the little creature at your feet. A wave of relief washes over you. It’s just the cat. You watch as it slinks away from you," +
                 "trying to steady your beating heart. It pauses at a pair of doors on the opposite wall, seeming to test each one before one of them" +
-                "yields to its paws and it goes in.\n\nIn another world, you might have laughed at the fact that the most harmless creature in the mansion" +
+                "yields to its paws and it goes in.\n\n" +
+                "In another world, you might have laughed at the fact that the most harmless creature in the mansion" +
                 "managed to scare you so badly. After a moment, you begin to make your way towards the other stairs. As you take a step, " +
-                "a floorboard creaks loudly. Something feels wrong.\n\nYou glance back to where you came from to find that the staircase you " +
+                "a floorboard creaks loudly. Something feels wrong.\n\n" +
+                "You glance back to where you came from to find that the staircase you " +
                 "just walked down is...gone. Where there was once an opening is simply a wall, with no trace that there was ever a stairway" +
-                " there to begin with. You force yourself to continue onward. Perhaps it’s just the darkness playing tricks on you.\\n\\n\n" +
+                " there to begin with. You force yourself to continue onward. Perhaps it’s just the darkness playing tricks on you.\n\n" +
                 "All of a sudden, a great cracking sound echoes through the hallway, and the ceiling opens. From it descends countless blades," +
-                "swinging violently on ropes and glinting in the darkness. You watch in horror as one swings directly at you.\\n\\n\n" +
-                "What do you do? \\n\\n\n");
+                "swinging violently on ropes and glinting in the darkness. You watch in horror as one swings directly at you.\n\n" +
+                "What do you do?! \n\n");
         ui.choice1.setText("Run!");
         ui.choice2.setText("Duck down!");
         ui.choice3.setText("");
@@ -1242,17 +1252,19 @@ public class Story {
     }
     //Run
     public void Run() {
-        ui.mainTextArea.setText("You try to sprint away from the blade swinging towards you, but as you turn to run, you feel something ram into your side. Turning, pain erupts from your abdomen as you find that a different blade has lodged itself just above your hip, hooking you in place.\\n\\n\n" +
-                "As you struggle, another comes swinging at you head on, and you feel a painful popping in your chest as it buries itself in your sternum. \\n\\n\n" +
-                "Then another swings into you. And then another. \\n\\n\n" +
+        ui.mainTextArea.setText("You try to sprint away from the blade swinging towards you, but as you turn to run, you feel something ram into your side. " +
+                "Turning, pain erupts from your abdomen as you find that a different blade has lodged itself just above your hip, hooking you in place.\n\n" +
+                "As you struggle, another comes swinging at you head on, and you feel a painful popping in your chest as it buries itself in your sternum. \n\n" +
+                "Then another swings into you. And then another. \n\n" +
                 "You can hardly bear the agony as you hang there, suspended by the blades that have hooked themselves deep into your flesh." +
                 "You’re not sure how long you’ve hung there, but you open your eyes as you hear a door creak open, and the butler emerges " +
                 "from one of the rooms near where the stairs used to be. A foolish spark of hope ignites within you as he approaches, " +
                 "genuine concern seeming to color his movements. He looks you over, shaking his head sadly as he reaches up to gently cup " +
-                "your cheek. I’m so sorry,” he mutters quietly. \\n\\n\n" + "He reaches his other hand and runs it through your hair, lingering on the back of your head.\\n\\n\n" +
-                "You watch as he draws in breath, still holding your head, before your neck is violently twisted and everything goes black. \\n\\n\n" +
+                "your cheek. I’m so sorry,” he mutters quietly. \n\n" +
+                "He reaches his other hand and runs it through your hair, lingering on the back of your head.\n\n" +
+                "You watch as he draws in breath, still holding your head, before your neck is violently twisted and everything goes black. \n\n" +
                 "\n" +
-                "You’ve discovered one of many ways to die in this game! Good for you! But, it IS possible to win, so I suggest you restart the game and play again.\\n\\n\n");
+                "You’ve discovered one of many ways to die in this game! Good for you! But, it IS possible to win, so I suggest you restart the game and play again.\n\n");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
@@ -1273,18 +1285,29 @@ public class Story {
      **/
     //Go to room 9 section
     public void DuckDown() {
-        ui.mainTextArea.setText("You duck down onto the floor as the blades swing past overhead. They seem to hang about three feet above the ground, and everything below that appears to be safe to crawl through. You glance around and notice that the door the cat opened earlier is still ajar, so, too terrified to attempt to make it all the way to the stairs, you drag yourself into the room and close the door behind you.\\n\\n\n" +
-                "The room is even darker than the hallway, and you can’t make out anything inside it as you sit huddled against the wall, catching your breath. The room is uncomfortably silent, and you can hear your heart pounding in your chest and blood rushing in your ears.\\n\\n\n" +
-                "The darkness seems to close in on you as you sit there, and if you squint, you can almost convince yourself that you see shapes moving in the darkness. Of course, it’s probably just your eyes playing tricks on you. At this point, you’re convinced that it’s simply your imagination. After everything that’s happened to you tonight, you’ve decided it’s best not to overthink things.\\n\\n\n" +
-                "You close your eyes for a moment, just trying to steady yourself, and feel a comforting hand press itself onto your shoulder.\\n\\n\n" +
-                "Then you remember that you’re alone in the room.\\n\\n\n" +
-                "Your eyes fly open and you spring terrified to your feet, your gaze frantically darting over the pitch-dark room. That was a hand. A real hand. You can credit your imagination for a lot of things, but that’s certainly not one of them. \\n\\n\n" +
-                "As you pin yourself to the wall, your shoulder hits the lightswitch and the overhead lights of the room flick on.\\n\\n\n" +
-                "You watch once your eyes adjust to the light as the cat darts away from you, stopping and staring at you from the center of the room.\\n\\n\n" +
-                "There’s no one else there.\\n\\n\n" +
-                "You stand there a moment, panting. Perhaps it really was your imagination. You stare at the cat as it sits and stares back at you, its shadow extending towards you a great deal further than you feel it should. You feel like you’re going insane. \\n\\n\n" +
-                "The cat approaches you cautiously. \\n\\n\n" +
-                "\n");
+        ui.mainTextArea.setText("You duck down onto the floor as the blades swing past overhead." +
+                " They seem to hang about three feet above the ground, and everything below that appears to be safe to crawl through. " +
+                "You glance around and notice that the door the cat opened earlier is still ajar, so, too terrified to attempt to make it all the way to the stairs," +
+                " you drag yourself into the room and close the door behind you.\n\n" +
+                "The room is even darker than the hallway, and you can’t make out anything inside it as you sit huddled against the wall," +
+                " catching your breath. The room is uncomfortably silent, and you can hear your heart pounding in your chest and blood rushing in your ears.\n\n" +
+                "The darkness seems to close in on you as you sit there, and if you squint, " +
+                "you can almost convince yourself that you see shapes moving in the darkness." +
+                " Of course, it’s probably just your eyes playing tricks on you. At this point, you’re convinced that it’s simply your imagination." +
+                " After everything that’s happened to you tonight, you’ve decided it’s best not to overthink things.\n\n" +
+                "You close your eyes for a moment, just trying to steady yourself, and feel a comforting hand press itself onto your shoulder.\n\n" +
+                "Then you remember that you’re alone in the room.\n\n" +
+                "Your eyes fly open and you spring terrified to your feet, your gaze frantically darting over the pitch-dark room.\n\n" +
+                " That was a hand. A real hand.\n\n" +
+                "You can credit your imagination for a lot of things, but that’s certainly not one of them. \n\n" +
+                "As you pin yourself to the wall, your shoulder hits the lightswitch and the overhead lights of the room flick on.\n\n" +
+                "You watch once your eyes adjust to the light as the cat darts away from you, stopping and staring at you from the center of the room.\n\n" +
+                "There’s no one else there.\n\n" +
+                "You stand there a moment, panting. Perhaps it really was your imagination. " +
+                "You stare at the cat as it sits and stares back at you, its shadow extending towards you a great deal further than you feel it should. " +
+                "You feel like you’re going insane. \n\n" +
+                "The cat approaches you cautiously. \n\n" +
+                "How do you treat the cat?\n");
         ui.choice1.setText("Kick the cat away");
         ui.choice2.setText("Ignore the cat");
         ui.choice3.setText("Try to pet the cat");
