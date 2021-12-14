@@ -10,7 +10,7 @@ public class Story {
     Game game;
     UI ui;
     map m;
-    PlayPlayer use = new PlayPlayer();
+
 
     // Constructor instantiate
     public Story(Game g,UI userInterface, map mDisplay){

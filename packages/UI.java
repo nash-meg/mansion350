@@ -69,7 +69,7 @@ public class UI {
         chooseButton.setBounds(950, 400, 250, 150);
         chooseButton.setBackground(Color.black);
         chooseButton.setLayout(new GridLayout(5,1));
-        gameWindow.add(chooseButton);
+
 
         choice1 = new JButton("choice 1");
         choice1.setBackground(Color.black);
@@ -111,13 +111,7 @@ public class UI {
         choice5.addActionListener(handler);// when you click the START button it caller the handler
         choice5.setActionCommand("c5");
         chooseButton.add(choice5); //
-
-        playerPanel = new JPanel();
-        playerPanel.setBounds(100, 25, 600, 70);
-        playerPanel.setBackground(Color.black);
-        playerPanel.setLayout(new GridLayout(1,4));
-        gameWindow.add(playerPanel);
-
+        gameWindow.add(chooseButton);
 
         gameWindow.setVisible(true); // to see the window created
 
