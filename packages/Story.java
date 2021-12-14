@@ -10,13 +10,20 @@ public class Story {
     Game game;
     UI ui;
     map m;
-
+    boolean shoes;
+    boolean purpPotion;
+    boolean  matches;
+    boolean littleBook;
 
     // Constructor instantiate
     public Story(Game g,UI userInterface, map mDisplay){
         game = g;
         ui = userInterface;
         m = mDisplay;
+        shoes = false;
+        purpPotion = false;
+        matches = false;
+        littleBook = false;
     }
 
 
@@ -964,7 +971,7 @@ public class Story {
 
         game.position1 = "Shoes";
         game.position2= "Coat";
-        game.position3 = "LeaveCloset";
+        game.position3 = "Leave Closet";
         game.position4 = "";
     }
 
@@ -973,7 +980,7 @@ public class Story {
         ui.mainTextArea.setText("You glance down at your sock-covered feet. If you’re going to be running away tonight, you decide," +
                 " it’s probably best that you have some shoes. Luckily you and Mallory are nearly the same shoe-size, so they slip on easily. \n\n");
         ui.choice1.setText("Put on the coat");
-        ui.choice2.setText("LeaveCloset");
+        ui.choice2.setText("Leave Closet");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
@@ -1167,10 +1174,12 @@ public class Story {
 
     //Leave desk
     public void LeaveDesk() {
-        ui.mainTextArea.setText("You decide you’ve had your fill of snooping around Mallory’s desk, and chuckle a little to yourself as you realize how he’s going to be pissed when he--\\n\\n\n" +
-                "The blood smeared across the room jolts you back to where you are, and the small smile drops from your face. There is no “when”. Not anymore. \\n\\n\n" +
-                "Clenching your jaw and, attempting to swallow back the rock in your throat, you turn your attention back to the room. \\n\\n\n");
-        ui.choice1.setText(">");
+        ui.mainTextArea.setText("You decide you’ve had your fill of snooping around Mallory’s desk," +
+                " and chuckle a little to yourself as you realize how he’s going to be pissed when he--\n\n" +
+                "The blood smeared across the room jolts you back to where you are, and the small smile drops from your face. " +
+                "There is no “when”. Not anymore.\n\n" +
+                "Clenching your jaw and, attempting to swallow back the rock in your throat, you turn your attention back to the room. \n\n");
+        ui.choice1.setText("Search ");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
