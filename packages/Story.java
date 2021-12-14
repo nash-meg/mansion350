@@ -285,7 +285,7 @@ public class Story {
                 "When he’s finished speaking, Mallory’s expression quickly switches to a smile, and he goes back to his work as if nothing happened." +
                 "You simply stand there, watching him in bewilderment, completely unsure of how to respond. Either Mallory always talks with his facial" +
                 "expressions wildly mismatching his words, or he was trying to warn you of something. Or perhaps, you’ve misinterpreted the" +
-                "interaction entirely. " +
+                "interaction entirely. \n\n" +
                 "You glance around the dining room, with its chandelier hanging from the ceiling and ornate wallpaper smoothly covering its " +
                 "walls. As Mallory sets the antique wooden table you notice its intricately-carved embellishments curling over each corner as " +
                 "if it were being held up by many human hands. Why would a man like him help a person like you? What motivation could someone of this caliber " +
@@ -323,9 +323,9 @@ public class Story {
                 "\"I didn't catch your name,\" you say, somewhat nervously. Usually, you wouldn't ask, but you feel bad just referring to him as \"butler\". \n\n" +
                 "He gives a small huff of amusement before responding, \"Names are unimportant,\" he shrugs, smiling solemnly, \"I’m just the butler.\"\n\n" +
                 "With that, he turns and walks back into the kitchen.\n\n" + //add arrow
-                "After a moment, he and the old man emerge with various steaming plates making up an extravagant meal, all of which are arranged on the table. The butler pulls out \n" +
-                "a chair for the old man, and Mallory sits across from him. Then, the butler gestures for you to sit, seemingly allowing you to choose your spot.\n" +
-                "Where would you like to sit?\n");
+                "After a moment, he and the old man emerge with various steaming plates making up an extravagant meal, all of which are arranged on the table. The butler pulls out" +
+                "a chair for the old man, and Mallory sits across from him. Then, the butler gestures for you to sit, seemingly allowing you to choose your spot.\n\n" +
+                "Where would you like to sit?\n\n");
         ui.choice1.setText("Sit next to the old man");
         ui.choice2.setText("Sit next to Mallory");
         ui.choice3.setText("");
@@ -346,12 +346,12 @@ public class Story {
                 "You realize with a little unease that these might be the only people in the mansion. Not that you have much experience with the habits of the wealthy, but you expected him to have " +
                 "at least a few more staff to help things get done around the place. Then again, perhaps that’s why he hired you. If it really is his goal to help people get back on their feet, it " +
                 "would make sense that if a few of them left at once, he would be short-staffed.\n\n" +
-                "You push the issue out of your mind as the old man turns to you, \"If you’re going to be staying here,\" he says, gesturing lazily with his fork, \"there are a few rules you’re going \n" +
-                "to have to follow.\"\n" +
+                "You push the issue out of your mind as the old man turns to you, \"If you’re going to be staying here,\" he says, gesturing lazily with his fork, \"there are a few rules you’re going " +
+                "to have to follow.\"\n\n" +
                 "Here, he pauses, looking at you expectantly as if to make sure you’re still on board.\n\n" +
                 "Not entirely sure what kind of response he’s looking for, you nod.\n\n" +
                 "Apparently, that was the right response, because the old man grins as he continues, \"Things here run on a tight shift during work hours, but when you’re not working, your time is " +
-                "your own to do as you please. You'll be paid by the hour for every task you complete around the Manor. You’re allowed to take days off whenever you need, no questions asked-\"\n" +
+                "your own to do as you please. You'll be paid by the hour for every task you complete around the Manor. You’re allowed to take days off whenever you need, no questions asked-\"\n\n" +
                 "At this, Mallory scoffs quietly. The old man doesn't seem to notice, but you catch the butler throwing a warning glance towards the boy. \n\n" +
                 "\"-Any locked or boarded up doors are to stay that way. Above all, you are never allowed to go down " +
                 "into the cellar, no matter the reason, lest you wish for your time here to end. Do you understand?\"\n\n" +
@@ -362,7 +362,7 @@ public class Story {
                 "Once everyone has finished eating and the table is cleared, the old man takes you upstairs and shows you to your bedroom on the top floor, \"This is where you’ll be sleeping for the " +
                 "rest of your time here. Mallory's room is across the hall, and mine is the one next to yours, so if you need anything, you know where to go.\"\n\n" +
                 "You nod, and the old man turns to leave before stopping himself, \"Oh, and just as a heads up, the cat tends to be a little loud at night, so I suggest you keep your door closed,\" " +
-                "he chuckles, \"You know how cats are.\"\n" +
+                "he chuckles, \"You know how cats are.\"\n\n" +
                 "After that, he says goodnight, and you open the door to your room. It’s small, but comfortable, with a desk on one wall, a bed on the other, and beside that, a closet. A few tears " +
                 "come to your eyes as you realize you’ll be sleeping in a proper bed tonight. You change into a set of pajamas folded neatly atop the bed and crawl beneath the covers.\n\n" +
                 "What would you like to do?\n");
@@ -411,7 +411,7 @@ public class Story {
                 "You shake your head. You’re sure he’s fine.\n\n" +
                 "Too tired to think about it now, you go" +
                 "into your room and prepare to go to sleep.\n\n");
-        ui.choice1.setText("Hmph ->");
+        ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
@@ -447,7 +447,7 @@ public class Story {
                 " Besides, if there is anything happening with Mallory, it’s nothing that can’t wait til morning. " +
                 "With that, you close your eyes and attempt to get some rest.\n\n");
 
-        ui.choice1.setText("Lay in bed");
+        ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
@@ -460,9 +460,9 @@ public class Story {
     public void readBook() {
         ui.mainTextArea.setText("You light a candle on your bedside table and grab the book you started reading on your second night in the mansion. " +
                 "Dracula by Bram Stoker. You’ve always loved horror.  [insert part abt the first 10 chapters being your favorite here]." +
-                " You still worry about Mallory, but Stoker’s writing is enough to shift your focus enough to try to sleep. \n");
+                " You still worry about Mallory, but Stoker’s writing is enough to shift your focus enough to try to sleep. \n\n");
 
-        ui.choice1.setText("Hmm");
+        ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
@@ -548,7 +548,7 @@ public class Story {
                 "Your feet are frozen in place and you can’t seem to take your eyes off of poor Mallory’s blood-soaked body as he gasps for what may be his final breaths.\n\n" +
                 "The old man scoffs, extending his free arm. Suddenly, an invisible force slams into you, " +
                 "sending you crashing backwards into your room as the door slams violently shut.\n\n");
-        ui.choice1.setText("I got to leave this place at once");
+        ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
@@ -579,38 +579,39 @@ public class Story {
     }
     public void sitNxtMallory(){
         ui.mainTextArea.setText("Mallory pulls out the chair beside him, flashing you a small smile as you move to sit next to him. " +
-                "You see the butler smile as well as you sit down and Mallory passes you the tray \nof mashed potatoes, " +
-                "'Eat,' he says cheerily, 'you’ll need it.' \n\n" + "Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler standing attentively off to the side.\n" +
+                "You see the butler smile as well as you sit down and Mallory passes you the tray of mashed potatoes, " +
+                "\"Eat,\" he says cheerily, \"you’ll need it.\" \n\n" +
+                "Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler standing attentively off to the side.\n" +
                 "\n" +
                 "You realize with a little unease that these might be the only people in the packages.mansion. Not that you have much experience with the habits of " +
-                "the wealthy, but you expected him to have \nat least a few more staff to help things get done around the place. Then again, perhaps that’s why he " +
-                "hired you. If it really is his goal to help people get back on their feet, it \nwould make sense that if a few of them left at once, he would be " +
+                "the wealthy, but you expected him to have at least a few more staff to help things get done around the place. Then again, perhaps that’s why he " +
+                "hired you. If it really is his goal to help people get back on their feet, it would make sense that if a few of them left at once, he would be " +
                 "short-staffed.\n\n" +
-                "You push the issue out of your mind as the old man turns to you, 'If you're going to be staying here,' he says, gesturing lazily with his fork," +
-                " 'there are a few rules you're going \nto have to follow.'\n\n" +
+                "You push the issue out of your mind as the old man turns to you, \"If you're going to be staying here,\" he says, gesturing lazily with his fork," +
+                " \"there are a few rules you're going to have to follow.\"\n\n" +
                 "Here, he pauses, looking at you expectantly as if to make sure you’re still on board.\n\n" +
                 "Not entirely sure what kind of response he’s looking for, you nod.\n\n" +
-                "Apparently, that was the right response, because the old man grins as he continues, 'Things here run on a tight shift during work hours, but " +
-                "when you're not working, your time is \nyour own to do as you please. You’ll be paid by the hour for every task you complete around the Manor. " +
-                "You're allowed to take days off whenever you need, no questions asked-'\n\n" +
+                "Apparently, that was the right response, because the old man grins as he continues, \"Things here run on a tight shift during work hours, but " +
+                "when you're not working, your time is your own to do as you please. You’ll be paid by the hour for every task you complete around the Manor. " +
+                "You're allowed to take days off whenever you need, no questions asked-\"\n\n" +
                 "At this, Mallory scoffs quietly. The old man doesn't seem to notice, but you catch the butler throwing a warning glance towards the boy. \n\n" +
-                "'-Any locked or boarded up doors are to stay that way and under no circumstances are you to go into the herb garden next to the kitchen. " +
-                "Above all, you are never allowed to go down \ninto the cellar, no matter why, lest you wish for your time here to end. Do you understand?'\n\n" +
-                "'Yes, sir,' is all you can manage. There’s a heaviness to the air that you didn't expect to feel over dinner, and instinct " +
+                "\"-Any locked or boarded up doors are to stay that way. " +
+                "Above all, you are never allowed to go down into the cellar, no matter the reason, lest you wish for your time here to end. Do you understand?\"\n\n" +
+                "\"Yes,\" is all you can manage. There’s a heaviness to the air that you didn't expect to feel over dinner, and instinct " +
                 "dictates that you respond as succinctly as possible. \n\n" +
-                "The old man’s grin widens, 'Then welcome to Huxley Manor!' he exclaims, the heaviness of the mood suddenly dissipating.\n\n" +
-                "'It’s a wonderful place to be,' the butler adds, 'and if you have any questions at all, feel free to ask me.'\n\n" +
+                "The old man’s grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness dissipating.\n\n" +
+                "\"It’s a wonderful place to be,\" the butler adds, \"and if you have any questions at all, feel free to ask me.\"\n\n" +
                 "The old man nods approvingly, and dinner continues rather normally.\n\n" +
                 "Once everyone has finished eating and the table is cleared, the old man takes you upstairs and shows you to your bedroom on the top floor," +
-                "'This is where you'll be sleeping for the \nrest of your time here. Mallory’s room is across the hall, and mine is the one next to yours, " +
-                "so if you need anything, you know where to go.'\n\n" +
-                "You nod, and the old man turns to leave before stopping himself, 'Oh, and just as a heads up, the cat tends to be a little loud at night," +
-                " so I suggest you keep your door closed,' \nhe chuckles, 'You know how cats are.'\n\n" +
+                "\"This is where you'll be sleeping for the rest of your time here. Mallory’s room is across the hall, and mine is the one next to yours, " +
+                "so if you need anything, you know where to go.\"\n\n" +
+                "You nod, and the old man turns to leave before stopping himself, \"Oh, and just as a heads up, the cat tends to be a little loud at night," +
+                " so I suggest you keep your door closed,\" he chuckles, \"You know how cats are.\"\n\n" +
                 "After that, he says goodnight, and you open the door to your room. It's small, but comfortable, with a desk on one wall," +
-                " a bed on the other, and beside that, a closet. A few tears \ncome to your eyes as you realize you'll be sleeping in a proper bed tonight." +
-                " You change into a set of pajamas folded neatly atop the bed and crawl beneath the covers.\n\n" + "What would you like to do?");
+                " a bed on the other, and beside that, a closet. A few tears come to your eyes as you realize you'll be sleeping in a proper bed tonight." +
+                " You change into a set of pajamas folded neatly atop the bed and crawl beneath the covers.\n\n");
 
-        ui.choice1.setText(">");
+        ui.choice1.setText("Go to sleep");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
