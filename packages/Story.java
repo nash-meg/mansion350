@@ -2,6 +2,8 @@ package packages;
 
 import packages2.Book;
 
+import java.io.File;
+
 public class Story {
     // Handle all the dialogues
     // Uses calling from the UI class, map class, Game class,
@@ -55,22 +57,21 @@ public class Story {
             case "backSleep": backSleep(); break;
             case "searchFloor": searchFloor(); break;
             case "tryDoor": tryDoor(); break;
-            case "tryBedroomOnleft": tryBedroomOnleft(); break;
+            case "tryBedroomOnleft": tryBedroomOnLeft(); break;
             case "downstairs": downstairs(); break;
             case "TryDoorAhead": TryDoorAhead(); break;
             case "MalloryRoom":MalloryRoom(); break;
             case "SearchBed": SearchBed(); break;
             case "SearchCloset": SearchCloset(); break;
             case "Shoes": Shoes();break;
-            case "PutOnShoes": PutOnShoes(); break;
-            case "NotPutOnShoes": NotPutOnShoes();break;
+          //  case "PutOnShoes": PutOnShoes(); break;
+          //  case "NotPutOnShoes": NotPutOnShoes();break;
             case "Coat": Coat(); break;
-            case "PutOnCoat": PutOnCoat(); break;
-            case "NotPutOnCoat": NotPutOnCoat();break;
+            //case "PutOnCoat": PutOnCoat(); break;
+            //case "NotPutOnCoat": NotPutOnCoat();break;
             case "LeaveCloset": LeaveCloset();break;
             case "SearchDesk": SearchDesk();break;
             case "ExamineBook": ExamineBook(); break;
-            case "ExaminePicture": ExaminePicture(); break;
             case "LeaveDesk": LeaveDesk(); break;
             case "LeaveRoom": LeaveRoom();break;
             case "room5": room5(); break;
@@ -79,7 +80,46 @@ public class Story {
             case "KickCat": KickCat(); break;
             case "IgnoreCat": IgnoreCat();break;
             case "PetCat": PetCat(); break;
+            case "ExamineBookcase": ExamineBookcase();break;
+            case "PocketBook":PocketBook();break;
+            case "LeaveBook":LeaveBook();break;
+            case "ExaminePicture": ExaminePicture();break;
+            case "ExamineCoffeeTable": ExamineCoffeeTable();break;
+            case "letterOpener": letterOpener();break;
+            case "leaveLetterOpener": leaveLetterOpener();break;
+            case "ExamineFireplace": ExamineFireplace();
+            case "TakeMatches": TakeMatches();break;
+            case "LeaveThere": LeaveThere();break;
+            case "FightScene": FightScene();break;
             case "RunThruHall": RunThruHall(); break;
+            case "DuckingDown": DuckingDown();break;
+            case "watchHelplessly": watchHelplessly();break;
+            case "attemptToRun": attemptToRun(); break;
+            case "curlInToABall": curlInToABall(); break;
+            case "JumpOutWay": JumpOutWay();break;
+            case "room10": room10();break;
+            case "purplePotion":purplePotion();break;
+            case "LeaveRoom10":LeaveRoom10();break;
+            case "goToBathroom":goToBathroom();break;
+            case "withShoes":withShoes();break;
+            case "withNoShoes":withNoShoes();break;
+            case "knifeDrawer":knifeDrawer();break;
+            case "LeaveKitchen":CheckCabinets();break;
+            case "CheckFridge":CheckFridge();break;
+            case "withPotion":withPotion();break;
+            case "yellowPotion": yellowPotion();break;
+            case "labeledClearPotion":labeledClearPotion();break;
+            case "unlabeledClearPotion":unlabeledClearPotion();break;
+            case "ThrowBooks": ThrowBooks();break;
+            case "pettingCat":pettingCat(); break;
+            case "angeringCat":angeringCat();break;
+            case "GrabABook": GrabABook(); break;
+            case "ReadSpell": ReadSpell();break;
+            case "LookAhead":LookAhead();break;
+            case "StandThere": StandThere();break;
+            case "ClimbBookshelf": ClimbBookshelf();break;
+            case "UseLetterOpener":UseLetterOpener(); break;
+
         }
 
     }
@@ -680,12 +720,12 @@ public class Story {
                 "\n\nShakily, you get to your feet and glance around the room.\n\nWhat do you want to do?");
         ui.choice1.setText("Try the door (leave) ");
         ui.choice2.setText("Search floor.");
-        ui.choice3.setText("Go back to sleep");
+        ui.choice3.setText("");
         ui.choice4.setText("");
 
         game.position1 = "tryDoor";
         game.position2= "searchFloor";
-        game.position3 = "backSleep";
+        game.position3 = "";
         game.position4 = "";
     }
     //Try the door (leave)
@@ -698,7 +738,7 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "room1";
+        game.position1 = "MalloryRoom";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -707,12 +747,12 @@ public class Story {
     public void searchFloor() {
         ui.mainTextArea.setText("You glance down at the floor. A few items fell from your desk when you were flung into the room, but other than that, it’s rather clean, save for a stray shirt you have yet to fold. Looking at it now, it feels almost foreign despite the fact that you’ve been living here for almost a week." +
                 " You shake your head, turning back to the door. \\n\\n\n");
-        ui.choice1.setText("It’s a floor");
+        ui.choice1.setText("Go back to sleep");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "room1";
+        game.position1 = "backSleep";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -744,14 +784,14 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "tryBedroomOnleft";
+        game.position1 = "tryBedroomOnLeft";
         game.position2= "TryDoorAhead";
         game.position3 = "";
         game.position4 = "";
     }
 
     //The bedroom on your left (2)
-    public void tryBedroomOnleft() {
+    public void tryBedroomOnLeft() {
         ui.mainTextArea.setText("You try the door to your left, only to find that, predictably, it’s locked. He always locks his room anyway, and it would only follow that he would most definitely lock it when committing a murder. \\n\\n\n");
         ui.choice1.setText("Locked can't get in");
         ui.choice2.setText("");
@@ -811,7 +851,7 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "MalloryRoom";
+        game.position1 = "SearchCloset";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -819,7 +859,7 @@ public class Story {
     //Search closet
     public void SearchCloset() {
         ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. There are three shirts, two pairs of pants, and a yellow coat hanging there, with a single pair of shoes sitting on the floor. It’s odd, considering that the old man insisted that all shoes be kept in the hall closet near the front door. \\n\\n");
-        ui.choice1.setText("Shoes");
+        ui.choice1.setText("Shoes");//
         ui.choice2.setText("A coat");
         ui.choice3.setText("Leave Closet");
         ui.choice4.setText("Search desk");
@@ -833,18 +873,19 @@ public class Story {
     //Put on shoes
     public void Shoes() {
         ui.mainTextArea.setText("You glance down at your sock-covered feet. If you’re going to be running away tonight, you decide, it’s probably best that you have some shoes. Luckily you and Mallory are nearly the same shoe-size, so they slip on easily. \\n\\n\n");
-        ui.choice1.setText("Put on ");
-        ui.choice2.setText("No put on");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "PutOnShoes";
-        game.position2= "NoPutOnShoes";
+        game.position1 = "LeaveCloset";
+        game.position2= "";
         game.position3 = "";
         game.position4 = "";
     }
+   /* //this part is not right
     public void PutOnShoes() {
-        ui.mainTextArea.setText("remember make more noise");
+        ui.mainTextArea.setText("OMG! YOU remember it makes noise");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
@@ -855,8 +896,9 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+    //this part is not right
     public void NotPutOnShoes() {
-        ui.mainTextArea.setText(" Quieter.\\n\\n\n");
+        ui.mainTextArea.setText("Quieter.\nSo you pick it upo and take with you.");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
@@ -867,21 +909,23 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
-
+*/
     public void Coat() {
         ui.mainTextArea.setText("You reach for the coat, pulling it off the hanger. It’s a cold autumn night, and considering how far this mansion is from any people, you’re sure that it’s going to be a long walk in the fridged air before you can find help, so you figure it’s best if you put it on. It’s a little tight in the shoulders, but on the whole it doesn’t fit too badly. \\n\\n\n");
-        ui.choice1.setText("Put on ");
-        ui.choice2.setText("No put on ");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "PutOnCoat";
-        game.position2= "NotPutOnCoat";
+        game.position1 = "LeaveCloset";
+        game.position2= "";
         game.position3 = "";
         game.position4 = "";
     }
 
     //Put on coat
+    // this part is not right
+  /*
     public void PutOnCoat() {
         ui.mainTextArea.setText("Get stuck on something/butler grabs)");
         ui.choice1.setText(">>>");
@@ -894,6 +938,8 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+    //this part is not right
+
     public void NotPutOnCoat() {
         ui.mainTextArea.setText(" Take with you");
         ui.choice1.setText(">>>");
@@ -906,6 +952,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+    */
     //Leave Closet
     public void LeaveCloset() {
         ui.mainTextArea.setText("You take one last glance at the nearly empty closet before turning back to the room. \\n\\n");
@@ -914,7 +961,7 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "SearchCloset";
+        game.position1 = "SearchDesk";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -922,9 +969,10 @@ public class Story {
 
     //Search desk
     public void SearchDesk() {
-        ui.mainTextArea.setText("You walk to the desk and glance over its surface. It’s one of the only parts of the room that’s relatively blood-free, save for a drop or two scattered at one corner.There’s a pen holder and a lamp, and a few un-marked scraps of paper. In the center is a book: a copy of  Shakespeare’s Much Ado about Nothing. However, you’ve read Much Ado About Nothing, and this copy is much thicker than it should be. \\n\\n\n" +
-                "Beside it sits a polaroid picture with a date written on the bottom.\\n\\n\n");
-        ui.choice1.setText("Examine the book");
+        ui.mainTextArea.setText("You walk to the desk and glance over its surface. It’s one of the only parts of the room that’s relatively blood-free, save for a drop or two scattered at one corner.There’s a pen holder and a lamp, and a few un-marked scraps of paper. In the center is a book:" +
+                " a copy of  Shakespeare’s Much Ado about Nothing. However, you’ve read Much Ado About Nothing, " +
+                "and this copy is much thicker than it should be.\n\nBeside it sits a polaroid picture with a date written on the bottom.\n\n");
+        ui.choice1.setText("Examine book");
         ui.choice2.setText("Examine the picture");
         ui.choice3.setText("Leave desk");
         ui.choice4.setText("Leave room");
@@ -949,50 +997,35 @@ public class Story {
                 "There seems to be a great deal in the book about removing one’s soul and tricking the body into thinking it’s still there, whatever that means. \\n\\n\n" +
                 "One passage underlined rather intensely in pen reads, “There is no way to reverse soullessness once it has been done. The soulless will live on as long as the individual can find sustenance in the mortal realm. The only way that one who has begun to draw life from below the metaphysical plane can perish while still well-nourished is if the immortal body is killed within a day after it has fed. It is weakest as it draws lifeforce from its meals, and only then can the body be jolted into ‘realizing’ there is no soul sustaining it.” \\n\\n\n" +
                 "Written beside this passage are simply the words, “Next time?”\\n\\n\n" +
-                "Shaking your head, you close the book, fold the dust jacket back over the cover, and place it back on the desk.\\n\\n\n");
-        ui.choice1.setText("Magic spells");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-
-        game.position1 = "MagicSpells";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-    }
-    public void MagicSpells() {
-        ui.mainTextArea.setText("Trying to figure out how to reverse curse/understand it\n\\n\\n\n");
+                "Shaking your head, you close the book, fold the dust jacket back over the cover, " +
+                "and place it back on the desk.\\n\\n\n");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "SearchDesk";
+        game.position1 = "ExaminePicture";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
     }
+
     //Examine the picture
     public void ExaminePicture() {
         ui.mainTextArea.setText("You pick up the polaroid and glance at the date. July 24, 2017. It’s a picture of Mallory standing with a group of people who you assume to be relatives at a beach somewhere. But he looks...different. His hair is shorter, and his frame is filled out more healthfully than it ever had been in the time you’d known him. The deep, chasmous dark circles beneath his eyes are lighter here - almost nonexistent on his semi-sunburnt face. He’s smiling in a way that you’ve never seen before, almost as if he’s laughing at something behind the camera.\\n\\n\n" +
-                "You realize you’d never seen him genuinely laugh.\\n\\n\n" +
-                "\n" +
+                "You realize you’d never seen him genuinely laugh.\n\n" +
                 "A middle-aged woman stands grinning beside him with an arm placed playfully around his shoulders, and sitting in the sand at his feet is a little blonde girl who couldn’t be older than 10 or 11. She’s also clearly laughing, her hands packed with fistfulls of sand.\\n\\n\n" +
                 "You feel tears begin to well up in your eyes as you stare at the polaroid. He had a family once. People who loved him. At least that’s what it looks like in the picture. What happened to him that made him land here, of all places? That made him die here? Would his family even know that he was gone?\\n\\n \n" +
-                "\n" +
-                "Would they care?\\n\\n\n" +
-                "\n" +
+                "Would they care?\n\n" +
                 "You draw in a shaky breath as your vision blurs with tears that threaten to spill over. You quickly put down the polaroid and wipe your eyes. You don’t have time to be getting emotional right now. \\n\\n\n" +
-                "\n" +
-                "Still, you can’t help but hazard one last lingering glance at the photo. You wish he could have seen them again. \\n\\n\n" +
-                "\n" +
-                " \n");
+                "Still, you can’t help but hazard one last lingering glance at the photo." +
+                " You wish he could have seen them again.\n");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "SearchDesk";
+        game.position1 = "LeaveDesk";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -1008,7 +1041,7 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "SearchDesk";
+        game.position1 = "LeaveRoom";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -1019,7 +1052,8 @@ public class Story {
                 "As you stand looking down the descending corridor, you feel a shiver of fear run up your spine, and for a moment, you hesitate. You’re certain that the old man dragged Mallory down these stairs, and at this point, he could be anywhere in the mansion. If he finds you…\\n\\n\n" +
                 "No. You can’t think like that, you decide.\\n\\n\n" +
                 "You have to get out of here. This is the only way down to the door on the main floor, and you’re not about to jump out of a third story window to try and escape. \\n\\n\n" +
-                "Though the fear of being caught still weighs heavily on your mind, you steel yourself, stepping down into the darkness. \\n\\n\n" +
+                "Though the fear of being caught still weighs heavily on your mind," +
+                "you steel yourself, stepping down into the darkness. \\n\\n\n" +
                 "\n");
         ui.choice1.setText(">");
         ui.choice2.setText("");
@@ -1033,17 +1067,25 @@ public class Story {
     }
     //Down in third over section, room 5:
     public void room5() {
-        ui.mainTextArea.setText("You step cautiously as you descend the stairs, praying that no one will catch you once you reach the bottom. It’s dark; with every step a part of you fears that your foot will miss, and you’ll be sent tumbling down the stairway. Still, these stairs don’t creak as much as the ones on the lower levels, and for that, you’re grateful.\\n\\n\n" +
-                "You nearly hit your head on the ceiling as you finally reach the bottom of the stairs. It’s always been much lower on this level than the others. \\n\\n\n" +
-                "As you step out into the hallway, you see something move out of the corner of your eye. Something brushes against your ankle, and as you try to step away, it seems to follow your every move. Nearly tripping, you look down to see a pair of yellow eyes staring back at you from the darkness, and there’s a quiet meow from the little creature at your feet. \\n\\n\n" +
-                "A wave of relief washes over you. It’s just the cat. You watch as it slinks away from you, trying to steady your beating heart. It pauses at a pair of doors on the opposite wall, seeming to test each one before one of them yields to its paws and it goes in. In another world, you might have laughed at the fact that the most harmless creature in the mansion managed to scare you so badly. After a moment, you begin to make your way towards the other stairs.\\n\\n\n" +
-                "As you take a step, a floorboard creaks loudly. \\n\\n\n" +
-                "Something feels wrong. \\n\\n\n" +
-                "You glance back to where you came from to find that the staircase you just walked down is...gone. Where there was once an opening is simply a wall, with no trace that there was ever a stairway there to begin with. You force yourself to continue onward. Perhaps it’s just the darkness playing tricks on you.\\n\\n\n" +
-                "All of a sudden, a great cracking sound echoes through the hallway, and the ceiling opens. From it descends countless blades, swinging violently on ropes and glinting in the darkness. You watch in horror as one swings directly at you.\\n\\n\n" +
+        ui.mainTextArea.setText("You step cautiously as you descend the stairs, praying that no one will catch you once you reach the bottom." +
+                " It’s dark; with every step a part of you fears that your foot will miss, and you’ll be sent tumbling down the stairway." +
+                " Still, these stairs don’t creak as much as the ones on the lower levels, and for that, you’re grateful.\n\n" +
+                "You nearly hit your head on the ceiling as you finally reach the bottom of the stairs. " +
+                "It’s always been much lower on this level than the others. As you step out into the hallway, you see something move out of the corner " +
+                "of your eye. Something brushes against your ankle, and as you try to step away, it seems to follow your every move. " +
+                "Nearly tripping, you look down to see a pair of yellow eyes staring back at you from the darkness, and there’s a quiet meow" +
+                "from the little creature at your feet. A wave of relief washes over you. It’s just the cat. You watch as it slinks away from you," +
+                "trying to steady your beating heart. It pauses at a pair of doors on the opposite wall, seeming to test each one before one of them" +
+                "yields to its paws and it goes in.\n\nIn another world, you might have laughed at the fact that the most harmless creature in the mansion" +
+                "managed to scare you so badly. After a moment, you begin to make your way towards the other stairs. As you take a step, " +
+                "a floorboard creaks loudly. Something feels wrong.\n\nYou glance back to where you came from to find that the staircase you " +
+                "just walked down is...gone. Where there was once an opening is simply a wall, with no trace that there was ever a stairway" +
+                " there to begin with. You force yourself to continue onward. Perhaps it’s just the darkness playing tricks on you.\\n\\n\n" +
+                "All of a sudden, a great cracking sound echoes through the hallway, and the ceiling opens. From it descends countless blades," +
+                "swinging violently on ropes and glinting in the darkness. You watch in horror as one swings directly at you.\\n\\n\n" +
                 "What do you do? \\n\\n\n");
         ui.choice1.setText("Run!");
-        ui.choice2.setText("Duck down");
+        ui.choice2.setText("Duck down!");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
@@ -1056,13 +1098,12 @@ public class Story {
     public void Run() {
         ui.mainTextArea.setText("You try to sprint away from the blade swinging towards you, but as you turn to run, you feel something ram into your side. Turning, pain erupts from your abdomen as you find that a different blade has lodged itself just above your hip, hooking you in place.\\n\\n\n" +
                 "As you struggle, another comes swinging at you head on, and you feel a painful popping in your chest as it buries itself in your sternum. \\n\\n\n" +
-                "Then another swings into you. \\n\\n\n" +
-                "And then another. \\n\\n\n" +
-                "You can hardly bear the agony as you hang there, suspended by the blades that have hooked themselves deep into your flesh.\\n\\n\n" +
-                "You’re not sure how long you’ve hung there, but you open your eyes as you hear a door creak open, and the butler emerges from one of the rooms near where the stairs used to be. \\n\\n\n" +
-                "A foolish spark of hope ignites within you as he approaches, genuine concern seeming to color his movements. He looks you over, shaking his head sadly as he reaches up to gently cup your cheek. \\n\\n\n" +
-                "“I’m so sorry,” he mutters quietly. \\n\\n\n" +
-                "He reaches his other hand and runs it through your hair, lingering on the back of your head.\\n\\n\n" +
+                "Then another swings into you. And then another. \\n\\n\n" +
+                "You can hardly bear the agony as you hang there, suspended by the blades that have hooked themselves deep into your flesh." +
+                "You’re not sure how long you’ve hung there, but you open your eyes as you hear a door creak open, and the butler emerges " +
+                "from one of the rooms near where the stairs used to be. A foolish spark of hope ignites within you as he approaches, " +
+                "genuine concern seeming to color his movements. He looks you over, shaking his head sadly as he reaches up to gently cup " +
+                "your cheek. I’m so sorry,” he mutters quietly. \\n\\n\n" + "He reaches his other hand and runs it through your hair, lingering on the back of your head.\\n\\n\n" +
                 "You watch as he draws in breath, still holding your head, before your neck is violently twisted and everything goes black. \\n\\n\n" +
                 "\n" +
                 "You’ve discovered one of many ways to die in this game! Good for you! But, it IS possible to win, so I suggest you restart the game and play again.\\n\\n\n");
@@ -1071,7 +1112,7 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "room5";
+        game.position1 = "theMansion"; //death
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -1083,6 +1124,7 @@ public class Story {
      * Duck down
      *
      **/
+    //Go to room 9 section
     public void DuckDown() {
         ui.mainTextArea.setText("You duck down onto the floor as the blades swing past overhead. They seem to hang about three feet above the ground, and everything below that appears to be safe to crawl through. You glance around and notice that the door the cat opened earlier is still ajar, so, too terrified to attempt to make it all the way to the stairs, you drag yourself into the room and close the door behind you.\\n\\n\n" +
                 "The room is even darker than the hallway, and you can’t make out anything inside it as you sit huddled against the wall, catching your breath. The room is uncomfortably silent, and you can hear your heart pounding in your chest and blood rushing in your ears.\\n\\n\n" +
@@ -1108,15 +1150,18 @@ public class Story {
     }
     //Kick the cat away
     public void KickCat() {
-        ui.mainTextArea.setText("You stare at the cat in disgust as it walks towards you. It slowly approaches your leg, and as it goes to sniff, you thrash out your foot, nailing it in the chin and sending it stumbling backwards and hissing. Its hair stands on end as it stares at you in shock for a moment before quickly limping into a corner of the room and painfully laying down, curling itself into as tight a ball as possible. You notice a bit of blood on its tongue as if it bit itself when you kicked it. It crouches there for a moment, shaking and staring at you with wide, terrified eyes. You scoff and move to examine the room. \\n\\n\n" +
-                "There’s a large bookcase to one wall, and an unlit fireplace to an adjacent one. In the middle of the room, surrounded by couches, is a coffee table with a handful of writing materials and paper on it. \\n\\n\n" +
+        ui.mainTextArea.setText("You stare at the cat in disgust as it walks towards you. It slowly approaches your leg, and as it goes to sniff, you thrash out your foot, nailing it in the chin and sending it stumbling backwards and hissing. " +
+                "Its hair stands on end as it stares at you in shock for a moment before quickly limping into a corner of the room and painfully laying down, curling itself into as tight a ball as possible. You notice a bit of blood on its tongue as if it bit itself when you kicked it." +
+                " It crouches there for a moment, shaking and staring at you with wide, terrified eyes. You scoff and move to examine the room.\n\n" +
+                "There’s a large bookcase to one wall, and an unlit fireplace to an adjacent one. In the middle of the room, surrounded by couches," +
+                " is a coffee table with a handful of writing materials and paper on it. \\n\\n\n" +
                 "What do you do?\\n\\n\n");
-        ui.choice1.setText("Remember mad cat");
+        ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "PetCat";
+        game.position1 = "ExamineCoffeeTable";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -1134,13 +1179,13 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "PetCat";
+        game.position1 = "ExamineCoffeeTable";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
     }
     //Try to pet the cat
-    public void PetCat() {
+       public void PetCat() {
         ui.mainTextArea.setText("You crouch down and extend a hand as the cat approaches you, allowing it to sniff. It takes a moment, thoroughly smelling your hand and up your arm before deciding that you’re a friend, beginning to purr as it pushes its face through your fingers. You can’t help but smile a bit as it flops down in front of you, showing you its belly and staring at you expectantly. You chuckle a little, scratching it as it purrs. You’ve never been too much of a cat person, but you’d be lying if you didn’t admit that this one was rather cute. \\n\\n\n" +
                 "After a while, the cat reaches down and nips your hand to tell you that it has finished being pet for the time being, thank you very much, then stands, rubbing against your hand one more time before walking off. \\n\\n\n" +
                 "You smile as you, too, get to your feet, glancing around the room. \\n\\n\n" +
@@ -1172,8 +1217,8 @@ public class Story {
                 "You sigh. An hour ago, you would have thought that for a man who focuses so much on the practical, the old man sure had a lot of impractical books. But now, after everything you’ve seen, there’s a part of you that wants to believe it. You can’t believe you’re thinking this, but perhaps the book could be helpful.\\n\\n\n" +
                 "Or perhaps you’re starting to lose it and the book is just that - a book. \\n\\n\n" +
                 "Do you decide to take it with you?\\n\\n\n");
-        ui.choice1.setText("spell book");
-        ui.choice2.setText("");
+        ui.choice1.setText("Pocket the book");
+        ui.choice2.setText("Leave it there");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
@@ -1182,26 +1227,27 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+    // need to be fit
     public void PocketBook(){
-        ui.mainTextArea.setText("Bye!");
+        ui.mainTextArea.setText("I will keep this.\nI might this it later.\n\n");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "theMansion";
+        game.position1 = "ExamineCoffeeTable";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
     }
     public void LeaveBook(){
-        ui.mainTextArea.setText("Bye!");
+        ui.mainTextArea.setText("Too bad! You might it.\n\n");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "theMansion";
+        game.position1 = "ExamineCoffeeTable";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -1212,12 +1258,37 @@ public class Story {
                 "Hesitantly, you push the papers aside to reveal a small ornate letter opener. It’s clearly very old, and its design sits happily on the border between letter opener and plain old tiny knife, but it seems to have found its purpose opening letters for the old man. \\n\\n\n" +
                 "As you look at it, you can’t help but wonder whether you should take it with you. It definitely could be used as a weapon if push came to shove, but a part of you wonders if you would be more effective just sticking to your fists. \\n\\n\n" +
                 "Do you take the letter opener?\\n\\n\n");
+        ui.choice1.setText("Take the letter opener");
+        ui.choice2.setText("Leave it there");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "letterOpener";
+        game.position2= "leaveLetterOpener";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void letterOpener() {
+        ui.mainTextArea.setText("Put in pocket");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "PetCat";
+        game.position1 = "ExamineFireplace";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+    public void leaveLetterOpener() {
+        ui.mainTextArea.setText("Too bad! You might it");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "ExamineFireplace";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
@@ -1228,18 +1299,881 @@ public class Story {
                 "You notice various scraps of burnt paper in the fireplace, though you find that they’re all too small and seared to properly glean what they might have been. \\n\\n\n" +
                 "Finally, you turn your attention to the mantel. On either side are rather hefty-looking statues. Each depicts a gargoyle, one crouching and the other standing on its hind legs, both snarling out at the room. A small matchbox sits beside one of them. It’s open slightly, and you can see that there are still a few left in the pack. There’s a part of you that wants to snag them, just in case, but you’re not entirely sure what you’d use them for. There’s another part that doesn’t want to leave any more trace that you were here than you absolutely have to, in case the old man notices. You sigh, staring at the matches.\\n\\n\n" +
                 "Do you take them?\\n\\n\n");
+        ui.choice1.setText("Take matches\n");
+        ui.choice2.setText("Leave them there");
+        ui.choice3.setText("Go straight to fight scene");
+        ui.choice4.setText("");
+
+        game.position1 = "TakeMatches";
+        game.position2= "LeaveThere";
+        game.position3 = "FightScene";
+        game.position4 = "";
+    }
+    public void TakeMatches() {
+        ui.mainTextArea.setText("You grab the matches and pocketed it");
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "PetCat";
+        game.position1 = "FightScene";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void LeaveThere() {
+        ui.mainTextArea.setText("Too bad! You might it");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "FightScene";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Fight scene in Room 9 before room 10:
+    //Beginning of fight scene
+    public void FightScene() {
+        ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar on the other side that’s different from the one you entered through. Before you can think too much about it, a noise from the cat draws your attention, and you turn to see it staring at you, twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an almost wave-like motion, its pelt rises and falls in places that it shouldn’t.\\n\\n\n" +
+                "You stare, your body frozen in place, as the cat’s bones begin to grow and its very body begins to stretch. Its wails deepen and become almost human-like as its hide disappears into pale, humanoid flesh. It unfolds itself, and for a moment, before you stands the butler, suit and all, staring at you in agony.\\n\\n\n" +
+                "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his muscles beneath continue to morph and contort. He pleads with you in a voice that’s only half his own, somehow mixed with a low, animalistic growl, “Run!”\\n\\n\n" +
+                "Just that single word seems to take a world of effort as he releases you and flails backwards, growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\\n\\n\n" +
+                "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\\n\\n\n" +
+                "What do you do?\\n\\n\n");
+        ui.choice1.setText("Duck down");
+        ui.choice2.setText("Jump out of the way");
+        ui.choice3.setText("Use letter opener "); //Use letter opener (if have)
+        ui.choice4.setText("");
+
+        game.position1 = "DuckingDown";
+        game.position2= "JumpOutWay";
+        game.position3 = "UseLetterOpener";
+        game.position4 = "";
+    }
+    //Duck down (pet cat)
+    public void DuckingDown() {
+        ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar on the other side that’s different from the one you entered through. Before you can think too much about it, a noise from the cat draws your attention, and you turn to see it staring at you, twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an almost wave-like motion, its pelt rises and falls in places that it shouldn’t.\\n\\n\n" +
+                "You stare, your body frozen in place, as the cat’s bones begin to grow and its very body begins to stretch. Its wails deepen and become almost human-like as its hide disappears into pale, humanoid flesh. It unfolds itself, and for a moment, before you stands the butler, suit and all, staring at you in agony.\\n\\n\n" +
+                "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his muscles beneath continue to morph and contort. He pleads with you in a voice that’s only half his own, somehow mixed with a low, animalistic growl, “Run!”\\n\\n\n" +
+                "Just that single word seems to take a world of effort as he releases you and flails backwards, growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\\n\\n\n" +
+                "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\\n\\n\n" +
+                "What do you do?\\n\\n\n");
+        ui.choice1.setText("Watch helplessly "); //Duck down (pet cat);
+        ui.choice2.setText("Attempt to run"); //Duck down (kick cat)
+        ui.choice3.setText("Curl into a ball"); //Duck down (ignore cat)");
+        ui.choice4.setText("");
+
+        game.position1 = "watchHelplessly "; //End up on floor >>>Duck down (pet cat)
+        game.position2= "attemptToRun"; //Duck down (kick cat)
+        game.position3 = "curlInToABall "; //Duck down (ignore cat)
+        game.position4 = "";
+    }
+    //Duck down (pet cat)
+    public void watchHelplessly() {
+        ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster continues to charge at you, but you notice a jerkiness in its movements, as if he’s fighting against an invisible force that’s holding him back. He’s almost upon you now. You watch helplessly as he draws back an enormous claw, winding up to strike, and you squeeze your eyes shut as you prepare for the talon to come slicing down on you.\\n\\n\n" +
+                "You hear an agonized roar from the creature as the wall behind you shakes. Your eyes fly open and you find that you’re unscathed. The creature’s claw is lodged in the wall just centimeters above your head, flexing and twitching as if it’s an effort for him to keep it there. \\n\\n\n" +
+                "He locks eyes with you, once more managing a tortured yell:\\n\\n\n" +
+                " “RUN!”\\n\\n\n" +
+                "You nod quickly, not needing to be told twice as you scramble from beneath the hulking creature and bolt towards the open door.\\n\\n\n" +
+                "You leap over one of the couches as you hear the wall behind you being torn from itself and the monster manages to dislodge his claws. There’s a thumping as he once more begins to pursue. You’re just a couple feet away from the door now, and he’s right on your heels. Desperately, you dive into the room and foolishly look behind you to see how close he is.\\n\\n\n" +
+                "Then, you stop.\\n\\n\n" +
+                "He charges at the room, but is suddenly blown backwards as if he just ran into " +
+                "something. He stands there, panting a minute, before nodding. If you didn’t know " +
+                "any better, you would have thought that he was smiling. You watch as he slowly" +
+                " begins to shrink back into what you assume to be his human form, this time without " +
+                "any of the pain that the transformation caused earlier. Before he’s finished, " +
+                "he turns his head as if he’s just heard something and lumbers away, leaving you " +
+                "alone. Slowly, you walk over and close the door before turning to examine the room" +
+                " you’ve just entered.\\n\\n\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "JumpOutWay";// come back to this
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Duck down (kick cat)
+    public void attemptToRun() {
+        ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. You curl into a ball as he draws back an enormous claw, then your eyes fly open as you feel his sharpened talons dig deep into your body, some going so deep to protrude out through your back. This time, when he draws back his claws, you’re drawn back with them. The pain is blinding as you writhe in vain to try and free yourself. There’s a loud ‘whoosh’ from behind you and the crackling of flames before you’re plunged deep into the now-lit fireplace.\\n\\n\n" +
+                "He holds his claw in the fire with you as the flames lick at your skin. You scream out, thrashing in agony, the creature curling his claws inwards. You feel as though your flesh is being melted from bone in the flame. Your vision blurs as you feel your consciousness begin to slip. One final burst of agony jolts through you as the beast withdraws its claws from your body, allowing the flames to lap greedily at your open wounds. The pain mutes your tortured cries as you lie there, everything slowly fading to an inky black numbness.\\n\\n\\n\n" +
+                "You’ve discovered one of the many ways to die in this game!. It IS possible to win this game, so feel free to restart and play again, but I suggest next time you refrain from kicking the cat :).\\n\\n\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Duck down (ignore cat)
+    public void curlInToABall() {
+        ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. You curl into a ball as he draws back an enormous claw, then your eyes fly open as you feel his sharpened talons dig deep into your body, some going so deep to protrude out through your back. This time, when he draws back his claws, you’re drawn back with them.\\n\\n\n" +
+                "As you’re lifted up to his face, you see immense pain and sadness in his eyes. He growls out something that sounds like an apology before you feel his claws within you tighten into a fist. You manage a single cry of agony, tears flowing down your face as you flail wildly before he slams you down onto the ground and everything goes black. \\n\\n\\n\n" +
+                "Bummer, man. You’ve found one of the many ways to die in this game! It IS possible to beat this game, though, so if you want, you can restart the game and play again!\\n\\n cool!!\n");
+        ui.choice1.setText("");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Jump out of the way
+    public void JumpOutWay() {
+        ui.mainTextArea.setText("You leap to the side, narrowly dodging the blow, and find yourself crashing into the bookshelf. The creature pauses a moment, clearly disoriented by the fact that he missed. He’s too close for you to run, but perhaps…\\n\\n\n" +
+                "...Your eyes dart to the shelf covered in books.\\n\\n\n" +
+                "What do you do?\\n\\n\n");
+        ui.choice1.setText("Try climbing the bookshelf");
+        ui.choice2.setText("Throw the books"); //Throw the books (pet/ignore cat)
+        ui.choice3.setText("Grab a book");
+        ui.choice4.setText("Enter room10");
+
+        game.position1 = "ClimbBookshelf";
+        game.position2= "ThrowBooks";
+        game.position3 = "GrabABook";
+        game.position4 = "room10";
+    }
+
+    public void ClimbBookshelf() {
+        ui.mainTextArea.setText("You grab hold of the shelf and start attempting to climb it, using each level as a rung to step up. You feel your grip beginning to slip as the beast turns to you, no longer seeming to rush almost as if he’s watching to see what will happen. You make it to the top of the bookshelf and crouch there. For a moment, you feel safe atop the the tower of books.\\n\\n\n" +
+                "Then that moment fades\\n\\n\n" +
+                "Panic overwhelms you as you realize the monster can still reach you in your crouched position, but now you’ve nowhere to go.\\n\\n\n" +
+                "He reaches up with one claw and easily grabs you, throwing you down onto the ground. You feel a shooting pain in the back of your head as it slams against the corner of the coffee table and everything goes black. \\n\\n\\n\n" +
+                "\n" +
+                "Oof, my dude. You’ve discovered one of the many ways to die in this game! It IS beatable, so if you want, you can restart and try again! Or not, if you’re feeling bad about ultimately getting killed by a coffee table.  \n" +
+                "\n");
+        ui.choice1.setText(">"); // change transition
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2 = "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Throw the books (kick cat)
+    public void ThrowBooks() {
+        ui.mainTextArea.setText("What would you like to do?");
+        ui.choice1.setText("Throw the books at head)"); //Throw the books (pet/ignore cat)
+        ui.choice2.setText("Throw the books at back");//Throw the books (kick cat)
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "pettingCat";
+        game.position2= "angeringCat";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void pettingCat() {
+        ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then begin pelting them at the monster, aiming for his head. This only seems to anger him. He turns to you, eyes flashing with an intense rage as he charges at you. Unable to run anywhere without risking getting grabbed, you desperately reach for more books from the shelf, feeling for hardcovers. As the monster lunges, your hand finds a particularly heavy copy of the complete works of William Shakespeare, and desperately you chuck the book at the creature, praying it hits its mark.\\n\\n\n" +
+                "The book flies air before nailing the monster on the side of the face and sending him stumbling back. \\n\\n\n" +
+                "Relief floods you as you bolt towards the open door on the other side of the room. Without looking back, you run faster than you feel you ever have as you hear an angry growl from behind you.\\n\\n\n" +
+                "You’re almost to the door now, but you can feel him on your heels. Desperately, you dive into the other room, falling forward, and try to scramble away.\\n\\n\n" +
+                "This is it, you realize. You can’t escape this. \\n\\n\n" +
+                "You turn, expecting to see the creature about to seal your fate, but instead, you watch as he comes running at the entrance only to be blown backwards as if by some kind of barrier. He simply stands there a moment, seeming to reorient himself before looking at you from the other side of the doorframe. Is he...nodding? \\n\\n\n" +
+                "If you hadn’t known any better, you would’ve thought you saw a glimmer of pride in his eyes.\\n\\n \n" +
+                "His gaze lingers on you a moment longer before he turns his head as if he’s heard something, then lumbers off. Cautiously, you walk over and close the door before turning to examine the room you’ve just entered.\\n\\n\n");
+        ui.choice1.setText(">)");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; //death
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void angeringCat() {
+        ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then begin pelting them at the monster, aiming for his head. This only seems to anger him. He turns to you, eyes flashing with an intense rage as he charges you. Unable to run anywhere without risking getting grabbed, you desperately reach for more books from the shelf, feeling for hardcovers.\\n\\n\n" +
+                "However, he moves too quickly for you to find another book to throw, and before you know it you’re pinned to the bookshelf with one large claw placed over your abdomen. He reaches up his other paw and gently caresses your face before firmly grabbing it and twisting suddenly. You feel your neck crunch, then everything goes black. \\n\\n\\n\n" +
+                "Ayyyyy you discovered one of the many ways to die in this game! It IS beatable, so if you want, you can definitely restart the game and try again! A word of advice though: next time, don’t kick the cat. \\n\\n\n" +
+                "\n");
+        ui.choice1.setText(">)");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
     }
 
-   //Run through hall
+    public void GrabABook() {
+        ui.mainTextArea.setText("Where you going to do now?");
+        ui.choice1.setText("Read spell"); //Grab a book and start reading spells (pet cat)
+        ui.choice2.setText("Look ahead"); //Grab a book and start reading spells (ignore cat)
+        ui.choice3.setText("Stand there");
+        ui.choice4.setText("");
+
+        game.position1 = "ReadSpell"; // DEATH GAME OVER
+        game.position2= "LookAhead";
+        game.position3 = "StandThere";
+        game.position4 = "";
+    }
+    //Grab a book and start reading spells (pet cat)
+    public void ReadSpell() {
+        ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
+                "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly, but you keep reading in the hopes that something will happen.\\n\\n\n" +
+                "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell. After a moment, you hear a thump onto the ground and a human cough. When you’ve finished, you look up to find the butler crouched over on the ground, panting and coughing as if in pain. \\n\\n\n" +
+                "Every logical bone in your body tells you to run, but for some reason you can’t bring yourself to leave him. So instead, you gently approach, crouching down to make sure he’s alright. \\n\\n\n" +
+                "He places a hand on your shoulder, still breathing heavily as he almost seems to swallow back tears, “Thank you,” he says quietly. \\n\\n\n" +
+                "You help him to his feet and he begins shaking his head, “No,” he mutters firmly, “Get out of here. Before I have to change back.” He points to the door on the other side of the room, “That room is enchanted with a barrier that I can’t cross. Go in, and you’ll be safe from me,” he pauses, softening a little, “I don’t want to hurt you, kid.”\\n\\n\n" +
+                "You nod, turning and running towards the door. As you turn, you hear his parting words, “Good luck. Get out of this place if you can.” \\n\\n\n" +
+                "From behind you, you hear the butler begin to transform once more, crying out in pain as his wails turn to growls. Once you’re in the room, you hazard one last glance at his distorted, half-changed form" +
+                " before shutting the door and praying he was right. \\n\\n\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "room10"; // fix later
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Grab a book and start reading spells (ignore cat)
+    public void LookAhead() {
+        ui.mainTextArea.setText("TThinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
+                "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly, but you keep reading in the hopes that something will happen.\\n\\n\n" +
+                "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell. When you’ve finished, you look up to find the creature frozen mid-lunge, clearly trying to move but completely unable. \\n\\n\n" +
+                "Not sure how long the spell lasts, you waste no time bolting into the door on the other side of the room and slamming the door shut. You listen as the spell wears off, expecting the creature to run into the room, but instead you hear him simply lumber out into the hallway. A little confused but ultimately relieved, " +
+                "you turn to examine the room you’ve just entered.\\n\\n\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "room10"; // fit later
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Grab a book and start reading spells (kick cat)
+    public void StandThere() {
+        ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
+                "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly, but you keep reading in the hopes that something will happen.\\n\\n\n" +
+                "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell.\\n\\n\n" +
+                "When you’re finished reading, however, you look up to find that you have made a grave mistake. Before you stands the beast, but something’s different. It’s taller now, and has to hunch to avoid hitting the ceiling. Its claws are larger, and as it looms over you, it seems to prepare for something. \\n\\n\n" +
+                "You watch, frozen with fear, as it draws in a deep breath and slowly spreads its arms. As it does so, you notice its chest beginning to move as well. To stretch. To rip. It only winces as white bone breaks through the fur: ribs,  spreading and tearing its sternum until it bursts open, causing the creature to throw its head back in what is either pain or ecstasy. Inside there aren’t guts or entrails. It’s just empty. A void that seems to continue on past the bounds of the monster’s body.\\n\\n\n" +
+                "Its head snaps forward and it lets out a loud, bellowing roar. Adrenaline rushes through your veins as your terror is sent into overdrive. Not sure what else you can do, you try to sprint for the door. Perhaps its size has slowed it.\\n\\n\n" +
+                "As you try to run, however, you feel something pulling you back. You try to fight against it, but the faster you run the harder it pulls, until suddenly your feet lift from the ground and you fly towards the gaping void. You reach desperately for something - anything - that you can grab onto, but your hands are sweaty from stress and slip from everything you try to grasp onto.\\n\\n\n" +
+                "You pass helplessly into the belly of the beast, and watch as its chest closes, blocking out all light as you’re swallowed whole by the void. \\n\\n\\n\n" +
+                "\n" +
+                "Yikes! You discovered one of the many ways to die in this game! It IS beatable, so if you want, you can restart and try again. A word of advice before you go though:" +
+                " maybe don’t kick the cat next time. \\n\\n\n");
+        ui.choice1.setText(">)");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Use letter opener (if have)
+
+    public void UseLetterOpener() {
+        ui.mainTextArea.setText("Running on instinct, you pull the letter-opener from your pocket and hold it out, aiming to stab him in the throat when he bends down to claw you. You don't back away as he swings his talons at you, instead lunging right back at him and burying the letter opener deep in his jugular.\\n\\n\n" +
+                "You stand there unscathed, panting as you watch him slowly come to the realization that he’s been stabbed. You begin to laugh a little as blood spews from his throat. It actually worked! \\n\\n\n" +
+                "At least...you thought it did. \\n\\n\n" +
+                "You watch in terror as the creature steadys itself and the letter opener is pulled into its neck before the wound closes over. The beast lets out a roar as something travels up its arm and through its hand until a sixth claw emerges, the letter opener as its nail.\\n\\n\n" +
+                "Shit. Yeah… Maybe the letter opener wasn’t the best idea. Nice try though! " +
+                "You’ve discovered one of the many ways to die in this game!" +
+                " It IS beatable though, so if you want to get to the end, feel free to restart" +
+                " and try again!\\n\\n\n" +
+                "\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // death
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+    //room 10 - chamber (potion room)
+    public void room10() {
+        ui.mainTextArea.setText("You hear footsteps above you as if the butler has now somehow made his way upstairs.\\n\\n\n" +
+                " Before you is a room filled with shelves of boxes and bottles and potted plants. On the far side of the room is a door that seems to go back out to the hallway. In the center is a table, on it a small electric cooktop with an empty cauldron sitting atop it and some mini shelving units, also containing a few small bottles. Unlike those on the other shelves, however, these are small vials of liquid. One, a purple substance with a faded label, seems to have a slight glow to it. Another, sitting solidly on the table, is a yellow liquid that also seems to glow, but less so. Its label is a little easier to read and clearly says in large letters, “PLAN B”. There are two other vials, both filled with clear liquid. One is labeled “Sanitatem” and the other has no label at all.\\n\\n\n" +
+                "You begin to realize where in the house you are. Usually both this room and the one you were just in are locked tight, and Mallory used to joke that this one was the old man’s potion room. Now that you stand here, you’re starting to think it wasn’t much of a joke. \\n\\n\n" +
+                "You glance down at the vials.\\n\\n\n" +
+                " Part of you can’t help but wonder what would happen if you just…drank one. Or two. Or all of them. \\n\\n\n" +
+                "Do you take a sip?\\n\\n\n");
+        ui.choice1.setText("Drink the purple potion");
+        ui.choice2.setText("Drink the yellow potion");
+        ui.choice3.setText("Drink the labeled clear potion");
+        ui.choice4.setText("Drink the unlabeled clear potion");
+
+        game.position1 = "purplePotion";
+        game.position2= " yellowPotion";
+        game.position3 = "labeledClearPotion";
+        game.position4 = "unlabeledClearPotion";
+    }
+    public void purplePotion() {
+        ui.mainTextArea.setText("You cautiously pick up the glowing vial and look it over, noticing that the faded label says “Aspectum”. You’re not well-versed in latin by any stretch, but you remember a middle school teacher once telling you that that word meant “Sight”. You shrug. Maybe it does.\\n\\n\n" +
+                "Either way, you pop the cork off the vial and drink it down in one swig. \\n\\n\n" +
+                "It tastes sweet, almost like a plum, and is rather smooth on the way down.\n" +
+                "You pause. \\n\\n\n" +
+                "Nothing feels different. \\n\\n\n" +
+                "Sighing, you hope that this isn’t some kind of slow death potion that you have stupidly just drank. \\n\\n\n" +
+                "It’s when you glance back at the potion table that you notice it. \\n\\n\n" +
+                "At first, you just see a little bit of movement out of the corner of your eye. But when you look closer, you find that in the liquid of the other vials, you can see...something.\\n\\n\n" +
+                "The old man.\\n\\n\n" +
+                "You can see the old man walking up a set of stairs. Not any that you’ve ever been on, but the wallpaper seems to match that of the stairs going down into the cellar. You attempt to look behind and around the vials, but find that the only place you can see this is in the two vials of clear liquid. You watch as the old man nearly reaches the top of the stairs then stops suddenly. As if he’s forgotten something, he sighs and goes back down. You blink, turning away as you stop watching, then begin to laugh a little. Even in as terrifying of a situation as you’re in, this is pretty cool.\\n\\n\n" +
+                "You guess aspectum really did mean sight after all.\\n\\n\n");
+        ui.choice1.setText("Leave Room10");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "LeaveRoom10"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void yellowPotion() {
+        ui.mainTextArea.setText("You pick up the yellow vial, pondering for a moment why it’s labeled the way it is before drinking it. \\n\\n\n" +
+                "Instantly, your insides begin to burn as if someone’s lit a match in your stomach. Your throat begins to swell as your knees buckle under you and you fall to the ground, bringing one of the mini shelves down with you as you grasp at it in an attempt to stay standing. \\n\\n\n" +
+                "Spots form in your vision as it begins to blur.\\n\\n\n" +
+                "You’re not sure how long you lie there, unable to move or breathe, jerking violently as your lungs try to suck in air that isn’t there.\\n\\n\n" +
+                " You close your eyes as an odd bliss settles over you and your body stops spasming.\\n\\n\n" +
+                " Sleep.\\n\\n\n" +
+                " Yes, that’s it. You just need some rest.\\n\\n\n" +
+                "You allow yourself to drift off into a sleep of inky black, not entirely comprehending that it’s one you’ll never wake up from. \\n\\n\\n\n" +
+                "\n" +
+                "You really just drank a random potion in a murderer’s house labeled “PLAN B”, huh? Well, we can’t all be the brightest bulbs in the bunch. You, for instance, have discovered one of the many ways to die in this game! But, it IS beatable, we promise, so if you want you can always restart the game and try again! \n" +
+                "\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void labeledClearPotion() {
+        ui.mainTextArea.setText("You pick it up, contemplating the latin labeling before taking a swig. You cringe at the taste and it burns as it goes down.\\n\\n\n" +
+                "Still, it tastes strangely familiar.\\n\\n\n" +
+                "Was that...vodka?\\n\\n\n" +
+                "You sniff the vial. \\n\\n\n" +
+                "Yup, that was definitely vodka.\\n\\n\n" +
+                "You stand there a moment, a little dumbfounded that you just took a shot in the middle of a potion room before turning back to the other vials. \\n\\n\n" +
+                "\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "LeaveRoom10";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void unlabeledClearPotion() {
+        ui.mainTextArea.setText("You pick up the unlabeled vial and glance over it. The fact that it’s unlabeled scares you a bit, but after what you just experienced in the other room, you figure it can’t be that bad. Shrugging, you uncork it and take a swig.\\n\\n\n" +
+                "It doesn’t taste like anything, nor does it feel strange at all.\\n\\n\n" +
+                "If you hadn’t known any better, you would have thought it was water.\\n\\n\n" +
+                "Shit.\\n\\n\n" +
+                "Was it poison?\\n\\n\n" +
+                "Your heartbeat quickens as you pick up the vial and the cork, examining both in a frantic attempt to find any hint of what it might be. \\n\\n\n" +
+                "It’s then that you see it.\\n\\n \n" +
+                "On the top of the cork is a small label that reads “Water” in plain english. \\n\\n\n" +
+                "You put the vial down and lean against the table in a combination of relief and embarrassment.\\n\\n\n" +
+                "It really was just water. \\n\\n\n");
+        ui.choice1.setText("Leave the room");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "LeaveRoom10";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void LeaveRoom10() {
+        ui.mainTextArea.setText("Finished with the potion table, you make your way over to the door on the far side of the room. You know it goes out to the hallway where you almost died, but you’d rather go that way and have some hope of getting out than stay in here for the old man to find you or go back into the room where you were just attacked. \\n\\n\n" +
+                "You pause, listening. \\n\\n\n" +
+                "It doesn’t SOUND like the blades are still swinging.\\n\\n\n" +
+                "Cautiously, you crack open the door and peek out from behind it.\\n\\n\n" +
+                "You were right. The blades now simply hang there limply from ropes. They don’t look as ominous now that they’re standing still. \\n\\n\n" +
+                "You pull the door open and slowly step out into the hallway, checking to make sure that they won’t start moving if you leave the room. Still, they hang there harmlessly, allowing you to push them to the side and weave between them. \\n\\n\n" +
+                "Finally, you reach the stairs. They lead downward into the darkness that you know to be the kitchen. You feel a bit of fear bubbling up inside you as you look down the descending corridor. You know that these stairs will creak when you step on them. \\n\\n\n" +
+                "Beside them is an open door leading to a bathroom, and on the opposite side of the hall is a boarded up door that, after everything that’s happened, you’d like to keep that way. \\n\\n\n" +
+                "What do you do?\\n\\n\n");
+        ui.choice1.setText("Go to the bathroom");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "goToBathroom"; //
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void goToBathroom() {
+        ui.mainTextArea.setText("You go into the bathroom and take a piss before washing your hands and heading back out into the hallway.\\n\\n\n");
+        ui.choice1.setText("Run downstairs with shoes)"); //Go downstairs (shoes)
+        ui.choice2.setText("Run downstairs with no shoes)");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "withShoes"; // DEATH GAME OVER
+        game.position2= "withNoShoes";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void withShoes() {
+        ui.mainTextArea.setText("You cautiously step down the stairs, cringing as it squeaks at every step you take. The thick bottoms of your sneakers clunk against the wood, making it even louder than it already would be without them. Not to mention how dark it is, and how easily you could fall if you missed a step. \\n\\n\n" +
+                "You pause at the first landing, taking a moment to allow yourself to breathe. \\n\\n\n" +
+                "As you stand there, eyes closed and leaning against the wall, you hear the quiet footsteps of slippers on tile.\\n\\n\n" +
+                "You feel your blood run cold as the realization hits you.\\n\\n\n" +
+                "The old man is in the kitchen, and he’s heading towards the stairs.\\n\\n\n" +
+                "You stand there a moment panicking, unsure of what to do. \\n\\n\n" +
+                "If you try and walk back up the stairs, he’ll definitely hear you. If you go down the stairs, not only will he hear you, but he’ll also see you. \\n\\n\n" +
+                "You resolve to sit there and hopefully wait him out.\\n\\n\n" +
+                "The slippers pause for a moment at the base of the stairs, and you see the faint shadow of the old man cast by the light of the window.\n" +
+                "“I know you’re up there,” he coos.\n" +
+                "You feel a lump form in the pit of your stomach as you hear the old man move onto the first step.\\n\\n\n" +
+                "“I thought I told you to go back to bed.”\\n\\n\n" +
+                "At this point, you decide to run, but when you try to move, you realize that you can’t. It’s not a matter of fear or weakness. You physically can’t move.\\n\\n\n" +
+                "The old man slowly climbs the stairs until he’s reached your landing. Your heart pounds in your chest as every muscle in your body begs you to run but refuses to do so. \\n\\n\n" +
+                "The old man clicks his tongue as he runs a hand down your face, “I’d hoped you would last longer,” he mutters, then laughs quietly, “And to think you might have actually done it if those shoes weren’t so loud.”\\n\\n\n" +
+                "He draws in breath through gritted teeth, then snaps his fingers. In an instant, you feel every muscle your body give out, and everything goes black. \\n\\n\\n\n" +
+                "\n" +
+                "Aw man, you were over halfway to victory! Instead, you’ve discovered one of the many ways to die in this game! It IS beatable, though, we promise, so if you want, you can restart the game and try again!\\n\\n\n" +
+                "\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void withNoShoes() {
+        ui.mainTextArea.setText("You slowly make your way down the stairs, cringing every time a step creaks. Even so, your socks manage to muffle the noise of your footsteps, and if you pause for long enough between squeaks, you find you’re able to make it sound almost like the natural creaking of the old mansion. Unfortunately, it takes you forever to get down the stairs because of it, but you figure it’s better safe than sorry.\\n\\n\n" +
+                "Finally, you make it to the bottom of the stairs and cautiously step out into the kitchen. It’s rather dark, but the light from the moon outside is enough to generally let you see. Your eyes have become rather accustomed to the darkness at this point anyway.\\n\\n\n" +
+                "The kitchen is a room that you’ve gotten to know rather well in your time here. It’s small for a kitchen in a mansion, but beautiful nonetheless. The dark wooden cabinets look lovely alongside the copper appliances and granite countertops.\\n\\n\n" +
+                "You glance longingly at the knife drawer. Perhaps there’s something in there you could use. \\n\\n\n" +
+                "Or perhaps you might find something of use in cabinets where the plates and bowls are kept. It isn’t likely, but it’s possible.\\n\\n\n" +
+                "It’s then that you notice a bloody handprint on the handle of the fridge. Did the old man not clean up the blood before getting a midnight snack?\\n\\n\n" +
+                "You scoff, trying not to think too much about it. If you think about the reason for all the blood, it means you have to think about Mallory, and the fact that he’s gone.\\n\\n\n" +
+                "What do you do?\\n\\n\n" +
+                "\n");
+        ui.choice1.setText("Search the knife drawer");
+        ui.choice2.setText("Check cabinets");
+        ui.choice3.setText("Check the fridge");
+        ui.choice4.setText("Leave kitchen ");
+
+        game.position1 = "knifeDrawer"; //
+        game.position2= "CheckCabinets";
+        game.position3 = "CheckFridge";
+        game.position4 = "LeaveKitchen";
+    }
+    public void knifeDrawer() {
+        ui.mainTextArea.setText("You quietly make your way over to the knife drawer and slide it open.\\n\\n\n" +
+                "You know that a knife likely won’t do much to whatever kind of being the old man really is, but you also figure it couldn’t hurt, right?\\n\\n\n" +
+                "As you open the drawer, however, you find that it’s empty. It wasn’t empty last time you opened it, and you’ve opened it every day you’ve been here. You notice a note at the bottom of the drawer that reads in large lettering: \\n\\n\n" +
+                "“NICE TRY, MALLORY”\\n\\n\n" +
+                "You stare at the note for a moment before drawing in a long, shaky breath and closing the drawer.\\n\\n\n" +
+                "You had no idea how meticulously he must have planned for Mallory’s murder.\\n\\n\n" +
+                "Shaken, you turn back to the room.\\n\\n\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "withNoShoes";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void CheckCabinets() {
+        ui.mainTextArea.setText("You open the cabinets knowing that there probably won’t be much of use in them, but figure it can’t hurt to check.\\n\\n\n" +
+                "You find the usual: plates, cups, bowls, etc. \\n\\n\n" +
+                "You also find a skull that, up until that point, you had assumed to be decorative. It had been there since you moved in, and seeing as the old man seemed to have a taste for morbid decor, you hadn’t questioned it. Now, though, after everything you’ve seen, you can’t help but wonder whether it’s real.\\n\\n\n" +
+                "It’s not a pure white - rather a dirty yellow that’s darker in some areas. It’s missing a tooth, and some of the ones it does have are chipped.\\n\\n\n" +
+                "The longer you stare at it, the more real it looks, and the more you feel like you’re going to be sick. \\n\\n\n" +
+                "You shake your head, turning back to the rest of the room.\\n\\n\n" +
+                "You don’t have time for thoughts like that.\\n\\n\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "withNoShoes";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void CheckFridge() {
+        ui.mainTextArea.setText("You cautiously approach the fridge, staring at the bloody handprint. \\n\\n\n" +
+                "The old man doesn’t strike you as the kind to be so careless.\\n\\n\n" +
+                "You pause a moment, working up the courage to open the fridge door and look inside, terrified of what you might find. \\n\\n\n" +
+                "Finally, drawing in a breath, you open the door. You flinch as the fridge light jars your eyes for a moment. You always forget that there’s a light in there.\\n\\n\n" +
+                "When your eyes adjust, it at first looks as though there’s nothing out of the ordinary. It’s the usual food items and milks and cheeses and such. You likely wouldn’t have noticed the tiny droplets of red around the jar of beet juice if you hadn’t been looking. Nor the handprint on the outside of it. Nor the thick, partially-congealed droplets overflowing from the top despite the lid.\\n\\n\n" +
+                "You continue to stare at the large glass jar as realization horrifyingly dawns.\\n\\n\n" +
+                "That’s not beet juice.\\n\\n\n" +
+                "The thick red substance that he drank with every meal and claimed ‘kept his mind sharp’ was not beet juice.\\n\\n\n" +
+                "It wasn’t full when you left the kitchen before going to bed. In fact, it had been running low. \\n\\n\n" +
+                "You draw in a breath to try to steady yourself. You feel like you’re going to be sick.\\n\\n\n" +
+                "\n");
+        ui.choice1.setText("Leave kitchen without potion");
+        ui.choice2.setText("Leave kitchen with potion");
+        ui.choice3.setText(" Punch the old man ");
+        ui.choice4.setText("Use spellBook");
+
+        game.position1 = "withoutPotion";
+        game.position2= "withPotion";
+        game.position3 = "PunchOldMan";
+        game.position4 = "UseSpellBook";
+    }
+    //Leave kitchen (no potion)
+    public void withoutPotion() {
+        ui.mainTextArea.setText("You decide you’ve spent enough time in the kitchen, and begin to make your way towards the front entrance. You’re almost out now. All you need to do is get to the main door, open it, then run.\\n\\n\n" +
+                "Quietly as you can, you slowly sneak through the dining room, and past the cellar stairs. As you pass, you smell a faint but pungent scent coming from the bottom of the stairs. \\n\\n\n" +
+                "You clench your jaw and creep past them, praying that the old man stays down there long enough for you to escape. \\n\\n\n" +
+                "Your heart begins to race as you pass the entrance to the living room. You’re almost there. Just a few more steps…\\n\\n\n" +
+                "You stifle a laugh as your palm lands on the handle of the door. Drawing in a breath, you unlock the door and push down on the ornate iron handle, preparing to pull it open.\\n\\n\n" +
+                "[NEXT PAGE]\n" +
+                "But it doesn’t open.\\n\\n\n" +
+                "It doesn’t even budge.\\n\\n\n" +
+                "You begin to frantically tug at the handle, pulling and pushing with all your might.\\n\\n\n" +
+                "No!\\n\\n\n" +
+                "You didn’t make it this far only for it to end like this!\\n\\n\n" +
+                "You don’t want to die…\\n\\n\n" +
+                "You don’t notice the quiet steps behind you of slippers on the staircase, nor their pitter-patter on the hardwood floor as the old man approaches you. \\n\\n\n" +
+                "You do, however, notice the slow clapping as the old man patronizingly applauds you, “Very good,” he coos, “I’ve never had anyone make it to the door before.”\\n\\n\n" +
+                "Your body turns against your will, and in a moment you’re facing the old man.\\n\\n\n" +
+                "You can still move your arms, but your legs don’t want to run. \\n\\n\n" +
+                "As the old man slowly approaches you, clearly taking his time, you try to think of something - anything - you can do to save yourself.\\n\\n\n" +
+                "\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText(" ");
+        ui.choice4.setText("");
+
+        game.position1 = "PunchOldMan";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+
+    public void PunchOldMan() {
+        ui.mainTextArea.setText("Unsure of what else to do, you wait for the old man to get close as he continues rambling about how he had hoped you would “last longer”, as he puts it. \\n\\n\n" +
+                "When he’s within arms reach, you waste no time raising your fist and swing it at the old man, landing squarely on his left eye.\\n\\n\n" +
+                "He staggers backwards and for a moment, clutching his eye, and in an instant you can move again. \\n\\n\n" +
+                "However, triumph is short-lived.\\n\\n\n" +
+                "As quickly as you regain mobility, you lose it again, and this time your entire body goes stiff.\\n\\n\n" +
+                "The old man, still facing away from you, begins...laughing.\\n\\n\n" +
+                "It starts out quiet, but grows until it echoes through the otherwise silent halls of the mansion.\\n\\n\n" +
+                "He turns to you, grinning, “You’re going to be fun.”\\n\\n\n" +
+                "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out from the kitchen with great urgency. \n" +
+                "The old man lets out an annoyed sigh, snapping his fingers, “You stay there, Silas.”\n" +
+                "The butler freezes as the old man continues, “I won’t have your sympathy getting in my way.”\\n\\n\n" +
+                "The old man places a hand on your cheek, still grinning wildly. You watch as he passes his tongue over his teeth, drawing in a hissing breath before he snaps his fingers. In an instant your legs buckle under you and you fall to the ground, smashing your head on the wall as everything goes black.\\n\\n\\n\n" +
+                "\n" +
+                "Close, but no cigar! You’ve instead discovered one of the many ways to die in this game! It IS beatable, so since you’ve already gotten this far, I suggest you restart the game and try again! Maybe next time, you’ll be able to make it out!\\n\\n\n" +
+                "\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+    public void UseSpellBook() {
+        ui.mainTextArea.setText("Suddenly, you remember the pocket guide you found in the room upstairs. In a flurry of frantic motion, you quickly grab it from your pocket and open to a random page. \\n\\n\n" +
+                "“Invisibility of Sight And Presence” the header reads. \\n\\n\n" +
+                "That’s good enough for you.\\n\\n\n" +
+                "You begin reading the spell aloud as fast as you can, throwing pronunciation to the wind.\\n\\n\n" +
+                "You hear the old man laugh, “That’s adorable. You really think I’d keep a book in tof spells that could harm me?”\\n\\n\n" +
+                "Your heart begins to race as you finish the first half of the page.\\n\\n\n" +
+                "“Go on,” the old man says, “finish your little incantation. See what it does.” You hear an amused scoff as he seemingly waits for you to finish reading. \\n\\n\n" +
+                "You can’t hide the smile that creeps across your face as the old man’s pride buys you time.\\n\\n\n" +
+                "As you say the last word, you watch your body disappear and the old man’s eyes  widen. \\n\\n\n" +
+                "You feel that your legs are able to move again, and quickly you drop the book, unsure if it turned invisible with you, bolting past the old man.\\n\\n\n" +
+                "You’re running on instinct now, and for a moment you simply stand there in the dining room, unsure of where to go.\\n\\n\n" +
+                "Then the stairs catch your eye. \\n\\n\n" +
+                "You don’t want to go down into the cellar, but you remember the butler saying something about a door down there, and perhaps that one might be your ticket out of here." +
+                " At the very least, there’s the possibility that the old man will check upstairs first.\\n\\n\n" +
+                "Gathering courage, you sprint down the cellar stairs as the old man angrily rounds the corner," +
+                " making surprisingly little noise as you do so. About halfway down the stairs, " +
+                "you watch as the invisibility begins to wear off, and you become corporeal again. \\n\\n\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "withPotion";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Leave kitchen (potion)
+
+    public void withPotion() {
+        ui.mainTextArea.setText("You move to leave the kitchen and head towards the front entrance - to freedom - when your eye catches something in the decorative mirror on the wall. It’s an image of the old man, stepping up from the cellar stairs in the dining room and turning towards the kitchen.\\n\\n\n" +
+                "You hear your heart begin to pound in your chest as you see his shadow advancing down the hallway. Desperately, you glance around the room for a place to hide.\\n\\n\n" +
+                "The pantry is definitely big enough for you to fit and closes rather silently, but it’s also a rather obvious hiding spot. \\n\\n\n" +
+                "You could also try hiding in the cupboard under the sink, but you’re honestly not sure if you’ll be able to fit.\\n\\n\n" +
+                "You hear him approaching and realize you need to make a decision - now. \\n\\n\n" +
+                "What do you do?\\n\\n\n" +
+                "\n");
+        ui.choice1.setText("Hide in the cupboard");
+        ui.choice2.setText("Hide in the pantry");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "HideInCupboard"; // DEATH GAME OVER
+        game.position2= "HideInPantry";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+    //Hide in the cupboard
+    public void HideInCupboard() {
+        ui.mainTextArea.setText("You crouch down and try to squeeze yourself into the cupboard, but it’s a much tighter fit than you expected. You can get the left half of your body in, but you can’t seem to scrunch down enough to get your head inside, which is a problem.\\n\\n\n" +
+                "You watch fearfully as the old man enters the room as you sit there, only half inside your hiding spot. \\n\\n\n" +
+                "He stops, looking directly at you and laughing, “You’re not the best at hiding, are you?”\n" +
+                "You feel your muscles tighten against your will, and your body begins to stand.\\n\\n\n" +
+                "Once you’re on your feet, the old man smiles. With a flick of his hand, your neck dislodges from your spine and everything goes black.\\n\\n\\n\n" +
+                "\n" +
+                "Yeah, maybe next time try hiding somewhere you know you can fit. But on the bright side, you’ve discovered one of the many ways to die in this game! It IS possible to beat it, though, so if you want you can restart the game and try again!\\n\\n\n" +
+                "\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //Hide in the pantry
+    public void HideInPantry() {
+        ui.mainTextArea.setText("You tiptoe into the pantry and close it as silently as possible. There’s a knob on both sides of the door, so doing so is rather easy. You sit there, breathing heavily among the snacks and dry goods, praying that he doesn’t find you.\\n\\n\n" +
+                "Light begins to flood in under the crack in the door as the old man flicks the kitchen light on.\\n\\n\n" +
+                "His shadow passes under the door as well, and at first you think he’s going to the fridge, seeing as it’s right in front of the pantry. But there is no sound of the fridge opening.\\n\\n\n" +
+                "Instead, the shadow simply stops in front of the pantry.\\n\\n\n" +
+                "You can hear him breathing on the other side of the door, and you do your best to muffle your own panicked breaths. Your heart pounds so loudly in your chest that part of you is scared he’ll hear. \\n\\n\n" +
+                "You hear the jingle of knob, and watch as it slowly starts to turn.\\n\\n\n" +
+                "You close your eyes, trying to hold back tears as you will the knob to stop turning.\\n\\n\n" +
+                "And then suddenly there’s the sound of the knob snapping back into place as your eyes fly back open. \\n\\n\n" +
+                "There’s a thump from upstairs, and you watch as the old man’s shadow quickly turns, then the stairs begin to creak as he presumably climbs them, flicking off the light as he leaves.\\n\\n\n" +
+                "You wait a moment to be sure he’s gone before opening the pantry door ever so slightly and peeking out, still somewhat in disbelief that you weren’t found.  \\n\\n\n" +
+                "Slowly you make your way out of the kitchen and start heading towards the door to the front entrance.\\n\\n\n" +
+                "Just as you begin to creep through the dining room, however, you hear a squeak from the stairs and realize that the old man is coming back down. \\n\\n \n" +
+                "For a moment, you freeze. \\n\\n\n" +
+                "You know you won’t be able to make it all the way down the hallway to the door without him catching you. Not when you’re still this close to the kitchen. What’s more, you’re not about to test your luck hiding a second time. Not that there’s really anywhere you could hide in the dining room anyway. \\n\\n\n" +
+                "Your attention turns to the cellar stairs. You know that there’s also a door at the back of the cellar, and those stairs don’t creak.\\n\\n\n" +
+                "Drawing in a breath, you hazard one last glance towards the kitchen.\\n\\n\n" +
+                "Here goes nothing.\\n\\n\n" +
+                "With that, you quietly descend the darkened cellar stairs.\\n\\n\n" +
+                "\n");
+        ui.choice1.setText("Run to The cellar");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "TheCellar";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    //TheCellar
+    public void TheCellar() {
+        ui.mainTextArea.setText("You’re immediately hit with the pungent smell of rotting flesh as you make your way down into the cellar, and deeper you go, the stronger it gets.  By the time you’re finally at the base of the stairs, your eyes have begun to water and your stomach has begun to churn from the smell. \\n\\n\n" +
+                "As you step onto the floor from the bottom stair, you feel something thick begin to soak into your socks, and when you look down you find yourself standing in a dark, sticky puddle that smells of iron and rot. \\n\\n\n" +
+                "When you turn your head, you have to force back a scream of terror as you realize you’re standing beside a row of corpses hung upidedown along the wall.\\n\\n\n" +
+                "In various stages of decay they hang there, their throats slit like pigs hung to bleed. \\n\\n\n" +
+                "Trying not to comprehend the sight before you, you instead try to keep walking. On the other side of the cellar, you can see a door with a window on it, filtering in the pre-dawn light from outside. If you can just make it across…\\n\\n\n" +
+                "Suddenly, your feet hit something on the floor. It feels somehow solid and squishy at the same time. Without thinking, you look down to see what it is. \\n\\n\n" +
+                "Your breath catches in your chest. A pair of dead, cold eyes look back at you from Mallory’s pale corpse. \\n\\n\n" +
+                "You feel your entire body begin to shake as you stare at the body of the boy at your feet. He doesn’t look the same. His skin looks almost blue and leathery. At least, the bits of skin you can see. Most of him is covered in what you assume to be his own blood, so drenched that it still seems to drip from him onto the ground. He stares up at you with wide, horrified eyes, his final expression of pure fear and pain forever frozen on his death-bloated face.\\n\\n\n" +
+                "It takes everything in your power to not fall to your knees and sob over the boy, but you know you have to keep moving. Reluctantly, you step over his body and continue on over dozens of other corpses who you don’t recognize as you make your way towards the door.\\n\\n\n" +
+                "It’s then that you hear the old man coming down the stairs.\\n\\n\n" +
+                "You glance at the door.\\n\\n\n" +
+                "You’re not sure if you could make it, but you sure could try.\\n\\n\n" +
+                "\n");
+        ui.choice1.setText("Run for the door");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "RunForTheDoor";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void RunForTheDoor() {
+        ui.mainTextArea.setText("You decide that you’re willing to take your chances as you bolt for the door. You’ve still got nearly half the cellar to traverse, but you don’t care. You sprint over the bodies, which squish and crunch beneath your feet. The door is just a few feet away now, and you just need to-\\n\\n\n" +
+                "Suddenly, your body just...stops. Your limbs freeze, then draw themselves back until you’re standing there with your legs together. Then, your legs begin to move against your will, turning you around until you’re facing back towards where you came from.\\n\\n\n" +
+                "There stands the old man, a single hand extended with his fingers moving delicately as he puppeteers your body.\\n\\n\n" +
+                "You hear him begin to laugh as your legs move to carry you towards him.\\n\\n\n" +
+                "\n");
+        ui.choice1.setText("Hide among the bodies");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "HideAmongTheBodies"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void HideAmongTheBodies() {
+        ui.mainTextArea.setText("You shake your head. You couldn’t make it that far in the time you’d need to. So, instead, despite every natural instinct screaming for you to do the opposite, you take a few more steps then lay down among the corpses. \\n\\n\n" +
+                "The smell is overwhelming, but it’s the texture that makes your hair raise. The bodies closer to the door where you are have clearly been here longer, and have begun to be much more...gelatinous than the ones near the front. \\n\\n\n" +
+                "You nearly puke as you lay your head down among the filth and close your eyes, praying that he won’t notice you.\\n\\n\n" +
+                "You listen as he steps down into the cellar onto the sticky puddle at the base of the stairs, and you hear him calling for you, “Come out, come out, my little pet.” he coos, “I know you’re down here.”\n" +
+                "You stay completely still as your heart pounds in your chest. \\n\\n\n" +
+                "“I can hear you breathing,” he calls.\n" +
+                "\n" +
+                "Suddenly, against your will, your limbs start...moving. You try to stop them but your arms begin to prop you up and your legs begin to stand until you’re fully on your feet, staring at the old man from across the room.\\n\\n\n" +
+                "“There you are,” he says with sickening sweetness, “I was beginning to think I’d lost you.”\\n\\n\n" +
+                "You regain control of your arms, but still your legs insist on moving forwards, and slowly you begin to walk towards the old man.\\n\\n\n");
+        ui.choice1.setText("Death (no matches and didn’t pet cat)"); //change transitions
+        ui.choice2.setText("Matches ending");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "iFNoMatches";
+        game.position2= "iFMatches";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void iFNoMatches() {
+        ui.mainTextArea.setText("“You know,” the old man begins, “In all my 300 years, I’ve never had one escape. Not one!”\\n\\n\n" +
+                "Your legs continue to walk towards the old man, stepping on and over the corpses of " +
+                "the old man’s past victims. You watch helplessly as his extended fingers move" +
+                " rhythmically with every step you take, pulling you ever closer.\\n\\n\n");
+        ui.choice1.setText("Fight against it (1)");
+        ui.choice2.setText("Fight against it (2)");
+        ui.choice3.setText("Fight against it (3)");
+        ui.choice4.setText("");
+
+        game.position1 = "Fight1"; // DEATH GAME OVER
+        game.position2= "Fight2";
+        game.position3 = "Fight3";
+        game.position4 = "";
+    }
+    public void Fight1() {
+        ui.mainTextArea.setText("You struggle to regain control of your limbs, but they continue to move despite your every attempt to make them stop.\\n\\n\n" +
+                "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\\n\\n\n" +
+                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\\n\\n\n" +
+                "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time.”\\n\\n\n" +
+                "\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+
+    public void Fight2() {
+        ui.mainTextArea.setText("You begin to grab and claw at your legs, hoping that your own physical force might be enough to make it stop, but still they continue.\\n\\n\n" +
+                "“You know, I don’t usually remember the people I use to feed. Not very well, anyway. But you,” he grins, “I don’t see myself forgetting you for the next century at least.”\\n\\n\n" +
+                "You’re getting closer to the old man, and no matter what you do, you can’t seem to break the spell.\\n\\n\n" +
+                " \n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void Fight3() {
+        ui.mainTextArea.setText("You’re just a few feet away from him now, and as you struggle, you begin to cry out both in frustration and in some vain attempt to beg for your life.\\n\\n\n" +
+                "The old man simply chuckles, continuing to pull you towards him, “Do you know how I came to be like this?” he asks, reaching up his free hand to caress your face, “I killed my best friend, and drank his blood on the floor of a church, and I still have his portrait hanging in my house,” he grins, holding your chin so you have no choice but to look into his eyes, “Your pleas mean nothing to me.”\\n\\n\n" +
+                "With that, he withdraws his hand from your face and reaches into his robe. Before you can even process what he’s grabbed, he slices something over your throat and blood begins spewing outward. You simply stare at him in horror before you fall to your knees, then everything goes black. \\n\\n\\n\n" +
+                "Arrrggg you almost made it! So close! This game IS beatable, so since you made it this far you might as well restart and try again! " +
+                "Perhaps if you make some different choices, things will turn out better?\\n\\n\n");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+
+    //Matches ending
+    public void iFMatches() {
+        ui.mainTextArea.setText("“You know,” the old man begins, “In all my 300 years, I’ve never had one escape. Not one. Of all of them, though, you’ve gotten the closest.”\\n\\n\n" +
+                "Your legs continue to walk towards the old man, stepping on and over the corpses of the old man’s past victims. You watch helplessly as his extended fingers move rhythmically with every step you take, pulling you ever closer.\\n\\n\n" +
+                "As you struggle, your hand brushes your pocket and you feel a small box.\\n\\n\n" +
+                "The matches.\\n\\n\n" +
+                "You’d nearly forgotten that you’d taken them with you, but now, as you’re pulled inevitably towards your death, you wonder whether they might be of some use. \\n\\n\n" +
+                "What do you do?\\n\\n\n");
+        ui.choice1.setText("Try to use the matches");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+    //Try to use the matches
+    public void tryMatches() {
+        ui.mainTextArea.setText("As you struggle to regain control of your limbs, you reach into your pocket and pull out the matchbox.\\n\\n\n" +
+                "There aren’t very many in there, but if you do this right, you’ll only need one.\\n\\n\n" +
+                "Fumbling, you take one out of the box and attempt to strike it, but it breaks.\\n\\n\n" +
+                "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\\n\\n\n" +
+                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\\n\\n\n" +
+                "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,” he continues to chuckle, “I’d almost forgotten the thrill of the hunt.”\\n\\n\n" +
+                "\n");
+        ui.choice1.setText("lit matches"); //Give in (1)
+        ui.choice2.setText("Try again (1)");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "litMatches"; // DEATH GAME OVER
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+
+    //Run through hall
     public void RunThruHall() {
         ui.mainTextArea.setText("Death by blade");
         ui.choice1.setText(">");
@@ -1247,25 +2181,14 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "theMansion";
+        game.position1 = "theMansion"; // DEATH GAME OVER
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
     }
 
-    //room 9 - chamber (pre fight scene)
-    public void room9() {
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-    }
+
 
     //room 9 - chamber (butler fight scene)
     public void room9Fight(){
@@ -1281,19 +2204,7 @@ public class Story {
         game.position4 = "";
     }
 
-    //room 10 - chamber (potion room)
-    public void room10() {
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-    }
 
     //room 8 - hallway/stairway (no method for bathroom, just display)
     public void room8() {
@@ -1407,5 +2318,34 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+    public void Ending() {
+        ui.mainTextArea.setText("Bye!");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+
+        game.position1 = "theMansion";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+    public void toTitle() {
+        defaultSetup();
+        m.showTitleScreen();
+
+        ui.mainTextArea.setText("Bye!");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+
+        game.position1 = "theMansion";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
+
 
 }
