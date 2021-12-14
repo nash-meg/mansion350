@@ -880,11 +880,11 @@ public class Story {
                 "Where do you go? \n\n");
         ui.choice1.setText("Go to Mallory's room");
         ui.choice2.setText("Go downstairs");
-        ui.choice3.setText("MalloryRoom");
+        ui.choice3.setText("");
         ui.choice4.setText("");
 
 
-        game.position1 = "";
+        game.position1 = "MalloryRoom";
         game.position2= "downstairs";
         game.position3 = "";
         game.position4 = "";
@@ -917,66 +917,68 @@ public class Story {
                 "You shake your head. As horrible as it is, there are more pressing matters at hand. " +
                 "You can grieve for your friend once you’re out of here. \n\n" +
                 "His room is set up similarly to your own, with a bed to one wall and a desk to the other. At the foot of the bed sits a closet door.\n\n");
-        ui.choice1.setText("Search bed");
-        ui.choice2.setText("Search closet");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
+        ui.choice1.setText("Search his bed");
+        ui.choice2.setText("Search his closet");
+        ui.choice3.setText("Search his desk");
+        ui.choice4.setText("Leave the room");
 
 
         game.position1 = "SearchBed";
         game.position2= "SearchCloset";
-        game.position3 = "";
-        game.position4 = "";
+        game.position3 = "SearchDesk";
+        game.position4 = "LeaveRoom";
     }
     //Search bed
     public void SearchBed() {
         ui.mainTextArea.setText("You apprehensively approach the bed, " +
                 "a wave of grief washing over you as it sinks in that this is likely where Mallory’s fate was sealed. " +
                 "Blood is everywhere, and there’s a smattering of it up and across the wall as if his throat had been slit. \n\n" +
-                "You look down, taking a moment to center yourself as you feel the bile rising up in your throat. Nothing could have prepared you for the events of tonight. \\n\\n\n" +
-                "It’s then that something poking out from beneath the bedskirt catches your eye. Something solid and shiny. You crouch down to look under the bed. \\n\\n\n" +
-                "At first you’re not entirely sure what you’re looking at, but as your eyes adjust, you recoil a little at the sight.\\n\\n\n" +
-                "They’re...chains. Shackles, bolted to the floor and long enough to reach up to the bed. \\n\\n\n" +
-                "Did-\\n\\n\n" +
-                "Did the old man chain Mallory?\\n\\n\n" +
+                "You look down, taking a moment to center yourself as you feel the bile rising up in your throat. Nothing could have prepared you for the events of tonight. \n\n" +
+                "It’s then that something poking out from beneath the bedskirt catches your eye. Something solid and shiny. You crouch down to look under the bed. \n\n" +
+                "At first you’re not entirely sure what you’re looking at, but as your eyes adjust, you recoil a little at the sight.\n\n" +
+                "They’re...chains. Shackles, bolted to the floor and long enough to reach up to the bed. \n\n" +
+                "Did-\n\n" +
+                "Did the old man chain Mallory?\n\n" +
                 "You think back to one first days you were there. Mallory had made a mistake, and after that you hadn’t seen him for an entire day - not even at dinner. The next time you’d seen him, you’d noticed the bruises on his wrists, but had assumed that they were from some accident while working. Not...this.\\n\\n\n" +
-                "You scramble to your feet, shaking yourself and looking around the rest of the room.\\n\\n\n" +
-                "\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
+                "You scramble to your feet, shaking yourself and looking around the rest of the room.\n\n" );
+        ui.choice1.setText("Search his closet");
+        ui.choice2.setText("Search his desk");
+        ui.choice3.setText("Leave the room");
         ui.choice4.setText("");
 
         game.position1 = "SearchCloset";
-        game.position2= "";
-        game.position3 = "";
+        game.position2= "SearchDesk";
+        game.position3 = "LeaveRoom";
         game.position4 = "";
     }
     //Search closet
     public void SearchCloset() {
-        ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. There are three shirts, two pairs of pants, and a yellow coat hanging there, with a single pair of shoes sitting on the floor. It’s odd, considering that the old man insisted that all shoes be kept in the hall closet near the front door. \\n\\n");
-        ui.choice1.setText("Shoes");//
-        ui.choice2.setText("A coat");
+        ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
+                "There are three shirts, two pairs of pants, and a yellow raincoat hanging there, with a single pair of shoes sitting on the floor. " +
+                "It’s odd, considering that the old man insisted that all shoes be kept in the hall closet near the front door. \n\n");
+        ui.choice1.setText("Put on the shoes");//
+        ui.choice2.setText("Put on the coat");
         ui.choice3.setText("Leave Closet");
-        ui.choice4.setText("Search desk");
+        ui.choice4.setText("");
 
 
         game.position1 = "Shoes";
         game.position2= "Coat";
         game.position3 = "LeaveCloset";
-        game.position4 = "SearchDesk";
+        game.position4 = "";
     }
 
     //Put on shoes
     public void Shoes() {
-        ui.mainTextArea.setText("You glance down at your sock-covered feet. If you’re going to be running away tonight, you decide, it’s probably best that you have some shoes. Luckily you and Mallory are nearly the same shoe-size, so they slip on easily. \\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
+        ui.mainTextArea.setText("You glance down at your sock-covered feet. If you’re going to be running away tonight, you decide," +
+                " it’s probably best that you have some shoes. Luckily you and Mallory are nearly the same shoe-size, so they slip on easily. \n\n");
+        ui.choice1.setText("Put on the coat");
+        ui.choice2.setText("LeaveCloset");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "LeaveCloset";
-        game.position2= "";
+        game.position1 = "Coat";
+        game.position2= "LeaveCloset";
         game.position3 = "";
         game.position4 = "";
     }
@@ -1010,14 +1012,17 @@ public class Story {
     }
 */
     public void Coat() {
-        ui.mainTextArea.setText("You reach for the coat, pulling it off the hanger. It’s a cold autumn night, and considering how far this mansion is from any people, you’re sure that it’s going to be a long walk in the fridged air before you can find help, so you figure it’s best if you put it on. It’s a little tight in the shoulders, but on the whole it doesn’t fit too badly. \\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
+        ui.mainTextArea.setText("You reach for the coat, pulling it off the hanger." +
+                " It’s a cold autumn night, and considering how far this mansion is from any people, " +
+                "you’re sure that it’s going to be a long walk in the fridged air before you can find help, " +
+                "so you figure it’s best if you put it on. It’s a little tight in the shoulders, but on the whole it doesn’t fit too badly.\n\n");
+        ui.choice1.setText("Put on the shoes");
+        ui.choice2.setText("Leave Closet");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-        game.position1 = "LeaveCloset";
-        game.position2= "";
+        game.position1 = "Shoes";
+        game.position2= "LeaveCloset";
         game.position3 = "";
         game.position4 = "";
     }
@@ -1056,82 +1061,106 @@ public class Story {
     */
     //Leave Closet
     public void LeaveCloset() {
-        ui.mainTextArea.setText("You take one last glance at the nearly empty closet before turning back to the room. \\n\\n");
-        ui.choice1.setText(">>>");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
+        ui.mainTextArea.setText("You take one last glance at the nearly empty closet before turning back to the room. \n\n");
+        ui.choice1.setText("Search his desk");
+        ui.choice2.setText("Search his bed");
+        ui.choice3.setText("Leave the room");
         ui.choice4.setText("");
 
 
         game.position1 = "SearchDesk";
-        game.position2= "";
-        game.position3 = "";
+        game.position2= "SearchBed";
+        game.position3 = "LeaveRoom";
         game.position4 = "";
     }
 
     //Search desk
     public void SearchDesk() {
-        ui.mainTextArea.setText("You walk to the desk and glance over its surface. It’s one of the only parts of the room that’s relatively blood-free, save for a drop or two scattered at one corner.There’s a pen holder and a lamp, and a few un-marked scraps of paper. In the center is a book:" +
+        ui.mainTextArea.setText("You walk to the desk and glance over its surface. It’s one of the only parts of the room that’s relatively blood-free, " +
+                "save for a drop or two scattered at one corner.There’s a pen holder and a lamp, and a few un-marked scraps of paper. In the center is a book:" +
                 " a copy of  Shakespeare’s Much Ado about Nothing. However, you’ve read Much Ado About Nothing, " +
-                "and this copy is much thicker than it should be.\n\nBeside it sits a polaroid picture with a date written on the bottom.\n\n");
-        ui.choice1.setText("Examine book");
+                "and this copy is much thicker than it should be.\n\n" +
+                "Beside it sits a polaroid picture with a date written on the bottom.\n\n");
+        ui.choice1.setText("Examine the book");
         ui.choice2.setText("Examine the picture");
         ui.choice3.setText("Leave desk");
-        ui.choice4.setText("Leave room");
+        ui.choice4.setText("");
 
 
         game.position1 = "ExamineBook";
         game.position2= "ExaminePicture";
         game.position3 = "LeaveDesk";
-        game.position4 = "LeaveRoom";
+        game.position4 = "";
     }
     //Examine the book (room4)
     public void ExamineBook() {
-        ui.mainTextArea.setText("You pick up the book, glancing over the dust jacket before gently opening it. You expect to see a title page for Much Ado About Nothing, but as you open to the first page, instead you find something completely different. \\n\\n\n" +
-                "Incantations and Unbinding: How to Undo What’s Been Done is scrawled across the page in a decorative font, and as you hold it, the dust jacket slips from the front cover, revealing the same title in gilded lettering on the cover of the book.\\n\\n\n" +
-                "Your curiosity piqued, you begin to flip through the pages. Some of them have corners folded over, or bits underlined as if to mark the things that Mallory must have thought to be important. All of them seem to pertain to reversing immortality. Little notes written in the margins ask questions and make statements:\\n\\n\n" +
-                " “Does he have to participate??”\\n\\n\n" +
-                "“Blood needed”\\n\\n\n" +
-                "“Bad idea - last resort”\\n\\n\n" +
-                "“House bound to him?????”\\n\\n\n" +
-                "And so on.\\n\\n\n" +
-                "The book seems to take itself rather seriously and is almost written in the style of a textbook in some places, dealing with a different spell or ritual every few pages. On its own, you might have simply taken it as a piece of fan material for a series or tabletop game, but the fact that Mallory took it so seriously concerns you. Though you’ve only been here a few days, you know that he didn’t have time for hobbies or fandoms. \\n\\n\n" +
-                "Did the old man really harm him that much? Was he that far gone to have to start believing in spells and immortality to cope with his situation? He’d never struck you as someone losing his grip on reality, but you figure a lot can happen behind closed doors. \\n\\n\n" +
-                "There seems to be a great deal in the book about removing one’s soul and tricking the body into thinking it’s still there, whatever that means. \\n\\n\n" +
-                "One passage underlined rather intensely in pen reads, “There is no way to reverse soullessness once it has been done. The soulless will live on as long as the individual can find sustenance in the mortal realm. The only way that one who has begun to draw life from below the metaphysical plane can perish while still well-nourished is if the immortal body is killed within a day after it has fed. It is weakest as it draws lifeforce from its meals, and only then can the body be jolted into ‘realizing’ there is no soul sustaining it.” \\n\\n\n" +
-                "Written beside this passage are simply the words, “Next time?”\\n\\n\n" +
+        ui.mainTextArea.setText("You pick up the book, glancing over the dust jacket before gently opening it." +
+                " You expect to see a title page for Much Ado About Nothing, but as you open to the first page, instead you find something completely different. \n\n" +
+                "\"Incantations and Unbinding: How to Undo What’s Been Done\" is scrawled across the page in a decorative font, and as you hold it, " +
+                "the dust jacket slips from the front cover, revealing the same title in gilded lettering on the cover of the book.\n\n" +
+                "Your curiosity piqued, you begin to flip through the pages. Some of them have corners folded over, " +
+                "or bits underlined as if to mark the things that Mallory must have thought to be important. All of them seem to pertain to reversing immortality." +
+                " Little notes written in the margins ask questions and make statements:\n\n" +
+                " “Does he have to participate??”\n\n" +
+                "“Blood needed”\n\n" +
+                "“Bad idea - last resort”\n\n" +
+                "“House bound to him?????”\n\n" +
+                "And so on.\n\n" +
+                "The book seems to take itself rather seriously and is almost written in the style of a textbook in some places," +
+                " dealing with a different spell or ritual every few pages. On its own, you might have simply taken it as a piece of fan material" +
+                " for a series or tabletop game, but the fact that Mallory took it so seriously concerns you. Though you’ve only been here a few days, " +
+                "you know that he didn’t have time for hobbies or fandoms. \n\n" +
+                "Did the old man really harm him that much? " +
+                "Was he that far gone to have to start believing in spells and immortality to cope with his situation? " +
+                "He’d never struck you as someone losing his grip on reality, but you figure a lot can happen behind closed doors. \n\n" +
+                "There seems to be a great deal in the book about removing one’s soul and tricking the body into thinking it’s still there, whatever that means. \n\n" +
+                "One passage underlined rather intensely in pen reads, " +
+                "“There is no way to reverse soullessness once it has been done. The soulless will live on as long as the individual can find sustenance in the mortal realm. " +
+                "The only way that one who has begun to draw life from below the metaphysical plane can perish while still well-nourished is if the immortal body is killed within" +
+                " a day after it has fed. It is weakest as it draws lifeforce from its meals, and only then can the body be jolted into ‘realizing’ there is no soul sustaining it.” \n\n" +
+                "Written beside this passage are simply the words, “Next time?”\n\n" +
                 "Shaking your head, you close the book, fold the dust jacket back over the cover, " +
-                "and place it back on the desk.\\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
+                "and place it back on the desk.\n\n");
+        ui.choice1.setText("Examine the picture");
+        ui.choice2.setText("Leave desk");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
 
         game.position1 = "ExaminePicture";
-        game.position2= "";
+        game.position2= "LeaveDesk";
         game.position3 = "";
         game.position4 = "";
     }
 
     //Examine the picture
     public void ExaminePicture() {
-        ui.mainTextArea.setText("You pick up the polaroid and glance at the date. July 24, 2017. It’s a picture of Mallory standing with a group of people who you assume to be relatives at a beach somewhere. But he looks...different. His hair is shorter, and his frame is filled out more healthfully than it ever had been in the time you’d known him. The deep, chasmous dark circles beneath his eyes are lighter here - almost nonexistent on his semi-sunburnt face. He’s smiling in a way that you’ve never seen before, almost as if he’s laughing at something behind the camera.\\n\\n\n" +
+        ui.mainTextArea.setText("You pick up the polaroid and glance at the date. July 24, 2017. " +
+                "It’s a picture of Mallory standing with a group of people who you assume to be relatives at a beach somewhere. " +
+                "But he looks...different. His hair is shorter, and his frame is filled out more healthfully than it ever had been in the time you’d known him." +
+                " The deep, chasmous dark circles beneath his eyes are lighter here - almost nonexistent on his semi-sunburnt face." +
+                " He’s smiling in a way that you’ve never seen before, almost as if he’s laughing at something behind the camera.\n\n" +
                 "You realize you’d never seen him genuinely laugh.\n\n" +
-                "A middle-aged woman stands grinning beside him with an arm placed playfully around his shoulders, and sitting in the sand at his feet is a little blonde girl who couldn’t be older than 10 or 11. She’s also clearly laughing, her hands packed with fistfulls of sand.\\n\\n\n" +
-                "You feel tears begin to well up in your eyes as you stare at the polaroid. He had a family once. People who loved him. At least that’s what it looks like in the picture. What happened to him that made him land here, of all places? That made him die here? Would his family even know that he was gone?\\n\\n \n" +
+                "A middle-aged woman stands grinning beside him with an arm placed playfully around his shoulders," +
+                " and sitting in the sand at his feet is a little blonde girl who couldn’t be older than 10 or 11. " +
+                "She’s also clearly laughing, her hands packed with fistfulls of sand.\n\n" +
+                "You feel tears begin to well up in your eyes as you stare at the polaroid. He had a family once." +
+                " People who loved him. At least that’s what it looks like in the picture. " +
+                "What happened to him that made him land here, of all places? That made him die here?" +
+                " Would his family even know that he was gone?\n\n" +
                 "Would they care?\n\n" +
-                "You draw in a shaky breath as your vision blurs with tears that threaten to spill over. You quickly put down the polaroid and wipe your eyes. You don’t have time to be getting emotional right now. \\n\\n\n" +
+                "You draw in a shaky breath as your vision blurs with tears that threaten to spill over. " +
+                "You quickly put down the polaroid and wipe your eyes. You don’t have time to be getting emotional right now.\n\n" +
                 "Still, you can’t help but hazard one last lingering glance at the photo." +
-                " You wish he could have seen them again.\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
+                " You wish he could have seen them again.\n\n");
+        ui.choice1.setText("Examine the book");
+        ui.choice2.setText("Leave desk");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
 
-        game.position1 = "LeaveDesk";
-        game.position2= "";
+        game.position1 = "ExamineBook";
+        game.position2= "LeaveDesk";
         game.position3 = "";
         game.position4 = "";
     }
