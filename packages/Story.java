@@ -1,7 +1,4 @@
 package packages;
-
-
-
 import java.io.File;
 
 public class Story {
@@ -26,9 +23,7 @@ public class Story {
         littleBook = false;
     }
 
-
-
-   // choosePosition is receiving the parameter(position)
+    // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
     public void choosePosition(String position){
         switch(position){
@@ -67,8 +62,8 @@ public class Story {
             case "SearchBed": SearchBed(); break;
             case "SearchCloset": SearchCloset(); break;
             case "Shoes": Shoes();break;
-          //  case "PutOnShoes": PutOnShoes(); break;
-          //  case "NotPutOnShoes": NotPutOnShoes();break;
+            //case "PutOnShoes": PutOnShoes(); break;
+            //case "NotPutOnShoes": NotPutOnShoes();break;
             case "Coat": Coat(); break;
             //case "PutOnCoat": PutOnCoat(); break;
             //case "NotPutOnCoat": NotPutOnCoat();break;
@@ -130,8 +125,6 @@ public class Story {
             case "StandThere": StandThere();break;
             case "ClimbBookshelf": ClimbBookshelf();break;
             case "UseLetterOpener":UseLetterOpener(); break;
-
-
         }
 
     }
@@ -154,15 +147,13 @@ public class Story {
                 "button to continue reading.\n\nThe one graphic you do get to reap the benefits of is a map. " +
                 "You can pull up this map during given opportunities by pressing the \"map\" button.\n\n" +
                 "We hope you enjoy, good luck, and don’t kick the cat.");
-        ui.choice1.setText("Begin the game");
-        ui.choice2.setText("Exit the game");
+        ui.choice1.setText("Begin");
+        ui.choice2.setText("Exit");
         ui.choice3.setText("");
         ui.choice4.setText("");
         ui.choice5.setText("");
 
-
-
-        //after displaying these text... we are going to set a parameter for each bottom
+        //after displaying this text... we are going to set a parameter for each bottom
         //declared in Game class
         //access game class
         //Tell the program what is the next position
@@ -171,8 +162,21 @@ public class Story {
         game.position2= "ExitGame";
         game.position3 = "";
         game.position4 = "";
-
     }
+
+    public void ExitGame(){
+        ui.mainTextArea.setText("You may now close this window.");
+        ui.choice1.setText("");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+    }
+
     public void towardsMansion(){
         ui.mainTextArea.setText("Welcome! The man’s hand feels heavy on your back as you are guided up the driveway " +
                 "against your better judgement. A large mansion  - which you’re quite sure is the only " +
@@ -203,24 +207,8 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
 
-
         game.position1 = "GoInsideMansion";
         game.position2= "leaveMansion";
-        game.position3 = "";
-        game.position4 = "";
-
-    }
-
-    public void ExitGame(){
-
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-
-        game.position1 = "toTheMansion";
-        game.position2= "";
         game.position3 = "";
         game.position4 = "";
     }
