@@ -16,7 +16,7 @@ public class Game {
     }
 
     public Game() {
-        // Game calls this createUI(handlder) method then call st.showTiltleScreen()
+        // Game calls this createUI(handler) method then call st.showTitleScreen()
         ui.createUI(handler);
         st.defaultSetup(); // calling default set up in Story class
         m.showTitleScreen();

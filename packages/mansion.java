@@ -125,7 +125,8 @@ public class mansion {
                         "\"And the bodies, of course.\" He stops a moment, staring at you rather intensely. \n\n" +
                         "Shit. Was that a joke or a threat?\n\n" +
                         "The silence is broken with a hearty laugh from the old man, which you hesitantly join.\n\n" +
-                        "\"I apologize,\" the old man says, still laughing, \"My humor is sometimes...A bit crass.\" \n\n" +
+                        "\"I apologize,\" the old man says, still laughing, \"My humor is sometimes... " +
+                        "A bit crass.\" \n\n" +
                         "He continues to chuckle to himself as you hazard a glance down the stairs. There " +
                         "appears to be a shiny puddle of something at the bottom, but the base of the " +
                         "steps is too dark to \nsee what it is. It's probably just water, you tell yourself; " +
@@ -242,7 +243,7 @@ public class mansion {
                         "glances at Mallory before seeming to return to the conversation, \"It's a pleasure " +
                         "to have you here. \nI can't wait to show you the ropes.\"\n\n");
             }
-            else if(choice >= 2){ //dont shake
+            else if(choice >= 2){ //don't shake
                 System.out.println("You glance apologetically at the butler's hand, not entirely willing " +
                         "to shake it. He holds his hand out for a moment longer, but after a tight-lipped " +
                         "nod from you, he realizes that \nyou're not going to shake it and instead " +
@@ -563,7 +564,7 @@ public class mansion {
                 room9Fight();
             }
         } else if (choice == 2) { //coffee table
-            System.out.println("You find a lette opener amongst other things.\n" +
+            System.out.println("You find a letter opener amongst other things.\n" +
                     "What do you do with it?");
             System.out.println("1 - Slide it into your pocket.\n" +
                     "2 - Leave it.");
@@ -952,7 +953,7 @@ public class mansion {
             System.out.println("Step over bodies, try door, sorcerer comes down, " +
                     "you hear him come down, your body turns against your will, and " +
                     "you're looking right at him from across the cellar");
-            System.out.println("[villian monologue??]");
+            System.out.println("[villain monologue??]");
             if (you.getMatches() == true) {
                 matchesCellar();
             } else if (you.getPetCat() == true) {
@@ -1042,7 +1043,7 @@ public class mansion {
                 "his lips as if to say \"shush\".\n" +
                 "Butler snaps old man's neck\n" +
                 "Old man crumples to floor, boards on door behind you fall down.\n" +
-                "Butler looks at you with a combination of sadness and triumph, weaky " +
+                "Butler looks at you with a combination of sadness and triumph, weakly " +
                 "tells you to go before the whole place collapses, falls to his knees " +
                 "then into bodies, dies.\n" +
                 "Hear floorboards breaking and start to fall in.\n" +
