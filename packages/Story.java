@@ -659,7 +659,7 @@ public class Story {
                 "You watch as Mallory finishes setting the table," + " and a man with white gloves walks out from the kitchen," +
                 "seemingly to check that things are going smoothly. \n\n" +
                 "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash " +
-                "for a moment with an emotion that is covered up too quickly \nto read, and instead he flashes you a smile, 'I’m sorry, " +
+                "for a moment with an emotion that is covered up too quickly to read, and instead he flashes you a smile, 'I’m sorry, " +
                 "I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n\n" +
                 "He smiles, extending a hand for you to shake.\n\nWhat do you do?");
 
@@ -675,21 +675,24 @@ public class Story {
     }
     public void awkMoment() {
         ui.mainTextArea.setText("You stand there in a thick silence, neither of you moving to speak. After a moment, you watch as Mallory goes back " +
-                "to setting the table. He doesn’t move the way you expect him to. \nEvery gesture he makes is stiff, and even jerky at times. The " +
-                "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but \nhis actions" +
-                " almost remind you of a deftly-controlled marionette without the strings. You chide yourself for the comparison. " +
-                "He’s probably just tired. \n\nYou watch as Mallory finishes setting the table, and a man with white gloves walks out from the kitchen, seemingly to check that things are going smoothly. \n" +
-                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash for a moment with an emotion that is covered up too quickly \n" +
-                "to read, and instead he flashes you a smile, 'I’m sorry, I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n" +
-                "He smiles, extending a hand for you to shake.\n" +
-                " What do you do?");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
+                "to setting the table. He doesn’t move the way you expect him to. " +
+                "\n\nEvery gesture he makes is stiff, and even jerky at times. The " +
+                "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but his actions" +
+                " almost remind you of a deftly-controlled marionette without the strings. \n\n" +
+                "You chide yourself for the comparison. " +
+                "He’s probably just tired. \n\n" +
+                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from the kitchen, seemingly to check that things are going smoothly. \n\n" +
+                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash for a moment with an emotion that is covered up too quickly" +
+                "to read, and instead he flashes you a smile, \"I’m sorry, I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.\"\n" +
+                "He smiles, extending a hand for you to shake.\n\n" +
+                "Do you shake his hand?\n\n");
+        ui.choice1.setText("Shake his hand");
+        ui.choice2.setText("Don't shake his hand");
         ui.choice3.setText("");
         ui.choice4.setText("");
 
         game.position1 = "shakeHand";
-        game.position2= "";
+        game.position2= "noShakeHand";
         game.position3 = "";
         game.position4 = "";
     }
