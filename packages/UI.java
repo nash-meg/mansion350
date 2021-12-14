@@ -52,12 +52,12 @@ public class UI {
 
         // panel area that holds the main text message
         mainText = new JPanel();
-        mainText.setBounds(100, 75, 600, 700);
+        mainText.setBounds(100, 75, 650, 700);
         mainText.setBackground(Color.black);
         gameWindow.add(mainText);
         // this is for the main text message that display on the panel area
         mainTextArea = new JTextArea("This is the main text area. This game is going to be great. I'm sure of it.");
-        mainTextArea.setBounds(25, 200, 600, 450);
+        mainTextArea.setBounds(25, 200, 650, 450);
         mainTextArea.setBackground(Color.black);
         mainTextArea.setForeground(Color.white);
         mainTextArea.setFont(font);
