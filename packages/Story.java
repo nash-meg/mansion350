@@ -159,15 +159,11 @@ public class Story {
         ui.choice4.setText("");
         ui.choice5.setText("");
 
-        //after displaying this text... we are going to set a parameter for each bottom
-        //declared in Game class
-        //access game class
-        //Tell the program what is the next position
-
         game.position1 = "towardsMansion"; //Continue to game
-        game.position2= "ExitGame";
+        game.position2 = "ExitGame";
         game.position3 = "";
         game.position4 = "";
+        game.position5 = "";
     }
 
     public void ExitGame(){
@@ -176,35 +172,36 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "";
-        game.position2= "";
+        game.position2 = "";
         game.position3 = "";
         game.position4 = "";
+        game.position5 = "";
     }
 
     public void towardsMansion(){
-        ui.mainTextArea.setText("Welcome! The man’s hand feels heavy on your back as you are guided up the driveway " +
-                "against your better judgement. A large mansion  - which you’re quite sure is the only " +
-                "dwelling for miles in this area - looms before you, decorated impeccably for " +
-                "Halloween. Cornstalks lean up against the pillars supporting the upper balconies, " +
-                "pumpkins and hay bales are scattered tastefully over the front porch, and a black " +
-                "cat sits somewhat ominously in the window by the door - though you’re sure that the " +
-                "cat is more of a year-round affair.\n\n" +
+        ui.mainTextArea.setText("The man's hand feels heavy on your back as you are guided up the driveway " +
+                "against your better judgement.\n\n" +
+                "A large mansion (which you're quite sure is the only dwelling for miles) looms before you, " +
+                "decorated impeccably for Halloween. Cornstalks lean up against the pillars supporting the " +
+                "upper balconies, pumpkins and hay bales are scattered tastefully over the front porch, " +
+                "and a black cat sits somewhat ominously in the window by the door (though you're sure that " +
+                "the cat is more of a year-round affair).\n\n" +
                 "You stop a moment, simply staring and struggling to take in the fact that this is all " +
                 "real. Less than an hour ago, you had been on the streets, trying to scrounge whatever " +
-                "money you could to save up for a proper coat for the coming winter. Less than an " +
-                "hour ago, an old man whose name you still don’t know had offered you a job and " +
-                "housing with the only condition being that you came to live with him in his " +
-                "\"humble manor,\" as he had called it. Less than an hour ago, against your better " +
-                "judgement and with nothing but your life to lose, you had said yes. \n\n" +
-                "You’re not sure why you’d said yes. You know that you’re what they call \"high risk\". " +
+                "money you could to save up for a proper coat for the coming winter. Less than an hour " +
+                "ago, an old man whose name you still don't know had offered you a job with the only " +
+                "condition being that you came to live with him in his \"humble manor,\" as he had called " +
+                "it. Less than an hour ago, against your better judgement and with nothing but your life to " +
+                "lose, you had said yes. \n\n" +
+                "You're not sure why you'd said yes. You know that you're what they call \"high risk\". " +
                 "You know that a man like this has the money to cover up your disappearance if it gets " +
-                "noticed. Hell, when you’d asked his name, the man had simply stated, \"Names are " +
-                "unimportant,\" before ushering you into his car. But something deep within you," +
-                " a gut feeling , told you that this was the right move, and that " +
-                "going with him wouldn't be so bad.\n\n" +
-                "\"It’s beautiful, isn’t it?\" The old man’s question snaps you back to the present. \n\n" +
+                "noticed. Hell, when you'd asked his name, the man had simply stated, \"Names are " +
+                "unimportant,\" before ushering you into his car. But something deep within you, a gut " +
+                "feeling , told you that this was the right move, and that going with him wouldn't be so bad.\n\n" +
+                "\"It's beautiful, isn't it?\" The old man's question snaps you back to the present. \n\n" +
                 "\"Yes,\" you mutter quietly, too awestruck to properly compliment the place.\n\n" +
                 "The old man smiles, \"Welcome to Huxley Manor,\" he says with a sweeping gesture before " +
                 "guiding you to the thick oaken front door.\n\n");
@@ -212,16 +209,25 @@ public class Story {
         ui.choice2.setText("Leave");
         ui.choice3.setText("");
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "GoInsideMansion";
         game.position2= "leaveMansion";
-        game.position3 = "";
-        game.position4 = "";
+    }
+
+    public void leaveMansion(){
+        ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+
+        game.position1 = "GoInsideMansion";
     }
 
     public void GoInsideMansion(){
-        ui.mainTextArea.setText("The old man claps twice and the doors slowly creak open to reveal an ornate "
-                + "hallway with beautiful vintage-looking wallpaper and dark wooden floors. \n\nAs he guides you "
+        ui.mainTextArea.setText("The old man claps twice and the doors slowly creak open to reveal an ornate " +
+                "hallway with beautiful vintage-looking wallpaper and dark wooden floors. \n\nAs he guides you "
                 + "through, you notice dozens of oil paintings, all of which look to be extremely old. A"
                 + "painting of a man in what looks to be renaissance garb, staring intensely outward with long black hair catches your eye."
                 + "\n\nThe cat brushes past you, pulling your attention away from the painting, and you look down "
@@ -240,20 +246,7 @@ public class Story {
         game.position4 = "";
 
     }
-    public void leaveMansion(){
-        ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
 
-
-        game.position1 = "GoInsideMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-
-    }
     public void painting(){
         ui.mainTextArea.setText("The old man smiles as he turns to the portrait, an odd sentimentality washing " +
                 "over him.\n\n" +
