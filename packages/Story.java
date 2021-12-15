@@ -307,16 +307,17 @@ public class Story {
                 "He smiles, extending a hand for you to shake.\n\n" +
                 "Do you shake his hand?\n\n" +
                 "What do you do? \n\n");
-        ui.choice1.setText("Shake his hand");
-        ui.choice2.setText("Don't shake his hand");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "shakeHand";
-        game.position2= "noShakeHand";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Shake his hand");
+        ui.choice5.setText("Don't shake his hand");
+
+        game.position4 = "shakeHand";
+        game.position5 = "noShakeHand";
     }
     public void shakeHand(){
         ui.mainTextArea.setText("You accept the handshake to find that the butler’s grasp is much firmer than you expected. He didn't " +
@@ -338,16 +339,17 @@ public class Story {
                 "After a moment, he and the old man emerge with various steaming plates making up an extravagant meal, all of which are arranged on the table. The butler pulls out" +
                 "a chair for the old man, and Mallory sits across from him. Then, the butler gestures for you to sit, seemingly allowing you to choose your spot.\n\n" +
                 "Where would you like to sit?\n\n");
-        ui.choice1.setText("Sit next to the old man");
-        ui.choice2.setText("Sit next to Mallory");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "sitNxtToOldman";
-        game.position2= "sitNxtMallory";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Sit next to the old man");
+        ui.choice5.setText("Sit next to Mallory");
+
+        game.position4 = "sitNxtToOldman";
+        game.position5 = "sitNxtMallory";
     }
     public void sitNxtToOldman(){
         ui.mainTextArea.setText("The butler stays off to the side as you take up a seat next to the old man, who flashes" +
@@ -379,16 +381,16 @@ public class Story {
                 "After that, he says goodnight, and you open the door to your room. It’s small, but comfortable, with a desk on one wall, a bed on the other, and beside that, a closet. A few tears " +
                 "come to your eyes as you realize you’ll be sleeping in a proper bed tonight. You change into a set of pajamas folded neatly atop the bed and crawl beneath the covers.\n\n" +
                 "What would you like to do?\n");
-        ui.choice1.setText("Go to sleep");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "goToSleep";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText("Go to sleep");
+        //TODO QUESTION ????? DO WE WANT READ A BOOK HERE TOO????
+
+        game.position5 = "goToSleep";
     }
 
     public void goToSleep(){
@@ -403,16 +405,17 @@ public class Story {
                         " There are tears in his eyes, and he seems to take a moment to gather himself before speaking.\n\n" +
                         "\"I'll miss you when we’re finally on our feet.\" is all he says. \n\n" +
                 "How do you respond?");
-        ui.choice1.setText("Tell him you'll miss him too");
-        ui.choice2.setText("Stay silent");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "WillMissYouToo";
-        game.position2= "StaySilent";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Tell him you'll miss him too");
+        ui.choice5.setText("Stay silent");
+
+        game.position4 = "WillMissYouToo";
+        game.position5 = "StaySilent";
     }
     public void WillMissYouToo(){
         ui.mainTextArea.setText("You nod, taking hold of his hand, \"I’ll miss you too.\" \n\n" +
@@ -426,16 +429,17 @@ public class Story {
                 "You shake your head. You’re sure he’s fine.\n\n" +
                 "Too tired to think about it now, you go" +
                 "into your room and prepare to go to sleep.\n\n");
-        ui.choice1.setText("Go right to sleep ");
-        ui.choice2.setText("Read a book to distract yourself");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "goRightToSleep";
-        game.position2= "readBook";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Go right to sleep");
+        ui.choice5.setText("Read a book to distract yourself");
+
+        game.position4 = "goRightToSleep";
+        game.position5 = "readBook";
     }
     public void StaySilent(){
         ui.mainTextArea.setText("He waits a moment, seemingly expecting you to say something, but when you don’t respond, he nods and seems to give you an understanding smile. \n\n" +
@@ -445,17 +449,17 @@ public class Story {
                 "Does he plan on-\n\n" +
                 "You shake your head. You’re sure he’s fine. \n\n" +
                 "Too tired to think about it now, you go into your room and prepare to go to sleep.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        ui.choice1.setText("Go right to sleep ");
-        ui.choice2.setText("Read a book to distract yourself");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice4.setText("Go right to sleep");
+        ui.choice5.setText("Read a book to distract yourself");
 
-        game.position1 = "goRightToSleep";
-        game.position2= "readBook";
-        game.position3 = "";
-        game.position4 = "";
+        game.position4 = "goRightToSleep";
+        game.position5 = "readBook";
     }
 
     public void goRightToSleep() {
@@ -463,17 +467,15 @@ public class Story {
                 "He’s been fine since the day you got there, and you tell yourself there’s nothing to worry about." +
                 " Besides, if there is anything happening with Mallory, it’s nothing that can’t wait til morning. " +
                 "With that, you close your eyes and attempt to get some rest.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice5.setText(">");
 
-        game.position1 = "Murder";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
+        game.position5 = "Murder";
     }
     public void readBook() {
         ui.mainTextArea.setText("You sigh, picking up a match - the last one in the pack - and lighting a candle on your bedside table." +
@@ -484,17 +486,15 @@ public class Story {
                 "You’re still worried about Mallory, but Stoker’s writing allows you to get sucked into the novel enough to shift your focus for a while," +
                 " for which you’re rather grateful. Eventually, as you finish chapter 4, you feel your eyes begin to droop, and blowing out the candle," +
                 " you allow yourself to begin to drift off to sleep.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice5.setText(">");
 
-        game.position1 = "Murder";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
+        game.position5 = "Murder";
     }
     public void Murder() {
         ui.mainTextArea.setText("A hysterically panicked scream from across the hall lurches you awake, and before you know it, " +
@@ -515,16 +515,19 @@ public class Story {
                 "The old man locks eyes with you, the animalistic thrill within them fading for a moment back to his usual passively pleasant demeanor, " +
                 "\"Go back to bed,\" he says sweetly, \"It’s late.\"" +
                 "\n\nWhat do you want to do?");
-        ui.choice1.setText("Go back to bed");
-        ui.choice2.setText("Charge at the old man");
-        ui.choice3.setText("Stand there and do nothing");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "backToBed";
-        game.position2= "AttackOldMan";
-        game.position3 = "startPlot";
-        game.position4 = "";
+        ui.choice3.setText("Go back to bed");
+        ui.choice4.setText("Charge at the old man");
+        ui.choice5.setText("Stand there and do nothing");
+
+        game.position3 = "backToBed";
+        game.position4 = "AttackOldMan";
+        game.position5 = "startPlot";
     }
     public void backToBed() {
         ui.mainTextArea.setText("You stand there a moment, looking from the old man, to Mallory, then back again.\n\n " +
@@ -535,56 +538,53 @@ public class Story {
                 "Out of the corner of your eye, " +
                 "you see him abruptly extend his free hand, and though he’s several feet away, you are thrown violently forward into your room, " +
                 "and the door slams shut behind you.\n\n");
-        ui.choice1.setText(" > ");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room1";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room1";
     }
 
     public void AttackOldMan() {
         ui.mainTextArea.setText("You stare at the old man in disbelief, rage and disgust bubbling up through your veins as you process what he’s just said. " +
-                "He may well have just murdered someone and he wants to \"go back to bed\" as if nothing happened?\n\n No. You can’t do that.\n\n" +
+                "He may well have just murdered someone and he wants you to \"go back to bed\" as if nothing happened?\n\n No. You can’t do that.\n\n" +
                 "In one swift motion, you reach down and pick up the heavy object once more, charging the old man with all your might. \n\n" +
                 "You don’t care if you’ll win. If you don’t try, you’ll never forgive yourself. \n\n" +
                 "The old man simply chuckles, lazily extending his free hand. You’re barely able to take a step when an invisible force suddenly pushes you backwards.\n\n" +
                 " It feels as though a battering ram has been shoved into your chest as your feet leave the ground and" +
                 "you’re hurled back into your bedroom, the door slamming shut behind you.\n\n" );
-        ui.choice1.setText(" > ");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room1";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room1";
     }
     public void standStill() {
         ui.mainTextArea.setText("You simply stand there, frozen in shock as you try and process the scene before you. " +
                 "This is the old man who asked you to help him up the stairs earlier this week. He took you in. He took you both in, and now- \n\n" +
                 "Where is the butler? Did he know? Or did he simply not hear Mallory’s screams?\n\n " +
-                "\"Go. To bed.\" The old man’s voice is lower now, and clearly holds a threat." +
+                "\"Go. To. Bed.\" The old man’s voice is lower now, and clearly holds a threat." +
                 " You know you should follow his instructions, or if not that, at least try to stop him, but you just… can’t. \n\n" +
                 "Your feet are frozen in place and you can’t seem to take your eyes off of poor Mallory’s blood-soaked body as he gasps for what may be his final breaths.\n\n" +
                 "The old man scoffs, extending his free arm. Suddenly, an invisible force slams into you, " +
                 "sending you crashing backwards into your room as the door slams violently shut.\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room1";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room1";
     }
 
     public void startPlot() {
