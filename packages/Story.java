@@ -1475,17 +1475,17 @@ public class Story {
         game.position5 = "ExamineCoffeeTable";
     }
     public void LeaveBook(){
-        ui.mainTextArea.setText("Too bad! You might it.\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("Too bad! You might need it.\n\n");
 
-        game.position1 = "ExamineCoffeeTable";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "ExamineCoffeeTable";
     }
     //Examine the coffee table
     public void ExamineCoffeeTable() {
@@ -1493,106 +1493,137 @@ public class Story {
                 "Hesitantly, you push the papers aside to reveal a small ornate letter opener. It’s clearly very old, and its design sits happily on the border between letter opener and plain old tiny knife, but it seems to have found its purpose opening letters for the old man. \\n\\n\n" +
                 "As you look at it, you can’t help but wonder whether you should take it with you. It definitely could be used as a weapon if push came to shove, but a part of you wonders if you would be more effective just sticking to your fists. \\n\\n\n" +
                 "Do you take the letter opener?\\n\\n\n");
-        ui.choice1.setText("Take the letter opener");
-        ui.choice2.setText("Leave it there");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "letterOpener";
-        game.position2= "leaveLetterOpener";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Take the letter opener");
+        ui.choice5.setText("Leave it there");
+
+        game.position4 = "letterOpener";
+        game.position5 = "leaveLetterOpener";
     }
     public void letterOpener() {
         ui.mainTextArea.setText("Put in pocket");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "ExamineFireplace";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "ExamineFireplace";
     }
 
     public void leaveLetterOpener() {
-        ui.mainTextArea.setText("Too bad! You might it");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("Too bad! You might need it");
 
-        game.position1 = "ExamineFireplace";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "ExamineFireplace";
     }
     //Examine the fireplace
     public void ExamineFireplace() {
-        ui.mainTextArea.setText("You walk to the fireplace and survey the ornate black marble surrounding it. Intricate carvings of vines and flowers wrap around the pillars on the outside in patterns closely resembling that of lightning. Closer to center there is a small arch carved with breathtaking precision into what seems to be vines covered in thousands of tiny thorns, many of them nearly looking as though you might actually be cut if you touched them. \\n\\n\n" +
-                "You notice various scraps of burnt paper in the fireplace, though you find that they’re all too small and seared to properly glean what they might have been. \\n\\n\n" +
-                "Finally, you turn your attention to the mantel. On either side are rather hefty-looking statues. Each depicts a gargoyle, one crouching and the other standing on its hind legs, both snarling out at the room. A small matchbox sits beside one of them. It’s open slightly, and you can see that there are still a few left in the pack. There’s a part of you that wants to snag them, just in case, but you’re not entirely sure what you’d use them for. There’s another part that doesn’t want to leave any more trace that you were here than you absolutely have to, in case the old man notices. You sigh, staring at the matches.\\n\\n\n" +
-                "Do you take them?\\n\\n\n");
-        ui.choice1.setText("Take matches\n");
-        ui.choice2.setText("Leave them there");
-        ui.choice3.setText("Go straight to fight scene");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("You walk to the fireplace and survey the ornate black marble surrounding it. " +
+                "Intricate carvings of vines and flowers wrap around the pillars on the outside in patterns " +
+                "closely resembling that of lightning. Closer to center there is a small arch carved with " +
+                "breathtaking precision into what seems to be vines covered in thousands of tiny thorns, many of " +
+                "them nearly looking as though you might actually be cut if you touched them. \n\n\n" +
+                "You notice various scraps of burnt paper in the fireplace, though you find that they’re all too " +
+                "small and seared to properly glean what they might have been. \n\n\n" +
+                "Finally, you turn your attention to the mantel. On either side are rather hefty-looking statues. " +
+                "Each depicts a gargoyle, one crouching and the other standing on its hind legs, both snarling out " +
+                "at the room. A small matchbox sits beside one of them. It’s open slightly, and you can see that " +
+                "there are still a few left in the pack. There’s a part of you that wants to snag them, just in " +
+                "case, but you’re not entirely sure what you’d use them for. There’s another part that doesn't " +
+                "want to leave any more trace that you were here than you absolutely have to, in case the old " +
+                "man notices. You sigh, staring at the matches.\n\n\n" +
+                "Do you take them?\n\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "TakeMatches";
-        game.position2= "LeaveThere";
-        game.position3 = "FightScene";
-        game.position4 = "";
+        ui.choice3.setText("Take matches\n");
+        ui.choice4.setText("Leave them there");
+        ui.choice5.setText("Go straight to fight scene"); //TODO is this the correct option??
+
+        game.position3 = "TakeMatches";
+        game.position4 = "LeaveThere";
+        game.position5 = "FightScene";
     }
     public void TakeMatches() {
         ui.mainTextArea.setText("You grab the matches and pocketed it");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "FightScene";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "FightScene";
     }
     public void LeaveThere() {
-        ui.mainTextArea.setText("Too bad! You might it");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("Too bad! You might need them");
 
-        game.position1 = "FightScene";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "FightScene";
     }
     //Fight scene in Room 9 before room 10:
     //Beginning of fight scene
     public void FightScene() {
-        ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar on the other side that’s different from the one you entered through. Before you can think too much about it, a noise from the cat draws your attention, and you turn to see it staring at you, twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an almost wave-like motion, its pelt rises and falls in places that it shouldn’t.\\n\\n\n" +
-                "You stare, your body frozen in place, as the cat’s bones begin to grow and its very body begins to stretch. Its wails deepen and become almost human-like as its hide disappears into pale, humanoid flesh. It unfolds itself, and for a moment, before you stands the butler, suit and all, staring at you in agony.\\n\\n\n" +
-                "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his muscles beneath continue to morph and contort. He pleads with you in a voice that’s only half his own, somehow mixed with a low, animalistic growl, “Run!”\\n\\n\n" +
-                "Just that single word seems to take a world of effort as he releases you and flails backwards, growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\\n\\n\n" +
-                "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\\n\\n\n" +
-                "What do you do?\\n\\n\n");
-        ui.choice1.setText("Duck down");
-        ui.choice2.setText("Jump out of the way");
-        ui.choice3.setText("Use letter opener "); //Use letter opener (if have)
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar " +
+                "on the other side that’s different from the one you entered through. Before you can think too much " +
+                "about it, a noise from the cat draws your attention, and you turn to see it staring at you, " +
+                "twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail " +
+                "and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an " +
+                "almost wave-like motion, its pelt rises and falls in places that it shouldn't.\n\n\n" +
+                "You stare, your body frozen in place, as the cat’s bones begin to grow and its very body begins " +
+                "to stretch. Its wails deepen and become almost human-like as its hide disappears into pale, " +
+                "humanoid flesh. It unfolds itself, and for a moment, before you stands the butler, suit and all, " +
+                "staring at you in agony.\n\n\n" +
+                "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his " +
+                "muscles beneath continue to morph and contort. He pleads with you in a voice that’s only half his " +
+                "own, somehow mixed with a low, animalistic growl, “Run!”\n\n\n" +
+                "Just that single word seems to take a world of effort as he releases you and flails backwards, " +
+                "growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\n\n\n" +
+                "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\n\n\n" +
+                "What do you do?\n\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "DuckingDown";
-        game.position2= "JumpOutWay";
-        game.position3 = "UseLetterOpener";
-        game.position4 = "";
+        ui.choice2.setText("Duck down");
+        ui.choice3.setText("Jump out of the way");
+        ui.choice4.setText("Use letter opener"); //Use letter opener (if have)
+        ui.choice5.setText("See map");
+
+        game.position2 = "DuckingDown";
+        game.position3 = "JumpOutWay";
+        game.position4 = "UseLetterOpener";
+        game.position5 = ""; //TODO add cant see map rn
     }
     //Duck down (pet cat)
     public void DuckingDown() {
@@ -1602,16 +1633,19 @@ public class Story {
                 "Just that single word seems to take a world of effort as he releases you and flails backwards, growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\\n\\n\n" +
                 "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\\n\\n\n" +
                 "What do you do?\\n\\n\n");
-        ui.choice1.setText("Watch helplessly "); //Duck down (pet cat);
-        ui.choice2.setText("Attempt to run"); //Duck down (kick cat)
-        ui.choice3.setText("Curl into a ball"); //Duck down (ignore cat)");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "watchHelplessly "; //End up on floor >>>Duck down (pet cat)
-        game.position2= "attemptToRun"; //Duck down (kick cat)
-        game.position3 = "curlInToABall "; //Duck down (ignore cat)
-        game.position4 = "";
+        ui.choice3.setText("Watch helplessly"); //Duck down (pet cat);
+        ui.choice4.setText("Attempt to run"); //Duck down (kick cat)
+        ui.choice5.setText("Curl up into a ball"); //Duck down (ignore cat)");
+
+        game.position3 = "watchHelplessly"; //End up on floor >>>Duck down (pet cat)
+        game.position4 = "attemptToRun"; //Duck down (kick cat)
+        game.position5 = "curlInToABall"; //Duck down (ignore cat)
     }
     //Duck down (pet cat)
     public void watchHelplessly() {
