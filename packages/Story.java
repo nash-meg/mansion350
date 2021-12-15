@@ -1,4 +1,5 @@
 package packages;
+import javax.swing.*;
 import java.io.File;
 
 public class Story {
@@ -7,6 +8,7 @@ public class Story {
     Game game;
     UI ui;
     map m;
+    //ImageIcon image;
     boolean shoes;
     boolean purpPotion;
     boolean  matches;
@@ -14,6 +16,7 @@ public class Story {
     boolean kick;
     boolean pet;
     boolean ignore;
+    private Object ImageIcon;
 
     // Constructor instantiate
     public Story(Game g,UI userInterface, map mDisplay){
@@ -28,6 +31,21 @@ public class Story {
         pet = false;
         ignore = false;
     }
+
+        ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon Cellar1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon Cellar2= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon Cellar3 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon Cellar4 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon Cellar5= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon HallBeforeRoom8 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon Hallway5a = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon Hallway5b = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon KitchenRoom11 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+        ImageIcon cannibalPlantRoom7 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+
 
     // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
@@ -783,6 +801,10 @@ public class Story {
 
     /*********** FLOOR ONE *************/
     public void room1() {
+        //ui.image = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
+        ui.ImageLabel.setIcon(Bedroom1);
+        //ui.ImageLabel.setIcon(null);
+
         ui.mainTextArea.setText("You sit there on the floor of your room, still processing what’s just happened." +
                 " There’s a sickening series of thumps and thuds as you assume the old man drags Mallory’s body down the stairs." +
                 " Part of you wants to sob, the other part wants to throw up, and a third prays that you’re dreaming. " +
@@ -796,10 +818,12 @@ public class Story {
         ui.choice4.setText("");
 
 
+
         game.position1 = "searchFloor";
         game.position2= "backSleep";
         game.position3 = "tryDoor";
         game.position4 = "";
+        ui.ImageLabel.setVisible(false);
     }
     //Try the door (leave)
     public void tryDoor() {
@@ -1520,6 +1544,9 @@ public class Story {
     //Fight scene in Room 9 before room 10:
     //Beginning of fight scene
     public void FightScene() {
+        ui.ImageLabel.setIcon(ui.image);
+        ui.image = new ImageIcon(".//mansion Game//Cat Fight(9).jpg");
+        ui.ImageLabel.setIcon(ui.image);
         ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar on the other side that’s different from the one you entered through. Before you can think too much about it, a noise from the cat draws your attention, and you turn to see it staring at you, twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an almost wave-like motion, its pelt rises and falls in places that it shouldn’t.\\n\\n\n" +
                 "You stare, your body frozen in place, as the cat’s bones begin to grow and its very body begins to stretch. Its wails deepen and become almost human-like as its hide disappears into pale, humanoid flesh. It unfolds itself, and for a moment, before you stands the butler, suit and all, staring at you in agony.\\n\\n\n" +
                 "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his muscles beneath continue to morph and contort. He pleads with you in a voice that’s only half his own, somehow mixed with a low, animalistic growl, “Run!”\\n\\n\n" +

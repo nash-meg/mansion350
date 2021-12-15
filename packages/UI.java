@@ -4,16 +4,20 @@ import javax.swing.*;
 import java.awt.*;
 
 public class UI {
+
     JFrame gameWindow;
+
+
+
     JButton startButton, choice1, choice2, choice3, choice4, choice5;
     JTextArea mainTextArea;
-    JPanel titleName , startingButton, mainText, chooseButton, playerPanel;
-    JLabel titleLabel, weapon, weaponName;
+    JPanel titleName , startingButton, mainText, chooseButton, ImagePanel;
+    JLabel titleLabel, ImageLabel;
     Font titleFont = new Font("MS Gothic", Font.BOLD,50);
     Font subFont = new Font("MS Gothic", Font.PLAIN,30);
     Font buttonFont = new Font("MS Gothic", Font.BOLD,15);
     Font font = new Font("Courier", Font.PLAIN,15);
-
+    ImageIcon image;
 
 
 
@@ -78,7 +82,7 @@ public class UI {
         choice1.setForeground(Color.white);
         choice1.setFont(buttonFont);
         choice1.setFocusPainted(false);
-        choice1.addActionListener(handler);; // when you click the START button it caller the handler
+        choice1.addActionListener(handler); // when you click the START button it caller the handler
         choice1.setActionCommand("c1");  // the make the difference for each buttons
         chooseButton.add(choice1); // when you click the START button it caller the handler
         choice2 = new JButton("choice 2");
@@ -88,7 +92,7 @@ public class UI {
         choice2.setFocusPainted(false);
         choice2.addActionListener(handler); // when you click the START button it caller the handler
         choice2.setActionCommand("c2");
-        chooseButton.add(choice2);; // when you click the START button it caller the handler
+        chooseButton.add(choice2); // when you click the START button it caller the handler
         choice3= new JButton("choice 3");
         choice3.setBackground(Color.black);
         choice3.setForeground(Color.white);
@@ -114,6 +118,21 @@ public class UI {
         choice5.setActionCommand("c5");
         chooseButton.add(choice5); //
         gameWindow.add(chooseButton);
+
+
+        ImagePanel = new JPanel();
+        ImagePanel.setBounds(850, 25, 189, 400);
+        ImagePanel.setBackground(Color.black.brighter());
+        gameWindow.add(ImagePanel);
+
+        ImageLabel = new JLabel();
+
+       // image = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
+
+
+        ImageLabel.setIcon(image);
+        ImagePanel.add(ImageLabel);
+
 
         gameWindow.setVisible(true); // to see the window created
 
