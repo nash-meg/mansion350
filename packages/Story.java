@@ -177,15 +177,11 @@ public class Story {
         ui.choice4.setText("");
         ui.choice5.setText("");
 
-        //after displaying this text... we are going to set a parameter for each bottom
-        //declared in Game class
-        //access game class
-        //Tell the program what is the next position
-
         game.position1 = "towardsMansion"; //Continue to game
-        game.position2= "ExitGame";
+        game.position2 = "ExitGame";
         game.position3 = "";
         game.position4 = "";
+        game.position5 = "";
     }
 
     public void ExitGame(){
@@ -194,35 +190,36 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "";
-        game.position2= "";
+        game.position2 = "";
         game.position3 = "";
         game.position4 = "";
+        game.position5 = "";
     }
 
     public void towardsMansion(){
-        ui.mainTextArea.setText("Welcome! The man’s hand feels heavy on your back as you are guided up the driveway " +
-                "against your better judgement. A large mansion  - which you’re quite sure is the only " +
-                "dwelling for miles in this area - looms before you, decorated impeccably for " +
-                "Halloween. Cornstalks lean up against the pillars supporting the upper balconies, " +
-                "pumpkins and hay bales are scattered tastefully over the front porch, and a black " +
-                "cat sits somewhat ominously in the window by the door - though you’re sure that the " +
-                "cat is more of a year-round affair.\n\n" +
+        ui.mainTextArea.setText("The man's hand feels heavy on your back as you are guided up the driveway " +
+                "against your better judgement.\n\n" +
+                "A large mansion (which you're quite sure is the only dwelling for miles) looms before you, " +
+                "decorated impeccably for Halloween. Cornstalks lean up against the pillars supporting the " +
+                "upper balconies, pumpkins and hay bales are scattered tastefully over the front porch, " +
+                "and a black cat sits somewhat ominously in the window by the door (though you're sure that " +
+                "the cat is more of a year-round affair).\n\n" +
                 "You stop a moment, simply staring and struggling to take in the fact that this is all " +
                 "real. Less than an hour ago, you had been on the streets, trying to scrounge whatever " +
-                "money you could to save up for a proper coat for the coming winter. Less than an " +
-                "hour ago, an old man whose name you still don’t know had offered you a job and " +
-                "housing with the only condition being that you came to live with him in his " +
-                "\"humble manor,\" as he had called it. Less than an hour ago, against your better " +
-                "judgement and with nothing but your life to lose, you had said yes. \n\n" +
-                "You’re not sure why you’d said yes. You know that you’re what they call \"high risk\". " +
+                "money you could to save up for a proper coat for the coming winter. Less than an hour " +
+                "ago, an old man whose name you still don't know had offered you a job with the only " +
+                "condition being that you came to live with him in his \"humble manor,\" as he had called " +
+                "it. Less than an hour ago, against your better judgement and with nothing but your life to " +
+                "lose, you had said yes. \n\n" +
+                "You're not sure why you'd said yes. You know that you're what they call \"high risk\". " +
                 "You know that a man like this has the money to cover up your disappearance if it gets " +
-                "noticed. Hell, when you’d asked his name, the man had simply stated, \"Names are " +
-                "unimportant,\" before ushering you into his car. But something deep within you," +
-                " a gut feeling , told you that this was the right move, and that " +
-                "going with him wouldn't be so bad.\n\n" +
-                "\"It’s beautiful, isn’t it?\" The old man’s question snaps you back to the present. \n\n" +
+                "noticed. Hell, when you'd asked his name, the man had simply stated, \"Names are " +
+                "unimportant,\" before ushering you into his car. But something deep within you, a gut " +
+                "feeling , told you that this was the right move, and that going with him wouldn't be so bad.\n\n" +
+                "\"It's beautiful, isn't it?\" The old man's question snaps you back to the present. \n\n" +
                 "\"Yes,\" you mutter quietly, too awestruck to properly compliment the place.\n\n" +
                 "The old man smiles, \"Welcome to Huxley Manor,\" he says with a sweeping gesture before " +
                 "guiding you to the thick oaken front door.\n\n");
@@ -230,16 +227,26 @@ public class Story {
         ui.choice2.setText("Leave");
         ui.choice3.setText("");
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "GoInsideMansion";
         game.position2= "leaveMansion";
-        game.position3 = "";
-        game.position4 = "";
+    }
+
+    public void leaveMansion(){
+        ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+        ui.choice5.setText("");
+
+        game.position1 = "GoInsideMansion";
     }
 
     public void GoInsideMansion(){
-        ui.mainTextArea.setText("The old man claps twice and the doors slowly creak open to reveal an ornate "
-                + "hallway with beautiful vintage-looking wallpaper and dark wooden floors. \n\nAs he guides you "
+        ui.mainTextArea.setText("The old man claps twice and the doors slowly creak open to reveal an ornate " +
+                "hallway with beautiful vintage-looking wallpaper and dark wooden floors. \n\nAs he guides you "
                 + "through, you notice dozens of oil paintings, all of which look to be extremely old. A"
                 + "painting of a man in what looks to be renaissance garb, staring intensely outward with long black hair catches your eye."
                 + "\n\nThe cat brushes past you, pulling your attention away from the painting, and you look down "
@@ -251,6 +258,7 @@ public class Story {
         ui.choice2.setText("Ask about the stairs");
         ui.choice3.setText("");
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "painting";
         game.position2= "stairs";
@@ -258,20 +266,7 @@ public class Story {
         game.position4 = "";
 
     }
-    public void leaveMansion(){
-        ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
 
-
-        game.position1 = "GoInsideMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-
-    }
     public void painting(){
         ui.mainTextArea.setText("The old man smiles as he turns to the portrait, an odd sentimentality washing " +
                 "over him.\n\n" +
@@ -299,7 +294,7 @@ public class Story {
         ui.choice2.setText("Offer to help set the table");
         ui.choice3.setText("Stand there awkwardly");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "askMallory";
         game.position2= "offerToHelp";
@@ -341,7 +336,7 @@ public class Story {
         ui.choice2.setText("Don't shake his hand");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "shakeHand";
         game.position2= "noShakeHand";
@@ -372,7 +367,7 @@ public class Story {
         ui.choice2.setText("Sit next to Mallory");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "sitNxtToOldman";
         game.position2= "sitNxtMallory";
@@ -413,7 +408,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "goToSleep";
         game.position2 = "";
@@ -437,7 +432,7 @@ public class Story {
         ui.choice2.setText("Stay silent");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "WillMissYouToo";
         game.position2= "StaySilent";
@@ -460,7 +455,7 @@ public class Story {
         ui.choice2.setText("Read a book to distract yourself");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "goRightToSleep";
         game.position2= "readBook";
@@ -480,7 +475,7 @@ public class Story {
         ui.choice2.setText("Read a book to distract yourself");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "goRightToSleep";
         game.position2= "readBook";
@@ -498,7 +493,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "Murder";
         game.position2 = "";
@@ -519,7 +514,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "Murder";
         game.position2 = "";
@@ -549,7 +544,7 @@ public class Story {
         ui.choice2.setText("Charge at the old man");
         ui.choice3.setText("Stand there and do nothing");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "backToBed";
         game.position2= "AttackOldMan";
@@ -569,7 +564,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "room1";
         game.position2 = "";
@@ -589,7 +584,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "room1";
         game.position2= "";
@@ -609,7 +604,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "room1";
         game.position2= "";
@@ -630,7 +625,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "room1";
         game.position2= "";
@@ -670,18 +665,16 @@ public class Story {
                 "After that, he says goodnight, and you open the door to your room. It's small, but comfortable, with a desk on one wall," +
                 " a bed on the other, and beside that, a closet. A few tears come to your eyes as you realize you'll be sleeping in a proper bed tonight." +
                 " You change into a set of pajamas folded neatly atop the bed and crawl beneath the covers.\n\n");
-
         ui.choice1.setText("Go to sleep");
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "goToSleep";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
-
     }
 
     public void noShakeHand(){
@@ -697,12 +690,11 @@ public class Story {
                 "After a moment, he and the old man emerge with various steaming plates making up an extravagant meal, all of which are arranged" +
                 " on the table. After a moment, the butler pulls out \na chair for the old man, and Mallory sits across from him. Then," +
                 " the butler gestures for you to sit, seemingly allowing you to choose your spot.\n\n");
-
         ui.choice1.setText("Sit next to the old man");
         ui.choice2.setText("Sit next to Mallory");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "sitNxtToOldman";
         game.position2= "sitNxtMallory";
@@ -719,12 +711,11 @@ public class Story {
                 "I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n\n" +
                 "He smiles, extending a hand for you to shake.\n\n" +
                 "Do you shake his hand?\n\n");
-
         ui.choice1.setText("Shake his hand");
         ui.choice2.setText("Don't shake his hand");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "shakeHand";
         game.position2= "noShakeHand";
@@ -748,7 +739,7 @@ public class Story {
         ui.choice2.setText("Don't shake his hand");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "shakeHand";
         game.position2= "noShakeHand";
@@ -785,19 +776,17 @@ public class Story {
                 "I’ll let you two get acquainted,' says the old man, picking up the cat and heading into the kitchen, leaving the two of you alone.\n\n" +
                 "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he seems genuinely happy to meet you," +
                 "there is also an almost mournful disposition underneath. He goes back to setting the table before you can dwell on it too long. \n\n");
-
         ui.choice1.setText("Ask how he likes working here");
         ui.choice2.setText("Offer to help set the table");
         ui.choice3.setText("Stand there awkwardly");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "askMallory";
         game.position2= "offerToHelp";
         game.position3 = "awkMoment";
         game.position4 = "";
     }
-
 
     /*********** FLOOR ONE *************/
     public void room1() {
@@ -816,7 +805,7 @@ public class Story {
         ui.choice2.setText("Try to go back to sleep");
         ui.choice3.setText("Try the door");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
 
         game.position1 = "searchFloor";
@@ -842,7 +831,7 @@ public class Story {
         ui.choice2.setText("Mallory's room");
         ui.choice3.setText("Down the stairs");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "tryBedroomOnLeft";
         game.position2= "MalloryRoom";
@@ -859,7 +848,7 @@ public class Story {
         ui.choice2.setText("Try the door");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "backSleep";
         game.position2= "tryDoor";
@@ -879,7 +868,7 @@ public class Story {
         ui.choice2.setText("Try the door");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "searchFloor";
         game.position2= "tryDoor";
@@ -898,7 +887,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "room5";
         game.position2= "";
@@ -916,7 +905,7 @@ public class Story {
         ui.choice2.setText("Go downstairs");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "MalloryRoom";
         game.position2= "downstairs";
@@ -930,7 +919,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "MalloryRoom";
         game.position2= "";
@@ -955,7 +944,7 @@ public class Story {
         ui.choice2.setText("Search his closet");
         ui.choice3.setText("Search his desk");
         ui.choice4.setText("Leave the room");
-
+        ui.choice5.setText("");
 
         game.position1 = "SearchBed";
         game.position2= "SearchCloset";
@@ -979,6 +968,7 @@ public class Story {
         ui.choice2.setText("Search his desk");
         ui.choice3.setText("Leave the room");
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "SearchCloset";
         game.position2= "SearchDesk";
@@ -994,7 +984,7 @@ public class Story {
         ui.choice2.setText("Put on the coat");
         ui.choice3.setText("Leave Closet");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "Shoes";
         game.position2= "Coat";
@@ -1011,6 +1001,7 @@ public class Story {
         ui.choice2.setText("Leave Closet");
         ui.choice3.setText("");
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "Coat";
         game.position2= "LeaveCloset";
@@ -1055,6 +1046,7 @@ public class Story {
         ui.choice2.setText("Leave Closet");
         ui.choice3.setText("");
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "Shoes";
         game.position2= "LeaveCloset";
@@ -1101,7 +1093,7 @@ public class Story {
         ui.choice2.setText("Search his bed");
         ui.choice3.setText("Leave the room");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "SearchDesk";
         game.position2= "SearchBed";
@@ -1120,7 +1112,7 @@ public class Story {
         ui.choice2.setText("Examine the picture");
         ui.choice3.setText("Leave desk");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExamineBook";
         game.position2= "ExaminePicture";
@@ -1160,7 +1152,7 @@ public class Story {
         ui.choice2.setText("Leave desk");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExaminePicture";
         game.position2= "LeaveDesk";
@@ -1192,7 +1184,7 @@ public class Story {
         ui.choice2.setText("Leave desk");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExamineBook";
         game.position2= "LeaveDesk";
@@ -1211,7 +1203,7 @@ public class Story {
         ui.choice2.setText("Search bed");
         ui.choice3.setText("Leave room");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "SearchCloset";
         game.position2= "SearchBed";
@@ -1232,7 +1224,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "room5";
         game.position2= "";
@@ -1264,7 +1256,7 @@ public class Story {
         ui.choice2.setText("Duck down!");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "Run";
         game.position2= "DuckDown";
@@ -1290,14 +1282,13 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "theMansion"; //death
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
     }
-
 
     /**
      * Automatic - board squeak, feel as though being watch, swinging blades from ceiling
@@ -1333,7 +1324,7 @@ public class Story {
         ui.choice2.setText("Ignore the cat");
         ui.choice3.setText("Try to pet the cat");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "KickCat";
         game.position2= "IgnoreCat";
@@ -1355,7 +1346,7 @@ public class Story {
         ui.choice2.setText("Examine the coffee table");
         ui.choice3.setText("Examine the fireplace");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExamineBookcase";
         game.position2= "ExamineCoffeeTable";
@@ -1375,7 +1366,7 @@ public class Story {
         ui.choice2.setText("Examine the coffee table");
         ui.choice3.setText("Examine the fireplace");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExamineBookcase";
         game.position2= "ExamineCoffeeTable";
@@ -1397,7 +1388,7 @@ public class Story {
         ui.choice2.setText("Examine the coffee table");
         ui.choice3.setText("Examine the fireplace");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExamineBookcase";
         game.position2= "ExamineCoffeeTable";
@@ -1421,7 +1412,7 @@ public class Story {
         ui.choice2.setText("Leave it there");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "PocketBook";
         game.position2= "LeaveBook";
@@ -1435,7 +1426,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExamineCoffeeTable";
         game.position2= "";
@@ -1448,7 +1439,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExamineCoffeeTable";
         game.position2= "";
@@ -1465,7 +1456,7 @@ public class Story {
         ui.choice2.setText("Leave it there");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "letterOpener";
         game.position2= "leaveLetterOpener";
@@ -1478,7 +1469,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExamineFireplace";
         game.position2= "";
@@ -1492,7 +1483,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "ExamineFireplace";
         game.position2= "";
@@ -1509,7 +1500,7 @@ public class Story {
         ui.choice2.setText("Leave them there");
         ui.choice3.setText("Go straight to fight scene");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "TakeMatches";
         game.position2= "LeaveThere";
@@ -1522,7 +1513,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "FightScene";
         game.position2= "";
@@ -1535,6 +1526,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "FightScene";
         game.position2= "";
@@ -1557,6 +1549,7 @@ public class Story {
         ui.choice2.setText("Jump out of the way");
         ui.choice3.setText("Use letter opener "); //Use letter opener (if have)
         ui.choice4.setText("");
+        ui.choice5.setText("");
 
         game.position1 = "DuckingDown";
         game.position2= "JumpOutWay";
@@ -1575,7 +1568,7 @@ public class Story {
         ui.choice2.setText("Attempt to run"); //Duck down (kick cat)
         ui.choice3.setText("Curl into a ball"); //Duck down (ignore cat)");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "watchHelplessly "; //End up on floor >>>Duck down (pet cat)
         game.position2= "attemptToRun"; //Duck down (kick cat)
@@ -1603,7 +1596,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "JumpOutWay";// come back to this
         game.position2= "";
@@ -1635,7 +1628,7 @@ public class Story {
         ui.choice2.setText("");
         ui.choice3.setText("");
         ui.choice4.setText("");
-
+        ui.choice5.setText("");
 
         game.position1 = "theMansion"; // DEATH GAME OVER
         game.position2= "";
@@ -2116,7 +2109,6 @@ public class Story {
         game.position4 = "";
     }
 
-
     public void PunchOldMan() {
         ui.mainTextArea.setText("Unsure of what else to do, you wait for the old man to get close as he continues rambling about how he had hoped you would “last longer”, as he puts it. \\n\\n\n" +
                 "When he’s within arms reach, you waste no time raising your fist and swing it at the old man, landing squarely on his left eye.\\n\\n\n" +
@@ -2287,7 +2279,6 @@ public class Story {
         ui.choice4.setText("");
         ui.choice5.setText("");
 
-
         game.position1 = "HideAmongTheBodies"; // DEATH GAME OVER
         game.position2= "";
         game.position3 = "";
@@ -2310,13 +2301,11 @@ public class Story {
         ui.choice4.setText("");
         ui.choice5.setText("");
 
-
         game.position1 = "iFNoMatches";
         game.position2= "iFMatches";
         game.position3 = "";
         game.position4 = "";
         game.position5 = "";
-
     }
     public void iFNoMatches() {
         ui.mainTextArea.setText("“You know,” the old man begins, “In all my 300 years, I’ve never had one escape. Not one!”\\n\\n\n" +
@@ -2354,7 +2343,6 @@ public class Story {
         game.position5 = "";
     }
 
-
     public void Fight2() {
         ui.mainTextArea.setText("You begin to grab and claw at your legs, hoping that your own physical force might be enough to make it stop, but still they continue.\\n\\n\n" +
                 "“You know, I don’t usually remember the people I use to feed. Not very well, anyway. But you,” he grins, “I don’t see myself forgetting you for the next century at least.”\\n\\n\n" +
@@ -2390,7 +2378,6 @@ public class Story {
         game.position4 = "";
         game.position5 = "";
     }
-
 
     //Matches ending
     public void iFMatches() {
@@ -2435,7 +2422,6 @@ public class Story {
         game.position5 = "";
     }
 
-
     //Run through hall
     public void RunThruHall() {
         ui.mainTextArea.setText("Death by blade");
@@ -2452,9 +2438,6 @@ public class Story {
         game.position5 = "";
     }
 
-
-
-
     //room 9 - chamber (butler fight scene)
     public void room9Fight(){
         ui.mainTextArea.setText("Bye!");
@@ -2464,15 +2447,12 @@ public class Story {
         ui.choice4.setText("");
         ui.choice5.setText("");
 
-
         game.position1 = "theMansion";
         game.position2= "";
         game.position3 = "";
         game.position4 = "";
         game.position5 = "";
     }
-
-
 
     //room 8 - hallway/stairway (no method for bathroom, just display)
     public void room8() {
@@ -2482,7 +2462,6 @@ public class Story {
         ui.choice3.setText("");
         ui.choice4.setText("");
         ui.choice5.setText("");
-
 
         game.position1 = "theMansion";
         game.position2= "";
@@ -2609,9 +2588,10 @@ public class Story {
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(false);
+        ui.choice5.setVisible(false);
 
         game.position1 = "theMansion";
-        game.position2= "";
+        game.position2 = "";
         game.position3 = "";
         game.position4 = "";
         game.position5 = "";
@@ -2633,7 +2613,4 @@ public class Story {
         game.position4 = "";
         game.position5 = "";
     }
-
-
-
 }
