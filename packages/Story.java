@@ -153,32 +153,23 @@ public class Story {
                 "button to continue reading.\n\nThe one graphic you do get to reap the benefits of is a map. " +
                 "You can pull up this map during given opportunities by pressing the \"map\" button.\n\n" +
                 "We hope you enjoy, good luck, and don’t kick the cat.");
-        ui.choice1.setText("Begin");
-        ui.choice2.setText("Exit");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setText("Begin");
+        ui.choice5.setText("Exit");
 
-        game.position1 = "towardsMansion"; //Continue to game
-        game.position2 = "ExitGame";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        game.position4 = "towardsMansion"; //Continue to game
+        game.position5 = "ExitGame";
     }
 
     public void ExitGame(){
         ui.mainTextArea.setText("You may now close this window.");
-        ui.choice1.setText("");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
-
-        game.position1 = "";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(false);
     }
 
     public void towardsMansion(){
@@ -205,25 +196,25 @@ public class Story {
                 "\"Yes,\" you mutter quietly, too awestruck to properly compliment the place.\n\n" +
                 "The old man smiles, \"Welcome to Huxley Manor,\" he says with a sweeping gesture before " +
                 "guiding you to the thick oaken front door.\n\n");
-        ui.choice1.setText("Go inside");
-        ui.choice2.setText("Leave");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setText("Go inside");
+        ui.choice5.setText("Leave");
 
-        game.position1 = "GoInsideMansion";
-        game.position2= "leaveMansion";
+        game.position4 = "GoInsideMansion";
+        game.position5= "leaveMansion";
     }
 
     public void leaveMansion(){
         ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setText(">");
 
-        game.position1 = "GoInsideMansion";
+        game.position5 = "GoInsideMansion";
     }
 
     public void GoInsideMansion(){
@@ -236,17 +227,17 @@ public class Story {
                 + "though still beautiful, are clearly not as well-kept as the rest of the house, and the walls"
                 + "seem to get dustier the further down they go. There’s a part of you that wonders what’s down"
                 + "there - what secrets this mansion might hide.\n");
-        ui.choice1.setText("Ask about the painting.");
-        ui.choice2.setText("Ask about the stairs");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "painting";
-        game.position2= "stairs";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Ask about the painting");
+        ui.choice5.setText("Ask about the stairs");
 
+        game.position4 = "painting";
+        game.position5= "stairs";
     }
 
     public void painting(){
@@ -271,17 +262,19 @@ public class Story {
                 " going into the kitchen and leaving the two of you alone.\n\n" +
                 "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he " +
                 "seems genuinely happy to meet you, there is also an almost mournful disposition underneath it all. \n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        ui.choice1.setText("Ask how he likes working here");
-        ui.choice2.setText("Offer to help set the table");
-        ui.choice3.setText("Stand there awkwardly");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice3.setText("Ask how he likes working here");
+        ui.choice4.setText("Offer to help set the table");
+        ui.choice5.setText("Stand there awkwardly");
 
-        game.position1 = "askMallory";
-        game.position2= "offerToHelp";
-        game.position3 = "awkMoment";
-        game.position4 = "";
+        game.position3 = "askMallory";
+        game.position4 = "offerToHelp";
+        game.position5 = "awkMoment";
     }
     public void askMallory(){
         ui.mainTextArea.setText("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags under his eyes being heavy and " +
