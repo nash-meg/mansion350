@@ -156,6 +156,9 @@ public class Story {
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
         ui.choice4.setText("Begin");
         ui.choice5.setText("Exit");
 
