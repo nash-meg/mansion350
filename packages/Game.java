@@ -25,7 +25,7 @@ public class Game {
 
         public void actionPerformed(ActionEvent event) {
             String makeChoice = event.getActionCommand();// if you click on choice 1 then the setActionCommand will be called on put into makeChoice.
-            // eg. when the click on a choice 1 it will send this st.choosePosition(position1) to  choosePosition method in the Story class
+            // 'eg.' when the click on a choice 1 it will send this st.choosePosition(position1) to  choosePosition method in the Story class
             switch(makeChoice) {
                 case "Start":
                     m.toTheMansion();
