@@ -30,18 +30,19 @@ public class Story {
         ignore = false;
     }
     ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
-    ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
-    ImageIcon Cellar1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
-    ImageIcon Cellar2= new ImageIcon(".//mansion Game//Bedroom(1).jpg");
-    ImageIcon Cellar3 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-    ImageIcon Cellar4 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-    ImageIcon Cellar5= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-    ImageIcon HallBeforeRoom8 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-    ImageIcon Hallway5a = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-    ImageIcon Hallway5b = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-    ImageIcon KitchenRoom11 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-    ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-    ImageIcon cannibalPlantRoom7 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+    ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Cat Fight(9).jpg");
+    ImageIcon Cellar1 = new ImageIcon(".//mansion Game//Cellar(1).jpg");
+    ImageIcon Cellar2= new ImageIcon(".//mansion Game//Cellar(2).png");
+    ImageIcon Cellar3 = new ImageIcon(".//mansion Game//Cellar(3).png");
+    ImageIcon Cellar4 = new ImageIcon(".//mansion Game//Cellar(4).png");
+    ImageIcon Cellar5= new ImageIcon(".//mansion Game//Cellar(2).png");
+    ImageIcon HallBeforeBathroom8 = new ImageIcon(".//mansion Game//Hallway before bathroom(8).jpg");
+    ImageIcon Hallway5a = new ImageIcon(".//mansion Game//Hallway(5a).jpg");
+    ImageIcon Hallway5b = new ImageIcon(".//mansion Game//Hallway(5b).jpg");
+    ImageIcon Kitchen11 = new ImageIcon(".//mansion Game//Kitchen(11).jpg");
+    ImageIcon MalloryRoom4= new ImageIcon(".//mansion Game//Mallory's Bedroom(4).jpg");
+    ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Potion Room(10).jpg");
+    ImageIcon cannibalPlantRoom7 = new ImageIcon(".//mansion Game//cannibal plant room(7).jpg");
 
 
     // choosePosition is receiving the parameter(position)
