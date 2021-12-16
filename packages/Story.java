@@ -137,6 +137,7 @@ public class Story {
             case "CheckCabinets":CheckCabinets();break;
             case "CheckFridge":CheckFridge();break;
             case "withoutPotion": withoutPotion();break;
+            case "noPotionCont": noPotionCont();break;
             case "PunchOldMan": PunchOldMan();break;
             case "dontPunch": dontPunch();break;
             case "UseSpellBook": UseSpellBook(); break;
@@ -2696,14 +2697,25 @@ public class Story {
                 "You clench your jaw and creep past them, praying that the old man stays down there long enough for you to escape. \n\n" +
                 "Your heart begins to race as you pass the entrance to the living room. You’re almost there. Just a few more steps…\n\n" +
                 "You stifle a laugh as your palm lands on the handle of the door. Drawing in a breath, you unlock the door and push down on the ornate iron handle," +
-                " preparing to pull it open.\n\n" +
-                "[NEXT PAGE]\n" +
-                "But it doesn’t open.\n\n" +
+                " preparing to pull it open--\n\n" +
+                "\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "noPotionCont";
+    }
+    public void noPotionCont(){
+        ui.mainTextArea.setText("But it doesn’t open.\n\n" +
                 "It doesn’t even budge.\n\n" +
                 "You begin to frantically tug at the handle, pulling and pushing with all your might.\n\n" +
-                "No!\n\n" +
+                "\"No!\" you shout, your anguish overriding all logic\n\n" +
                 "You didn’t make it this far only for it to end like this!\n\n" +
-                "You don’t notice the quiet steps behind you of slippers on the staircase, " +
+                "You don’t notice the quiet steps behind you of slippers on the cellar stairs, " +
                 "nor their pitter-patter on the hardwood floor as the old man approaches you. \n\n" +
                 "You do, however, notice the slow clapping as the old man patronizingly applauds you," +
                 " \"Very good,\" he coos, \"They almost never make it to the door.\"\n\n" +
@@ -2731,6 +2743,7 @@ public class Story {
         game.position3 = "UseSpellBook";
         game.position4 = "PunchOldMan";
         game.position5 = "dontPunch";
+
     }
 
     public void dontPunch(){
@@ -2795,8 +2808,7 @@ public class Story {
     public void UseSpellBook() {
         ui.mainTextArea.setText("Suddenly, you remember the pocket guide you found in the room upstairs. " +
                 "In a flurry of frantic motion, you quickly grab it from your pocket and open to a random page.\n\n" +
-                "\"Invisibility of Sight And Presence\" the header reads. \n\n" +
-                "That’s good enough for you.\n\n" +
+                "\"Invisibility of Sight And Presence\" the header reads. " +
                 "You begin reading the spell aloud as fast as you can, throwing pronunciation to the wind.\n\n" +
                 "You hear the old man laugh, “That’s adorable. You really think I’d keep a book of spells in this house that could harm me?”\n\n" +
                 "Your heart begins to race as you finish the first half of the page.\n\n" +
