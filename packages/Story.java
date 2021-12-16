@@ -1889,16 +1889,15 @@ public class Story {
         ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. You curl into a ball as he draws back an enormous claw, then your eyes fly open as you feel his sharpened talons dig deep into your body, some going so deep to protrude out through your back. This time, when he draws back his claws, you’re drawn back with them.\\n\\n\n" +
                 "As you’re lifted up to his face, you see immense pain and sadness in his eyes. He growls out something that sounds like an apology before you feel his claws within you tighten into a fist. You manage a single cry of agony, tears flowing down your face as you flail wildly before he slams you down onto the ground and everything goes black. \\n\\n\\n\n" +
                 "Bummer, man. You’ve found one of the many ways to die in this game! It IS possible to beat this game, though, so if you want, you can restart the game and play again!\\n\\n cool!!\n");
-        ui.choice1.setText("");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     //Jump out of the way
@@ -1906,16 +1905,21 @@ public class Story {
         ui.mainTextArea.setText("You leap to the side, narrowly dodging the blow, and find yourself crashing into the bookshelf. The creature pauses a moment, clearly disoriented by the fact that he missed. He’s too close for you to run, but perhaps…\\n\\n\n" +
                 "...Your eyes dart to the shelf covered in books.\\n\\n\n" +
                 "What do you do?\\n\\n\n");
-        ui.choice1.setText("Try climbing the bookshelf");
-        ui.choice2.setText("Throw the books"); //Throw the books (pet/ignore cat)
-        ui.choice3.setText("Grab a book");
-        ui.choice4.setText("Enter room10");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "ClimbBookshelf";
-        game.position2= "ThrowBooks";
-        game.position3 = "GrabABook";
-        game.position4 = "room10";
+        ui.choice2.setText("Try climbing the bookshelf");
+        ui.choice3.setText("Throw the books"); //Throw the books (pet/ignore cat)
+        ui.choice4.setText("Grab a book");
+        ui.choice5.setText("Enter room10");
+
+        game.position2 = "ClimbBookshelf";
+        game.position3 = "ThrowBooks";
+        game.position4 = "GrabABook";
+        game.position5 = "room10";
     }
 
     public void ClimbBookshelf() {
@@ -1926,31 +1930,32 @@ public class Story {
                 "\n" +
                 "Oof, my dude. You’ve discovered one of the many ways to die in this game! It IS beatable, so if you want, you can restart and try again! Or not, if you’re feeling bad about ultimately getting killed by a coffee table.  \n" +
                 "\n");
-        ui.choice1.setText(">"); // change transition
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">"); // change transition
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     //Throw the books (kick cat)
     public void ThrowBooks() {
         ui.mainTextArea.setText("What would you like to do?");
-        ui.choice1.setText("Throw the books at head)"); //Throw the books (pet/ignore cat)
-        ui.choice2.setText("Throw the books at back");//Throw the books (kick cat)
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "pettingCat";
-        game.position2= "angeringCat";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice4.setText("Throw the books at head)"); //Throw the books (pet/ignore cat)
+        ui.choice5.setText("Throw the books at back");//Throw the books (kick cat)
+
+        game.position4 = "pettingCat";
+        game.position5 = "angeringCat";
     }
 
     public void pettingCat() {
@@ -1962,47 +1967,49 @@ public class Story {
                 "You turn, expecting to see the creature about to seal your fate, but instead, you watch as he comes running at the entrance only to be blown backwards as if by some kind of barrier. He simply stands there a moment, seeming to reorient himself before looking at you from the other side of the doorframe. Is he...nodding? \\n\\n\n" +
                 "If you hadn’t known any better, you would’ve thought you saw a glimmer of pride in his eyes.\\n\\n \n" +
                 "His gaze lingers on you a moment longer before he turns his head as if he’s heard something, then lumbers off. Cautiously, you walk over and close the door before turning to examine the room you’ve just entered.\\n\\n\n");
-        ui.choice1.setText(">)");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; //death
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; //death
     }
 
     public void angeringCat() {
         ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then begin pelting them at the monster, aiming for his head. This only seems to anger him. He turns to you, eyes flashing with an intense rage as he charges you. Unable to run anywhere without risking getting grabbed, you desperately reach for more books from the shelf, feeling for hardcovers.\\n\\n\n" +
                 "However, he moves too quickly for you to find another book to throw, and before you know it you’re pinned to the bookshelf with one large claw placed over your abdomen. He reaches up his other paw and gently caresses your face before firmly grabbing it and twisting suddenly. You feel your neck crunch, then everything goes black. \\n\\n\\n\n" +
-                "Ayyyyy you discovered one of the many ways to die in this game! It IS beatable, so if you want, you can definitely restart the game and try again! A word of advice though: next time, don’t kick the cat. \\n\\n\n" +
+                "Ayyyyye you discovered one of the many ways to die in this game! It IS beatable, so if you want, you can definitely restart the game and try again! A word of advice though: next time, don’t kick the cat. \\n\\n\n" +
                 "\n");
-        ui.choice1.setText(">)");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     public void GrabABook() {
         ui.mainTextArea.setText("Where you going to do now?");
-        ui.choice1.setText("Read spell"); //Grab a book and start reading spells (pet cat)
-        ui.choice2.setText("Look ahead"); //Grab a book and start reading spells (ignore cat)
-        ui.choice3.setText("Stand there");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "ReadSpell"; // DEATH GAME OVER
-        game.position2= "LookAhead";
-        game.position3 = "StandThere";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice3.setText("Read spell"); //Grab a book and start reading spells (pet cat)
+        ui.choice4.setText("Look ahead"); //Grab a book and start reading spells (ignore cat)
+        ui.choice5.setText("Stand there");
+
+        game.position3 = "ReadSpell"; // DEATH GAME OVER
+        game.position4 = "LookAhead";
+        game.position5 = "StandThere";
     }
 
     //Grab a book and start reading spells (pet cat)
@@ -2016,16 +2023,15 @@ public class Story {
                 "You nod, turning and running towards the door. As you turn, you hear his parting words, “Good luck. Get out of this place if you can.” \\n\\n\n" +
                 "From behind you, you hear the butler begin to transform once more, crying out in pain as his wails turn to growls. Once you’re in the room, you hazard one last glance at his distorted, half-changed form" +
                 " before shutting the door and praying he was right. \\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room10"; // fix later
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room10"; // fix later
     }
 
     //Grab a book and start reading spells (ignore cat)
@@ -2035,16 +2041,15 @@ public class Story {
                 "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell. When you’ve finished, you look up to find the creature frozen mid-lunge, clearly trying to move but completely unable. \\n\\n\n" +
                 "Not sure how long the spell lasts, you waste no time bolting into the door on the other side of the room and slamming the door shut. You listen as the spell wears off, expecting the creature to run into the room, but instead you hear him simply lumber out into the hallway. A little confused but ultimately relieved, " +
                 "you turn to examine the room you’ve just entered.\\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room10"; // fit later
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room10"; // fit later
     }
 
     //Grab a book and start reading spells (kick cat)
@@ -2060,16 +2065,15 @@ public class Story {
                 "\n" +
                 "Yikes! You discovered one of the many ways to die in this game! It IS beatable, so if you want, you can restart and try again. A word of advice before you go though:" +
                 " maybe don’t kick the cat next time. \\n\\n\n");
-        ui.choice1.setText(">)");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     //Use letter opener (if have)
@@ -2083,16 +2087,15 @@ public class Story {
                 " It IS beatable though, so if you want to get to the end, feel free to restart" +
                 " and try again!\\n\\n\n" +
                 "\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // death
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // death
     }
 
     //room 10 - chamber (potion room)
@@ -2100,43 +2103,47 @@ public class Story {
         ui.mainTextArea.setText("You hear footsteps above you as if the butler has now somehow made his way upstairs.\\n\\n\n" +
                 " Before you is a room filled with shelves of boxes and bottles and potted plants. On the far side of the room is a door that seems to go back out to the hallway. In the center is a table, on it a small electric cooktop with an empty cauldron sitting atop it and some mini shelving units, also containing a few small bottles. Unlike those on the other shelves, however, these are small vials of liquid. One, a purple substance with a faded label, seems to have a slight glow to it. Another, sitting solidly on the table, is a yellow liquid that also seems to glow, but less so. Its label is a little easier to read and clearly says in large letters, “PLAN B”. There are two other vials, both filled with clear liquid. One is labeled “Sanitatem” and the other has no label at all.\\n\\n\n" +
                 "You begin to realize where in the house you are. Usually both this room and the one you were just in are locked tight, and Mallory used to joke that this one was the old man’s potion room. Now that you stand here, you’re starting to think it wasn’t much of a joke. \\n\\n\n" +
-                "You glance down at the vials.\\n\\n\n" +
+                "You glance down at the vials.\n\n\n" +
                 " Part of you can’t help but wonder what would happen if you just…drank one. Or two. Or all of them. \\n\\n\n" +
-                "Do you take a sip?\\n\\n\n");
-        ui.choice1.setText("Drink the purple potion");
-        ui.choice2.setText("Drink the yellow potion");
-        ui.choice3.setText("Drink the labeled clear potion");
-        ui.choice4.setText("Drink the unlabeled clear potion");
-        ui.choice5.setText("");
+                "Do you take a sip?\n\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "purplePotion";
-        game.position2= " yellowPotion";
-        game.position3 = "labeledClearPotion";
-        game.position4 = "unlabeledClearPotion";
+        ui.choice2.setText("Drink the purple potion");
+        ui.choice3.setText("Drink the yellow potion");
+        ui.choice4.setText("Drink the labeled clear potion");
+        ui.choice5.setText("Drink the unlabeled clear potion");
+
+        game.position2 = "purplePotion";
+        game.position3 = " yellowPotion";
+        game.position4 = "labeledClearPotion";
+        game.position5 = "unlabeledClearPotion";
     }
 
     public void purplePotion() {
         ui.mainTextArea.setText("You cautiously pick up the glowing vial and look it over, noticing that the faded label says “Aspectum”. You’re not well-versed in latin by any stretch, but you remember a middle school teacher once telling you that that word meant “Sight”. You shrug. Maybe it does.\\n\\n\n" +
-                "Either way, you pop the cork off the vial and drink it down in one swig. \\n\\n\n" +
+                "Either way, you pop the cork off the vial and drink it down in one swig. \n\n\n" +
                 "It tastes sweet, almost like a plum, and is rather smooth on the way down.\n" +
-                "You pause. \\n\\n\n" +
-                "Nothing feels different. \\n\\n\n" +
-                "Sighing, you hope that this isn’t some kind of slow death potion that you have stupidly just drank. \\n\\n\n" +
-                "It’s when you glance back at the potion table that you notice it. \\n\\n\n" +
+                "You pause. \n\n\n" +
+                "Nothing feels different. \n\n\n" +
+                "Sighing, you hope that this isn’t some kind of slow death potion that you have stupidly just drank. \n\n\n" +
+                "It’s when you glance back at the potion table that you notice it. \n\n\n" +
                 "At first, you just see a little bit of movement out of the corner of your eye. But when you look closer, you find that in the liquid of the other vials, you can see...something.\\n\\n\n" +
                 "The old man.\\n\\n\n" +
                 "You can see the old man walking up a set of stairs. Not any that you’ve ever been on, but the wallpaper seems to match that of the stairs going down into the cellar. You attempt to look behind and around the vials, but find that the only place you can see this is in the two vials of clear liquid. You watch as the old man nearly reaches the top of the stairs then stops suddenly. As if he’s forgotten something, he sighs and goes back down. You blink, turning away as you stop watching, then begin to laugh a little. Even in as terrifying of a situation as you’re in, this is pretty cool.\\n\\n\n" +
                 "You guess aspectum really did mean sight after all.\\n\\n\n");
-        ui.choice1.setText("Leave Room10");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "LeaveRoom10"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText("Leave room");
+
+        game.position5 = "LeaveRoom10"; // DEATH GAME OVER
     }
 
     public void yellowPotion() {
@@ -2151,16 +2158,15 @@ public class Story {
                 "\n" +
                 "You really just drank a random potion in a murderer’s house labeled “PLAN B”, huh? Well, we can’t all be the brightest bulbs in the bunch. You, for instance, have discovered one of the many ways to die in this game! But, it IS beatable, we promise, so if you want you can always restart the game and try again! \n" +
                 "\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     public void labeledClearPotion() {
@@ -2171,16 +2177,15 @@ public class Story {
                 "Yup, that was definitely vodka.\\n\\n\n" +
                 "You stand there a moment, a little dumbfounded that you just took a shot in the middle of a potion room before turning back to the other vials. \\n\\n\n" +
                 "\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "LeaveRoom10";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "LeaveRoom10";
     }
 
     public void unlabeledClearPotion() {
@@ -2194,16 +2199,15 @@ public class Story {
                 "On the top of the cork is a small label that reads “Water” in plain english. \\n\\n\n" +
                 "You put the vial down and lean against the table in a combination of relief and embarrassment.\\n\\n\n" +
                 "It really was just water. \\n\\n\n");
-        ui.choice1.setText("Leave the room");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "LeaveRoom10";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText("Leave the room");
+
+        game.position5 = "LeaveRoom10";
     }
 
     public void LeaveRoom10() {
@@ -2216,30 +2220,31 @@ public class Story {
                 "Finally, you reach the stairs. They lead downward into the darkness that you know to be the kitchen. You feel a bit of fear bubbling up inside you as you look down the descending corridor. You know that these stairs will creak when you step on them. \\n\\n\n" +
                 "Beside them is an open door leading to a bathroom, and on the opposite side of the hall is a boarded up door that, after everything that’s happened, you’d like to keep that way. \\n\\n\n" +
                 "What do you do?\\n\\n\n");
-        ui.choice1.setText("Go to the bathroom");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "goToBathroom"; //
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText("Go to the bathroom");
+
+        game.position5 = "goToBathroom";
     }
 
     public void goToBathroom() {
         ui.mainTextArea.setText("You go into the bathroom and take a piss before washing your hands and heading back out into the hallway.\\n\\n\n");
-        ui.choice1.setText("Run downstairs with shoes)"); //Go downstairs (shoes)
-        ui.choice2.setText("Run downstairs with no shoes)");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "withShoes"; // DEATH GAME OVER
-        game.position2= "withNoShoes";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice4.setText("Run downstairs with shoes)"); //Go downstairs (shoes)
+        ui.choice5.setText("Run downstairs with no shoes)");
+
+        game.position4 = "withShoes"; // DEATH GAME OVER
+        game.position5= "withNoShoes";
     }
 
     public void withShoes() {
@@ -2262,16 +2267,15 @@ public class Story {
                 "\n" +
                 "Aw man, you were over halfway to victory! Instead, you’ve discovered one of the many ways to die in this game! It IS beatable, though, we promise, so if you want, you can restart the game and try again!\\n\\n\n" +
                 "\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     public void withNoShoes() {
@@ -2284,16 +2288,21 @@ public class Story {
                 "You scoff, trying not to think too much about it. If you think about the reason for all the blood, it means you have to think about Mallory, and the fact that he’s gone.\\n\\n\n" +
                 "What do you do?\\n\\n\n" +
                 "\n");
-        ui.choice1.setText("Search the knife drawer");
-        ui.choice2.setText("Check cabinets");
-        ui.choice3.setText("Check the fridge");
-        ui.choice4.setText("Leave kitchen ");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "knifeDrawer"; //
-        game.position2= "CheckCabinets";
-        game.position3 = "CheckFridge";
-        game.position4 = "LeaveKitchen";
+        ui.choice2.setText("Search the knife drawer");
+        ui.choice3.setText("Check cabinets");
+        ui.choice4.setText("Check the fridge");
+        ui.choice5.setText("Leave kitchen");
+
+        game.position2 = "knifeDrawer";
+        game.position3= "CheckCabinets";
+        game.position4 = "CheckFridge";
+        game.position5 = "LeaveKitchen";
     }
 
     public void knifeDrawer() {
@@ -2304,16 +2313,15 @@ public class Story {
                 "You stare at the note for a moment before drawing in a long, shaky breath and closing the drawer.\\n\\n\n" +
                 "You had no idea how meticulously he must have planned for Mallory’s murder.\\n\\n\n" +
                 "Shaken, you turn back to the room.\\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "withNoShoes";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "withNoShoes";
     }
 
     public void CheckCabinets() {
@@ -2324,16 +2332,15 @@ public class Story {
                 "The longer you stare at it, the more real it looks, and the more you feel like you’re going to be sick. \\n\\n\n" +
                 "You shake your head, turning back to the rest of the room.\\n\\n\n" +
                 "You don’t have time for thoughts like that.\\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "withNoShoes";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "withNoShoes";
     }
 
     public void CheckFridge() {
@@ -2348,16 +2355,21 @@ public class Story {
                 "It wasn’t full when you left the kitchen before going to bed. In fact, it had been running low. \\n\\n\n" +
                 "You draw in a breath to try to steady yourself. You feel like you’re going to be sick.\\n\\n\n" +
                 "\n");
-        ui.choice1.setText("Leave kitchen without potion");
-        ui.choice2.setText("Leave kitchen with potion");
-        ui.choice3.setText(" Punch the old man ");
-        ui.choice4.setText("Use spellBook");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "withoutPotion";
-        game.position2= "withPotion";
-        game.position3 = "PunchOldMan";
-        game.position4 = "UseSpellBook";
+        ui.choice2.setText("Leave kitchen without potion");
+        ui.choice3.setText("Leave kitchen with potion");
+        ui.choice4.setText("Punch the old man ");
+        ui.choice5.setText("Use spellBook");
+
+        game.position2 = "withoutPotion";
+        game.position3= "withPotion";
+        game.position4 = "PunchOldMan";
+        game.position5 = "UseSpellBook";
     }
 
     //Leave kitchen (no potion)
@@ -2380,16 +2392,15 @@ public class Story {
                 "You can still move your arms, but your legs don’t want to run. \\n\\n\n" +
                 "As the old man slowly approaches you, clearly taking his time, you try to think of something - anything - you can do to save yourself.\\n\\n\n" +
                 "\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText(" ");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "PunchOldMan";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "PunchOldMan";
     }
 
     public void PunchOldMan() {
@@ -2408,16 +2419,15 @@ public class Story {
                 "\n" +
                 "Close, but no cigar! You’ve instead discovered one of the many ways to die in this game! It IS beatable, so since you’ve already gotten this far, I suggest you restart the game and try again! Maybe next time, you’ll be able to make it out!\\n\\n\n" +
                 "\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     public void UseSpellBook() {
@@ -2438,16 +2448,15 @@ public class Story {
                 "Gathering courage, you sprint down the cellar stairs as the old man angrily rounds the corner," +
                 " making surprisingly little noise as you do so. About halfway down the stairs, " +
                 "you watch as the invisibility begins to wear off, and you become corporeal again. \\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "withPotion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "withPotion";
     }
 
     //Leave kitchen (potion)
@@ -2459,16 +2468,17 @@ public class Story {
                 "You hear him approaching and realize you need to make a decision - now. \\n\\n\n" +
                 "What do you do?\\n\\n\n" +
                 "\n");
-        ui.choice1.setText("Hide in the cupboard");
-        ui.choice2.setText("Hide in the pantry");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "HideInCupboard"; // DEATH GAME OVER
-        game.position2= "HideInPantry";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Hide in the cupboard");
+        ui.choice5.setText("Hide in the pantry");
+
+        game.position4 = "HideInCupboard"; // DEATH GAME OVER
+        game.position5 = "HideInPantry";
     }
 
     //Hide in the cupboard
@@ -2481,16 +2491,15 @@ public class Story {
                 "\n" +
                 "Yeah, maybe next time try hiding somewhere you know you can fit. But on the bright side, you’ve discovered one of the many ways to die in this game! It IS possible to beat it, though, so if you want you can restart the game and try again!\\n\\n\n" +
                 "\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     //Hide in the pantry
@@ -2514,16 +2523,15 @@ public class Story {
                 "Here goes nothing.\\n\\n\n" +
                 "With that, you quietly descend the darkened cellar stairs.\\n\\n\n" +
                 "\n");
-        ui.choice1.setText("Run to The cellar");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "TheCellar";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText("Run to The cellar");
+
+        game.position5 = "TheCellar";
     }
 
     //TheCellar
@@ -2541,16 +2549,15 @@ public class Story {
                 "You glance at the door.\\n\\n\n" +
                 "You’re not sure if you could make it, but you sure could try.\\n\\n\n" +
                 "\n");
-        ui.choice1.setText("Run for the door");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "RunForTheDoor";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText("Run for the door");
+
+        game.position5 = "RunForTheDoor";
     }
 
     public void RunForTheDoor() {
@@ -2559,16 +2566,15 @@ public class Story {
                 "There stands the old man, a single hand extended with his fingers moving delicately as he puppeteers your body.\\n\\n\n" +
                 "You hear him begin to laugh as your legs move to carry you towards him.\\n\\n\n" +
                 "\n");
-        ui.choice1.setText("Hide among the bodies");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "HideAmongTheBodies"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText("Hide among the bodies");
+
+        game.position5 = "HideAmongTheBodies"; // DEATH GAME OVER
     }
 
     public void HideAmongTheBodies() {
@@ -2582,17 +2588,17 @@ public class Story {
                 "Suddenly, against your will, your limbs start...moving. You try to stop them but your arms begin to prop you up and your legs begin to stand until you’re fully on your feet, staring at the old man from across the room.\\n\\n\n" +
                 "“There you are,” he says with sickening sweetness, “I was beginning to think I’d lost you.”\\n\\n\n" +
                 "You regain control of your arms, but still your legs insist on moving forwards, and slowly you begin to walk towards the old man.\\n\\n\n");
-        ui.choice1.setText("Death (no matches and didn’t pet cat)"); //change transitions
-        ui.choice2.setText("Matches ending");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "iFNoMatches";
-        game.position2= "iFMatches";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice4.setText("Death (no matches and didn’t pet cat)"); //change transitions
+        ui.choice5.setText("Matches ending");
+
+        game.position4 = "iFNoMatches";
+        game.position5= "iFMatches";
     }
 
     public void iFNoMatches() {
@@ -2600,17 +2606,19 @@ public class Story {
                 "Your legs continue to walk towards the old man, stepping on and over the corpses of " +
                 "the old man’s past victims. You watch helplessly as his extended fingers move" +
                 " rhythmically with every step you take, pulling you ever closer.\\n\\n\n");
-        ui.choice1.setText("Fight against it (1)");
-        ui.choice2.setText("Fight against it (2)");
-        ui.choice3.setText("Fight against it (3)");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "Fight1"; // DEATH GAME OVER
-        game.position2= "Fight2";
-        game.position3 = "Fight3";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice3.setText("Fight against it (1)");
+        ui.choice4.setText("Fight against it (2)");
+        ui.choice5.setText("Fight against it (3)");
+
+        game.position3 = "Fight1"; // DEATH GAME OVER
+        game.position4 = "Fight2";
+        game.position5 = "Fight3";
     }
 
     public void Fight1() {
@@ -2619,17 +2627,15 @@ public class Story {
                 "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\\n\\n\n" +
                 "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time.”\\n\\n\n" +
                 "\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
 
         game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
     }
 
     public void Fight2() {
@@ -2637,17 +2643,15 @@ public class Story {
                 "“You know, I don’t usually remember the people I use to feed. Not very well, anyway. But you,” he grins, “I don’t see myself forgetting you for the next century at least.”\\n\\n\n" +
                 "You’re getting closer to the old man, and no matter what you do, you can’t seem to break the spell.\\n\\n\n" +
                 " \n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     public void Fight3() {
@@ -2656,17 +2660,15 @@ public class Story {
                 "With that, he withdraws his hand from your face and reaches into his robe. Before you can even process what he’s grabbed, he slices something over your throat and blood begins spewing outward. You simply stare at him in horror before you fall to your knees, then everything goes black. \\n\\n\\n\n" +
                 "Arrrggg you almost made it! So close! This game IS beatable, so since you made it this far you might as well restart and try again! " +
                 "Perhaps if you make some different choices, things will turn out better?\\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     //Matches ending
@@ -2677,17 +2679,15 @@ public class Story {
                 "The matches.\\n\\n\n" +
                 "You’d nearly forgotten that you’d taken them with you, but now, as you’re pulled inevitably towards your death, you wonder whether they might be of some use. \\n\\n\n" +
                 "What do you do?\\n\\n\n");
-        ui.choice1.setText("Try to use the matches");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice5.setText("Try to use the matches");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     //Try to use the matches
@@ -2699,65 +2699,62 @@ public class Story {
                 "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\\n\\n\n" +
                 "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,” he continues to chuckle, “I’d almost forgotten the thrill of the hunt.”\\n\\n\n" +
                 "\n");
-        ui.choice1.setText("lit matches"); //Give in (1)
-        ui.choice2.setText("Try again (1)");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "litMatches"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice4.setText("lit matches"); //Give in (1)
+        ui.choice5.setText("Try again (1)");
+
+        game.position4 = "litMatches"; // DEATH GAME OVER
+        game.position5 = ""; //???
     }
 
     //Run through hall
     public void RunThruHall() {
         ui.mainTextArea.setText("Death by blade");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     //room 9 - chamber (butler fight scene)
     public void room9Fight(){
         ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion";
     }
 
     //room 8 - hallway/stairway (no method for bathroom, just display)
     public void room8() {
         ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion";
     }
 
     /*********** FLOOR THREE *************/
