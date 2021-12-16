@@ -18,15 +18,12 @@ public class Game {
     public Game() {
         // Game calls this createUI(handler) method then call st.showTitleScreen()
         ui.createUI(handler);
-
         m.showTitleScreen();
-
     }
 
     public class TitleScreenHandler implements ActionListener {
 
         public void actionPerformed(ActionEvent event) {
-
             String makeChoice = event.getActionCommand();// if you click on choice 1 then the setActionCommand will be called on put into makeChoice.
             // eg. when the click on a choice 1 it will send this st.choosePosition(position1) to  choosePosition method in the Story class
             switch(makeChoice) {
@@ -50,11 +47,9 @@ public class Game {
                     st.choosePosition(position5);
                     break;
             }
-
-
-            }
         }
     }
+}
 
 
 
