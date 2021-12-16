@@ -71,7 +71,7 @@ public class Story {
             case "Murder": Murder(); break;
             case "backToBed": backToBed(); break;
             case "AttackOldMan": AttackOldMan(); break;
-            case "standStill": standStill();
+            case "standStill": standStill();break;
             case "offerToHelp": offerToHelp(); break;
             case "awkMoment": awkMoment(); break;
             case "startPlot": startPlot(); break;
@@ -110,7 +110,7 @@ public class Story {
             case "ExamineCoffeeTable": ExamineCoffeeTable();break;
             case "letterOpener": letterOpener();break;
             case "leaveLetterOpener": leaveLetterOpener();break;
-            case "ExamineFireplace": ExamineFireplace();
+            case "ExamineFireplace": ExamineFireplace();break;
             case "TakeMatches": TakeMatches();break;
             case "LeaveThere": LeaveThere();break;
             case "FightScene": FightScene();break;
