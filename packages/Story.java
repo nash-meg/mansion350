@@ -64,6 +64,7 @@ public class Story {
             case "sitNxtToOldman": sitNxtToOldman(); break;
             case "oldManCont": besideOldManCont();break;
             case "sitNxtMallory": sitNxtMallory(); break;
+            case "malloryCont": besideMalloryCont();break;
             case "goToSleep": goToSleep(); break;
             case "WillMissYouToo": WillMissYouToo(); break;
             case "StaySilent": StaySilent(); break;
@@ -595,7 +596,7 @@ public class Story {
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText("Say yes");
+        ui.choice5.setText("Say \"Yes\"");
 
         game.position5 = "oldManCont";
     }
@@ -657,8 +658,20 @@ public class Story {
                 "go down into the cellar, no matter the reason, lest you wish for your time here to end. Do you " +
                 "understand?\"\n\n" +
                 "\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't expect to feel " +
-                "over dinner, and instinct dictates that you respond as succinctly as possible.\n\n" + //TODO: NEW PAGE
-                "The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
+                "over dinner, and instinct dictates that you respond as succinctly as possible.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "malloryCont";
+    }
+
+    public void besideMalloryCont(){
+        ui.mainTextArea.setText("The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
                 "dissipating.\n\n" +
                 "\"It’s a wonderful place to be,\" the butler adds, \"and if you have any questions at all, " +
                 "feel free to ask me.\"\n\n" +
