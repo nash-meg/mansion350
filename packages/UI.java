@@ -127,7 +127,7 @@ public class UI {
 
         ImageLabel = new JLabel();
 
-       // image = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
+       //image = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
 
 
         ImageLabel.setIcon(image);
