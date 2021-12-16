@@ -62,6 +62,7 @@ public class Story {
             case "shakeHand": shakeHand(); break;
             case "contShakeHand": contShakeHand(); break;
             case "sitNxtToOldman": sitNxtToOldman(); break;
+            case "oldManCont": besideOldManCont();break;
             case "sitNxtMallory": sitNxtMallory(); break;
             case "goToSleep": goToSleep(); break;
             case "WillMissYouToo": WillMissYouToo(); break;
@@ -587,8 +588,20 @@ public class Story {
                 "throwing a warning glance towards the boy. \n\n" +
                 "\"-Any locked or boarded up doors are to stay that way. Above all, you are never allowed to go " +
                 "down into the cellar, no matter the reason, lest you wish for your time here to end. Do you " +
-                "understand?\"\n\n" + //TODO: NEW PAGE
-                "\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't expect to feel " +
+                "understand?\"\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText("Say yes");
+
+        game.position5 = "oldManCont";
+    }
+
+    public void besideOldManCont(){
+        ui.mainTextArea.setText("\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't expect to feel " +
                 "over dinner, and instinct dictates that you respond as succinctly as possible. \n\n" +
                 "The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
                 "suddenly dissipating.\n\n" +
