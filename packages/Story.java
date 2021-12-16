@@ -140,9 +140,6 @@ public class Story {
             case "unlabeledClearPotion":unlabeledClearPotion();break;
             case "ThrowBooks": ThrowBooks();break;
             case "GrabABook": GrabABook(); break;
-            case "ReadSpell": ReadSpell();break;
-            case "LookAhead":LookAhead();break;
-            case "StandThere": StandThere();break;
             case "ClimbBookshelf": ClimbBookshelf();break;
             case "UseLetterOpener":UseLetterOpener(); break;
         }
@@ -1914,7 +1911,7 @@ public class Story {
         ui.choice5.setVisible(false);
 
         ui.choice2.setText("Try climbing the bookshelf");
-        ui.choice3.setText("Throw books at the monster"); //Throw the books (pet/ignore cat)
+        ui.choice3.setText("Throw books at the monster");
         ui.choice4.setText("Start reading spells and pray");
 
         game.position2 = "ClimbBookshelf";
@@ -2000,85 +1997,97 @@ public class Story {
     }
 
     public void GrabABook() {
-        ui.mainTextArea.setText("Where you going to do now?");
+        if(pet){
+            ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. " +
+                    "You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, " +
+                    "you decide you can suspend your disbelief for the time being. \n\n" +
+                    "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly, " +
+                    "but you keep reading in the hopes that something will happen.\n\n" +
+                    "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell. " +
+                    "After a moment, you hear a thump onto the ground and a human cough. " +
+                    "When you’ve finished, you look up to find the butler crouched over on the ground, panting and coughing as if in pain. \n\n" +
+                    "Every logical bone in your body tells you to run, but for some reason you can’t bring yourself to leave him." +
+                    " So instead, you gently approach, crouching down to make sure he’s alright.\n\n" +
+                    "He places a hand on your shoulder, still breathing heavily as he almost seems to swallow back tears, \"Thank you,\" he says quietly.\n\n" +
+                    "You help him to his feet and he begins shaking his head, " +
+                    "\"No,\" he mutters firmly, \"Get out of here. Before I have to change back.\" " +
+                    "He points to the door on the other side of the room, " +
+                    "\"That room is enchanted with a barrier that I can’t cross. Go in, and you’ll be safe from me,\" he pauses, " +
+                    "softening a little, \"I don’t want to hurt you, kid.\"\n\n" +
+                    "You nod, turning and running towards the door. \n\n" +
+                    "As you turn, you hear his parting words, \"Good luck. Get out of this place if you can.\"\n\n" +
+                    "From behind you, you hear the butler begin to transform once more, crying out in pain as his wails turn to growls." +
+                    " Once you’re in the room, you hazard one last glance at his distorted, half-changed form" +
+                    " before shutting the door and praying he was right. \n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(false);
+            ui.choice5.setVisible(true);
 
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
-        ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
+            ui.choice5.setText(">");
 
-        ui.choice3.setText("Read spell"); //Grab a book and start reading spells (pet cat)
-        ui.choice4.setText("Look ahead"); //Grab a book and start reading spells (ignore cat)
-        ui.choice5.setText("Stand there");
+            game.position5 = "room10";
+        }
+        else if (ignore){
+            ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. " +
+                    "You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, " +
+                    "you decide you can suspend your disbelief for the time being. \n\n" +
+                    "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly," +
+                    " but you keep reading in the hopes that something will happen.\n\n" +
+                    "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell." +
+                    " When you’ve finished, you look up to find the creature frozen mid-lunge, clearly trying to move but completely unable. \n\n" +
+                    "Not sure how long the spell lasts, you waste no time bolting into the door on the other side of the room and slamming the door shut." +
+                    " You listen as the spell wears off, expecting the creature to run into the room, but instead you hear him simply lumber out into the hallway." +
+                    " A little confused but ultimately relieved, " +
+                    "you turn to examine the room you’ve just entered.\n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(false);
+            ui.choice5.setVisible(true);
 
-        game.position3 = "ReadSpell"; // DEATH GAME OVER
-        game.position4 = "LookAhead";
-        game.position5 = "StandThere";
-    }
+            ui.choice5.setText(">");
 
-    //Grab a book and start reading spells (pet cat)
-    public void ReadSpell() {
-        ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
-                "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly, but you keep reading in the hopes that something will happen.\\n\\n\n" +
-                "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell. After a moment, you hear a thump onto the ground and a human cough. When you’ve finished, you look up to find the butler crouched over on the ground, panting and coughing as if in pain. \\n\\n\n" +
-                "Every logical bone in your body tells you to run, but for some reason you can’t bring yourself to leave him. So instead, you gently approach, crouching down to make sure he’s alright. \\n\\n\n" +
-                "He places a hand on your shoulder, still breathing heavily as he almost seems to swallow back tears, “Thank you,” he says quietly. \\n\\n\n" +
-                "You help him to his feet and he begins shaking his head, “No,” he mutters firmly, “Get out of here. Before I have to change back.” He points to the door on the other side of the room, “That room is enchanted with a barrier that I can’t cross. Go in, and you’ll be safe from me,” he pauses, softening a little, “I don’t want to hurt you, kid.”\\n\\n\n" +
-                "You nod, turning and running towards the door. As you turn, you hear his parting words, “Good luck. Get out of this place if you can.” \\n\\n\n" +
-                "From behind you, you hear the butler begin to transform once more, crying out in pain as his wails turn to growls. Once you’re in the room, you hazard one last glance at his distorted, half-changed form" +
-                " before shutting the door and praying he was right. \\n\\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
+            game.position5 = "room10";
+        }
+        else if (kick){
+            ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell." +
+                    " You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, " +
+                    "you decide you can suspend your disbelief for the time being.\n\n" +
+                    "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly, " +
+                    "but you keep reading in the hopes that something will happen.\n\n" +
+                    "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell.\n\n" +
+                    "When you’re finished reading, however, you look up to find that you have made a grave mistake. " +
+                    "Before you stands the beast, but something’s different. It’s taller now, and has to hunch to avoid hitting the ceiling. " +
+                    "Its claws are larger, and as it looms over you, it seems to prepare for something. \n\n" +
+                    "You watch, frozen with fear, as it draws in a deep breath and slowly spreads its arms. " +
+                    "As it does so, you notice its chest beginning to move as well. To stretch. To rip. " +
+                    "It only winces as white bone breaks through the fur: ribs, spreading and tearing its sternum until it bursts open, " +
+                    "causing the creature to throw its head back in what is either pain or ecstasy. " +
+                    "Inside there aren't guts or entrails. It’s just...empty. A void that seems to continue on past the bounds of the monster’s body.\n\n" +
+                    "Its head snaps forward and it lets out a loud, bellowing roar. " +
+                    "Adrenaline rushes through your veins as your terror is sent into overdrive. " +
+                    "Not sure what else you can do, you try to sprint for the door. Perhaps its size has slowed it.\n\n" +
+                    "As you try to run, however, you feel something pulling you back. You try to fight against it, " +
+                    "but the faster you run the harder it pulls, until suddenly your feet lift from the ground and you fly towards the gaping void." +
+                    " You reach desperately for something - anything - that you can grab onto, but your hands are sweaty from stress and slip from everything you " +
+                    "try to grasp onto.\n\n" +
+                    "You pass helplessly into the belly of the beast, and watch as its chest closes, blocking out all light as you’re swallowed whole by the void. \n\n" +
+                    "\n" +
+                    "Yikes! You discovered one of the many ways to die in this game!" +
+                    " It IS beatable, so if you want, you can restart and try again. A word of advice before you go though:" +
+                    " maybe don’t kick the cat next time. \n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(false);
+            ui.choice5.setVisible(true);
 
-        ui.choice5.setText(">");
+            ui.choice5.setText(">");
 
-        game.position5 = "room10"; // fix later
-    }
-
-    //Grab a book and start reading spells (ignore cat)
-    public void LookAhead() {
-        ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
-                "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly, but you keep reading in the hopes that something will happen.\\n\\n\n" +
-                "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell. When you’ve finished, you look up to find the creature frozen mid-lunge, clearly trying to move but completely unable. \\n\\n\n" +
-                "Not sure how long the spell lasts, you waste no time bolting into the door on the other side of the room and slamming the door shut. You listen as the spell wears off, expecting the creature to run into the room, but instead you hear him simply lumber out into the hallway. A little confused but ultimately relieved, " +
-                "you turn to examine the room you’ve just entered.\\n\\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "room10"; // fit later
-    }
-
-    //Grab a book and start reading spells (kick cat)
-    public void StandThere() {
-        ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
-                "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly, but you keep reading in the hopes that something will happen.\\n\\n\n" +
-                "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell.\\n\\n\n" +
-                "When you’re finished reading, however, you look up to find that you have made a grave mistake. Before you stands the beast, but something’s different. It’s taller now, and has to hunch to avoid hitting the ceiling. Its claws are larger, and as it looms over you, it seems to prepare for something. \\n\\n\n" +
-                "You watch, frozen with fear, as it draws in a deep breath and slowly spreads its arms. As it does so, you notice its chest beginning to move as well. To stretch. To rip. It only winces as white bone breaks through the fur: ribs,  spreading and tearing its sternum until it bursts open, causing the creature to throw its head back in what is either pain or ecstasy. Inside there aren’t guts or entrails. It’s just empty. A void that seems to continue on past the bounds of the monster’s body.\\n\\n\n" +
-                "Its head snaps forward and it lets out a loud, bellowing roar. Adrenaline rushes through your veins as your terror is sent into overdrive. Not sure what else you can do, you try to sprint for the door. Perhaps its size has slowed it.\\n\\n\n" +
-                "As you try to run, however, you feel something pulling you back. You try to fight against it, but the faster you run the harder it pulls, until suddenly your feet lift from the ground and you fly towards the gaping void. You reach desperately for something - anything - that you can grab onto, but your hands are sweaty from stress and slip from everything you try to grasp onto.\\n\\n\n" +
-                "You pass helplessly into the belly of the beast, and watch as its chest closes, blocking out all light as you’re swallowed whole by the void. \\n\\n\\n\n" +
-                "\n" +
-                "Yikes! You discovered one of the many ways to die in this game! It IS beatable, so if you want, you can restart and try again. A word of advice before you go though:" +
-                " maybe don’t kick the cat next time. \\n\\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "theMansion"; // DEATH GAME OVER
+            game.position5 = "theMansion";
+        }
     }
 
     //Use letter opener (if have)
