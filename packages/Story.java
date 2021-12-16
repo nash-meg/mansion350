@@ -1506,11 +1506,14 @@ public class Story {
     //Ignore the cat
     public void IgnoreCat() {
         ignore = true;
-        ui.mainTextArea.setText("You don’t pay the cat any mind as it approaches you, sniffing you a little and then wandering off to do its own thing. You instead move to examine the room. \\n\\n\n" +
-                "To one wall is a bookcase, laden with various titles that appear to be rather esoteric. \\n\\n\n" +
-                "To an adjacent wall is an unlit fireplace that looks recently used. It seems to have a few small items on its mantel, but it’s too far away for you to properly see what’s on it. \\n\\n\n" +
-                "In the middle of the room, surrounded by couches, sits a coffee table. It’s peppered with pens and paper and various other writing materials, including what looks like a feather pen.\\n\\n\n" +
-                "What do you do? \\n\\n\n");
+        ui.mainTextArea.setText("You don’t pay the cat any mind as it approaches you, sniffing you a little and then wandering off to do its own thing. " +
+                "You instead move to examine the room. \n\n" +
+                "To one wall is a bookcase, laden with various titles that appear to be rather esoteric. \n\n" +
+                "To an adjacent wall is an unlit fireplace that looks recently used. It seems to have a few small items on its mantel," +
+                " but it’s too far away for you to properly see what’s on it. \n\n" +
+                "In the middle of the room, surrounded by couches, sits a coffee table. " +
+                "It’s peppered with pens and paper and various other writing materials, including what looks like a feather pen.\n\n" +
+                "What do you do? \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(true);
@@ -1530,14 +1533,22 @@ public class Story {
     //Try to pet the cat
        public void PetCat() {
         pet = true;
-        ui.mainTextArea.setText("You crouch down and extend a hand as the cat approaches you, allowing it to sniff. It takes a moment, thoroughly smelling your hand and up your arm before deciding that you’re a friend, beginning to purr as it pushes its face through your fingers. You can’t help but smile a bit as it flops down in front of you, showing you its belly and staring at you expectantly. You chuckle a little, scratching it as it purrs. You’ve never been too much of a cat person, but you’d be lying if you didn’t admit that this one was rather cute. \\n\\n\n" +
-                "After a while, the cat reaches down and nips your hand to tell you that it has finished being pet for the time being, thank you very much, then stands, rubbing against your hand one more time before walking off. \\n\\n\n" +
-                "You smile as you, too, get to your feet, glancing around the room. \\n\\n\n" +
-                "To one wall is a bookcase so laden with various esoteric titles that some are stacked on the edges of the shelves for lack of space. A tiny book sits haphazardly on one of the shelves as if it was recently put back without much care. \\n\\n\n" +
-                "To an adjacent wall is an unlit fireplace that looks recently used. It seems to have a few small items on its mantel, but it’s too far away for you to properly see what’s on it. Still, a tiny box beside a decorative statue catches your eye.\n" +
-                "In the middle of the room, surrounded by couches, sits a coffee table. It’s peppered with pens and paper and various other writing materials, including what looks like a feather pen. It looks as though there’s something beneath the papers strewn across it, but you’d have to check to be sure.\\n\\n\n" +
-                "What do you do?\\n\\n\n" +
-                "\n");
+        ui.mainTextArea.setText("You crouch down and extend a hand as the cat approaches you, allowing it to sniff. " +
+                "It takes a moment, thoroughly smelling your hand and up your arm before deciding that you’re a friend, " +
+                "beginning to purr as it pushes its face through your fingers. " +
+                "You can’t help but smile a bit as it flops down in front of you, showing you its belly and staring at you expectantly." +
+                " You chuckle a little, scratching it as it purrs." +
+                " You’ve never been too much of a cat person, but you’d be lying if you didn’t admit that this one was rather cute. \n\n" +
+                "After a while, the cat reaches down and nips your hand to tell you that it has finished being pet for the time being, " +
+                "thank you very much, then stands, rubbing against your hand one more time before walking off. \n\n" +
+                "You smile as you, too, get to your feet, glancing around the room. \n\n" +
+                "To one wall is a bookcase so laden with various esoteric titles that some are stacked on the " +
+                "edges of the shelves for lack of space. A tiny book sits haphazardly on one of the shelves as if it was recently put back without much care. \n\n" +
+                "To an adjacent wall is an unlit fireplace that looks recently used. It seems to have a few small items on its mantel, but it’s too far away " +
+                "for you to properly see what’s on it. Still, a tiny box beside a decorative statue catches your eye.\n" +
+                "In the middle of the room, surrounded by couches, sits a coffee table. It’s peppered with pens and paper and various other writing materials," +
+                " including what looks like a feather pen. It looks as though there’s something beneath the papers strewn across it, but you’d have to check to be sure.\n\n" +
+                "What do you do?\n\n");
            ui.choice1.setVisible(false);
            ui.choice2.setVisible(true);
            ui.choice3.setVisible(true);
@@ -1557,16 +1568,25 @@ public class Story {
     // In room 9
     //Examine the bookcase
     public void ExamineBookcase() {
-        ui.mainTextArea.setText("You make your way over to the bookcase and begin to look it over. Various titles that sound more like fantasy than nonfiction scatter the shelves, such as:\\n\\n\n" +
-                "The Ins and Outs of Human Transmutation\\n\\n\n" +
-                "Binding the Bound: Ensuring Loyalty\\n\\n\n" +
-                "From Puppet to Puppeteer: Mind Control for Dummies\\n\\n \n" +
-                "And so on. \\n\\n\n" +
-                "An empty spot on the shelf catches your eye. It’s arranged in alphabetical order, and in the “I” section is a gap that, if you’ve interpreted this right, shouldn’t be there. There are plenty of books piled on the sides of the shelves and even on the floor that would fit well into the spot left open, but for some reason it’s empty. It’s as if a book had been taken out and never replaced. \\n\\n\n" +
-                "Your attention turns to another book not too far from the empty spot, thrown haphazardly onto the edge of the shelf as if it was put back in a rush. It’s tiny - barely bigger than your hand - and titled Invisibility on the Go: A Pocket Guide. You gingerly pick up the book and open it, finding that it seems to be exactly what the title implies: a guide on various methods to turn invisible on short notice.\\n\\n\n" +
-                "You sigh. An hour ago, you would have thought that for a man who focuses so much on the practical, the old man sure had a lot of impractical books. But now, after everything you’ve seen, there’s a part of you that wants to believe it. You can’t believe you’re thinking this, but perhaps the book could be helpful.\\n\\n\n" +
-                "Or perhaps you’re starting to lose it and the book is just that - a book. \\n\\n\n" +
-                "Do you decide to take it with you?\\n\\n\n");
+        ui.mainTextArea.setText("You make your way over to the bookcase and begin to look it over. " +
+                "Various titles that sound more like fantasy than nonfiction scatter the shelves, such as:\n\n" +
+                "The Ins and Outs of Human Transmutation\n\n" +
+                "Binding the Bound: Ensuring Loyalty\n\n" +
+                "From Puppet to Puppeteer: Mind Control for Dummies\n\n" +
+                "And so on. \n\n" +
+                "An empty spot on the shelf catches your eye. It’s arranged in alphabetical order," +
+                " and in the “I” section is a gap that, if you’ve interpreted this right, shouldn’t be there. " +
+                "There are plenty of books piled on the sides of the shelves and even on the floor that would fit well into the spot" +
+                " left open, but for some reason it’s empty. It’s as if a book had been taken out and never replaced.\n\n" +
+                "Your attention turns to another book not too far from the empty spot, thrown haphazardly onto the edge of the shelf" +
+                " as if it was put back in a rush. It’s tiny - barely bigger than your hand - and titled Invisibility on the Go:" +
+                " A Pocket Guide. You gingerly pick up the book and open it, finding that it seems to be exactly what the title implies: " +
+                "a guide on various methods to turn invisible on short notice.\n\n" +
+                "You sigh. An hour ago, you would have thought that for a man who focuses so much on the practical, " +
+                "the old man sure had a lot of impractical books. But now, after everything you’ve seen, there’s a part of you that wants to believe it." +
+                " You can’t believe you’re thinking this, but perhaps the book could be helpful.\n\n" +
+                "Or perhaps you’re starting to lose it and the book is just that - a book. \n\n" +
+                "Do you decide to take it with you?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -1674,7 +1694,7 @@ public class Story {
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Take matches\n");
+        ui.choice3.setText("Take matches");
         ui.choice4.setText("Leave them there");
         ui.choice5.setText("Go straight to fight scene"); //TODO is this the correct option??
 
