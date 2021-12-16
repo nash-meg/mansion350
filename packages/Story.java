@@ -2788,23 +2788,26 @@ public class Story {
     }
 
     public void UseSpellBook() {
-        ui.mainTextArea.setText("Suddenly, you remember the pocket guide you found in the room upstairs. In a flurry of frantic motion, you quickly grab it from your pocket and open to a random page. \\n\\n\n" +
-                "“Invisibility of Sight And Presence” the header reads. \\n\\n\n" +
-                "That’s good enough for you.\\n\\n\n" +
-                "You begin reading the spell aloud as fast as you can, throwing pronunciation to the wind.\\n\\n\n" +
-                "You hear the old man laugh, “That’s adorable. You really think I’d keep a book in tof spells that could harm me?”\\n\\n\n" +
-                "Your heart begins to race as you finish the first half of the page.\\n\\n\n" +
-                "“Go on,” the old man says, “finish your little incantation. See what it does.” You hear an amused scoff as he seemingly waits for you to finish reading. \\n\\n\n" +
-                "You can’t hide the smile that creeps across your face as the old man’s pride buys you time.\\n\\n\n" +
-                "As you say the last word, you watch your body disappear and the old man’s eyes  widen. \\n\\n\n" +
-                "You feel that your legs are able to move again, and quickly you drop the book, unsure if it turned invisible with you, bolting past the old man.\\n\\n\n" +
-                "You’re running on instinct now, and for a moment you simply stand there in the dining room, unsure of where to go.\\n\\n\n" +
-                "Then the stairs catch your eye. \\n\\n\n" +
-                "You don’t want to go down into the cellar, but you remember the butler saying something about a door down there, and perhaps that one might be your ticket out of here." +
-                " At the very least, there’s the possibility that the old man will check upstairs first.\\n\\n\n" +
+        ui.mainTextArea.setText("Suddenly, you remember the pocket guide you found in the room upstairs. " +
+                "In a flurry of frantic motion, you quickly grab it from your pocket and open to a random page.\n\n" +
+                "\"Invisibility of Sight And Presence\" the header reads. \n\n" +
+                "That’s good enough for you.\n\n" +
+                "You begin reading the spell aloud as fast as you can, throwing pronunciation to the wind.\n\n" +
+                "You hear the old man laugh, “That’s adorable. You really think I’d keep a book of spells in this house that could harm me?”\n\n" +
+                "Your heart begins to race as you finish the first half of the page.\n\n" +
+                "\"Go on,” the old man taunts,\" finish your little incantation." +
+                "See what it does.” You hear an amused scoff as he seemingly waits for you to finish reading. \n\n" +
+                "You can’t hide the smile that creeps across your face as the old man’s pride buys you time.\n\n" +
+                "As you say the last word, you watch your body disappear as the old man’s eyes widen. \n\n" +
+                "You feel that your legs are able to move again, and quickly you drop the book, unsure if it turned invisible with you, bolting past the old man.\n\n" +
+                "You’re running on instinct now, and for a moment you simply stand there in the dining room, unsure of where to go.\n\n" +
+                "Then the stairs catch your eye. \n\n" +
+                "You don’t want to go down into the cellar, but you remember the butler saying something about a door down there, " +
+                "and perhaps that one might be your ticket out of here." +
+                " At the very least, there’s the possibility that the old man will check upstairs first.\n\n" +
                 "Gathering courage, you sprint down the cellar stairs as the old man angrily rounds the corner," +
                 " making surprisingly little noise as you do so. About halfway down the stairs, " +
-                "you watch as the invisibility begins to wear off, and you become corporeal again. \\n\\n\n");
+                "you watch as the invisibility begins to wear off, and you become corporeal again. \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -2813,17 +2816,20 @@ public class Story {
 
         ui.choice5.setText(">");
 
-        game.position5 = "withPotion";
+        game.position5 = "TheCellar";
     }
 
     //Leave kitchen (potion)
     public void withPotion() {
-        ui.mainTextArea.setText("You move to leave the kitchen and head towards the front entrance - to freedom - when your eye catches something in the decorative mirror on the wall. It’s an image of the old man, stepping up from the cellar stairs in the dining room and turning towards the kitchen.\\n\\n\n" +
-                "You hear your heart begin to pound in your chest as you see his shadow advancing down the hallway. Desperately, you glance around the room for a place to hide.\\n\\n\n" +
-                "The pantry is definitely big enough for you to fit and closes rather silently, but it’s also a rather obvious hiding spot. \\n\\n\n" +
-                "You could also try hiding in the cupboard under the sink, but you’re honestly not sure if you’ll be able to fit.\\n\\n\n" +
-                "You hear him approaching and realize you need to make a decision - now. \\n\\n\n" +
-                "What do you do?\\n\\n\n" +
+        ui.mainTextArea.setText("You move to leave the kitchen and head towards the front entrance - " +
+                "to freedom - when your eye catches something in the decorative mirror on the wall. " +
+                "It’s an image of the old man, stepping up from the cellar stairs in the dining room and turning towards the kitchen.\n\n" +
+                "You hear your heart begin to pound in your chest as you see his shadow advancing down the hallway. " +
+                "Desperately, you glance around the room for a place to hide.\n\n" +
+                "The pantry is definitely big enough for you to fit and closes rather silently, but it’s also a pretty obvious hiding spot. \n\n" +
+                "You could also try hiding in the cupboard under the sink, but you’re honestly not sure if you’ll be able to fit.\n\n" +
+                "You hear him approaching and realize you need to make a decision - now. \n\n" +
+                "What do you do?\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2840,13 +2846,18 @@ public class Story {
 
     //Hide in the cupboard
     public void HideInCupboard() {
-        ui.mainTextArea.setText("You crouch down and try to squeeze yourself into the cupboard, but it’s a much tighter fit than you expected. You can get the left half of your body in, but you can’t seem to scrunch down enough to get your head inside, which is a problem.\\n\\n\n" +
-                "You watch fearfully as the old man enters the room as you sit there, only half inside your hiding spot. \\n\\n\n" +
-                "He stops, looking directly at you and laughing, “You’re not the best at hiding, are you?”\n" +
-                "You feel your muscles tighten against your will, and your body begins to stand.\\n\\n\n" +
-                "Once you’re on your feet, the old man smiles. With a flick of his hand, your neck dislodges from your spine and everything goes black.\\n\\n\\n\n" +
+        ui.mainTextArea.setText("You crouch down and try to squeeze yourself into the cupboard," +
+                " but it’s a much tighter fit than you expected. " +
+                "You can get the left half of your body in, but you can’t seem to scrunch down enough to get your head inside, which is a problem.\n\n" +
+                "You watch fearfully as the old man enters the room as you sit there, only half inside your hiding spot. \n\n" +
+                "He stops, looking directly at you and laughing, “I see you're not one for hide and seek.”\n\n" +
+                "You feel your muscles tighten against your will, and your body begins to stand.\n\n" +
+                "Once you’re on your feet, the old man smiles. " +
+                "With a flick of his hand, your neck dislodges from your spine and everything goes black.\n\n" +
                 "\n" +
-                "Yeah, maybe next time try hiding somewhere you know you can fit. But on the bright side, you’ve discovered one of the many ways to die in this game! It IS possible to beat it, though, so if you want you can restart the game and try again!\\n\\n\n" +
+                "Yeah, maybe next time try hiding somewhere you know you can fit. " +
+                "But on the bright side, you’ve discovered one of the many ways to die in this game! I" +
+                "t IS possible to beat it, though, so if you want you can restart the game and try again!\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2861,24 +2872,34 @@ public class Story {
 
     //Hide in the pantry
     public void HideInPantry() {
-        ui.mainTextArea.setText("You tiptoe into the pantry and close it as silently as possible. There’s a knob on both sides of the door, so doing so is rather easy. You sit there, breathing heavily among the snacks and dry goods, praying that he doesn’t find you.\\n\\n\n" +
-                "Light begins to flood in under the crack in the door as the old man flicks the kitchen light on.\\n\\n\n" +
-                "His shadow passes under the door as well, and at first you think he’s going to the fridge, seeing as it’s right in front of the pantry. But there is no sound of the fridge opening.\\n\\n\n" +
-                "Instead, the shadow simply stops in front of the pantry.\\n\\n\n" +
-                "You can hear him breathing on the other side of the door, and you do your best to muffle your own panicked breaths. Your heart pounds so loudly in your chest that part of you is scared he’ll hear. \\n\\n\n" +
-                "You hear the jingle of knob, and watch as it slowly starts to turn.\\n\\n\n" +
-                "You close your eyes, trying to hold back tears as you will the knob to stop turning.\\n\\n\n" +
-                "And then suddenly there’s the sound of the knob snapping back into place as your eyes fly back open. \\n\\n\n" +
-                "There’s a thump from upstairs, and you watch as the old man’s shadow quickly turns, then the stairs begin to creak as he presumably climbs them, flicking off the light as he leaves.\\n\\n\n" +
-                "You wait a moment to be sure he’s gone before opening the pantry door ever so slightly and peeking out, still somewhat in disbelief that you weren’t found.  \\n\\n\n" +
-                "Slowly you make your way out of the kitchen and start heading towards the door to the front entrance.\\n\\n\n" +
-                "Just as you begin to creep through the dining room, however, you hear a squeak from the stairs and realize that the old man is coming back down. \\n\\n \n" +
-                "For a moment, you freeze. \\n\\n\n" +
-                "You know you won’t be able to make it all the way down the hallway to the door without him catching you. Not when you’re still this close to the kitchen. What’s more, you’re not about to test your luck hiding a second time. Not that there’s really anywhere you could hide in the dining room anyway. \\n\\n\n" +
-                "Your attention turns to the cellar stairs. You know that there’s also a door at the back of the cellar, and those stairs don’t creak.\\n\\n\n" +
-                "Drawing in a breath, you hazard one last glance towards the kitchen.\\n\\n\n" +
-                "Here goes nothing.\\n\\n\n" +
-                "With that, you quietly descend the darkened cellar stairs.\\n\\n\n" +
+        ui.mainTextArea.setText("You tiptoe into the pantry and close it as silently as possible." +
+                " There’s a knob on both sides of the door, so doing so is rather easy. " +
+                "You sit there, breathing heavily among the snacks and dry goods, praying that he doesn't find you.\n\n" +
+                "Light begins to flood under the crack between the door and the tile as the old man flicks on the kitchen light.\n\n" +
+                "His shadow passes under the door as well, and at first you think he’s going to the fridge, seeing as it’s right in front of the pantry.\n\n " +
+                "But there is no sound of the fridge opening.\n\n" +
+                "Instead, the shadow simply stops in front of the pantry.\n\n" +
+                "You can hear him breathing on the other side of the door, and you do your best to muffle your own panicked breaths." +
+                " Your heart pounds so loudly in your chest that part of you is scared he’ll hear. \n\n" +
+                "You hear the jingle of knob, and watch as it slowly starts to turn.\n\n" +
+                "You close your eyes, trying to hold back tears as you will the knob to stop turning.\n\n" +
+                "And then suddenly there’s the sound of the knob snapping back into place as your eyes fly back open. The door is still closed. \n\n" +
+                "There’s a thump from upstairs, and you watch as the old man’s shadow quickly turns, " +
+                "then the stairs begin to creak as he presumably climbs them, flicking off the light as he leaves.\n\n" +
+                "You wait a moment to be sure he’s gone before opening the pantry door ever so slightly and peeking out," +
+                " still somewhat in disbelief that you weren't found.  \n\n" +
+                "Slowly you make your way out of the kitchen and start heading towards the door to the front entrance.\n\n" +
+                "Just as you begin to creep through the dining room, however, you hear a squeak from the stairs and realize that the old man is coming back down. \n\n" +
+                "For a moment, you freeze. \n\n" +
+                "You know you won’t be able to make it all the way down the hallway to the door without him catching you. " +
+                "Not when you’re still this close to the kitchen. " +
+                "What’s more, you’re not about to test your luck hiding a second time." +
+                " Not that there’s really anywhere you could hide in the dining room anyway.\n\n" +
+                "Desperate, your attention turns to the cellar stairs. " +
+                "You know that there’s also a door at the back of the cellar, and those stairs don’t creak.\n\n" +
+                "Drawing in a breath, you hazard one last glance towards the kitchen.\n\n" +
+                "Here goes nothing.\n\n" +
+                "With that, you descend the darkened stairs down to the cellar.\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2886,7 +2907,7 @@ public class Story {
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText("Run to The cellar");
+        ui.choice5.setText(">");
 
         game.position5 = "TheCellar";
     }
