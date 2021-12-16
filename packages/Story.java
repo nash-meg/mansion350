@@ -134,10 +134,11 @@ public class Story {
             case "withShoes":withShoes();break;
             case "withNoShoes":withNoShoes();break;
             case "knifeDrawer":knifeDrawer();break;
-            case "LeaveKitchen":CheckCabinets();break;
+            case "CheckCabinets":CheckCabinets();break;
             case "CheckFridge":CheckFridge();break;
             case "withoutPotion": withoutPotion();break;
             case "PunchOldMan": PunchOldMan();break;
+            case "dontPunch": dontPunch();break;
             case "UseSpellBook": UseSpellBook(); break;
             case "withPotion":withPotion();break;
             case "HideInCupboard": HideInCupboard();break;
@@ -2481,7 +2482,7 @@ public class Story {
     }
 
     public void goToBathroom() {
-        ui.mainTextArea.setText("You go into the bathroom and take a piss before washing your hands and heading back out into the hallway.\n\n");
+        ui.mainTextArea.setText("You go into the bathroom and take a much-needed piss before washing your hands and heading back out into the hallway.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2573,7 +2574,13 @@ public class Story {
         game.position2 = "knifeDrawer";
         game.position3= "CheckCabinets";
         game.position4 = "CheckFridge";
-        game.position5 = "LeaveKitchen";
+        if(purpPotion){
+            game.position5 = "withPotion";
+        }
+        else if (!purpPotion){
+            game.position5 = "withoutPotion";
+        }
+
     }
 
     public void knifeDrawer() {
@@ -2599,40 +2606,65 @@ public class Story {
 
         game.position3= "CheckCabinets";
         game.position4 = "CheckFridge";
-        game.position5 = "LeaveKitchen";
+        if(purpPotion){
+            game.position5 = "withPotion";
+        }
+        else if (!purpPotion){
+            game.position5 = "withoutPotion";
+        }
+
     }
 
     public void CheckCabinets() {
-        ui.mainTextArea.setText("You open the cabinets knowing that there probably won’t be much of use in them, but figure it can’t hurt to check.\\n\\n\n" +
-                "You find the usual: plates, cups, bowls, etc. \\n\\n\n" +
-                "You also find a skull that, up until that point, you had assumed to be decorative. It had been there since you moved in, and seeing as the old man seemed to have a taste for morbid decor, you hadn’t questioned it. Now, though, after everything you’ve seen, you can’t help but wonder whether it’s real.\\n\\n\n" +
-                "It’s not a pure white - rather a dirty yellow that’s darker in some areas. It’s missing a tooth, and some of the ones it does have are chipped.\\n\\n\n" +
-                "The longer you stare at it, the more real it looks, and the more you feel like you’re going to be sick. \\n\\n\n" +
-                "You shake your head, turning back to the rest of the room.\\n\\n\n" +
-                "You don’t have time for thoughts like that.\\n\\n\n");
+        ui.mainTextArea.setText("You open the cabinets knowing that there probably won’t be much of use in them, but figure it can’t hurt to check.\n\n" +
+                "You find the usual: plates, cups, bowls, etc. \n\n" +
+                "You also find a skull that, up until that point, you had assumed to be decorative." +
+                " It had been there since you moved in, and seeing as the old man seemed to have a taste for morbid decor, " +
+                "you hadn't questioned it. Now, though, after everything you’ve seen, you can’t help but wonder whether it’s real.\n\n" +
+                "It’s not a pure white - rather a dirty yellow that’s darker in some areas. " +
+                "It’s missing a tooth, and some of the ones it does have are chipped.\n\n" +
+                "The longer you stare at it, the more real it looks, and the more you feel like you’re going to be sick. \n\n" +
+                "You shake yourself, turning back to the rest of the room.\n\n" +
+                "You don’t have time for thoughts like that.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText(">");
+        ui.choice3.setText("Search the knife drawer");
+        ui.choice4.setText("Check the fridge");
+        ui.choice5.setText("Leave the kitchen");
 
-        game.position5 = "withNoShoes";
+        game.position3= "knifeDrawer";
+        game.position4 = "CheckFridge";
+        if(purpPotion){
+            game.position5 = "withPotion";
+        }
+        else if (!purpPotion){
+            game.position5 = "withoutPotion";
+        }
+
     }
 
     public void CheckFridge() {
-        ui.mainTextArea.setText("You cautiously approach the fridge, staring at the bloody handprint. \\n\\n\n" +
-                "The old man doesn’t strike you as the kind to be so careless.\\n\\n\n" +
-                "You pause a moment, working up the courage to open the fridge door and look inside, terrified of what you might find. \\n\\n\n" +
-                "Finally, drawing in a breath, you open the door. You flinch as the fridge light jars your eyes for a moment. You always forget that there’s a light in there.\\n\\n\n" +
-                "When your eyes adjust, it at first looks as though there’s nothing out of the ordinary. It’s the usual food items and milks and cheeses and such. You likely wouldn’t have noticed the tiny droplets of red around the jar of beet juice if you hadn’t been looking. Nor the handprint on the outside of it. Nor the thick, partially-congealed droplets overflowing from the top despite the lid.\\n\\n\n" +
-                "You continue to stare at the large glass jar as realization horrifyingly dawns.\\n\\n\n" +
-                "That’s not beet juice.\\n\\n\n" +
-                "The thick red substance that he drank with every meal and claimed ‘kept his mind sharp’ was not beet juice.\\n\\n\n" +
-                "It wasn’t full when you left the kitchen before going to bed. In fact, it had been running low. \\n\\n\n" +
-                "You draw in a breath to try to steady yourself. You feel like you’re going to be sick.\\n\\n\n" +
-                "\n");
+        ui.mainTextArea.setText("You cautiously approach the fridge, staring at the bloody handprint. \n\n" +
+                "The old man doesn't strike you as the kind to be so careless.\n\n" +
+                "You pause a moment, working up the courage to open the fridge door and look inside," +
+                " terrified of what you might find. \n\n" +
+                "Finally, drawing in a breath, you open the door. " +
+                "You flinch as the fridge light jars your eyes for a moment. " +
+                "You always forget that there’s a light in there.\n\n" +
+                "When your eyes adjust, it at first looks as though there’s nothing out of the ordinary. " +
+                "It’s the usual food items and milks and cheeses and such. " +
+                "You likely wouldn't have noticed the tiny droplets of red around the jar of beet juice if you hadn't been looking. " +
+                "Nor the handprint on the outside of it. " +
+                "Nor the thick, partially-congealed droplets overflowing from the top despite the lid.\n\n" +
+                "You continue to stare at the large glass jar as realization horrifyingly dawns.\n\n" +
+                "That’s not beet juice.\n\n" +
+                "The thick red substance that he drank with every meal and claimed ‘kept his mind sharp’ was not beet juice.\n\n" +
+                "It wasn't full when you left the kitchen before going to bed. In fact, it had been running low. \n\n" +
+                "You draw in a breath to try to steady yourself. You feel like you’re going to be sick.\n\n" );
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(true);
@@ -2644,10 +2676,15 @@ public class Story {
         ui.choice4.setText("Punch the old man ");
         ui.choice5.setText("Use spellBook");
 
-        game.position2 = "withoutPotion";
-        game.position3= "withPotion";
-        game.position4 = "PunchOldMan";
-        game.position5 = "UseSpellBook";
+        game.position3= "knifeDrawer";
+        game.position4 = "CheckCabinets";
+        if(purpPotion){
+            game.position5 = "withPotion";
+        }
+        else if (!purpPotion){
+            game.position5 = "withoutPotion";
+        }
+
     }
 
     //Leave kitchen (no potion)
@@ -2672,30 +2709,72 @@ public class Story {
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
+        if (littleBook){
+            ui.choice3.setVisible(true);
+        }
+        else if (!littleBook){
+            ui.choice3.setVisible(false);
+        }
+
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice3.setText("Use spellbook");
+        ui.choice4.setText("Try to punch the old man");
+        ui.choice5.setText("Accept your fate");
+
+        game.position3 = "UseSpellBook";
+        game.position4 = "PunchOldMan";
+        game.position5 = "dontPunch";
+    }
+
+    public void dontPunch(){
+        ui.mainTextArea.setText("As you watch him approach, however, you realize that there's nothing you can do to save yourself.\n\n" +
+                "He is some kind of extremely powerful being and you are a measly human who happened to get caught up in his perverted game.\n\n" +
+                "Perhaps it's better this way, you decide. At least now it'll likely be quick.\n\n"+
+                "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out from the kitchen with great urgency.\n\n" +
+                "For a moment, a part of you begins to hope that he might-- \n\n" +
+                "The old man lets out an annoyed sigh, snapping his fingers, “You stay there, Silas.”\n\n" +
+                "The butler freezes as the old man continues, “I won’t have your sympathy getting in my way.”\n\n" +
+                "The old man turns his attention back to you and places a hand on your cheek, still grinning wildly." +
+                " You watch as he passes his tongue over his teeth, drawing in a hissing breath before he snaps his fingers. " +
+                "In an instant your legs buckle under you and you fall to the ground, smashing your head on the wall as everything goes black.\n\n" +
+                "\n" +
+                "Damn, you really just gave up, huh? Now, you’ve discovered one of the many ways to die in this game!" +
+                " It IS beatable, so since you’ve already gotten this far, I suggest you restart the game and try again! " +
+                "Don't give up, pal!\n\n" +
+                "\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
         ui.choice5.setText(">");
 
-        game.position5 = "PunchOldMan";
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
-
     public void PunchOldMan() {
-        ui.mainTextArea.setText("Unsure of what else to do, you wait for the old man to get close as he continues rambling about how he had hoped you would “last longer”, as he puts it. \\n\\n\n" +
-                "When he’s within arms reach, you waste no time raising your fist and swing it at the old man, landing squarely on his left eye.\\n\\n\n" +
-                "He staggers backwards and for a moment, clutching his eye, and in an instant you can move again. \\n\\n\n" +
-                "However, triumph is short-lived.\\n\\n\n" +
-                "As quickly as you regain mobility, you lose it again, and this time your entire body goes stiff.\\n\\n\n" +
-                "The old man, still facing away from you, begins...laughing.\\n\\n\n" +
-                "It starts out quiet, but grows until it echoes through the otherwise silent halls of the mansion.\\n\\n\n" +
-                "He turns to you, grinning, “You’re going to be fun.”\\n\\n\n" +
-                "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out from the kitchen with great urgency. \n" +
-                "The old man lets out an annoyed sigh, snapping his fingers, “You stay there, Silas.”\n" +
-                "The butler freezes as the old man continues, “I won’t have your sympathy getting in my way.”\\n\\n\n" +
-                "The old man places a hand on your cheek, still grinning wildly. You watch as he passes his tongue over his teeth, drawing in a hissing breath before he snaps his fingers. In an instant your legs buckle under you and you fall to the ground, smashing your head on the wall as everything goes black.\\n\\n\\n\n" +
+        ui.mainTextArea.setText("Unsure of what else to do, " +
+                "you wait for the old man to get close as he continues rambling about how he had hoped you would “last longer”, as he puts it. \n\n" +
+                "When he’s within arms reach, you waste no time raising your fist and swing it at the old man, landing squarely on his left eye.\n\n" +
+                "He staggers backwards and for a moment, clutching his face, and in an instant you can move again. \n\n" +
+                "However, triumph is short-lived.\n\n" +
+                "As quickly as you regain mobility, you lose it again, and this time your entire body goes stiff.\n\n" +
+                "The old man, still facing away from you, begins...laughing.\n\n" +
+                "It starts out quiet, but grows until it echoes through the otherwise silent halls of the mansion.\n\n" +
+                "He turns to you, grinning, “You’re going to be fun.”\n\n" +
+                "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out from the kitchen with great urgency. \n\n" +
+                "For a moment, a part of you begins to hope that he might-- \n\n" +
+                "The old man lets out an annoyed sigh, snapping his fingers, “You stay there, Silas.”\n\n" +
+                "The butler freezes as the old man continues, “I won’t have your sympathy getting in my way.”\n\n" +
+                "The old man places a hand on your cheek, still grinning wildly. " +
+                "You watch as he passes his tongue over his teeth, drawing in a hissing breath before he snaps his fingers." +
+                " In an instant your legs buckle under you and you fall to the ground, smashing your head on the wall as everything goes black.\n\n" +
                 "\n" +
-                "Close, but no cigar! You’ve instead discovered one of the many ways to die in this game! It IS beatable, so since you’ve already gotten this far, I suggest you restart the game and try again! Maybe next time, you’ll be able to make it out!\\n\\n\n" +
+                "Close, but no cigar! You’ve instead discovered one of the many ways to die in this game! " +
+                "It IS beatable, so since you’ve already gotten this far, I suggest you restart the game and try again! " +
+                "Maybe next time, you’ll be able to make it out!\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
