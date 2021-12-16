@@ -116,6 +116,7 @@ public class Story {
             case "FightScene": FightScene();break;
             case "RunThruHall": RunThruHall(); break;
             case "DuckingDown": DuckingDown();break;
+            case "continue9": room9Cont();break;
             case "JumpOutWay": JumpOutWay();break;
             case "room10": room10();break;
             case "purplePotion":purplePotion();break;
@@ -1466,8 +1467,20 @@ public class Story {
                 "You can credit your imagination for a lot of things, but that’s certainly not one of them. \n\n" +
                 "As you pin yourself to the wall, your shoulder hits the lightswitch and the overhead lights of the room flick on.\n\n" +
                 "You watch once your eyes adjust to the light as the cat darts away from you, stopping and staring at you from the center of the room.\n\n" +
-                "There’s no one else there.\n\n" + //TODO: NEW PAGE
-                "You stand there a moment, panting. Perhaps it really was your imagination. " +
+                "There’s no one else there.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "continue9";
+    }
+
+    public void room9Cont(){
+        ui.mainTextArea.setText("You stand there a moment, panting. Perhaps it really was your imagination. " +
                 "You stare at the cat as it sits and stares back at you, its shadow extending towards you a great deal further than you feel it should. " +
                 "You feel like you’re going insane. \n\n" +
                 "The cat approaches you cautiously. \n\n" +
