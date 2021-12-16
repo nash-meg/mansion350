@@ -1,5 +1,4 @@
 package packages;
-import javax.swing.*;
 import java.io.File;
 
 public class Story {
@@ -8,7 +7,6 @@ public class Story {
     Game game;
     UI ui;
     map m;
-    //ImageIcon image;
     boolean shoes;
     boolean purpPotion;
     boolean  matches;
@@ -16,7 +14,6 @@ public class Story {
     boolean kick;
     boolean pet;
     boolean ignore;
-    private Object ImageIcon;
 
     // Constructor instantiate
     public Story(Game g,UI userInterface, map mDisplay){
@@ -31,21 +28,6 @@ public class Story {
         pet = false;
         ignore = false;
     }
-
-        ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon Cellar1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon Cellar2= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon Cellar3 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon Cellar4 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon Cellar5= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon HallBeforeRoom8 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon Hallway5a = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon Hallway5b = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon KitchenRoom11 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-        ImageIcon cannibalPlantRoom7 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-
 
     // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
@@ -171,42 +153,36 @@ public class Story {
                 "button to continue reading.\n\nThe one graphic you do get to reap the benefits of is a map. " +
                 "You can pull up this map during given opportunities by pressing the \"map\" button.\n\n" +
                 "We hope you enjoy, good luck, and don’t kick the cat.");
-        ui.choice1.setText("Begin");
-        ui.choice2.setText("Exit");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "towardsMansion"; //Continue to game
-        game.position2 = "ExitGame";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice4.setText("Begin");
+        ui.choice5.setText("Exit");
+
+        game.position4 = "towardsMansion"; //Continue to game
+        game.position5 = "ExitGame";
     }
 
     public void ExitGame(){
         ui.mainTextArea.setText("You may now close this window.");
-        ui.choice1.setText("");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
-
-        game.position1 = "";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(false);
     }
 
     public void towardsMansion(){
         ui.mainTextArea.setText("The man's hand feels heavy on your back as you are guided up the driveway " +
                 "against your better judgement.\n\n" +
-                "A large mansion (which you're quite sure is the only dwelling for miles) looms before you, " +
+                "A large mansion --which you're quite sure is the only dwelling for miles-- looms before you, " +
                 "decorated impeccably for Halloween. Cornstalks lean up against the pillars supporting the " +
                 "upper balconies, pumpkins and hay bales are scattered tastefully over the front porch, " +
-                "and a black cat sits somewhat ominously in the window by the door (though you're sure that " +
-                "the cat is more of a year-round affair).\n\n" +
+                "and a black cat sits somewhat ominously in the window by the door --though you're sure that " +
+                "the cat is more of a year-round affair.\n\n" +
                 "You stop a moment, simply staring and struggling to take in the fact that this is all " +
                 "real. Less than an hour ago, you had been on the streets, trying to scrounge whatever " +
                 "money you could to save up for a proper coat for the coming winter. Less than an hour " +
@@ -223,577 +199,668 @@ public class Story {
                 "\"Yes,\" you mutter quietly, too awestruck to properly compliment the place.\n\n" +
                 "The old man smiles, \"Welcome to Huxley Manor,\" he says with a sweeping gesture before " +
                 "guiding you to the thick oaken front door.\n\n");
-        ui.choice1.setText("Go inside");
-        ui.choice2.setText("Leave");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setText("Go inside");
+        ui.choice5.setText("Leave");
 
-        game.position1 = "GoInsideMansion";
-        game.position2= "leaveMansion";
+        game.position4 = "GoInsideMansion";
+        game.position5= "leaveMansion";
     }
 
     public void leaveMansion(){
         ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setText(">");
 
-        game.position1 = "GoInsideMansion";
+        game.position5 = "GoInsideMansion";
     }
 
     public void GoInsideMansion(){
         ui.mainTextArea.setText("The old man claps twice and the doors slowly creak open to reveal an ornate " +
-                "hallway with beautiful vintage-looking wallpaper and dark wooden floors. \n\nAs he guides you "
-                + "through, you notice dozens of oil paintings, all of which look to be extremely old. A"
-                + "painting of a man in what looks to be renaissance garb, staring intensely outward with long black hair catches your eye."
-                + "\n\nThe cat brushes past you, pulling your attention away from the painting, and you look down "
-                + "to see that you’re walking past a staircase to what you assume is the basement. The stairs,"
-                + "though still beautiful, are clearly not as well-kept as the rest of the house, and the walls"
-                + "seem to get dustier the further down they go. There’s a part of you that wonders what’s down"
-                + "there - what secrets this mansion might hide.\n");
-        ui.choice1.setText("Ask about the painting.");
-        ui.choice2.setText("Ask about the stairs");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+                "hallway with beautiful vintage-looking wallpaper and dark wooden floors. \n\n" +
+                "As he guides you through, you notice dozens of oil paintings, all of which look to be " +
+                "extremely old. A painting of a man in what looks to be renaissance garb, staring intensely " +
+                "outward with long black hair catches your eye.\n\n" +
+                "The cat brushes past you, pulling your attention away from the painting, and you look down to " +
+                "see that you’re walking past a staircase to what you assume is the basement. The stairs, though " +
+                "still beautiful, are clearly not as well-kept as the rest of the house, and the walls seem to " +
+                "get dustier the further down they go. There's a part of you that wonders what's down there,  " +
+                "what secrets this mansion might hide.\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "painting";
-        game.position2= "stairs";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Ask about the painting");
+        ui.choice5.setText("Ask about the stairs");
 
+        game.position4 = "painting";
+        game.position5= "stairs";
     }
 
     public void painting(){
         ui.mainTextArea.setText("The old man smiles as he turns to the portrait, an odd sentimentality washing " +
                 "over him.\n\n" +
                 "\"He was a very good friend of mine.\" he sighs, clearly beginning to reminisce, " +
-                "\"He had this commissioned shortly before he-"+ " "+ "The old man stops, taking a moment to collect himself before continuing, \"He passed " +
-                "shortly after this was painted,\" he huffs distantly. \"If it weren't for him, none " +
-                "of this would have been possible,\" the man gestures to the mansion around him.\n\n" +
-                "You nod solemnly. There’s a part of you that wonders how he died so young - he couldn't " +
-                "have been more than 30 in the picture - and what he did to help the old man. Even so, " +
+                "\"He had this commissioned shortly before he- The old man stops, taking a moment to " +
+                "collect himself before continuing, \"He passed shortly after this was painted,\" he huffs " +
+                "distantly. \"If it weren't for him, none of this would have been possible,\" the man gestures " +
+                "to the mansion around him.\n\n" +
+                "You nod solemnly. There’s a part of you that wonders how he died so young --he couldn't " +
+                "have been more than 30 in the picture-- and what he did to help the old man. Even so, " +
                 "you know better than to ask. If he had wanted to say, he would have. The old man lingers " +
                 "on the painting a moment more, his smile widening, before seeming to snap back to the present and " +
                 "guiding you into the dining room.\n\n" +
                 "You enter to see a boy who couldn't be more than 19 or 20 setting the table. \n\n" +
                 "The old man snaps his fingers and the boy is suddenly at attention, nearly dropping the plates\n\n" +
-                "\"This is Mallory,\" the old man says, \"I found him in much the same situation I found you, and he’s " +
-                "been living and working here until he finds his feet, isn’t that right Mallory?\"\n\n" +
+                "\"This is Mallory,\" the old man says, \"I found him in much the same situation I found you, " +
+                "and he's been living and working here until he finds his feet, isn't that right Mallory?\"\n\n" +
                 "Mallory nods nervously, \"Yes, sir.\"\n\n" +
-                "The old man laughs and jovially clasps a hand on Mallory’s shoulder, \"He’s a bit shy, but he’ll warm up to you in no time,\" he remarks.\n\n" +
-                "Mallory smiles at you, nodding more genuinely this time, before the old man says something about allowing you to get acquainted before" +
-                " going into the kitchen and leaving the two of you alone.\n\n" +
-                "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he " +
-                "seems genuinely happy to meet you, there is also an almost mournful disposition underneath it all. \n\n");
+                "The old man laughs and jovially clasps a hand on Mallory’s shoulder, \"He's a bit shy, but " +
+                "he'll warm up to you in no time,\" he remarks.\n\n" +
+                "Mallory smiles at you, nodding more genuinely this time, before the old man says something " +
+                "about allowing you to get acquainted before going into the kitchen and leaving the " +
+                "two of you alone.\n\n" +
+                "Mallory's gaze seems to linger on you a moment before going back to his task, and though " +
+                "on the surface he seems genuinely happy to meet you, there is also an almost mournful " +
+                "disposition underneath it all.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        ui.choice1.setText("Ask how he likes working here");
-        ui.choice2.setText("Offer to help set the table");
-        ui.choice3.setText("Stand there awkwardly");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice3.setText("Ask how he likes working here");
+        ui.choice4.setText("Offer to help set the table");
+        ui.choice5.setText("Stand there awkwardly");
 
-        game.position1 = "askMallory";
-        game.position2= "offerToHelp";
-        game.position3 = "awkMoment";
-        game.position4 = "";
+        game.position3 = "askMallory";
+        game.position4 = "offerToHelp";
+        game.position5 = "awkMoment";
     }
     public void askMallory(){
-        ui.mainTextArea.setText("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags under his eyes being heavy and " +
-                "thick. Too heavy for someone his age.\n\n" +
-                "He locks eye contact with you, his gaze requesting that you hold it as he speaks, \"I wouldn't trade working here for the world!" +
-                " I love the work I do, and he’s been extremely generous to let me stay here while I save up to get a place of my own.\"\n\n" +
-                "Despite the cheery tone, you feel a shiver of unease run down your spine as he talks. The words he’s saying are loud and " +
-                "enthusiastic, and if the only thing in this interaction had been his voice, you may have actually believed him. But his eyes, " +
-                "which have not faltered since locking with yours… " +
-                "God, his eyes... " +
-                "They tell a different story entirely. As he speaks, his brows knit together in a look of pain, despair, and exhaustion. " +
-                "Regret drips from every movement he makes as he shakes his head while discussing the old man’s 'generosity.'\n\n" +
-                "When he’s finished speaking, Mallory’s expression quickly switches to a smile, and he goes back to his work as if nothing happened." +
-                "You simply stand there, watching him in bewilderment, completely unsure of how to respond. Either Mallory always talks with his facial" +
-                "expressions wildly mismatching his words, or he was trying to warn you of something. Or perhaps, you’ve misinterpreted the" +
-                "interaction entirely. \n\n" +
-                "You glance around the dining room, with its chandelier hanging from the ceiling and ornate wallpaper smoothly covering its " +
-                "walls. As Mallory sets the antique wooden table you notice its intricately-carved embellishments curling over each corner as " +
-                "if it were being held up by many human hands. Why would a man like him help a person like you? What motivation could someone of this caliber " +
-                "have for altruism? \n\n" +
-                "You shake your head. This man was willing to help you when no one else would, and if he plans to exploit you, at the very least" +
-                "you’ll have a roof over your head. At worst, you figure you could live here until things get bad. Besides, it’s not like an old" +
-                "man like the one in the kitchen could beat you in a fight.\n\n" +
-                "You hear the old man’s deep laughter echo from the other room, accompanied by another. He doesn't sound evil. You sigh to yourself." +
-                "You’ve always been paranoid, and at this point, you decide it’s best not to look gift-horse in the mouth.\n\n" +
-                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from the kitchen, seemingly to check that things are going smoothly. \n\n" +
-                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. " +
-                "His eyes flash for a moment with an emotion that is covered up too quickly\" " +
-                "to read, and instead he flashes you a smile, \"I’m sorry, I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.\""  +
-                "He smiles, extending a hand for you to shake.\n\n" +
-                "Do you shake his hand?\n\n" +
-                "What do you do? \n\n");
-        ui.choice1.setText("Shake his hand");
-        ui.choice2.setText("Don't shake his hand");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags " +
+                "under his eyes being heavy and thick. Too heavy for someone his age.\n\n" +
+                "He locks eye contact with you, his gaze requesting that you hold it as he speaks, \"I wouldn't " +
+                "trade working here for the world! I love the work I do, and he’s been extremely generous " +
+                "to let me stay here while I save up to get a place of my own.\"\n\n" +
+                "Despite the cheery tone, you feel a shiver of unease run down your spine as he talks. The " +
+                "words he's saying are loud and enthusiastic, and if the only thing in this interaction had " +
+                "been his voice, you may have actually believed him. But his eyes, which have not faltered since " +
+                "locking with yours... God, his eyes... They tell a different story entirely. As he speaks, his " +
+                "brows knit together in a look of pain, despair, and exhaustion. Regret drips from every " +
+                "movement he makes as he shakes his head while discussing the old man's \"generosity.\"\n\n" +
+                "When he's finished speaking, Mallory's expression quickly switches to a smile, and he goes back " +
+                "to his work as if nothing happened. You simply stand there, watching him in bewilderment, " +
+                "completely unsure of how to respond. Either Mallory always talks with his facial expressions " +
+                "wildly mismatching his words, or he was trying to warn you of something. Or perhaps, you've " +
+                "misinterpreted the interaction entirely. \n\n" +
+                "You glance around the dining room, with its chandelier hanging from the ceiling and its ornate " +
+                "wallpaper smoothly covering the walls. As Mallory sets the antique wooden table you notice " +
+                "its intricately-carved embellishments curling over each corner as if it were being held up " +
+                "by many human hands. Why would a man like him help a person like you? What motivation could " +
+                "someone of this caliber have for altruism? \n\n" +
+                "You shake your head. This man was willing to help you when no one else would, and if he plans " +
+                "to exploit you, at the very least you'll have a roof over your head. At worst, you figure you " +
+                "could live here until things get bad. Besides, it's not like an old man like the one in the " +
+                "kitchen could beat you in a fight.\n\n" +
+                "You hear the old man's deep laughter echo from the other room, accompanied by another. He " +
+                "doesn't sound evil. You sigh to yourself. You've always been paranoid, and at this point, " +
+                "you decide it's best not to look gift-horse in the mouth.\n\n" +
+                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
+                "the kitchen, seemingly to check that things are going smoothly. \n\n" +
+                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the " +
+                "dining room. His eyes flash for a moment with an emotion that is covered up too quickly to read, " +
+                "and instead he flashes you a smile, \"I'm sorry, I didn't realize we had company or I would " +
+                "have greeted you sooner! I'm the butler here at the Manor.\" He smiles, extending a hand for " +
+                "you to shake.\n\n" +
+                "Do you shake his hand? \n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "shakeHand";
-        game.position2= "noShakeHand";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Shake his hand");
+        ui.choice5.setText("Don't shake his hand");
+
+        game.position4 = "shakeHand";
+        game.position5 = "noShakeHand";
     }
     public void shakeHand(){
-        ui.mainTextArea.setText("You accept the handshake to find that the butler’s grasp is much firmer than you expected. He didn't " +
-                "strike you as the type to hold onto a handshake for dear life.\n\n" +
+        ui.mainTextArea.setText("You accept the handshake to find that the butler's grasp is much firmer than " +
+                "you expected. He didn't strike you as the type to hold onto a handshake for dear life.\n\n" +
                 "But...no...\n\n" +
-                "You realize that he’s actually holding your hand rather gently, yet his hand is much more...solid than it should be." +
-                " Like the muscles in his hand are packed just a little too densely beneath his skin. \n\n" +
-                "You decide it’s nothing to worry about as you release each others’ hands.\n\n" +
-                "\"So I’d take it you’re coming to work here?\" he asks jovially.\n\n" +
-                "You nod, \"That’s the plan, at least!\"\n\n" +
-                "The butler smiles, though the smile takes a moment to reach his eyes as he glances at Mallory before" +
-                " seeming to return to the conversation, \"It’s a pleasure to have you here. I can’t wait to show you the ropes.\" \n\n " +
-                "Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though neither you nor Mallory seem to have heard anything of the sort.\n\n" +
-                "You’re about to let him walk into the other room when you realize something, calling after him, 'Wait-'\n\n" +
+                "You realize that he's actually holding your hand rather gently, yet his hand is much more..." +
+                "solid than it should be. Like the muscles in his hand are packed just a little too " +
+                "densely beneath his skin. \n\n" +
+                "You decide it's nothing to worry about as you release each others' hands.\n\n" +
+                "\"So I take it you're coming to work here?\" he asks jovially.\n\n" +
+                "You nod, \"That's the plan, at least!\"\n\n" +
+                "The butler smiles, though the smile takes a moment to reach his eyes as he glances at " +
+                "Mallory before seeming to return to the conversation, \"It's a pleasure to have you here. " +
+                "I can’t wait to show you the ropes.\" \n\n " +
+                "Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, " +
+                "though neither you nor Mallory seem to have heard anything of the sort.\n\n" +
+                "You're about to let him walk into the other room when you realize something, calling after him, " +
+                "\"Wait-\"\n\n" +
                 "The butler stops and turns to you.\n\n" +
-                "\"I didn't catch your name,\" you say, somewhat nervously. Usually, you wouldn't ask, but you feel bad just referring to him as \"butler\". \n\n" +
-                "He gives a small huff of amusement before responding, \"Names are unimportant,\" he shrugs, smiling solemnly, \"I’m just the butler.\"\n\n" +
-                "With that, he turns and walks back into the kitchen.\n\n" + //add arrow
-                "After a moment, he and the old man emerge with various steaming plates making up an extravagant meal, all of which are arranged on the table. The butler pulls out" +
-                "a chair for the old man, and Mallory sits across from him. Then, the butler gestures for you to sit, seemingly allowing you to choose your spot.\n\n" +
+                "\"I didn't catch your name,\" you say, somewhat nervously. Usually, you wouldn't ask, but you " +
+                "feel bad just referring to him as \"butler\".\n\n" +
+                "He gives a small huff of amusement before responding, \"Names are unimportant,\" he shrugs, " +
+                "smiling solemnly, \"I'm just the butler.\"\n\n" +
+                "With that, he turns and walks back into the kitchen.\n\n" + // TODO add arrow(?)
+                "After a moment, he and the old man emerge with various steaming plates making up an extravagant " +
+                "meal, all of which are arranged on the table. The butler pulls out a chair for the old man, " +
+                "and Mallory sits across from him. Then, the butler gestures for you to sit, seemingly allowing " +
+                "you to choose your spot.\n\n" +
                 "Where would you like to sit?\n\n");
-        ui.choice1.setText("Sit next to the old man");
-        ui.choice2.setText("Sit next to Mallory");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "sitNxtToOldman";
-        game.position2= "sitNxtMallory";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Sit next to the old man");
+        ui.choice5.setText("Sit next to Mallory");
+
+        game.position4 = "sitNxtToOldman";
+        game.position5 = "sitNxtMallory";
     }
     public void sitNxtToOldman(){
-        ui.mainTextArea.setText("The butler stays off to the side as you take up a seat next to the old man, who flashes" +
-                " you a toothy grin as you sit down beside him. If you didn't know any better, you would have thought you saw a " +
-                "glimmer of pride in his eyes. \n\n" +
+        ui.mainTextArea.setText("The butler stays off to the side as you take up a seat next to the old man, " +
+                "who flashes you a toothy grin as you sit down beside him. If you didn't know any better, you " +
+                "would have thought you saw a glimmer of pride in his eyes. \n\n" +
                 "\"Eat as much as you like,\" he says warmly, passing you a piece of the main dish.\n\n" +
-                "You smile thankfully, filling your plate as the others begin to eat. Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler standing attentively off to the side." +
-                "\n\n" +
-                "You realize with a little unease that these might be the only people in the mansion. Not that you have much experience with the habits of the wealthy, but you expected him to have " +
-                "at least a few more staff to help things get done around the place. Then again, perhaps that’s why he hired you. If it really is his goal to help people get back on their feet, it " +
-                "would make sense that if a few of them left at once, he would be short-staffed.\n\n" +
-                "You push the issue out of your mind as the old man turns to you, \"If you’re going to be staying here,\" he says, gesturing lazily with his fork, \"there are a few rules you’re going " +
+                "You smile thankfully, filling your plate as the others begin to eat. Surprisingly, the only " +
+                "people at dinner are you, Mallory, and the old man, with the butler standing attentively off " +
+                "to the side.\n\n" +
+                "You realize with a little unease that these might be the only people in the mansion. Not that " +
+                "you have much experience with the habits of the wealthy, but you expected him to have at least " +
+                "a few more staff to help things get done around the place. Then again, perhaps that's why he " +
+                "hired you. If it really is his goal to help people get back on their feet, it would make sense " +
+                "that if a few of them left at once, he would be short-staffed.\n\n" +
+                "You push the issue out of your mind as the old man turns to you, \"If you're going to be " +
+                "staying here,\" he says, gesturing lazily with his fork, \"there are a few rules you're going " +
                 "to have to follow.\"\n\n" +
                 "Here, he pauses, looking at you expectantly as if to make sure you’re still on board.\n\n" +
-                "Not entirely sure what kind of response he’s looking for, you nod.\n\n" +
-                "Apparently, that was the right response, because the old man grins as he continues, \"Things here run on a tight shift during work hours, but when you’re not working, your time is " +
-                "your own to do as you please. You'll be paid by the hour for every task you complete around the Manor. You’re allowed to take days off whenever you need, no questions asked-\"\n\n" +
-                "At this, Mallory scoffs quietly. The old man doesn't seem to notice, but you catch the butler throwing a warning glance towards the boy. \n\n" +
-                "\"-Any locked or boarded up doors are to stay that way. Above all, you are never allowed to go down " +
-                "into the cellar, no matter the reason, lest you wish for your time here to end. Do you understand?\"\n\n" +
-                "\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't expect to feel over dinner, and instinct dictates that you respond as succinctly as possible. \n\n" +
-                "The old man’s grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness suddenly dissipating.\n\n" +
-                "\"It's a wonderful place to be,\" the butler adds, \"and if you have any questions at all, feel free to ask me.\"\n\n" +
+                "Not entirely sure what kind of response he's looking for, you nod.\n\n" +
+                "Apparently, that was the right response, because the old man grins as he continues, \"Things " +
+                "here run on a tight shift during work hours, but when you're not working, your time is your " +
+                "own to do as you please. You'll be paid by the hour for every task you complete around the " +
+                "Manor. You're allowed to take days off whenever you need, no questions asked-\"\n\n" +
+                "At this, Mallory scoffs quietly. The old man doesn't seem to notice, but you catch the butler " +
+                "throwing a warning glance towards the boy. \n\n" +
+                "\"-Any locked or boarded up doors are to stay that way. Above all, you are never allowed to go " +
+                "down into the cellar, no matter the reason, lest you wish for your time here to end. Do you " +
+                "understand?\"\n\n" +
+                "\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't expect to feel " +
+                "over dinner, and instinct dictates that you respond as succinctly as possible. \n\n" +
+                "The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
+                "suddenly dissipating.\n\n" +
+                "\"It's a wonderful place to be,\" the butler adds, \"and if you have any questions at all, feel " +
+                "free to ask me.\"\n\n" +
                 "The old man nods approvingly, and dinner continues rather normally.\n\n" +
-                "Once everyone has finished eating and the table is cleared, the old man takes you upstairs and shows you to your bedroom on the top floor, \"This is where you’ll be sleeping for the " +
-                "rest of your time here. Mallory's room is across the hall, and mine is the one next to yours, so if you need anything, you know where to go.\"\n\n" +
-                "You nod, and the old man turns to leave before stopping himself, \"Oh, and just as a heads up, the cat tends to be a little loud at night, so I suggest you keep your door closed,\" " +
-                "he chuckles, \"You know how cats are.\"\n\n" +
-                "After that, he says goodnight, and you open the door to your room. It’s small, but comfortable, with a desk on one wall, a bed on the other, and beside that, a closet. A few tears " +
-                "come to your eyes as you realize you’ll be sleeping in a proper bed tonight. You change into a set of pajamas folded neatly atop the bed and crawl beneath the covers.\n\n" +
+                "Once everyone has finished eating and the table is cleared, the old man takes you upstairs " +
+                "and shows you to your bedroom on the top floor, \"This is where you'll be sleeping for the " +
+                "rest of your time here. Mallory's room is across the hall, and mine is the one next to yours, " +
+                "so if you need anything, you know where to go.\"\n\n" +
+                "You nod, and the old man turns to leave before stopping himself, \"Oh, and just as a heads up, " +
+                "the cat tends to be a little loud at night, so I suggest you keep your door closed,\" he chuckles, " +
+                "\"You know how cats are.\"\n\n" +
+                "After that, he says goodnight, and you open the door to your room. It's small, but comfortable, " +
+                "with a desk on one wall, a bed on the other, and beside that, a closet. A few tears come to your " +
+                "eyes as you realize you'll be sleeping in a proper bed tonight. You change into a set of pajamas " +
+                "folded neatly atop the bed and crawl beneath the covers.\n\n" +
                 "What would you like to do?\n");
-        ui.choice1.setText("Go to sleep");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "goToSleep";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText("Go to sleep");
+
+        game.position5 = "goToSleep";
     }
 
     public void goToSleep(){
-        ui.mainTextArea.setText("Over the next few days, you begin to get your bearings at Huxley Manor, and you manage to fall into a bit of a routine. " +
-                        "The work isn't too hard, and Mallory and the butler are kind enough. The cat also seems to like you, though you’d be lying " +
-                        "if you said its tendency to sit and stare from the corner of the room doesn't freak you out a little. Of course, you’ve never " +
-                        "been much of a cat person. \n\n" +
-                        "You notice that Mallory seems to be getting more and more gaunt by the day, and though it worries you a little, he insists that " +
-                        "it's nothing to be concerned about, so you keep your mouth shut. Besides, no one else in the manor seems to be worried. Overall," +
-                        " you and Mallory have become fast friends.\n\n" +
-                        "Your fifth night there, however, as the two of you are about to part ways and go to bed, he stops you, gently grabbing you by the arm." +
-                        " There are tears in his eyes, and he seems to take a moment to gather himself before speaking.\n\n" +
-                        "\"I'll miss you when we’re finally on our feet.\" is all he says. \n\n" +
+        ui.mainTextArea.setText("Over the next few days, you begin to get your bearings at Huxley Manor, " +
+                "and you manage to fall into a bit of a routine. The work isn't too hard, and Mallory and the " +
+                "butler are kind enough. The cat also seems to like you, though you'd be lying if you said its " +
+                "tendency to sit and stare from the corner of the room doesn't freak you out a little. Of course, " +
+                "you've never been much of a cat person. \n\n" +
+                "You notice that Mallory seems to be getting more and more gaunt by the day, and though it " +
+                "worries you a little, he insists that it's nothing to be concerned about, so you keep your " +
+                "mouth shut. Besides, no one else in the manor seems to be worried. Overall, you and Mallory " +
+                "have become fast friends.\n\n" +
+                "Your fifth night there, however, as the two of you are about to part ways and go to bed, he " +
+                "stops you, gently grabbing you by the arm. There are tears in his eyes, and he seems to take " +
+                "a moment to gather himself before speaking.\n\n" +
+                "\"I'll miss you when we’re finally on our feet.\" is all he says. \n\n" +
                 "How do you respond?");
-        ui.choice1.setText("Tell him you'll miss him too");
-        ui.choice2.setText("Stay silent");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "WillMissYouToo";
-        game.position2= "StaySilent";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Tell him you'll miss him too");
+        ui.choice5.setText("Stay silent");
+
+        game.position4 = "WillMissYouToo";
+        game.position5 = "StaySilent";
     }
     public void WillMissYouToo(){
-        ui.mainTextArea.setText("You nod, taking hold of his hand, \"I’ll miss you too.\" \n\n" +
-                "It’s a short response, but you mean every word of it. \n\n" +
-                "Mallory smiles, tightening his grip on your hand, \"We’ll have to keep in touch.\"\n\n" +
+        ui.mainTextArea.setText("You nod, taking hold of his hand, \"I'll miss you too.\" \n\n" +
+                "It's a short response, but you mean every word of it. \n\n" +
+                "Mallory smiles, tightening his grip on your hand, \"We'll have to keep in touch.\"\n\n" +
                 "You nod. Though his eyes are watery with unshed tears, he seems content.\n\n" +
-                "His gaze lingers on you for a moment longer before he lets go and, giving one final nod," +
-                "turns to go to his room, clearly wiping tears from his eyes as he walks." +
-                "For some reason, that felt like goodbye.\n\n" +
-                "Does he plan on-\n\n " +
-                "You shake your head. You’re sure he’s fine.\n\n" +
-                "Too tired to think about it now, you go" +
-                "into your room and prepare to go to sleep.\n\n");
-        ui.choice1.setText("Go right to sleep ");
-        ui.choice2.setText("Read a book to distract yourself");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+                "His gaze lingers on you for a moment longer before he lets go and, giving one final nod, turns " +
+                "to go to his room, clearly wiping tears from his eyes as he walks. For some reason, that " +
+                "felt like goodbye.\n\n" +
+                "Does he plan on-\n\n" +
+                "You shake your head. You're sure he's fine.\n\n" +
+                "Too tired to think about it now, you go into your room and prepare to go to sleep.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "goRightToSleep";
-        game.position2= "readBook";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Go right to sleep");
+        ui.choice5.setText("Read a book to distract yourself");
+
+        game.position4 = "goRightToSleep";
+        game.position5 = "readBook";
     }
     public void StaySilent(){
-        ui.mainTextArea.setText("He waits a moment, seemingly expecting you to say something, but when you don’t respond, he nods and seems to give you an understanding smile. \n\n" +
-                "Mallory draws in a breath, looking you over and looking around as if savoring the moment as he clearly fights back tears.\n\n" +
-                "His gaze lingers on you for a moment longer before he lets go and, giving one final nod, turns to go to his room, clearly wiping tears from his eyes as he walks.\n\n" +
+        ui.mainTextArea.setText("He waits a moment, seemingly expecting you to say something, but when " +
+                "you don't respond, he nods and seems to give you an understanding smile. \n\n" +
+                "Mallory draws in a breath, looking you over and looking around as if savoring the moment " +
+                "as he clearly fights back tears.\n\n" +
+                "His gaze lingers on you for a moment longer before he lets go and, giving one final nod, " +
+                "turns to go to his room, clearly wiping tears from his eyes as he walks.\n\n" +
                 "For some reason, that felt like goodbye.\n\n" +
                 "Does he plan on-\n\n" +
                 "You shake your head. You’re sure he’s fine. \n\n" +
                 "Too tired to think about it now, you go into your room and prepare to go to sleep.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        ui.choice1.setText("Go right to sleep ");
-        ui.choice2.setText("Read a book to distract yourself");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice4.setText("Go right to sleep");
+        ui.choice5.setText("Read a book to distract yourself");
 
-        game.position1 = "goRightToSleep";
-        game.position2= "readBook";
-        game.position3 = "";
-        game.position4 = "";
+        game.position4 = "goRightToSleep";
+        game.position5 = "readBook";
     }
 
     public void goRightToSleep() {
-        ui.mainTextArea.setText("You curl up in bed and put the issue out of your mind. Mallory is fine. " +
-                "He’s been fine since the day you got there, and you tell yourself there’s nothing to worry about." +
-                " Besides, if there is anything happening with Mallory, it’s nothing that can’t wait til morning. " +
+        ui.mainTextArea.setText("You curl up in bed and put the issue out of your mind. Mallory is fine. He's " +
+                "been fine since the day you got there, and you tell yourself there's nothing to worry about. " +
+                "Besides, if there is anything happening with Mallory, it's nothing that can't wait til morning. " +
                 "With that, you close your eyes and attempt to get some rest.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice5.setText(">");
 
-        game.position1 = "Murder";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
+        game.position5 = "Murder";
     }
     public void readBook() {
-        ui.mainTextArea.setText("You sigh, picking up a match - the last one in the pack - and lighting a candle on your bedside table." +
-                " You shimmy under the covers and grab the book you started reading the night before: Dracula by Bram Stoker. " +
-                "You’ve always loved horror, and though it’s not your first time reading it, you still can’t help but love the thrill " +
-                "of the buildup of the first four chapters of that book. You’re on chapter 3 now, " +
-                "when Jonathan gets his first proper glimpse of what’s actually going on in the castle. It’s a fun one to read, especially the second half. \n\n" +
-                "You’re still worried about Mallory, but Stoker’s writing allows you to get sucked into the novel enough to shift your focus for a while," +
-                " for which you’re rather grateful. Eventually, as you finish chapter 4, you feel your eyes begin to droop, and blowing out the candle," +
-                " you allow yourself to begin to drift off to sleep.\n\n");
+        ui.mainTextArea.setText("You sigh, picking up a match --the last one in the pack-- and lighting a " +
+                "candle on your bedside table. You shimmy under the covers and grab the book you started " +
+                "reading the night before: Dracula by Bram Stoker. You've always loved horror, and though " +
+                "it's not your first time reading it, you still can't help but love the thrill of the buildup " +
+                "of the first four chapters of that book. You're on chapter 3 now, when Jonathan gets his " +
+                "first proper glimpse of what's actually going on in the castle. It's a fun one to read, " +
+                "especially the second half. \n\n" +
+                "You're still worried about Mallory, but Stoker's writing allows you to get sucked into " +
+                "the novel enough to shift your focus for a while, for which you’re rather grateful. " +
+                "Eventually, as you finish chapter 4, you feel your eyes begin to droop, and blowing out the " +
+                "candle, you allow yourself to begin to drift off to sleep.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice5.setText(">");
 
-        game.position1 = "Murder";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
+        game.position5 = "Murder";
     }
     public void Murder() {
-        ui.mainTextArea.setText("A hysterically panicked scream from across the hall lurches you awake, and before you know it, " +
-                "you’re sitting straight up in bed, trying to listen for any other noises. That sounded like Mallory. It came from Mallory’s room." +
-                " The scream cuts off abruptly and you hear a sudden thump onto the floor in the hallway, followed by footsteps and the sound of something heavy being dragged over the polished wood.\n\n" +
-                "What’s happening?\n\n" +
+        ui.mainTextArea.setText("A hysterically panicked scream from across the hall lurches you awake, and " +
+                "before you know it, you're sitting straight up in bed, trying to listen for any other noises. " +
+                "That sounded like Mallory. It sounds like it came from Mallory's room. The scream cuts off " +
+                "abruptly and you hear a sudden thump onto the floor in the hallway, followed by footsteps " +
+                "and the sound of something heavy being dragged over the polished wood.\n\n" +
+                "What's happening?\n\n" +
                 "Has someone broken in?\n\n" +
                 "Yes. That must be it.\n\n" +
-                "Someone must have attempted to break in by climbing up through Mallory’s window.\n\n" +
-                "As the dragging sound comes closer and closer to your door, you’re forced to make a snap decision, and unfortunately, in terms of fight or flight, your first instinct is generally fight. " +
-                "You pick up a heavy object from your nightstand and fling open your door, ready to confront whoever has decided to break into Huxley Manor. \n\n" +
-                "As the door opens, however, you feel your knees go weak and the object falls from your hand at the sight before you. \n\n" +
-                "In the hallway, his robe absolutely drenched in blood and with the same slick red substance dripping from mouth and covering his smiling teeth stands the old man, grinning wildly. " +
-                "Behind him, being dragged by his sweat-soaked hair, is Mallory, lying there limply. " +
-                "He’s still managing gargled breaths, but judging by the amount of blood...\n\n" +
-                "...God, there’s so much blood.\n\n" +
-                "It’s everywhere. Even in the darkness, it seems to soak and smatter every visible fabric. \n\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     dripping from every surface it can’t absorb into. What’s worse, the old man seems completely unscathed. Judging by how he’s standing and the wild look in his eye, you’re sure that none of the blood you see is his. \\n\\n\n" +
-                "The old man locks eyes with you, the animalistic thrill within them fading for a moment back to his usual passively pleasant demeanor, " +
-                "\"Go back to bed,\" he says sweetly, \"It’s late.\"" +
-                "\n\nWhat do you want to do?");
-        ui.choice1.setText("Go back to bed");
-        ui.choice2.setText("Charge at the old man");
-        ui.choice3.setText("Stand there and do nothing");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+                "Someone must have attempted to break in by climbing up through Mallory's window.\n\n" +
+                "As the dragging sound comes closer and closer to your door, you're forced to make a snap " +
+                "decision, and unfortunately, in terms of fight or flight, your first instinct is generally fight. " +
+                "You pick up a heavy object from your nightstand and fling open your door, ready to confront " +
+                "whoever has decided to break into Huxley Manor.\n\n" +
+                "As the door opens, however, you feel your knees go weak and the object falls from your hand " +
+                "at the sight before you.\n\n" +
+                "In the hallway, his robe absolutely drenched in blood and with the same slick red substance " +
+                "dripping from mouth and covering his smiling teeth stands the old man, grinning wildly. Behind " +
+                "him, being dragged by his sweat-soaked hair, is Mallory, lying there limply. He's still " +
+                "managing gargled breaths, but judging by the amount of blood...\n\n" +
+                "...God, there's so much blood.\n\n" +
+                "It's everywhere. Even in the darkness, it seems to soak and smatter every visible fabric. \n\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     dripping from every surface it can’t absorb into. What’s worse, the old man seems completely unscathed. Judging by how he’s standing and the wild look in his eye, you’re sure that none of the blood you see is his. \\n\\n\n" +
+                "The old man locks eyes with you, the animalistic thrill within them fading for a moment back " +
+                "to his usual passively pleasant demeanor, \"Go back to bed,\" he says sweetly, \"It’s late.\"\n\n" +
+                "What do you do?");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "backToBed";
-        game.position2= "AttackOldMan";
-        game.position3 = "startPlot";
-        game.position4 = "";
+        ui.choice3.setText("Go back to bed");
+        ui.choice4.setText("Charge at the old man");
+        ui.choice5.setText("Stand there and do nothing");
+
+        game.position3 = "backToBed";
+        game.position4 = "AttackOldMan";
+        game.position5 = "startPlot";
+        //TODO start plot?? or stand still? what's the difference? i think there is a mix up
     }
     public void backToBed() {
-        ui.mainTextArea.setText("You stand there a moment, looking from the old man, to Mallory, then back again.\n\n " +
+        ui.mainTextArea.setText("You stand there a moment, looking from the old man, to Mallory, then back again.\n\n" +
                 "Eventually, you nod reluctantly and turn to go back into your room.\n\n" +
-                "You can’t fight this man.\n\n " +
-                "He may look frail, but if he had the ability to do...that to Mallory, he’s clearly stronger than he looks. \n\n" +
+                "You can't fight this man.\n\n " +
+                "He may look frail, but if he had the ability to do...that to Mallory, he's clearly stronger than " +
+                "he looks.\n\n" +
                 "\"Good,\" the old man says through a smile.\n\n" +
-                "Out of the corner of your eye, " +
-                "you see him abruptly extend his free hand, and though he’s several feet away, you are thrown violently forward into your room, " +
-                "and the door slams shut behind you.\n\n");
-        ui.choice1.setText(" > ");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+                "Out of the corner of your eye, you see him abruptly extend his free hand, and though he's " +
+                "several feet away, you are thrown violently forward into your room, and the door slams shut " +
+                "behind you.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room1";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room1";
     }
 
     public void AttackOldMan() {
-        ui.mainTextArea.setText("You stare at the old man in disbelief, rage and disgust bubbling up through your veins as you process what he’s just said. " +
-                "He may well have just murdered someone and he wants to \"go back to bed\" as if nothing happened?\n\n No. You can’t do that.\n\n" +
-                "In one swift motion, you reach down and pick up the heavy object once more, charging the old man with all your might. \n\n" +
-                "You don’t care if you’ll win. If you don’t try, you’ll never forgive yourself. \n\n" +
-                "The old man simply chuckles, lazily extending his free hand. You’re barely able to take a step when an invisible force suddenly pushes you backwards.\n\n" +
-                " It feels as though a battering ram has been shoved into your chest as your feet leave the ground and" +
-                "you’re hurled back into your bedroom, the door slamming shut behind you.\n\n" );
-        ui.choice1.setText(" > ");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("You stare at the old man in disbelief, rage and disgust bubbling up through your " +
+                "veins as you process what he's just said. He may well have just murdered someone and he wants " +
+                "you to \"go back to bed\" as if nothing happened?\n\n" +
+                "No. You can’t do that.\n\n" +
+                "In one swift motion, you reach down and pick up the heavy object once more, charging the " +
+                "old man with all your might.\n\n" +
+                "You don't care if you'll win. If you don't try, you'll never forgive yourself.\n\n" +
+                "The old man simply chuckles, lazily extending his free hand. You're barely able to take a " +
+                "step when an invisible force suddenly pushes you backwards.\n\n" +
+                "It feels as though a battering ram has been shoved into your chest as your feet leave the ground " +
+                "and you're hurled back into your bedroom, the door slamming shut behind you.\n\n" );
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room1";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room1";
     }
     public void standStill() {
-        ui.mainTextArea.setText("You simply stand there, frozen in shock as you try and process the scene before you. " +
-                "This is the old man who asked you to help him up the stairs earlier this week. He took you in. He took you both in, and now- \n\n" +
-                "Where is the butler? Did he know? Or did he simply not hear Mallory’s screams?\n\n " +
-                "\"Go. To bed.\" The old man’s voice is lower now, and clearly holds a threat." +
-                " You know you should follow his instructions, or if not that, at least try to stop him, but you just… can’t. \n\n" +
-                "Your feet are frozen in place and you can’t seem to take your eyes off of poor Mallory’s blood-soaked body as he gasps for what may be his final breaths.\n\n" +
-                "The old man scoffs, extending his free arm. Suddenly, an invisible force slams into you, " +
+        ui.mainTextArea.setText("You simply stand there, frozen in shock as you try and process the scene " +
+                "before you. This is the old man who asked you to help him up the stairs earlier this week. " +
+                "He took you in. He took you both in, and now- \n\n" +
+                "Where is the butler? Does he know? Or did he simply not hear Mallory’s screams?\n\n " +
+                "\"Go. To. Bed.\" The old man's voice is lower now, and clearly holds a threat. You know you " +
+                "should follow his instructions, or if not that, at least try to stop him, but you just... can't.\n\n" +
+                "Your feet are frozen in place and you can't seem to take your eyes off of poor Mallory's " +
+                "bloody body as he gasps for what may be his final breaths.\n\n" +
+                "The old man scoffs, extending his free arm. Suddenly, an invisible force rams into you, " +
                 "sending you crashing backwards into your room as the door slams violently shut.\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room1";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room1";
     }
 
+    // TODO should all the three above this go here and then room 1?
     public void startPlot() {
-        ui.mainTextArea.setText("You sit there on the floor of your room, still processing what's just happened." +
-                " There's a sickening series of thumps and thuds as you assume the old man drags Mallory’s body down the stairs." +
-                " Part of you wants to sob, the other part wants to throw up, and a third prays that you’re dreaming." +
-                " But this is not a dream, and you don’t have the energy right now to do either of those things." +
-                " Instead, you glance at the door. It doesn't lock, but after what just happened, you wouldn't be surprised if you were somehow locked in." +
-                " Mallory might be dead. And you might be next.After a moment you resolve that you have to get out of here. " +
-                "You’d rather be homeless than stuck with a murderer.\n\n" +
+        ui.mainTextArea.setText("You sit there on the floor of your room, still processing what's just happened. " +
+                "There's a sickening series of thumps and thuds as you assume the old man drags Mallory's body " +
+                "down the stairs. Part of you wants to sob, the other part wants to throw up, and a third prays " +
+                "that you're dreaming. But this is not a dream, and you don't have the energy right now to do " +
+                "either of those things. Instead, you glance at the door. It doesn't lock, but after what " +
+                "just happened, you wouldn't be surprised if you were somehow locked in. Mallory might be dead. " +
+                "And you might be next. After a moment you resolve that you have to get out of here. You'd " +
+                "rather be homeless than stuck with a murderer.\n\n" +
                 "Shakily, you get to your feet and glance around the room.\n\n");
-        ui.choice1.setText(" > ");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room1";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room1";
     }
     public void sitNxtMallory(){
-        ui.mainTextArea.setText("Mallory pulls out the chair beside him, flashing you a small smile as you move to sit next to him. " +
-                "You see the butler smile as well as you sit down and Mallory passes you the tray of mashed potatoes, " +
-                "\"Eat,\" he says cheerily, \"you’ll need it.\" \n\n" +
-                "Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler standing attentively off to the side.\n" +
-                "\n" +
-                "You realize with a little unease that these might be the only people in the packages.mansion. Not that you have much experience with the habits of " +
-                "the wealthy, but you expected him to have at least a few more staff to help things get done around the place. Then again, perhaps that’s why he " +
-                "hired you. If it really is his goal to help people get back on their feet, it would make sense that if a few of them left at once, he would be " +
-                "short-staffed.\n\n" +
-                "You push the issue out of your mind as the old man turns to you, \"If you're going to be staying here,\" he says, gesturing lazily with his fork," +
-                " \"there are a few rules you're going to have to follow.\"\n\n" +
-                "Here, he pauses, looking at you expectantly as if to make sure you’re still on board.\n\n" +
-                "Not entirely sure what kind of response he’s looking for, you nod.\n\n" +
-                "Apparently, that was the right response, because the old man grins as he continues, \"Things here run on a tight shift during work hours, but " +
-                "when you're not working, your time is your own to do as you please. You’ll be paid by the hour for every task you complete around the Manor. " +
+        ui.mainTextArea.setText("Mallory pulls out the chair beside him, flashing you a small smile as you move " +
+                "to sit next to him. You see the butler smile as well as you sit down and Mallory passes you " +
+                "the tray of mashed potatoes, \"Eat,\" he says cheerily, \"you'll need it.\" \n\n" +
+                "Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler " +
+                "standing attentively off to the side.\n\n" +
+                "You realize with a little unease that these might be the only people in the mansion. Not that " +
+                "you have much experience with the habits of the wealthy, but you expected him to have at least " +
+                "a few more staff to help things get done around the place. Then again, perhaps that’s why he " +
+                "hired you. If it really is his goal to help people get back on their feet, it would make sense " +
+                "that if a few of them left at once, he would be short-staffed.\n\n" +
+                "You push the issue out of your mind as the old man turns to you, \"If you're going to be staying " +
+                "here,\" he says, gesturing lazily with his fork, \"there are a few rules you're going to have " +
+                "to follow.\"\n\n" +
+                "Here, he pauses, looking at you expectantly as if to make sure you're still on board.\n\n" +
+                "Not entirely sure what kind of response he's looking for, you just nod.\n\n" +
+                "Apparently, that was the right response, because the old man grins as he continues, \"Things " +
+                "here run on a tight shift during work hours, but when you're not working, your time is your " +
+                "own to do as you please. You'll be paid by the hour for every task you complete around the Manor. " +
                 "You're allowed to take days off whenever you need, no questions asked-\"\n\n" +
-                "At this, Mallory scoffs quietly. The old man doesn't seem to notice, but you catch the butler throwing a warning glance towards the boy. \n\n" +
-                "\"-Any locked or boarded up doors are to stay that way. " +
-                "Above all, you are never allowed to go down into the cellar, no matter the reason, lest you wish for your time here to end. Do you understand?\"\n\n" +
-                "\"Yes,\" is all you can manage. There’s a heaviness to the air that you didn't expect to feel over dinner, and instinct " +
-                "dictates that you respond as succinctly as possible. \n\n" +
-                "The old man’s grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness dissipating.\n\n" +
-                "\"It’s a wonderful place to be,\" the butler adds, \"and if you have any questions at all, feel free to ask me.\"\n\n" +
+                "At this, Mallory scoffs quietly. The old man doesn't seem to notice, but you catch the butler " +
+                "throwing a warning glance towards the boy. \n\n" +
+                "\"-Any locked or boarded up doors are to stay that way. Above all, you are never allowed to " +
+                "go down into the cellar, no matter the reason, lest you wish for your time here to end. Do you " +
+                "understand?\"\n\n" +
+                "\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't expect to feel " +
+                "over dinner, and instinct dictates that you respond as succinctly as possible.\n\n" +
+                "The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
+                "dissipating.\n\n" +
+                "\"It’s a wonderful place to be,\" the butler adds, \"and if you have any questions at all, " +
+                "feel free to ask me.\"\n\n" +
                 "The old man nods approvingly, and dinner continues rather normally.\n\n" +
-                "Once everyone has finished eating and the table is cleared, the old man takes you upstairs and shows you to your bedroom on the top floor," +
-                "\"This is where you'll be sleeping for the rest of your time here. Mallory’s room is across the hall, and mine is the one next to yours, " +
-                "so if you need anything, you know where to go.\"\n\n" +
-                "You nod, and the old man turns to leave before stopping himself, \"Oh, and just as a heads up, the cat tends to be a little loud at night," +
-                " so I suggest you keep your door closed,\" he chuckles, \"You know how cats are.\"\n\n" +
-                "After that, he says goodnight, and you open the door to your room. It's small, but comfortable, with a desk on one wall," +
-                " a bed on the other, and beside that, a closet. A few tears come to your eyes as you realize you'll be sleeping in a proper bed tonight." +
-                " You change into a set of pajamas folded neatly atop the bed and crawl beneath the covers.\n\n");
-        ui.choice1.setText("Go to sleep");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+                "Once everyone has finished eating and the table is cleared, the old man takes you upstairs " +
+                "and shows you to your bedroom on the top floor.\n\n" +
+                "\"This is where you'll be sleeping for the rest of your time here. Mallory's room is across " +
+                "the hall, and mine is the one next to yours, so if you need anything, you know where to go.\"\n\n" +
+                "You nod, and the old man turns to leave before stopping himself, \"Oh, and just as a heads up, " +
+                "the cat tends to be a little loud at night, so I suggest you keep your door closed,\" he " +
+                "chuckles, \"You know how cats are.\"\n\n" +
+                "After that, he says goodnight, and you open the door to your room. It's small, but comfortable, " +
+                "with a desk on one wall, a bed on the other, and beside that, a closet. A few tears come to " +
+                "your eyes as you realize you'll be sleeping in a proper bed tonight. You change into a set of " +
+                "pajamas folded neatly atop the bed and crawl beneath the covers.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "goToSleep";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText("Go to sleep");
+
+        game.position5 = "goToSleep";
     }
 
     public void noShakeHand(){
-        ui.mainTextArea.setText("You glance apologetically at the butler’s hand, not entirely willing to shake it. He holds his hand" +
-                " out for a moment longer, but after a tight-lipped nod from you, he realizes that \nyou’re not going to shake it " +
-                "and instead withdraws his hand and nods back.\n\n" + "Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though" +
-                " neither you nor Mallory seem to have heard anything of the sort.\n\n" +
-                "You’re about to let him walk into the other room when you realize something, calling after him, 'Wait-'\n\n" +
+        ui.mainTextArea.setText("You glance apologetically at the butler's hand, not entirely willing to shake " +
+                "it. He holds his hand out for a moment longer, but after a tight-lipped nod from you, he " +
+                "realizes that you're not going to shake it and instead withdraws his hand and nods back.\n\n" +
+                "Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though " +
+                "neither you nor Mallory seem to have heard anything of the sort.\n\n" +
+                "You're about to let him walk into the other room when you realize something, calling after him, " +
+                "\"Wait-\"\n\n" +
                 "The butler stops and turns to you.\n\n" +
-                "'I didn’t catch your name,' you say, somewhat nervously. Usually, you wouldn’t ask, but you feel bad just referring to him as 'butler'. \n\n" +
-                "He gives a small huff of amusement before responding, 'Names are unimportant,' he shrugs, smiling solemnly, 'I’m just the butler.'\n\n" +
+                "\"I didn't catch your name,\" you say, somewhat nervously. Usually, you wouldn't ask, but you " +
+                "feel bad just referring to him as \"butler\".\n\n" +
+                "He gives a small huff of amusement before responding, \"Names are unimportant,\" he shrugs, " +
+                "smiling solemnly, \"I'm just the butler.\"\n\n" +
                 "With that, he turns and walks back into the kitchen.\n\n" +
-                "After a moment, he and the old man emerge with various steaming plates making up an extravagant meal, all of which are arranged" +
-                " on the table. After a moment, the butler pulls out \na chair for the old man, and Mallory sits across from him. Then," +
-                " the butler gestures for you to sit, seemingly allowing you to choose your spot.\n\n");
-        ui.choice1.setText("Sit next to the old man");
-        ui.choice2.setText("Sit next to Mallory");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+                "After a moment, he and the old man emerge with various steaming plates making up an " +
+                "extravagant meal, all of which are arranged on the table. After a moment, the butler pulls out " +
+                "a chair for the old man, and Mallory sits across from him. Then, the butler gestures for you to " +
+                "sit, seemingly allowing you to choose your spot.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "sitNxtToOldman";
-        game.position2= "sitNxtMallory";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Sit next to the old man");
+        ui.choice5.setText("Sit next to Mallory");
+
+        game.position4 = "sitNxtToOldman";
+        game.position5 = "sitNxtMallory";
     }
     public void offerToHelp(){
-        ui.mainTextArea.setText("Mallory glances at you with what appears to be genuine fear in his eyes, quickly shaking his head, 'I’ve got it!' he says quickly," +
-                " seemingly loud enough for those in the kitchen to hear\n\n. Then he flashes you a small smile, nearly whispering, 'Thank you, though,' before returning to his work.\n\n" +
-                "You watch as Mallory finishes setting the table," + " and a man with white gloves walks out from the kitchen," +
-                "seemingly to check that things are going smoothly. \n\n" +
-                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash " +
-                "for a moment with an emotion that is covered up too quickly to read, and instead he flashes you a smile, 'I’m sorry, " +
-                "I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.'\n\n" +
+        ui.mainTextArea.setText("Mallory glances at you with what appears to be genuine fear in his eyes, " +
+                "quickly shaking his head, \"I've got it!\" he says quickly, seemingly loud enough for those " +
+                "in the kitchen to hear\n\n." +
+                "Then he flashes you a small smile, nearly whispering, \"Thank you, though,\" before returning " +
+                "to his work.\n\n" +
+                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
+                "the kitchen, seemingly to check that things are going smoothly.\n\n" +
+                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the " +
+                "dining room. His eyes flash for a moment with an emotion that is covered up too quickly to " +
+                "read, and instead he flashes you a smile, \"I'm sorry, I didn't realize we had company or " +
+                "I would have greeted you sooner! I'm the butler here at the Manor.\"\n\n" +
                 "He smiles, extending a hand for you to shake.\n\n" +
                 "Do you shake his hand?\n\n");
-        ui.choice1.setText("Shake his hand");
-        ui.choice2.setText("Don't shake his hand");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "shakeHand";
-        game.position2= "noShakeHand";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Shake his hand");
+        ui.choice5.setText("Don't shake his hand");
+
+        game.position4 = "shakeHand";
+        game.position5 = "noShakeHand";
     }
     public void awkMoment() {
-        ui.mainTextArea.setText("You stand there in a thick silence, neither of you moving to speak. After a moment, you watch as Mallory goes back " +
-                "to setting the table. He doesn’t move the way you expect him to. " +
-                "\n\nEvery gesture he makes is stiff, and even jerky at times. The " +
-                "look on his face is hollow, even for doing so mundane a task as setting the table. You feel bad for thinking it, but his actions" +
-                " almost remind you of a deftly-controlled marionette without the strings. \n\n" +
-                "You chide yourself for the comparison. " +
-                "He’s probably just tired. \n\n" +
-                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from the kitchen, seemingly to check that things are going smoothly. \n\n" +
-                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the dining room. His eyes flash for a moment with an emotion that is covered up too quickly" +
-                "to read, and instead he flashes you a smile, \"I’m sorry, I didn’t realize we had company or I would have greeted you sooner! I’m the butler here at the Manor.\"\n" +
+        ui.mainTextArea.setText("You stand there in a thick silence, neither of you moving to speak. " +
+                "After a moment, you watch as Mallory goes back to setting the table. He doesn't move the " +
+                "way you expect him to.\n\n" +
+                "Every gesture he makes is stiff, and even jerky at times. The look on his face is hollow, even " +
+                "for doing so mundane a task as setting the table. You feel bad for thinking it, but his actions " +
+                "almost remind you of a deftly-controlled marionette without the strings.\n\n" +
+                "You chide yourself for the comparison. He’s probably just tired.\n\n" +
+                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
+                "the kitchen, seemingly to check that things are going smoothly.\n\n" +
+                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the " +
+                "dining room. His eyes flash for a moment with an emotion that is covered up too quickly to " +
+                "read, and instead he flashes you a smile, \"I'm sorry, I didn't realize we had company or I would " +
+                "have greeted you sooner! I'm the butler here at the Manor.\"\n\n" +
                 "He smiles, extending a hand for you to shake.\n\n" +
                 "Do you shake his hand?\n\n");
-        ui.choice1.setText("Shake his hand");
-        ui.choice2.setText("Don't shake his hand");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "shakeHand";
-        game.position2= "noShakeHand";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Shake his hand");
+        ui.choice5.setText("Don't shake his hand");
+
+        game.position4 = "shakeHand";
+        game.position5 = "noShakeHand";
     }
     public void stairs(){
-        ui.mainTextArea.setText("The old man chuckles a little, \"The only things of interest that I keep down there are my old typewriters.\"\n\n" +
+        ui.mainTextArea.setText("The old man chuckles a little, \"The only things of interest that I keep down " +
+                "there are my old typewriters.\"\n\n" +
                 "A pause \n\n" +
-                "\"And the bodies, of course.\" He stops a moment, staring at you rather intensely. \n\n" +
+                "\"And the bodies, of course.\" He stops a moment, staring at you rather intensely.\n\n" +
                 "Shit. Was that a joke or a threat?\n\n" +
                 "The silence is broken with a hearty laugh from the old man, which you hesitantly join.\n\n" +
-                "\"I apologize,\" the old man says, still laughing, \"My humor is sometimes...A bit crass.\" \n\n" +
+                "\"I apologize,\" the old man says, still laughing, \"My humor is sometimes...A bit crass.\"\n\n" +
                 "He continues to chuckle to himself as you hazard a glance down the stairs. There appears to be a" +
-                "shiny puddle of something at the bottom, but the base of the steps is too dark to see what it is. It’s probably " +
-                "just water, you tell yourself; an old place like this is bound to have leaks.\n\n" +
-                "The sudden crash of china on wood jolts your attention to what you assume is the dining room. The old man quickly " +
-                "moves to see what happened, gesturing for you to follow.\n\n" +
-                "As you enter the room, the cat bolts past you into an entrance that likely leads to the kitchen, clearly startled by the crash." +
-                "A moment later, a finely-dressed man with white gloves emerges from the same entrance with a broom and dustpan, immediately crouching " +
-                "down and beginning to clean up the shards. \n\n" +
-                "Near the dining table, apologizing profusely with the broken glass at his feet stands a boy who couldn't be more than 19 or 20. An odd relief" +
-                "seems to momentarily wash over him when he sees you enter, though it’s quickly replaced by his original apprehension as the old man" +
+                "shiny puddle of something at the bottom, but the base of the steps is too dark to see what it " +
+                "is. It's probably just water, you tell yourself; an old place like this is bound to have leaks.\n\n" +
+                "The sudden crash of china on wood jolts your attention to what you assume is the dining room. " +
+                "The old man quickly moves to see what happened, gesturing for you to follow.\n\n" +
+                "As you enter the room, the cat bolts past you into an entrance that likely leads to the kitchen, " +
+                "clearly startled by the crash. A moment later, a finely-dressed man with white gloves emerges " +
+                "from the same entrance with a broom and dustpan, immediately crouching down and beginning to " +
+                "clean up the shards.\n\n" +
+                "Near the dining table, apologizing profusely with the broken glass at his feet stands a boy " +
+                "who couldn't be more than 19 or 20. An odd relief seems to momentarily wash over him when he " +
+                "sees you enter, though it’s quickly replaced by his original apprehension as the old man " +
                 "approaches him.\n\n" +
-                "Neither one speaks, though through eye-contact alone, it seems that in seconds an entire conversation takes place. The boy's posture shifts " +
-                "fearfully as the old man’s brow furrows, then after a quick, wide-eyed shake of the head from the boy, both relax as if the situation " +
-                "is resolved.\n\n" +
-                "The man with white gloves wordlessly stands when he has finished sweeping up the glass and goes back into the kitchen.\n\n" +
-                "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if ready to bolt in case any more plates" +
-                " decide to come crashing down.\n\n" +
-                "A smile returns to the old man’s face as he introduces you to the boy, who is apparently named Mallory, 'He can be a bit clumsy " +
-                "sometimes, but he’s a good worker,' the old man says, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory." +
-                "Even so, the boy seems to try to keep up a smile.\n\n" +
-                "I’ll let you two get acquainted,' says the old man, picking up the cat and heading into the kitchen, leaving the two of you alone.\n\n" +
-                "Mallory’s gaze seems to linger on you a moment before going back to his task, and though on the surface he seems genuinely happy to meet you," +
-                "there is also an almost mournful disposition underneath. He goes back to setting the table before you can dwell on it too long. \n\n");
-        ui.choice1.setText("Ask how he likes working here");
-        ui.choice2.setText("Offer to help set the table");
-        ui.choice3.setText("Stand there awkwardly");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+                "Neither one speaks, though, through eye-contact alone, it seems an entire conversation takes " +
+                "place in seconds. The boy's posture shifts fearfully as the old man's brow furrows, then " +
+                "after a quick, wide-eyed shake of the head from the boy, both relax as if the situation is " +
+                "resolved.\n\n" + // TODO butler is here, does he just not see you? doesn't butler introduce later
+                "The man with white gloves wordlessly stands when he has finished sweeping up the glass and " +
+                "goes back into the kitchen.\n\n" +
+                "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if " +
+                "ready to bolt in case any more plates decide to come crashing down.\n\n" +
+                "A smile returns to the old man’s face as he introduces you to the boy, who is apparently " +
+                "named Mallory.\n\n \"He can be a bit clumsy sometimes, but he's a good worker,\" the old man " +
+                "says, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory. Even so, " +
+                "the boy seems to try to keep up a smile.\n\n" +
+                "\"I'll let you two get acquainted,\" says the old man, picking up the cat and heading into " +
+                "the kitchen, leaving the two of you alone.\n\n" +
+                "Mallory's gaze seems to linger on you a moment before going back to his task, and though " +
+                "on the surface he seems genuinely happy to meet you, there is also an almost mournful " +
+                "disposition underneath. He goes back to setting the table before you can dwell on it " +
+                "too long.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "askMallory";
-        game.position2= "offerToHelp";
-        game.position3 = "awkMoment";
-        game.position4 = "";
+        ui.choice3.setText("Ask how he likes working here");
+        ui.choice4.setText("Offer to help set the table");
+        ui.choice5.setText("Stand there awkwardly");
+
+        game.position3 = "askMallory";
+        game.position4 = "offerToHelp";
+        game.position5 = "awkMoment";
     }
 
     /*********** FLOOR ONE *************/
     public void room1() {
-        //ui.image = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
-        ui.ImageLabel.setIcon(Bedroom1);
-        //ui.ImageLabel.setIcon(null);
-
         ui.mainTextArea.setText("You sit there on the floor of your room, still processing what’s just happened." +
                 " There’s a sickening series of thumps and thuds as you assume the old man drags Mallory’s body down the stairs." +
                 " Part of you wants to sob, the other part wants to throw up, and a third prays that you’re dreaming. " +
@@ -801,18 +868,21 @@ public class Story {
                 "It doesn’t lock, but after what just happened, you wouldn’t be surprised if you were somehow locked in. Mallory might be dead." +
                 "And you might be next. After a moment you resolve that you have to get out of here. You’d rather be homeless than stuck with a murderer." +
                 "\n\nShakily, you get to your feet and glance around the room.\n\nWhat do you want to do?");
-        ui.choice1.setText("Search floor ");
-        ui.choice2.setText("Try to go back to sleep");
-        ui.choice3.setText("Try the door");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
+        ui.choice2.setText("Search floor ");
+        ui.choice3.setText("Try to go back to sleep");
+        ui.choice4.setText("Try the door");
+        ui.choice5.setText("See map");
 
-        game.position1 = "searchFloor";
-        game.position2= "backSleep";
-        game.position3 = "tryDoor";
-        game.position4 = "";
-        ui.ImageLabel.setVisible(false);
+        game.position2 = "searchFloor";
+        game.position3 = "backSleep";
+        game.position4 = "tryDoor";
+        game.position5 = ""; //TODO add map
     }
     //Try the door (leave)
     public void tryDoor() {
@@ -827,16 +897,21 @@ public class Story {
                 "Between you and Mallory’s room is the staircase leading to the second floor, " +
                 "in the darkness looking more like a gaping void in the wall going downwards.\n\n" +
                 "Where do you go?\n\n");
-        ui.choice1.setText("The Old Man's chambers");
-        ui.choice2.setText("Mallory's room");
-        ui.choice3.setText("Down the stairs");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "tryBedroomOnLeft";
-        game.position2= "MalloryRoom";
-        game.position3 = "downstairs";
-        game.position4 = "";
+        ui.choice2.setText("The Old Man's chambers");
+        ui.choice3.setText("Mallory's room");
+        ui.choice4.setText("Down the stairs");
+        ui.choice5.setText("See map");
+
+        game.position2 = "tryBedroomOnLeft";
+        game.position3 = "MalloryRoom";
+        game.position4 = "downstairs";
+        game.position5 = ""; //TODO add map
     }
 
     public void searchFloor() {
@@ -844,16 +919,17 @@ public class Story {
                 "flung into the room, but other than that, it’s rather clean, save for a stray shirt you have yet to fold." +
                 " Looking at it now, it feels almost foreign despite the fact that you’ve been living here for almost a week." +
                 " You shake your head, turning back to the door. \n\n");
-        ui.choice1.setText("Try to go back to sleep");
-        ui.choice2.setText("Try the door");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "backSleep";
-        game.position2= "tryDoor";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Try to go back to sleep");
+        ui.choice5.setText("Try the door");
+
+        game.position4 = "backSleep";
+        game.position5 = "tryDoor";
     }
 
     public void backSleep() {
@@ -864,16 +940,19 @@ public class Story {
                 "only held up by his hair intertwined in the old man’s crimson fingers. The old man’s bloodstained teeth as he grins" +
                 " and politely asks you to 'go back to bed.' You shake yourself and get to your feet. " +
                 "Maybe sleep isn’t the best idea.\n\n");
-        ui.choice1.setText("Search the floor");
-        ui.choice2.setText("Try the door");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "searchFloor";
-        game.position2= "tryDoor";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice3.setText("Search the floor");
+        ui.choice4.setText("Try the door");
+        ui.choice5.setText("See map");
+
+        game.position3 = "searchFloor";
+        game.position4 = "tryDoor";
+        game.position5 = ""; //TODO add map
     }
     //Downstairs
     public void downstairs() {
@@ -883,16 +962,15 @@ public class Story {
                 "No. You can’t think like that, you decide.\n\n" +
                 "You have to get out of here. This is the only way down to the door on the main floor, and you’re not about to jump out of a third story window to try and escape. \n\n" +
                 "Though the fear of being caught still weighs heavily on your mind, you steel yourself, stepping down into the darkness. \n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room5";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room5";
     }
 
     //The bedroom on your left (2)
@@ -901,30 +979,33 @@ public class Story {
                 "He always locks his room anyway, and it would only follow that he would most definitely lock it when committing a murder. \n\n" +
                 "You sigh, turning back to the hallway.\n\n" +
                 "Where do you go? \n\n");
-        ui.choice1.setText("Go to Mallory's room");
-        ui.choice2.setText("Go downstairs");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice3.setText("Go to Mallory's room");
+        ui.choice4.setText("Go downstairs");
+        ui.choice5.setText("See map");
 
         game.position1 = "MalloryRoom";
         game.position2= "downstairs";
-        game.position3 = "";
-        game.position4 = "";
+        game.position3 = ""; //TODO add map
     }
     //Downstairs
     /*public void TryDoorAhead() {
         ui.mainTextArea.setText("You realize this is Mallory's room door\n");
-        ui.choice1.setText("Enter Mallory’s room");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "MalloryRoom";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText("Enter Mallory’s room");
+
+        game.position5 = "MalloryRoom";
     }*/
 
     // Mallory's room
@@ -940,16 +1021,23 @@ public class Story {
                 "You shake your head. As horrible as it is, there are more pressing matters at hand. " +
                 "You can grieve for your friend once you’re out of here. \n\n" +
                 "His room is set up similarly to your own, with a bed to one wall and a desk to the other. At the foot of the bed sits a closet door.\n\n");
+        ui.choice1.setVisible(true);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
         ui.choice1.setText("Search his bed");
         ui.choice2.setText("Search his closet");
         ui.choice3.setText("Search his desk");
         ui.choice4.setText("Leave the room");
-        ui.choice5.setText("");
+        ui.choice5.setText("See map");
 
         game.position1 = "SearchBed";
         game.position2= "SearchCloset";
         game.position3 = "SearchDesk";
         game.position4 = "LeaveRoom";
+        game.position5 = ""; //TODO add map
     }
     //Search bed
     public void SearchBed() {
@@ -961,35 +1049,41 @@ public class Story {
                 "At first you’re not entirely sure what you’re looking at, but as your eyes adjust, you recoil a little at the sight.\n\n" +
                 "They’re...chains. Shackles, bolted to the floor and long enough to reach up to the bed. \n\n" +
                 "Did-\n\n" +
-                "Did the old man chain Mallory?\n\n" +
-                "You think back to one first days you were there. Mallory had made a mistake, and after that you hadn’t seen him for an entire day - not even at dinner. The next time you’d seen him, you’d noticed the bruises on his wrists, but had assumed that they were from some accident while working. Not...this.\\n\\n\n" +
+                "Did the old man chain Mallory up??\n\n" +
+                "You think back to one first days you were there. Mallory had made a mistake, and after that you hadn't seen him for an entire day - not even at dinner. The next time you’d seen him, you’d noticed the bruises on his wrists, but had assumed that they were from some accident while working. Not...this.\\n\\n\n" +
                 "You scramble to your feet, shaking yourself and looking around the rest of the room.\n\n" );
-        ui.choice1.setText("Search his closet");
-        ui.choice2.setText("Search his desk");
-        ui.choice3.setText("Leave the room");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "SearchCloset";
-        game.position2= "SearchDesk";
-        game.position3 = "LeaveRoom";
-        game.position4 = "";
+        ui.choice3.setText("Search his closet");
+        ui.choice4.setText("Search his desk");
+        ui.choice5.setText("Leave the room");
+
+        game.position3 = "SearchCloset";
+        game.position4 = "SearchDesk";
+        game.position5 = "LeaveRoom";
     }
     //Search closet
     public void SearchCloset() {
         ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
                 "There are three shirts, two pairs of pants, and a yellow raincoat hanging there, with a single pair of shoes sitting on the floor. " +
                 "It’s odd, considering that the old man insisted that all shoes be kept in the hall closet near the front door. \n\n");
-        ui.choice1.setText("Put on the shoes");//
-        ui.choice2.setText("Put on the coat");
-        ui.choice3.setText("Leave Closet");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "Shoes";
-        game.position2= "Coat";
-        game.position3 = "Leave Closet";
-        game.position4 = "";
+        ui.choice3.setText("Put on the shoes");
+        ui.choice4.setText("Put on the coat");
+        ui.choice5.setText("Leave Closet");
+
+        game.position3 = "Shoes";
+        game.position4 = "Coat";
+        game.position5 = "Leave Closet";
     }
 
     //Put on shoes
@@ -997,44 +1091,46 @@ public class Story {
         ui.mainTextArea.setText("You glance down at your sock-covered feet. If you’re going to be running away tonight, you decide," +
                 " it’s probably best that you have some shoes. Luckily you and Mallory are nearly the same shoe-size, so they slip on easily. \n\n");
         shoes = true;
-        ui.choice1.setText("Put on the coat");
-        ui.choice2.setText("Leave Closet");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "Coat";
-        game.position2= "LeaveCloset";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice4.setText("Put on the coat");
+        ui.choice5.setText("Leave Closet");
+
+        game.position4 = "Coat";
+        game.position5 = "LeaveCloset";
     }
    /* //this part is not right
     public void PutOnShoes() {
         ui.mainTextArea.setText("OMG! YOU remember it makes noise");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "SearchCloset";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "SearchCloset";
     }
     //this part is not right
     public void NotPutOnShoes() {
         ui.mainTextArea.setText("Quieter.\nSo you pick it upo and take with you.");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "SearchCloset";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "SearchCloset";
     }
 */
     public void Coat() {
@@ -1042,63 +1138,68 @@ public class Story {
                 " It’s a cold autumn night, and considering how far this mansion is from any people, " +
                 "you’re sure that it’s going to be a long walk in the fridged air before you can find help, " +
                 "so you figure it’s best if you put it on. It’s a little tight in the shoulders, but on the whole it doesn’t fit too badly.\n\n");
-        ui.choice1.setText("Put on the shoes");
-        ui.choice2.setText("Leave Closet");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "Shoes";
-        game.position2= "LeaveCloset";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Put on the shoes");
+        ui.choice5.setText("Leave Closet");
+
+        game.position4 = "Shoes";
+        game.position5 = "LeaveCloset";
     }
 
-    //Put on coat
+    // Put on coat
     // this part is not right
   /*
     public void PutOnCoat() {
         ui.mainTextArea.setText("Get stuck on something/butler grabs)");
-        ui.choice1.setText(">>>");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "Coat";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">>>");
+
+        game.position5 = "Coat";
     }
     //this part is not right
 
     public void NotPutOnCoat() {
         ui.mainTextArea.setText(" Take with you");
-        ui.choice1.setText(">>>");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "SearchCloset";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">>>");
+
+        game.position5 = "SearchCloset";
     }
     */
     //Leave Closet
     public void LeaveCloset() {
-        ui.mainTextArea.setText("You take one last glance at the nearly empty closet before turning back to the room. \n\n");
-        ui.choice1.setText("Search his desk");
-        ui.choice2.setText("Search his bed");
-        ui.choice3.setText("Leave the room");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("You take one last glance at the nearly empty closet before turning back " +
+                "to the room. \n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "SearchDesk";
-        game.position2= "SearchBed";
-        game.position3 = "LeaveRoom";
-        game.position4 = "";
+        ui.choice3.setText("Search his desk");
+        ui.choice4.setText("Search his bed");
+        ui.choice5.setText("Leave the room");
+
+        game.position3 = "SearchDesk";
+        game.position4 = "SearchBed";
+        game.position5 = "LeaveRoom";
     }
 
     //Search desk
@@ -1108,16 +1209,19 @@ public class Story {
                 " a copy of  Shakespeare’s Much Ado about Nothing. However, you’ve read Much Ado About Nothing, " +
                 "and this copy is much thicker than it should be.\n\n" +
                 "Beside it sits a polaroid picture with a date written on the bottom.\n\n");
-        ui.choice1.setText("Examine the book");
-        ui.choice2.setText("Examine the picture");
-        ui.choice3.setText("Leave desk");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "ExamineBook";
-        game.position2= "ExaminePicture";
-        game.position3 = "LeaveDesk";
-        game.position4 = "";
+        ui.choice3.setText("Examine the book");
+        ui.choice4.setText("Examine the picture");
+        ui.choice5.setText("Leave desk");
+
+        game.position3 = "ExamineBook";
+        game.position4 = "ExaminePicture";
+        game.position5 = "LeaveDesk";
     }
     //Examine the book (room4)
     public void ExamineBook() {
@@ -1148,16 +1252,17 @@ public class Story {
                 "Written beside this passage are simply the words, “Next time?”\n\n" +
                 "Shaking your head, you close the book, fold the dust jacket back over the cover, " +
                 "and place it back on the desk.\n\n");
-        ui.choice1.setText("Examine the picture");
-        ui.choice2.setText("Leave desk");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "ExaminePicture";
-        game.position2= "LeaveDesk";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Examine the picture");
+        ui.choice5.setText("Leave desk");
+
+        game.position4 = "ExaminePicture";
+        game.position5 = "LeaveDesk";
     }
 
     //Examine the picture
@@ -1180,16 +1285,17 @@ public class Story {
                 "You quickly put down the polaroid and wipe your eyes. You don’t have time to be getting emotional right now.\n\n" +
                 "Still, you can’t help but hazard one last lingering glance at the photo." +
                 " You wish he could have seen them again.\n\n");
-        ui.choice1.setText("Examine the book");
-        ui.choice2.setText("Leave desk");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "ExamineBook";
-        game.position2= "LeaveDesk";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Examine the book");
+        ui.choice5.setText("Leave desk");
+
+        game.position4 = "ExamineBook";
+        game.position5 = "LeaveDesk";
     }
 
     //Leave desk
@@ -1199,37 +1305,41 @@ public class Story {
                 "The blood smeared across the room jolts you back to where you are, and the small smile drops from your face. " +
                 "There is no “when”. Not anymore.\n\n" +
                 "Clenching your jaw and, attempting to swallow back the rock in your throat, you turn your attention back to the room. \n\n");
-        ui.choice1.setText("Search closet");
-        ui.choice2.setText("Search bed");
-        ui.choice3.setText("Leave room");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "SearchCloset";
-        game.position2= "SearchBed";
-        game.position3 = "LeaveRoom";
-        game.position4 = "";
+        ui.choice3.setText("Search closet");
+        ui.choice4.setText("Search bed");
+        ui.choice5.setText("Leave room");
+
+        game.position3 = "SearchCloset";
+        game.position4 = "SearchBed";
+        game.position5 = "LeaveRoom";
     }
     //Leave room
     public void LeaveRoom() {
-        ui.mainTextArea.setText("You give one last sweeping glance to the room before stepping back out into the hallway and making your way over to the staircase.\n\n" +
-                "As you stand looking down the descending corridor, you feel a shiver of fear run up your spine, and for a moment, you hesitate." +
-                " You’re certain that the old man dragged Mallory down these stairs, and at this point, he could be anywhere in the mansion. If he finds you...\n\n" +
+        ui.mainTextArea.setText("You give one last sweeping glance to the room before stepping back out into the " +
+                "hallway and making your way over to the staircase.\n\n" +
+                "As you stand looking down the descending corridor, you feel a shiver of fear run up your spine, " +
+                "and for a moment, you hesitate. You’re certain that the old man dragged Mallory down these stairs, " +
+                "and at this point, he could be anywhere in the mansion. If he finds you...\n\n" +
                 "No. You can’t think like that, you decide.\n\n" +
-                "You have to get out of here. This is the only way down to the door on the main floor, " +
-                "and you’re not about to jump out of a third story window to try and escape.\n\n" +
-                "Though the fear of being caught still weighs heavily on your mind," +
-                "you steel yourself, stepping down into the darkness. \n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+                "You have to get out of here. This is the only way down to the door on the main floor, and you’re " +
+                "not about to jump out of a third story window to try and escape.\n\n" +
+                "Though the fear of being caught still weighs heavily on your mind, you steel yourself, stepping " +
+                "down into the darkness. \n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "room5";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "room5";
     }
     //Down in third over section, room 5:
     public void room5() {
@@ -1252,16 +1362,19 @@ public class Story {
                 "All of a sudden, a great cracking sound echoes through the hallway, and the ceiling opens. From it descends countless blades," +
                 "swinging violently on ropes and glinting in the darkness. You watch in horror as one swings directly at you.\n\n" +
                 "What do you do?! \n\n");
-        ui.choice1.setText("Run!");
-        ui.choice2.setText("Duck down!");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "Run";
-        game.position2= "DuckDown";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice3.setText("Run!");
+        ui.choice4.setText("Duck down!");
+        ui.choice5.setText("See map!");
+
+        game.position3 = "Run";
+        game.position4 = "DuckDown";
+        game.position5 = ""; //TODO add cant see map
     }
     //Run
     public void Run() {
@@ -1278,16 +1391,15 @@ public class Story {
                 "You watch as he draws in breath, still holding your head, before your neck is violently twisted and everything goes black. \n\n" +
                 "\n" +
                 "You’ve discovered one of many ways to die in this game! Good for you! But, it IS possible to win, so I suggest you restart the game and play again.\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; //death
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; //death
     }
 
     /**
@@ -1320,16 +1432,19 @@ public class Story {
                 "You feel like you’re going insane. \n\n" +
                 "The cat approaches you cautiously. \n\n" +
                 "How do you treat the cat?\n");
-        ui.choice1.setText("Kick the cat away");
-        ui.choice2.setText("Ignore the cat");
-        ui.choice3.setText("Try to pet the cat");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "KickCat";
-        game.position2= "IgnoreCat";
-        game.position3 = "PetCat";
-        game.position4 = "";
+        ui.choice3.setText("Kick the cat away");
+        ui.choice4.setText("Ignore the cat");
+        ui.choice5.setText("Try to pet the cat");
+
+        game.position3 = "KickCat";
+        game.position4 = "IgnoreCat";
+        game.position5 = "PetCat";
     }
     //Kick the cat away
     public void KickCat() {
@@ -1342,16 +1457,21 @@ public class Story {
                 "There’s a large bookcase to one wall, and an unlit fireplace to an adjacent one. In the middle of the room, surrounded by couches," +
                 " is a coffee table with a handful of writing materials and paper on it. \n\n" +
                 "What do you do?\n\n");
-        ui.choice1.setText("Examine the bookcase ");
-        ui.choice2.setText("Examine the coffee table");
-        ui.choice3.setText("Examine the fireplace");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "ExamineBookcase";
-        game.position2= "ExamineCoffeeTable";
-        game.position3 = "ExamineFireplace";
-        game.position4 = "";
+        ui.choice2.setText("Examine the bookcase");
+        ui.choice3.setText("Examine the coffee table");
+        ui.choice4.setText("Examine the fireplace");
+        ui.choice5.setText("See map");
+
+        game.position2 = "ExamineBookcase";
+        game.position3 = "ExamineCoffeeTable";
+        game.position4 = "ExamineFireplace";
+        game.position5 = ""; //TODO add map
     }
 
     //Ignore the cat
@@ -1362,16 +1482,21 @@ public class Story {
                 "To an adjacent wall is an unlit fireplace that looks recently used. It seems to have a few small items on its mantel, but it’s too far away for you to properly see what’s on it. \\n\\n\n" +
                 "In the middle of the room, surrounded by couches, sits a coffee table. It’s peppered with pens and paper and various other writing materials, including what looks like a feather pen.\\n\\n\n" +
                 "What do you do? \\n\\n\n");
-        ui.choice1.setText("Examine the bookcase ");
-        ui.choice2.setText("Examine the coffee table");
-        ui.choice3.setText("Examine the fireplace");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "ExamineBookcase";
-        game.position2= "ExamineCoffeeTable";
-        game.position3 = "ExamineFireplace";
-        game.position4 = "";
+        ui.choice2.setText("Examine the bookcase");
+        ui.choice3.setText("Examine the coffee table");
+        ui.choice4.setText("Examine the fireplace");
+        ui.choice5.setText("See map");
+
+        game.position2 = "ExamineBookcase";
+        game.position3 = "ExamineCoffeeTable";
+        game.position4 = "ExamineFireplace";
+        game.position5 = ""; //TODO add map
     }
     //Try to pet the cat
        public void PetCat() {
@@ -1384,16 +1509,21 @@ public class Story {
                 "In the middle of the room, surrounded by couches, sits a coffee table. It’s peppered with pens and paper and various other writing materials, including what looks like a feather pen. It looks as though there’s something beneath the papers strewn across it, but you’d have to check to be sure.\\n\\n\n" +
                 "What do you do?\\n\\n\n" +
                 "\n");
-        ui.choice1.setText("Examine the bookcase ");
-        ui.choice2.setText("Examine the coffee table");
-        ui.choice3.setText("Examine the fireplace");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+           ui.choice1.setVisible(false);
+           ui.choice2.setVisible(true);
+           ui.choice3.setVisible(true);
+           ui.choice4.setVisible(true);
+           ui.choice5.setVisible(true);
 
-        game.position1 = "ExamineBookcase";
-        game.position2= "ExamineCoffeeTable";
-        game.position3 = "ExamineFireplace";
-        game.position4 = "";
+           ui.choice2.setText("Examine the bookcase");
+           ui.choice3.setText("Examine the coffee table");
+           ui.choice4.setText("Examine the fireplace");
+           ui.choice5.setText("See map");
+
+           game.position2 = "ExamineBookcase";
+           game.position3 = "ExamineCoffeeTable";
+           game.position4 = "ExamineFireplace";
+           game.position5 = ""; //TODO add map
     }
     // In room 9
     //Examine the bookcase
@@ -1408,43 +1538,44 @@ public class Story {
                 "You sigh. An hour ago, you would have thought that for a man who focuses so much on the practical, the old man sure had a lot of impractical books. But now, after everything you’ve seen, there’s a part of you that wants to believe it. You can’t believe you’re thinking this, but perhaps the book could be helpful.\\n\\n\n" +
                 "Or perhaps you’re starting to lose it and the book is just that - a book. \\n\\n\n" +
                 "Do you decide to take it with you?\\n\\n\n");
-        ui.choice1.setText("Pocket the book");
-        ui.choice2.setText("Leave it there");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "PocketBook";
-        game.position2= "LeaveBook";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Pocket the book");
+        ui.choice5.setText("Leave it there");
+
+        game.position4 = "PocketBook";
+        game.position5 = "LeaveBook";
     }
     // need to be fit
     public void PocketBook(){
         ui.mainTextArea.setText("I will keep this.\nI might this it later.\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "ExamineCoffeeTable";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "ExamineCoffeeTable";
     }
     public void LeaveBook(){
-        ui.mainTextArea.setText("Too bad! You might it.\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("Too bad! You might need it.\n\n");
 
-        game.position1 = "ExamineCoffeeTable";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "ExamineCoffeeTable";
     }
     //Examine the coffee table
     public void ExamineCoffeeTable() {
@@ -1452,109 +1583,137 @@ public class Story {
                 "Hesitantly, you push the papers aside to reveal a small ornate letter opener. It’s clearly very old, and its design sits happily on the border between letter opener and plain old tiny knife, but it seems to have found its purpose opening letters for the old man. \\n\\n\n" +
                 "As you look at it, you can’t help but wonder whether you should take it with you. It definitely could be used as a weapon if push came to shove, but a part of you wonders if you would be more effective just sticking to your fists. \\n\\n\n" +
                 "Do you take the letter opener?\\n\\n\n");
-        ui.choice1.setText("Take the letter opener");
-        ui.choice2.setText("Leave it there");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "letterOpener";
-        game.position2= "leaveLetterOpener";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice4.setText("Take the letter opener");
+        ui.choice5.setText("Leave it there");
+
+        game.position4 = "letterOpener";
+        game.position5 = "leaveLetterOpener";
     }
     public void letterOpener() {
         ui.mainTextArea.setText("Put in pocket");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "ExamineFireplace";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "ExamineFireplace";
     }
 
     public void leaveLetterOpener() {
-        ui.mainTextArea.setText("Too bad! You might it");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("Too bad! You might need it");
 
-        game.position1 = "ExamineFireplace";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "ExamineFireplace";
     }
     //Examine the fireplace
     public void ExamineFireplace() {
-        ui.mainTextArea.setText("You walk to the fireplace and survey the ornate black marble surrounding it. Intricate carvings of vines and flowers wrap around the pillars on the outside in patterns closely resembling that of lightning. Closer to center there is a small arch carved with breathtaking precision into what seems to be vines covered in thousands of tiny thorns, many of them nearly looking as though you might actually be cut if you touched them. \\n\\n\n" +
-                "You notice various scraps of burnt paper in the fireplace, though you find that they’re all too small and seared to properly glean what they might have been. \\n\\n\n" +
-                "Finally, you turn your attention to the mantel. On either side are rather hefty-looking statues. Each depicts a gargoyle, one crouching and the other standing on its hind legs, both snarling out at the room. A small matchbox sits beside one of them. It’s open slightly, and you can see that there are still a few left in the pack. There’s a part of you that wants to snag them, just in case, but you’re not entirely sure what you’d use them for. There’s another part that doesn’t want to leave any more trace that you were here than you absolutely have to, in case the old man notices. You sigh, staring at the matches.\\n\\n\n" +
-                "Do you take them?\\n\\n\n");
-        ui.choice1.setText("Take matches\n");
-        ui.choice2.setText("Leave them there");
-        ui.choice3.setText("Go straight to fight scene");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("You walk to the fireplace and survey the ornate black marble surrounding it. " +
+                "Intricate carvings of vines and flowers wrap around the pillars on the outside in patterns " +
+                "closely resembling that of lightning. Closer to center there is a small arch carved with " +
+                "breathtaking precision into what seems to be vines covered in thousands of tiny thorns, many of " +
+                "them nearly looking as though you might actually be cut if you touched them. \n\n\n" +
+                "You notice various scraps of burnt paper in the fireplace, though you find that they’re all too " +
+                "small and seared to properly glean what they might have been. \n\n\n" +
+                "Finally, you turn your attention to the mantel. On either side are rather hefty-looking statues. " +
+                "Each depicts a gargoyle, one crouching and the other standing on its hind legs, both snarling out " +
+                "at the room. A small matchbox sits beside one of them. It’s open slightly, and you can see that " +
+                "there are still a few left in the pack. There’s a part of you that wants to snag them, just in " +
+                "case, but you’re not entirely sure what you’d use them for. There’s another part that doesn't " +
+                "want to leave any more trace that you were here than you absolutely have to, in case the old " +
+                "man notices. You sigh, staring at the matches.\n\n\n" +
+                "Do you take them?\n\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "TakeMatches";
-        game.position2= "LeaveThere";
-        game.position3 = "FightScene";
-        game.position4 = "";
+        ui.choice3.setText("Take matches\n");
+        ui.choice4.setText("Leave them there");
+        ui.choice5.setText("Go straight to fight scene"); //TODO is this the correct option??
+
+        game.position3 = "TakeMatches";
+        game.position4 = "LeaveThere";
+        game.position5 = "FightScene";
     }
     public void TakeMatches() {
         ui.mainTextArea.setText("You grab the matches and pocketed it");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
 
-        game.position1 = "FightScene";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "FightScene";
     }
     public void LeaveThere() {
-        ui.mainTextArea.setText("Too bad! You might it");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("Too bad! You might need them");
 
-        game.position1 = "FightScene";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "FightScene";
     }
     //Fight scene in Room 9 before room 10:
     //Beginning of fight scene
     public void FightScene() {
-        ui.ImageLabel.setIcon(ui.image);
-        ui.image = new ImageIcon(".//mansion Game//Cat Fight(9).jpg");
-        ui.ImageLabel.setIcon(ui.image);
-        ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar on the other side that’s different from the one you entered through. Before you can think too much about it, a noise from the cat draws your attention, and you turn to see it staring at you, twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an almost wave-like motion, its pelt rises and falls in places that it shouldn’t.\\n\\n\n" +
-                "You stare, your body frozen in place, as the cat’s bones begin to grow and its very body begins to stretch. Its wails deepen and become almost human-like as its hide disappears into pale, humanoid flesh. It unfolds itself, and for a moment, before you stands the butler, suit and all, staring at you in agony.\\n\\n\n" +
-                "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his muscles beneath continue to morph and contort. He pleads with you in a voice that’s only half his own, somehow mixed with a low, animalistic growl, “Run!”\\n\\n\n" +
-                "Just that single word seems to take a world of effort as he releases you and flails backwards, growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\\n\\n\n" +
-                "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\\n\\n\n" +
-                "What do you do?\\n\\n\n");
-        ui.choice1.setText("Duck down");
-        ui.choice2.setText("Jump out of the way");
-        ui.choice3.setText("Use letter opener "); //Use letter opener (if have)
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar " +
+                "on the other side that’s different from the one you entered through. Before you can think too much " +
+                "about it, a noise from the cat draws your attention, and you turn to see it staring at you, " +
+                "twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail " +
+                "and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an " +
+                "almost wave-like motion, its pelt rises and falls in places that it shouldn't.\n\n\n" +
+                "You stare, your body frozen in place, as the cat’s bones begin to grow and its very body begins " +
+                "to stretch. Its wails deepen and become almost human-like as its hide disappears into pale, " +
+                "humanoid flesh. It unfolds itself, and for a moment, before you stands the butler, suit and all, " +
+                "staring at you in agony.\n\n\n" +
+                "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his " +
+                "muscles beneath continue to morph and contort. He pleads with you in a voice that’s only half his " +
+                "own, somehow mixed with a low, animalistic growl, “Run!”\n\n\n" +
+                "Just that single word seems to take a world of effort as he releases you and flails backwards, " +
+                "growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\n\n\n" +
+                "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\n\n\n" +
+                "What do you do?\n\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(true);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "DuckingDown";
-        game.position2= "JumpOutWay";
-        game.position3 = "UseLetterOpener";
-        game.position4 = "";
+        ui.choice2.setText("Duck down");
+        ui.choice3.setText("Jump out of the way");
+        ui.choice4.setText("Use letter opener"); //Use letter opener (if have)
+        ui.choice5.setText("See map");
+
+        game.position2 = "DuckingDown";
+        game.position3 = "JumpOutWay";
+        game.position4 = "UseLetterOpener";
+        game.position5 = ""; //TODO add cant see map rn
     }
     //Duck down (pet cat)
     public void DuckingDown() {
@@ -1564,16 +1723,19 @@ public class Story {
                 "Just that single word seems to take a world of effort as he releases you and flails backwards, growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\\n\\n\n" +
                 "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\\n\\n\n" +
                 "What do you do?\\n\\n\n");
-        ui.choice1.setText("Watch helplessly "); //Duck down (pet cat);
-        ui.choice2.setText("Attempt to run"); //Duck down (kick cat)
-        ui.choice3.setText("Curl into a ball"); //Duck down (ignore cat)");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "watchHelplessly "; //End up on floor >>>Duck down (pet cat)
-        game.position2= "attemptToRun"; //Duck down (kick cat)
-        game.position3 = "curlInToABall "; //Duck down (ignore cat)
-        game.position4 = "";
+        ui.choice3.setText("Watch helplessly"); //Duck down (pet cat);
+        ui.choice4.setText("Attempt to run"); //Duck down (kick cat)
+        ui.choice5.setText("Curl up into a ball"); //Duck down (ignore cat)");
+
+        game.position3 = "watchHelplessly"; //End up on floor >>>Duck down (pet cat)
+        game.position4 = "attemptToRun"; //Duck down (kick cat)
+        game.position5 = "curlInToABall"; //Duck down (ignore cat)
     }
     //Duck down (pet cat)
     public void watchHelplessly() {
