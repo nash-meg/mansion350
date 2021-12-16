@@ -304,6 +304,60 @@ public class Story {
         game.position5 = "awkMoment";
     }
 
+    public void stairs(){
+        ui.mainTextArea.setText("The old man chuckles a little, \"The only things of interest that I keep down " +
+                "there are my old typewriters.\"\n\n" +
+                "A pause \n\n" +
+                "\"And the bodies, of course.\" He stops a moment, staring at you rather intensely.\n\n" +
+                "Shit. Was that a joke or a threat?\n\n" +
+                "The silence is broken with a hearty laugh from the old man, which you hesitantly join.\n\n" +
+                "\"I apologize,\" the old man says, still laughing, \"My humor is sometimes...A bit crass.\"\n\n" +
+                "He continues to chuckle to himself as you hazard a glance down the stairs. There appears to be a" +
+                "shiny puddle of something at the bottom, but the base of the steps is too dark to see what it " +
+                "is. It's probably just water, you tell yourself; an old place like this is bound to have leaks.\n\n" +
+                "The sudden crash of china on wood jolts your attention to what you assume is the dining room. " +
+                "The old man quickly moves to see what happened, gesturing for you to follow.\n\n" +
+                "As you enter the room, the cat bolts past you into an entrance that likely leads to the kitchen, " +
+                "clearly startled by the crash. A moment later, a finely-dressed man with white gloves emerges " +
+                "from the same entrance with a broom and dustpan, immediately crouching down and beginning to " +
+                "clean up the shards.\n\n" +
+                "Near the dining table, apologizing profusely with the broken glass at his feet stands a boy " +
+                "who couldn't be more than 19 or 20. An odd relief seems to momentarily wash over him when he " +
+                "sees you enter, though it’s quickly replaced by his original apprehension as the old man " +
+                "approaches him.\n\n" +
+                "Neither one speaks, though, through eye-contact alone, it seems an entire conversation takes " +
+                "place in seconds. The boy's posture shifts fearfully as the old man's brow furrows, then " +
+                "after a quick, wide-eyed shake of the head from the boy, both relax as if the situation is " +
+                "resolved.\n\n" + // TODO butler is here, does he just not see you? doesn't butler introduce later
+                "The man with white gloves wordlessly stands when he has finished sweeping up the glass and " +
+                "goes back into the kitchen.\n\n" +
+                "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if " +
+                "ready to bolt in case any more plates decide to come crashing down.\n\n" +
+                "A smile returns to the old man’s face as he introduces you to the boy, who is apparently " +
+                "named Mallory.\n\n \"He can be a bit clumsy sometimes, but he's a good worker,\" the old man " +
+                "says, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory. Even so, " +
+                "the boy seems to try to keep up a smile.\n\n" +
+                "\"I'll let you two get acquainted,\" says the old man, picking up the cat and heading into " +
+                "the kitchen, leaving the two of you alone.\n\n" +
+                "Mallory's gaze seems to linger on you a moment before going back to his task, and though " +
+                "on the surface he seems genuinely happy to meet you, there is also an almost mournful " +
+                "disposition underneath. He goes back to setting the table before you can dwell on it " +
+                "too long.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice3.setText("Ask how he likes working here");
+        ui.choice4.setText("Offer to help set the table");
+        ui.choice5.setText("Stand there awkwardly");
+
+        game.position3 = "askMallory";
+        game.position4 = "offerToHelp";
+        game.position5 = "awkMoment";
+    }
+
     public void askMallory(){
         ui.mainTextArea.setText("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags " +
                 "under his eyes being heavy and thick. Too heavy for someone his age.\n\n" +
@@ -341,6 +395,62 @@ public class Story {
                 "have greeted you sooner! I'm the butler here at the Manor.\" He smiles, extending a hand for " +
                 "you to shake.\n\n" +
                 "Do you shake his hand? \n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice4.setText("Shake his hand");
+        ui.choice5.setText("Don't shake his hand");
+
+        game.position4 = "shakeHand";
+        game.position5 = "noShakeHand";
+    }
+
+    public void offerToHelp(){
+        ui.mainTextArea.setText("Mallory glances at you with what appears to be genuine fear in his eyes, " +
+                "quickly shaking his head, \"I've got it!\" he says quickly, seemingly loud enough for those " +
+                "in the kitchen to hear\n\n." +
+                "Then he flashes you a small smile, nearly whispering, \"Thank you, though,\" before returning " +
+                "to his work.\n\n" +
+                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
+                "the kitchen, seemingly to check that things are going smoothly.\n\n" +
+                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the " +
+                "dining room. His eyes flash for a moment with an emotion that is covered up too quickly to " +
+                "read, and instead he flashes you a smile, \"I'm sorry, I didn't realize we had company or " +
+                "I would have greeted you sooner! I'm the butler here at the Manor.\"\n\n" +
+                "He smiles, extending a hand for you to shake.\n\n" +
+                "Do you shake his hand?\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice4.setText("Shake his hand");
+        ui.choice5.setText("Don't shake his hand");
+
+        game.position4 = "shakeHand";
+        game.position5 = "noShakeHand";
+    }
+
+    public void awkMoment() {
+        ui.mainTextArea.setText("You stand there in a thick silence, neither of you moving to speak. " +
+                "After a moment, you watch as Mallory goes back to setting the table. He doesn't move the " +
+                "way you expect him to.\n\n" +
+                "Every gesture he makes is stiff, and even jerky at times. The look on his face is hollow, even " +
+                "for doing so mundane a task as setting the table. You feel bad for thinking it, but his actions " +
+                "almost remind you of a deftly-controlled marionette without the strings.\n\n" +
+                "You chide yourself for the comparison. He’s probably just tired.\n\n" +
+                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
+                "the kitchen, seemingly to check that things are going smoothly.\n\n" +
+                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the " +
+                "dining room. His eyes flash for a moment with an emotion that is covered up too quickly to " +
+                "read, and instead he flashes you a smile, \"I'm sorry, I didn't realize we had company or I would " +
+                "have greeted you sooner! I'm the butler here at the Manor.\"\n\n" +
+                "He smiles, extending a hand for you to shake.\n\n" +
+                "Do you shake his hand?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -408,6 +518,37 @@ public class Story {
 
     }
 
+    public void noShakeHand(){
+        ui.mainTextArea.setText("You glance apologetically at the butler's hand, not entirely willing to shake " +
+                "it. He holds his hand out for a moment longer, but after a tight-lipped nod from you, he " +
+                "realizes that you're not going to shake it and instead withdraws his hand and nods back.\n\n" +
+                "Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though " +
+                "neither you nor Mallory seem to have heard anything of the sort.\n\n" +
+                "You're about to let him walk into the other room when you realize something, calling after him, " +
+                "\"Wait-\"\n\n" +
+                "The butler stops and turns to you.\n\n" +
+                "\"I didn't catch your name,\" you say, somewhat nervously. Usually, you wouldn't ask, but you " +
+                "feel bad just referring to him as \"butler\".\n\n" +
+                "He gives a small huff of amusement before responding, \"Names are unimportant,\" he shrugs, " +
+                "smiling solemnly, \"I'm just the butler.\"\n\n" +
+                "With that, he turns and walks back into the kitchen.\n\n" +
+                "After a moment, he and the old man emerge with various steaming plates making up an " +
+                "extravagant meal, all of which are arranged on the table. After a moment, the butler pulls out " +
+                "a chair for the old man, and Mallory sits across from him. Then, the butler gestures for you to " +
+                "sit, seemingly allowing you to choose your spot.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice4.setText("Sit next to the old man");
+        ui.choice5.setText("Sit next to Mallory");
+
+        game.position4 = "sitNxtToOldman";
+        game.position5 = "sitNxtMallory";
+    }
+
     public void sitNxtToOldman(){
         ui.mainTextArea.setText("The butler stays off to the side as you take up a seat next to the old man, " +
                 "who flashes you a toothy grin as you sit down beside him. If you didn't know any better, you " +
@@ -454,6 +595,60 @@ public class Story {
                 "eyes as you realize you'll be sleeping in a proper bed tonight. You change into a set of pajamas " +
                 "folded neatly atop the bed and crawl beneath the covers.\n\n" +
                 "What would you like to do?\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText("Go to sleep");
+
+        game.position5 = "goToSleep";
+    }
+
+    public void sitNxtMallory(){
+        ui.mainTextArea.setText("Mallory pulls out the chair beside him, flashing you a small smile as you move " +
+                "to sit next to him. You see the butler smile as well as you sit down and Mallory passes you " +
+                "the tray of mashed potatoes, \"Eat,\" he says cheerily, \"you'll need it.\" \n\n" +
+                "Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler " +
+                "standing attentively off to the side.\n\n" +
+                "You realize with a little unease that these might be the only people in the mansion. Not that " +
+                "you have much experience with the habits of the wealthy, but you expected him to have at least " +
+                "a few more staff to help things get done around the place. Then again, perhaps that’s why he " +
+                "hired you. If it really is his goal to help people get back on their feet, it would make sense " +
+                "that if a few of them left at once, he would be short-staffed.\n\n" +
+                "You push the issue out of your mind as the old man turns to you, \"If you're going to be staying " +
+                "here,\" he says, gesturing lazily with his fork, \"there are a few rules you're going to have " +
+                "to follow.\"\n\n" +
+                "Here, he pauses, looking at you expectantly as if to make sure you're still on board.\n\n" +
+                "Not entirely sure what kind of response he's looking for, you just nod.\n\n" +
+                "Apparently, that was the right response, because the old man grins as he continues, \"Things " +
+                "here run on a tight shift during work hours, but when you're not working, your time is your " +
+                "own to do as you please. You'll be paid by the hour for every task you complete around the Manor. " +
+                "You're allowed to take days off whenever you need, no questions asked-\"\n\n" +
+                "At this, Mallory scoffs quietly. The old man doesn't seem to notice, but you catch the butler " +
+                "throwing a warning glance towards the boy. \n\n" +
+                "\"-Any locked or boarded up doors are to stay that way. Above all, you are never allowed to " +
+                "go down into the cellar, no matter the reason, lest you wish for your time here to end. Do you " +
+                "understand?\"\n\n" +
+                "\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't expect to feel " +
+                "over dinner, and instinct dictates that you respond as succinctly as possible.\n\n" +
+                "The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
+                "dissipating.\n\n" +
+                "\"It’s a wonderful place to be,\" the butler adds, \"and if you have any questions at all, " +
+                "feel free to ask me.\"\n\n" +
+                "The old man nods approvingly, and dinner continues rather normally.\n\n" +
+                "Once everyone has finished eating and the table is cleared, the old man takes you upstairs " +
+                "and shows you to your bedroom on the top floor.\n\n" +
+                "\"This is where you'll be sleeping for the rest of your time here. Mallory's room is across " +
+                "the hall, and mine is the one next to yours, so if you need anything, you know where to go.\"\n\n" +
+                "You nod, and the old man turns to leave before stopping himself, \"Oh, and just as a heads up, " +
+                "the cat tends to be a little loud at night, so I suggest you keep your door closed,\" he " +
+                "chuckles, \"You know how cats are.\"\n\n" +
+                "After that, he says goodnight, and you open the door to your room. It's small, but comfortable, " +
+                "with a desk on one wall, a bed on the other, and beside that, a closet. A few tears come to " +
+                "your eyes as you realize you'll be sleeping in a proper bed tonight. You change into a set of " +
+                "pajamas folded neatly atop the bed and crawl beneath the covers.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -707,201 +902,6 @@ public class Story {
         ui.choice5.setText(">");
 
         game.position5 = "room1";
-    }
-
-    public void sitNxtMallory(){
-        ui.mainTextArea.setText("Mallory pulls out the chair beside him, flashing you a small smile as you move " +
-                "to sit next to him. You see the butler smile as well as you sit down and Mallory passes you " +
-                "the tray of mashed potatoes, \"Eat,\" he says cheerily, \"you'll need it.\" \n\n" +
-                "Surprisingly, the only people at dinner are you, Mallory, and the old man, with the butler " +
-                "standing attentively off to the side.\n\n" +
-                "You realize with a little unease that these might be the only people in the mansion. Not that " +
-                "you have much experience with the habits of the wealthy, but you expected him to have at least " +
-                "a few more staff to help things get done around the place. Then again, perhaps that’s why he " +
-                "hired you. If it really is his goal to help people get back on their feet, it would make sense " +
-                "that if a few of them left at once, he would be short-staffed.\n\n" +
-                "You push the issue out of your mind as the old man turns to you, \"If you're going to be staying " +
-                "here,\" he says, gesturing lazily with his fork, \"there are a few rules you're going to have " +
-                "to follow.\"\n\n" +
-                "Here, he pauses, looking at you expectantly as if to make sure you're still on board.\n\n" +
-                "Not entirely sure what kind of response he's looking for, you just nod.\n\n" +
-                "Apparently, that was the right response, because the old man grins as he continues, \"Things " +
-                "here run on a tight shift during work hours, but when you're not working, your time is your " +
-                "own to do as you please. You'll be paid by the hour for every task you complete around the Manor. " +
-                "You're allowed to take days off whenever you need, no questions asked-\"\n\n" +
-                "At this, Mallory scoffs quietly. The old man doesn't seem to notice, but you catch the butler " +
-                "throwing a warning glance towards the boy. \n\n" +
-                "\"-Any locked or boarded up doors are to stay that way. Above all, you are never allowed to " +
-                "go down into the cellar, no matter the reason, lest you wish for your time here to end. Do you " +
-                "understand?\"\n\n" +
-                "\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't expect to feel " +
-                "over dinner, and instinct dictates that you respond as succinctly as possible.\n\n" +
-                "The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
-                "dissipating.\n\n" +
-                "\"It’s a wonderful place to be,\" the butler adds, \"and if you have any questions at all, " +
-                "feel free to ask me.\"\n\n" +
-                "The old man nods approvingly, and dinner continues rather normally.\n\n" +
-                "Once everyone has finished eating and the table is cleared, the old man takes you upstairs " +
-                "and shows you to your bedroom on the top floor.\n\n" +
-                "\"This is where you'll be sleeping for the rest of your time here. Mallory's room is across " +
-                "the hall, and mine is the one next to yours, so if you need anything, you know where to go.\"\n\n" +
-                "You nod, and the old man turns to leave before stopping himself, \"Oh, and just as a heads up, " +
-                "the cat tends to be a little loud at night, so I suggest you keep your door closed,\" he " +
-                "chuckles, \"You know how cats are.\"\n\n" +
-                "After that, he says goodnight, and you open the door to your room. It's small, but comfortable, " +
-                "with a desk on one wall, a bed on the other, and beside that, a closet. A few tears come to " +
-                "your eyes as you realize you'll be sleeping in a proper bed tonight. You change into a set of " +
-                "pajamas folded neatly atop the bed and crawl beneath the covers.\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText("Go to sleep");
-
-        game.position5 = "goToSleep";
-    }
-
-    public void noShakeHand(){
-        ui.mainTextArea.setText("You glance apologetically at the butler's hand, not entirely willing to shake " +
-                "it. He holds his hand out for a moment longer, but after a tight-lipped nod from you, he " +
-                "realizes that you're not going to shake it and instead withdraws his hand and nods back.\n\n" +
-                "Suddenly, the butler snaps to attention, dutifully walking into the kitchen as if called, though " +
-                "neither you nor Mallory seem to have heard anything of the sort.\n\n" +
-                "You're about to let him walk into the other room when you realize something, calling after him, " +
-                "\"Wait-\"\n\n" +
-                "The butler stops and turns to you.\n\n" +
-                "\"I didn't catch your name,\" you say, somewhat nervously. Usually, you wouldn't ask, but you " +
-                "feel bad just referring to him as \"butler\".\n\n" +
-                "He gives a small huff of amusement before responding, \"Names are unimportant,\" he shrugs, " +
-                "smiling solemnly, \"I'm just the butler.\"\n\n" +
-                "With that, he turns and walks back into the kitchen.\n\n" +
-                "After a moment, he and the old man emerge with various steaming plates making up an " +
-                "extravagant meal, all of which are arranged on the table. After a moment, the butler pulls out " +
-                "a chair for the old man, and Mallory sits across from him. Then, the butler gestures for you to " +
-                "sit, seemingly allowing you to choose your spot.\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
-
-        ui.choice4.setText("Sit next to the old man");
-        ui.choice5.setText("Sit next to Mallory");
-
-        game.position4 = "sitNxtToOldman";
-        game.position5 = "sitNxtMallory";
-    }
-
-    public void offerToHelp(){
-        ui.mainTextArea.setText("Mallory glances at you with what appears to be genuine fear in his eyes, " +
-                "quickly shaking his head, \"I've got it!\" he says quickly, seemingly loud enough for those " +
-                "in the kitchen to hear\n\n." +
-                "Then he flashes you a small smile, nearly whispering, \"Thank you, though,\" before returning " +
-                "to his work.\n\n" +
-                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
-                "the kitchen, seemingly to check that things are going smoothly.\n\n" +
-                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the " +
-                "dining room. His eyes flash for a moment with an emotion that is covered up too quickly to " +
-                "read, and instead he flashes you a smile, \"I'm sorry, I didn't realize we had company or " +
-                "I would have greeted you sooner! I'm the butler here at the Manor.\"\n\n" +
-                "He smiles, extending a hand for you to shake.\n\n" +
-                "Do you shake his hand?\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
-
-        ui.choice4.setText("Shake his hand");
-        ui.choice5.setText("Don't shake his hand");
-
-        game.position4 = "shakeHand";
-        game.position5 = "noShakeHand";
-    }
-
-    public void awkMoment() {
-        ui.mainTextArea.setText("You stand there in a thick silence, neither of you moving to speak. " +
-                "After a moment, you watch as Mallory goes back to setting the table. He doesn't move the " +
-                "way you expect him to.\n\n" +
-                "Every gesture he makes is stiff, and even jerky at times. The look on his face is hollow, even " +
-                "for doing so mundane a task as setting the table. You feel bad for thinking it, but his actions " +
-                "almost remind you of a deftly-controlled marionette without the strings.\n\n" +
-                "You chide yourself for the comparison. He’s probably just tired.\n\n" +
-                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
-                "the kitchen, seemingly to check that things are going smoothly.\n\n" +
-                "He glances at you in surprise as if not expecting to see anyone other than Mallory in the " +
-                "dining room. His eyes flash for a moment with an emotion that is covered up too quickly to " +
-                "read, and instead he flashes you a smile, \"I'm sorry, I didn't realize we had company or I would " +
-                "have greeted you sooner! I'm the butler here at the Manor.\"\n\n" +
-                "He smiles, extending a hand for you to shake.\n\n" +
-                "Do you shake his hand?\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
-
-        ui.choice4.setText("Shake his hand");
-        ui.choice5.setText("Don't shake his hand");
-
-        game.position4 = "shakeHand";
-        game.position5 = "noShakeHand";
-    }
-
-    public void stairs(){
-        ui.mainTextArea.setText("The old man chuckles a little, \"The only things of interest that I keep down " +
-                "there are my old typewriters.\"\n\n" +
-                "A pause \n\n" +
-                "\"And the bodies, of course.\" He stops a moment, staring at you rather intensely.\n\n" +
-                "Shit. Was that a joke or a threat?\n\n" +
-                "The silence is broken with a hearty laugh from the old man, which you hesitantly join.\n\n" +
-                "\"I apologize,\" the old man says, still laughing, \"My humor is sometimes...A bit crass.\"\n\n" +
-                "He continues to chuckle to himself as you hazard a glance down the stairs. There appears to be a" +
-                "shiny puddle of something at the bottom, but the base of the steps is too dark to see what it " +
-                "is. It's probably just water, you tell yourself; an old place like this is bound to have leaks.\n\n" +
-                "The sudden crash of china on wood jolts your attention to what you assume is the dining room. " +
-                "The old man quickly moves to see what happened, gesturing for you to follow.\n\n" +
-                "As you enter the room, the cat bolts past you into an entrance that likely leads to the kitchen, " +
-                "clearly startled by the crash. A moment later, a finely-dressed man with white gloves emerges " +
-                "from the same entrance with a broom and dustpan, immediately crouching down and beginning to " +
-                "clean up the shards.\n\n" +
-                "Near the dining table, apologizing profusely with the broken glass at his feet stands a boy " +
-                "who couldn't be more than 19 or 20. An odd relief seems to momentarily wash over him when he " +
-                "sees you enter, though it’s quickly replaced by his original apprehension as the old man " +
-                "approaches him.\n\n" +
-                "Neither one speaks, though, through eye-contact alone, it seems an entire conversation takes " +
-                "place in seconds. The boy's posture shifts fearfully as the old man's brow furrows, then " +
-                "after a quick, wide-eyed shake of the head from the boy, both relax as if the situation is " +
-                "resolved.\n\n" + // TODO butler is here, does he just not see you? doesn't butler introduce later
-                "The man with white gloves wordlessly stands when he has finished sweeping up the glass and " +
-                "goes back into the kitchen.\n\n" +
-                "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if " +
-                "ready to bolt in case any more plates decide to come crashing down.\n\n" +
-                "A smile returns to the old man’s face as he introduces you to the boy, who is apparently " +
-                "named Mallory.\n\n \"He can be a bit clumsy sometimes, but he's a good worker,\" the old man " +
-                "says, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory. Even so, " +
-                "the boy seems to try to keep up a smile.\n\n" +
-                "\"I'll let you two get acquainted,\" says the old man, picking up the cat and heading into " +
-                "the kitchen, leaving the two of you alone.\n\n" +
-                "Mallory's gaze seems to linger on you a moment before going back to his task, and though " +
-                "on the surface he seems genuinely happy to meet you, there is also an almost mournful " +
-                "disposition underneath. He goes back to setting the table before you can dwell on it " +
-                "too long.\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
-        ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
-
-        ui.choice3.setText("Ask how he likes working here");
-        ui.choice4.setText("Offer to help set the table");
-        ui.choice5.setText("Stand there awkwardly");
-
-        game.position3 = "askMallory";
-        game.position4 = "offerToHelp";
-        game.position5 = "awkMoment";
     }
 
     /*********** FLOOR ONE *************/
