@@ -41,6 +41,7 @@ public class Story {
             case "painting": painting(); break;
             case "askMallory": askMallory(); break;
             case "shakeHand": shakeHand(); break;
+            case "contShakeHand": contShakeHand(); break;
             case "sitNxtToOldman": sitNxtToOldman(); break;
             case "sitNxtMallory": sitNxtMallory(); break;
             case "goToSleep": goToSleep(); break;
@@ -135,11 +136,11 @@ public class Story {
 
     }
     public void theMansion() {
-        ui.mainTextArea.setText("___________________ Welcome to Sinister Happenings at Huxley Manor " +
-                "___________________\n\n" +
+        ui.mainTextArea.setText("______________ Welcome to Sinister Happenings at Huxley Manor " +
+                "______________\n\n" +
                 "Warning: This game contains themes of gore, violence, and manipulation/mind control.\n" +
                 "Enter at your own risk... \n" +
-                "_________________________________________________________________________________\n\n" +
+                "_______________________________________________________________________\n\n" +
                 "Before goosebumps plague your arms and your eyes cannot be ripped away from the screen, " +
                 "here are some things to know about our spooky little game.\n\nThis is a text-based game, so there " +
                 "are very little graphics. If you don’t like reading, sorry bud, this isn't the game for you. " +
@@ -355,11 +356,22 @@ public class Story {
                 "feel bad just referring to him as \"butler\".\n\n" +
                 "He gives a small huff of amusement before responding, \"Names are unimportant,\" he shrugs, " +
                 "smiling solemnly, \"I'm just the butler.\"\n\n" +
-                "With that, he turns and walks back into the kitchen.\n\n" + // TODO add arrow(?)
-                "After a moment, he and the old man emerge with various steaming plates making up an extravagant " +
-                "meal, all of which are arranged on the table. The butler pulls out a chair for the old man, " +
-                "and Mallory sits across from him. Then, the butler gestures for you to sit, seemingly allowing " +
-                "you to choose your spot.\n\n" +
+                "With that, he turns and walks back into the kitchen.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "contShakeHand";
+    }
+    public void contShakeHand(){
+        ui.mainTextArea.setText("After a moment, he and the old man emerge with various steaming plates " +
+                "making up an extravagant meal, all of which are arranged on the table. The butler " +
+                "pulls out a chair for the old man, and Mallory sits across from him. Then, the butler " +
+                "gestures for you to sit, seemingly allowing you to choose your spot.\n\n" +
                 "Where would you like to sit?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
