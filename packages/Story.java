@@ -58,6 +58,7 @@ public class Story {
             case "leaveMansion":leaveMansion(); break;
             case "painting": painting(); break;
             case "askMallory": askMallory(); break;
+            case "askMalCont": askMalloryCont();break;
             case "shakeHand": shakeHand(); break;
             case "contShakeHand": contShakeHand(); break;
             case "sitNxtToOldman": sitNxtToOldman(); break;
@@ -385,8 +386,20 @@ public class Story {
                 "kitchen could beat you in a fight.\n\n" +
                 "You hear the old man's deep laughter echo from the other room, accompanied by another. He " +
                 "doesn't sound evil. You sigh to yourself. You've always been paranoid, and at this point, " +
-                "you decide it's best not to look gift-horse in the mouth.\n\n" + //TODO: NEW PAGE
-                "You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
+                "you decide it's best not to look gift-horse in the mouth.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "askMalCont";
+    }
+
+    public void askMalloryCont(){
+        ui.mainTextArea.setText("You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
                 "the kitchen, seemingly to check that things are going smoothly. \n\n" +
                 "He glances at you in surprise as if not expecting to see anyone other than Mallory in the " +
                 "dining room. His eyes flash for a moment with an emotion that is covered up too quickly to read, " +
