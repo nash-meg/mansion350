@@ -89,7 +89,7 @@ public class Story {
             case "backSleep": backSleep(); break;
             case "searchFloor": searchFloor(); break;
             case "tryDoor": tryDoor(); break;
-            case "tryBedroomOnleft": tryBedroomOnLeft(); break;
+            case "tryBedroomOnLeft": tryBedroomOnLeft(); break;
             case "downstairs": downstairs(); break;
             //case "TryDoorAhead": TryDoorAhead(); break;
             case "MalloryRoom":MalloryRoom(); break;
@@ -974,7 +974,7 @@ public class Story {
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice2.setText("The Old Man's chambers"); //TODO: BUTTON DOESN'T WORK AND IDK WHY
+        ui.choice2.setText("The Old Man's chambers"); //TODO: BUTTON DOESN'T WORK AND IDK WHY...Fixed!!
         ui.choice3.setText("Mallory's room");
         ui.choice4.setText("Down the stairs");
         ui.choice5.setText("See map");
