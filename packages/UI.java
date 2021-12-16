@@ -121,7 +121,7 @@ public class UI {
 
 
         ImagePanel = new JPanel();
-        ImagePanel.setBounds(850, 25, 189, 400);
+        ImagePanel.setBounds(950, 40, 189, 400);
         ImagePanel.setBackground(Color.black.brighter());
         gameWindow.add(ImagePanel);
 
