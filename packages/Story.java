@@ -2952,15 +2952,15 @@ public class Story {
                 "As you step onto the floor from the bottom stair, you feel something thick begin to soak into your socks, " +
                 "and when you look down you find yourself standing in a dark, sticky puddle that smells of iron and rot. \n\n" +
                 "When you turn your head, you have to force back a scream of terror as you realize you’re standing " +
-                "beside a row of corpses hung upidedown along the wall.\n\n" +
+                "beside a row of corpses hung upidedown along the wall. " +
                 "In various stages of decay, they hang there, their throats slit like pigs hung to bleed. \n\n" +
                 "Trying not to comprehend the sight before you, you instead try to keep walking." +
                 " On the other side of the cellar, you can see a door with a window filtering in the pre-dawn light from outside. " +
                 "If you can just make it across...\n\n" +
                 "Suddenly, your feet hit something on the floor. " +
                 "It feels somehow solid and squishy at the same time. Without thinking, you look down. \n\n" +
-                "Your breath catches in your chest. A pair of dead, cold eyes look back at you from Mallory’s pale corpse. \n\n" +
-                "You feel your entire body begin to shake as you stare at the body of the boy at your feet." +
+                "Your breath catches in your chest. A pair of dead, cold eyes look back at you from Mallory’s pale corpse. " +
+                "You begin to shake as you stare at the body of the boy at your feet." +
                 " He doesn't look like himself. His skin looks almost blue and leathery. " +
                 "At least, the bits of skin you can see." +
                 " Most of him is covered in what you assume to be his own blood," +
@@ -2970,8 +2970,8 @@ public class Story {
                 "but you know you have to keep moving. " +
                 "Reluctantly, you step over his body and continue on over dozens of other corpses who you don’t" +
                 " recognize as you make your way towards the door.\n\n" +
-                "It’s then that you hear the old man coming down the stairs.\n\n" +
-                "You glance at the door.\n\n" +
+                "It’s then that you hear the old man coming down the stairs.\n\n " +
+                "You glance at the door. " +
                 "You’re not sure if you could make it, but you sure could try.\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
@@ -3094,7 +3094,7 @@ public class Story {
 
     public void Fight3() {
         ui.mainTextArea.setText("You’re just a few feet away from him now, and as you struggle, you begin to cry out both in frustration and in some vain attempt to beg for your life.\\n\\n\n" +
-                "The old man simply chuckles, continuing to pull you towards him, “Do you know how I came to be like this?” he asks, reaching up his free hand to caress your face, “I killed my best friend, and drank his blood on the floor of a church, and I still have his portrait hanging in my house,” he grins, holding your chin so you have no choice but to look into his eyes, “Your pleas mean nothing to me.”\\n\\n\n" +
+                "The old man simply chuckles, continuing to pull you towards him, “Do you know how I came to be like this?” he asks, reaching up his free hand to caress your face, “I killed my best friend, and drank his blood on the floor of a church; I still have his portrait hanging in my house,” he grins, holding your chin so you have no choice but to look into his eyes, “Your pleas mean nothing to me.”\\n\\n\n" +
                 "With that, he withdraws his hand from your face and reaches into his robe. Before you can even process what he’s grabbed, he slices something over your throat and blood begins spewing outward. You simply stare at him in horror before you fall to your knees, then everything goes black. \\n\\n\\n\n" +
                 "Arrrggg you almost made it! So close! This game IS beatable, so since you made it this far you might as well restart and try again! " +
                 "Perhaps if you make some different choices, things will turn out better?\\n\\n\n");
