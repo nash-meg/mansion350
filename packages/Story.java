@@ -399,6 +399,7 @@ public class Story {
 
         game.position4 = "sitNxtToOldman";
         game.position5 = "sitNxtMallory";
+
     }
     public void sitNxtToOldman(){
         ui.mainTextArea.setText("The butler stays off to the side as you take up a seat next to the old man, " +
