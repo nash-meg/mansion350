@@ -11,6 +11,7 @@ public class Story {
     boolean shoes;
     boolean purpPotion;
     boolean  matches;
+    boolean letteropener;
     boolean littleBook;
     boolean kick;
     boolean pet;
@@ -28,6 +29,7 @@ public class Story {
         kick = false;
         pet = false;
         ignore = false;
+        letteropener = false;
     }
     ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
     ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
@@ -1601,7 +1603,11 @@ public class Story {
     }
     // need to be fit
     public void PocketBook(){
-        ui.mainTextArea.setText("I will keep this.\nI might this it later.\n\n");
+        littleBook = true;
+        ui.mainTextArea.setText("You take the book from the shelf and place it in the pocket of your pajama pants. " +
+                "You know you're most likely being paranoid at best, but it gives you some comfort comfort to have the little book," +
+                " even if it is most likely fictional. At the very least, you figure, it'll make a good souvenir to remind you that " +
+                "you made it through this hellish night in one piece\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1614,7 +1620,8 @@ public class Story {
         game.position5 = "ExamineCoffeeTable";
     }
     public void LeaveBook(){
-        ui.mainTextArea.setText("Too bad! You might need it.\n\n");
+        ui.mainTextArea.setText("You shake your head, somewhat disappointed in yourself that you would genuinely think a book would save you." +
+                "What is this, Harry Potter?\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1624,14 +1631,22 @@ public class Story {
 
         ui.choice5.setText(">");
 
-        game.position5 = "ExamineCoffeeTable";
+        game.position5 = "FightScene";
     }
     //Examine the coffee table
     public void ExamineCoffeeTable() {
-        ui.mainTextArea.setText("You walk over to the coffee table and give it a once-over. The papers appear to be the beginnings of fancily-written letters, though the cursive is too messy and scrawling for you to sit down and try to decipher right now. There doesn’t appear to be much out of the ordinary alongside the stationary and writing utensils, but as you look closer you discover that there seems to be something beneath the three or four unfinished letters strewn across the table.\\n\\n\n" +
-                "Hesitantly, you push the papers aside to reveal a small ornate letter opener. It’s clearly very old, and its design sits happily on the border between letter opener and plain old tiny knife, but it seems to have found its purpose opening letters for the old man. \\n\\n\n" +
-                "As you look at it, you can’t help but wonder whether you should take it with you. It definitely could be used as a weapon if push came to shove, but a part of you wonders if you would be more effective just sticking to your fists. \\n\\n\n" +
-                "Do you take the letter opener?\\n\\n\n");
+        ui.mainTextArea.setText("You walk over to the coffee table and give it a once-over. " +
+                "The papers appear to be the beginnings of fancily-written letters, " +
+                "though the cursive is too messy and scrawling for you to sit down and try to decipher right now. " +
+                "There doesn't appear to be much out of the ordinary alongside the stationary and writing utensils, " +
+                "but as you look closer you discover that there seems to be something beneath the three or four unfinished letters strewn across the table.\n\n" +
+                "Hesitantly, you push the papers aside to reveal a small ornate letter opener. " +
+                "It’s clearly very old, and its design sits happily on the border between letter opener and plain old tiny knife, " +
+                "but it seems to have found its purpose opening letters for the old man. \n\n" +
+                "As you look at it, you can’t help but wonder whether you should take it with you. " +
+                "It definitely could be used as a weapon if push came to shove, " +
+                "but a part of you wonders if you would be more effective just sticking to your fists. \n\n" +
+                "Do you take the letter opener?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -1645,7 +1660,9 @@ public class Story {
         game.position5 = "leaveLetterOpener";
     }
     public void letterOpener() {
-        ui.mainTextArea.setText("Put in pocket");
+        letteropener = true;
+        ui.mainTextArea.setText("You grab the letter opener and put it in your pocket. You figure that with everything going on in this place, " +
+                "it can't hurt to have something stronger than your fists.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1655,11 +1672,12 @@ public class Story {
 
         ui.choice5.setText(">");
 
-        game.position5 = "ExamineFireplace";
+        game.position5 = "FightScene";
     }
 
     public void leaveLetterOpener() {
-        ui.mainTextArea.setText("Too bad! You might need it");
+        ui.mainTextArea.setText("You decide to leave it. You never properly learned how to fight with a knife, " +
+                "and you're not sure that the letter opener wouldn't ultimately do more harm than good.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1669,7 +1687,7 @@ public class Story {
 
         ui.choice5.setText(">");
 
-        game.position5 = "ExamineFireplace";
+        game.position5 = "FightScene";
     }
     //Examine the fireplace
     public void ExamineFireplace() {
@@ -1677,33 +1695,34 @@ public class Story {
                 "Intricate carvings of vines and flowers wrap around the pillars on the outside in patterns " +
                 "closely resembling that of lightning. Closer to center there is a small arch carved with " +
                 "breathtaking precision into what seems to be vines covered in thousands of tiny thorns, many of " +
-                "them nearly looking as though you might actually be cut if you touched them. \n\n\n" +
+                "them nearly looking as though you might actually be cut if you touched them. \n\n" +
                 "You notice various scraps of burnt paper in the fireplace, though you find that they’re all too " +
-                "small and seared to properly glean what they might have been. \n\n\n" +
+                "small and seared to properly glean what they might have been. \n\n" +
                 "Finally, you turn your attention to the mantel. On either side are rather hefty-looking statues. " +
                 "Each depicts a gargoyle, one crouching and the other standing on its hind legs, both snarling out " +
                 "at the room. A small matchbox sits beside one of them. It’s open slightly, and you can see that " +
                 "there are still a few left in the pack. There’s a part of you that wants to snag them, just in " +
                 "case, but you’re not entirely sure what you’d use them for. There’s another part that doesn't " +
                 "want to leave any more trace that you were here than you absolutely have to, in case the old " +
-                "man notices. You sigh, staring at the matches.\n\n\n" +
-                "Do you take them?\n\n\n");
+                "man notices. You sigh, staring at the matches.\n\n" +
+                "Do you take them?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
+        ui.choice5.setVisible(false);
 
         ui.choice3.setText("Take matches");
         ui.choice4.setText("Leave them there");
-        ui.choice5.setText("Go straight to fight scene"); //TODO is this the correct option??
 
         game.position3 = "TakeMatches";
         game.position4 = "LeaveThere";
-        game.position5 = "FightScene";
     }
     public void TakeMatches() {
-        ui.mainTextArea.setText("You grab the matches and pocketed it");
+        matches = true;
+        ui.mainTextArea.setText("You grab the matches from the mantel and put them in your pocket. " +
+                "You figure it can't hurt to take them, and hey, they might come in handy. " +
+                "What's the worst that could happen?\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1716,7 +1735,7 @@ public class Story {
         game.position5 = "FightScene";
     }
     public void LeaveThere() {
-        ui.mainTextArea.setText("Too bad! You might need them");
+        ui.mainTextArea.setText("You decide to leave them there. It's not like you're going to need ");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1736,18 +1755,18 @@ public class Story {
                 "about it, a noise from the cat draws your attention, and you turn to see it staring at you, " +
                 "twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail " +
                 "and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an " +
-                "almost wave-like motion, its pelt rises and falls in places that it shouldn't.\n\n\n" +
+                "almost wave-like motion, its pelt rises and falls in places that it shouldn't.\n\n" +
                 "You stare, your body frozen in place, as the cat’s bones begin to grow and its very body begins " +
                 "to stretch. Its wails deepen and become almost human-like as its hide disappears into pale, " +
                 "humanoid flesh. It unfolds itself, and for a moment, before you stands the butler, suit and all, " +
-                "staring at you in agony.\n\n\n" +
+                "staring at you in agony.\n\n" +
                 "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his " +
                 "muscles beneath continue to morph and contort. He pleads with you in a voice that’s only half his " +
-                "own, somehow mixed with a low, animalistic growl, “Run!”\n\n\n" +
+                "own, somehow mixed with a low, animalistic growl, “Run!”\n\n" +
                 "Just that single word seems to take a world of effort as he releases you and flails backwards, " +
-                "growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\n\n\n" +
-                "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\n\n\n" +
-                "What do you do?\n\n\n");
+                "growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\n\n" +
+                "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\n\n" +
+                "What do you do?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(true);
