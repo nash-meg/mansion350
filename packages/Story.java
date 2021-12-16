@@ -2444,61 +2444,90 @@ public class Story {
     }
 
     public void LeaveRoom10() {
-        ui.mainTextArea.setText("Finished with the potion table, you make your way over to the door on the far side of the room. You know it goes out to the hallway where you almost died, but you’d rather go that way and have some hope of getting out than stay in here for the old man to find you or go back into the room where you were just attacked. \\n\\n\n" +
-                "You pause, listening. \\n\\n\n" +
-                "It doesn’t SOUND like the blades are still swinging.\\n\\n\n" +
-                "Cautiously, you crack open the door and peek out from behind it.\\n\\n\n" +
-                "You were right. The blades now simply hang there limply from ropes. They don’t look as ominous now that they’re standing still. \\n\\n\n" +
-                "You pull the door open and slowly step out into the hallway, checking to make sure that they won’t start moving if you leave the room. Still, they hang there harmlessly, allowing you to push them to the side and weave between them. \\n\\n\n" +
-                "Finally, you reach the stairs. They lead downward into the darkness that you know to be the kitchen. You feel a bit of fear bubbling up inside you as you look down the descending corridor. You know that these stairs will creak when you step on them. \\n\\n\n" +
-                "Beside them is an open door leading to a bathroom, and on the opposite side of the hall is a boarded up door that, after everything that’s happened, you’d like to keep that way. \\n\\n\n" +
-                "What do you do?\\n\\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText("Go to the bathroom");
-
-        game.position5 = "goToBathroom";
-    }
-
-    public void goToBathroom() {
-        ui.mainTextArea.setText("You go into the bathroom and take a piss before washing your hands and heading back out into the hallway.\\n\\n\n");
-
+        ui.mainTextArea.setText("Finished with the potion table, you make your way over to the door on the far side of the room. " +
+                "You know it goes out to the hallway where you almost died, but you’d rather go that way and have some " +
+                "hope of getting out than stay in here for the old man to find you." +
+                " You'd also rather stay away from the room where you were just attacked. \n\n" +
+                "You pause, listening. \n\n" +
+                "It doesn't SOUND like the blades are still swinging.\n\n" +
+                "Cautiously, you crack open the door and peek out at the hallway.\n\n" +
+                "You were right. The blades now simply hang there limply from ropes. " +
+                "They don’t look nearly as ominous now that they’re standing still. \n\n" +
+                "You pull the door open and slowly step out into the hallway, hoping " +
+                "to make sure that they won’t start moving if you leave the room. " +
+                "Still, they hang there harmlessly, allowing you to push them to the side and weave between them. \n\n" +
+                "Finally, you reach the stairs. They lead downward into the darkness that you know to be the kitchen. " +
+                "You feel a bit of fear bubbling up inside you as you look down the descending corridor." +
+                " You know that these stairs will creak when you step on them. \n\n" +
+                "Beside them is an open door leading to a bathroom, and on the opposite side of the hall is a boarded " +
+                "up door that, after everything that’s happened, you’d like to keep that way. \n\n" +
+                "What do you do?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice4.setText("Run downstairs with shoes)"); //Go downstairs (shoes)
-        ui.choice5.setText("Run downstairs with no shoes)");
+        ui.choice4.setText("Use the bathroom");
+        ui.choice5.setText("Go down the stairs");
 
-        game.position4 = "withShoes"; // DEATH GAME OVER
-        game.position5= "withNoShoes";
+        game.position4 = "goToBathroom";
+        if(shoes){
+            game.position5 = "withShoes";
+        }
+        else if(!shoes){
+            game.position5 = "withNoShoes";
+        }
+    }
+
+    public void goToBathroom() {
+        ui.mainTextArea.setText("You go into the bathroom and take a piss before washing your hands and heading back out into the hallway.\n\n");
+
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText("Go downstairs");
+
+        if(shoes){
+            game.position4 = "withShoes";
+        }
+        else if (!shoes){
+            game.position4= "withNoShoes";
+        }
+
     }
 
     public void withShoes() {
-        ui.mainTextArea.setText("You cautiously step down the stairs, cringing as it squeaks at every step you take. The thick bottoms of your sneakers clunk against the wood, making it even louder than it already would be without them. Not to mention how dark it is, and how easily you could fall if you missed a step. \\n\\n\n" +
-                "You pause at the first landing, taking a moment to allow yourself to breathe. \\n\\n\n" +
-                "As you stand there, eyes closed and leaning against the wall, you hear the quiet footsteps of slippers on tile.\\n\\n\n" +
-                "You feel your blood run cold as the realization hits you.\\n\\n\n" +
-                "The old man is in the kitchen, and he’s heading towards the stairs.\\n\\n\n" +
-                "You stand there a moment panicking, unsure of what to do. \\n\\n\n" +
-                "If you try and walk back up the stairs, he’ll definitely hear you. If you go down the stairs, not only will he hear you, but he’ll also see you. \\n\\n\n" +
-                "You resolve to sit there and hopefully wait him out.\\n\\n\n" +
-                "The slippers pause for a moment at the base of the stairs, and you see the faint shadow of the old man cast by the light of the window.\n" +
-                "“I know you’re up there,” he coos.\n" +
-                "You feel a lump form in the pit of your stomach as you hear the old man move onto the first step.\\n\\n\n" +
-                "“I thought I told you to go back to bed.”\\n\\n\n" +
-                "At this point, you decide to run, but when you try to move, you realize that you can’t. It’s not a matter of fear or weakness. You physically can’t move.\\n\\n\n" +
-                "The old man slowly climbs the stairs until he’s reached your landing. Your heart pounds in your chest as every muscle in your body begs you to run but refuses to do so. \\n\\n\n" +
-                "The old man clicks his tongue as he runs a hand down your face, “I’d hoped you would last longer,” he mutters, then laughs quietly, “And to think you might have actually done it if those shoes weren’t so loud.”\\n\\n\n" +
-                "He draws in breath through gritted teeth, then snaps his fingers. In an instant, you feel every muscle your body give out, and everything goes black. \\n\\n\\n\n" +
+        ui.mainTextArea.setText("You cautiously step down the stairs, cringing as it squeaks at every step you take. " +
+                "The thick bottoms of your sneakers clunk against the wood, making it even louder than it already would be without them." +
+                " Not to mention how dark it is, and how easily you could fall if you missed a step. \n\n" +
+                "You pause at the first landing, taking a moment to allow yourself to breathe. \n\n" +
+                "As you stand there, eyes closed and leaning against the wall, you hear the quiet footsteps of slippers on tile.\n\n" +
+                "You feel your blood run cold as the realization hits you.\n\n" +
+                "The old man is in the kitchen, and he’s heading towards the stairs.\n\n" +
+                "You stand there a moment panicking, unsure of what to do. \n\n" +
+                "If you try and walk back up the stairs, he’ll definitely hear you. " +
+                "If you go down the stairs, not only will he hear you, but he’ll also see you. \n\n" +
+                "You resolve to sit there and hopefully wait him out.\n\n" +
+                "The slippers pause for a moment at the base of the stairs, and you see the faint shadow of the old man cast by the light of the window.\n\n" +
+                "“I know you’re up there,” he coos.\n\n" +
+                "You feel a lump form in the pit of your stomach as you hear the old man move onto the first step.\n\n" +
+                "“I thought I told you to go back to bed.”\n\n" +
+                "At this point, you go to run, but when you try to move, you realize that you can’t. " +
+                "It’s not a matter of fear or weakness. You physically can’t move.\n\n" +
+                "The old man slowly climbs the stairs until he’s reached your landing." +
+                " Your heart pounds in your chest as every muscle in your body begs you to run but in the same breath refuses to do so. \n\n" +
+                "The old man clicks his tongue as he runs a hand down your face, “I’d hoped you would last longer,” " +
+                "he mutters, then laughs quietly, “And to think you might have actually done it if those shoes weren't so loud.”\n\n" +
+                "He draws in breath through gritted teeth, then snaps his fingers." +
+                " In an instant, you feel every muscle your body give out, and as you crumple to the ground," +
+                "everything goes black. \n\n" +
                 "\n" +
-                "Aw man, you were over halfway to victory! Instead, you’ve discovered one of the many ways to die in this game! It IS beatable, though, we promise, so if you want, you can restart the game and try again!\\n\\n\n" +
+                "Aw man, you were halfway to victory! Instead, you’ve discovered one of the many ways to die in this game!" +
+                " It IS beatable, though, we promise, so if you want, you can restart the game and try again!\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2512,15 +2541,24 @@ public class Story {
     }
 
     public void withNoShoes() {
-        ui.mainTextArea.setText("You slowly make your way down the stairs, cringing every time a step creaks. Even so, your socks manage to muffle the noise of your footsteps, and if you pause for long enough between squeaks, you find you’re able to make it sound almost like the natural creaking of the old mansion. Unfortunately, it takes you forever to get down the stairs because of it, but you figure it’s better safe than sorry.\\n\\n\n" +
-                "Finally, you make it to the bottom of the stairs and cautiously step out into the kitchen. It’s rather dark, but the light from the moon outside is enough to generally let you see. Your eyes have become rather accustomed to the darkness at this point anyway.\\n\\n\n" +
-                "The kitchen is a room that you’ve gotten to know rather well in your time here. It’s small for a kitchen in a mansion, but beautiful nonetheless. The dark wooden cabinets look lovely alongside the copper appliances and granite countertops.\\n\\n\n" +
-                "You glance longingly at the knife drawer. Perhaps there’s something in there you could use. \\n\\n\n" +
-                "Or perhaps you might find something of use in cabinets where the plates and bowls are kept. It isn’t likely, but it’s possible.\\n\\n\n" +
-                "It’s then that you notice a bloody hand print on the handle of the fridge. Did the old man not clean up the blood before getting a midnight snack?\\n\\n\n" +
-                "You scoff, trying not to think too much about it. If you think about the reason for all the blood, it means you have to think about Mallory, and the fact that he’s gone.\\n\\n\n" +
-                "What do you do?\\n\\n\n" +
-                "\n");
+        ui.mainTextArea.setText("You slowly make your way down the stairs, cringing at every creak of the steps." +
+                " Even so, your socks manage to muffle the noise of your footsteps, and if you pause for long enough between squeaks," +
+                " you find you’re able to make it sound almost like the natural creaking of the old mansion. " +
+                "Unfortunately, it takes you forever to get down the stairs because of it, but you figure it’s better safe than sorry.\n\n" +
+                "Finally, you make it to the bottom of the stairs and cautiously step out into the kitchen. " +
+                "It’s rather dark, but the light from the moon outside is enough to generally let you see. " +
+                "Your eyes have become rather accustomed to the darkness at this point anyway.\n\n" +
+                "The kitchen is a room that you’ve gotten to know rather well in your time here." +
+                " It’s small for a kitchen in a mansion, but beautiful nonetheless. " +
+                "The dark wooden cabinets look lovely alongside the copper appliances and marble countertops.\n\n" +
+                "Your mind immediately goes to the knife drawer. Perhaps there’s something in there you could use.\n\n" +
+                "Or perhaps you might find something of use in cabinets where the plates and bowls are kept." +
+                " It isn’t likely, but it’s possible.\n\n" +
+                "It’s then that you notice a bloody hand print on the handle of the fridge. " +
+                "Did the old man really not clean up the blood before getting a midnight snack?\n\n" +
+                "You scoff, trying not to think too much about it. " +
+                "If you think about the reason for all the blood, it means you have to think about Mallory, and the fact that he’s gone.\n\n" +
+                "What do you do?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(true);
@@ -2530,7 +2568,7 @@ public class Story {
         ui.choice2.setText("Search the knife drawer");
         ui.choice3.setText("Check cabinets");
         ui.choice4.setText("Check the fridge");
-        ui.choice5.setText("Leave kitchen");
+        ui.choice5.setText("Leave the kitchen");
 
         game.position2 = "knifeDrawer";
         game.position3= "CheckCabinets";
@@ -2539,22 +2577,29 @@ public class Story {
     }
 
     public void knifeDrawer() {
-        ui.mainTextArea.setText("You quietly make your way over to the knife drawer and slide it open.\\n\\n\n" +
-                "You know that a knife likely won’t do much to whatever kind of being the old man really is, but you also figure it couldn’t hurt, right?\\n\\n\n" +
-                "As you open the drawer, however, you find that it’s empty. It wasn’t empty last time you opened it, and you’ve opened it every day you’ve been here. You notice a note at the bottom of the drawer that reads in large lettering: \\n\\n\n" +
-                "“NICE TRY, MALLORY”\\n\\n\n" +
-                "You stare at the note for a moment before drawing in a long, shaky breath and closing the drawer.\\n\\n\n" +
-                "You had no idea how meticulously he must have planned for Mallory’s murder.\\n\\n\n" +
-                "Shaken, you turn back to the room.\\n\\n\n");
+        ui.mainTextArea.setText("You quietly make your way over to the knife drawer and slide it open.\n\n" +
+                "You know that a knife likely won’t do much to whatever kind of being the old man really is, " +
+                "but you also figure it couldn't hurt, right?\n\n" +
+                "As you open the drawer, however, you find that it’s empty, despite that  " +
+                "it wasn't empty last time you put something in there before heading to bed. " +
+                "You notice a note at the bottom of the drawer that reads in large lettering: \n\n" +
+                "“NICE TRY, MALLORY”\n\n" +
+                "You stare at the note for a moment before drawing in a long, shaky breath and closing the drawer.\n\n" +
+                "You had no idea how meticulously he must have planned for Mallory’s murder.\n\n" +
+                "Shaken, you turn back to the room.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
+        ui.choice3.setVisible(true);
+        ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText(">");
+        ui.choice3.setText("Check cabinets");
+        ui.choice4.setText("Check the fridge");
+        ui.choice5.setText("Leave the kitchen");
 
-        game.position5 = "withNoShoes";
+        game.position3= "CheckCabinets";
+        game.position4 = "CheckFridge";
+        game.position5 = "LeaveKitchen";
     }
 
     public void CheckCabinets() {
@@ -3006,22 +3051,7 @@ public class Story {
         game.position4 = "";
         game.position5 = "";
     }
-
-    //room 7 - greenhouse (not labeled on correct floor on pic)
-    public void room7() {
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
-
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
-    }
+    
 
     //hide from old man - crosses rooms, lots of booleans for if potion or spell book
     public void hideFromMan() {
