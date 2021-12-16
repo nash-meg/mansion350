@@ -1810,14 +1810,19 @@ public class Story {
                 "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\n\n" +
                 "What do you do?\n\n");
         ui.choice1.setVisible(false);
-        ui.choice2.setVisible(true);
+        if(letteropener){
+            ui.choice2.setVisible(true);
+        }
+        else{
+            ui.choice2.setVisible(false);
+        }
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice2.setText("Duck down");
+        ui.choice2.setText("Use letter opener");//if true
         ui.choice3.setText("Jump out of the way");
-        ui.choice4.setText("Use letter opener"); //Use letter opener (if have)
+        ui.choice4.setText("Duck down");
         ui.choice5.setText("See map");
 
         game.position2 = "DuckingDown";
@@ -2041,7 +2046,7 @@ public class Story {
 
     //Grab a book and start reading spells (ignore cat)
     public void LookAhead() {
-        ui.mainTextArea.setText("TThinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
+        ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
                 "Many of the words look like they’re in latin, and you’re not even sure if you’re pronouncing them correctly, but you keep reading in the hopes that something will happen.\\n\\n\n" +
                 "You resist the urge to stop as you hear a scream from the creature, focusing solely on getting to the end of the spell. When you’ve finished, you look up to find the creature frozen mid-lunge, clearly trying to move but completely unable. \\n\\n\n" +
                 "Not sure how long the spell lasts, you waste no time bolting into the door on the other side of the room and slamming the door shut. You listen as the spell wears off, expecting the creature to run into the room, but instead you hear him simply lumber out into the hallway. A little confused but ultimately relieved, " +
