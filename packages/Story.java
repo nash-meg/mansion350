@@ -139,8 +139,6 @@ public class Story {
             case "labeledClearPotion":labeledClearPotion();break;
             case "unlabeledClearPotion":unlabeledClearPotion();break;
             case "ThrowBooks": ThrowBooks();break;
-            case "pettingCat":pettingCat(); break;
-            case "angeringCat":angeringCat();break;
             case "GrabABook": GrabABook(); break;
             case "ReadSpell": ReadSpell();break;
             case "LookAhead":LookAhead();break;
@@ -1905,33 +1903,36 @@ public class Story {
 
     //Jump out of the way
     public void JumpOutWay() {
-        ui.mainTextArea.setText("You leap to the side, narrowly dodging the blow, and find yourself crashing into the bookshelf. The creature pauses a moment, clearly disoriented by the fact that he missed. He’s too close for you to run, but perhaps…\\n\\n\n" +
-                "...Your eyes dart to the shelf covered in books.\\n\\n\n" +
-                "What do you do?\\n\\n\n");
+        ui.mainTextArea.setText("You leap to the side, narrowly dodging the blow, and find yourself crashing into the bookshelf. " +
+                "The creature pauses a moment, clearly disoriented by the fact that he missed. He’s too close for you to run, but perhaps...\n\n" +
+                "...Your eyes dart to the shelf covered in books.\n\n" +
+                "What do you do?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
+        ui.choice5.setVisible(false);
 
         ui.choice2.setText("Try climbing the bookshelf");
-        ui.choice3.setText("Throw the books"); //Throw the books (pet/ignore cat)
-        ui.choice4.setText("Grab a book");
-        ui.choice5.setText("Enter room10");
+        ui.choice3.setText("Throw books at the monster"); //Throw the books (pet/ignore cat)
+        ui.choice4.setText("Start reading spells and pray");
 
         game.position2 = "ClimbBookshelf";
         game.position3 = "ThrowBooks";
         game.position4 = "GrabABook";
-        game.position5 = "room10";
     }
 
     public void ClimbBookshelf() {
-        ui.mainTextArea.setText("You grab hold of the shelf and start attempting to climb it, using each level as a rung to step up. You feel your grip beginning to slip as the beast turns to you, no longer seeming to rush almost as if he’s watching to see what will happen. You make it to the top of the bookshelf and crouch there. For a moment, you feel safe atop the the tower of books.\\n\\n\n" +
-                "Then that moment fades\\n\\n\n" +
-                "Panic overwhelms you as you realize the monster can still reach you in your crouched position, but now you’ve nowhere to go.\\n\\n\n" +
-                "He reaches up with one claw and easily grabs you, throwing you down onto the ground. You feel a shooting pain in the back of your head as it slams against the corner of the coffee table and everything goes black. \\n\\n\\n\n" +
+        ui.mainTextArea.setText("You grab hold of the shelf and start attempting to climb it, using each level as a rung to step up. " +
+                "You feel your grip beginning to fail as the beast turns to you, no longer seeming to rush almost as if he’s watching to see what will happen." +
+                " By some miracle you make it to the top of the bookshelf and crouch there. For a moment, you feel safe atop the the tower of books.\n\n" +
+                "Then that moment fade.\n\n" +
+                "Panic overwhelms you as you realize the monster can still reach you in your crouched position, but now you’ve nowhere to go.\n\n" +
+                "He reaches up with one claw and easily grabs you, throwing you down onto the ground. " +
+                "You feel a shooting pain in the back of your head as it slams against the corner of the coffee table and everything goes black. \n\n" +
                 "\n" +
-                "Oof, my dude. You’ve discovered one of the many ways to die in this game! It IS beatable, so if you want, you can restart and try again! Or not, if you’re feeling bad about ultimately getting killed by a coffee table.  \n" +
+                "Oof, my dude. You’ve discovered one of the many ways to die in this game! " +
+                "It IS beatable, so if you want, you can restart and try again! Or not, if you’re feeling bad about ultimately getting killed by a coffee table.  \n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1946,55 +1947,56 @@ public class Story {
 
     //Throw the books (kick cat)
     public void ThrowBooks() {
-        ui.mainTextArea.setText("What would you like to do?");
+        if (pet || ignore){
+            ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then begin pelting them at the monster, " +
+                    "aiming for his head. This only seems to anger him. He turns to you, eyes flashing with an intense rage as he lunges for you. " +
+                    "Unable to run anywhere without risking getting grabbed, you desperately reach for more books from the shelf, feeling for hardcovers." +
+                    " As the monster advances, your hand finds a particularly heavy copy of the complete works of William Shakespeare, " +
+                    "and desperately you chuck the book at the creature, praying it hits its mark.\n\n" +
+                    "The book flies through the air before nailing the monster on the side of the face and sending him stumbling back. \n\n" +
+                    "Relief floods you as you bolt towards the open door on the other side of the room. " +
+                    "Without looking back, you run faster than you feel you ever have as you hear an angry growl from behind you.\n\n" +
+                    "You’re almost to the door now, but you can feel him on your heels. " +
+                    "Desperately, you dive into the other room, falling forward, and try to scramble away.\n\n" +
+                    "This is it, you realize. You can’t escape this. \n\n" +
+                    "You turn, expecting to see the creature about to seal your fate, but instead, " +
+                    "you watch as he comes running at the entrance only to be blown backwards as if by some kind of barrier. " +
+                    "He simply stands there a moment, seeming to reorient himself before looking at you from the other side of the doorframe. Is he...nodding? \n\n" +
+                    "If you hadn't known any better, you would’ve thought you saw a glimmer of pride in his eyes.\n\n" +
+                    "His gaze lingers on you a moment longer before he turns his head as if he’s heard something, then lumbers off." +
+                    " Cautiously, you walk over and close the door before turning to examine the room you’ve just entered.\n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(false);
+            ui.choice5.setVisible(true);
 
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
+            ui.choice5.setText(">");
 
-        ui.choice4.setText("Throw the books at head)"); //Throw the books (pet/ignore cat)
-        ui.choice5.setText("Throw the books at back");//Throw the books (kick cat)
+            game.position5 = "room10";
+        }
+        else if (kick){
+            ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then begin pelting them at the monster," +
+                    " aiming for his head. This only seems to anger him. He turns to you, eyes flashing with an intense rage as he lunges at you." +
+                    " Unable to run anywhere without risking getting grabbed, " +
+                    "you desperately reach for more books from the shelf, feeling for hardcovers.\n\n" +
+                    "However, he moves too quickly for you to find another book to throw," +
+                    " and before you know it you’re pinned to the bookshelf with one large claw placed over your abdomen." +
+                    " He reaches up his other paw and gently caresses your face before firmly grabbing it and twisting. " +
+                    "You feel your neck crunch, then everything goes black. \n\n\n" +
+                    "Ayyyyye you discovered one of the many ways to die in this game!" +
+                    " But! It IS beatable, so if you want, you can definitely restart the game and try again!" +
+                    " A word of advice though: next time, don’t kick the cat. \n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(false);
+            ui.choice5.setVisible(true);
 
-        game.position4 = "pettingCat";
-        game.position5 = "angeringCat";
-    }
+            ui.choice5.setText(">");
 
-    public void pettingCat() {
-        ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then begin pelting them at the monster, aiming for his head. This only seems to anger him. He turns to you, eyes flashing with an intense rage as he charges at you. Unable to run anywhere without risking getting grabbed, you desperately reach for more books from the shelf, feeling for hardcovers. As the monster lunges, your hand finds a particularly heavy copy of the complete works of William Shakespeare, and desperately you chuck the book at the creature, praying it hits its mark.\\n\\n\n" +
-                "The book flies air before nailing the monster on the side of the face and sending him stumbling back. \\n\\n\n" +
-                "Relief floods you as you bolt towards the open door on the other side of the room. Without looking back, you run faster than you feel you ever have as you hear an angry growl from behind you.\\n\\n\n" +
-                "You’re almost to the door now, but you can feel him on your heels. Desperately, you dive into the other room, falling forward, and try to scramble away.\\n\\n\n" +
-                "This is it, you realize. You can’t escape this. \\n\\n\n" +
-                "You turn, expecting to see the creature about to seal your fate, but instead, you watch as he comes running at the entrance only to be blown backwards as if by some kind of barrier. He simply stands there a moment, seeming to reorient himself before looking at you from the other side of the doorframe. Is he...nodding? \\n\\n\n" +
-                "If you hadn’t known any better, you would’ve thought you saw a glimmer of pride in his eyes.\\n\\n \n" +
-                "His gaze lingers on you a moment longer before he turns his head as if he’s heard something, then lumbers off. Cautiously, you walk over and close the door before turning to examine the room you’ve just entered.\\n\\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "theMansion"; //death
-    }
-
-    public void angeringCat() {
-        ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then begin pelting them at the monster, aiming for his head. This only seems to anger him. He turns to you, eyes flashing with an intense rage as he charges you. Unable to run anywhere without risking getting grabbed, you desperately reach for more books from the shelf, feeling for hardcovers.\\n\\n\n" +
-                "However, he moves too quickly for you to find another book to throw, and before you know it you’re pinned to the bookshelf with one large claw placed over your abdomen. He reaches up his other paw and gently caresses your face before firmly grabbing it and twisting suddenly. You feel your neck crunch, then everything goes black. \\n\\n\\n\n" +
-                "Ayyyyye you discovered one of the many ways to die in this game! It IS beatable, so if you want, you can definitely restart the game and try again! A word of advice though: next time, don’t kick the cat. \\n\\n\n" +
-                "\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "theMansion"; // DEATH GAME OVER
+            game.position5 = "theMansion";
+        }
     }
 
     public void GrabABook() {
