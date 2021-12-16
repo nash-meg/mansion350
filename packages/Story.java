@@ -1088,7 +1088,10 @@ public class Story {
                 "They’re...chains. Shackles, bolted to the floor and long enough to reach up to the bed. \n\n" +
                 "Did-\n\n" +
                 "Did the old man chain Mallory up??\n\n" +
-                "You think back to one first days you were there. Mallory had made a mistake, and after that you hadn't seen him for an entire day - not even at dinner. The next time you’d seen him, you’d noticed the bruises on his wrists, but had assumed that they were from some accident while working. Not...this.\\n\\n\n" +
+                "You think back to one first days you were there. " +
+                "Mallory had made a mistake, and after that you hadn't seen him for an entire day - not even at dinner. " +
+                "The next time you’d seen him, you’d noticed the bruises on his wrists, but had assumed that they were from some accident while working. " +
+                "Not...this.\n\n" +
                 "You scramble to your feet, shaking yourself and looking around the rest of the room.\n\n" );
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1285,7 +1288,7 @@ public class Story {
                 "you know that he didn’t have time for hobbies or fandoms. \n\n" +
                 "Did the old man really harm him that much? " +
                 "Was he that far gone to have to start believing in spells and immortality to cope with his situation? " +
-                "He’d never struck you as someone losing his grip on reality, but you figure a lot can happen behind closed doors. \n\n" +
+                "He’d never struck you as someone losing his grip on reality, but you figure a lot can happen behind closed doors. \n\n" + //TODO: NEW PAGE
                 "There seems to be a great deal in the book about removing one’s soul and tricking the body into thinking it’s still there, whatever that means. \n\n" +
                 "One passage underlined rather intensely in pen reads, " +
                 "“There is no way to reverse soullessness once it has been done. The soulless will live on as long as the individual can find sustenance in the mortal realm. " +
