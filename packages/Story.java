@@ -11,6 +11,8 @@ public class Story {
     boolean shoes;
     boolean coat;
     boolean purpPotion;
+    boolean vodka;
+    boolean water;
     boolean  matches;
     boolean letteropener;
     boolean littleBook;
@@ -25,6 +27,8 @@ public class Story {
         m = mDisplay;
         shoes = false;
         purpPotion = false;
+        vodka = false;
+        water = false;
         matches = false;
         littleBook = false;
         kick = false;
@@ -2205,14 +2209,26 @@ public class Story {
 
     //Use letter opener (if have)
     public void UseLetterOpener() {
-        ui.mainTextArea.setText("Running on instinct, you pull the letter-opener from your pocket and hold it out, aiming to stab him in the throat when he bends down to claw you. You don't back away as he swings his talons at you, instead lunging right back at him and burying the letter opener deep in his jugular.\\n\\n\n" +
-                "You stand there unscathed, panting as you watch him slowly come to the realization that he’s been stabbed. You begin to laugh a little as blood spews from his throat. It actually worked! \\n\\n\n" +
-                "At least...you thought it did. \\n\\n\n" +
-                "You watch in terror as the creature steadys itself and the letter opener is pulled into its neck before the wound closes over. The beast lets out a roar as something travels up its arm and through its hand until a sixth claw emerges, the letter opener as its nail.\\n\\n\n" +
-                "Shit. Yeah… Maybe the letter opener wasn’t the best idea. Nice try though! " +
+        ui.mainTextArea.setText("Running on instinct, you pull the letter-opener from your pocket and hold it out," +
+                " aiming to stab him in the throat when he bends down to claw you. You don't back away as he swings " +
+                "his talons at you, instead lunging right back at him and burying the letter opener deep in his jugular.\n\n" +
+                "You stand there unscathed, panting as you watch him slowly come to the realization that he’s been stabbed." +
+                " You begin to laugh a little as blood spews from his throat. \n\n" +
+                "It actually worked! \n\n" +
+                "At least...you thought it did. \n\n" +
+                "You watch in terror as the creature steadies itself and the letter opener is pulled into its neck " +
+                "as the wound closes over. The beast lets out a roar as something travels up its arm and through its h" +
+                "and until a sixth claw forms, the letter opener as its nail.\n\n" +
+                "Shit." +
+                "You try to dart beneath the creature and run to safety, but it’s faster than you are," +
+                " and grabs you with its newly six-fingered claw, pulling you back and slicing you through the throat" +
+                " with the same letter opener you just used to stab it. " +
+                "You stare in horror, clutching at your neck as blood spews from it. He seems to just stand there," +
+                " watching sadly as you slowly bleed until everything goes black.\n\n\n" +
+                "Yeah... Maybe the letter opener wasn't the best idea. Nice try though! " +
                 "You’ve discovered one of the many ways to die in this game!" +
                 " It IS beatable though, so if you want to get to the end, feel free to restart" +
-                " and try again!\\n\\n\n" +
+                " and try again!\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2227,12 +2243,24 @@ public class Story {
 
     //room 10 - chamber (potion room)
     public void room10() {
-        ui.mainTextArea.setText("You hear footsteps above you as if the butler has now somehow made his way upstairs.\\n\\n\n" +
-                " Before you is a room filled with shelves of boxes and bottles and potted plants. On the far side of the room is a door that seems to go back out to the hallway. In the center is a table, on it a small electric cooktop with an empty cauldron sitting atop it and some mini shelving units, also containing a few small bottles. Unlike those on the other shelves, however, these are small vials of liquid. One, a purple substance with a faded label, seems to have a slight glow to it. Another, sitting solidly on the table, is a yellow liquid that also seems to glow, but less so. Its label is a little easier to read and clearly says in large letters, “PLAN B”. There are two other vials, both filled with clear liquid. One is labeled “Sanitatem” and the other has no label at all.\\n\\n\n" +
-                "You begin to realize where in the house you are. Usually both this room and the one you were just in are locked tight, and Mallory used to joke that this one was the old man’s potion room. Now that you stand here, you’re starting to think it wasn’t much of a joke. \\n\\n\n" +
-                "You glance down at the vials.\n\n\n" +
-                " Part of you can’t help but wonder what would happen if you just…drank one. Or two. Or all of them. \\n\\n\n" +
-                "Do you take a sip?\n\n\n");
+        ui.mainTextArea.setText("You hear footsteps above you as if the butler has now somehow made his way upstairs.\n\n" +
+                " Before you is a room filled with shelves of boxes and bottles and potted plants. On the far side of " +
+                "the room is a door that seems to go back out to the hallway. \n\n" +
+                "In the center is a table, on it a small electric cooktop with an empty cauldron sitting atop it and" +
+                " some mini shelving units, also containing a few small bottles" +
+                ". Unlike those on the other shelves, however, these are small vials of liquid. \n\n" +
+                "One, a purple substance with a faded label, seems to have a slight glow to it. \n\n" +
+                "Another, sitting solidly on the table, is a yellow liquid that also seems to glow, but less so. " +
+                "Its label is a little easier to read and clearly says in large letters, “PLAN B”.\n\n" +
+                " There are two other vials, both filled with clear liquid. \n\n" +
+                "One is labeled “Sanitatem” and the other has no label at all.\n\n" +
+                "You begin to realize where in the house you are.\n\n" +
+                " Usually both this room and the one you were just in are locked tight," +
+                " and Mallory used to joke that this one was the old man’s potion room. " +
+                "Now that you stand here, you’re starting to think it wasn’t much of a joke. \n\n" +
+                "You glance down at the vials.\n\n" +
+                " Part of you can’t help but wonder what would happen if you just...drank one. Or two. Or all of them. \n\n" +
+                "Do you take a sip?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(true);
@@ -2251,39 +2279,75 @@ public class Story {
     }
 
     public void purplePotion() {
-        ui.mainTextArea.setText("You cautiously pick up the glowing vial and look it over, noticing that the faded label says “Aspectum”. You’re not well-versed in latin by any stretch, but you remember a middle school teacher once telling you that that word meant “Sight”. You shrug. Maybe it does.\\n\\n\n" +
-                "Either way, you pop the cork off the vial and drink it down in one swig. \n\n\n" +
-                "It tastes sweet, almost like a plum, and is rather smooth on the way down.\n" +
-                "You pause. \n\n\n" +
-                "Nothing feels different. \n\n\n" +
-                "Sighing, you hope that this isn’t some kind of slow death potion that you have stupidly just drank. \n\n\n" +
-                "It’s when you glance back at the potion table that you notice it. \n\n\n" +
-                "At first, you just see a little bit of movement out of the corner of your eye. But when you look closer, you find that in the liquid of the other vials, you can see...something.\\n\\n\n" +
-                "The old man.\\n\\n\n" +
-                "You can see the old man walking up a set of stairs. Not any that you’ve ever been on, but the wallpaper seems to match that of the stairs going down into the cellar. You attempt to look behind and around the vials, but find that the only place you can see this is in the two vials of clear liquid. You watch as the old man nearly reaches the top of the stairs then stops suddenly. As if he’s forgotten something, he sighs and goes back down. You blink, turning away as you stop watching, then begin to laugh a little. Even in as terrifying of a situation as you’re in, this is pretty cool.\\n\\n\n" +
-                "You guess aspectum really did mean sight after all.\\n\\n\n");
+        purpPotion = true;
+        ui.mainTextArea.setText("You cautiously pick up the glowing vial and look it over, " +
+                "noticing that the faded label says “Aspectum”. You’re not well-versed in latin by any stretch, " +
+                "but you remember a middle school teacher once telling you that that word meant “Sight”. You shrug. " +
+                "Maybe it does.\n\n" +
+                "Either way, you pop the cork off the vial and drink it down in one swig. \n\n" +
+                "It tastes sweet, almost like a plum, and is rather smooth on the way down.\n\n" +
+                "You pause. \n\n" +
+                "Nothing feels different. \n\n" +
+                "Sighing, you turn your attention back to the table and hope that this isn’t some kind of slow death" +
+                " potion that you stupidly just drank. \n\n" +
+                "It’s when you glance back at the potion table that you notice it. \n\n" +
+                "At first, you just see a little movement out of the corner of your eye." +
+                " But when you look closer, you find that in the liquid of the other vials, you can see...something.\n\n" +
+                "The old man.\n\n" +
+                "You can see the old man walking up a set of stairs. " +
+                "Not any that you’ve ever been on, but the wallpaper seems to match that of the stairs going down " +
+                "into the cellar. " +
+                "You attempt to look behind and around the vials, but find that the only place you can see this is in " +
+                "the two vials of clear liquid. You watch as the old man nearly reaches the top of the stairs then " +
+                "stops suddenly. As if he’s forgotten something, he sighs and goes back down." +
+                " You blink, turning away as you stop watching, then begin to laugh a little. " +
+                "Even in as terrifying of a situation as you’re in, you have to admit this is pretty cool.\n\n" +
+                "You guess aspectum really did mean sight after all.\n\n");
         ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
+        if (water){
+            ui.choice2.setVisible(false);
+        }
+        else{
+            ui.choice2.setVisible(true);
+        }
+        if(vodka){
+            ui.choice3.setVisible(false);
+        }
+        else{
+            ui.choice3.setVisible(true);
+        }
+                ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
+        ui.choice2.setText("Drink the unlabeled clear potion");
+        ui.choice3.setText("Drink the labeled clear potion");
+        ui.choice4.setText("Drink the yellow potion");
         ui.choice5.setText("Leave room");
 
-        game.position5 = "LeaveRoom10"; // DEATH GAME OVER
+        game.position2 = "unlabeledClearPotion";
+        game.position3 = "labeledClearPotion";
+        game.position4 = "yellowPotion";
+        game.position5 = "LeaveRoom10";
     }
 
     public void yellowPotion() {
-        ui.mainTextArea.setText("You pick up the yellow vial, pondering for a moment why it’s labeled the way it is before drinking it. \\n\\n\n" +
-                "Instantly, your insides begin to burn as if someone’s lit a match in your stomach. Your throat begins to swell as your knees buckle under you and you fall to the ground, bringing one of the mini shelves down with you as you grasp at it in an attempt to stay standing. \\n\\n\n" +
-                "Spots form in your vision as it begins to blur.\\n\\n\n" +
-                "You’re not sure how long you lie there, unable to move or breathe, jerking violently as your lungs try to suck in air that isn’t there.\\n\\n\n" +
-                " You close your eyes as an odd bliss settles over you and your body stops spasming.\\n\\n\n" +
-                " Sleep.\\n\\n\n" +
-                " Yes, that’s it. You just need some rest.\\n\\n\n" +
-                "You allow yourself to drift off into a sleep of inky black, not entirely comprehending that it’s one you’ll never wake up from. \\n\\n\\n\n" +
+        ui.mainTextArea.setText("You pick up the yellow vial, pondering for a moment why it’s labeled the way it is before drinking it. \n\n" +
+                "Instantly, your insides begin to burn as if someone’s lit a match in your stomach." +
+                " Your throat begins to swell as your knees buckle under you and you fall to the ground, " +
+                "bringing one of the small shelves down with you as you grasp at it in a vain attempt to stay standing. \n\n" +
+                "Spots form in your vision as it begins to blur.\n\n" +
+                "You’re not sure how long you lie there, unable to move or breathe, jerking violently as your lungs try" +
+                " to suck in air that isn’t there.\n\n" +
+                " You close your eyes as an odd bliss settles over you and your body stops spasming.\n\n" +
+                " Sleep.\n\n" +
+                " Yes, that’s it. You just need some rest.\n\n" +
+                "You allow yourself to drift off into a sleep of inky black, not entirely comprehending that it’s one " +
+                "you’ll never wake up from. \n\n" +
                 "\n" +
-                "You really just drank a random potion in a murderer’s house labeled “PLAN B”, huh? Well, we can’t all be the brightest bulbs in the bunch. You, for instance, have discovered one of the many ways to die in this game! But, it IS beatable, we promise, so if you want you can always restart the game and try again! \n" +
+                "You really just drank a random potion in a murderer’s house labeled “PLAN B”, huh?" +
+                " Well, we can’t all be the brightest bulbs in the bunch. " +
+                "You, for instance, have discovered one of the many ways to die in this game!" +
+                " But, it IS beatable, we promise, so if you want you can always restart the game and try again! \n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2297,43 +2361,84 @@ public class Story {
     }
 
     public void labeledClearPotion() {
-        ui.mainTextArea.setText("You pick it up, contemplating the latin labeling before taking a swig. You cringe at the taste and it burns as it goes down.\\n\\n\n" +
-                "Still, it tastes strangely familiar.\\n\\n\n" +
-                "Was that...vodka?\\n\\n\n" +
-                "You sniff the vial. \\n\\n\n" +
-                "Yup, that was definitely vodka.\\n\\n\n" +
-                "You stand there a moment, a little dumbfounded that you just took a shot in the middle of a potion room before turning back to the other vials. \\n\\n\n" +
+        vodka = true;
+        ui.mainTextArea.setText("You pick it up, contemplating the latin labeling before taking a swig. " +
+                "You cringe at the taste and it burns as it goes down.\n\n" +
+                "Even so, it tastes strangely familiar.\n\n" +
+                "Was that...vodka?\n\n" +
+                "You sniff the vial. \n\n" +
+                "Yup, that was definitely vodka.\n\n" +
+                "You stand there a moment, a little dumbfounded that you just took a shot in the middle of a potion" +
+                " room before turning back to the other vials. \n\n" +
                 "\n");
         ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
+        if (water){
+            ui.choice3.setVisible(false);
+        }
+        else{
+            ui.choice3.setVisible(true);
+        }
+        if(purpPotion){
+            ui.choice2.setVisible(false);
+        }
+        else{
+            ui.choice2.setVisible(true);
+        }
+        ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText(">");
+        ui.choice3.setText("Drink the unlabeled clear potion");
+        ui.choice2.setText("Drink the purple potion");
+        ui.choice4.setText("Drink the yellow potion");
+        ui.choice5.setText("Leave room");
 
+        game.position3 = "unlabeledClearPotion";
+        game.position2 = "purplePotion";
+        game.position4 = "yellowPotion";
         game.position5 = "LeaveRoom10";
     }
 
     public void unlabeledClearPotion() {
-        ui.mainTextArea.setText("You pick up the unlabeled vial and glance over it. The fact that it’s unlabeled scares you a bit, but after what you just experienced in the other room, you figure it can’t be that bad. Shrugging, you uncork it and take a swig.\\n\\n\n" +
-                "It doesn’t taste like anything, nor does it feel strange at all.\\n\\n\n" +
-                "If you hadn’t known any better, you would have thought it was water.\\n\\n\n" +
-                "Shit.\\n\\n\n" +
-                "Was it poison?\\n\\n\n" +
-                "Your heartbeat quickens as you pick up the vial and the cork, examining both in a frantic attempt to find any hint of what it might be. \\n\\n\n" +
-                "It’s then that you see it.\\n\\n \n" +
-                "On the top of the cork is a small label that reads “Water” in plain english. \\n\\n\n" +
-                "You put the vial down and lean against the table in a combination of relief and embarrassment.\\n\\n\n" +
-                "It really was just water. \\n\\n\n");
+        water = true;
+        ui.mainTextArea.setText("You pick up the unlabeled vial and glance over it. The fact that it’s unlabeled scares" +
+                " you a bit, but after what you just experienced in the other room, you figure it can’t be that bad. " +
+                "Shrugging, you uncork it and take a swig.\n\n" +
+                "It doesn’t taste like anything, nor does it feel strange at all.\n\n" +
+                "If you hadn’t known any better, you would have thought it was water.\n\n" +
+                "Shit.\n\n" +
+                "Was it poison?\n\n" +
+                "You've seen too many spy movies where someone is slipped a tasteless, odorless poison, and in a room " +
+                "like this one...\n\n" +
+                "Your heartbeat quickens as you pick up the vial and the cork, examining both in a frantic attempt " +
+                "to find any hint of what it might be. \n\n" +
+                "It’s then that you see it.\n\n" +
+                "On the top of the cork is a small label that reads “Water” in plain english. \n\n" +
+                "You put the vial down and lean against the table in a combination of relief and embarrassment.\n\n" +
+                "It really was just water. \n\n");
         ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
+        if (purpPotion){
+            ui.choice2.setVisible(false);
+        }
+        else{
+            ui.choice2.setVisible(true);
+        }
+        if(vodka){
+            ui.choice3.setVisible(false);
+        }
+        else{
+            ui.choice3.setVisible(true);
+        }
+        ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText("Leave the room");
+        ui.choice2.setText("Drink the purple potion");
+        ui.choice3.setText("Drink the labeled clear potion");
+        ui.choice4.setText("Drink the yellow potion");
+        ui.choice5.setText("Leave room");
 
+        game.position2 = "purplePotion";
+        game.position3 = "labeledClearPotion";
+        game.position4 = "yellowPotion";
         game.position5 = "LeaveRoom10";
     }
 
