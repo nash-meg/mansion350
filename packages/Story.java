@@ -116,9 +116,6 @@ public class Story {
             case "FightScene": FightScene();break;
             case "RunThruHall": RunThruHall(); break;
             case "DuckingDown": DuckingDown();break;
-            case "watchHelplessly": watchHelplessly();break;
-            case "attemptToRun": attemptToRun(); break;
-            case "curlInToABall": curlInToABall(); break;
             case "JumpOutWay": JumpOutWay();break;
             case "room10": room10();break;
             case "purplePotion":purplePotion();break;
@@ -1628,7 +1625,7 @@ public class Story {
         ui.mainTextArea.setText("You take the book from the shelf and place it in the pocket of your pajama pants. " +
                 "You know you're most likely being paranoid at best, but it gives you some comfort comfort to have the little book," +
                 " even if it is most likely fictional. At the very least, you figure, it'll make a good souvenir to remind you that " +
-                "you made it through this hellish night in one piece\n\n");
+                "you made it through this hellish night in one piece.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1762,7 +1759,7 @@ public class Story {
     }
 
     public void LeaveThere() {
-        ui.mainTextArea.setText("You decide to leave them there. It's not like you're going to need ");
+        ui.mainTextArea.setText("You decide to leave them there. It's not like you're going to need to light any candles while cheating death.");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1811,94 +1808,100 @@ public class Story {
         ui.choice4.setText("Duck down");
         ui.choice5.setText("See map");
 
-        game.position2 = "DuckingDown";
+        game.position2 = "UseLetterOpener";
         game.position3 = "JumpOutWay";
-        game.position4 = "UseLetterOpener";
+        game.position4 = "DuckingDown";
         game.position5 = ""; //TODO add cant see map rn
     }
 
     //Duck down (pet cat)
     public void DuckingDown() {
-        ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar on the other side that’s different from the one you entered through. Before you can think too much about it, a noise from the cat draws your attention, and you turn to see it staring at you, twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an almost wave-like motion, its pelt rises and falls in places that it shouldn’t.\\n\\n\n" +
-                "You stare, your body frozen in place, as the cat’s bones begin to grow and its very body begins to stretch. Its wails deepen and become almost human-like as its hide disappears into pale, humanoid flesh. It unfolds itself, and for a moment, before you stands the butler, suit and all, staring at you in agony.\\n\\n\n" +
-                "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his muscles beneath continue to morph and contort. He pleads with you in a voice that’s only half his own, somehow mixed with a low, animalistic growl, “Run!”\\n\\n\n" +
-                "Just that single word seems to take a world of effort as he releases you and flails backwards, growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\\n\\n\n" +
-                "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\\n\\n\n" +
-                "What do you do?\\n\\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
-        ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
+        if(pet){
+            ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. " +
+                    "The monster continues to charge at you, but you notice a jerkiness in its movements, " +
+                    "as if he’s trying to hold himself back. " +
+                    "He’s almost upon you now. You watch helplessly as he draws back an enormous claw, winding up to strike, " +
+                    "and you squeeze your eyes shut as you prepare for the talons to come slicing down on you.\n\n" +
+                    "You hear an agonized roar from the creature as the wall behind you shakes.\n\n " +
+                    "Your eyes fly open and you find that you’re unscathed. " +
+                    "The creature’s claw is lodged in the wall just centimeters above your head, flexing and twitching as if it’s an effort for him to keep it there. \n\n" +
+                    "He locks eyes with you, once more managing a tortured yell:\n\n" +
+                    " “RUN!”\n\n" +
+                    "You nod quickly as you scramble from beneath the hulking creature and bolt towards the open door.\n\n" +
+                    "You leap over one of the couches as you hear the wall behind you being torn from itself and the monster manages to dislodge his claws." +
+                    " There’s a thumping as he once more begins to pursue. You’re just a couple feet away from the door now, " +
+                    "but he’s right on your heels. You dive into the room and foolishly look behind you to see how close he is.\n\n" +
+                    "Then, you stop.\n\n" +
+                    "He charges at the room, but is suddenly blown backwards as if he's just run into " +
+                    "something. He stands there, panting a minute, before nodding. If you didn’t know " +
+                    "any better, you would have thought that he was smiling. You watch as he slowly" +
+                    " begins to shrink back into what you assume to be his human form, this time without " +
+                    "any of the pain that the transformation caused earlier. Before he’s finished, " +
+                    "he turns his head as if he’s just heard something and lumbers away, leaving you " +
+                    "alone. Slowly, you walk over and close the door before turning to examine the room" +
+                    " you’ve just entered.\n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(false);
+            ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Watch helplessly"); //Duck down (pet cat);
-        ui.choice4.setText("Attempt to run"); //Duck down (kick cat)
-        ui.choice5.setText("Curl up into a ball"); //Duck down (ignore cat)");
+            ui.choice5.setText(">");
 
-        game.position3 = "watchHelplessly"; //End up on floor >>>Duck down (pet cat)
-        game.position4 = "attemptToRun"; //Duck down (kick cat)
-        game.position5 = "curlInToABall"; //Duck down (ignore cat)
+            game.position5 = "room10";
+        }
+        else if(kick){
+            ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. " +
+                    "The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. " +
+                    "You curl into a ball as he draws back an enormous claw, then your eyes fly open as you feel his sharpened talons dig deep into your body, " +
+                    "some going so deep to protrude out through your back. " +
+                    "This time, when he draws back his claws, you’re drawn back with them. " +
+                    "The pain is blinding as you writhe in vain to try and free yourself. " +
+                    "There’s a loud ‘whoosh’ from behind you and the sound of crackling flames before you’re plunged deep into the now-lit fireplace.\n\n" +
+                    "He holds his claw in the fire with you as the flames lick at your skin. " +
+                    "You scream out, thrashing in agony, the creature curling his claws inwards. " +
+                    "You feel as though your flesh is being melted from bone in the flame. " +
+                    "Your vision blurs as you feel your consciousness begin to slip. " +
+                    "One final burst of agony jolts through you as the beast withdraws its claws from your body, " +
+                    "allowing the flames to lap greedily at your now-open wounds. " +
+                    "The pain mutes your tortured cries as you lie there, everything slowly fading to an inky black numbness.\n\n\n" +
+                    "Would you look at that! You’ve discovered one of the many ways to die in this game! " +
+                    "It IS possible to win this game, so feel free to restart and play again, but I suggest next time you refrain from kicking the cat :).\n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(false);
+            ui.choice5.setVisible(true);
+
+            ui.choice5.setText(">");
+
+            game.position5 = "theMansion";
+        }
+        else if (ignore){
+            ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back." +
+                    " The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. " +
+                    "You curl into a ball as he draws back an enormous claw, " +
+                    "then your eyes fly open as you feel his sharpened talons dig deep into your body, " +
+                    "some going so deep to protrude out through your back. This time, when he draws back his claws, you’re drawn back with them.\n\n" +
+                    "As you’re lifted up to his face, you see immense pain and sadness in his eyes. " +
+                    "He growls out something that sounds like an apology before you feel his claws within you tighten into a fist. " +
+                    "You manage a single cry of agony, tears flowing down your face as you flail wildly before he slams you down onto" +
+                    " the ground and everything goes black. \n\n\n" +
+                    "Bummer, man. You’ve found one of the many ways to die in this game! " +
+                    "It IS possible to beat this game, though, so if you want, you can restart the game and play again!\n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(false);
+            ui.choice5.setVisible(true);
+
+            ui.choice5.setText(">");
+
+            game.position5 = "theMansion";
+        }
+
     }
 
-    //Duck down (pet cat)
-    public void watchHelplessly() {
-        ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster continues to charge at you, but you notice a jerkiness in its movements, as if he’s fighting against an invisible force that’s holding him back. He’s almost upon you now. You watch helplessly as he draws back an enormous claw, winding up to strike, and you squeeze your eyes shut as you prepare for the talon to come slicing down on you.\\n\\n\n" +
-                "You hear an agonized roar from the creature as the wall behind you shakes. Your eyes fly open and you find that you’re unscathed. The creature’s claw is lodged in the wall just centimeters above your head, flexing and twitching as if it’s an effort for him to keep it there. \\n\\n\n" +
-                "He locks eyes with you, once more managing a tortured yell:\\n\\n\n" +
-                " “RUN!”\\n\\n\n" +
-                "You nod quickly, not needing to be told twice as you scramble from beneath the hulking creature and bolt towards the open door.\\n\\n\n" +
-                "You leap over one of the couches as you hear the wall behind you being torn from itself and the monster manages to dislodge his claws. There’s a thumping as he once more begins to pursue. You’re just a couple feet away from the door now, and he’s right on your heels. Desperately, you dive into the room and foolishly look behind you to see how close he is.\\n\\n\n" +
-                "Then, you stop.\\n\\n\n" +
-                "He charges at the room, but is suddenly blown backwards as if he just ran into " +
-                "something. He stands there, panting a minute, before nodding. If you didn’t know " +
-                "any better, you would have thought that he was smiling. You watch as he slowly" +
-                " begins to shrink back into what you assume to be his human form, this time without " +
-                "any of the pain that the transformation caused earlier. Before he’s finished, " +
-                "he turns his head as if he’s just heard something and lumbers away, leaving you " +
-                "alone. Slowly, you walk over and close the door before turning to examine the room" +
-                " you’ve just entered.\\n\\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "JumpOutWay";// come back to this
-    }
-
-    //Duck down (kick cat)
-    public void attemptToRun() {
-        ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. You curl into a ball as he draws back an enormous claw, then your eyes fly open as you feel his sharpened talons dig deep into your body, some going so deep to protrude out through your back. This time, when he draws back his claws, you’re drawn back with them. The pain is blinding as you writhe in vain to try and free yourself. There’s a loud ‘whoosh’ from behind you and the crackling of flames before you’re plunged deep into the now-lit fireplace.\\n\\n\n" +
-                "He holds his claw in the fire with you as the flames lick at your skin. You scream out, thrashing in agony, the creature curling his claws inwards. You feel as though your flesh is being melted from bone in the flame. Your vision blurs as you feel your consciousness begin to slip. One final burst of agony jolts through you as the beast withdraws its claws from your body, allowing the flames to lap greedily at your open wounds. The pain mutes your tortured cries as you lie there, everything slowly fading to an inky black numbness.\\n\\n\\n\n" +
-                "You’ve discovered one of the many ways to die in this game!. It IS possible to win this game, so feel free to restart and play again, but I suggest next time you refrain from kicking the cat :).\\n\\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "theMansion"; // DEATH GAME OVER
-    }
-
-    //Duck down (ignore cat)
-    public void curlInToABall() {
-        ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. You curl into a ball as he draws back an enormous claw, then your eyes fly open as you feel his sharpened talons dig deep into your body, some going so deep to protrude out through your back. This time, when he draws back his claws, you’re drawn back with them.\\n\\n\n" +
-                "As you’re lifted up to his face, you see immense pain and sadness in his eyes. He growls out something that sounds like an apology before you feel his claws within you tighten into a fist. You manage a single cry of agony, tears flowing down your face as you flail wildly before he slams you down onto the ground and everything goes black. \\n\\n\\n\n" +
-                "Bummer, man. You’ve found one of the many ways to die in this game! It IS possible to beat this game, though, so if you want, you can restart the game and play again!\\n\\n cool!!\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "theMansion"; // DEATH GAME OVER
-    }
 
     //Jump out of the way
     public void JumpOutWay() {
