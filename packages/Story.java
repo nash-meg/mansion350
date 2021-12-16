@@ -31,6 +31,7 @@ public class Story {
         ignore = false;
         letteropener = false;
     }
+
     ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
     ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
     ImageIcon Cellar1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
@@ -44,7 +45,6 @@ public class Story {
     ImageIcon KitchenRoom11 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
     ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
     ImageIcon cannibalPlantRoom7 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
-
 
     // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
@@ -76,6 +76,7 @@ public class Story {
             case "awkMoment": awkMoment(); break;
             case "startPlot": startPlot(); break;
             case "room1": room1(); break;
+            case "room1Map": room1Map(); break;
             case "backSleep": backSleep(); break;
             case "searchFloor": searchFloor(); break;
             case "tryDoor": tryDoor(); break;
@@ -150,8 +151,8 @@ public class Story {
             case "ClimbBookshelf": ClimbBookshelf();break;
             case "UseLetterOpener":UseLetterOpener(); break;
         }
-
     }
+
     public void theMansion() {
         ui.mainTextArea.setText("______________ Welcome to Sinister Happenings at Huxley Manor " +
                 "______________\n\n" +
@@ -302,6 +303,7 @@ public class Story {
         game.position4 = "offerToHelp";
         game.position5 = "awkMoment";
     }
+
     public void askMallory(){
         ui.mainTextArea.setText("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags " +
                 "under his eyes being heavy and thick. Too heavy for someone his age.\n\n" +
@@ -351,6 +353,7 @@ public class Story {
         game.position4 = "shakeHand";
         game.position5 = "noShakeHand";
     }
+
     public void shakeHand(){
         ui.mainTextArea.setText("You accept the handshake to find that the butler's grasp is much firmer than " +
                 "you expected. He didn't strike you as the type to hold onto a handshake for dear life.\n\n" +
@@ -384,6 +387,7 @@ public class Story {
 
         game.position5 = "contShakeHand";
     }
+
     public void contShakeHand(){
         ui.mainTextArea.setText("After a moment, he and the old man emerge with various steaming plates " +
                 "making up an extravagant meal, all of which are arranged on the table. The butler " +
@@ -403,6 +407,7 @@ public class Story {
         game.position5 = "sitNxtMallory";
 
     }
+
     public void sitNxtToOldman(){
         ui.mainTextArea.setText("The butler stays off to the side as you take up a seat next to the old man, " +
                 "who flashes you a toothy grin as you sit down beside him. If you didn't know any better, you " +
@@ -487,6 +492,7 @@ public class Story {
         game.position4 = "WillMissYouToo";
         game.position5 = "StaySilent";
     }
+
     public void WillMissYouToo(){
         ui.mainTextArea.setText("You nod, taking hold of his hand, \"I'll miss you too.\" \n\n" +
                 "It's a short response, but you mean every word of it. \n\n" +
@@ -510,6 +516,7 @@ public class Story {
         game.position4 = "goRightToSleep";
         game.position5 = "readBook";
     }
+
     public void StaySilent(){
         ui.mainTextArea.setText("He waits a moment, seemingly expecting you to say something, but when " +
                 "you don't respond, he nods and seems to give you an understanding smile. \n\n" +
@@ -549,6 +556,7 @@ public class Story {
 
         game.position5 = "Murder";
     }
+
     public void readBook() {
         ui.mainTextArea.setText("You sigh, picking up a match --the last one in the pack-- and lighting a " +
                 "candle on your bedside table. You shimmy under the covers and grab the book you started " +
@@ -571,6 +579,7 @@ public class Story {
 
         game.position5 = "Murder";
     }
+
     public void Murder() {
         ui.mainTextArea.setText("A hysterically panicked scream from across the hall lurches you awake, and " +
                 "before you know it, you're sitting straight up in bed, trying to listen for any other noises. " +
@@ -611,6 +620,7 @@ public class Story {
         game.position5 = "startPlot";
         //TODO start plot?? or stand still? what's the difference? i think there is a mix up
     }
+
     public void backToBed() {
         ui.mainTextArea.setText("You stand there a moment, looking from the old man, to Mallory, then back again.\n\n" +
                 "Eventually, you nod reluctantly and turn to go back into your room.\n\n" +
@@ -654,6 +664,7 @@ public class Story {
 
         game.position5 = "room1";
     }
+
     public void standStill() {
         ui.mainTextArea.setText("You simply stand there, frozen in shock as you try and process the scene " +
                 "before you. This is the old man who asked you to help him up the stairs earlier this week. " +
@@ -697,6 +708,7 @@ public class Story {
 
         game.position5 = "room1";
     }
+
     public void sitNxtMallory(){
         ui.mainTextArea.setText("Mallory pulls out the chair beside him, flashing you a small smile as you move " +
                 "to sit next to him. You see the butler smile as well as you sit down and Mallory passes you " +
@@ -781,6 +793,7 @@ public class Story {
         game.position4 = "sitNxtToOldman";
         game.position5 = "sitNxtMallory";
     }
+
     public void offerToHelp(){
         ui.mainTextArea.setText("Mallory glances at you with what appears to be genuine fear in his eyes, " +
                 "quickly shaking his head, \"I've got it!\" he says quickly, seemingly loud enough for those " +
@@ -807,6 +820,7 @@ public class Story {
         game.position4 = "shakeHand";
         game.position5 = "noShakeHand";
     }
+
     public void awkMoment() {
         ui.mainTextArea.setText("You stand there in a thick silence, neither of you moving to speak. " +
                 "After a moment, you watch as Mallory goes back to setting the table. He doesn't move the " +
@@ -835,6 +849,7 @@ public class Story {
         game.position4 = "shakeHand";
         game.position5 = "noShakeHand";
     }
+
     public void stairs(){
         ui.mainTextArea.setText("The old man chuckles a little, \"The only things of interest that I keep down " +
                 "there are my old typewriters.\"\n\n" +
@@ -891,7 +906,6 @@ public class Story {
 
     /*********** FLOOR ONE *************/
     public void room1() {
-        ui.ImageLabel.setIcon(Bedroom1);
         ui.mainTextArea.setText("You sit there on the floor of your room, still processing what’s just happened." +
                 " There’s a sickening series of thumps and thuds as you assume the old man drags Mallory’s body down the stairs." +
                 " Part of you wants to sob, the other part wants to throw up, and a third prays that you’re dreaming. " +
@@ -913,10 +927,15 @@ public class Story {
         game.position2 = "searchFloor";
         game.position3 = "backSleep";
         game.position4 = "tryDoor";
-        game.position5 = ""; //TODO add map
+        game.position5 = "room1Map"; //TODO add map
     }
+    public void room1Map() {
+        ui.ImageLabel.setIcon(Bedroom1);
+    }
+
     //Try the door (leave)
     public void tryDoor() {
+        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("You walk to the door and test the knob. " +
                 "You half expect it to somehow explode on contact or light your hand on fire as you go to grab it, but it simply turns harmlessly." +
                 " No pain, no terror, just a quiet ‘click’ as the door unlatches itself. When you release the handle, the door creaks gently open, " +
@@ -946,6 +965,7 @@ public class Story {
     }
 
     public void searchFloor() {
+        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("You glance down at the floor. A few items fell from your desk when you were " +
                 "flung into the room, but other than that, it’s rather clean, save for a stray shirt you have yet to fold." +
                 " Looking at it now, it feels almost foreign despite the fact that you’ve been living here for almost a week." +
@@ -964,6 +984,7 @@ public class Story {
     }
 
     public void backSleep() {
+        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("Perhaps it’s best if you go back to sleep, " +
                 "you decide. You go and lie down on the bed and pull the covers over you, " +
                 "but it no longer feels as soft as it did earlier. You feel every lump and spring of the mattress," +
@@ -985,6 +1006,7 @@ public class Story {
         game.position4 = "tryDoor";
         game.position5 = ""; //TODO add map
     }
+
     //Downstairs
     public void downstairs() {
         ui.mainTextArea.setText("You decide that it isn’t worth checking the other rooms, instead opting to go downstairs. \n\n" +
@@ -1024,6 +1046,7 @@ public class Story {
         game.position2= "downstairs";
         game.position3 = ""; //TODO add map
     }
+
     //Downstairs
     /*public void TryDoorAhead() {
         ui.mainTextArea.setText("You realize this is Mallory's room door\n");
@@ -1070,6 +1093,7 @@ public class Story {
         game.position4 = "LeaveRoom";
         game.position5 = ""; //TODO add map
     }
+
     //Search bed
     public void SearchBed() {
         ui.mainTextArea.setText("You apprehensively approach the bed, " +
@@ -1097,6 +1121,7 @@ public class Story {
         game.position4 = "SearchDesk";
         game.position5 = "LeaveRoom";
     }
+
     //Search closet
     public void SearchCloset() {
         ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
@@ -1135,6 +1160,7 @@ public class Story {
         game.position4 = "Coat";
         game.position5 = "LeaveCloset";
     }
+
    /* //this part is not right
     public void PutOnShoes() {
         ui.mainTextArea.setText("OMG! YOU remember it makes noise");
@@ -1149,6 +1175,7 @@ public class Story {
 
         game.position5 = "SearchCloset";
     }
+
     //this part is not right
     public void NotPutOnShoes() {
         ui.mainTextArea.setText("Quieter.\nSo you pick it upo and take with you.");
@@ -1198,8 +1225,8 @@ public class Story {
 
         game.position5 = "Coat";
     }
-    //this part is not right
 
+    //this part is not right
     public void NotPutOnCoat() {
         ui.mainTextArea.setText(" Take with you");
 
@@ -1254,6 +1281,7 @@ public class Story {
         game.position4 = "ExaminePicture";
         game.position5 = "LeaveDesk";
     }
+
     //Examine the book (room4)
     public void ExamineBook() {
         ui.mainTextArea.setText("You pick up the book, glancing over the dust jacket before gently opening it." +
@@ -1350,6 +1378,7 @@ public class Story {
         game.position4 = "SearchBed";
         game.position5 = "LeaveRoom";
     }
+
     //Leave room
     public void LeaveRoom() {
         ui.mainTextArea.setText("You give one last sweeping glance to the room before stepping back out into the " +
@@ -1372,6 +1401,7 @@ public class Story {
 
         game.position5 = "room5";
     }
+
     //Down in third over section, room 5:
     public void room5() {
         ui.mainTextArea.setText("You step cautiously as you descend the stairs, praying that no one will catch you once you reach the bottom." +
@@ -1407,6 +1437,7 @@ public class Story {
         game.position4 = "DuckDown";
         game.position5 = ""; //TODO add cant see map
     }
+
     //Run
     public void Run() {
         ui.mainTextArea.setText("You try to sprint away from the blade swinging towards you, but as you turn to run, you feel something ram into your side. " +
@@ -1477,6 +1508,7 @@ public class Story {
         game.position4 = "IgnoreCat";
         game.position5 = "PetCat";
     }
+
     //Kick the cat away
     public void KickCat() {
         kick = true;
@@ -1532,6 +1564,7 @@ public class Story {
         game.position4 = "ExamineFireplace";
         game.position5 = ""; //TODO add map
     }
+
     //Try to pet the cat
        public void PetCat() {
         pet = true;
@@ -1567,6 +1600,7 @@ public class Story {
            game.position4 = "ExamineFireplace";
            game.position5 = ""; //TODO add map
     }
+
     // In room 9
     //Examine the bookcase
     public void ExamineBookcase() {
@@ -1601,6 +1635,7 @@ public class Story {
         game.position4 = "PocketBook";
         game.position5 = "LeaveBook";
     }
+
     // need to be fit
     public void PocketBook(){
         littleBook = true;
@@ -1619,6 +1654,7 @@ public class Story {
 
         game.position5 = "ExamineCoffeeTable";
     }
+
     public void LeaveBook(){
         ui.mainTextArea.setText("You shake your head, somewhat disappointed in yourself that you would genuinely think a book would save you." +
                 "What is this, Harry Potter?\n\n");
@@ -1633,6 +1669,7 @@ public class Story {
 
         game.position5 = "FightScene";
     }
+
     //Examine the coffee table
     public void ExamineCoffeeTable() {
         ui.mainTextArea.setText("You walk over to the coffee table and give it a once-over. " +
@@ -1659,6 +1696,7 @@ public class Story {
         game.position4 = "letterOpener";
         game.position5 = "leaveLetterOpener";
     }
+
     public void letterOpener() {
         letteropener = true;
         ui.mainTextArea.setText("You grab the letter opener and put it in your pocket. You figure that with everything going on in this place, " +
@@ -1689,6 +1727,7 @@ public class Story {
 
         game.position5 = "FightScene";
     }
+
     //Examine the fireplace
     public void ExamineFireplace() {
         ui.mainTextArea.setText("You walk to the fireplace and survey the ornate black marble surrounding it. " +
@@ -1718,6 +1757,7 @@ public class Story {
         game.position3 = "TakeMatches";
         game.position4 = "LeaveThere";
     }
+
     public void TakeMatches() {
         matches = true;
         ui.mainTextArea.setText("You grab the matches from the mantel and put them in your pocket. " +
@@ -1734,6 +1774,7 @@ public class Story {
 
         game.position5 = "FightScene";
     }
+
     public void LeaveThere() {
         ui.mainTextArea.setText("You decide to leave them there. It's not like you're going to need ");
 
@@ -1747,6 +1788,7 @@ public class Story {
 
         game.position5 = "FightScene";
     }
+
     //Fight scene in Room 9 before room 10:
     //Beginning of fight scene
     public void FightScene() {
@@ -1783,6 +1825,7 @@ public class Story {
         game.position4 = "UseLetterOpener";
         game.position5 = ""; //TODO add cant see map rn
     }
+
     //Duck down (pet cat)
     public void DuckingDown() {
         ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar on the other side that’s different from the one you entered through. Before you can think too much about it, a noise from the cat draws your attention, and you turn to see it staring at you, twitching as though it’s in pain. It holds eye contact with you as it gradually begins to wail and writhe in agony. You watch as it seems that something begins to move beneath its skin. In an almost wave-like motion, its pelt rises and falls in places that it shouldn’t.\\n\\n\n" +
@@ -1805,6 +1848,7 @@ public class Story {
         game.position4 = "attemptToRun"; //Duck down (kick cat)
         game.position5 = "curlInToABall"; //Duck down (ignore cat)
     }
+
     //Duck down (pet cat)
     public void watchHelplessly() {
         ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster continues to charge at you, but you notice a jerkiness in its movements, as if he’s fighting against an invisible force that’s holding him back. He’s almost upon you now. You watch helplessly as he draws back an enormous claw, winding up to strike, and you squeeze your eyes shut as you prepare for the talon to come slicing down on you.\\n\\n\n" +
@@ -1833,6 +1877,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     //Duck down (kick cat)
     public void attemptToRun() {
         ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. You curl into a ball as he draws back an enormous claw, then your eyes fly open as you feel his sharpened talons dig deep into your body, some going so deep to protrude out through your back. This time, when he draws back his claws, you’re drawn back with them. The pain is blinding as you writhe in vain to try and free yourself. There’s a loud ‘whoosh’ from behind you and the crackling of flames before you’re plunged deep into the now-lit fireplace.\\n\\n\n" +
@@ -1849,6 +1894,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     //Duck down (ignore cat)
     public void curlInToABall() {
         ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. You curl into a ball as he draws back an enormous claw, then your eyes fly open as you feel his sharpened talons dig deep into your body, some going so deep to protrude out through your back. This time, when he draws back his claws, you’re drawn back with them.\\n\\n\n" +
@@ -1865,6 +1911,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     //Jump out of the way
     public void JumpOutWay() {
         ui.mainTextArea.setText("You leap to the side, narrowly dodging the blow, and find yourself crashing into the bookshelf. The creature pauses a moment, clearly disoriented by the fact that he missed. He’s too close for you to run, but perhaps…\\n\\n\n" +
@@ -1901,6 +1948,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     //Throw the books (kick cat)
     public void ThrowBooks() {
         ui.mainTextArea.setText("What would you like to do?");
@@ -1915,6 +1963,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void pettingCat() {
         ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then begin pelting them at the monster, aiming for his head. This only seems to anger him. He turns to you, eyes flashing with an intense rage as he charges at you. Unable to run anywhere without risking getting grabbed, you desperately reach for more books from the shelf, feeling for hardcovers. As the monster lunges, your hand finds a particularly heavy copy of the complete works of William Shakespeare, and desperately you chuck the book at the creature, praying it hits its mark.\\n\\n\n" +
                 "The book flies air before nailing the monster on the side of the face and sending him stumbling back. \\n\\n\n" +
@@ -1935,6 +1984,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void angeringCat() {
         ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then begin pelting them at the monster, aiming for his head. This only seems to anger him. He turns to you, eyes flashing with an intense rage as he charges you. Unable to run anywhere without risking getting grabbed, you desperately reach for more books from the shelf, feeling for hardcovers.\\n\\n\n" +
                 "However, he moves too quickly for you to find another book to throw, and before you know it you’re pinned to the bookshelf with one large claw placed over your abdomen. He reaches up his other paw and gently caresses your face before firmly grabbing it and twisting suddenly. You feel your neck crunch, then everything goes black. \\n\\n\\n\n" +
@@ -1965,6 +2015,7 @@ public class Story {
         game.position3 = "StandThere";
         game.position4 = "";
     }
+
     //Grab a book and start reading spells (pet cat)
     public void ReadSpell() {
         ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
@@ -1987,6 +2038,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     //Grab a book and start reading spells (ignore cat)
     public void LookAhead() {
         ui.mainTextArea.setText("TThinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
@@ -2005,6 +2057,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     //Grab a book and start reading spells (kick cat)
     public void StandThere() {
         ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you find what looks to be a spell. You’ve always called yourself a skeptic, but considering there’s an 8-foot-tall cat monster attempting to kill you, you decide you can suspend your disbelief for the time being. \\n\\n\n" +
@@ -2029,8 +2082,8 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
-    //Use letter opener (if have)
 
+    //Use letter opener (if have)
     public void UseLetterOpener() {
         ui.mainTextArea.setText("Running on instinct, you pull the letter-opener from your pocket and hold it out, aiming to stab him in the throat when he bends down to claw you. You don't back away as he swings his talons at you, instead lunging right back at him and burying the letter opener deep in his jugular.\\n\\n\n" +
                 "You stand there unscathed, panting as you watch him slowly come to the realization that he’s been stabbed. You begin to laugh a little as blood spews from his throat. It actually worked! \\n\\n\n" +
@@ -2072,6 +2125,7 @@ public class Story {
         game.position3 = "labeledClearPotion";
         game.position4 = "unlabeledClearPotion";
     }
+
     public void purplePotion() {
         ui.mainTextArea.setText("You cautiously pick up the glowing vial and look it over, noticing that the faded label says “Aspectum”. You’re not well-versed in latin by any stretch, but you remember a middle school teacher once telling you that that word meant “Sight”. You shrug. Maybe it does.\\n\\n\n" +
                 "Either way, you pop the cork off the vial and drink it down in one swig. \\n\\n\n" +
@@ -2095,6 +2149,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void yellowPotion() {
         ui.mainTextArea.setText("You pick up the yellow vial, pondering for a moment why it’s labeled the way it is before drinking it. \\n\\n\n" +
                 "Instantly, your insides begin to burn as if someone’s lit a match in your stomach. Your throat begins to swell as your knees buckle under you and you fall to the ground, bringing one of the mini shelves down with you as you grasp at it in an attempt to stay standing. \\n\\n\n" +
@@ -2118,6 +2173,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void labeledClearPotion() {
         ui.mainTextArea.setText("You pick it up, contemplating the latin labeling before taking a swig. You cringe at the taste and it burns as it goes down.\\n\\n\n" +
                 "Still, it tastes strangely familiar.\\n\\n\n" +
@@ -2137,6 +2193,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void unlabeledClearPotion() {
         ui.mainTextArea.setText("You pick up the unlabeled vial and glance over it. The fact that it’s unlabeled scares you a bit, but after what you just experienced in the other room, you figure it can’t be that bad. Shrugging, you uncork it and take a swig.\\n\\n\n" +
                 "It doesn’t taste like anything, nor does it feel strange at all.\\n\\n\n" +
@@ -2159,6 +2216,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void LeaveRoom10() {
         ui.mainTextArea.setText("Finished with the potion table, you make your way over to the door on the far side of the room. You know it goes out to the hallway where you almost died, but you’d rather go that way and have some hope of getting out than stay in here for the old man to find you or go back into the room where you were just attacked. \\n\\n\n" +
                 "You pause, listening. \\n\\n\n" +
@@ -2180,6 +2238,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void goToBathroom() {
         ui.mainTextArea.setText("You go into the bathroom and take a piss before washing your hands and heading back out into the hallway.\\n\\n\n");
         ui.choice1.setText("Run downstairs with shoes)"); //Go downstairs (shoes)
@@ -2193,6 +2252,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void withShoes() {
         ui.mainTextArea.setText("You cautiously step down the stairs, cringing as it squeaks at every step you take. The thick bottoms of your sneakers clunk against the wood, making it even louder than it already would be without them. Not to mention how dark it is, and how easily you could fall if you missed a step. \\n\\n\n" +
                 "You pause at the first landing, taking a moment to allow yourself to breathe. \\n\\n\n" +
@@ -2224,6 +2284,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void withNoShoes() {
         ui.mainTextArea.setText("You slowly make your way down the stairs, cringing every time a step creaks. Even so, your socks manage to muffle the noise of your footsteps, and if you pause for long enough between squeaks, you find you’re able to make it sound almost like the natural creaking of the old mansion. Unfortunately, it takes you forever to get down the stairs because of it, but you figure it’s better safe than sorry.\\n\\n\n" +
                 "Finally, you make it to the bottom of the stairs and cautiously step out into the kitchen. It’s rather dark, but the light from the moon outside is enough to generally let you see. Your eyes have become rather accustomed to the darkness at this point anyway.\\n\\n\n" +
@@ -2245,6 +2306,7 @@ public class Story {
         game.position3 = "CheckFridge";
         game.position4 = "LeaveKitchen";
     }
+
     public void knifeDrawer() {
         ui.mainTextArea.setText("You quietly make your way over to the knife drawer and slide it open.\\n\\n\n" +
                 "You know that a knife likely won’t do much to whatever kind of being the old man really is, but you also figure it couldn’t hurt, right?\\n\\n\n" +
@@ -2264,6 +2326,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void CheckCabinets() {
         ui.mainTextArea.setText("You open the cabinets knowing that there probably won’t be much of use in them, but figure it can’t hurt to check.\\n\\n\n" +
                 "You find the usual: plates, cups, bowls, etc. \\n\\n\n" +
@@ -2283,6 +2346,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void CheckFridge() {
         ui.mainTextArea.setText("You cautiously approach the fridge, staring at the bloody handprint. \\n\\n\n" +
                 "The old man doesn’t strike you as the kind to be so careless.\\n\\n\n" +
@@ -2396,8 +2460,8 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
-    //Leave kitchen (potion)
 
+    //Leave kitchen (potion)
     public void withPotion() {
         ui.mainTextArea.setText("You move to leave the kitchen and head towards the front entrance - to freedom - when your eye catches something in the decorative mirror on the wall. It’s an image of the old man, stepping up from the cellar stairs in the dining room and turning towards the kitchen.\\n\\n\n" +
                 "You hear your heart begin to pound in your chest as you see his shadow advancing down the hallway. Desperately, you glance around the room for a place to hide.\\n\\n\n" +
@@ -2439,6 +2503,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     //Hide in the pantry
     public void HideInPantry() {
         ui.mainTextArea.setText("You tiptoe into the pantry and close it as silently as possible. There’s a knob on both sides of the door, so doing so is rather easy. You sit there, breathing heavily among the snacks and dry goods, praying that he doesn’t find you.\\n\\n\n" +
@@ -2471,6 +2536,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     //TheCellar
     public void TheCellar() {
         ui.mainTextArea.setText("You’re immediately hit with the pungent smell of rotting flesh as you make your way down into the cellar, and deeper you go, the stronger it gets.  By the time you’re finally at the base of the stairs, your eyes have begun to water and your stomach has begun to churn from the smell. \\n\\n\n" +
@@ -2497,6 +2563,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void RunForTheDoor() {
         ui.mainTextArea.setText("You decide that you’re willing to take your chances as you bolt for the door. You’ve still got nearly half the cellar to traverse, but you don’t care. You sprint over the bodies, which squish and crunch beneath your feet. The door is just a few feet away now, and you just need to-\\n\\n\n" +
                 "Suddenly, your body just...stops. Your limbs freeze, then draw themselves back until you’re standing there with your legs together. Then, your legs begin to move against your will, turning you around until you’re facing back towards where you came from.\\n\\n\n" +
@@ -2514,6 +2581,7 @@ public class Story {
         game.position3 = "";
         game.position4 = "";
     }
+
     public void HideAmongTheBodies() {
         ui.mainTextArea.setText("You shake your head. You couldn’t make it that far in the time you’d need to. So, instead, despite every natural instinct screaming for you to do the opposite, you take a few more steps then lay down among the corpses. \\n\\n\n" +
                 "The smell is overwhelming, but it’s the texture that makes your hair raise. The bodies closer to the door where you are have clearly been here longer, and have begun to be much more...gelatinous than the ones near the front. \\n\\n\n" +
@@ -2537,6 +2605,7 @@ public class Story {
         game.position4 = "";
         game.position5 = "";
     }
+
     public void iFNoMatches() {
         ui.mainTextArea.setText("“You know,” the old man begins, “In all my 300 years, I’ve never had one escape. Not one!”\\n\\n\n" +
                 "Your legs continue to walk towards the old man, stepping on and over the corpses of " +
@@ -2554,6 +2623,7 @@ public class Story {
         game.position4 = "";
         game.position5 = "";
     }
+
     public void Fight1() {
         ui.mainTextArea.setText("You struggle to regain control of your limbs, but they continue to move despite your every attempt to make them stop.\\n\\n\n" +
                 "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\\n\\n\n" +
@@ -2590,6 +2660,7 @@ public class Story {
         game.position4 = "";
         game.position5 = "";
     }
+
     public void Fight3() {
         ui.mainTextArea.setText("You’re just a few feet away from him now, and as you struggle, you begin to cry out both in frustration and in some vain attempt to beg for your life.\\n\\n\n" +
                 "The old man simply chuckles, continuing to pull you towards him, “Do you know how I came to be like this?” he asks, reaching up his free hand to caress your face, “I killed my best friend, and drank his blood on the floor of a church, and I still have his portrait hanging in my house,” he grins, holding your chin so you have no choice but to look into his eyes, “Your pleas mean nothing to me.”\\n\\n\n" +
@@ -2812,6 +2883,7 @@ public class Story {
         game.position4 = "";
         game.position5 = "";
     }
+
     public void Ending() {
         ui.mainTextArea.setText("Bye!");
         ui.choice1.setVisible(false);
@@ -2826,6 +2898,7 @@ public class Story {
         game.position4 = "";
         game.position5 = "";
     }
+
     public void toTitle() {
 
         m.showTitleScreen();
