@@ -1109,27 +1109,12 @@ public class Story {
         ui.choice4.setText("Go downstairs");
         ui.choice5.setText("See map");
 
-        game.position1 = "MalloryRoom";
-        game.position2= "downstairs";
-        game.position3 = ""; //TODO add map
+        game.position3 = "MalloryRoom";
+        game.position4= "downstairs";
+        game.position5 = ""; //TODO add map
     }
 
-    //Downstairs
-    /*public void TryDoorAhead() {
-        ui.mainTextArea.setText("You realize this is Mallory's room door\n");
 
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText("Enter Mallory’s room");
-
-        game.position5 = "MalloryRoom";
-    }*/
-
-    // Mallory's room
     public void MalloryRoom() {
         ui.mainTextArea.setText("Cautiously, you walk through the hall down to Mallory’s room, " +
                 "trying to ignore the squish of the bloodsoaked carpet as wetness of it seeps into " +
@@ -1255,7 +1240,7 @@ public class Story {
 
             game.position3 = "Shoes";
             game.position4 = "Coat";
-            game.position5 = "Leave Closet";
+            game.position5 = "LeaveCloset";
         }
     }
 
@@ -1283,36 +1268,7 @@ public class Story {
         game.position5 = "LeaveCloset";
     }
 
-   /* //this part is not right
-    public void PutOnShoes() {
-        ui.mainTextArea.setText("OMG! YOU remember it makes noise");
-
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "SearchCloset";
-    }
-
-    //this part is not right
-    public void NotPutOnShoes() {
-        ui.mainTextArea.setText("Quieter.\nSo you pick it upo and take with you.");
-
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "SearchCloset";
-    }
-*/
+    //Put on coat
     public void Coat() {
         coat = true;
         ui.mainTextArea.setText("You reach for the coat, pulling it off the hanger." +
@@ -1338,38 +1294,7 @@ public class Story {
         game.position5 = "LeaveCloset";
     }
 
-    // Put on coat
-    // this part is not right
-  /*
-    public void PutOnCoat() {
-        ui.mainTextArea.setText("Get stuck on something/butler grabs)");
 
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">>>");
-
-        game.position5 = "Coat";
-    }
-
-    //this part is not right
-    public void NotPutOnCoat() {
-        ui.mainTextArea.setText(" Take with you");
-
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">>>");
-
-        game.position5 = "SearchCloset";
-    }
-    */
     //Leave Closet
     public void LeaveCloset() {
         ui.mainTextArea.setText("You take one last glance at the nearly empty closet before turning back " +
