@@ -1855,17 +1855,15 @@ public class Story {
                 "he turns his head as if he’s just heard something and lumbers away, leaving you " +
                 "alone. Slowly, you walk over and close the door before turning to examine the room" +
                 " you’ve just entered.\\n\\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice5.setText(">");
 
-        game.position1 = "JumpOutWay";// come back to this
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        game.position5 = "JumpOutWay";// come back to this
     }
 
     //Duck down (kick cat)
@@ -1873,16 +1871,15 @@ public class Story {
         ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you feel the cold wall bump against your back. The monster, seemingly unshaken by your attempts to run, charges at you with fluid, precise movements. You curl into a ball as he draws back an enormous claw, then your eyes fly open as you feel his sharpened talons dig deep into your body, some going so deep to protrude out through your back. This time, when he draws back his claws, you’re drawn back with them. The pain is blinding as you writhe in vain to try and free yourself. There’s a loud ‘whoosh’ from behind you and the crackling of flames before you’re plunged deep into the now-lit fireplace.\\n\\n\n" +
                 "He holds his claw in the fire with you as the flames lick at your skin. You scream out, thrashing in agony, the creature curling his claws inwards. You feel as though your flesh is being melted from bone in the flame. Your vision blurs as you feel your consciousness begin to slip. One final burst of agony jolts through you as the beast withdraws its claws from your body, allowing the flames to lap greedily at your open wounds. The pain mutes your tortured cries as you lie there, everything slowly fading to an inky black numbness.\\n\\n\\n\n" +
                 "You’ve discovered one of the many ways to die in this game!. It IS possible to win this game, so feel free to restart and play again, but I suggest next time you refrain from kicking the cat :).\\n\\n\n");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion"; // DEATH GAME OVER
     }
 
     //Duck down (ignore cat)
