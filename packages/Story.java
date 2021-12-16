@@ -188,6 +188,7 @@ public class Story {
     }
 
     public void ExitGame(){
+       // m.showTitleScreen();
         ui.mainTextArea.setText("You may now close this window.");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1161,7 +1162,7 @@ public class Story {
             ui.choice5.setText("Leave Closet");
 
             game.position4 = "Coat";
-            game.position5 = "Leave Closet";
+            game.position5 = "LeaveCloset";
         }
         else if (coat && !shoes){
             ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
@@ -1177,7 +1178,7 @@ public class Story {
             ui.choice5.setText("Leave Closet");
 
             game.position4 = "Shoes";
-            game.position5 = "Leave Closet";
+            game.position5 = "LeaveCloset";
         }
         else if (coat && shoes){
             ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
@@ -1191,7 +1192,7 @@ public class Story {
 
             ui.choice5.setText("Leave Closet");
 
-            game.position5 = "Leave Closet";//TODO: this button also doesn't work for some reason????
+            game.position5 = "LeaveCloset";//TODO: this button also doesn't work for some reason????
         }
         else{
             ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
@@ -2516,7 +2517,7 @@ public class Story {
                 "The kitchen is a room that you’ve gotten to know rather well in your time here. It’s small for a kitchen in a mansion, but beautiful nonetheless. The dark wooden cabinets look lovely alongside the copper appliances and granite countertops.\\n\\n\n" +
                 "You glance longingly at the knife drawer. Perhaps there’s something in there you could use. \\n\\n\n" +
                 "Or perhaps you might find something of use in cabinets where the plates and bowls are kept. It isn’t likely, but it’s possible.\\n\\n\n" +
-                "It’s then that you notice a bloody handprint on the handle of the fridge. Did the old man not clean up the blood before getting a midnight snack?\\n\\n\n" +
+                "It’s then that you notice a bloody hand print on the handle of the fridge. Did the old man not clean up the blood before getting a midnight snack?\\n\\n\n" +
                 "You scoff, trying not to think too much about it. If you think about the reason for all the blood, it means you have to think about Mallory, and the fact that he’s gone.\\n\\n\n" +
                 "What do you do?\\n\\n\n" +
                 "\n");
