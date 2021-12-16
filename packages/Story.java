@@ -75,7 +75,6 @@ public class Story {
             case "standStill": standStill();break;
             case "offerToHelp": offerToHelp(); break;
             case "awkMoment": awkMoment(); break;
-            case "startPlot": startPlot(); break;
             case "room1": room1(); break;
             case "room1Map": room1Map(); break;
             case "backSleep": backSleep(); break;
@@ -813,7 +812,7 @@ public class Story {
 
         game.position3 = "backToBed";
         game.position4 = "AttackOldMan";
-        game.position5 = "startPlot";
+        game.position5 = "standStill";
         //TODO start plot?? or stand still? what's the difference? i think there is a mix up
     }
 
@@ -872,28 +871,6 @@ public class Story {
                 "bloody body as he gasps for what may be his final breaths.\n\n" +
                 "The old man scoffs, extending his free arm. Suddenly, an invisible force rams into you, " +
                 "sending you crashing backwards into your room as the door slams violently shut.\n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "room1";
-    }
-
-    // TODO should all the three above this go here and then room 1?
-    public void startPlot() {
-        ui.mainTextArea.setText("You sit there on the floor of your room, still processing what's just happened. " +
-                "There's a sickening series of thumps and thuds as you assume the old man drags Mallory's body " +
-                "down the stairs. Part of you wants to sob, the other part wants to throw up, and a third prays " +
-                "that you're dreaming. But this is not a dream, and you don't have the energy right now to do " +
-                "either of those things. Instead, you glance at the door. It doesn't lock, but after what " +
-                "just happened, you wouldn't be surprised if you were somehow locked in. Mallory might be dead. " +
-                "And you might be next. After a moment you resolve that you have to get out of here. You'd " +
-                "rather be homeless than stuck with a murderer.\n\n" +
-                "Shakily, you get to your feet and glance around the room.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
