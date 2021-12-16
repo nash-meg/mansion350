@@ -104,6 +104,7 @@ public class Story {
             case "LeaveCloset": LeaveCloset();break;
             case "SearchDesk": SearchDesk();break;
             case "ExamineBook": ExamineBook(); break;
+            case "ExamineBookCont": ExamineBookCont(); break;
             case "LeaveDesk": LeaveDesk(); break;
             case "LeaveRoom": LeaveRoom();break;
             case "room5": room5(); break;
@@ -1401,15 +1402,30 @@ public class Story {
                 "know that he didn’t have time for hobbies or fandoms. \n\n" +
                 "Did the old man really harm him that much? Was he that far gone to have to start believing in " +
                 "spells and immortality to cope with his situation? He’d never struck you as someone losing his " +
-                "grip on reality, but you figure a lot can happen behind closed doors. \n\n" + //TODO: NEW PAGE
-                "There seems to be a great deal in the book about removing one’s soul and tricking the body into thinking it’s still there, whatever that means. \n\n" +
-                "One passage underlined rather intensely in pen reads, " +
-                "“There is no way to reverse soullessness once it has been done. The soulless will live on as long as the individual can find sustenance in the mortal realm. " +
-                "The only way that one who has begun to draw life from below the metaphysical plane can perish while still well-nourished is if the immortal body is killed within" +
-                " a day after it has fed. It is weakest as it draws lifeforce from its meals, and only then can the body be jolted into ‘realizing’ there is no soul sustaining it.” \n\n" +
-                "Written beside this passage are simply the words, “Next time?”\n\n" +
-                "Shaking your head, you close the book, fold the dust jacket back over the cover, " +
-                "and place it back on the desk.\n\n");
+                "grip on reality, but you figure a lot can happen behind closed doors. \n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "ExamineBookCont";
+    }
+
+    public void ExamineBookCont() {
+        ui.mainTextArea.setText("There seems to be a great deal in the book about removing one’s soul and " +
+                "tricking the body into thinking it’s still there, whatever that means. \n\n" +
+                "One passage underlined rather intensely in pen reads, \"There is no way to reverse soullessness " +
+                "once it has been done. The soulless will live on as long as the individual can find " +
+                "sustenance in the mortal realm. The only way that one who has begun to draw life from below " +
+                "the metaphysical plane can perish while still well-nourished is if the immortal body is " +
+                "killed within a day after it has fed. It is weakest as it draws lifeforce from its meals, " +
+                "and only then can the body be jolted into 'realizing' there is no soul sustaining it.\" \n\n" +
+                "Written beside this passage are simply the words, \"Next time?\"\n\n" +
+                "Shaking your head, you close the book, fold the dust jacket back over the cover, and place it " +
+                "back on the desk.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -1425,24 +1441,26 @@ public class Story {
 
     //Examine the picture
     public void ExaminePicture() {
-        ui.mainTextArea.setText("You pick up the polaroid and glance at the date. July 24, 2017. " +
-                "It’s a picture of Mallory standing with a group of people who you assume to be relatives at a beach somewhere. " +
-                "But he looks...different. His hair is shorter, and his frame is filled out more healthfully than it ever had been in the time you’d known him." +
-                " The deep, chasmous dark circles beneath his eyes are lighter here - almost nonexistent on his semi-sunburnt face." +
-                " He’s smiling in a way that you’ve never seen before, almost as if he’s laughing at something behind the camera.\n\n" +
+        ui.mainTextArea.setText("You pick up the polaroid and glance at the date. July 24, 2017. It’s a picture of " +
+                "Mallory standing with a group of people who you assume to be relatives at a beach somewhere. " +
+                "But he looks...different. His hair is shorter, and his frame is filled out more healthfully " +
+                "than it ever had been in the time you’d known him. The deep, chasmous dark circles beneath his " +
+                "eyes are lighter here - almost nonexistent on his semi-sunburnt face. He’s smiling in a way that " +
+                "you’ve never seen before, almost as if he’s laughing at something behind the camera.\n\n" +
                 "You realize you’d never seen him genuinely laugh.\n\n" +
-                "A middle-aged woman stands grinning beside him with an arm placed playfully around his shoulders," +
-                " and sitting in the sand at his feet is a little blonde girl who couldn’t be older than 10 or 11. " +
+                "A middle-aged woman stands grinning beside him with an arm placed playfully around his shoulders, " +
+                "and sitting in the sand at his feet is a little blonde girl who couldn’t be older than 10 or 11. " +
                 "She’s also clearly laughing, her hands packed with fistfulls of sand.\n\n" +
-                "You feel tears begin to well up in your eyes as you stare at the polaroid. He had a family once." +
-                " People who loved him. At least that’s what it looks like in the picture. " +
-                "What happened to him that made him land here, of all places? That made him die here?" +
-                " Would his family even know that he was gone?\n\n" +
+                "You feel tears begin to well up in your eyes as you stare at the polaroid. He had a family once. " +
+                "People who loved him. At least that’s what it looks like in the picture. What happened to him " +
+                "that made him land here, of all places? That made him die here? Would his family even know that " +
+                "he was gone?\n\n" +
                 "Would they care?\n\n" +
-                "You draw in a shaky breath as your vision blurs with tears that threaten to spill over. " +
-                "You quickly put down the polaroid and wipe your eyes. You don’t have time to be getting emotional right now.\n\n" +
-                "Still, you can’t help but hazard one last lingering glance at the photo." +
-                " You wish he could have seen them again.\n\n");
+                "You draw in a shaky breath as your vision blurs with tears that threaten to spill over. You " +
+                "quickly put down the polaroid and wipe your eyes. You don’t have time to be getting emotional " +
+                "right now.\n\n" +
+                "Still, you can’t help but hazard one last lingering glance at the photo. You wish he could have " +
+                "seen them again.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -1458,11 +1476,12 @@ public class Story {
 
     //Leave desk
     public void LeaveDesk() {
-        ui.mainTextArea.setText("You decide you’ve had your fill of snooping around Mallory’s desk," +
-                " and chuckle a little to yourself as you realize how he’s going to be pissed when he--\n\n" +
-                "The blood smeared across the room jolts you back to where you are, and the small smile drops from your face. " +
-                "There is no “when”. Not anymore.\n\n" +
-                "Clenching your jaw and, attempting to swallow back the rock in your throat, you turn your attention back to the room. \n\n");
+        ui.mainTextArea.setText("You decide you’ve had your fill of snooping around Mallory’s desk, and chuckle " +
+                "a little to yourself as you realize how he’s going to be pissed when he--\n\n" +
+                "The blood smeared across the room jolts you back to where you are, and the small smile drops " +
+                "from your face. There is no “when”. Not anymore.\n\n" +
+                "Clenching your jaw and, attempting to swallow back the rock in your throat, you turn your " +
+                "attention back to the room. \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
@@ -1503,24 +1522,29 @@ public class Story {
 
     //Down in third over section, room 5:
     public void room5() {
-        ui.mainTextArea.setText("You step cautiously as you descend the stairs, praying that no one will catch you once you reach the bottom." +
-                " It’s dark; with every step a part of you fears that your foot will miss, and you’ll be sent tumbling down the stairway." +
-                " Still, these stairs don’t creak as much as the ones on the lower levels, and for that, you’re grateful.\n\n" +
-                "You nearly hit your head on the ceiling as you finally reach the bottom of the stairs. " +
-                "It’s always been much lower on this level than the others. As you step out into the hallway, you see something move out of the corner " +
-                "of your eye. Something brushes against your ankle, and as you try to step away, it seems to follow your every move. " +
-                "Nearly tripping, you look down to see a pair of yellow eyes staring back at you from the darkness, and there’s a quiet meow" +
-                "from the little creature at your feet. A wave of relief washes over you. It’s just the cat. You watch as it slinks away from you," +
-                "trying to steady your beating heart. It pauses at a pair of doors on the opposite wall, seeming to test each one before one of them" +
-                "yields to its paws and it goes in.\n\n" +
+        ui.mainTextArea.setText("You step cautiously as you descend the stairs, praying that no one will catch " +
+                "you once you reach the bottom. It’s dark; with every step a part of you fears that your foot will " +
+                "miss, and you’ll be sent tumbling down the stairway. Still, these stairs don’t creak as much as " +
+                "the ones on the lower levels, and for that, you’re grateful.\n\n" +
+                "You nearly hit your head on the ceiling as you finally reach the bottom of the stairs. It’s " +
+                "always been much lower on this level than the others. As you step out into the hallway, you see " +
+                "something move out of the corner of your eye. Something brushes against your ankle, and as you " +
+                "try to step away, it seems to follow your every move. Nearly tripping, you look down to see a " +
+                "pair of yellow eyes staring back at you from the darkness, and there’s a quiet meow from the " +
+                "little creature at your feet. A wave of relief washes over you. It’s just the cat. You watch " +
+                "as it slinks away from you, trying to steady your beating heart. It pauses at a pair of doors " +
+                "on the opposite wall, seeming to test each one before one of them yields to its paws and it " +
+                "goes in.\n\n" +
                 "In another world, you might have laughed at the fact that the most harmless creature in the mansion" +
-                "managed to scare you so badly. After a moment, you begin to make your way towards the other stairs. As you take a step, " +
-                "a floorboard creaks loudly. Something feels wrong.\n\n" +
-                "You glance back to where you came from to find that the staircase you " +
-                "just walked down is...gone. Where there was once an opening is simply a wall, with no trace that there was ever a stairway" +
-                " there to begin with. You force yourself to continue onward. Perhaps it’s just the darkness playing tricks on you.\n\n" +
-                "All of a sudden, a great cracking sound echoes through the hallway, and the ceiling opens. From it descends countless blades," +
-                "swinging violently on ropes and glinting in the darkness. You watch in horror as one swings directly at you.\n\n" +
+                "managed to scare you so badly. After a moment, you begin to make your way towards the other " +
+                "stairs. As you take a step, a floorboard creaks loudly. Something feels wrong.\n\n" +
+                "You glance back to where you came from to find that the staircase you just walked down is...gone. " +
+                "Where there was once an opening is simply a wall, with no trace that there was ever a stairway " +
+                "there to begin with. You force yourself to continue onward. Perhaps it’s just the darkness " +
+                "playing tricks on you.\n\n" +
+                "All of a sudden, a great cracking sound echoes through the hallway, and the ceiling opens. " +
+                "From it descends countless blades, swinging violently on ropes and glinting in the darkness. " +
+                "You watch in horror as one swings directly at you.\n\n" +
                 "What do you do?! \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
