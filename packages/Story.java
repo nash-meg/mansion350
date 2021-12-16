@@ -9,6 +9,7 @@ public class Story {
     UI ui;
     map m;
     boolean shoes;
+    boolean coat;
     boolean purpPotion;
     boolean  matches;
     boolean letteropener;
@@ -30,6 +31,7 @@ public class Story {
         pet = false;
         ignore = false;
         letteropener = false;
+        coat = false;
     }
 
     ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
@@ -1142,22 +1144,69 @@ public class Story {
 
     //Search closet
     public void SearchCloset() {
-        ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
-                "There are three shirts, two pairs of pants, and a yellow raincoat hanging there, with a single pair of shoes sitting on the floor. " +
-                "It’s odd, considering that the old man insisted that all shoes be kept in the hall closet near the front door. \n\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
-        ui.choice4.setVisible(true);
-        ui.choice5.setVisible(true);
+        if (shoes && !coat){
+            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
+                    "There are three shirts, two pairs of pants, and a yellow raincoat hanging there. ");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(true);
+            ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Put on the shoes");
-        ui.choice4.setText("Put on the coat");
-        ui.choice5.setText("Leave Closet");
+            ui.choice4.setText("Put on the coat");
+            ui.choice5.setText("Leave Closet");
 
-        game.position3 = "Shoes";
-        game.position4 = "Coat";
-        game.position5 = "Leave Closet";
+            game.position4 = "Coat";
+            game.position5 = "Leave Closet";
+        }
+        else if (coat && !shoes){
+            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
+                    "There are three shirts, two pairs of pants, and a single pair of shoes sitting on the floor. " +
+                    "It’s odd, considering that the old man insisted that all shoes be kept in the hall closet near the front door. \n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(true);
+            ui.choice5.setVisible(true);
+
+            ui.choice4.setText("Put on the shoes");
+            ui.choice5.setText("Leave Closet");
+
+            game.position4 = "Shoes";
+            game.position5 = "Leave Closet";
+        }
+        else if (coat && shoes){
+            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
+                    "There are three shirts and two pairs of pants." +
+                    " You didn't realize exactly how bear it could look until you realize how empty it is now that you've taken the shoes and the coat.\n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
+            ui.choice4.setVisible(false);
+            ui.choice5.setVisible(true);
+
+            ui.choice5.setText("Leave Closet");
+
+            game.position5 = "Leave Closet";//TODO: this button also doesn't work for some reason????
+        }
+        else{
+            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
+                    "There are three shirts, two pairs of pants, and a yellow raincoat hanging there, with a single pair of shoes sitting on the floor. " +
+                    "It’s odd, considering that the old man insisted that all shoes be kept in the hall closet near the front door. \n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(true);
+            ui.choice4.setVisible(true);
+            ui.choice5.setVisible(true);
+
+            ui.choice3.setText("Put on the shoes");
+            ui.choice4.setText("Put on the coat");
+            ui.choice5.setText("Leave Closet");
+
+            game.position3 = "Shoes";
+            game.position4 = "Coat";
+            game.position5 = "Leave Closet";
+        }
     }
 
     //Put on shoes
@@ -1169,7 +1218,12 @@ public class Story {
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
-        ui.choice4.setVisible(true);
+        if (coat){
+            ui.choice4.setVisible(false);
+        }
+        else{
+            ui.choice4.setVisible(true);
+        }
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Put on the coat");
@@ -1210,6 +1264,7 @@ public class Story {
     }
 */
     public void Coat() {
+        coat = true;
         ui.mainTextArea.setText("You reach for the coat, pulling it off the hanger." +
                 " It’s a cold autumn night, and considering how far this mansion is from any people, " +
                 "you’re sure that it’s going to be a long walk in the fridged air before you can find help, " +
@@ -1217,7 +1272,13 @@ public class Story {
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
-        ui.choice4.setVisible(true);
+        if(shoes){
+            ui.choice4.setVisible(false);
+        }
+        else{
+            ui.choice4.setVisible(true);
+        }
+
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Put on the shoes");
