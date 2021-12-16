@@ -2945,69 +2945,98 @@ public class Story {
 
     //TheCellar
     public void TheCellar() {
-        ui.mainTextArea.setText("You’re immediately hit with the pungent smell of rotting flesh as you make your way down into the cellar, and deeper you go, the stronger it gets.  By the time you’re finally at the base of the stairs, your eyes have begun to water and your stomach has begun to churn from the smell. \\n\\n\n" +
-                "As you step onto the floor from the bottom stair, you feel something thick begin to soak into your socks, and when you look down you find yourself standing in a dark, sticky puddle that smells of iron and rot. \\n\\n\n" +
-                "When you turn your head, you have to force back a scream of terror as you realize you’re standing beside a row of corpses hung upidedown along the wall.\\n\\n\n" +
-                "In various stages of decay they hang there, their throats slit like pigs hung to bleed. \\n\\n\n" +
-                "Trying not to comprehend the sight before you, you instead try to keep walking. On the other side of the cellar, you can see a door with a window on it, filtering in the pre-dawn light from outside. If you can just make it across…\\n\\n\n" +
-                "Suddenly, your feet hit something on the floor. It feels somehow solid and squishy at the same time. Without thinking, you look down to see what it is. \\n\\n\n" +
-                "Your breath catches in your chest. A pair of dead, cold eyes look back at you from Mallory’s pale corpse. \\n\\n\n" +
-                "You feel your entire body begin to shake as you stare at the body of the boy at your feet. He doesn’t look the same. His skin looks almost blue and leathery. At least, the bits of skin you can see. Most of him is covered in what you assume to be his own blood, so drenched that it still seems to drip from him onto the ground. He stares up at you with wide, horrified eyes, his final expression of pure fear and pain forever frozen on his death-bloated face.\\n\\n\n" +
-                "It takes everything in your power to not fall to your knees and sob over the boy, but you know you have to keep moving. Reluctantly, you step over his body and continue on over dozens of other corpses who you don’t recognize as you make your way towards the door.\\n\\n\n" +
-                "It’s then that you hear the old man coming down the stairs.\\n\\n\n" +
-                "You glance at the door.\\n\\n\n" +
-                "You’re not sure if you could make it, but you sure could try.\\n\\n\n" +
+        ui.mainTextArea.setText("You’re immediately hit with the pungent smell of rotting flesh as you make your way down into the cellar," +
+                " and deeper you go, the stronger it gets.  " +
+                "By the time you’re finally at the base of the stairs, " +
+                "your eyes have begun to water and your stomach has begun to churn from the smell. \n\n" +
+                "As you step onto the floor from the bottom stair, you feel something thick begin to soak into your socks, " +
+                "and when you look down you find yourself standing in a dark, sticky puddle that smells of iron and rot. \n\n" +
+                "When you turn your head, you have to force back a scream of terror as you realize you’re standing " +
+                "beside a row of corpses hung upidedown along the wall.\n\n" +
+                "In various stages of decay, they hang there, their throats slit like pigs hung to bleed. \n\n" +
+                "Trying not to comprehend the sight before you, you instead try to keep walking." +
+                " On the other side of the cellar, you can see a door with a window filtering in the pre-dawn light from outside. " +
+                "If you can just make it across...\n\n" +
+                "Suddenly, your feet hit something on the floor. " +
+                "It feels somehow solid and squishy at the same time. Without thinking, you look down. \n\n" +
+                "Your breath catches in your chest. A pair of dead, cold eyes look back at you from Mallory’s pale corpse. \n\n" +
+                "You feel your entire body begin to shake as you stare at the body of the boy at your feet." +
+                " He doesn't look like himself. His skin looks almost blue and leathery. " +
+                "At least, the bits of skin you can see." +
+                " Most of him is covered in what you assume to be his own blood," +
+                " so drenched that it still seems to drip from him onto the ground despite having been bled hours ago. " +
+                "He stares up at you with wide, horrified eyes, his final expression of pure fear and pain forever frozen on his death-bloated face.\n\n" +
+                "It takes everything in your power to not fall to your knees and sob over the boy, " +
+                "but you know you have to keep moving. " +
+                "Reluctantly, you step over his body and continue on over dozens of other corpses who you don’t" +
+                " recognize as you make your way towards the door.\n\n" +
+                "It’s then that you hear the old man coming down the stairs.\n\n" +
+                "You glance at the door.\n\n" +
+                "You’re not sure if you could make it, but you sure could try.\n\n" +
                 "\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText("Run for the door");
-
-        game.position5 = "RunForTheDoor";
-    }
-
-    public void RunForTheDoor() {
-        ui.mainTextArea.setText("You decide that you’re willing to take your chances as you bolt for the door. You’ve still got nearly half the cellar to traverse, but you don’t care. You sprint over the bodies, which squish and crunch beneath your feet. The door is just a few feet away now, and you just need to-\\n\\n\n" +
-                "Suddenly, your body just...stops. Your limbs freeze, then draw themselves back until you’re standing there with your legs together. Then, your legs begin to move against your will, turning you around until you’re facing back towards where you came from.\\n\\n\n" +
-                "There stands the old man, a single hand extended with his fingers moving delicately as he puppeteers your body.\\n\\n\n" +
-                "You hear him begin to laugh as your legs move to carry you towards him.\\n\\n\n" +
-                "\n");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText("Hide among the bodies");
-
-        game.position5 = "HideAmongTheBodies"; // DEATH GAME OVER
-    }
-
-    public void HideAmongTheBodies() {
-        ui.mainTextArea.setText("You shake your head. You couldn’t make it that far in the time you’d need to. So, instead, despite every natural instinct screaming for you to do the opposite, you take a few more steps then lay down among the corpses. \\n\\n\n" +
-                "The smell is overwhelming, but it’s the texture that makes your hair raise. The bodies closer to the door where you are have clearly been here longer, and have begun to be much more...gelatinous than the ones near the front. \\n\\n\n" +
-                "You nearly puke as you lay your head down among the filth and close your eyes, praying that he won’t notice you.\\n\\n\n" +
-                "You listen as he steps down into the cellar onto the sticky puddle at the base of the stairs, and you hear him calling for you, “Come out, come out, my little pet.” he coos, “I know you’re down here.”\n" +
-                "You stay completely still as your heart pounds in your chest. \\n\\n\n" +
-                "“I can hear you breathing,” he calls.\n" +
-                "\n" +
-                "Suddenly, against your will, your limbs start...moving. You try to stop them but your arms begin to prop you up and your legs begin to stand until you’re fully on your feet, staring at the old man from across the room.\\n\\n\n" +
-                "“There you are,” he says with sickening sweetness, “I was beginning to think I’d lost you.”\\n\\n\n" +
-                "You regain control of your arms, but still your legs insist on moving forwards, and slowly you begin to walk towards the old man.\\n\\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice4.setText("Death (no matches and didn’t pet cat)"); //change transitions
-        ui.choice5.setText("Matches ending");
+        ui.choice4.setText("Hide among the bodies");
+        ui.choice5.setText("Run for the door");
 
-        game.position4 = "iFNoMatches";
-        game.position5= "iFMatches";
+        game.position4 = "HideAmongTheBodies";
+        game.position5 = "RunForTheDoor";
+    }
+
+    public void RunForTheDoor() {
+        ui.mainTextArea.setText("You decide that you’re willing to take your chances as you bolt for the door. " +
+                "You’ve still got nearly half the cellar to traverse, but you don’t care." +
+                " You sprint over the bodies, which squish and crunch beneath your feet. " +
+                "The door is just a few feet away now, and you just need to--\n\n" +
+                "Suddenly, your body just...stops. " +
+                "Your limbs freeze, then draw themselves back until you’re standing there with your legs together. " +
+                "Then, your legs begin to move against your will, turning you around until you’re facing back towards where you came from.\n\n" +
+                "There stands the old man, a single hand extended with his fingers moving delicately as he puppeteers your body.\n\n" +
+                "You hear him begin to laugh as your legs start to move and slowly carry you towards him.\n\n" +
+                "\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+        //TODO: make this a big if-statement for the possible endings
+        game.position5 = "HideAmongTheBodies";
+    }
+
+    public void HideAmongTheBodies() {
+        ui.mainTextArea.setText("You shake your head. " +
+                "You couldn't make it that far that quickly. " +
+                "So, instead, despite every natural instinct screaming for you to do the opposite," +
+                " you take a few more steps then lay down among the corpses. \n\n" +
+                "The smell is overwhelming, but it’s the texture that makes your hair raise. " +
+                "The bodies closer to the door where you are have clearly been here longer, " +
+                "and have begun to be much more...gelatinous than the ones near the front. \n\n" +
+                "You nearly puke as you lay your head down among the filth and close your eyes, praying that he won’t notice you.\n\n" +
+                "You listen as he steps down into the cellar onto the sticky puddle at the base of the stairs," +
+                " and you hear him calling for you, \"Come out, come out,\" he coos, \"I know you’re down here.\"\n\n" +
+                "You stay completely still as your heart pounds in your chest. \n\n" +
+                "\"I can hear you breathing,\" he calls.\n" +
+                "\n" +
+                "Suddenly, against your will, your limbs start...moving. " +
+                "You try to stop them but your arms begin to prop you up and your legs begin to stand until " +
+                "you’re fully on your feet, staring at the old man from across the room.\n\n" +
+                "\"There you are,\" he says with sickening sweetness, \"I was beginning to think I’d lost you.\"\n\n" +
+                "You regain control of your arms, but still your legs insist on moving forwards, and slowly you begin to walk towards the old man.\n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+        //TODO: make this a big if-statement for the possible endings
+        game.position5 = "RunForDoor";
     }
 
     public void iFNoMatches() {
@@ -3025,7 +3054,7 @@ public class Story {
         ui.choice4.setText("Fight against it (2)");
         ui.choice5.setText("Fight against it (3)");
 
-        game.position3 = "Fight1"; // DEATH GAME OVER
+        game.position3 = "Fight1";
         game.position4 = "Fight2";
         game.position5 = "Fight3";
     }
