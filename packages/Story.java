@@ -1,4 +1,5 @@
 package packages;
+import javax.swing.*;
 import java.io.File;
 
 public class Story {
@@ -28,6 +29,20 @@ public class Story {
         pet = false;
         ignore = false;
     }
+    ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
+    ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
+    ImageIcon Cellar1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
+    ImageIcon Cellar2= new ImageIcon(".//mansion Game//Bedroom(1).jpg");
+    ImageIcon Cellar3 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+    ImageIcon Cellar4 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+    ImageIcon Cellar5= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+    ImageIcon HallBeforeRoom8 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+    ImageIcon Hallway5a = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+    ImageIcon Hallway5b = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+    ImageIcon KitchenRoom11 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+    ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+    ImageIcon cannibalPlantRoom7 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");;
+
 
     // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
@@ -873,6 +888,7 @@ public class Story {
 
     /*********** FLOOR ONE *************/
     public void room1() {
+        ui.ImageLabel.setIcon(Bedroom1);
         ui.mainTextArea.setText("You sit there on the floor of your room, still processing what’s just happened." +
                 " There’s a sickening series of thumps and thuds as you assume the old man drags Mallory’s body down the stairs." +
                 " Part of you wants to sob, the other part wants to throw up, and a third prays that you’re dreaming. " +
