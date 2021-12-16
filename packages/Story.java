@@ -5,6 +5,7 @@ import java.io.File;
 public class Story {
     // Handle all the dialogues
     // Uses calling from the UI class, map class, Game class,
+
     Game game;
     UI ui;
     map m;
@@ -21,6 +22,9 @@ public class Story {
     boolean ignore;
 
     // Constructor instantiate
+
+
+
     public Story(Game g,UI userInterface, map mDisplay){
         game = g;
         ui = userInterface;
@@ -37,6 +41,44 @@ public class Story {
         letteropener = false;
         coat = false;
     }
+    /*********** SHOES *************/
+    public void setShoes(){ shoes = true; }
+    public boolean getShoes() { return shoes; }
+
+    /*********** CAT ***********/
+    public void setPetCat () { pet = true; }
+    public void setKickCat () { kick = true; }
+    public void setIgnoreCat () { ignore = true; }
+
+    public boolean getPetCat () { return pet; }
+    public boolean getKickCat () { return kick; }
+    public boolean getIgnoreCat () { return ignore; }
+
+    /*********** MATCHES ***********/
+    public void setMatches () { matches = true; }
+    public boolean getMatches () { return matches; }
+
+    /*********** COAT ***********/
+    public void setCoat () { coat = true; }
+    public boolean getCoat () { return coat; }
+
+    /*********** BOOK ***********/
+    public void setLittleBook () { littleBook = true; }
+    public boolean getBook () { return littleBook; }
+
+    /*********** PURPLE POTION ***********/
+    public void setPurpPotion () { purpPotion = true; }
+    public boolean getPurpPotion () { return purpPotion; }
+
+    /*********** LETTER OPENER ***********/
+    public void setVodka () { vodka = true; }
+    public boolean getVodka () { return vodka;}
+
+    /********* Drinks ***********/
+    public void setWater () { water = true; }
+    public boolean getWater () { return water; }
+
+
 
     ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
     ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Cat Fight(9).jpg");
