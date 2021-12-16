@@ -221,6 +221,9 @@ public class Story {
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
+        ui.choice4.setVisible(true);
+        ui.choice5.setVisible(true);
+
         ui.choice4.setText("Go inside");
         ui.choice5.setText("Leave");
 
@@ -230,10 +233,13 @@ public class Story {
 
     public void leaveMansion(){
         ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
+
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
         ui.choice5.setText(">");
 
         game.position5 = "GoInsideMansion";
@@ -905,7 +911,7 @@ public class Story {
         game.position2 = "searchFloor";
         game.position3 = "backSleep";
         game.position4 = "tryDoor";
-        game.position5 = "room1Map"; //TODO add map
+        game.position5 = "room1Map";
     }
     public void room1Map() {
         ui.ImageLabel.setIcon(Bedroom1);
@@ -1725,15 +1731,15 @@ public class Story {
                 "Do you take them?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
+        ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
-        ui.choice5.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Take matches");
-        ui.choice4.setText("Leave them there");
+        ui.choice4.setText("Take matches");
+        ui.choice5.setText("Leave them there");
 
-        game.position3 = "TakeMatches";
-        game.position4 = "LeaveThere";
+        game.position4 = "TakeMatches";
+        game.position5 = "LeaveThere";
     }
 
     public void TakeMatches() {
@@ -1849,6 +1855,7 @@ public class Story {
                 "he turns his head as if he’s just heard something and lumbers away, leaving you " +
                 "alone. Slowly, you walk over and close the door before turning to examine the room" +
                 " you’ve just entered.\\n\\n\n");
+
         ui.choice1.setText(">");
         ui.choice2.setText("");
         ui.choice3.setText("");
