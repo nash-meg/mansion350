@@ -74,6 +74,7 @@ public class Story {
             case "awkMoment": awkMoment(); break;
             case "startPlot": startPlot(); break;
             case "room1": room1(); break;
+            case "room1Map": room1Map(); break;
             case "backSleep": backSleep(); break;
             case "searchFloor": searchFloor(); break;
             case "tryDoor": tryDoor(); break;
@@ -889,7 +890,6 @@ public class Story {
 
     /*********** FLOOR ONE *************/
     public void room1() {
-        ui.ImageLabel.setIcon(Bedroom1);
         ui.mainTextArea.setText("You sit there on the floor of your room, still processing what’s just happened." +
                 " There’s a sickening series of thumps and thuds as you assume the old man drags Mallory’s body down the stairs." +
                 " Part of you wants to sob, the other part wants to throw up, and a third prays that you’re dreaming. " +
@@ -911,10 +911,14 @@ public class Story {
         game.position2 = "searchFloor";
         game.position3 = "backSleep";
         game.position4 = "tryDoor";
-        game.position5 = ""; //TODO add map
+        game.position5 = "room1Map"; //TODO add map
+    }
+    public void room1Map() {
+        ui.ImageLabel.setIcon(Bedroom1);
     }
     //Try the door (leave)
     public void tryDoor() {
+        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("You walk to the door and test the knob. " +
                 "You half expect it to somehow explode on contact or light your hand on fire as you go to grab it, but it simply turns harmlessly." +
                 " No pain, no terror, just a quiet ‘click’ as the door unlatches itself. When you release the handle, the door creaks gently open, " +
@@ -944,6 +948,7 @@ public class Story {
     }
 
     public void searchFloor() {
+        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("You glance down at the floor. A few items fell from your desk when you were " +
                 "flung into the room, but other than that, it’s rather clean, save for a stray shirt you have yet to fold." +
                 " Looking at it now, it feels almost foreign despite the fact that you’ve been living here for almost a week." +
@@ -962,6 +967,7 @@ public class Story {
     }
 
     public void backSleep() {
+        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("Perhaps it’s best if you go back to sleep, " +
                 "you decide. You go and lie down on the bed and pull the covers over you, " +
                 "but it no longer feels as soft as it did earlier. You feel every lump and spring of the mattress," +
