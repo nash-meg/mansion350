@@ -411,8 +411,8 @@ public class Story {
     }
 
     public void askMalloryCont(){
-        ui.mainTextArea.setText("You watch as Mallory finishes setting the table, and a man with white gloves walks out from " +
-                "the kitchen, seemingly to check that things are going smoothly. \n\n" +
+        ui.mainTextArea.setText("You watch as Mallory finishes setting the table, and a man with white gloves " +
+                "walks out from the kitchen, seemingly to check that things are going smoothly. \n\n" +
                 "He glances at you in surprise as if not expecting to see anyone other than Mallory in the " +
                 "dining room. His eyes flash for a moment with an emotion that is covered up too quickly to read, " +
                 "and instead he flashes you a smile, \"I'm sorry, I didn't realize we had company or I would " +
@@ -612,8 +612,8 @@ public class Story {
     }
 
     public void besideOldManCont(){
-        ui.mainTextArea.setText("\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't expect to feel " +
-                "over dinner, and instinct dictates that you respond as succinctly as possible. \n\n" +
+        ui.mainTextArea.setText("\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't " +
+                "expect to feel over dinner, and instinct dictates that you respond as succinctly as possible. \n\n" +
                 "The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
                 "suddenly dissipating.\n\n" +
                 "\"It's a wonderful place to be,\" the butler adds, \"and if you have any questions at all, feel " +
@@ -681,8 +681,8 @@ public class Story {
     }
 
     public void besideMalloryCont(){
-        ui.mainTextArea.setText("The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the heaviness " +
-                "dissipating.\n\n" +
+        ui.mainTextArea.setText("The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the " +
+                "heaviness dissipating.\n\n" +
                 "\"It’s a wonderful place to be,\" the butler adds, \"and if you have any questions at all, " +
                 "feel free to ask me.\"\n\n" +
                 "The old man nods approvingly, and dinner continues rather normally.\n\n" +
@@ -931,12 +931,14 @@ public class Story {
     /*********** FLOOR ONE *************/
     public void room1() {
         ui.mainTextArea.setText("You sit there on the floor of your room, still processing what’s just happened." +
-                " There’s a sickening series of thumps and thuds as you assume the old man drags Mallory’s body down the stairs." +
-                " Part of you wants to sob, the other part wants to throw up, and a third prays that you’re dreaming. " +
-                "But this is not a dream, and you don’t have the energy right now to do either of those things. Instead, you glance at the door. " +
-                "It doesn’t lock, but after what just happened, you wouldn’t be surprised if you were somehow locked in. Mallory might be dead." +
-                "And you might be next. After a moment you resolve that you have to get out of here. You’d rather be homeless than stuck with a murderer." +
-                "\n\nShakily, you get to your feet and glance around the room.\n\n" +
+                " There’s a sickening series of thumps and thuds as you assume the old man drags Mallory’s body " +
+                "down the stairs. Part of you wants to sob, the other part wants to throw up, and a third prays " +
+                "that you’re dreaming. But this is not a dream, and you don’t have the energy right now to do " +
+                "either of those things. Instead, you glance at the door. It doesn’t lock, but after what just " +
+                "happened, you wouldn’t be surprised if you were somehow locked in. Mallory might be dead. And " +
+                "you might be next. After a moment you resolve that you have to get out of here. You’d rather " +
+                "be homeless than stuck with a murderer.\n\n" +
+                "Shakily, you get to your feet and glance around the room.\n\n" +
                 "What do you want to do?");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
@@ -961,16 +963,17 @@ public class Story {
     //Try the door (leave)
     public void tryDoor() {
         ui.ImageLabel.setVisible(false);
-        ui.mainTextArea.setText("You walk to the door and test the knob. " +
-                "You half expect it to somehow explode on contact or light your hand on fire as you go to grab it, but it simply turns harmlessly." +
-                " No pain, no terror, just a quiet ‘click’ as the door unlatches itself. When you release the handle, the door creaks gently open, " +
-                "revealing the hallway ahead of you, now empty save for a trail of blood so thick that you almost can’t believe that that much could c" +
-                "ome from one person.\n\n" +
-                "With little other choice, you swallow your fear, stepping out into the dark hallway." +
-                "There is a closed door to your left that you know to be the old man’s chambers, and on the other side of the hall," +
-                " the trail of blood leads to Mallory’s bedroom. " +
-                "Between you and Mallory’s room is the staircase leading to the second floor, " +
-                "in the darkness looking more like a gaping void in the wall going downwards.\n\n" +
+        ui.mainTextArea.setText("You walk to the door and test the knob. You half expect it to somehow explode " +
+                "on contact or light your hand on fire as you go to grab it, but it simply turns harmlessly. No " +
+                "pain, no terror, just a quiet ‘click’ as the door unlatches itself. When you release the " +
+                "handle, the door creaks gently open, revealing the hallway ahead of you, now empty save " +
+                "for a trail of blood so thick that you almost can’t believe that that much could come from " +
+                "one person.\n\n" +
+                "With little other choice, you swallow your fear, stepping out into the dark hallway. There " +
+                "is a closed door to your left that you know to be the old man’s chambers, and on the other " +
+                "side of the hall, the trail of blood leads to Mallory’s bedroom. Between you and Mallory’s " +
+                "room is the staircase leading to the second floor, in the darkness looking more like a " +
+                "gaping void in the wall going downwards.\n\n" +
                 "Where do you go?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
@@ -992,9 +995,9 @@ public class Story {
     public void searchFloor() {
         ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("You glance down at the floor. A few items fell from your desk when you were " +
-                "flung into the room, but other than that, it’s rather clean, save for a stray shirt you have yet to fold." +
-                " Looking at it now, it feels almost foreign despite the fact that you’ve been living here for almost a week." +
-                " You shake your head, turning back to the door. \n\n");
+                "flung into the room, but other than that, it’s rather clean, save for a stray shirt you have " +
+                "yet to fold. Looking at it now, it feels almost foreign despite the fact that you’ve been " +
+                "living here for almost a week. You shake your head, turning back to the door. \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -1010,13 +1013,13 @@ public class Story {
 
     public void backSleep() {
         ui.ImageLabel.setVisible(false);
-        ui.mainTextArea.setText("Perhaps it’s best if you go back to sleep, " +
-                "you decide. You go and lie down on the bed and pull the covers over you, " +
-                "but it no longer feels as soft as it did earlier. You feel every lump and spring of the mattress," +
-                " and every time you close your eyes, all you see is Mallory’s bloody body, wheezing weakly with his head " +
-                "only held up by his hair intertwined in the old man’s crimson fingers. The old man’s bloodstained teeth as he grins" +
-                " and politely asks you to 'go back to bed.' You shake yourself and get to your feet. " +
-                "Maybe sleep isn’t the best idea.\n\n");
+        ui.mainTextArea.setText("Perhaps it’s best if you go back to sleep, you decide. You go and lie " +
+                "down on the bed and pull the covers over you, but it no longer feels as soft as it " +
+                "did earlier. You feel every lump and spring of the mattress, and every time you close " +
+                "your eyes, all you see is Mallory’s bloody body, wheezing weakly with his head only " +
+                "held up by his hair intertwined in the old man’s crimson fingers. The old man’s bloodstained " +
+                "teeth as he grins and politely asks you to \"go back to bed.\" You shake yourself and get " +
+                "to your feet. Maybe sleep isn’t the best idea.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
@@ -1034,12 +1037,16 @@ public class Story {
 
     //Downstairs
     public void downstairs() {
-        ui.mainTextArea.setText("You decide that it isn’t worth checking the other rooms, instead opting to go downstairs. \n\n" +
-                "As you stand looking down the descending corridor, you feel a shiver of fear run up your spine, and for a moment, you hesitate. You’re certain that the old man dragged Mallory down these stairs, " +
-                "and at this point, he could be anywhere in the mansion. If he finds you…\n\n" +
+        ui.mainTextArea.setText("You decide that it isn’t worth checking the other rooms, instead opting " +
+                "to go downstairs. \n\n" +
+                "As you stand looking down the descending corridor, you feel a shiver of fear run up your " +
+                "spine, and for a moment, you hesitate. You’re certain that the old man dragged Mallory " +
+                "down these stairs, and at this point, he could be anywhere in the mansion. If he finds you…\n\n" +
                 "No. You can’t think like that, you decide.\n\n" +
-                "You have to get out of here. This is the only way down to the door on the main floor, and you’re not about to jump out of a third story window to try and escape. \n\n" +
-                "Though the fear of being caught still weighs heavily on your mind, you steel yourself, stepping down into the darkness. \n\n");
+                "You have to get out of here. This is the only way down to the door on the main floor, " +
+                "and you’re not about to jump out of a third story window to try and escape. \n\n" +
+                "Though the fear of being caught still weighs heavily on your mind, you steel yourself, " +
+                "stepping down into the darkness. \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -1054,7 +1061,8 @@ public class Story {
     //The bedroom on your left (2)
     public void tryBedroomOnLeft() {
         ui.mainTextArea.setText("You try the door to your left, only to find that, predictably, it’s locked. " +
-                "He always locks his room anyway, and it would only follow that he would most definitely lock it when committing a murder. \n\n" +
+                "He always locks his room anyway, and it would only follow that he would most definitely " +
+                "lock it when committing a murder. \n\n" +
                 "You sigh, turning back to the hallway.\n\n" +
                 "Where do you go? \n\n");
         ui.choice1.setVisible(false);
@@ -1072,34 +1080,24 @@ public class Story {
         game.position3 = ""; //TODO add map
     }
 
-    //Downstairs
-    /*public void TryDoorAhead() {
-        ui.mainTextArea.setText("You realize this is Mallory's room door\n");
-
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText("Enter Mallory’s room");
-
-        game.position5 = "MalloryRoom";
-    }*/
-
     // Mallory's room
     public void MalloryRoom() {
-        ui.mainTextArea.setText("Cautiously, you walk through the hall down to Mallory’s room, " +
-                "trying to ignore the squish of the bloodsoaked carpet as wetness of it seeps into " +
-                "your socks. The door to his room is already open, and, out of a combination of concern and morbid curiosity, you enter. \n\n" +
-                "The room is strangely orderly for one in which someone was just killed. The only signs of a struggle, save for the obvious bloodstain" +
-                " in the middle of the carpet, seem to be around the bed, with the blankets and pillows clearly having been kicked around. Did the old " +
-                "man sneak up on him? Or perhaps Mallory simply hadn’t expected it when the old man had entered his room in the middle of the night. \n\n" +
-                "Suddenly you remember your last conversation with Mallory, and how it had felt like goodbye. He couldn’t have known that this was going " +
-                "to happen, right? How could one predict a murder like that?\n\n" +
-                "You shake your head. As horrible as it is, there are more pressing matters at hand. " +
-                "You can grieve for your friend once you’re out of here. \n\n" +
-                "His room is set up similarly to your own, with a bed to one wall and a desk to the other. At the foot of the bed sits a closet door.\n\n");
+        ui.mainTextArea.setText("Cautiously, you walk through the hall down to Mallory’s room, trying to " +
+                "ignore the squish of the bloodsoaked carpet as wetness of it seeps into your socks. The " +
+                "door to his room is already open, and, out of a combination of concern and morbid curiosity, " +
+                "you enter. \n\n" +
+                "The room is strangely orderly for one in which someone was just killed. The only signs of " +
+                "a struggle, save for the obvious bloodstain in the middle of the carpet, seem to be around " +
+                "the bed, with the blankets and pillows clearly having been kicked around. Did the old man " +
+                "sneak up on him? Or perhaps Mallory simply hadn’t expected it when the old man had entered " +
+                "his room in the middle of the night. \n\n" +
+                "Suddenly you remember your last conversation with Mallory, and how it had felt like goodbye. " +
+                "He couldn’t have known that this was going to happen, right? How could one predict a murder " +
+                "like that?\n\n" +
+                "You shake your head. As horrible as it is, there are more pressing matters at hand. You can " +
+                "grieve for your friend once you’re out of here. \n\n" +
+                "His room is set up similarly to your own, with a bed to one wall and a desk to the other. At " +
+                "the foot of the bed sits a closet door.\n\n");
         ui.choice1.setVisible(true);
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(true);
@@ -1121,19 +1119,22 @@ public class Story {
 
     //Search bed
     public void SearchBed() {
-        ui.mainTextArea.setText("You apprehensively approach the bed, " +
-                "a wave of grief washing over you as it sinks in that this is likely where Mallory’s fate was sealed. " +
-                "Blood is everywhere, and there’s a smattering of it up and across the wall as if his throat had been slit. \n\n" +
-                "You look down, taking a moment to center yourself as you feel the bile rising up in your throat. Nothing could have prepared you for the events of tonight. \n\n" +
-                "It’s then that something poking out from beneath the bedskirt catches your eye. Something solid and shiny. You crouch down to look under the bed. \n\n" +
-                "At first you’re not entirely sure what you’re looking at, but as your eyes adjust, you recoil a little at the sight.\n\n" +
+        ui.mainTextArea.setText("You apprehensively approach the bed, a wave of grief washing over you as it " +
+                "sinks in that this is likely where Mallory’s fate was sealed. Blood is everywhere, and there’s " +
+                "a smattering of it up and across the wall as if his throat had been slit. \n\n" +
+                "You look down, taking a moment to center yourself as you feel the bile rising up in your throat. " +
+                "Nothing could have prepared you for the events of tonight. \n\n" +
+                "It’s then that something poking out from beneath the bedskirt catches your eye. Something solid " +
+                "and shiny. You crouch down to look under the bed. \n\n" +
+                "At first you’re not entirely sure what you’re looking at, but as your eyes adjust, you " +
+                "recoil a little at the sight.\n\n" +
                 "They’re...chains. Shackles, bolted to the floor and long enough to reach up to the bed. \n\n" +
                 "Did-\n\n" +
                 "Did the old man chain Mallory up??\n\n" +
-                "You think back to one first days you were there. " +
-                "Mallory had made a mistake, and after that you hadn't seen him for an entire day - not even at dinner. " +
-                "The next time you’d seen him, you’d noticed the bruises on his wrists, but had assumed that they were from some accident while working. " +
-                "Not...this.\n\n" +
+                "You think back to one first days you were there. Mallory had made a mistake, and after that " +
+                "you hadn't seen him for an entire day - not even at dinner. The next time you’d seen him, " +
+                "you’d noticed the bruises on his wrists, but had assumed that they were from some accident " +
+                "while working. Not...this.\n\n" +
                 "You scramble to your feet, shaking yourself and looking around the rest of the room.\n\n" );
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1153,8 +1154,9 @@ public class Story {
     //Search closet
     public void SearchCloset() {
         if (shoes && !coat){
-            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
-                    "There are three shirts, two pairs of pants, and a yellow raincoat hanging there. ");
+            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly " +
+                    "bare, even for Mallory. There are three shirts, two pairs of pants, and a yellow raincoat " +
+                    "hanging there.");
             ui.choice1.setVisible(false);
             ui.choice2.setVisible(false);
             ui.choice3.setVisible(false);
@@ -1168,9 +1170,10 @@ public class Story {
             game.position5 = "LeaveCloset";
         }
         else if (coat && !shoes){
-            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
-                    "There are three shirts, two pairs of pants, and a single pair of shoes sitting on the floor. " +
-                    "It’s odd, considering that the old man insisted that all shoes be kept in the hall closet near the front door. \n\n");
+            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly " +
+                    "bare, even for Mallory. There are three shirts, two pairs of pants, and a single pair " +
+                    "of shoes sitting on the floor. It’s odd, considering that the old man insisted that all " +
+                    "shoes be kept in the hall closet near the front door. \n\n");
             ui.choice1.setVisible(false);
             ui.choice2.setVisible(false);
             ui.choice3.setVisible(false);
@@ -1184,9 +1187,10 @@ public class Story {
             game.position5 = "LeaveCloset";
         }
         else if (coat && shoes){
-            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
-                    "There are three shirts and two pairs of pants." +
-                    " You didn't realize exactly how bear it could look until you realize how empty it is now that you've taken the shoes and the coat.\n\n");
+            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly " +
+                    "bare, even for Mallory. There are three shirts and two pairs of pants. You didn't " +
+                    "realize exactly how bear it could look until you realize how empty it is now that " +
+                    "you've taken the shoes and the coat.\n\n");
             ui.choice1.setVisible(false);
             ui.choice2.setVisible(false);
             ui.choice3.setVisible(false);
@@ -1198,9 +1202,11 @@ public class Story {
             game.position5 = "LeaveCloset";//TODO: this button also doesn't work for some reason????
         }
         else{
-            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly bare, even for Mallory. " +
-                    "There are three shirts, two pairs of pants, and a yellow raincoat hanging there, with a single pair of shoes sitting on the floor. " +
-                    "It’s odd, considering that the old man insisted that all shoes be kept in the hall closet near the front door. \n\n");
+            ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly " +
+                    "bare, even for Mallory. There are three shirts, two pairs of pants, and a yellow " +
+                    "raincoat hanging there, with a single pair of shoes sitting on the floor. It’s odd, " +
+                    "considering that the old man insisted that all shoes be kept in the hall closet near " +
+                    "the front door.\n\n");
             ui.choice1.setVisible(false);
             ui.choice2.setVisible(false);
             ui.choice3.setVisible(true);
@@ -1219,8 +1225,9 @@ public class Story {
 
     //Put on shoes
     public void Shoes() {
-        ui.mainTextArea.setText("You glance down at your sock-covered feet. If you’re going to be running away tonight, you decide," +
-                " it’s probably best that you have some shoes. Luckily you and Mallory are nearly the same shoe-size, so they slip on easily. \n\n");
+        ui.mainTextArea.setText("You glance down at your sock-covered feet. If you’re going to be running " +
+                "away tonight, you decide, it’s probably best that you have some shoes. Luckily you and " +
+                "Mallory are nearly the same shoe-size, so they slip on easily. \n\n");
         shoes = true;
 
         ui.choice1.setVisible(false);
@@ -1273,10 +1280,10 @@ public class Story {
 */
     public void Coat() {
         coat = true;
-        ui.mainTextArea.setText("You reach for the coat, pulling it off the hanger." +
-                " It’s a cold autumn night, and considering how far this mansion is from any people, " +
-                "you’re sure that it’s going to be a long walk in the fridged air before you can find help, " +
-                "so you figure it’s best if you put it on. It’s a little tight in the shoulders, but on the whole it doesn’t fit too badly.\n\n");
+        ui.mainTextArea.setText("You reach for the coat, pulling it off the hanger. It’s a cold autumn night, " +
+                "and considering how far this mansion is from any people, you’re sure that it’s going to be " +
+                "a long walk in the fridged air before you can find help, so you figure it’s best if you " +
+                "put it on. It’s a little tight in the shoulders, but on the whole it doesn’t fit too badly.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -1349,10 +1356,11 @@ public class Story {
 
     //Search desk
     public void SearchDesk() {
-        ui.mainTextArea.setText("You walk to the desk and glance over its surface. It’s one of the only parts of the room that’s relatively blood-free, " +
-                "save for a drop or two scattered at one corner.There’s a pen holder and a lamp, and a few un-marked scraps of paper. In the center is a book:" +
-                " a copy of  Shakespeare’s Much Ado about Nothing. However, you’ve read Much Ado About Nothing, " +
-                "and this copy is much thicker than it should be.\n\n" +
+        ui.mainTextArea.setText("You walk to the desk and glance over its surface. It’s one of the only " +
+                "parts of the room that’s relatively blood-free, save for a drop or two scattered at one " +
+                "corner.There’s a pen holder and a lamp, and a few un-marked scraps of paper. In the " +
+                "center is a book: a copy of  Shakespeare’s Much Ado about Nothing. However, you’ve read " +
+                "Much Ado About Nothing, and this copy is much thicker than it should be.\n\n" +
                 "Beside it sits a polaroid picture with a date written on the bottom.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -1371,25 +1379,29 @@ public class Story {
 
     //Examine the book (room4)
     public void ExamineBook() {
-        ui.mainTextArea.setText("You pick up the book, glancing over the dust jacket before gently opening it." +
-                " You expect to see a title page for Much Ado About Nothing, but as you open to the first page, instead you find something completely different. \n\n" +
-                "\"Incantations and Unbinding: How to Undo What’s Been Done\" is scrawled across the page in a decorative font, and as you hold it, " +
-                "the dust jacket slips from the front cover, revealing the same title in gilded lettering on the cover of the book.\n\n" +
+        ui.mainTextArea.setText("You pick up the book, glancing over the dust jacket before gently opening it. You " +
+                "expect to see a title page for Much Ado About Nothing, but as you open to the first page, " +
+                "instead you find something completely different. \n\n" +
+                "\"Incantations and Unbinding: How to Undo What’s Been Done\" is scrawled across the page in a " +
+                "decorative font, and as you hold it, the dust jacket slips from the front cover, revealing the " +
+                "same title in gilded lettering on the cover of the book.\n\n" +
                 "Your curiosity piqued, you begin to flip through the pages. Some of them have corners folded over, " +
-                "or bits underlined as if to mark the things that Mallory must have thought to be important. All of them seem to pertain to reversing immortality." +
-                " Little notes written in the margins ask questions and make statements:\n\n" +
+                "or bits underlined as if to mark the things that Mallory must have thought to be important. " +
+                "All of them seem to pertain to reversing immortality. Little notes written in the margins ask " +
+                "questions and make statements:\n\n" +
                 " “Does he have to participate??”\n\n" +
                 "“Blood needed”\n\n" +
                 "“Bad idea - last resort”\n\n" +
                 "“House bound to him?????”\n\n" +
                 "And so on.\n\n" +
-                "The book seems to take itself rather seriously and is almost written in the style of a textbook in some places," +
-                " dealing with a different spell or ritual every few pages. On its own, you might have simply taken it as a piece of fan material" +
-                " for a series or tabletop game, but the fact that Mallory took it so seriously concerns you. Though you’ve only been here a few days, " +
-                "you know that he didn’t have time for hobbies or fandoms. \n\n" +
-                "Did the old man really harm him that much? " +
-                "Was he that far gone to have to start believing in spells and immortality to cope with his situation? " +
-                "He’d never struck you as someone losing his grip on reality, but you figure a lot can happen behind closed doors. \n\n" + //TODO: NEW PAGE
+                "The book seems to take itself rather seriously and is almost written in the style of a textbook " +
+                "in some places, dealing with a different spell or ritual every few pages. On its own, you might " +
+                "have simply taken it as a piece of fan material for a series or tabletop game, but the fact " +
+                "that Mallory took it so seriously concerns you. Though you’ve only been here a few days, you " +
+                "know that he didn’t have time for hobbies or fandoms. \n\n" +
+                "Did the old man really harm him that much? Was he that far gone to have to start believing in " +
+                "spells and immortality to cope with his situation? He’d never struck you as someone losing his " +
+                "grip on reality, but you figure a lot can happen behind closed doors. \n\n" + //TODO: NEW PAGE
                 "There seems to be a great deal in the book about removing one’s soul and tricking the body into thinking it’s still there, whatever that means. \n\n" +
                 "One passage underlined rather intensely in pen reads, " +
                 "“There is no way to reverse soullessness once it has been done. The soulless will live on as long as the individual can find sustenance in the mortal realm. " +
