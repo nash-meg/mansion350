@@ -132,6 +132,7 @@ public class Story {
             case "goRightToSleep":goRightToSleep(); break;
             case "noShakeHand": noShakeHand(); break;
             case "stairs": stairs(); break;
+            case "stairsCont": stairsCont();break;
             case "Murder": Murder(); break;
             case "backToBed": backToBed(); break;
             case "AttackOldMan": AttackOldMan(); break;
@@ -423,38 +424,50 @@ public class Story {
                 "Near the dining table, apologizing profusely with the broken glass at his feet stands a boy " +
                 "who couldn't be more than 19 or 20. An odd relief seems to momentarily wash over him when he " +
                 "sees you enter, though it's quickly replaced by his original apprehension as the old man " +
-                "approaches him.\n\n" +
-                "Neither one speaks, though, through eye-contact alone, it seems an entire conversation takes " +
-                "place in seconds. The boy's posture shifts fearfully as the old man's brow furrows, then " +
-                "after a quick, wide-eyed shake of the head from the boy, both relax as if the situation is " +
-                "resolved.\n\n" +
-                "The man with white gloves wordlessly stands when he has finished sweeping up the glass and " +
-                "goes back into the kitchen.\n\n" +
-                "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if " +
-                "ready to bolt in case any more plates decide to come crashing down.\n\n" +
-                "A smile returns to the old man's face as he introduces you to the boy, who is apparently " +
-                "named Mallory.\n\n \"He can be a bit clumsy sometimes, but he's a good worker,\" the old man " +
-                "says, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory. Even so, " +
-                "the boy seems to try to keep up a smile.\n\n" +
-                "\"I'll let you two get acquainted,\" says the old man, picking up the cat and heading into " +
-                "the kitchen, leaving the two of you alone.\n\n" +
-                "Mallory's gaze seems to linger on you a moment before going back to his task, and though " +
-                "on the surface he seems genuinely happy to meet you, there is also an almost mournful " +
-                "disposition underneath. He goes back to setting the table before you can dwell on it " +
-                "too long.\n\n");
+                "approaches him.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
-        ui.choice4.setVisible(true);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Ask how he likes working here");
-        ui.choice4.setText("Offer to help set the table");
-        ui.choice5.setText("Stand there awkwardly");
+        ui.choice5.setText(">");
 
-        game.position3 = "askMallory";
-        game.position4 = "offerToHelp";
-        game.position5 = "awkMoment";
+        game.position5 = "stairsCont";
+    }
+
+    public void stairsCont(){
+             ui.mainTextArea.setText("Neither one speaks, though, through eye-contact alone, it seems an entire conversation takes " +
+                    "place in seconds. The boy's posture shifts fearfully as the old man's brow furrows, then " +
+                    "after a quick, wide-eyed shake of the head from the boy, both relax as if the situation is " +
+                    "resolved.\n\n" +
+                    "The man with white gloves wordlessly stands when he has finished sweeping up the glass and " +
+                    "goes back into the kitchen.\n\n" +
+                    "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if " +
+                    "ready to bolt in case any more plates decide to come crashing down.\n\n" +
+                    "A smile returns to the old man's face as he introduces you to the boy, who is apparently " +
+                    "named Mallory.\n\n \"He can be a bit clumsy sometimes, but he's a good worker,\" the old man " +
+                    "says, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory. Even so, " +
+                    "the boy seems to try to keep up a smile.\n\n" +
+                    "\"I'll let you two get acquainted,\" says the old man, picking up the cat and heading into " +
+                    "the kitchen, leaving the two of you alone.\n\n" +
+                    "Mallory's gaze seems to linger on you a moment before going back to his task, and though " +
+                    "on the surface he seems genuinely happy to meet you, there is also an almost mournful " +
+                    "disposition underneath. He goes back to setting the table before you can dwell on it " +
+                    "too long.\n\n");
+            ui.choice1.setVisible(false);
+            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(true);
+            ui.choice4.setVisible(true);
+            ui.choice5.setVisible(true);
+
+            ui.choice3.setText("Ask how he likes working here");
+            ui.choice4.setText("Offer to help set the table");
+            ui.choice5.setText("Stand there awkwardly");
+
+            game.position3 = "askMallory";
+            game.position4 = "offerToHelp";
+            game.position5 = "awkMoment";
     }
 
     /*****************************************************************

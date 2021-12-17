@@ -1,6 +1,6 @@
 package packages;
 
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
 
 class StoryTest {
     map game;
@@ -14,7 +14,7 @@ class StoryTest {
      * is functioning correctly.
      *
      */
-    @Test
+    //@Test
     public void testGetters(){
         UI userInterface = null;
         map g = null;
