@@ -1121,9 +1121,9 @@ public class Story {
         ui.choice4.setText("Go downstairs");
         ui.choice5.setText("See map");
 
-        game.position1 = "MalloryRoom";
-        game.position2= "downstairs";
-        game.position3 = ""; //TODO add map
+        game.position3 = "MalloryRoom";
+        game.position4= "downstairs";
+        game.position5 = ""; //TODO add map
     }
 
     // Mallory's room

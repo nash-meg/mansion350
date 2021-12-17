@@ -11,7 +11,7 @@ class StoryTest {
      *
      */
     @Test
-    public void tesGetters(){
+    public void testGetters(){
 
     }
 
