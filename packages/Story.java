@@ -13,7 +13,7 @@ public class Story {
     boolean purpPotion;
     boolean vodka;
     boolean water;
-    boolean  matches;
+    boolean matches;
     boolean letteropener;
     boolean littleBook;
     boolean kick;
@@ -234,7 +234,8 @@ public class Story {
                 "Also, some sections of the story are longer than others, so you may need to press the \">\" " +
                 "button to continue reading.\n\n" +
                 "The one graphic you do get to reap the benefits of is a map. " +
-                "You can pull up this map during given opportunities by pressing the \"map\" button.\n\n" +
+                "The map will show on the right-hand side of your screen and update automatically based on" +
+                "your location.\n\n" +
                 "We hope you enjoy, good luck, and don't kick the cat.");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -250,13 +251,7 @@ public class Story {
     }
 
     public void ExitGame(){
-       // m.showTitleScreen();
-        ui.mainTextArea.setText("You may now close this window.");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(false);
+        m.showTitleScreen();
     }
 
     public void towardsMansion(){
@@ -1016,7 +1011,7 @@ public class Story {
         game.position2 = "searchFloor";
         game.position3 = "backSleep";
         game.position4 = "tryDoor";
-        game.position5 = "room1Map";
+        game.position5 = "room1Map"; //bedroom1
     }
     public void room1Map() {
         ui.ImageLabel.setIcon(Bedroom1);
@@ -1024,7 +1019,7 @@ public class Story {
 
     //Try the door (leave)
     public void tryDoor() {
-        ui.ImageLabel.setVisible(false);
+        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("You walk to the door and test the knob. You half expect it to somehow explode " +
                 "on contact or light your hand on fire as you go to grab it, but it simply turns harmlessly. No " +
                 "pain, no terror, just a quiet *click* as the door unlatches itself. When you release the " +
@@ -1051,30 +1046,32 @@ public class Story {
         game.position2 = "tryBedroomOnLeft";
         game.position3 = "MalloryRoom";
         game.position4 = "downstairs";
-        game.position5 = "room1Map";
+        game.position5 = "hall5Map";
     }
 
     public void searchFloor() {
-        ui.ImageLabel.setVisible(false);
+        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("You glance down at the floor. A few items fell from your desk when you were " +
                 "flung into the room, but other than that, it's rather clean, save for a stray shirt you have " +
                 "yet to fold. Looking at it now, it feels almost foreign despite the fact that you've been " +
                 "living here for almost a week. You shake your head, turning back to the door. \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
+        ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice4.setText("Try to go back to sleep");
-        ui.choice5.setText("Try the door");
+        ui.choice3.setText("Try to go back to sleep");
+        ui.choice4.setText("Try the door");
+        ui.choice5.setText("See map");
 
-        game.position4 = "backSleep";
-        game.position5 = "tryDoor"; //map?? Bedroom1
+        game.position3 = "backSleep";
+        game.position4 = "tryDoor";
+        game.position5 = "room1Map";// Bedroom1
     }
 
     public void backSleep() {
-        ui.ImageLabel.setVisible(false);
+        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("Perhaps it's best if you go back to sleep, you decide. You go and lie " +
                 "down on the bed and pull the covers over you, but it no longer feels as soft as it " +
                 "did earlier. You feel every lump and spring of the mattress, and every time you close " +
@@ -1099,7 +1096,7 @@ public class Story {
 
     //Downstairs
     public void downstairs() {
-        ui.ImageLabel.setVisible(false);
+        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("You decide that it isn't worth checking the other rooms, instead opting " +
                 "to go downstairs. \n\n" +
                 "As you stand looking down the descending corridor, you feel a shiver of fear run up your " +
@@ -1145,12 +1142,11 @@ public class Story {
 
     public void hall5aMap() {
         ui.ImageLabel.setIcon(Hallway5a);
-        ui.ImageLabel.setVisible(true);
     }
 
     // Mallory's room
     public void MalloryRoom() {
-        ui.ImageLabel.setVisible(false);
+        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("Cautiously, you walk through the hall down to Mallory's room, trying to " +
                 "ignore the squish of the bloodsoaked carpet as wetness of it seeps into your socks. The " +
                 "door to his room is already open, and, out of a combination of concern and morbid curiosity, " +
@@ -1188,12 +1184,11 @@ public class Story {
 
     public void malRoomMap() {
         ui.ImageLabel.setIcon(MalloryRoom4);
-        ui.ImageLabel.setVisible(true);
     }
 
     //Search bed
     public void SearchBed() {
-        ui.ImageLabel.setVisible(false);
+        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("You apprehensively approach the bed, a wave of grief washing over you as it " +
                 "sinks in that this is likely where Mallory's fate was sealed. Blood is everywhere, and there's " +
                 "a smattering of it up and across the wall as if his throat had been slit. \n\n" +
@@ -1228,7 +1223,7 @@ public class Story {
 
     //Search closet
     public void SearchCloset() {
-        ui.ImageLabel.setVisible(false);
+        ui.ImageLabel.setIcon(null);
         if (shoes && !coat){
             ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It's surprisingly " +
                     "bare, even for Mallory. There are three shirts, two pairs of pants, and a yellow raincoat " +
