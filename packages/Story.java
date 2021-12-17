@@ -147,6 +147,7 @@ public class Story {
      * ChoosePosition is receiving the
      * @param (position) This switch tree with keep track of the methods..............
      * eg' if the choosePosition was towardsMansion then it will call towardsMansion() method */
+
     public void choosePosition(String position){
         switch(position){
             // prologue
