@@ -2507,6 +2507,7 @@ public class Story {
     }
 
     public void LeaveRoom10() {
+        ui.ImageLabel.setIcon(HallBeforeBathroom8);
         ui.mainTextArea.setText("Finished with the potion table, you make your way over to the door on the far " +
                 "side of the room. You know it goes out to the hallway where you almost died, but you'd rather " +
                 "go that way and have some hope of getting out than stay in here for the old man to find you. " +
@@ -2609,6 +2610,7 @@ public class Story {
     }
 
     public void withNoShoes() {
+        ui.ImageLabel.setIcon(Kitchen11);
         ui.mainTextArea.setText("You slowly make your way down the stairs, cringing at every creak of the steps. " +
                 "Even so, your socks manage to muffle the noise of your footsteps, and if you pause for long " +
                 "enough between squeaks, you find you're able to make it sound almost like the natural creaking " +
@@ -3031,6 +3033,7 @@ public class Story {
 
     //TheCellar
     public void TheCellar() {
+        ui.ImageLabel.setIcon(Cellar1);
         ui.mainTextArea.setText("You're immediately hit with the pungent smell of rotting flesh as you make your way down into the cellar," +
                 " and deeper you go, the stronger it gets.  " +
                 "By the time you're finally at the base of the stairs, " +
@@ -3067,13 +3070,14 @@ public class Story {
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Hide among the bodies");
-        ui.choice5.setText("Run for the door"); //map?? Cellar (1)
+        ui.choice5.setText("Run for the door");
 
         game.position4 = "HideAmongTheBodies";
         game.position5 = "RunForTheDoor";
     }
 
     public void RunForTheDoor() {
+        ui.ImageLabel.setIcon(Cellar2);
         ui.mainTextArea.setText("You decide that you're willing to take your chances as you bolt for the door. " +
                 "You've still got nearly half the cellar to traverse, but you don't care." +
                 " You sprint over the bodies, which squish and crunch beneath your feet. " +
@@ -3105,6 +3109,7 @@ public class Story {
     }
 
     public void HideAmongTheBodies() {
+        ui.ImageLabel.setIcon(Cellar2);
         ui.mainTextArea.setText("You shake your head. " +
                 "You couldn't make it that far that quickly. " +
                 "So, instead, despite every natural instinct screaming for you to do the opposite," +
@@ -3142,6 +3147,7 @@ public class Story {
     }
 
     public void noMatchesOrPets() {
+        ui.ImageLabel.setIcon(Cellar3);
         ui.mainTextArea.setText("\"You know,\" the old man begins, \"In all my 300 years, I’ve never had one escape. Not one!\"\n\n" +
                 "Your legs continue to walk towards the old man, stepping on and over the corpses of " +
                 "the old man’s past victims. You watch helplessly as his extended fingers move" +
@@ -3158,6 +3164,7 @@ public class Story {
     }
 
     public void Fight1() {
+        ui.ImageLabel.setIcon(Cellar4);
         ui.mainTextArea.setText("You struggle to regain control of your limbs, " +
                 "but they continue to move despite your every attempt to make them stop.\n\n" +
                 "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\n\n" +
@@ -3177,6 +3184,7 @@ public class Story {
     }
 
     public void Fight2() {
+        ui.ImageLabel.setIcon(Cellar4);
         ui.mainTextArea.setText("You begin to grab and claw at your legs, hoping that your own " +
                 "physical force might be enough to make it stop, but still they continue.\n\n" +
                 "\"You know, I don’t usually remember the people I use to feed. " +
@@ -3195,6 +3203,7 @@ public class Story {
     }
 
     public void Fight3() {
+        ui.ImageLabel.setIcon(Cellar5);
         ui.mainTextArea.setText("You’re just a few feet away from him now, and as you struggle," +
                 " you begin to cry out both in frustration and in some vain attempt to beg for your life.\n\n" +
                 "The old man simply chuckles, continuing to pull you towards him, \"Do you know how I came to be like this?\"" +
@@ -3219,6 +3228,7 @@ public class Story {
 
     //Matches ending
     public void ifMatches() {
+        ui.ImageLabel.setIcon(Cellar3);
         ui.mainTextArea.setText("\"You know,\" the old man begins, " +
                 "\"In all my 300 years, I’ve never had one escape. Not one. Of all of them, though, you’ve gotten the closest.\"\n\n" +
                 "Your legs continue to walk towards the old man, stepping on and over the corpses of the old man’s past victims." +
@@ -3243,6 +3253,7 @@ public class Story {
 
     //Try to use the matches
     public void tryMatches() {
+        ui.ImageLabel.setIcon(Cellar4);
         ui.mainTextArea.setText("As you struggle to regain control of your limbs, you reach into your pocket and pull out the matchbox.\n\n" +
                 "There aren’t very many inside, but if you do this right, you’ll only need one.\n\n" +
                 "Fumbling, you take one out of the box and attempt to strike it. It breaks.\n\n" +
@@ -3265,6 +3276,7 @@ public class Story {
     }
 
     public void tryAgain() {
+        ui.ImageLabel.setIcon(Cellar4);
         ui.mainTextArea.setText("You struggle to pull a second match from the pack, praying that this one will light.\n\n" +
                 "Shakily, you strike it against the side of the box, and for a moment, " +
                 "a tiny flame ignites at the end of the match, but goes out as quickly as it started. \n\n" +
@@ -3290,6 +3302,7 @@ public class Story {
 
     //room 9 - chamber (butler fight scene)
     public void matchesOneMoreTime(){
+        ui.ImageLabel.setIcon(Cellar5);
         ui.mainTextArea.setText("You’re just a few feet away from him now, and as a last-ditch effort, " +
                 "you pull a final match from the box.\n\n" +
                 "As you do so, the old man simply chuckles, continuing to pull you towards him," +
@@ -3321,6 +3334,7 @@ public class Story {
     }
 
     public void matchesEnding() {
+        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("As you run, you hear a crashing behind you and look back only to Huxley Manor" +
                 "collapsing in on itself, dust rising high into the air as it implodes.\\n\\n " +
                 "Once you’re a safe distance away, you collapse onto the ground and simply watch as the place " +
@@ -3346,6 +3360,7 @@ public class Story {
     }
 
     public void giveIn1() {
+        ui.ImageLabel.setIcon(Cellar5);
         ui.mainTextArea.setText("You sigh, accepting your fate. Matches won’t fix the fact that you’re being controlled" +
                 " by a maniac. If anything, you figure they might even make things worse. " +
                 "So, you give in, allowing him to puppet your every move.\n\n" +
@@ -3385,6 +3400,7 @@ public class Story {
     }
 
     public void giveIn2() {
+        ui.ImageLabel.setIcon(Cellar5);
         ui.mainTextArea.setText("You sigh, accepting your fate. Matches won’t fix the fact that you’re being controlled" +
                 " by a maniac. If anything, you figure they might even make things worse. " +
                 "So, you give in, allowing him to puppet your every move.\n\n" +
@@ -3420,6 +3436,7 @@ public class Story {
     }
 
     public void giveIn3() {
+        ui.ImageLabel.setIcon(Cellar5);
         ui.mainTextArea.setText("You sigh, accepting your fate. Matches won’t fix the fact that you’re being controlled" +
                 " by a maniac. If anything, you figure they might even make things worse. " +
                 "So, you give in, allowing him to puppet your every move.\n\n" +
@@ -3453,6 +3470,7 @@ public class Story {
     }
 
     public void petCatEnding1() {
+        ui.ImageLabel.setIcon(Cellar3);
         ui.mainTextArea.setText("\"You know,\" the old man begins," +
                 "\"In all my 300 years, I’ve never had one escape. " +
                 "Not one. Of all of them, though, you’ve gotten the closest.\"\n\n" +
@@ -3477,6 +3495,7 @@ public class Story {
     }
 
     public void petCatEnding2() {
+        ui.ImageLabel.setIcon(Cellar4);
         ui.mainTextArea.setText("As you struggle to regain control of your limbs, you watch as the butler slowly descends the stairs, " +
                 "his eyes locked on the old man like a hunter eyeing its prey.\n\n" +
                 "\"To think, someone as insignificant you might have actually broken my streak,\"" +
@@ -3502,6 +3521,7 @@ public class Story {
     }
 
     public void petCatEnding3() {
+        ui.ImageLabel.setIcon(Cellar5);
         ui.mainTextArea.setText("\"Do you know how I came to be like this?\" he asks, reaching up his free hand to " +
                 "caress your face, " +
                 "\"I killed my best friend, and drank his blood on the floor of a church. I still have his portrait " +
