@@ -2915,7 +2915,7 @@ public class Story {
         if (littleBook){
             ui.choice3.setVisible(true);
         }
-        else if (!littleBook){
+        else {
             ui.choice3.setVisible(false);
         }
 
