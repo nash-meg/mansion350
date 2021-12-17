@@ -689,7 +689,7 @@ public class Story {
         game.position4 = "sitNxtToOldman";
         game.position5 = "sitNxtMallory";
     }
-    // Allows you to sit next to old man shake hand
+    // Allows you to sit next to old man
     public void sitNxtToOldman(){
         ui.mainTextArea.setText("The butler stays off to the side as you take up a seat next to the old man, " +
                 "who flashes you a toothy grin as you sit down beside him. If you didn't know any better, you " +
@@ -728,6 +728,7 @@ public class Story {
         game.position5 = "oldManCont";
     }
 
+    //Take you inside The Old's Man bedroom
     public void besideOldManCont(){
         ui.mainTextArea.setText("\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't " +
                 "expect to feel over dinner, and instinct dictates that you respond as succinctly as possible. \n\n" +
@@ -758,7 +759,7 @@ public class Story {
 
         game.position5 = "goToSleep";
     }
-
+    // Allows you to sit next to Mallory
     public void sitNxtMallory(){
         ui.mainTextArea.setText("Mallory pulls out the chair beside him, flashing you a small smile as you move " +
                 "to sit next to him. You see the butler smile as well as you sit down and Mallory passes you " +
@@ -796,7 +797,7 @@ public class Story {
 
         game.position5 = "malloryCont";
     }
-
+    // Allows you to sit next to Mallory
     public void besideMalloryCont(){
         ui.mainTextArea.setText("The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the " +
                 "heaviness dissipating.\n\n" +
@@ -824,7 +825,7 @@ public class Story {
 
         game.position5 = "goToSleep";
     }
-
+    // Go to sleep
     public void goToSleep(){
         ui.mainTextArea.setText("Over the next few days, you begin to get your bearings at Huxley Manor, " +
                 "and you manage to fall into a bit of a routine. The work isn't too hard, and Mallory and the " +
@@ -852,7 +853,7 @@ public class Story {
         game.position4 = "WillMissYouToo";
         game.position5 = "StaySilent";
     }
-
+    // Display miss you
     public void WillMissYouToo(){
         ui.mainTextArea.setText("You nod, taking hold of his hand, \"I'll miss you too.\" \n\n" +
                 "It's a short response, but you mean every word of it. \n\n" +
@@ -876,7 +877,7 @@ public class Story {
         game.position4 = "goRightToSleep";
         game.position5 = "readBook";
     }
-
+    // Display Stay Silent message
     public void StaySilent(){
         ui.mainTextArea.setText("He waits a moment, seemingly expecting you to say something, but when " +
                 "you don't respond, he nods and seems to give you an understanding smile. \n\n" +
@@ -900,7 +901,7 @@ public class Story {
         game.position4 = "goRightToSleep";
         game.position5 = "readBook";
     }
-
+    // Go right to sleep
     public void goRightToSleep() {
         ui.mainTextArea.setText("You curl up in bed and put the issue out of your mind. Mallory is fine. He's " +
                 "been fine since the day you got there, and you tell yourself there's nothing to worry about. " +
@@ -916,7 +917,7 @@ public class Story {
 
         game.position5 = "Murder";
     }
-
+    //Read book
     public void readBook() {
         ui.mainTextArea.setText("You sigh, picking up a match --the last one in the pack-- and lighting a " +
                 "candle on your bedside table. You shimmy under the covers and grab the book you started " +
@@ -939,7 +940,7 @@ public class Story {
 
         game.position5 = "Murder";
     }
-
+    //Displays murder scence in the story
     public void Murder() {
         ui.mainTextArea.setText("A hysterically panicked scream from across the hall lurches you awake, and " +
                 "before you know it, you're sitting straight up in bed, trying to listen for any other noises. " +
@@ -982,7 +983,7 @@ public class Story {
         game.position4 = "AttackOldMan";
         game.position5 = "standStill";
     }
-
+    // Go bad to bed
     public void backToBed() {
         ui.mainTextArea.setText("You stand there a moment, looking from the old man, to Mallory, then back again.\n\n" +
                 "Eventually, you nod reluctantly and turn to go back into your room.\n\n" +
@@ -1003,7 +1004,7 @@ public class Story {
 
         game.position5 = "room1";
     }
-
+    // Choice to attack Old man
     public void AttackOldMan() {
         ui.mainTextArea.setText("You stare at the old man in disbelief, rage and disgust bubbling up through your " +
                 "veins as you process what he's just said. He may well have just murdered someone and he wants " +
@@ -1026,7 +1027,7 @@ public class Story {
 
         game.position5 = "room1";
     }
-
+    //Choice to stand still and do nothing
     public void standStill() {
         ui.mainTextArea.setText("You simply stand there, frozen in shock as you try and process the scene " +
                 "before you. This is the old man who asked you to help him up the stairs earlier this week. " +
@@ -1112,7 +1113,7 @@ public class Story {
         game.position4 = "downstairs";
         game.position5 = "room1Map";
     }
-
+    //Search floor
     public void searchFloor() {
         ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("You glance down at the floor. A few items fell from your desk when you were " +
@@ -1131,7 +1132,7 @@ public class Story {
         game.position4 = "backSleep";
         game.position5 = "tryDoor"; //map?? Bedroom1
     }
-
+    //Go back to sleep
     public void backSleep() {
         ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("Perhaps it’s best if you go back to sleep, you decide. You go and lie " +
@@ -1201,7 +1202,7 @@ public class Story {
         game.position4= "downstairs";
         game.position5 = "hall5aMap";
     }
-
+    //Display hall5aMap
     public void hall5aMap() {
         ui.ImageLabel.setIcon(Hallway5a);
         ui.ImageLabel.setVisible(true);
@@ -1244,7 +1245,7 @@ public class Story {
         game.position4 = "LeaveRoom";
         game.position5 = "malRoomMap";
     }
-
+    //Displayed Mallory's room map
     public void malRoomMap() {
         ui.ImageLabel.setIcon(MalloryRoom4);
         ui.ImageLabel.setVisible(true);
@@ -1288,6 +1289,7 @@ public class Story {
     //Search closet
     public void SearchCloset() {
         ui.ImageLabel.setVisible(false);
+        //shoes and not coat
         if (shoes && !coat){
             ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly " +
                     "bare, even for Mallory. There are three shirts, two pairs of pants, and a yellow raincoat " +
@@ -1304,6 +1306,7 @@ public class Story {
             game.position4 = "Coat";
             game.position5 = "LeaveCloset";
         }
+        // coat and not shoes
         else if (coat && !shoes){
             ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly " +
                     "bare, even for Mallory. There are three shirts, two pairs of pants, and a single pair " +
@@ -1321,6 +1324,7 @@ public class Story {
             game.position4 = "Shoes";
             game.position5 = "LeaveCloset";
         }
+        //shoes and not coat
         else if (coat && shoes){
             ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It’s surprisingly " +
                     "bare, even for Mallory. There are three shirts and two pairs of pants. You didn't " +
@@ -1382,7 +1386,7 @@ public class Story {
         game.position4 = "Coat";
         game.position5 = "LeaveCloset";
     }
-
+    //coat option
      public void Coat() {
         coat = true;
         ui.mainTextArea.setText("You reach for the coat, pulling it off the hanger. It’s a cold autumn night, " +
@@ -1486,7 +1490,7 @@ public class Story {
 
         game.position5 = "ExamineBookCont";
     }
-
+    //Count for Examine the book (room4)
     public void ExamineBookCont() {
         ui.mainTextArea.setText("There seems to be a great deal in the book about removing one’s soul and " +
                 "tricking the body into thinking it’s still there, whatever that means. \n\n" +
