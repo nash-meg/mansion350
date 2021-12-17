@@ -156,6 +156,12 @@ public class Story {
             case "GrabABook": GrabABook(); break;
             case "ClimbBookshelf": ClimbBookshelf();break;
             case "UseLetterOpener":UseLetterOpener(); break;
+            case "noMatchesOrPets": noMatchesOrPets();break;
+            case "Fight1": Fight1();break;
+            case "Fight2": Fight2();break;
+            case "Fight3": Fight3();break;
+            case "matches": ifMatches();break;
+            case "petCat1": petCatEnding1();break;
         }
     }
 
@@ -3042,7 +3048,16 @@ public class Story {
 
         ui.choice5.setText(">");
         //TODO: make this a big if-statement for the possible endings
-        game.position5 = "HideAmongTheBodies";
+        if(!matches && !pet){
+            game.position5 = "noMatchesOrPets";//death
+        }
+        else if (matches){
+            game.position5 = "matches";
+        }
+        else if (pet){
+            game.position5 = "petCat1";
+        }
+
     }
 
     public void HideAmongTheBodies() {
@@ -3057,8 +3072,7 @@ public class Story {
                 "You listen as he steps down into the cellar onto the sticky puddle at the base of the stairs," +
                 " and you hear him calling for you, \"Come out, come out,\" he coos, \"I know you’re down here.\"\n\n" +
                 "You stay completely still as your heart pounds in your chest. \n\n" +
-                "\"I can hear you breathing,\" he calls.\n" +
-                "\n" +
+                "\"I can hear you breathing,\" he calls.\n\n" +
                 "Suddenly, against your will, your limbs start...moving. " +
                 "You try to stop them but your arms begin to prop you up and your legs begin to stand until " +
                 "you’re fully on your feet, staring at the old man from across the room.\n\n" +
@@ -3067,39 +3081,45 @@ public class Story {
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
-        ui.choice4.setVisible(true);
+        ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
         ui.choice5.setText(">");
         //TODO: make this a big if-statement for the possible endings
-        game.position5 = "RunForDoor";
+        if(!matches && !pet){
+            game.position5 = "noMatchesOrPets";//death
+        }
+        else if (matches){
+            game.position5 = "matches";
+        }
+        else if (pet){
+            game.position5 = "petCat1";
+        }
     }
 
-    public void iFNoMatches() {
-        ui.mainTextArea.setText("“You know,” the old man begins, “In all my 300 years, I’ve never had one escape. Not one!”\\n\\n\n" +
+    public void noMatchesOrPets() {
+        ui.mainTextArea.setText("\"You know,\" the old man begins, \"In all my 300 years, I’ve never had one escape. Not one!\"\n\n" +
                 "Your legs continue to walk towards the old man, stepping on and over the corpses of " +
                 "the old man’s past victims. You watch helplessly as his extended fingers move" +
-                " rhythmically with every step you take, pulling you ever closer.\\n\\n\n");
+                " rhythmically with every step you take, pulling you ever-closer.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Fight against it (1)");
-        ui.choice4.setText("Fight against it (2)");
-        ui.choice5.setText("Fight against it (3)");
+        ui.choice5.setText("Try to fight against it");
 
-        game.position3 = "Fight1";
-        game.position4 = "Fight2";
-        game.position5 = "Fight3";
+        game.position5 = "Fight1";
     }
 
     public void Fight1() {
-        ui.mainTextArea.setText("You struggle to regain control of your limbs, but they continue to move despite your every attempt to make them stop.\\n\\n\n" +
-                "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\\n\\n\n" +
-                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\\n\\n\n" +
-                "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time.”\\n\\n\n" +
+        ui.mainTextArea.setText("You struggle to regain control of your limbs, " +
+                "but they continue to move despite your every attempt to make them stop.\n\n" +
+                "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\n\n" +
+                "As he does, he begins to move his fingers less methodically, " +
+                "jerking your legs painfully as you continue to walk.\n\n" +
+                "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time.”\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3107,15 +3127,17 @@ public class Story {
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText(">");
+        ui.choice5.setText("Keep trying to fight");
 
-        game.position1 = "theMansion"; // DEATH GAME OVER
+        game.position1 = "Fight2";
     }
 
     public void Fight2() {
-        ui.mainTextArea.setText("You begin to grab and claw at your legs, hoping that your own physical force might be enough to make it stop, but still they continue.\\n\\n\n" +
-                "“You know, I don’t usually remember the people I use to feed. Not very well, anyway. But you,” he grins, “I don’t see myself forgetting you for the next century at least.”\\n\\n\n" +
-                "You’re getting closer to the old man, and no matter what you do, you can’t seem to break the spell.\\n\\n\n" +
+        ui.mainTextArea.setText("You begin to grab and claw at your legs, hoping that your own " +
+                "physical force might be enough to make it stop, but still they continue.\n\n" +
+                "\"You know, I don’t usually remember the people I use to feed. " +
+                "Not very well, anyway. But you,\" he grins, \"I don’t see myself forgetting you for the next century at least.\"\n\n" +
+                "You’re getting closer to the old man, and no matter what you do, you can’t seem to break the spell.\n\n" +
                 " \n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3123,17 +3145,23 @@ public class Story {
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText(">");
+        ui.choice5.setText("Keep fighting");
 
-        game.position5 = "theMansion"; // DEATH GAME OVER
+        game.position5 = "Fight3"; // DEATH GAME OVER
     }
 
     public void Fight3() {
-        ui.mainTextArea.setText("You’re just a few feet away from him now, and as you struggle, you begin to cry out both in frustration and in some vain attempt to beg for your life.\\n\\n\n" +
-                "The old man simply chuckles, continuing to pull you towards him, “Do you know how I came to be like this?” he asks, reaching up his free hand to caress your face, “I killed my best friend, and drank his blood on the floor of a church; I still have his portrait hanging in my house,” he grins, holding your chin so you have no choice but to look into his eyes, “Your pleas mean nothing to me.”\\n\\n\n" +
-                "With that, he withdraws his hand from your face and reaches into his robe. Before you can even process what he’s grabbed, he slices something over your throat and blood begins spewing outward. You simply stare at him in horror before you fall to your knees, then everything goes black. \\n\\n\\n\n" +
+        ui.mainTextArea.setText("You’re just a few feet away from him now, and as you struggle," +
+                " you begin to cry out both in frustration and in some vain attempt to beg for your life.\n\n" +
+                "The old man simply chuckles, continuing to pull you towards him, \"Do you know how I came to be like this?\"" +
+                " he asks, reaching up his free hand to caress your face, " +
+                "\"I killed my best friend, and drank his blood on the floor of a church; I still have his portrait hanging in my house,\"" +
+                " he grins, holding your chin so you have no choice but to look into his eyes, \"Your pleas mean nothing to me.\"\n\n" +
+                "With that, he withdraws his hand from your face and reaches into his robe." +
+                " Before you can even process what he’s grabbed, he slices something over your throat and blood begins spewing outward. " +
+                "You simply stare at him in horror before you fall to your knees, then everything goes black. \n\n\n" +
                 "Arrrggg you almost made it! So close! This game IS beatable, so since you made it this far you might as well restart and try again! " +
-                "Perhaps if you make some different choices, things will turn out better?\\n\\n\n");
+                "Perhaps if you make some different choices, things will turn out better?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -3146,7 +3174,7 @@ public class Story {
     }
 
     //Matches ending
-    public void iFMatches() {
+    public void ifMatches() {
         ui.mainTextArea.setText("“You know,” the old man begins, “In all my 300 years, I’ve never had one escape. Not one. Of all of them, though, you’ve gotten the closest.”\\n\\n\n" +
                 "Your legs continue to walk towards the old man, stepping on and over the corpses of the old man’s past victims. You watch helplessly as his extended fingers move rhythmically with every step you take, pulling you ever closer.\\n\\n\n" +
                 "As you struggle, your hand brushes your pocket and you feel a small box.\\n\\n\n" +
@@ -3167,8 +3195,8 @@ public class Story {
     //Try to use the matches
     public void tryMatches() {
         ui.mainTextArea.setText("As you struggle to regain control of your limbs, you reach into your pocket and pull out the matchbox.\\n\\n\n" +
-                "There aren’t very many in there, but if you do this right, you’ll only need one.\\n\\n\n" +
-                "Fumbling, you take one out of the box and attempt to strike it, but it breaks.\\n\\n\n" +
+                "There aren’t very many inside, but if you do this right, you’ll only need one.\\n\\n\n" +
+                "Fumbling, you take one out of the box and attempt to strike it. It breaks.\\n\\n\n" +
                 "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\\n\\n\n" +
                 "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\\n\\n\n" +
                 "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,” he continues to chuckle, “I’d almost forgotten the thrill of the hunt.”\\n\\n\n" +
@@ -3185,6 +3213,24 @@ public class Story {
         game.position4 = "litMatches"; // DEATH GAME OVER
         game.position5 = ""; //???
     }
+
+    //pet cat ending
+    public void petCatEnding1(){
+
+    }
+
+    public void petCatEnding2(){
+
+    }
+
+    public void petCatEnding3(){
+
+    }
+
+    public void petCatEnding4(){
+
+    }
+
 
     //Run through hall
     public void RunThruHall() {
