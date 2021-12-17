@@ -196,11 +196,12 @@ public class Story {
             case "Fight3": Fight3();break;
             case "matches": ifMatches();break;
             case "tryMatches": tryMatches(); break;
+            case "tryAgain": tryAgain();break;
             case "oneMoreTime": matchesOneMoreTime();break;
             case "matchesEnding": matchesEnding();break;
             case "giveIn1": giveIn1();break;
             case "giveIn2": giveIn2();break;
-            case "giveIn3": giveIn3;break;
+            case "giveIn3": giveIn3();break;
             case "petCat1": petCatEnding1();break;
 
         }
@@ -3272,7 +3273,7 @@ public class Story {
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
+        ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Try to use the matches");
@@ -3301,8 +3302,8 @@ public class Story {
         ui.choice5.setText("Give in");
         ui.choice4.setText("Try again");
 
-        game.position4 = "tryAgain"; // DEATH GAME OVER
-        game.position5 = "giveIn2"; //???
+        game.position4 = "tryAgain";
+        game.position5 = "giveIn2";
     }
 
     //pet cat ending
@@ -3344,7 +3345,7 @@ public class Story {
         ui.choice4.setText("Try one more time");
         ui.choice5.setText("Give in");
 
-        game.position5 = "oneMoreTime";
+        game.position4 = "oneMoreTime";
         game.position5 = "giveIn3";
     }
 
@@ -3392,22 +3393,46 @@ public class Story {
                 " two endings that aren't deaths? It must feel pretty good. Just so you know, your character went on to" +
                 " find their way off the streets and live a relatively happy life when all was said and done, but they " +
                 "never truly forgot (or got over) that week they spent at Huxley Manor. \n\n\n");
-        ui.choice1.setText("Congrats!!!!!");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice5.setText("Congrats!!!!!");
+
+
+        game.position5 = "theMansion";
+
     }
 
-    //room 8 - hallway/stairway (no method for bathroom, just display)
-    public void room8() {
-        ui.mainTextArea.setText("Bye!");
+    public void giveIn1() {
+        ui.mainTextArea.setText("You sigh, accepting your fate. Matches won’t fix the fact that you’re being controlled" +
+                " by a maniac. If anything, you figure they might even make things worse. " +
+                "So, you give in, allowing him to puppet your every move.\n\n" +
+                "\"To think, someone as insignificant you might have actually broken my streak,\" he laughs.\n\n" +
+                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you" +
+                " continue to walk.\n\n" +
+                "\"I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time.\"\n\n" +
+                "He continues, “You know, I don’t usually remember the people I use to feed. Not very well, anyway." +
+                " But you,\" he says, grinning, \"I don’t see myself forgetting you for the next century!\"\n\n" +
+                "You’re just a few feet away from him now, and though you’ve resigned yourself to death, you still" +
+                " begin to feel the terror rising up within you. A few tears escape your eyes as you fully realize " +
+                "that these are your final moments.\n\n" +
+                "The old man simply chuckles, continuing to pull you towards him, " +
+                "\"Do you know how I came to be like this?\" he asks, reaching up his free hand to caress your face, " +
+                "\"I killed my best friend, and drank his blood on the floor of a church; I still have his portrait " +
+                "hanging in my house.\" he grins, holding your chin so you have no choice but to look into his eyes, " +
+                "\"Your tears mean nothing to me.\"\n\n" +
+                "With that, he withdraws his hand from your face and reaches into his robe. " +
+                "Before you can even process what he’s grabbing, he slices something over your throat and blood begins" +
+                " spewing outward. You simply stare at his blood-spattered grin in horror as you fall to your knees," +
+                " then everything goes black. \n\n\n" +
+                "\n" +
+                "Arrrggg you almost made it! So close! " +
+                "This game IS beatable, though, and you were right there knocking on the door of victory, " +
+                "so since you made it this far you might as well restart and try again! " +
+                "Perhaps if you were a little more persistent, things may have turned out better?\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3420,38 +3445,72 @@ public class Story {
         game.position5 = "theMansion";
     }
 
-    /*********** FLOOR THREE *************/
-    //room 11 - kitchen
-    public void room11() {
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+    public void giveIn2() {
+        ui.mainTextArea.setText("You sigh, accepting your fate. Matches won’t fix the fact that you’re being controlled" +
+                " by a maniac. If anything, you figure they might even make things worse. " +
+                "So, you give in, allowing him to puppet your every move.\n\n" +
+                "He continues, “You know, I don’t usually remember the people I use to feed. Not very well, anyway." +
+                " But you,\" he says, grinning, \"I don’t see myself forgetting you for the next century!\"\n\n" +
+                "You’re just a few feet away from him now, and though you’ve resigned yourself to death, you still" +
+                " begin to feel the terror rising up within you. A few tears escape your eyes as you fully realize " +
+                "that these are your final moments.\n\n" +
+                "The old man simply chuckles, continuing to pull you towards him, " +
+                "\"Do you know how I came to be like this?\" he asks, reaching up his free hand to caress your face, " +
+                "\"I killed my best friend, and drank his blood on the floor of a church; I still have his portrait " +
+                "hanging in my house.\" he grins, holding your chin so you have no choice but to look into his eyes, " +
+                "\"Your tears mean nothing to me.\"\n\n" +
+                "With that, he withdraws his hand from your face and reaches into his robe. " +
+                "Before you can even process what he’s grabbing, he slices something over your throat and blood begins" +
+                " spewing outward. You simply stare at his blood-spattered grin in horror as you fall to your knees," +
+                " then everything goes black. \n\n\n" +
+                "\n" +
+                "Arrrggg you almost made it! So close! " +
+                "This game IS beatable, though, and you were right there knocking on the door of victory, " +
+                "so since you made it this far you might as well restart and try again! " +
+                "Perhaps if you were a little more persistent, things may have turned out better?\n\n");
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion";
     }
-    
 
-    //hide from old man - crosses rooms, lots of booleans for if potion or spell book
-    public void hideFromMan() {
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+    public void giveIn3() {
+        ui.mainTextArea.setText("You sigh, accepting your fate. Matches won’t fix the fact that you’re being controlled" +
+                " by a maniac. If anything, you figure they might even make things worse. " +
+                "So, you give in, allowing him to puppet your every move.\n\n" +
+                "You’re just a few feet away from him now, and though you’ve resigned yourself to death, you still" +
+                " begin to feel the terror rising up within you. A few tears escape your eyes as you fully realize " +
+                "that these are your final moments.\n\n" +
+                "The old man simply chuckles, continuing to pull you towards him, " +
+                "\"Do you know how I came to be like this?\" he asks, reaching up his free hand to caress your face, " +
+                "\"I killed my best friend, and drank his blood on the floor of a church; I still have his portrait " +
+                "hanging in my house.\" he grins, holding your chin so you have no choice but to look into his eyes, " +
+                "\"Your tears mean nothing to me.\"\n\n" +
+                "With that, he withdraws his hand from your face and reaches into his robe. " +
+                "Before you can even process what he’s grabbing, he slices something over your throat and blood begins" +
+                " spewing outward. You simply stare at his blood-spattered grin in horror as you fall to your knees," +
+                " then everything goes black. \n\n\n" +
+                "\n" +
+                "Arrrggg you almost made it! So close! " +
+                "This game IS beatable, though, and you were right there knocking on the door of victory, " +
+                "so since you made it this far you might as well restart and try again! " +
+                "Perhaps if you were a little more persistent, things may have turned out better?\n\n");
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion";
     }
 
     /*********** CELLAR *************/
