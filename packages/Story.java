@@ -27,7 +27,12 @@ public class Story {
     boolean pet;
     boolean ignore;
 
-    /** Constructor instantiation, start everything at false */
+    /*****************************************************************
+     Constructor instantiation, start everything at false
+     @param g creates a game
+     @param userInterface creates the user interface
+     @param mDisplay creates the map display
+     *****************************************************************/
     public Story(Game g,UI userInterface, map mDisplay){
         game = g;
         ui = userInterface;
@@ -44,7 +49,6 @@ public class Story {
         letteropener = false;
         coat = false;
     }
-
 
     /** Setters and getters for shoes */
     public void setShoes(){ shoes = true; }
@@ -71,18 +75,19 @@ public class Story {
     public void setLittleBook () { littleBook = true; }
     public boolean getBook () { return littleBook; }
 
-    /*********** PURPLE POTION ***********/
+    /** Setters and getters for purple potion */
     public void setPurpPotion () { purpPotion = true; }
     public boolean getPurpPotion () { return purpPotion; }
 
-    /*********** VODKA POTION ***********/
+    /** Setters and getters for vodka potion */
     public void setVodka () { vodka = true; }
     public boolean getVodka () { return vodka;}
 
-    /********* WATER POTION ***********/
+    /** Setters and getters for water potion */
     public void setWater () { water = true; }
     public boolean getWater () { return water; }
 
+    /** Assigning all of our map images to official names */
     ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
     ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Cat Fight (9).jpg");
     ImageIcon Cellar1 = new ImageIcon(".//mansion Game//Cellar (1).jpg");
@@ -99,9 +104,10 @@ public class Story {
     ImageIcon NoMap = new ImageIcon(".//mansion Game//No Map.jpg");
     ImageIcon BlankMap = new ImageIcon(".//mansion Game//blank map.jpg");
 
-
-    // choosePosition is receiving the parameter(position)
-    // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
+    /*****************************************************************
+     Receives the parameter(position) to call the correct subplot method
+     @param position new section to direct the story
+     *****************************************************************/
     public void choosePosition(String position){
         switch(position){
             // prologue
@@ -176,6 +182,7 @@ public class Story {
             case "LeaveRoom10":LeaveRoom10();break;
             case "goToBathroom":goToBathroom();break;
             case "withShoes":withShoes();break;
+            // floor 3
             case "withNoShoes":withNoShoes();break;
             case "knifeDrawer":knifeDrawer();break;
             case "CheckCabinets":CheckCabinets();break;
@@ -189,7 +196,7 @@ public class Story {
             case "HideInCupboard": HideInCupboard();break;
             case "HideInPantry": HideInPantry(); break;
             case "pantryCont": hideInPantryCont();break;
-            // cellar / floor 4
+            // cellar
             case "TheCellar": TheCellar();break;
             case "RunForTheDoor": RunForTheDoor();break;
             case "HideAmongTheBodies": HideAmongTheBodies(); break;
@@ -216,10 +223,12 @@ public class Story {
             case "petCat2": petCatEnding2();break;
             case "petCat3": petCatEnding3();break;
             case "title": m.showTitleScreen();break;
-
         }
     }
 
+    /*****************************************************************
+     Intro method with the directions and welcome (chance to exit game)
+     *****************************************************************/
     public void theMansion() {
         ui.mainTextArea.setText("______________ Welcome to Sinister Happenings at Huxley Manor " +
                 "______________\n\n" +
@@ -256,10 +265,16 @@ public class Story {
         game.position5 = "ExitGame";
     }
 
+    /*****************************************************************
+     Exit game, leads to original title screen
+     *****************************************************************/
     public void ExitGame(){
         m.showTitleScreen();
     }
 
+    /*****************************************************************
+     Beginning of prologue, going into the mansion
+     *****************************************************************/
     public void towardsMansion(){
         ui.mainTextArea.setText("The man's hand feels heavy on your back as you are guided up the driveway " +
                 "against your better judgement.\n\n" +
@@ -297,6 +312,9 @@ public class Story {
         game.position5= "leaveMansion";
     }
 
+    /*****************************************************************
+     Intro method with the directions and welcome (chance to exit game)
+     *****************************************************************/
     public void leaveMansion(){
         ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
 
