@@ -99,6 +99,7 @@ public class Story {
     ImageIcon NoMap = new ImageIcon(".//mansion Game//No Map.jpg");
     ImageIcon BlankMap = new ImageIcon(".//mansion Game//blank map.jpg");
 
+
     // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
     public void choosePosition(String position){
