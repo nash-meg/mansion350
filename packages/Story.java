@@ -991,12 +991,12 @@ public class Story {
         ui.choice2.setText("The Old Man's chambers"); //TODO: BUTTON DOESN'T WORK AND IDK WHY...Fixed!!
         ui.choice3.setText("Mallory's room");
         ui.choice4.setText("Down the stairs");
-        ui.choice5.setText("See map");
+        ui.choice5.setText("See map"); //Bedroom1
 
         game.position2 = "tryBedroomOnLeft";
         game.position3 = "MalloryRoom";
         game.position4 = "downstairs";
-        game.position5 = ""; //TODO add map
+        game.position5 = "room1Map";
     }
 
     public void searchFloor() {
@@ -1015,7 +1015,7 @@ public class Story {
         ui.choice5.setText("Try the door");
 
         game.position4 = "backSleep";
-        game.position5 = "tryDoor";
+        game.position5 = "tryDoor"; //map?? Bedroom1
     }
 
     public void backSleep() {
@@ -1039,7 +1039,7 @@ public class Story {
 
         game.position3 = "searchFloor";
         game.position4 = "tryDoor";
-        game.position5 = ""; //TODO add map
+        game.position5 = "room1Map";
     }
 
     //Downstairs
@@ -1080,7 +1080,7 @@ public class Story {
 
         ui.choice3.setText("Go to Mallory's room");
         ui.choice4.setText("Go downstairs");
-        ui.choice5.setText("See map");
+        ui.choice5.setText("See map"); //Hallway(5a)
 
         game.position1 = "MalloryRoom";
         game.position2= "downstairs";
@@ -1115,7 +1115,7 @@ public class Story {
         ui.choice2.setText("Search his closet");
         ui.choice3.setText("Search his desk");
         ui.choice4.setText("Leave the room");
-        ui.choice5.setText("See map");
+        ui.choice5.setText("See map"); //Mallory's Bedroom (4)
 
         game.position1 = "SearchBed";
         game.position2= "SearchCloset";
@@ -1255,37 +1255,7 @@ public class Story {
         game.position5 = "LeaveCloset";
     }
 
-   /* //this part is not right
-    public void PutOnShoes() {
-        ui.mainTextArea.setText("OMG! YOU remember it makes noise");
-
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "SearchCloset";
-    }
-
-    //this part is not right
-    public void NotPutOnShoes() {
-        ui.mainTextArea.setText("Quieter.\nSo you pick it upo and take with you.");
-
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">");
-
-        game.position5 = "SearchCloset";
-    }
-*/
-    public void Coat() {
+     public void Coat() {
         coat = true;
         ui.mainTextArea.setText("You reach for the coat, pulling it off the hanger. It’s a cold autumn night, " +
                 "and considering how far this mansion is from any people, you’re sure that it’s going to be " +
@@ -1310,39 +1280,7 @@ public class Story {
         game.position5 = "LeaveCloset";
     }
 
-    // Put on coat
-    // this part is not right
-  /*
-    public void PutOnCoat() {
-        ui.mainTextArea.setText("Get stuck on something/butler grabs)");
-
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">>>");
-
-        game.position5 = "Coat";
-    }
-
-    //this part is not right
-    public void NotPutOnCoat() {
-        ui.mainTextArea.setText(" Take with you");
-
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(true);
-
-        ui.choice5.setText(">>>");
-
-        game.position5 = "SearchCloset";
-    }
-    */
-    //Leave Closet
+   //Leave Closet
     public void LeaveCloset() {
         ui.mainTextArea.setText("You take one last glance at the nearly empty closet before turning back " +
                 "to the room. \n\n");
@@ -1358,7 +1296,7 @@ public class Story {
 
         game.position3 = "SearchDesk";
         game.position4 = "SearchBed";
-        game.position5 = "LeaveRoom";
+        game.position5 = "LeaveRoom";//map??? Mallory's Bedroom (4)
     }
 
     //Search desk
@@ -1500,7 +1438,7 @@ public class Story {
 
         game.position3 = "SearchCloset";
         game.position4 = "SearchBed";
-        game.position5 = "LeaveRoom";
+        game.position5 = "LeaveRoom";//map??? Mallory's Bedroom (4)
     }
 
     //Leave room
@@ -1560,7 +1498,7 @@ public class Story {
 
         ui.choice3.setText("Run!");
         ui.choice4.setText("Duck down!");
-        ui.choice5.setText("See map!");
+        ui.choice5.setText("See map!"); //still gotta make that
 
         game.position3 = "Run";
         game.position4 = "DuckDown";
@@ -1649,7 +1587,7 @@ public class Story {
 
         ui.choice3.setText("Kick the cat away");
         ui.choice4.setText("Ignore the cat");
-        ui.choice5.setText("Try to pet the cat");
+        ui.choice5.setText("Try to pet the cat"); //map?? Cat Fight (9)
 
         game.position3 = "KickCat";
         game.position4 = "IgnoreCat";
@@ -1679,7 +1617,7 @@ public class Story {
         ui.choice2.setText("Examine the bookcase");
         ui.choice3.setText("Examine the coffee table");
         ui.choice4.setText("Examine the fireplace");
-        ui.choice5.setText("See map");
+        ui.choice5.setText("See map"); //Cat Fight (9)
 
         game.position2 = "ExamineBookcase";
         game.position3 = "ExamineCoffeeTable";
@@ -1707,7 +1645,7 @@ public class Story {
         ui.choice2.setText("Examine the bookcase");
         ui.choice3.setText("Examine the coffee table");
         ui.choice4.setText("Examine the fireplace");
-        ui.choice5.setText("See map");
+        ui.choice5.setText("See map"); //Cat Fight (9)
 
         game.position2 = "ExamineBookcase";
         game.position3 = "ExamineCoffeeTable";
@@ -1748,7 +1686,7 @@ public class Story {
            ui.choice2.setText("Examine the bookcase");
            ui.choice3.setText("Examine the coffee table");
            ui.choice4.setText("Examine the fireplace");
-           ui.choice5.setText("See map");
+           ui.choice5.setText("See map");//Cat Fight (9)
 
            game.position2 = "ExamineBookcase";
            game.position3 = "ExamineCoffeeTable";
@@ -1788,7 +1726,7 @@ public class Story {
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Pocket the book");
-        ui.choice5.setText("Leave it there");
+        ui.choice5.setText("Leave it there");//map?? Cat Fight (9)
 
         game.position4 = "PocketBook";
         game.position5 = "LeaveBook";
@@ -1850,7 +1788,7 @@ public class Story {
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Take the letter opener");
-        ui.choice5.setText("Leave it there");
+        ui.choice5.setText("Leave it there");//map?? Cat Fight (9)
 
         game.position4 = "letterOpener";
         game.position5 = "leaveLetterOpener";
@@ -1911,7 +1849,7 @@ public class Story {
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Take matches");
-        ui.choice5.setText("Leave them there");
+        ui.choice5.setText("Leave them there"); //map?? Cat Fight (9)
 
         game.position4 = "TakeMatches";
         game.position5 = "LeaveThere";
@@ -1983,7 +1921,7 @@ public class Story {
         ui.choice2.setText("Use letter opener");//if true
         ui.choice3.setText("Jump out of the way");
         ui.choice4.setText("Duck down");
-        ui.choice5.setText("See map");
+        ui.choice5.setText("See map"); //gotta make that
 
         game.position2 = "UseLetterOpener";
         game.position3 = "JumpOutWay";
@@ -2367,7 +2305,7 @@ public class Story {
         ui.choice2.setText("Drink the purple potion");
         ui.choice3.setText("Drink the yellow potion");
         ui.choice4.setText("Drink the labeled clear potion");
-        ui.choice5.setText("Drink the unlabeled clear potion");
+        ui.choice5.setText("Drink the unlabeled clear potion");  //map?? Potion Room (10)
 
         game.position2 = "purplePotion";
         game.position3 = " yellowPotion";
@@ -2419,7 +2357,7 @@ public class Story {
         ui.choice2.setText("Drink the unlabeled clear potion");
         ui.choice3.setText("Drink the labeled clear potion");
         ui.choice4.setText("Drink the yellow potion");
-        ui.choice5.setText("Leave room");
+        ui.choice5.setText("Leave room"); //map?? Potion Room (10)
 
         game.position2 = "unlabeledClearPotion";
         game.position3 = "labeledClearPotion";
@@ -2486,7 +2424,7 @@ public class Story {
         ui.choice3.setText("Drink the unlabeled clear potion");
         ui.choice2.setText("Drink the purple potion");
         ui.choice4.setText("Drink the yellow potion");
-        ui.choice5.setText("Leave room");
+        ui.choice5.setText("Leave room"); //map?? Potion Room (10)
 
         game.position3 = "unlabeledClearPotion";
         game.position2 = "purplePotion";
@@ -2530,7 +2468,7 @@ public class Story {
         ui.choice2.setText("Drink the purple potion");
         ui.choice3.setText("Drink the labeled clear potion");
         ui.choice4.setText("Drink the yellow potion");
-        ui.choice5.setText("Leave room");
+        ui.choice5.setText("Leave room");//map?? Potion Room (10)
 
         game.position2 = "purplePotion";
         game.position3 = "labeledClearPotion";
@@ -2564,7 +2502,7 @@ public class Story {
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Use the bathroom");
-        ui.choice5.setText("Go down the stairs");
+        ui.choice5.setText("Go down the stairs"); //map?? Hallway before bathroom (8)
 
         game.position4 = "goToBathroom";
         if(shoes){
@@ -2585,7 +2523,7 @@ public class Story {
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText("Go downstairs");
+        ui.choice5.setText("Go downstairs");  //map?? Hallway before bathroom (8)
 
         if(shoes){
             game.position4 = "withShoes";
@@ -2669,7 +2607,7 @@ public class Story {
         ui.choice2.setText("Search the knife drawer");
         ui.choice3.setText("Check cabinets");
         ui.choice4.setText("Check the fridge");
-        ui.choice5.setText("Leave the kitchen");
+        ui.choice5.setText("Leave the kitchen"); //map?? Kitchen (11)
 
         game.position2 = "knifeDrawer";
         game.position3= "CheckCabinets";
@@ -2702,7 +2640,7 @@ public class Story {
 
         ui.choice3.setText("Check cabinets");
         ui.choice4.setText("Check the fridge");
-        ui.choice5.setText("Leave the kitchen");
+        ui.choice5.setText("Leave the kitchen");//map?? Kitchen (11)
 
         game.position3= "CheckCabinets";
         game.position4 = "CheckFridge";
@@ -2736,7 +2674,7 @@ public class Story {
 
         ui.choice3.setText("Search the knife drawer");
         ui.choice4.setText("Check the fridge");
-        ui.choice5.setText("Leave the kitchen");
+        ui.choice5.setText("Leave the kitchen");//map?? Kitchen (11)
 
         game.position3= "knifeDrawer";
         game.position4 = "CheckFridge";
@@ -2775,7 +2713,7 @@ public class Story {
 
         ui.choice3.setText("Search the knife drawer");
         ui.choice4.setText("Check the cabinets");
-        ui.choice5.setText("Leave the kitchen");
+        ui.choice5.setText("Leave the kitchen");//map?? Kitchen (11)
 
         game.position3= "knifeDrawer";
         game.position4 = "CheckCabinets";
@@ -2841,7 +2779,7 @@ public class Story {
 
         ui.choice3.setText("Use spellbook");
         ui.choice4.setText("Try to punch the old man");
-        ui.choice5.setText("Accept your fate");
+        ui.choice5.setText("Accept your fate"); //map?? Not allowed to look
 
         game.position3 = "UseSpellBook";
         game.position4 = "PunchOldMan";
@@ -2970,7 +2908,7 @@ public class Story {
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Hide in the cupboard");
-        ui.choice5.setText("Hide in the pantry");
+        ui.choice5.setText("Hide in the pantry"); //map?? Not allowed to look
 
         game.position4 = "HideInCupboard"; // DEATH GAME OVER
         game.position5 = "HideInPantry";
@@ -3099,7 +3037,7 @@ public class Story {
         ui.choice5.setVisible(true);
 
         ui.choice4.setText("Hide among the bodies");
-        ui.choice5.setText("Run for the door");
+        ui.choice5.setText("Run for the door"); //map?? Cellar (1)
 
         game.position4 = "HideAmongTheBodies";
         game.position5 = "RunForTheDoor";
@@ -3160,7 +3098,7 @@ public class Story {
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText(">");
+        ui.choice5.setText(">"); //map?? Cellar (2)
         //TODO: make this a big if-statement for the possible endings
         if(!matches && !pet){
             game.position5 = "noMatchesOrPets";//death
