@@ -92,6 +92,51 @@ public class Story {
     ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Potion Room(10).jpg");
     ImageIcon cannibalPlantRoom7 = new ImageIcon(".//mansion Game//cannibal plant room(7).jpg");
 
+
+
+    public void change() {
+        ui.ImageLabel.setIcon(CatFightRoom9);
+    }
+
+    public void change1() {
+        ui.ImageLabel.setIcon(Cellar1);
+    }
+    public void change2() {
+        ui.ImageLabel.setIcon(Cellar2);
+    }
+    public void change3() {
+        ui.ImageLabel.setIcon(Cellar3);
+    }
+    public void change4() {
+        ui.ImageLabel.setIcon(Cellar4);
+    }
+    public void change5() {
+        ui.ImageLabel.setIcon(Cellar5);
+    }
+    public void change6() {
+        ui.ImageLabel.setIcon(HallBeforeBathroom8);
+    }
+    public void change7() {
+        ui.ImageLabel.setIcon(Hallway5a);
+    }
+    public void change9() {
+        ui.ImageLabel.setIcon(Hallway5b);
+    }
+    public void change10() {
+        ui.ImageLabel.setIcon(Kitchen11);
+    }
+    public void change11() {
+        ui.ImageLabel.setIcon(MalloryRoom4);
+    }
+    public void change12() {
+        ui.ImageLabel.setIcon(PotionRoom10);
+    }
+    public void change13() {
+        ui.ImageLabel.setIcon(cannibalPlantRoom7);
+    }
+
+
+
     // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
     public void choosePosition(String position){
@@ -130,16 +175,11 @@ public class Story {
             case "tryDoor": tryDoor(); break;
             case "tryBedroomOnLeft": tryBedroomOnLeft(); break;
             case "downstairs": downstairs(); break;
-            //case "TryDoorAhead": TryDoorAhead(); break;
             case "MalloryRoom":MalloryRoom(); break;
             case "SearchBed": SearchBed(); break;
             case "SearchCloset": SearchCloset(); break;
             case "Shoes": Shoes();break;
-            //case "PutOnShoes": PutOnShoes(); break;
-            //case "NotPutOnShoes": NotPutOnShoes();break;
             case "Coat": Coat(); break;
-            //case "PutOnCoat": PutOnCoat(); break;
-            //case "NotPutOnCoat": NotPutOnCoat();break;
             case "LeaveCloset": LeaveCloset();break;
             case "SearchDesk": SearchDesk();break;
             case "ExamineBook": ExamineBook(); break;
