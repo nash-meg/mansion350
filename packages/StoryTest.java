@@ -1,7 +1,18 @@
 package packages;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class StoryTest {
+
+    /**
+     *
+     * The following are simple random JUnit test cases...
+     * is functioning correctly.
+     *
+     */
+    @Test
+    public void tesGetters(){
+
+    }
 
 }
