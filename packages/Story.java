@@ -76,19 +76,18 @@ public class Story {
     public boolean getWater () { return water; }
 
     ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
-    ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Cat Fight(9).jpg");
-    ImageIcon Cellar1 = new ImageIcon(".//mansion Game//Cellar(1).jpg");
-    ImageIcon Cellar2= new ImageIcon(".//mansion Game//Cellar(2).png");
-    ImageIcon Cellar3 = new ImageIcon(".//mansion Game//Cellar(3).png");
-    ImageIcon Cellar4 = new ImageIcon(".//mansion Game//Cellar(4).png");
-    ImageIcon Cellar5= new ImageIcon(".//mansion Game//Cellar(2).png");
+    ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Cat Fight (9).jpg");
+    ImageIcon Cellar1 = new ImageIcon(".//mansion Game//Cellar (1).jpg");
+    ImageIcon Cellar2= new ImageIcon(".//mansion Game//Cellar (2).png");
+    ImageIcon Cellar3 = new ImageIcon(".//mansion Game//Cellar (3).png");
+    ImageIcon Cellar4 = new ImageIcon(".//mansion Game//Cellar (4).png");
+    ImageIcon Cellar5= new ImageIcon(".//mansion Game//Cellar (5).png");
     ImageIcon HallBeforeBathroom8 = new ImageIcon(".//mansion Game//Hallway before bathroom(8).jpg");
     ImageIcon Hallway5a = new ImageIcon(".//mansion Game//Hallway(5a).jpg");
-    ImageIcon Hallway5b = new ImageIcon(".//mansion Game//Hallway(5b).jpg");
-    ImageIcon Kitchen11 = new ImageIcon(".//mansion Game//Kitchen(11).jpg");
-    ImageIcon MalloryRoom4= new ImageIcon(".//mansion Game//Mallory's Bedroom(4).jpg");
-    ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Potion Room(10).jpg");
-    ImageIcon cannibalPlantRoom7 = new ImageIcon(".//mansion Game//cannibal plant room(7).jpg");
+    // ImageIcon Hallway5b = new ImageIcon(".//mansion Game//Hallway(5b).jpg");
+    ImageIcon Kitchen11 = new ImageIcon(".//mansion Game//Kitchen (11).jpg");
+    ImageIcon MalloryRoom4= new ImageIcon(".//mansion Game//Mallory's Bedroom (4).jpg");
+    ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Potion Room (10).jpg");
 
     // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
@@ -124,15 +123,12 @@ public class Story {
             case "awkMoment": awkMoment(); break;
             // floor 1
             case "room1": room1(); break;
-            case "room1Map": room1Map(); break;
             case "backSleep": backSleep(); break;
             case "searchFloor": searchFloor(); break;
             case "tryDoor": tryDoor(); break;
-            case "hall5aMap": hall5aMap(); break;
             case "tryBedroomOnLeft": tryBedroomOnLeft(); break;
             case "downstairs": downstairs(); break;
             case "MalloryRoom":MalloryRoom(); break;
-            case "malRoomMap":malRoomMap(); break;
             case "SearchBed": SearchBed(); break;
             case "SearchCloset": SearchCloset(); break;
             case "Shoes": Shoes();break;
@@ -147,7 +143,6 @@ public class Story {
             case "room5": room5(); break;
             case "Run": Run(); break;
             case "DuckDown": DuckDown(); break;
-            case "room9Map": room9Map(); break;
             case "KickCat": KickCat(); break;
             case "IgnoreCat": IgnoreCat();break;
             case "PetCat": PetCat(); break;
@@ -987,6 +982,7 @@ public class Story {
 
     /*********** FLOOR ONE *************/
     public void room1() {
+        ui.ImageLabel.setIcon(Bedroom1);
         ui.mainTextArea.setText("You sit there on the floor of your room, still processing what's just happened." +
                 " There's a sickening series of thumps and thuds as you assume the old man drags Mallory's body " +
                 "down the stairs. Part of you wants to sob, the other part wants to throw up, and a third prays " +
@@ -998,28 +994,23 @@ public class Story {
                 "Shakily, you get to your feet and glance around the room.\n\n" +
                 "What do you want to do?");
         ui.choice1.setVisible(false);
-        ui.choice2.setVisible(true);
+        ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice2.setText("Search floor ");
-        ui.choice3.setText("Try to go back to sleep");
-        ui.choice4.setText("Try the door");
-        ui.choice5.setText("See map");
+        ui.choice3.setText("Search floor ");
+        ui.choice4.setText("Try to go back to sleep");
+        ui.choice5.setText("Try the door");
 
-        game.position2 = "searchFloor";
-        game.position3 = "backSleep";
-        game.position4 = "tryDoor";
-        game.position5 = "room1Map"; //bedroom1
-    }
-    public void room1Map() {
-        ui.ImageLabel.setIcon(Bedroom1);
+        game.position3 = "searchFloor";
+        game.position4 = "backSleep";
+        game.position5 = "tryDoor";
     }
 
     //Try the door (leave)
     public void tryDoor() {
-        ui.ImageLabel.setIcon(null);
+        ui.ImageLabel.setIcon(Hallway5a);
         ui.mainTextArea.setText("You walk to the door and test the knob. You half expect it to somehow explode " +
                 "on contact or light your hand on fire as you go to grab it, but it simply turns harmlessly. No " +
                 "pain, no terror, just a quiet *click* as the door unlatches itself. When you release the " +
@@ -1033,45 +1024,39 @@ public class Story {
                 "gaping void in the wall going downwards.\n\n" +
                 "Where do you go?\n\n");
         ui.choice1.setVisible(false);
-        ui.choice2.setVisible(true);
+        ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice2.setText("The Old Man's chambers");
-        ui.choice3.setText("Mallory's room");
-        ui.choice4.setText("Down the stairs");
-        ui.choice5.setText("See map"); //Bedroom1
+        ui.choice3.setText("The Old Man's chambers");
+        ui.choice4.setText("Mallory's room");
+        ui.choice5.setText("Down the stairs");
 
-        game.position2 = "tryBedroomOnLeft";
-        game.position3 = "MalloryRoom";
-        game.position4 = "downstairs";
-        game.position5 = "hall5Map";
+        game.position3 = "tryBedroomOnLeft";
+        game.position4 = "MalloryRoom";
+        game.position5 = "downstairs";
     }
 
     public void searchFloor() {
-        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("You glance down at the floor. A few items fell from your desk when you were " +
                 "flung into the room, but other than that, it's rather clean, save for a stray shirt you have " +
                 "yet to fold. Looking at it now, it feels almost foreign despite the fact that you've been " +
                 "living here for almost a week. You shake your head, turning back to the door. \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
+        ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Try to go back to sleep");
-        ui.choice4.setText("Try the door");
-        ui.choice5.setText("See map");
+        ui.choice4.setText("Try to go back to sleep");
+        ui.choice5.setText("Try the door");
 
-        game.position3 = "backSleep";
-        game.position4 = "tryDoor";
-        game.position5 = "room1Map";// Bedroom1
+        game.position4 = "backSleep";
+        game.position5 = "tryDoor";
     }
 
     public void backSleep() {
-        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("Perhaps it's best if you go back to sleep, you decide. You go and lie " +
                 "down on the bed and pull the covers over you, but it no longer feels as soft as it " +
                 "did earlier. You feel every lump and spring of the mattress, and every time you close " +
@@ -1081,22 +1066,19 @@ public class Story {
                 "to your feet. Maybe sleep isn't the best idea.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
+        ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Search the floor");
-        ui.choice4.setText("Try the door");
-        ui.choice5.setText("See map");
+        ui.choice4.setText("Search the floor");
+        ui.choice5.setText("Try the door");
 
-        game.position3 = "searchFloor";
-        game.position4 = "tryDoor";
-        game.position5 = "room1Map";
+        game.position4 = "searchFloor";
+        game.position5 = "tryDoor";
     }
 
     //Downstairs
     public void downstairs() {
-        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("You decide that it isn't worth checking the other rooms, instead opting " +
                 "to go downstairs. \n\n" +
                 "As you stand looking down the descending corridor, you feel a shiver of fear run up your " +
@@ -1127,26 +1109,20 @@ public class Story {
                 "Where do you go? \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
+        ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Go to Mallory's room");
-        ui.choice4.setText("Go downstairs");
-        ui.choice5.setText("See map"); //Hallway(5a)
+        ui.choice4.setText("Go to Mallory's room");
+        ui.choice5.setText("Go downstairs");
 
-        game.position3 = "MalloryRoom";
-        game.position4= "downstairs";
-        game.position5 = "hall5aMap";
-    }
-
-    public void hall5aMap() {
-        ui.ImageLabel.setIcon(Hallway5a);
+        game.position4 = "MalloryRoom";
+        game.position5 = "downstairs";
     }
 
     // Mallory's room
     public void MalloryRoom() {
-        ui.ImageLabel.setIcon(null);
+        ui.ImageLabel.setIcon(MalloryRoom4);
         ui.mainTextArea.setText("Cautiously, you walk through the hall down to Mallory's room, trying to " +
                 "ignore the squish of the bloodsoaked carpet as wetness of it seeps into your socks. The " +
                 "door to his room is already open, and, out of a combination of concern and morbid curiosity, " +
@@ -1163,32 +1139,25 @@ public class Story {
                 "grieve for your friend once you're out of here. \n\n" +
                 "His room is set up similarly to your own, with a bed to one wall and a desk to the other. At " +
                 "the foot of the bed sits a closet door.\n\n");
-        ui.choice1.setVisible(true);
+        ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice1.setText("Search his bed");
-        ui.choice2.setText("Search his closet");
-        ui.choice3.setText("Search his desk");
-        ui.choice4.setText("Leave the room");
-        ui.choice5.setText("See map"); //Mallory's Bedroom (4)
+        ui.choice2.setText("Search his bed");
+        ui.choice3.setText("Search his closet");
+        ui.choice4.setText("Search his desk");
+        ui.choice5.setText("Leave the room");
 
-        game.position1 = "SearchBed";
-        game.position2= "SearchCloset";
-        game.position3 = "SearchDesk";
-        game.position4 = "LeaveRoom";
-        game.position5 = "malRoomMap";
-    }
-
-    public void malRoomMap() {
-        ui.ImageLabel.setIcon(MalloryRoom4);
+        game.position2 = "SearchBed";
+        game.position3 = "SearchCloset";
+        game.position4 = "SearchDesk";
+        game.position5 = "LeaveRoom";
     }
 
     //Search bed
     public void SearchBed() {
-        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("You apprehensively approach the bed, a wave of grief washing over you as it " +
                 "sinks in that this is likely where Mallory's fate was sealed. Blood is everywhere, and there's " +
                 "a smattering of it up and across the wall as if his throat had been slit. \n\n" +
@@ -1223,7 +1192,6 @@ public class Story {
 
     //Search closet
     public void SearchCloset() {
-        ui.ImageLabel.setIcon(null);
         if (shoes && !coat){
             ui.mainTextArea.setText("You walk over to the closet and slowly open the door. It's surprisingly " +
                     "bare, even for Mallory. There are three shirts, two pairs of pants, and a yellow raincoat " +
@@ -1365,7 +1333,6 @@ public class Story {
 
     //Search desk
     public void SearchDesk() {
-        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("You walk to the desk and glance over its surface. It's one of the only " +
                 "parts of the room that's relatively blood-free, save for a drop or two scattered at one " +
                 "corner.There's a pen holder and a lamp, and a few un-marked scraps of paper. In the " +
@@ -1503,12 +1470,12 @@ public class Story {
 
         game.position3 = "SearchCloset";
         game.position4 = "SearchBed";
-        game.position5 = "LeaveRoom";//map??? Mallory's Bedroom (4)
+        game.position5 = "LeaveRoom";
     }
 
     //Leave room
     public void LeaveRoom() {
-        ui.ImageLabel.setVisible(false);
+        ui.ImageLabel.setIcon(Hallway5a);
         ui.mainTextArea.setText("You give one last sweeping glance to the room before stepping back out into the " +
                 "hallway and making your way over to the staircase.\n\n" +
                 "As you stand looking down the descending corridor, you feel a shiver of fear run up your spine, " +
@@ -1532,6 +1499,7 @@ public class Story {
 
     //Down in third over section, room 5:
     public void room5() {
+        //TODO add cant see map
         ui.mainTextArea.setText("You step cautiously as you descend the stairs, praying that no one will catch " +
                 "you once you reach the bottom. It's dark; with every step a part of you fears that your foot will " +
                 "miss, and you'll be sent tumbling down the stairway. Still, these stairs don't creak as much as " +
@@ -1558,17 +1526,15 @@ public class Story {
                 "What do you do?! \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
+        ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Run!");
-        ui.choice4.setText("Duck down!");
-        ui.choice5.setText("See map!"); //still gotta make that
+        ui.choice4.setText("Run!");
+        ui.choice5.setText("Duck down!");
 
-        game.position3 = "Run";
-        game.position4 = "DuckDown";
-        game.position5 = ""; //TODO add cant see map
+        game.position4 = "Run";
+        game.position5 = "DuckDown";
     }
 
     //Run
@@ -1660,13 +1626,9 @@ public class Story {
         game.position5 = "PetCat";
     }
 
-    public void room9Map() {
-        ui.ImageLabel.setIcon(CatFightRoom9);
-        ui.ImageLabel.setVisible(true);
-    }
-
     //Kick the cat away
     public void KickCat() {
+        ui.ImageLabel.setIcon(CatFightRoom9);
         kick = true;
         ui.mainTextArea.setText("You stare at the cat in disgust as it walks towards you. It slowly approaches " +
                 "your leg, and as it goes to sniff, you thrash out your foot, nailing it in the chin and sending " +
@@ -1680,24 +1642,23 @@ public class Story {
                 "and paper on it.\n\n" +
                 "What do you do?\n\n");
         ui.choice1.setVisible(false);
-        ui.choice2.setVisible(true);
+        ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice2.setText("Examine the bookcase");
-        ui.choice3.setText("Examine the coffee table");
-        ui.choice4.setText("Examine the fireplace");
-        ui.choice5.setText("See map"); //Cat Fight (9)
+        ui.choice3.setText("Examine the bookcase");
+        ui.choice4.setText("Examine the coffee table");
+        ui.choice5.setText("Examine the fireplace");
 
-        game.position2 = "ExamineBookcase";
-        game.position3 = "ExamineCoffeeTable";
-        game.position4 = "ExamineFireplace";
-        game.position5 = "room9Map";
+        game.position3 = "ExamineBookcase";
+        game.position4 = "ExamineCoffeeTable";
+        game.position5 = "ExamineFireplace";
     }
 
     //Ignore the cat
     public void IgnoreCat() {
+        ui.ImageLabel.setIcon(CatFightRoom9);
         ignore = true;
         ui.mainTextArea.setText("You don't pay the cat any mind as it approaches you, sniffing you a little and " +
                 "then wandering off to do its own thing. You instead move to examine the room. \n\n" +
@@ -1708,24 +1669,23 @@ public class Story {
                 "and paper and various other writing materials, including what looks like a feather pen.\n\n" +
                 "What do you do? \n\n");
         ui.choice1.setVisible(false);
-        ui.choice2.setVisible(true);
+        ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice2.setText("Examine the bookcase");
-        ui.choice3.setText("Examine the coffee table");
-        ui.choice4.setText("Examine the fireplace");
-        ui.choice5.setText("See map"); //Cat Fight (9)
+        ui.choice3.setText("Examine the bookcase");
+        ui.choice4.setText("Examine the coffee table");
+        ui.choice5.setText("Examine the fireplace");
 
-        game.position2 = "ExamineBookcase";
-        game.position3 = "ExamineCoffeeTable";
-        game.position4 = "ExamineFireplace";
-        game.position5 = "room9Map";
+        game.position3 = "ExamineBookcase";
+        game.position4 = "ExamineCoffeeTable";
+        game.position5 = "ExamineFireplace";
     }
 
     //Try to pet the cat
        public void PetCat() {
+        ui.ImageLabel.setIcon(CatFightRoom9);
         pet = true;
         ui.mainTextArea.setText("You crouch down and extend a hand as the cat approaches you, allowing it to sniff. " +
                 "It takes a moment, thoroughly smelling your hand and up your arm before deciding that you're a " +
@@ -1749,26 +1709,23 @@ public class Story {
                 "sure.\n\n" +
                 "What do you do?\n\n");
            ui.choice1.setVisible(false);
-           ui.choice2.setVisible(true);
+           ui.choice2.setVisible(false);
            ui.choice3.setVisible(true);
            ui.choice4.setVisible(true);
            ui.choice5.setVisible(true);
 
-           ui.choice2.setText("Examine the bookcase");
-           ui.choice3.setText("Examine the coffee table");
-           ui.choice4.setText("Examine the fireplace");
-           ui.choice5.setText("See map");//Cat Fight (9)
+           ui.choice3.setText("Examine the bookcase");
+           ui.choice4.setText("Examine the coffee table");
+           ui.choice5.setText("Examine the fireplace");
 
-           game.position2 = "ExamineBookcase";
-           game.position3 = "ExamineCoffeeTable";
-           game.position4 = "ExamineFireplace";
-           game.position5 = "room9Map";
+           game.position3 = "ExamineBookcase";
+           game.position4 = "ExamineCoffeeTable";
+           game.position5 = "ExamineFireplace";
     }
 
     // In room 9
     //Examine the bookcase
     public void ExamineBookcase() {
-        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("You make your way over to the bookcase and begin to look it over. Various " +
                 "titles that sound more like fantasy than nonfiction scatter the shelves, such as:\n\n" +
                 "The Ins and Outs of Human Transmutation\n\n" +
@@ -1900,7 +1857,6 @@ public class Story {
 
     //Examine the fireplace
     public void ExamineFireplace() {
-        ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("You walk to the fireplace and survey the ornate black marble surrounding it. " +
                 "Intricate carvings of vines and flowers wrap around the pillars on the outside in patterns " +
                 "closely resembling that of lightning. Closer to center there is a small arch carved with " +
@@ -1964,6 +1920,7 @@ public class Story {
     //Fight scene in Room 9 before room 10:
     //Beginning of fight scene
     public void FightScene() {
+        // TODO turn off map
         ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar " +
                 "on the other side that's different from the one you entered through. Before you can think too much " +
                 "about it, a noise from the cat draws your attention, and you turn to see it staring at you, " +
@@ -1982,25 +1939,23 @@ public class Story {
                 "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\n\n" +
                 "What do you do?\n\n");
         ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
         if(letteropener){
-            ui.choice2.setVisible(true);
+            ui.choice3.setVisible(true);
         }
         else{
-            ui.choice2.setVisible(false);
+            ui.choice3.setVisible(false);
         }
-        ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice2.setText("Use letter opener");//if true
-        ui.choice3.setText("Jump out of the way");
-        ui.choice4.setText("Duck down");
-        ui.choice5.setText("See map"); //gotta make that
+        ui.choice3.setText("Use letter opener");//if true
+        ui.choice4.setText("Jump out of the way");
+        ui.choice5.setText("Duck down");
 
-        game.position2 = "UseLetterOpener";
-        game.position3 = "JumpOutWay";
-        game.position4 = "DuckingDown";
-        game.position5 = ""; //TODO add cant see map rn
+        game.position3 = "UseLetterOpener";
+        game.position4 = "JumpOutWay";
+        game.position5 = "DuckingDown";
     }
 
     //Duck down (pet cat)
@@ -2105,18 +2060,18 @@ public class Story {
                 "...Your eyes dart to the shelf covered in books.\n\n" +
                 "What do you do?\n\n");
         ui.choice1.setVisible(false);
-        ui.choice2.setVisible(true);
+        ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
         ui.choice4.setVisible(true);
-        ui.choice5.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        ui.choice2.setText("Try climbing the bookshelf");
-        ui.choice3.setText("Throw books at the monster");
-        ui.choice4.setText("Start reading spells and pray");
+        ui.choice3.setText("Try climbing the bookshelf");
+        ui.choice4.setText("Throw books at the monster");
+        ui.choice5.setText("Start reading spells and pray");
 
-        game.position2 = "ClimbBookshelf";
-        game.position3 = "ThrowBooks";
-        game.position4 = "GrabABook";
+        game.position3 = "ClimbBookshelf";
+        game.position4 = "ThrowBooks";
+        game.position5 = "GrabABook";
     }
 
     public void ClimbBookshelf() {
@@ -2350,6 +2305,7 @@ public class Story {
 
     //room 10 - chamber (potion room)
     public void room10() {
+        ui.ImageLabel.setIcon(PotionRoom10);
         ui.mainTextArea.setText("You hear footsteps above you as if the butler has now somehow made his way " +
                 "upstairs.\n\n" +
                 "Before you is a room filled with shelves of boxes and bottles and potted plants. On the far side of " +
