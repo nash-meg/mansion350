@@ -2373,27 +2373,26 @@ public class Story {
     public void purplePotion() {
         purpPotion = true;
         ui.mainTextArea.setText("You cautiously pick up the glowing vial and look it over, noticing that the " +
-                "faded label says “Aspectum”. You’re not well-versed in latin by any stretch, " +
-                "but you remember a middle school teacher once telling you that that word meant “Sight”. You shrug. " +
-                "Maybe it does.\n\n" +
-                "Either way, you pop the cork off the vial and drink it down in one swig. \n\n" +
+                "faded label says \"Aspectum.\" You’re not well-versed in latin by any stretch, but you remember " +
+                "a middle school teacher once telling you that that word meant “Sight”. You shrug. Maybe " +
+                "it does.\n\n" +
+                "Either way, you pop the cork off the vial and drink it down in one swig.\n\n" +
                 "It tastes sweet, almost like a plum, and is rather smooth on the way down.\n\n" +
-                "You pause. \n\n" +
-                "Nothing feels different. \n\n" +
-                "Sighing, you turn your attention back to the table and hope that this isn’t some kind of slow death" +
-                " potion that you stupidly just drank. \n\n" +
+                "You pause.\n\n" +
+                "Nothing feels different.\n\n" +
+                "Sighing, you turn your attention back to the table and hope that this isn’t some kind of slow " +
+                "death potion that you stupidly just drank.\n\n" +
                 "It’s when you glance back at the potion table that you notice it. \n\n" +
-                "At first, you just see a little movement out of the corner of your eye." +
-                " But when you look closer, you find that in the liquid of the other vials, you can see...something.\n\n" +
+                "At first, you just see a little movement out of the corner of your eye. But when you look closer, " +
+                "you find that in the liquid of the other vials, you can see...something.\n\n" +
                 "The old man.\n\n" +
-                "You can see the old man walking up a set of stairs. " +
-                "Not any that you’ve ever been on, but the wallpaper seems to match that of the stairs going down " +
-                "into the cellar. " +
-                "You attempt to look behind and around the vials, but find that the only place you can see this is in " +
-                "the two vials of clear liquid. You watch as the old man nearly reaches the top of the stairs then " +
-                "stops suddenly. As if he’s forgotten something, he sighs and goes back down." +
-                " You blink, turning away as you stop watching, then begin to laugh a little. " +
-                "Even in as terrifying of a situation as you’re in, you have to admit this is pretty cool.\n\n" +
+                "You can see the old man walking up a set of stairs. Not any that you’ve ever been on, but the " +
+                "wallpaper seems to match that of the stairs going down into the cellar. You attempt to look " +
+                "behind and around the vials, but find that the only place you can see this is in the two vials " +
+                "of clear liquid. You watch as the old man nearly reaches the top of the stairs then stops " +
+                "suddenly. As if he’s forgotten something, he sighs and goes back down. You blink, turning away " +
+                "as you stop watching, then begin to laugh a little. Even in as terrifying of a situation as " +
+                "you’re in, you have to admit this is pretty cool.\n\n" +
                 "You guess aspectum really did mean sight after all.\n\n");
         ui.choice1.setVisible(false);
         if (water){
@@ -2423,24 +2422,24 @@ public class Story {
     }
 
     public void yellowPotion() {
-        ui.mainTextArea.setText("You pick up the yellow vial, pondering for a moment why it’s labeled the way it is before drinking it. \n\n" +
-                "Instantly, your insides begin to burn as if someone’s lit a match in your stomach." +
-                " Your throat begins to swell as your knees buckle under you and you fall to the ground, " +
-                "bringing one of the small shelves down with you as you grasp at it in a vain attempt to stay standing. \n\n" +
+        ui.mainTextArea.setText("You pick up the yellow vial, pondering for a moment why it’s labeled the " +
+                "way it is before drinking it. \n\n" +
+                "Instantly, your insides begin to burn as if someone’s lit a match in your stomach. Your throat " +
+                "begins to swell as your knees buckle under you and you fall to the ground, bringing one of " +
+                "the small shelves down with you as you grasp at it in a vain attempt to stay standing. \n\n" +
                 "Spots form in your vision as it begins to blur.\n\n" +
-                "You’re not sure how long you lie there, unable to move or breathe, jerking violently as your lungs try" +
-                " to suck in air that isn’t there.\n\n" +
+                "You’re not sure how long you lie there, unable to move or breathe, jerking violently as your " +
+                "lungs try to suck in air that isn’t there.\n\n" +
                 " You close your eyes as an odd bliss settles over you and your body stops spasming.\n\n" +
                 " Sleep.\n\n" +
                 " Yes, that’s it. You just need some rest.\n\n" +
-                "You allow yourself to drift off into a sleep of inky black, not entirely comprehending that it’s one " +
-                "you’ll never wake up from. \n\n" +
+                "You allow yourself to drift off into a sleep of inky black, not entirely comprehending " +
+                "that it’s one you’ll never wake up from. \n\n" +
                 "\n" +
-                "You really just drank a random potion in a murderer’s house labeled “PLAN B”, huh?" +
-                " Well, we can’t all be the brightest bulbs in the bunch. " +
-                "You, for instance, have discovered one of the many ways to die in this game!" +
-                " But, it IS beatable, we promise, so if you want you can always restart the game and try again! \n" +
-                "\n");
+                "You really just drank a random potion in a murderer’s house labeled “PLAN B”, huh? Well, we " +
+                "can’t all be the brightest bulbs in the bunch. You, for instance, have discovered one of " +
+                "the many ways to die in this game! But, it IS beatable, we promise, so if you want you can " +
+                "always restart the game and try again!\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -2454,15 +2453,14 @@ public class Story {
 
     public void labeledClearPotion() {
         vodka = true;
-        ui.mainTextArea.setText("You pick it up, contemplating the latin labeling before taking a swig. " +
-                "You cringe at the taste and it burns as it goes down.\n\n" +
+        ui.mainTextArea.setText("You pick it up, contemplating the latin labeling before taking a swig. You cringe " +
+                "at the taste and it burns as it goes down.\n\n" +
                 "Even so, it tastes strangely familiar.\n\n" +
                 "Was that...vodka?\n\n" +
                 "You sniff the vial. \n\n" +
                 "Yup, that was definitely vodka.\n\n" +
                 "You stand there a moment, a little dumbfounded that you just took a shot in the middle of a potion" +
-                " room before turning back to the other vials. \n\n" +
-                "\n");
+                " room before turning back to the other vials. \n\n");
         ui.choice1.setVisible(false);
         if (water){
             ui.choice3.setVisible(false);
@@ -2492,9 +2490,9 @@ public class Story {
 
     public void unlabeledClearPotion() {
         water = true;
-        ui.mainTextArea.setText("You pick up the unlabeled vial and glance over it. The fact that it’s unlabeled scares" +
-                " you a bit, but after what you just experienced in the other room, you figure it can’t be that bad. " +
-                "Shrugging, you uncork it and take a swig.\n\n" +
+        ui.mainTextArea.setText("You pick up the unlabeled vial and glance over it. The fact that it’s unlabeled " +
+                "scares you a bit, but after what you just experienced in the other room, you figure it can’t be " +
+                "that bad. Shrugging, you uncork it and take a swig.\n\n" +
                 "It doesn’t taste like anything, nor does it feel strange at all.\n\n" +
                 "If you hadn’t known any better, you would have thought it was water.\n\n" +
                 "Shit.\n\n" +
@@ -2535,18 +2533,18 @@ public class Story {
     }
 
     public void LeaveRoom10() {
-        ui.mainTextArea.setText("Finished with the potion table, you make your way over to the door on the far side of the room. " +
-                "You know it goes out to the hallway where you almost died, but you’d rather go that way and have some " +
-                "hope of getting out than stay in here for the old man to find you." +
-                " You'd also rather stay away from the room where you were just attacked. \n\n" +
+        ui.mainTextArea.setText("Finished with the potion table, you make your way over to the door on the far " +
+                "side of the room. You know it goes out to the hallway where you almost died, but you’d rather " +
+                "go that way and have some hope of getting out than stay in here for the old man to find you. " +
+                "You'd also rather stay away from the room where you were just attacked. \n\n" +
                 "You pause, listening. \n\n" +
                 "It doesn't SOUND like the blades are still swinging.\n\n" +
                 "Cautiously, you crack open the door and peek out at the hallway.\n\n" +
-                "You were right. The blades now simply hang there limply from ropes. " +
-                "They don’t look nearly as ominous now that they’re standing still. \n\n" +
-                "You pull the door open and slowly step out into the hallway, hoping " +
-                "to make sure that they won’t start moving if you leave the room. " +
-                "Still, they hang there harmlessly, allowing you to push them to the side and weave between them. \n\n" +
+                "You were right. The blades now simply hang there limply from ropes. They don’t look nearly as " +
+                "ominous now that they’re standing still. \n\n" +
+                "You pull the door open and slowly step out into the hallway, hoping to make sure that they " +
+                "won’t start moving if you leave the room. Still, they hang there harmlessly, allowing you " +
+                "to push them to the side and weave between them. \n\n" +
                 "Finally, you reach the stairs. They lead downward into the darkness that you know to be the kitchen. " +
                 "You feel a bit of fear bubbling up inside you as you look down the descending corridor." +
                 " You know that these stairs will creak when you step on them. \n\n" +
@@ -2572,7 +2570,8 @@ public class Story {
     }
 
     public void goToBathroom() {
-        ui.mainTextArea.setText("You go into the bathroom and take a much-needed piss before washing your hands and heading back out into the hallway.\n\n");
+        ui.mainTextArea.setText("You go into the bathroom and take a much-needed piss before washing your " +
+                "hands and heading back out into the hallway.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2592,33 +2591,37 @@ public class Story {
     }
 
     public void withShoes() {
-        ui.mainTextArea.setText("You cautiously step down the stairs, cringing as it squeaks at every step you take. " +
-                "The thick bottoms of your sneakers clunk against the wood, making it even louder than it already would be without them." +
-                " Not to mention how dark it is, and how easily you could fall if you missed a step. \n\n" +
+        ui.mainTextArea.setText("You cautiously step down the stairs, cringing as it squeaks at every step you " +
+                "take. The thick bottoms of your sneakers clunk against the wood, making it even louder than it " +
+                "already would be without them. Not to mention how dark it is, and how easily you could fall if " +
+                "you missed a step. \n\n" +
                 "You pause at the first landing, taking a moment to allow yourself to breathe. \n\n" +
-                "As you stand there, eyes closed and leaning against the wall, you hear the quiet footsteps of slippers on tile.\n\n" +
+                "As you stand there, eyes closed and leaning against the wall, you hear the quiet footsteps " +
+                "of slippers on tile.\n\n" +
                 "You feel your blood run cold as the realization hits you.\n\n" +
                 "The old man is in the kitchen, and he’s heading towards the stairs.\n\n" +
                 "You stand there a moment panicking, unsure of what to do. \n\n" +
-                "If you try and walk back up the stairs, he’ll definitely hear you. " +
-                "If you go down the stairs, not only will he hear you, but he’ll also see you. \n\n" +
+                "If you try and walk back up the stairs, he’ll definitely hear you. If you go down the stairs, " +
+                "not only will he hear you, but he’ll also see you. \n\n" +
                 "You resolve to sit there and hopefully wait him out.\n\n" +
-                "The slippers pause for a moment at the base of the stairs, and you see the faint shadow of the old man cast by the light of the window.\n\n" +
+                "The slippers pause for a moment at the base of the stairs, and you see the faint shadow of " +
+                "the old man cast by the light of the window.\n\n" +
                 "“I know you’re up there,” he coos.\n\n" +
                 "You feel a lump form in the pit of your stomach as you hear the old man move onto the first step.\n\n" +
                 "“I thought I told you to go back to bed.”\n\n" +
-                "At this point, you go to run, but when you try to move, you realize that you can’t. " +
-                "It’s not a matter of fear or weakness. You physically can’t move.\n\n" +
-                "The old man slowly climbs the stairs until he’s reached your landing." +
-                " Your heart pounds in your chest as every muscle in your body begs you to run but in the same breath refuses to do so. \n\n" +
-                "The old man clicks his tongue as he runs a hand down your face, “I’d hoped you would last longer,” " +
-                "he mutters, then laughs quietly, “And to think you might have actually done it if those shoes weren't so loud.”\n\n" +
-                "He draws in breath through gritted teeth, then snaps his fingers." +
-                " In an instant, you feel every muscle your body give out, and as you crumple to the ground," +
-                "everything goes black. \n\n" +
+                "At this point, you go to run, but when you try to move, you realize that you can’t. It’s not a " +
+                "matter of fear or weakness. You physically can’t move.\n\n" +
+                "The old man slowly climbs the stairs until he’s reached your landing. Your heart pounds in your " +
+                "chest as every muscle in your body begs you to run but in the same breath refuses to do so. \n\n" +
+                "The old man clicks his tongue as he runs a hand down your face, \"I’d hoped you would last longer,\" " +
+                "he mutters, then laughs quietly, “And to think you might have actually done it if those shoes " +
+                "weren't so loud.”\n\n" +
+                "He draws in breath through gritted teeth, then snaps his fingers. In an instant, you feel every " +
+                "muscle your body give out, and as you crumple to the ground, everything goes black. \n\n" +
                 "\n" +
-                "Aw man, you were halfway to victory! Instead, you’ve discovered one of the many ways to die in this game!" +
-                " It IS beatable, though, we promise, so if you want, you can restart the game and try again!\n\n" +
+                "Aw man, you were halfway to victory! Instead, you’ve discovered one of the many ways to die in " +
+                "this game! It IS beatable, though, we promise, so if you want, you can restart the game and " +
+                "try again!\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
