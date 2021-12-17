@@ -159,7 +159,6 @@ public class Story {
             case "TakeMatches": TakeMatches();break;
             case "LeaveThere": LeaveThere();break;
             case "FightScene": FightScene();break;
-            case "RunThruHall": RunThruHall(); break;
             case "DuckingDown": DuckingDown();break;
             case "continue9": room9Cont();break;
             case "JumpOutWay": JumpOutWay();break;
@@ -196,7 +195,14 @@ public class Story {
             case "Fight2": Fight2();break;
             case "Fight3": Fight3();break;
             case "matches": ifMatches();break;
+            case "tryMatches": tryMatches(); break;
+            case "oneMoreTime": matchesOneMoreTime();break;
+            case "matchesEnding": matchesEnding();break;
+            case "giveIn1": giveIn1();break;
+            case "giveIn2": giveIn2();break;
+            case "giveIn3": giveIn3;break;
             case "petCat1": petCatEnding1();break;
+
         }
     }
 
@@ -3254,31 +3260,37 @@ public class Story {
 
     //Matches ending
     public void ifMatches() {
-        ui.mainTextArea.setText("“You know,” the old man begins, “In all my 300 years, I’ve never had one escape. Not one. Of all of them, though, you’ve gotten the closest.”\\n\\n\n" +
-                "Your legs continue to walk towards the old man, stepping on and over the corpses of the old man’s past victims. You watch helplessly as his extended fingers move rhythmically with every step you take, pulling you ever closer.\\n\\n\n" +
-                "As you struggle, your hand brushes your pocket and you feel a small box.\\n\\n\n" +
-                "The matches.\\n\\n\n" +
-                "You’d nearly forgotten that you’d taken them with you, but now, as you’re pulled inevitably towards your death, you wonder whether they might be of some use. \\n\\n\n" +
-                "What do you do?\\n\\n\n");
+        ui.mainTextArea.setText("\"You know,\" the old man begins, " +
+                "\"In all my 300 years, I’ve never had one escape. Not one. Of all of them, though, you’ve gotten the closest.\"\n\n" +
+                "Your legs continue to walk towards the old man, stepping on and over the corpses of the old man’s past victims." +
+                " You watch helplessly as his extended fingers move rhythmically with every step you take, pulling you ever-closer.\n\n" +
+                "As you struggle, your hand brushes your pocket and you feel a small box.\n\n" +
+                "The matches.\n\n" +
+                "You’d nearly forgotten that you’d taken them with you, but now, " +
+                "as you’re pulled inevitably towards your death, you wonder whether they might be of some use.\n\n" +
+                "What do you do?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText("Try to use the matches");
+        ui.choice4.setText("Try to use the matches");
+        ui.choice5.setText("Give in");
 
-        game.position5 = "theMansion"; // DEATH GAME OVER
+        game.position4 = "tryMatches";
+        game.position5 = "giveIn1";
     }
 
     //Try to use the matches
     public void tryMatches() {
-        ui.mainTextArea.setText("As you struggle to regain control of your limbs, you reach into your pocket and pull out the matchbox.\\n\\n\n" +
-                "There aren’t very many inside, but if you do this right, you’ll only need one.\\n\\n\n" +
-                "Fumbling, you take one out of the box and attempt to strike it. It breaks.\\n\\n\n" +
-                "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\\n\\n\n" +
-                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\\n\\n\n" +
-                "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,” he continues to chuckle, “I’d almost forgotten the thrill of the hunt.”\\n\\n\n" +
+        ui.mainTextArea.setText("As you struggle to regain control of your limbs, you reach into your pocket and pull out the matchbox.\n\n" +
+                "There aren’t very many inside, but if you do this right, you’ll only need one.\n\n" +
+                "Fumbling, you take one out of the box and attempt to strike it. It breaks.\n\n" +
+                "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\n\n" +
+                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\n\n" +
+                "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,” he continues to chuckle, " +
+                "\"I’d almost forgotten the thrill of the hunt.\"\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3286,11 +3298,11 @@ public class Story {
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice4.setText("lit matches"); //Give in (1)
-        ui.choice5.setText("Try again (1)");
+        ui.choice5.setText("Give in");
+        ui.choice4.setText("Try again");
 
-        game.position4 = "litMatches"; // DEATH GAME OVER
-        game.position5 = ""; //???
+        game.position4 = "tryAgain"; // DEATH GAME OVER
+        game.position5 = "giveIn2"; //???
     }
 
     //pet cat ending
@@ -3312,23 +3324,50 @@ public class Story {
 
 
     //Run through hall
-    public void RunThruHall() {
-        ui.mainTextArea.setText("Death by blade");
+    public void tryAgain() {
+        ui.mainTextArea.setText("You struggle to pull a second match from the pack, praying that this one will light.\n\n" +
+                "Shakily, you strike it against the side of the box, and for a moment, " +
+                "a tiny flame ignites at the end of the match, but goes out as quickly as it started. \n\n" +
+                "Angrily, you throw the match onto the ground.\n\n" +
+                "The old man hums at your feeble attempts, \"How cute,\" he sneers.\n\n" +
+                "\"You know, I don’t usually remember the people I use to feed." +
+                " Not very well, anyway. But you,\" he grins," +
+                " \"I don’t see myself forgetting you for the next century at least.\"\n\n" +
+                "You’re getting closer to the old man, and no matter what you do, you can’t seem to break the spell.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
+        ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText(">");
+        ui.choice4.setText("Try one more time");
+        ui.choice5.setText("Give in");
 
-        game.position5 = "theMansion"; // DEATH GAME OVER
+        game.position5 = "oneMoreTime";
+        game.position5 = "giveIn3";
     }
 
     //room 9 - chamber (butler fight scene)
-    public void room9Fight(){
-        ui.mainTextArea.setText("Bye!");
+    public void matchesOneMoreTime(){
+        ui.mainTextArea.setText("You’re just a few feet away from him now, and as a last-ditch effort, " +
+                "you pull a final match from the box.\n\n" +
+                "As you do so, the old man simply chuckles, continuing to pull you towards him," +
+                " \"Do you know how I came to be like this?\" he asks, reaching up his free hand to caress your face.\n\n" +
+                "You ignore his hand, instead working to strike the match against the box. " +
+                "You swipe it once and it doesn't light.\n\n" +
+                "\"I killed my best friend, and drank his blood on the floor of a church, and I still have his portrait" +
+                " hanging in my house,\" he grins, holding your chin so you have no choice but to look into his eyes, " +
+                "\"Your efforts, though precious, will do nothing to me.\"\n\n" +
+                "You desperately swipe the match again, and this time it lights. " +
+                "You dare to hope as the flame continues burning and you throw the match at the old man, " +
+                "hoping that his robe is flammable enough to light.\n\n" +
+                "You watch as his smug grin changes to a look of anger and terror as his robe catches goes in flames." +
+                " It spreads much quicker than you feel it have, " +
+                "and before you know it the old man’s skin itself is burning with brilliant intensity.\n\n" +
+                "You feel yourself regain control of your legs, and don’t bother looking back as you sprint to the door " +
+                "on the other side of the cellar. The old man’s horrific screams echo throughout the cellar as you twist" +
+                " the handle and fling open the door, the early light of dawn bursting into the room as you sprint from the mansion.\n\n" );
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3338,7 +3377,32 @@ public class Story {
 
         ui.choice5.setText(">");
 
-        game.position5 = "theMansion";
+        game.position5 = "matchesEnding";
+    }
+
+    public void matchesEnding() {
+        ui.mainTextArea.setText("As you run, you hear a crashing behind you and look back only to Huxley Manor" +
+                "collapsing in on itself, dust rising high into the air as it implodes.\\n\\n " +
+                "Once you’re a safe distance away, you collapse onto the ground and simply watch as the place " +
+                "completely crumbles into the earth. It’s then that you see a small black cat run from the wreckage " +
+                "and out towards the forest on the edges of the property. It stops, looking back at you a moment, and " +
+                "lets out a small happy chirp. If you didn’t know any better, you would have thought that the meow sounded" +
+                " like a “Thank you”\n\n\n" +
+                "Congratulations! You’ve beaten the game! You’ve won! How does it feel to have unlocked one of the only" +
+                " two endings that aren't deaths? It must feel pretty good. Just so you know, your character went on to" +
+                " find their way off the streets and live a relatively happy life when all was said and done, but they " +
+                "never truly forgot (or got over) that week they spent at Huxley Manor. \n\n\n");
+        ui.choice1.setText("Congrats!!!!!");
+        ui.choice2.setText("");
+        ui.choice3.setText("");
+        ui.choice4.setText("");
+        ui.choice5.setText("");
+
+        game.position1 = "theMansion";
+        game.position2= "";
+        game.position3 = "";
+        game.position4 = "";
+        game.position5 = "";
     }
 
     //room 8 - hallway/stairway (no method for bathroom, just display)
@@ -3422,17 +3486,16 @@ public class Story {
         game.position5 = "";
     }
 
-    //if matches
-    public void matchesCellar() {
+    public void Ending() {
         ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(false);
 
         game.position1 = "theMansion";
-        game.position2= "";
+        game.position2 = "";
         game.position3 = "";
         game.position4 = "";
         game.position5 = "";
@@ -3454,20 +3517,7 @@ public class Story {
         game.position5 = "";
     }
 
-    public void Ending() {
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setVisible(false);
-        ui.choice2.setVisible(false);
-        ui.choice3.setVisible(false);
-        ui.choice4.setVisible(false);
-        ui.choice5.setVisible(false);
 
-        game.position1 = "theMansion";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
-    }
 
     public void toTitle() {
 
