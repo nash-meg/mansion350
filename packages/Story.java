@@ -89,6 +89,7 @@ public class Story {
     ImageIcon MalloryRoom4= new ImageIcon(".//mansion Game//Mallory's Bedroom (4).jpg");
     ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Potion Room (10).jpg");
     ImageIcon NoMap = new ImageIcon(".//mansion Game//No Map.jpg");
+    ImageIcon BlankMap = new ImageIcon(".//mansion Game//blank map.jpg");
 
     // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
@@ -1540,6 +1541,7 @@ public class Story {
 
     //Run
     public void Run() {
+        ui.ImageLabel.setIcon(BlankMap);
         ui.mainTextArea.setText("You try to sprint away from the blade swinging towards you, but as you turn to " +
                 "run, you feel something ram into your side. Turning, pain erupts from your abdomen as you find " +
                 "that a different blade has lodged itself just above your hip, hooking you in place.\n\n" +
@@ -1998,6 +2000,7 @@ public class Story {
             game.position5 = "room10";
         }
         else if(kick){
+            ui.ImageLabel.setIcon(BlankMap);
             ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until " +
                     "you feel the cold wall bump against your back. The monster, seemingly unshaken by your " +
                     "attempts to run, charges at you with fluid, precise movements. You curl into a ball as he " +
@@ -2027,6 +2030,7 @@ public class Story {
             game.position5 = "theMansion";
         }
         else if (ignore){
+            ui.ImageLabel.setIcon(BlankMap);
             ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards " +
                     "until you feel the cold wall bump against your back. The monster, seemingly unshaken by " +
                     "your attempts to run, charges at you with fluid, precise movements. You curl into a ball " +
@@ -2076,6 +2080,7 @@ public class Story {
     }
 
     public void ClimbBookshelf() {
+        ui.ImageLabel.setIcon(BlankMap);
         ui.mainTextArea.setText("You grab hold of the shelf and start attempting to climb it, using each " +
                 "level as a rung to step up. You feel your grip beginning to fail as the beast turns to you, " +
                 "no longer seeming to rush almost as if he's watching to see what will happen. By some miracle " +
@@ -2139,6 +2144,7 @@ public class Story {
             game.position5 = "room10";
         }
         else if (kick){
+            ui.ImageLabel.setIcon(BlankMap);
             ui.mainTextArea.setText("You quickly reach back and grab an armful of books from the shelf then " +
                     "begin pelting them at the monster, aiming for his head. This only seems to anger him. He " +
                     "turns to you, eyes flashing with an intense rage as he lunges at you. Unable to run anywhere " +
@@ -2226,6 +2232,7 @@ public class Story {
             game.position5 = "room10";
         }
         else if (kick){
+            ui.ImageLabel.setIcon(BlankMap);
             ui.mainTextArea.setText("Thinking quickly, you pull a random book off the shelf and flip until you " +
                     "find what looks to be a spell. You've always called yourself a skeptic, but considering " +
                     "there's an 8-foot-tall cat monster attempting to kill you, you decide you can suspend " +
@@ -2272,6 +2279,7 @@ public class Story {
 
     //Use letter opener (if have)
     public void UseLetterOpener() {
+        ui.ImageLabel.setIcon(BlankMap);
         ui.mainTextArea.setText("Running on instinct, you pull the letter-opener from your pocket and hold it out," +
                 " aiming to stab him in the throat when he bends down to claw you. You don't back away as he swings " +
                 "his talons at you, instead lunging right back at him and burying the letter opener deep in his " +
@@ -2397,6 +2405,7 @@ public class Story {
     }
 
     public void yellowPotion() {
+        ui.ImageLabel.setIcon(BlankMap);
         ui.mainTextArea.setText("You pick up the yellow vial, pondering for a moment why it's labeled the " +
                 "way it is before drinking it. \n\n" +
                 "Instantly, your insides begin to burn as if someone's lit a match in your stomach. Your throat " +
@@ -2567,6 +2576,7 @@ public class Story {
     }
 
     public void withShoes() {
+        ui.ImageLabel.setIcon(BlankMap);
         ui.mainTextArea.setText("You cautiously step down the stairs, cringing as it squeaks at every step you " +
                 "take. The thick bottoms of your sneakers clunk against the wood, making it even louder than it " +
                 "already would be without them. Not to mention how dark it is, and how easily you could fall if " +
@@ -2821,6 +2831,7 @@ public class Story {
     }
 
     public void dontPunch(){
+        ui.ImageLabel.setIcon(BlankMap);
         ui.mainTextArea.setText("As you watch him approach, however, you realize that there's nothing you can " +
                 "do to save yourself.\n\n" +
                 "He is some kind of extremely powerful being and you are a measly human who happened to get caught " +
@@ -2951,6 +2962,7 @@ public class Story {
 
     //Hide in the cupboard
     public void HideInCupboard() {
+        ui.ImageLabel.setIcon(BlankMap);
         ui.mainTextArea.setText("You crouch down and try to squeeze yourself into the cupboard, but it's a " +
                 "much tighter fit than you expected. You can get the left half of your body in, but you " +
                 "can't seem to scrunch down enough to get your head inside, which is a problem.\n\n" +
