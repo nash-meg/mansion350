@@ -1,27 +1,76 @@
 package packages;
 import javax.swing.*;
-import java.io.File;
+
+/*****************************************************************************************************
+ *..................This is also a choose-your-own-adventure game.............................
+ * This is a text-based game, so there are very little graphics. If you don’t like reading, sorry bud,
+ * this isn’t the game for you. We want to let our words guide your imagination, and we figure you
+ * know how to scare yourself better than we ever could.
+ *
+ *
+ * @author
+ * Meghan Nash Meghan Nash -->nashmeg@mail.gvsu.edu
+ * Jodi-Ann Currie -->curriej@mail.gvsu.edu
+ * Emmit Miller -->millerg4@mail.gvsu.edu
+ *
+ * @version CIS350.03 FALL 2021
+ *****************************************************************************************************/
 
 public class Story {
-    // Handle all the dialogues
-    // Uses calling from the UI class, map class, Game class,
+    /************ Handle all the dialogues ******************
+    Uses calling from the UI class, map class, Game class
+     ******************************************************/
     Game game;
     UI ui;
     map m;
+
+
+    /** current boolean for shoes */
     boolean shoes;
+
+    /** current boolean for coat */
     boolean coat;
+
+    /** current boolean for purpPotion */
     boolean purpPotion;
+
+    /** current boolean for vodka */
     boolean vodka;
+
+    /** current boolean for water */
     boolean water;
+
+    /** current boolean for matches */
     boolean  matches;
+
+    /** current boolean for letteropener */
     boolean letteropener;
+
+    /** current boolean for shoes */
     boolean littleBook;
+
+    /** current boolean for shoes */
     boolean kick;
+
+    /** current boolean for pet cat */
     boolean pet;
+
+    /** current boolean for ignore cat */
     boolean ignore;
 
-    // Constructor instantiate
+    /*****************************************************************
+     Constructor creates a die of specified size X size pixels
+     @param g story and determine display characteristics
+     @param userInterface story and determine display characteristics
+     @garam mDisplay tory and determine display characteristics
+     *****************************************************************/
+
+
+
     public Story(Game g,UI userInterface, map mDisplay){
+
+        /**initialize the story and determine display characteristics */
+
         game = g;
         ui = userInterface;
         m = mDisplay;
@@ -38,11 +87,11 @@ public class Story {
         coat = false;
     }
 
-    /*********** SHOES *************/
+    /*********** GETTER AND SETTERS SHOE *************/
     public void setShoes(){ shoes = true; }
     public boolean getShoes() { return shoes; }
 
-    /*********** CAT ***********/
+    /*********** GETTERS AND SETTERS CAT ***********/
     public void setPetCat () { pet = true; }
     public void setKickCat () { kick = true; }
     public void setIgnoreCat () { ignore = true; }
@@ -51,29 +100,31 @@ public class Story {
     public boolean getKickCat () { return kick; }
     public boolean getIgnoreCat () { return ignore; }
 
-    /*********** MATCHES ***********/
+    /*********** GETTERS AND SETTERS MATCHES ***********/
     public void setMatches () { matches = true; }
     public boolean getMatches () { return matches; }
 
-    /*********** COAT ***********/
+    /*********** GETTER AND SETTER COAT ***********/
     public void setCoat () { coat = true; }
     public boolean getCoat () { return coat; }
 
-    /*********** BOOK ***********/
+    /*********** GETTER AND SETTER BOOK ***********/
     public void setLittleBook () { littleBook = true; }
     public boolean getBook () { return littleBook; }
 
-    /*********** PURPLE POTION ***********/
+    /*********** GETTER AND SETTER PURPLE POTION ***********/
     public void setPurpPotion () { purpPotion = true; }
     public boolean getPurpPotion () { return purpPotion; }
 
-    /*********** VODKA POTION ***********/
+    /*********** GETTER AND SETTER VODKA POTION ***********/
     public void setVodka () { vodka = true; }
     public boolean getVodka () { return vodka;}
 
-    /********* WATER POTION ***********/
+    /********* GETTER AND SETTER WATER POTION ***********/
     public void setWater () { water = true; }
     public boolean getWater () { return water; }
+
+    /**** For Image object and paths****/
 
     ImageIcon Bedroom1 = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
     ImageIcon CatFightRoom9 = new ImageIcon(".//mansion Game//Cat Fight(9).jpg");
@@ -90,8 +141,11 @@ public class Story {
     ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Potion Room(10).jpg");
     ImageIcon cannibalPlantRoom7 = new ImageIcon(".//mansion Game//cannibal plant room(7).jpg");
 
-    // choosePosition is receiving the parameter(position)
-    // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
+    /******************************************************************
+     * ChoosePosition is receiving the
+     * @param (position) This switch tree with keep track of the methods..............
+     * eg' if the choosePosition was towardsMansion then it will call towardsMansion() method */
+
     public void choosePosition(String position){
         switch(position){
             case "theMansion": theMansion(); break;
@@ -200,6 +254,16 @@ public class Story {
         }
     }
 
+    /******************************************************************
+     * Below are methods that display the plots for the game
+     * Displayed text.................................................
+     * 'eg' ui.mainTextArea.setText("")...............................
+     * This allows you to make a choice...............................
+     * 'eg' ui.choice1.setVisible(false);............................
+     * This set the button we are not using invisible.................
+     * 'eg'  ui.choice4.setText("Begin")********************************/
+
+    // The opening story for the game
     public void theMansion() {
         ui.mainTextArea.setText("______________ Welcome to Sinister Happenings at Huxley Manor " +
                 "______________\n\n" +
@@ -234,9 +298,9 @@ public class Story {
         game.position4 = "towardsMansion"; //Continue to game
         game.position5 = "ExitGame";
     }
-
+    // This is th exit out of the game. Bye!
     public void ExitGame(){
-       // m.showTitleScreen();
+
         ui.mainTextArea.setText("You may now close this window.");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -244,7 +308,7 @@ public class Story {
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(false);
     }
-
+    //You are heading towards the mansion accompany by the Mater
     public void towardsMansion(){
         ui.mainTextArea.setText("The man's hand feels heavy on your back as you are guided up the driveway " +
                 "against your better judgement.\n\n" +
@@ -269,34 +333,39 @@ public class Story {
                 "\"Yes,\" you mutter quietly, too awestruck to properly compliment the place.\n\n" +
                 "The old man smiles, \"Welcome to Huxley Manor,\" he says with a sweeping gesture before " +
                 "guiding you to the thick oaken front door.\n\n");
+        //This set the button we are not using invisible
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
+        // This allows you to make a choice
         ui.choice4.setText("Go inside");
         ui.choice5.setText("Leave");
 
         game.position4 = "GoInsideMansion";
         game.position5= "leaveMansion";
     }
-
+    // Allow you to make a choice
     public void leaveMansion(){
+        // Displayed text
         ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
-
+        // This allows you to make a choice
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
+        // This allows you to make a choice
         ui.choice5.setText(">");
 
         game.position5 = "GoInsideMansion";
     }
 
     public void GoInsideMansion(){
+        // Displayed text
         ui.mainTextArea.setText("The old man claps twice and the doors slowly creak open to reveal an ornate " +
                 "hallway with beautiful vintage-looking wallpaper and dark wooden floors. \n\n" +
                 "As he guides you through, you notice dozens of oil paintings, all of which look to be " +
@@ -307,19 +376,20 @@ public class Story {
                 "still beautiful, are clearly not as well-kept as the rest of the house, and the walls seem to " +
                 "get dustier the further down they go. There's a part of you that wonders what's down there,  " +
                 "what secrets this mansion might hide.\n");
+        // This allows you to make a choice
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
-
+    // This allows you to make a choice
         ui.choice4.setText("Ask about the painting");
         ui.choice5.setText("Ask about the stairs");
 
         game.position4 = "painting";
         game.position5= "stairs";
     }
-
+    // Tell you about the painting
     public void painting(){
         ui.mainTextArea.setText("The old man smiles as he turns to the portrait, an odd sentimentality washing " +
                 "over him.\n\n" +
@@ -361,6 +431,7 @@ public class Story {
         game.position5 = "awkMoment";
     }
 
+    // Tell you about the stairs
     public void stairs(){
         ui.mainTextArea.setText("The old man chuckles a little, \"The only things of interest that I keep down " +
                 "there are my old typewriters.\"\n\n" +
@@ -415,6 +486,7 @@ public class Story {
         game.position5 = "awkMoment";
     }
 
+    // Allows you to talk to Mallory
     public void askMallory(){
         ui.mainTextArea.setText("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags " +
                 "under his eyes being heavy and thick. Too heavy for someone his age.\n\n" +
@@ -454,7 +526,7 @@ public class Story {
 
         game.position5 = "askMalCont";
     }
-
+    // Allows you to talk to Mallory
     public void askMalloryCont(){
         ui.mainTextArea.setText("You watch as Mallory finishes setting the table, and a man with white gloves " +
                 "walks out from the kitchen, seemingly to check that things are going smoothly. \n\n" +
@@ -476,7 +548,7 @@ public class Story {
         game.position4 = "shakeHand";
         game.position5 = "noShakeHand";
     }
-
+    // Allows you to offer to help to Mallory
     public void offerToHelp(){
         ui.mainTextArea.setText("Mallory glances at you with what appears to be genuine fear in his eyes, " +
                 "quickly shaking his head, \"I've got it!\" he says quickly, seemingly loud enough for those " +
@@ -504,6 +576,7 @@ public class Story {
         game.position5 = "noShakeHand";
     }
 
+    // Tell you about an awkward moment in the story
     public void awkMoment() {
         ui.mainTextArea.setText("You stand there in a thick silence, neither of you moving to speak. " +
                 "After a moment, you watch as Mallory goes back to setting the table. He doesn't move the " +
@@ -532,7 +605,7 @@ public class Story {
         game.position4 = "shakeHand";
         game.position5 = "noShakeHand";
     }
-
+    // Allows you to shake hand
     public void shakeHand(){
         ui.mainTextArea.setText("You accept the handshake to find that the butler's grasp is much firmer than " +
                 "you expected. He didn't strike you as the type to hold onto a handshake for dear life.\n\n" +
@@ -566,7 +639,7 @@ public class Story {
 
         game.position5 = "contShakeHand";
     }
-
+    // Allows you to shake hand
     public void contShakeHand(){
         ui.mainTextArea.setText("After a moment, he and the old man emerge with various steaming plates " +
                 "making up an extravagant meal, all of which are arranged on the table. The butler " +
@@ -585,7 +658,7 @@ public class Story {
         game.position4 = "sitNxtToOldman";
         game.position5 = "sitNxtMallory";
     }
-
+    // Allows you to not shake hand
     public void noShakeHand(){
         ui.mainTextArea.setText("You glance apologetically at the butler's hand, not entirely willing to shake " +
                 "it. He holds his hand out for a moment longer, but after a tight-lipped nod from you, he " +
@@ -616,7 +689,7 @@ public class Story {
         game.position4 = "sitNxtToOldman";
         game.position5 = "sitNxtMallory";
     }
-
+    // Allows you to sit next to old man shake hand
     public void sitNxtToOldman(){
         ui.mainTextArea.setText("The butler stays off to the side as you take up a seat next to the old man, " +
                 "who flashes you a toothy grin as you sit down beside him. If you didn't know any better, you " +
@@ -1010,7 +1083,7 @@ public class Story {
 
     //Try the door (leave)
     public void tryDoor() {
-        ui.ImageLabel.setVisible(false);
+        ui.ImageLabel.setIcon(null);
         ui.mainTextArea.setText("You walk to the door and test the knob. You half expect it to somehow explode " +
                 "on contact or light your hand on fire as you go to grab it, but it simply turns harmlessly. No " +
                 "pain, no terror, just a quiet ‘click’ as the door unlatches itself. When you release the " +

@@ -10,26 +10,29 @@ public class map {
     }
 
     public void showTitleScreen() {
-        //you this to access the title name panel in the UI class
-        // this show the title screen
+
+        /**you this to access the title name panel in the UI class
+        this show the title screen*/
         ui.titleName.setVisible(true);
         ui.startingButton.setVisible(true);
 
-        //At the same time it is to hide game screen stop
-        // this mean
+        /**At the same time it is to hide game screen stop
+         * this mean*/
         ui.mainText.setVisible(false);
         ui.chooseButton.setVisible(false);
 
     }
 
     public void toTheMansion() {
-        //you this to access the title name panel in the UI class
-        // this hide the title screen
+        /**This is to access the title name panel in the UI class
+         * this hide the title screen*/
+
         ui.titleName.setVisible(false);
         ui.startingButton.setVisible(false);
 
-        //At the same time it is to show game screen
-        // this mean
+        /**At the same time it is to show game screen
+        this mean*/
+
         ui.mainText.setVisible(true);
         ui.chooseButton.setVisible(true);
 
