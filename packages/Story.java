@@ -2,9 +2,16 @@ package packages;
 import javax.swing.*;
 import java.io.File;
 
+/*****************************************************************
+ This class is contains the overarching plot and subplots
+ of our story. It also contains our map images and implements
+ all of our buttons.
+
+ @author Emmit Miller, Meghan Nash, Jodi-Ann Curie
+ @version Fall 2021
+ *****************************************************************/
 public class Story {
-    // Handle all the dialogues
-    // Uses calling from the UI class, map class, Game class,
+    /** Handles all the dialogues, calls from the UI class, map class, Game class */
     Game game;
     UI ui;
     map m;
@@ -20,7 +27,7 @@ public class Story {
     boolean pet;
     boolean ignore;
 
-    // Constructor instantiate
+    /** Constructor instantiation, start everything at false */
     public Story(Game g,UI userInterface, map mDisplay){
         game = g;
         ui = userInterface;
@@ -38,11 +45,12 @@ public class Story {
         coat = false;
     }
 
-    /*********** SHOES *************/
+
+    /** Setters and getters for shoes */
     public void setShoes(){ shoes = true; }
     public boolean getShoes() { return shoes; }
 
-    /*********** CAT ***********/
+    /** Setters and getters for cat */
     public void setPetCat () { pet = true; }
     public void setKickCat () { kick = true; }
     public void setIgnoreCat () { ignore = true; }
@@ -51,15 +59,15 @@ public class Story {
     public boolean getKickCat () { return kick; }
     public boolean getIgnoreCat () { return ignore; }
 
-    /*********** MATCHES ***********/
+    /** Setters and getters for matches */
     public void setMatches () { matches = true; }
     public boolean getMatches () { return matches; }
 
-    /*********** COAT ***********/
+    /** Setters and getters for coat */
     public void setCoat () { coat = true; }
     public boolean getCoat () { return coat; }
 
-    /*********** BOOK ***********/
+    /** Setters and getters for book */
     public void setLittleBook () { littleBook = true; }
     public boolean getBook () { return littleBook; }
 
