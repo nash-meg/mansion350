@@ -1,27 +1,78 @@
 package packages;
 import javax.swing.*;
-import java.io.File;
+
+
+/*****************************************************************************************************
+ *..................This is also a choose-your-own-adventure game.............................
+ * This is a text-based game, so there are very little graphics. If you don’t like reading, sorry bud,
+ * this isn’t the game for you. We want to let our words guide your imagination, and we figure you
+ * know how to scare yourself better than we ever could.
+ *
+ *
+ * @author
+ * Meghan Nash Meghan Nash -->nashmeg@mail.gvsu.edu
+ * Jodi-Ann Currie -->curriej@mail.gvsu.edu
+ * Emmit Miller -->millerg4@mail.gvsu.edu
+ *
+ * @version CIS350.03 FALL 2021
+ *****************************************************************************************************/
+
 
 public class Story {
-    // Handle all the dialogues
-    // Uses calling from the UI class, map class, Game class,
+    /************ Handle all the dialogues ******************
+     Uses calling from the UI class, map class, Game class
+     ******************************************************/
     Game game;
     UI ui;
     map m;
+
+
+
+    /** current boolean for shoes */
     boolean shoes;
+
+    /** current boolean for coat */
     boolean coat;
+
+    /** current boolean for purpPotion */
     boolean purpPotion;
+
+    /** current boolean for vodka */
     boolean vodka;
+
+    /** current boolean for water */
     boolean water;
-    boolean matches;
+
+    /** current boolean for matches */
+    boolean  matches;
+
+    /** current boolean for letteropener */
     boolean letteropener;
+
+    /** current boolean for shoes */
     boolean littleBook;
+
+    /** current boolean for shoes */
     boolean kick;
+
+    /** current boolean for pet cat */
     boolean pet;
+
+    /** current boolean for ignore cat */
     boolean ignore;
 
-    // Constructor instantiate
+    /*****************************************************************
+     Constructor creates a die of specified size X size pixels
+     @param g story and determine display characteristics
+     @param userInterface story and determine display characteristics
+     @garam mDisplay tory and determine display characteristics
+     *****************************************************************/
+
+
     public Story(Game g,UI userInterface, map mDisplay){
+
+        /**initialize the story and determine display characteristics */
+
         game = g;
         ui = userInterface;
         m = mDisplay;
@@ -92,10 +143,10 @@ public class Story {
     ImageIcon BlankMap = new ImageIcon(".//mansion Game//blank map.jpg");
 
 
-
-
-    // choosePosition is receiving the parameter(position)
-    // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
+    /******************************************************************
+     * ChoosePosition is receiving the
+     * @param (position) This switch tree with keep track of the methods..............
+     * eg' if the choosePosition was towardsMansion then it will call towardsMansion() method */
     public void choosePosition(String position){
         switch(position){
             // prologue
@@ -213,7 +264,16 @@ public class Story {
 
         }
     }
+    /******************************************************************
+     * Below are methods that display the plots for the game
+     * Displayed text.................................................
+     * 'eg' ui.mainTextArea.setText("")...............................
+     * This allows you to make a choice...............................
+     * 'eg' ui.choice1.setVisible(false);............................
+     * This set the button we are not using invisible.................
+     * 'eg'  ui.choice4.setText("Begin")********************************/
 
+    // The opening story for the game
     public void theMansion() {
         ui.mainTextArea.setText("______________ Welcome to Sinister Happenings at Huxley Manor " +
                 "______________\n\n" +
