@@ -2635,23 +2635,24 @@ public class Story {
     }
 
     public void withNoShoes() {
-        ui.mainTextArea.setText("You slowly make your way down the stairs, cringing at every creak of the steps." +
-                " Even so, your socks manage to muffle the noise of your footsteps, and if you pause for long enough between squeaks," +
-                " you find you’re able to make it sound almost like the natural creaking of the old mansion. " +
-                "Unfortunately, it takes you forever to get down the stairs because of it, but you figure it’s better safe than sorry.\n\n" +
-                "Finally, you make it to the bottom of the stairs and cautiously step out into the kitchen. " +
-                "It’s rather dark, but the light from the moon outside is enough to generally let you see. " +
-                "Your eyes have become rather accustomed to the darkness at this point anyway.\n\n" +
-                "The kitchen is a room that you’ve gotten to know rather well in your time here." +
-                " It’s small for a kitchen in a mansion, but beautiful nonetheless. " +
-                "The dark wooden cabinets look lovely alongside the copper appliances and marble countertops.\n\n" +
+        ui.mainTextArea.setText("You slowly make your way down the stairs, cringing at every creak of the steps. " +
+                "Even so, your socks manage to muffle the noise of your footsteps, and if you pause for long " +
+                "enough between squeaks, you find you’re able to make it sound almost like the natural creaking " +
+                "of the old mansion. Unfortunately, it takes you forever to get down the stairs because of it, " +
+                "but you figure it’s better safe than sorry.\n\n" +
+                "Finally, you make it to the bottom of the stairs and cautiously step out into the kitchen. It’s " +
+                "rather dark, but the light from the moon outside is enough to generally let you see. Your " +
+                "eyes have become rather accustomed to the darkness at this point anyway.\n\n" +
+                "The kitchen is a room that you’ve gotten to know rather well in your time here. It’s small for " +
+                "a kitchen in a mansion, but beautiful nonetheless. The dark wooden cabinets look lovely " +
+                "alongside the copper appliances and marble countertops.\n\n" +
                 "Your mind immediately goes to the knife drawer. Perhaps there’s something in there you could use.\n\n" +
-                "Or perhaps you might find something of use in cabinets where the plates and bowls are kept." +
-                " It isn’t likely, but it’s possible.\n\n" +
-                "It’s then that you notice a bloody hand print on the handle of the fridge. " +
-                "Did the old man really not clean up the blood before getting a midnight snack?\n\n" +
-                "You scoff, trying not to think too much about it. " +
-                "If you think about the reason for all the blood, it means you have to think about Mallory, and the fact that he’s gone.\n\n" +
+                "Or perhaps you might find something of use in cabinets where the plates and bowls are kept. " +
+                "It isn’t likely, but it’s possible.\n\n" +
+                "It’s then that you notice a bloody hand print on the handle of the fridge. Did the old man " +
+                "really not clean up the blood before getting a midnight snack?\n\n" +
+                "You scoff, trying not to think too much about it. If you think about the reason for all the " +
+                "blood, it means you have to think about Mallory, and the fact that he’s gone.\n\n" +
                 "What do you do?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(true);
@@ -2673,18 +2674,18 @@ public class Story {
         else if (!purpPotion){
             game.position5 = "withoutPotion";
         }
-
     }
 
     public void knifeDrawer() {
         ui.mainTextArea.setText("You quietly make your way over to the knife drawer and slide it open.\n\n" +
-                "You know that a knife likely won’t do much to whatever kind of being the old man really is, " +
-                "but you also figure it couldn't hurt, right?\n\n" +
-                "As you open the drawer, however, you find that it’s empty, despite that  " +
-                "it wasn't empty last time you put something in there before heading to bed. " +
-                "You notice a note at the bottom of the drawer that reads in large lettering: \n\n" +
-                "“NICE TRY, MALLORY”\n\n" +
-                "You stare at the note for a moment before drawing in a long, shaky breath and closing the drawer.\n\n" +
+                "You know that a knife likely won’t do much to whatever kind of being the old man really is, but " +
+                "you also figure it couldn't hurt, right?\n\n" +
+                "As you open the drawer, however, you find that it’s empty, despite that  it wasn't empty last " +
+                "time you put something in there before heading to bed. You notice a note at the bottom of the " +
+                "drawer that reads in large lettering: \n\n" +
+                "\"NICE TRY, MALLORY\"\n\n" +
+                "You stare at the note for a moment before drawing in a long, shaky breath and closing the " +
+                "drawer.\n\n" +
                 "You had no idea how meticulously he must have planned for Mallory’s murder.\n\n" +
                 "Shaken, you turn back to the room.\n\n");
         ui.choice1.setVisible(false);
@@ -2705,18 +2706,20 @@ public class Story {
         else if (!purpPotion){
             game.position5 = "withoutPotion";
         }
-
     }
 
     public void CheckCabinets() {
-        ui.mainTextArea.setText("You open the cabinets knowing that there probably won’t be much of use in them, but figure it can’t hurt to check.\n\n" +
+        ui.mainTextArea.setText("You open the cabinets knowing that there probably won’t be much of use in " +
+                "them, but figure it can’t hurt to check.\n\n" +
                 "You find the usual: plates, cups, bowls, etc. \n\n" +
-                "You also find a skull that, up until that point, you had assumed to be decorative." +
-                " It had been there since you moved in, and seeing as the old man seemed to have a taste for morbid decor, " +
-                "you hadn't questioned it. Now, though, after everything you’ve seen, you can’t help but wonder whether it’s real.\n\n" +
-                "It’s not a pure white - rather a dirty yellow that’s darker in some areas. " +
-                "It’s missing a tooth, and some of the ones it does have are chipped.\n\n" +
-                "The longer you stare at it, the more real it looks, and the more you feel like you’re going to be sick. \n\n" +
+                "You also find a skull that, up until that point, you had assumed to be decorative. It had been " +
+                "there since you moved in, and seeing as the old man seemed to have a taste for morbid decor, " +
+                "you hadn't questioned it. Now, though, after everything you’ve seen, you can’t help but wonder " +
+                "whether it’s real.\n\n" +
+                "It’s not a pure white - rather a dirty yellow that’s darker in some areas. It’s missing a tooth, " +
+                "and some of the ones it does have are chipped.\n\n" +
+                "The longer you stare at it, the more real it looks, and the more you feel like you’re going to " +
+                "be sick. \n\n" +
                 "You shake yourself, turning back to the rest of the room.\n\n" +
                 "You don’t have time for thoughts like that.\n\n");
         ui.choice1.setVisible(false);
@@ -2743,20 +2746,20 @@ public class Story {
     public void CheckFridge() {
         ui.mainTextArea.setText("You cautiously approach the fridge, staring at the bloody handprint. \n\n" +
                 "The old man doesn't strike you as the kind to be so careless.\n\n" +
-                "You pause a moment, working up the courage to open the fridge door and look inside," +
-                " terrified of what you might find. \n\n" +
-                "Finally, drawing in a breath, you open the door. " +
-                "You flinch as the fridge light jars your eyes for a moment. " +
-                "You always forget that there’s a light in there.\n\n" +
-                "When your eyes adjust, it at first looks as though there’s nothing out of the ordinary. " +
-                "It’s the usual food items and milks and cheeses and such. " +
-                "You likely wouldn't have noticed the tiny droplets of red around the jar of beet juice if you hadn't been looking. " +
-                "Nor the handprint on the outside of it. " +
-                "Nor the thick, partially-congealed droplets overflowing from the top despite the lid.\n\n" +
+                "You pause a moment, working up the courage to open the fridge door and look inside, terrified " +
+                "of what you might find. \n\n" +
+                "Finally, drawing in a breath, you open the door. You flinch as the fridge light jars your " +
+                "eyes for a moment. You always forget that there’s a light in there.\n\n" +
+                "When your eyes adjust, it at first looks as though there’s nothing out of the ordinary. It’s " +
+                "the usual food items and milks and cheeses and such. You likely wouldn't have noticed the " +
+                "tiny droplets of red around the jar of beet juice if you hadn't been looking. Nor the " +
+                "handprint on the outside of it. Nor the thick, partially-congealed droplets overflowing " +
+                "from the top despite the lid.\n\n" +
                 "You continue to stare at the large glass jar as realization horrifyingly dawns.\n\n" +
                 "That’s not beet juice.\n\n" +
-                "The thick red substance that he drank with every meal and claimed ‘kept his mind sharp’ was not beet juice.\n\n" +
-                "It wasn't full when you left the kitchen before going to bed. In fact, it had been running low. \n\n" +
+                "The thick red substance that he drank with every meal and claimed ‘kept his mind sharp’ was " +
+                "not beet juice.\n\n" +
+                "It wasn't full when you left the kitchen before going to bed. In fact, it had been running low.\n\n" +
                 "You draw in a breath to try to steady yourself. You feel like you’re going to be sick.\n\n" );
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2781,14 +2784,17 @@ public class Story {
 
     //Leave kitchen (no potion)
     public void withoutPotion() {
-        ui.mainTextArea.setText("You decide you’ve spent enough time in the kitchen, and begin to make your way towards the front entrance. " +
-                "You’re almost out now. All you need to do is get to the main door, open it, then run.\n\n" +
-                "Quietly as you can, you slowly sneak through the dining room, and past the cellar stairs." +
-                " As you pass, you smell a faint but pungent scent coming from the bottom of the stairs. \n\n" +
-                "You clench your jaw and creep past them, praying that the old man stays down there long enough for you to escape. \n\n" +
-                "Your heart begins to race as you pass the entrance to the living room. You’re almost there. Just a few more steps…\n\n" +
-                "You stifle a laugh as your palm lands on the handle of the door. Drawing in a breath, you unlock the door and push down on the ornate iron handle," +
-                " preparing to pull it open--\n\n" +
+        ui.mainTextArea.setText("You decide you’ve spent enough time in the kitchen, and begin to make your " +
+                "way towards the front entrance. You’re almost out now. All you need to do is get to the main " +
+                "door, open it, then run.\n\n" +
+                "Quietly as you can, you slowly sneak through the dining room, and past the cellar stairs. As " +
+                "you pass, you smell a faint but pungent scent coming from the bottom of the stairs. \n\n" +
+                "You clench your jaw and creep past them, praying that the old man stays down there long enough " +
+                "for you to escape. \n\n" +
+                "Your heart begins to race as you pass the entrance to the living room. You’re almost there. Just " +
+                "a few more steps...\n\n" +
+                "You stifle a laugh as your palm lands on the handle of the door. Drawing in a breath, you " +
+                "unlock the door and push down on the ornate iron handle, preparing to pull it open--\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2806,14 +2812,14 @@ public class Story {
                 "You begin to frantically tug at the handle, pulling and pushing with all your might.\n\n" +
                 "\"No!\" you shout, your anguish overriding all logic\n\n" +
                 "You didn’t make it this far only for it to end like this!\n\n" +
-                "You don’t notice the quiet steps behind you of slippers on the cellar stairs, " +
-                "nor their pitter-patter on the hardwood floor as the old man approaches you. \n\n" +
-                "You do, however, notice the slow clapping as the old man patronizingly applauds you," +
-                " \"Very good,\" he coos, \"They almost never make it to the door.\"\n\n" +
+                "You don’t notice the quiet steps behind you of slippers on the cellar stairs, nor their " +
+                "pitter-patter on the hardwood floor as the old man approaches you. \n\n" +
+                "You do, however, notice the slow clapping as the old man patronizingly applauds you, \"Very " +
+                "good,\" he coos, \"They almost never make it to the door.\"\n\n" +
                 "Your body turns against your will, and in a moment you’re facing the old man.\n\n" +
                 "You can still move your arms, but your legs refuse to run. \n\n" +
-                "As the old man slowly approaches you, clearly taking his time, you try to think of something - anything - " +
-                "you can do to save yourself.\n\n" +
+                "As the old man slowly approaches you, clearly taking his time, you try to think of something - " +
+                "anything - you can do to save yourself.\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2834,24 +2840,27 @@ public class Story {
         game.position3 = "UseSpellBook";
         game.position4 = "PunchOldMan";
         game.position5 = "dontPunch";
-
     }
 
     public void dontPunch(){
-        ui.mainTextArea.setText("As you watch him approach, however, you realize that there's nothing you can do to save yourself.\n\n" +
-                "He is some kind of extremely powerful being and you are a measly human who happened to get caught up in his perverted game.\n\n" +
+        ui.mainTextArea.setText("As you watch him approach, however, you realize that there's nothing you can " +
+                "do to save yourself.\n\n" +
+                "He is some kind of extremely powerful being and you are a measly human who happened to get caught " +
+                "up in his perverted game.\n\n" +
                 "Perhaps it's better this way, you decide. At least now it'll likely be quick.\n\n"+
-                "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out from the kitchen with great urgency.\n\n" +
+                "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out " +
+                "from the kitchen with great urgency.\n\n" +
                 "For a moment, a part of you begins to hope that he might-- \n\n" +
                 "The old man lets out an annoyed sigh, snapping his fingers, “You stay there, Silas.”\n\n" +
                 "The butler freezes as the old man continues, “I won’t have your sympathy getting in my way.”\n\n" +
-                "The old man turns his attention back to you and places a hand on your cheek, still grinning wildly." +
-                " You watch as he passes his tongue over his teeth, drawing in a hissing breath before he snaps his fingers. " +
-                "In an instant your legs buckle under you and you fall to the ground, smashing your head on the wall as everything goes black.\n\n" +
+                "The old man turns his attention back to you and places a hand on your cheek, still grinning " +
+                "wildly. You watch as he passes his tongue over his teeth, drawing in a hissing breath before " +
+                "he snaps his fingers. In an instant your legs buckle under you and you fall to the ground, " +
+                "smashing your head on the wall as everything goes black.\n\n" +
                 "\n" +
-                "Damn, you really just gave up, huh? Now, you’ve discovered one of the many ways to die in this game!" +
-                " It IS beatable, so since you’ve already gotten this far, I suggest you restart the game and try again! " +
-                "Don't give up, pal!\n\n" +
+                "Damn, you really just gave up, huh? Now, you’ve discovered one of the many ways to die in this " +
+                "game! It IS beatable, so since you’ve already gotten this far, I suggest you restart the game " +
+                "and try again! Don't give up, pal!\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2864,27 +2873,32 @@ public class Story {
         game.position5 = "theMansion"; // DEATH GAME OVER
     }
     public void PunchOldMan() {
-        ui.mainTextArea.setText("Unsure of what else to do, " +
-                "you wait for the old man to get close as he continues rambling about how he had hoped you would “last longer”, as he puts it. \n\n" +
-                "When he’s within arms reach, you waste no time raising your fist and swing it at the old man, landing squarely on his left eye.\n\n" +
-                "He staggers backwards and for a moment, clutching his face, and in an instant you can move again. \n\n" +
+        ui.mainTextArea.setText("Unsure of what else to do, you wait for the old man to get close as he continues " +
+                "rambling about how he had hoped you would “last longer”, as he puts it. \n\n" +
+                "When he’s within arms reach, you waste no time raising your fist and swing it at the old man, " +
+                "landing squarely on his left eye.\n\n" +
+                "He staggers backwards and for a moment, clutching his face, and in an instant you can move " +
+                "again. \n\n" +
                 "However, triumph is short-lived.\n\n" +
-                "As quickly as you regain mobility, you lose it again, and this time your entire body goes stiff.\n\n" +
+                "As quickly as you regain mobility, you lose it again, and this time your entire body goes " +
+                "stiff.\n\n" +
                 "The old man, still facing away from you, begins...laughing.\n\n" +
-                "It starts out quiet, but grows until it echoes through the otherwise silent halls of the mansion.\n\n" +
+                "It starts out quiet, but grows until it echoes through the otherwise silent halls of the " +
+                "mansion.\n\n" +
                 "He turns to you, grinning, “You’re going to be fun.”\n\n" +
-                "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out from the kitchen with great urgency. \n\n" +
+                "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out " +
+                "from the kitchen with great urgency. \n\n" +
                 "For a moment, a part of you begins to hope that he might-- \n\n" +
                 "The old man lets out an annoyed sigh, snapping his fingers, “You stay there, Silas.”\n\n" +
                 "The butler freezes as the old man continues, “I won’t have your sympathy getting in my way.”\n\n" +
-                "The old man places a hand on your cheek, still grinning wildly. " +
-                "You watch as he passes his tongue over his teeth, drawing in a hissing breath before he snaps his fingers." +
-                " In an instant your legs buckle under you and you fall to the ground, smashing your head on the wall as everything goes black.\n\n" +
+                "The old man places a hand on your cheek, still grinning wildly. You watch as he passes his " +
+                "tongue over his teeth, drawing in a hissing breath before he snaps his fingers. In an instant " +
+                "your legs buckle under you and you fall to the ground, smashing your head on the wall as " +
+                "everything goes black.\n\n" +
                 "\n" +
-                "Close, but no cigar! You’ve instead discovered one of the many ways to die in this game! " +
-                "It IS beatable, so since you’ve already gotten this far, I suggest you restart the game and try again! " +
-                "Maybe next time, you’ll be able to make it out!\n\n" +
-                "\n");
+                "Close, but no cigar! You’ve instead discovered one of the many ways to die in this game! It " +
+                "IS beatable, so since you’ve already gotten this far, I suggest you restart the game and try " +
+                "again! Maybe next time, you’ll be able to make it out!\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -2899,22 +2913,25 @@ public class Story {
     public void UseSpellBook() {
         ui.mainTextArea.setText("Suddenly, you remember the pocket guide you found in the room upstairs. " +
                 "In a flurry of frantic motion, you quickly grab it from your pocket and open to a random page.\n\n" +
-                "\"Invisibility of Sight And Presence\" the header reads. " +
-                "You begin reading the spell aloud as fast as you can, throwing pronunciation to the wind.\n\n" +
-                "You hear the old man laugh, “That’s adorable. You really think I’d keep a book of spells in this house that could harm me?”\n\n" +
+                "\"Invisibility of Sight And Presence\" the header reads. You begin reading the spell aloud as " +
+                "fast as you can, throwing pronunciation to the wind.\n\n" +
+                "You hear the old man laugh, “That’s adorable. You really think I’d keep a book of spells in " +
+                "this house that could harm me?”\n\n" +
                 "Your heart begins to race as you finish the first half of the page.\n\n" +
-                "\"Go on,” the old man taunts,\" finish your little incantation." +
-                "See what it does.” You hear an amused scoff as he seemingly waits for you to finish reading. \n\n" +
+                "\"Go on,\" the old man taunts,\" finish your little incantation. See what it does.\" You " +
+                "hear an amused scoff as he seemingly waits for you to finish reading. \n\n" +
                 "You can’t hide the smile that creeps across your face as the old man’s pride buys you time.\n\n" +
                 "As you say the last word, you watch your body disappear as the old man’s eyes widen. \n\n" +
-                "You feel that your legs are able to move again, and quickly you drop the book, unsure if it turned invisible with you, bolting past the old man.\n\n" +
-                "You’re running on instinct now, and for a moment you simply stand there in the dining room, unsure of where to go.\n\n" +
+                "You feel that your legs are able to move again, and quickly you drop the book, unsure if it " +
+                "turned invisible with you, bolting past the old man.\n\n" +
+                "You’re running on instinct now, and for a moment you simply stand there in the dining room, " +
+                "unsure of where to go.\n\n" +
                 "Then the stairs catch your eye. \n\n" +
-                "You don’t want to go down into the cellar, but you remember the butler saying something about a door down there, " +
-                "and perhaps that one might be your ticket out of here." +
-                " At the very least, there’s the possibility that the old man will check upstairs first.\n\n" +
-                "Gathering courage, you sprint down the cellar stairs as the old man angrily rounds the corner," +
-                " making surprisingly little noise as you do so. About halfway down the stairs, " +
+                "You don’t want to go down into the cellar, but you remember the butler saying something about a " +
+                "door down there, and perhaps that one might be your ticket out of here. At the very least, " +
+                "there’s the possibility that the old man will check upstairs first.\n\n" +
+                "Gathering courage, you sprint down the cellar stairs as the old man angrily rounds the corner, " +
+                "making surprisingly little noise as you do so. About halfway down the stairs, " +
                 "you watch as the invisibility begins to wear off, and you become corporeal again. \n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2929,16 +2946,17 @@ public class Story {
 
     //Leave kitchen (potion)
     public void withPotion() {
-        ui.mainTextArea.setText("You move to leave the kitchen and head towards the front entrance - " +
-                "to freedom - when your eye catches something in the decorative mirror on the wall. " +
-                "It’s an image of the old man, stepping up from the cellar stairs in the dining room and turning towards the kitchen.\n\n" +
+        ui.mainTextArea.setText("You move to leave the kitchen and head towards the front entrance - to freedom - " +
+                "when your eye catches something in the decorative mirror on the wall. It’s an image of the old " +
+                "man, stepping up from the cellar stairs in the dining room and turning towards the kitchen.\n\n" +
                 "You hear your heart begin to pound in your chest as you see his shadow advancing down the hallway. " +
                 "Desperately, you glance around the room for a place to hide.\n\n" +
-                "The pantry is definitely big enough for you to fit and closes rather silently, but it’s also a pretty obvious hiding spot. \n\n" +
-                "You could also try hiding in the cupboard under the sink, but you’re honestly not sure if you’ll be able to fit.\n\n" +
+                "The pantry is definitely big enough for you to fit and closes rather silently, but it’s also a " +
+                "pretty obvious hiding spot. \n\n" +
+                "You could also try hiding in the cupboard under the sink, but you’re honestly not sure if " +
+                "you’ll be able to fit.\n\n" +
                 "You hear him approaching and realize you need to make a decision - now. \n\n" +
-                "What do you do?\n" +
-                "\n");
+                "What do you do?");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -2954,19 +2972,19 @@ public class Story {
 
     //Hide in the cupboard
     public void HideInCupboard() {
-        ui.mainTextArea.setText("You crouch down and try to squeeze yourself into the cupboard," +
-                " but it’s a much tighter fit than you expected. " +
-                "You can get the left half of your body in, but you can’t seem to scrunch down enough to get your head inside, which is a problem.\n\n" +
-                "You watch fearfully as the old man enters the room as you sit there, only half inside your hiding spot. \n\n" +
+        ui.mainTextArea.setText("You crouch down and try to squeeze yourself into the cupboard, but it’s a " +
+                "much tighter fit than you expected. You can get the left half of your body in, but you " +
+                "can’t seem to scrunch down enough to get your head inside, which is a problem.\n\n" +
+                "You watch fearfully as the old man enters the room as you sit there, only half inside your " +
+                "hiding spot. \n\n" +
                 "He stops, looking directly at you and laughing, “I see you're not one for hide and seek.”\n\n" +
                 "You feel your muscles tighten against your will, and your body begins to stand.\n\n" +
-                "Once you’re on your feet, the old man smiles. " +
-                "With a flick of his hand, your neck dislodges from your spine and everything goes black.\n\n" +
+                "Once you’re on your feet, the old man smiles. With a flick of his hand, your neck dislodges " +
+                "from your spine and everything goes black.\n\n" +
                 "\n" +
-                "Yeah, maybe next time try hiding somewhere you know you can fit. " +
-                "But on the bright side, you’ve discovered one of the many ways to die in this game! I" +
-                "t IS possible to beat it, though, so if you want you can restart the game and try again!\n\n" +
-                "\n");
+                "Yeah, maybe next time try hiding somewhere you know you can fit. But on the bright side, you’ve " +
+                "discovered one of the many ways to die in this game! It IS possible to beat it, though, so if " +
+                "you want you can restart the game and try again!\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -2980,24 +2998,28 @@ public class Story {
 
     //Hide in the pantry
     public void HideInPantry() {
-        ui.mainTextArea.setText("You tiptoe into the pantry and close it as silently as possible." +
-                " There’s a knob on both sides of the door, so doing so is rather easy. " +
-                "You sit there, breathing heavily among the snacks and dry goods, praying that he doesn't find you.\n\n" +
-                "Light begins to flood under the crack between the door and the tile as the old man flicks on the kitchen light.\n\n" +
-                "His shadow passes under the door as well, and at first you think he’s going to the fridge, seeing as it’s right in front of the pantry.\n\n " +
+        ui.mainTextArea.setText("You tiptoe into the pantry and close it as silently as possible. There’s a knob " +
+                "on both sides of the door, so doing so is rather easy. You sit there, breathing heavily among " +
+                "the snacks and dry goods, praying that he doesn't find you.\n\n" +
+                "Light begins to flood under the crack between the door and the tile as the old man flicks " +
+                "on the kitchen light.\n\n" +
+                "His shadow passes under the door as well, and at first you think he’s going to the fridge, " +
+                "seeing as it’s right in front of the pantry.\n\n " +
                 "But there is no sound of the fridge opening.\n\n" +
                 "Instead, the shadow simply stops in front of the pantry.\n\n" +
-                "You can hear him breathing on the other side of the door, and you do your best to muffle your own panicked breaths." +
-                " Your heart pounds so loudly in your chest that part of you is scared he’ll hear. \n\n" +
+                "You can hear him breathing on the other side of the door, and you do your best to muffle your " +
+                "own panicked breaths. Your heart pounds so loudly in your chest that part of you is scared " +
+                "he’ll hear. \n\n" +
                 "You hear the jingle of knob, and watch as it slowly starts to turn.\n\n" +
                 "You close your eyes, trying to hold back tears as you will the knob to stop turning.\n\n" +
-                "And then suddenly there’s the sound of the knob snapping back into place as your eyes fly back open. The door is still closed. \n\n" +
-                "There’s a thump from upstairs, and you watch as the old man’s shadow quickly turns, " +
-                "then the stairs begin to creak as he presumably climbs them, flicking off the light as he leaves.\n\n" +
-                "You wait a moment to be sure he’s gone before opening the pantry door ever so slightly and peeking out," +
-                " still somewhat in disbelief that you weren't found.  \n\n" +
-                "Slowly you make your way out of the kitchen and start heading towards the door to the front entrance.\n" +
-                "\n");
+                "And then suddenly there’s the sound of the knob snapping back into place as your eyes fly back " +
+                "open. The door is still closed. \n\n" +
+                "There’s a thump from upstairs, and you watch as the old man’s shadow quickly turns, then the " +
+                "stairs begin to creak as he presumably climbs them, flicking off the light as he leaves.\n\n" +
+                "You wait a moment to be sure he’s gone before opening the pantry door ever so slightly and " +
+                "peeking out, still somewhat in disbelief that you weren't found.  \n\n" +
+                "Slowly you make your way out of the kitchen and start heading towards the door to the front " +
+                "entrance.");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -3010,18 +3032,18 @@ public class Story {
     }
 
     public void hideInPantryCont(){
-        ui.mainTextArea.setText("Just as you begin to creep through the dining room, however, you hear a squeak from the stairs and realize that the old man is coming back down. \n\n" +
+        ui.mainTextArea.setText("Just as you begin to creep through the dining room, however, you hear a squeak " +
+                "from the stairs and realize that the old man is coming back down. \n\n" +
                 "For a moment, you freeze. \n\n" +
-                "You know you won’t be able to make it all the way down the hallway to the door without him catching you. " +
-                "Not when you’re still this close to the kitchen. " +
-                "What’s more, you’re not about to test your luck hiding a second time." +
-                " Not that there’s really anywhere you could hide in the dining room anyway.\n\n" +
-                "Desperate, your attention turns to the cellar stairs. " +
-                "You know that there’s also a door at the back of the cellar, and those stairs don’t creak.\n\n" +
+                "You know you won’t be able to make it all the way down the hallway to the door without him " +
+                "catching you. Not when you’re still this close to the kitchen. What’s more, you’re not about " +
+                "to test your luck hiding a second time. Not that there’s really anywhere you could hide in the " +
+                "dining room anyway.\n\n" +
+                "Desperate, your attention turns to the cellar stairs. You know that there’s also a door at the " +
+                "back of the cellar, and those stairs don’t creak.\n\n" +
                 "Drawing in a breath, you hazard one last glance towards the kitchen.\n\n" +
                 "Here goes nothing.\n\n" +
-                "With that, you descend the darkened stairs down to the cellar.\n\n" +
-                "\n");
+                "With that, you descend the darkened stairs down to the cellar.");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -3032,7 +3054,6 @@ public class Story {
 
         game.position5 = "TheCellar";
     }
-
 
     //TheCellar
     public void TheCellar() {
