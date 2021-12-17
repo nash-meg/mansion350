@@ -313,7 +313,7 @@ public class Story {
     }
 
     /*****************************************************************
-     Intro method with the directions and welcome (chance to exit game)
+     Fake leave method, not allowed to leave game at this point
      *****************************************************************/
     public void leaveMansion(){
         ui.mainTextArea.setText("The thought crosses your mind to turn back, but you decide against it.");
@@ -329,6 +329,9 @@ public class Story {
         game.position5 = "GoInsideMansion";
     }
 
+    /*****************************************************************
+     Initial welcome inside mansion
+     *****************************************************************/
     public void GoInsideMansion(){
         ui.mainTextArea.setText("The old man claps twice and the doors slowly creak open to reveal an ornate " +
                 "hallway with beautiful vintage-looking wallpaper and dark wooden floors. \n\n" +
@@ -353,6 +356,9 @@ public class Story {
         game.position5= "stairs";
     }
 
+    /*****************************************************************
+     Asking the old man about the painting
+     *****************************************************************/
     public void painting(){
         ui.mainTextArea.setText("The old man smiles as he turns to the portrait, an odd sentimentality washing " +
                 "over him.\n\n" +
@@ -394,6 +400,9 @@ public class Story {
         game.position5 = "awkMoment";
     }
 
+    /*****************************************************************
+     Asking the old man about the stairs
+     *****************************************************************/
     public void stairs(){
         ui.mainTextArea.setText("The old man chuckles a little, \"The only things of interest that I keep down " +
                 "there are my old typewriters.\"\n\n" +
@@ -448,6 +457,9 @@ public class Story {
         game.position5 = "awkMoment";
     }
 
+    /*****************************************************************
+     Asking Mallory how he likes working here
+     *****************************************************************/
     public void askMallory(){
         ui.mainTextArea.setText("Mallory smiles dryly, and you suddenly notice exactly how tired he is, the bags " +
                 "under his eyes being heavy and thick. Too heavy for someone his age.\n\n" +
@@ -488,6 +500,9 @@ public class Story {
         game.position5 = "askMalCont";
     }
 
+    /*****************************************************************
+     Continuation of Mallory conversation, needed second page
+     *****************************************************************/
     public void askMalloryCont(){
         ui.mainTextArea.setText("You watch as Mallory finishes setting the table, and a man with white gloves " +
                 "walks out from the kitchen, seemingly to check that things are going smoothly. \n\n" +
@@ -510,6 +525,9 @@ public class Story {
         game.position5 = "noShakeHand";
     }
 
+    /*****************************************************************
+     Offering to help set the table
+     *****************************************************************/
     public void offerToHelp(){
         ui.mainTextArea.setText("Mallory glances at you with what appears to be genuine fear in his eyes, " +
                 "quickly shaking his head, \"I've got it!\" he says quickly, seemingly loud enough for those " +
@@ -537,6 +555,9 @@ public class Story {
         game.position5 = "noShakeHand";
     }
 
+    /*****************************************************************
+     Standing in silence by Mallory
+     *****************************************************************/
     public void awkMoment() {
         ui.mainTextArea.setText("You stand there in a thick silence, neither of you moving to speak. " +
                 "After a moment, you watch as Mallory goes back to setting the table. He doesn't move the " +
@@ -566,6 +587,9 @@ public class Story {
         game.position5 = "noShakeHand";
     }
 
+    /*****************************************************************
+     Shaking the butler's hand
+     *****************************************************************/
     public void shakeHand(){
         ui.mainTextArea.setText("You accept the handshake to find that the butler's grasp is much firmer than " +
                 "you expected. He didn't strike you as the type to hold onto a handshake for dear life.\n\n" +
@@ -600,6 +624,9 @@ public class Story {
         game.position5 = "contShakeHand";
     }
 
+    /*****************************************************************
+     Continuation of shaking the butler's hand, needed new page
+     *****************************************************************/
     public void contShakeHand(){
         ui.mainTextArea.setText("After a moment, he and the old man emerge with various steaming plates " +
                 "making up an extravagant meal, all of which are arranged on the table. The butler " +
@@ -619,6 +646,9 @@ public class Story {
         game.position5 = "sitNxtMallory";
     }
 
+    /*****************************************************************
+     Didn't shake butler's hand
+     *****************************************************************/
     public void noShakeHand(){
         ui.mainTextArea.setText("You glance apologetically at the butler's hand, not entirely willing to shake " +
                 "it. He holds his hand out for a moment longer, but after a tight-lipped nod from you, he " +
@@ -650,6 +680,9 @@ public class Story {
         game.position5 = "sitNxtMallory";
     }
 
+    /*****************************************************************
+     Sitting next to the old man
+     *****************************************************************/
     public void sitNxtToOldman(){
         ui.mainTextArea.setText("The butler stays off to the side as you take up a seat next to the old man, " +
                 "who flashes you a toothy grin as you sit down beside him. If you didn't know any better, you " +
@@ -688,6 +721,9 @@ public class Story {
         game.position5 = "oldManCont";
     }
 
+    /*****************************************************************
+     Continuation of sitting next to the old man, needed new page
+     *****************************************************************/
     public void besideOldManCont(){
         ui.mainTextArea.setText("\"Yes,\" is all you can manage. There's a heaviness to the air that you didn't " +
                 "expect to feel over dinner, and instinct dictates that you respond as succinctly as possible. \n\n" +
@@ -719,6 +755,9 @@ public class Story {
         game.position5 = "goToSleep";
     }
 
+    /*****************************************************************
+     Sitting next to Mallory
+     *****************************************************************/
     public void sitNxtMallory(){
         ui.mainTextArea.setText("Mallory pulls out the chair beside him, flashing you a small smile as you move " +
                 "to sit next to him. You see the butler smile as well as you sit down and Mallory passes you " +
@@ -757,6 +796,9 @@ public class Story {
         game.position5 = "malloryCont";
     }
 
+    /*****************************************************************
+     Continuation of sitting next to Mallory, needed new page
+     *****************************************************************/
     public void besideMalloryCont(){
         ui.mainTextArea.setText("The old man's grin widens, \"Then welcome to Huxley Manor!\" he exclaims, the " +
                 "heaviness dissipating.\n\n" +
@@ -785,6 +827,9 @@ public class Story {
         game.position5 = "goToSleep";
     }
 
+    /*****************************************************************
+     Going to sleep for the night
+     *****************************************************************/
     public void goToSleep(){
         ui.mainTextArea.setText("Over the next few days, you begin to get your bearings at Huxley Manor, " +
                 "and you manage to fall into a bit of a routine. The work isn't too hard, and Mallory and the " +
@@ -813,6 +858,9 @@ public class Story {
         game.position5 = "StaySilent";
     }
 
+    /*****************************************************************
+     Tell Mallory that you will miss him too
+     *****************************************************************/
     public void WillMissYouToo(){
         ui.mainTextArea.setText("You nod, taking hold of his hand, \"I'll miss you too.\" \n\n" +
                 "It's a short response, but you mean every word of it. \n\n" +
@@ -837,6 +885,9 @@ public class Story {
         game.position5 = "readBook";
     }
 
+    /*****************************************************************
+     Staying silent in front of Mallory
+     *****************************************************************/
     public void StaySilent(){
         ui.mainTextArea.setText("He waits a moment, seemingly expecting you to say something, but when " +
                 "you don't respond, he nods and seems to give you an understanding smile. \n\n" +
@@ -861,6 +912,9 @@ public class Story {
         game.position5 = "readBook";
     }
 
+    /*****************************************************************
+     Going right to sleep
+     *****************************************************************/
     public void goRightToSleep() {
         ui.mainTextArea.setText("You curl up in bed and put the issue out of your mind. Mallory is fine. He's " +
                 "been fine since the day you got there, and you tell yourself there's nothing to worry about. " +
@@ -877,6 +931,9 @@ public class Story {
         game.position5 = "Murder";
     }
 
+    /*****************************************************************
+     Read book to help fall asleep
+     *****************************************************************/
     public void readBook() {
         ui.mainTextArea.setText("You sigh, picking up a match --the last one in the pack-- and lighting a " +
                 "candle on your bedside table. You shimmy under the covers and grab the book you started " +
@@ -900,6 +957,9 @@ public class Story {
         game.position5 = "Murder";
     }
 
+    /*****************************************************************
+     Big murder scene with Mallory and the old man
+     *****************************************************************/
     public void Murder() {
         ui.mainTextArea.setText("A hysterically panicked scream from across the hall lurches you awake, and " +
                 "before you know it, you're sitting straight up in bed, trying to listen for any other noises. " +
@@ -943,6 +1003,9 @@ public class Story {
         game.position5 = "standStill";
     }
 
+    /*****************************************************************
+     Goes back to bed
+     *****************************************************************/
     public void backToBed() {
         ui.mainTextArea.setText("You stand there a moment, looking from the old man, to Mallory, then back again.\n\n" +
                 "Eventually, you nod reluctantly and turn to go back into your room.\n\n" +
@@ -964,6 +1027,9 @@ public class Story {
         game.position5 = "room1";
     }
 
+    /*****************************************************************
+     Attack old man with heavy object
+     *****************************************************************/
     public void AttackOldMan() {
         ui.mainTextArea.setText("You stare at the old man in disbelief, rage and disgust bubbling up through your " +
                 "veins as you process what he's just said. He may well have just murdered someone and he wants " +
@@ -987,6 +1053,9 @@ public class Story {
         game.position5 = "room1";
     }
 
+    /*****************************************************************
+     Stand still/do nothing in front of Mallory murder
+     *****************************************************************/
     public void standStill() {
         ui.mainTextArea.setText("You simply stand there, frozen in shock as you try and process the scene " +
                 "before you. This is the old man who asked you to help him up the stairs earlier this week. " +

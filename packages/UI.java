@@ -5,8 +5,7 @@ import java.awt.*;
 
 public class UI {
 
-    /********Create title screen **********/
-
+    /** Creates title screen */
     JFrame gameWindow;
     JButton startButton, choice1, choice2, choice3, choice4, choice5;
     JTextArea mainTextArea;
@@ -18,19 +17,15 @@ public class UI {
     Font font = new Font("Courier", Font.PLAIN,15);
     ImageIcon image;
 
-
-    /**You can use this across the UI for START button and CHOICE button it caller the handler*/
-
+    /** You can use this across the UI for START button and CHOICE button it caller the handler*/
     public void createUI(Game.TitleScreenHandler handler){
 
         /** Creating window */
-
         gameWindow = new JFrame(); //initialize window
         gameWindow.setSize(1365, 730);
         gameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminate game window
         gameWindow.getContentPane().setBackground(Color.black);	//set the color of the window
         gameWindow.setLayout(null);
-
 
         /** title  name panel */
         titleName  = new JPanel();
@@ -42,20 +37,17 @@ public class UI {
         titleName.add(titleLabel);
 
         /**Panel for the starting button ....backdrop*/
-
         startingButton = new JPanel();
         startingButton.setBounds(560, 400, 200, 100);
         startingButton.setBackground(Color.black);
 
         /**Create a JButton for the start button*/
-
         startButton = new JButton("START");
         startButton.setBackground(Color.black);
         startButton.setForeground(Color.white);
         startButton.setFont(subFont);
 
         /**when you click the START button it caller the handler*/
-
         startButton.addActionListener(handler);
         startButton.setActionCommand("Start");
         startButton.setFocusPainted(false);
@@ -64,14 +56,12 @@ public class UI {
         gameWindow.add(startingButton);
 
         /**panel area that holds the main text message*/
-
         mainText = new JPanel();
         mainText.setBounds(100, 75, 650, 700);
         mainText.setBackground(Color.black);
         gameWindow.add(mainText);
 
         /**this is for the main text message that display on the panel area*/
-
         mainTextArea = new JTextArea("This is the main text area. This game is going to be great. I'm sure of it.");
         mainTextArea.setBounds(25, 200, 650, 450);
         mainTextArea.setBackground(Color.black);
@@ -133,26 +123,17 @@ public class UI {
         chooseButton.add(choice5); //
         gameWindow.add(chooseButton);
 
-
         ImagePanel = new JPanel();
         ImagePanel.setBounds(950, 40, 189, 400);
         ImagePanel.setBackground(Color.black.brighter());
         gameWindow.add(ImagePanel);
 
         ImageLabel = new JLabel();
-
-
-
-       // ImageLabel.setIcon(image);
-       ImagePanel.add(ImageLabel);
+        // ImageLabel.setIcon(image);
+        ImagePanel.add(ImageLabel);
 
        /** to see the window created*/
         gameWindow.setVisible(true);
-
-
     }
-
-
-
 }
 

@@ -6,18 +6,16 @@ public class map {
 
     public map(UI uInterFace) {
         ui = uInterFace;
-
     }
 
     public void showTitleScreen() {
 
-        /**you this to access the title name panel in the UI class
-        this show the title screen*/
+        /** Use this to access the title name panel in the UI class
+        * shows the title screen */
         ui.titleName.setVisible(true);
         ui.startingButton.setVisible(true);
 
-        /**At the same time it is to hide game screen stop
-         * this mean*/
+        /** To hide game screen stop */
         ui.mainText.setVisible(false);
         ui.chooseButton.setVisible(false);
 
@@ -25,14 +23,11 @@ public class map {
 
     public void toTheMansion() {
         /**This is to access the title name panel in the UI class
-         * this hide the title screen*/
-
+         * and hide the title screen*/
         ui.titleName.setVisible(false);
         ui.startingButton.setVisible(false);
 
-        /**At the same time it is to show game screen
-        this mean*/
-
+        /**This is to show game screen */
         ui.mainText.setVisible(true);
         ui.chooseButton.setVisible(true);
 
