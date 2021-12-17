@@ -7,8 +7,6 @@ public class UI {
 
     JFrame gameWindow;
 
-
-
     JButton startButton, choice1, choice2, choice3, choice4, choice5;
     JTextArea mainTextArea;
     JPanel titleName , startingButton, mainText, chooseButton, ImagePanel;
@@ -19,15 +17,12 @@ public class UI {
     Font font = new Font("Courier", Font.PLAIN,15);
     ImageIcon image;
 
-
-
     public void createUI(Game.TitleScreenHandler handler){
         gameWindow = new JFrame(); //initialize window
         gameWindow.setSize(1365, 730);
         gameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminate game window
         gameWindow.getContentPane().setBackground(Color.black);	//set the color of the window
         gameWindow.setLayout(null);
-
 
         //title  name panel
         titleName  = new JPanel();
@@ -76,7 +71,6 @@ public class UI {
         chooseButton.setBackground(Color.black);
         chooseButton.setLayout(new GridLayout(5,1));
 
-
         choice1 = new JButton("choice 1");
         choice1.setBackground(Color.black);
         choice1.setForeground(Color.white);
@@ -119,7 +113,6 @@ public class UI {
         chooseButton.add(choice5); //
         gameWindow.add(chooseButton);
 
-
         ImagePanel = new JPanel();
         ImagePanel.setBounds(950, 40, 189, 400);
         ImagePanel.setBackground(Color.black.brighter());
@@ -128,18 +121,10 @@ public class UI {
         ImageLabel = new JLabel();
 
        //image = new ImageIcon(".//mansion Game//Bedroom(1).jpg");
-
-
         ImageLabel.setIcon(image);
         ImagePanel.add(ImageLabel);
 
-
         gameWindow.setVisible(true); // to see the window created
-
-
     }
-
-
-
 }
 
