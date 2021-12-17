@@ -206,6 +206,7 @@ public class Story {
             case "unlabeledClearPotion":unlabeledClearPotion();break;
             case "ThrowBooks": ThrowBooks();break;
             case "GrabABook": GrabABook(); break;
+            case "voidDeath": voidDeathCont();break;
             case "ClimbBookshelf": ClimbBookshelf();break;
             case "UseLetterOpener":UseLetterOpener(); break;
             case "noMatchesOrPets": noMatchesOrPets();break;
@@ -999,8 +1000,7 @@ public class Story {
                 " Judging by how he's standing and the wild look in his eye, you're sure that none of  " +
                 "the blood you see is his.\n\n" +
                 "The old man locks eyes with you, the animalistic thrill within them fading for a moment back " +
-                "to his usual passively pleasant demeanor, \"Go back to bed,\" he says sweetly, \"It's late.\"\n\n" +
-                "What do you do?");
+                "to his usual passively pleasant demeanor, \"Go back to bed,\" he says sweetly, \"It's late.\"\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(true);
@@ -2370,10 +2370,7 @@ public class Story {
                     "try to grasp onto.\n\n" +
                     "You pass helplessly into the belly of the beast, and watch as its chest closes, blocking out " +
                     "all light as you're swallowed whole by the void. \n\n" +
-                    "\n" +
-                    "Yikes! You discovered one of the many ways to die in this game! It IS beatable, so if you want, " +
-                    "you can restart and try again. A word of advice before you go though: maybe don't kick the cat " +
-                    "next time. \n\n");
+                    "\n" );
             ui.choice1.setVisible(false);
             ui.choice2.setVisible(false);
             ui.choice3.setVisible(false);
@@ -2382,8 +2379,23 @@ public class Story {
 
             ui.choice5.setText(">");
 
-            game.position5 = "theMansion";
+            game.position5 = "voidDeath";
         }
+    }
+
+    public void voidDeathCont(){
+        ui.mainTextArea.setText("Yikes! You discovered one of the many ways to die in this game! It IS beatable, so if you want, " +
+                "you can restart and try again. A word of advice before you go though: maybe don't kick the cat " +
+                "next time. \n\n");
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText(">");
+
+        game.position5 = "theMansion";
     }
 
     //Use letter opener (if have)
