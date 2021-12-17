@@ -207,6 +207,9 @@ public class Story {
             case "giveIn2": giveIn2();break;
             case "giveIn3": giveIn3();break;
             case "petCat1": petCatEnding1();break;
+            case "petCat2": petCatEnding2();break;
+            case "petCat3": petCatEnding3();break;
+            case "title": m.showTitleScreen();break;
 
         }
     }
@@ -3310,25 +3313,6 @@ public class Story {
         game.position5 = "giveIn2";
     }
 
-    //pet cat ending
-    public void petCatEnding1(){
-
-    }
-
-    public void petCatEnding2(){
-
-    }
-
-    public void petCatEnding3(){
-
-    }
-
-    public void petCatEnding4(){
-
-    }
-
-
-    //Run through hall
     public void tryAgain() {
         ui.mainTextArea.setText("You struggle to pull a second match from the pack, praying that this one will light.\n\n" +
                 "Shakily, you strike it against the side of the box, and for a moment, " +
@@ -3406,7 +3390,7 @@ public class Story {
         ui.choice5.setText("Congrats!!!!!");
 
 
-        game.position5 = "theMansion";
+        game.position5 = "title";
 
     }
 
@@ -3517,86 +3501,91 @@ public class Story {
         game.position5 = "theMansion";
     }
 
-    /*********** CELLAR *************/
-    public void cellar() {
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+    public void petCatEnding1() {
+        ui.mainTextArea.setText("\"You know,\" the old man begins," +
+                "\"In all my 300 years, I’ve never had one escape. " +
+                "Not one. Of all of them, though, you’ve gotten the closest.\"\n\n" +
+                "Your legs continue to walk towards the old man, stepping on and over the corpses of past victims." +
+                " You watch helplessly as his extended fingers move rhythmically with every step you take, " +
+                "pulling you ever-closer.\n\n" +
+                "As you struggle, you see someone quietly coming down the stairs.\n\n" +
+                "It’s the butler.\n\n" +
+                "You watch as he places a finger to his lips, as if to tell you to stay silent, then points at the old" +
+                " man before shushing you once more. \n\n");
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
-    }
-
-    //general (if not matches or pet cat - catch all)
-    public void generalCellar() {
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
-
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
-    }
-
-    public void Ending() {
-        ui.mainTextArea.setText("Bye!");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(false);
-        ui.choice5.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion";
-        game.position2 = "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "petCat2";
+
     }
 
-    //if pet cat
-    public void petCatCellar() {
-        ui.mainTextArea.setText("Bye!");
-        ui.choice1.setText(">");
-        ui.choice2.setText("");
-        ui.choice3.setText("");
-        ui.choice4.setText("");
-        ui.choice5.setText("");
+    public void petCatEnding2() {
+        ui.mainTextArea.setText("As you struggle to regain control of your limbs, you watch as the butler slowly descends the stairs, " +
+                "his eyes locked on the old man like a hunter eyeing its prey.\n\n" +
+                "\"To think, someone as insignificant you might have actually broken my streak,\"" +
+                " the old man laughs.\n\n" +
+                "As he does, he begins to move his fingers less methodically," +
+                " jerking your legs painfully as you continue to walk.\n\n" +
+                "\"I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,\"" +
+                " he continues to chuckle, \"I’d almost forgotten the thrill of the hunt.\"\n\n" +
+                "You’re just a few feet away from him now, and as you struggle, beginning to plead with the old man to " +
+                "please let you live, you see the butler approach him from behind, " +
+                "though the old man still doesn't seem to notice.\n\n");
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
-    }
-
-
-
-    public void toTitle() {
-
-        m.showTitleScreen();
-
-        ui.mainTextArea.setText("Bye!");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(false);
-        ui.choice5.setVisible(false);
+        ui.choice5.setVisible(true);
 
-        game.position1 = "theMansion";
-        game.position2= "";
-        game.position3 = "";
-        game.position4 = "";
-        game.position5 = "";
+        ui.choice5.setText(">");
+
+        game.position5 = "petCat3";
+
+    }
+
+    public void petCatEnding3() {
+        ui.mainTextArea.setText("\"Do you know how I came to be like this?\" he asks, reaching up his free hand to " +
+                "caress your face, " +
+                "\"I killed my best friend, and drank his blood on the floor of a church. I still have his portrait " +
+                "hanging in my house,” he grins, holding your chin so you have no choice but to look into his eyes," +
+                " \"Your pleas mean nothing to me.\"\n\n" +
+                "You see a pair of gloved hands place themselves on the old man’s head: one on the top, and one" +
+                " under his chin. Before the old man has a chance to comprehend what’s happening, his neck is" +
+                " twisted from his spine and he crumples to the ground.\n\n" +
+                "You also nearly fall to your knees as the old man loses control of your legs, but the butler catches " +
+                "you and helps you to your feet, though he, too, seems weak.\n\n" +
+                "He points at the door, \"Get out of here! This place is going to collapse.\" He seems to almost beg you " +
+                "as his commands border on a yell.\n\n" +
+                "You go to leave and see the butler begin to sink to his knees. For a moment, you hesitate.\n\n" +
+                "\"Go!\" he screams hoarsely, \"I am going to die because I killed the man I’m bound to, but YOU can " +
+                "live. GO!”\n\n" +
+                "You watch as he falls forward before his elbows give out and he sinks into the pile of bodies that" +
+                " litter the ground. Slowly his body begins to morph, shrinking back into that of a cat before curling " +
+                "into a tight ball. Then, after a moment, he goes limp. \n\n" +
+                "You hear the walls begin to crack and realize you haven’t got much time. So, quickly as you can, you" +
+                " sprint to the door and fling it open, running out into the light of dawn as Huxley Manor caves" +
+                " in behind you.\n\n" +
+                "Congratulations! You’ve beaten the game! You’ve won! How does it feel to have unlocked one of the " +
+                "only two endings that aren't deaths? It must feel pretty good. Just so you know, your character " +
+                "went on to find their way off the streets and live a relatively happy life when all was said and " +
+                "done, but they never truly forgot (or got over) that week they spent at Huxley Manor. \n\n");
+
+        ui.choice1.setVisible(false);
+        ui.choice2.setVisible(false);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
+        ui.choice5.setVisible(true);
+
+        ui.choice5.setText("Congrats!!!!!!");
+
+        game.position5 = "title";
+
     }
 }
