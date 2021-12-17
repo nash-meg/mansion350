@@ -88,6 +88,7 @@ public class Story {
     ImageIcon Kitchen11 = new ImageIcon(".//mansion Game//Kitchen (11).jpg");
     ImageIcon MalloryRoom4= new ImageIcon(".//mansion Game//Mallory's Bedroom (4).jpg");
     ImageIcon PotionRoom10= new ImageIcon(".//mansion Game//Potion Room (10).jpg");
+    ImageIcon NoMap = new ImageIcon(".//mansion Game//No Map.jpg");
 
     // choosePosition is receiving the parameter(position)
     // eg. if the choosePosition was towardsMansion then it will call towardsMansion() method
@@ -1499,7 +1500,7 @@ public class Story {
 
     //Down in third over section, room 5:
     public void room5() {
-        //TODO add cant see map
+        ui.ImageLabel.setIcon(NoMap);
         ui.mainTextArea.setText("You step cautiously as you descend the stairs, praying that no one will catch " +
                 "you once you reach the bottom. It's dark; with every step a part of you fears that your foot will " +
                 "miss, and you'll be sent tumbling down the stairway. Still, these stairs don't creak as much as " +
@@ -1920,7 +1921,7 @@ public class Story {
     //Fight scene in Room 9 before room 10:
     //Beginning of fight scene
     public void FightScene() {
-        // TODO turn off map
+        ui.ImageLabel.setIcon(NoMap);
         ui.mainTextArea.setText("Satisfied, you turn back to the rest of the room and notice a door slightly ajar " +
                 "on the other side that's different from the one you entered through. Before you can think too much " +
                 "about it, a noise from the cat draws your attention, and you turn to see it staring at you, " +
@@ -2760,6 +2761,7 @@ public class Story {
 
     //Leave kitchen (no potion)
     public void withoutPotion() {
+        ui.ImageLabel.setIcon(NoMap);
         ui.mainTextArea.setText("You decide you've spent enough time in the kitchen, and begin to make your " +
                 "way towards the front entrance. You're almost out now. All you need to do is get to the main " +
                 "door, open it, then run.\n\n" +
@@ -2922,6 +2924,7 @@ public class Story {
 
     //Leave kitchen (potion)
     public void withPotion() {
+        ui.ImageLabel.setIcon(NoMap);
         ui.mainTextArea.setText("You move to leave the kitchen and head towards the front entrance - to freedom - " +
                 "when your eye catches something in the decorative mirror on the wall. It's an image of the old " +
                 "man, stepping up from the cellar stairs in the dining room and turning towards the kitchen.\n\n" +
