@@ -207,20 +207,23 @@ public class Story {
     public void theMansion() {
         ui.mainTextArea.setText("______________ Welcome to Sinister Happenings at Huxley Manor " +
                 "______________\n\n" +
-                "Warning: This game contains themes of gore, violence, and manipulation/mind control.\n" +
+                "Warning: This game contains themes of gore, violence, strong language, and manipulation/mind control.\n" +
                 "Enter at your own risk... \n" +
                 "_______________________________________________________________________\n\n" +
                 "Before goosebumps plague your arms and your eyes cannot be ripped away from the screen, " +
-                "here are some things to know about our spooky little game.\n\nThis is a text-based game, so there " +
+                "here are some things to know about our spooky little game.\n\n" +
+                "This is a text-based game, so there " +
                 "are very little graphics. If you don't like reading, sorry bud, this isn't the game for you. " +
                 "We want to let our words guide your imagination, and we figure you know how to scare " +
-                "yourself better than we ever could.\n\nThis is also a choose-your-own-adventure game, " +
+                "yourself better than we ever could.\n\n" +
+                "This is also a choose-your-own-adventure game, " +
                 "so you will read the story and then choose from a handful of actions at specific moments " +
                 "to determine what happens next. Some of these options will allow you to continue through " +
                 "the escape, but some may result in death. Choose wisely and you might make it out alive.\n\n" +
                 "To select an option, press one of the buttons in the bottom right of your screen. " +
                 "Also, some sections of the story are longer than others, so you may need to press the \">\" " +
-                "button to continue reading.\n\nThe one graphic you do get to reap the benefits of is a map. " +
+                "button to continue reading.\n\n" +
+                "The one graphic you do get to reap the benefits of is a map. " +
                 "You can pull up this map during given opportunities by pressing the \"map\" button.\n\n" +
                 "We hope you enjoy, good luck, and don't kick the cat.");
         ui.choice1.setVisible(false);
@@ -249,10 +252,10 @@ public class Story {
     public void towardsMansion(){
         ui.mainTextArea.setText("The man's hand feels heavy on your back as you are guided up the driveway " +
                 "against your better judgement.\n\n" +
-                "A large mansion --which you're quite sure is the only dwelling for miles-- looms before you, " +
+                "A large mansion -- which you're quite sure is the only dwelling for miles -- looms before you, " +
                 "decorated impeccably for Halloween. Cornstalks lean up against the pillars supporting the " +
                 "upper balconies, pumpkins and hay bales are scattered tastefully over the front porch, " +
-                "and a black cat sits somewhat ominously in the window by the door --though you're sure that " +
+                "and a black cat sits somewhat ominously in the window by the door -- though you're sure that " +
                 "the cat is more of a year-round affair.\n\n" +
                 "You stop a moment, simply staring and struggling to take in the fact that this is all " +
                 "real. Less than an hour ago, you had been on the streets, trying to scrounge whatever " +
@@ -3126,8 +3129,8 @@ public class Story {
         ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText(">");
-        //TODO: make this a big if-statement for the possible endings
+        ui.choice5.setText(">"); //map?? Cellar (2)
+
         if(!matches && !pet){
             game.position5 = "noMatchesOrPets";//death
         }
@@ -3165,7 +3168,7 @@ public class Story {
         ui.choice5.setVisible(true);
 
         ui.choice5.setText(">"); //map?? Cellar (2)
-        //TODO: make this a big if-statement for the possible endings
+
         if(!matches && !pet){
             game.position5 = "noMatchesOrPets";//death
         }
@@ -3184,8 +3187,8 @@ public class Story {
                 " rhythmically with every step you take, pulling you ever-closer.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
-        ui.choice3.setVisible(true);
-        ui.choice4.setVisible(true);
+        ui.choice3.setVisible(false);
+        ui.choice4.setVisible(false);
         ui.choice5.setVisible(true);
 
         ui.choice5.setText("Try to fight against it");
@@ -3209,7 +3212,7 @@ public class Story {
 
         ui.choice5.setText("Keep trying to fight");
 
-        game.position1 = "Fight2";
+        game.position5 = "Fight2";
     }
 
     public void Fight2() {
