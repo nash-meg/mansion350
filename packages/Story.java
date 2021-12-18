@@ -3368,7 +3368,7 @@ public class Story {
         ui.mainTextArea.setText("\"You know,\" the old man begins, " +
                 "\"In all my 300 years, I’ve never had one escape. Not one. Of all of them, though, you’ve gotten the closest.\"\n\n" +
                 "Your legs continue to walk towards the old man, stepping on and over the corpses of the old man’s past victims." +
-                " You watch helplessly as his extended fingers move rhythmically with every step you take, pulling you ever-closer.\n\n" +
+                " You watch helplessly as his extended fingers move rhythmically with every step you take as he puppeteers your body, pulling you ever-closer.\n\n" +
                 "As you struggle, your hand brushes your pocket and you feel a small box.\n\n" +
                 "The matches.\n\n" +
                 "You’d nearly forgotten that you’d taken them with you, but now, " +
@@ -3395,7 +3395,7 @@ public class Story {
                 "Fumbling, you take one out of the box and attempt to strike it. It breaks.\n\n" +
                 "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\n\n" +
                 "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\n\n" +
-                "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,” he continues to chuckle, " +
+                "\"I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,\" he continues to chuckle, " +
                 "\"I’d almost forgotten the thrill of the hunt.\"\n\n" +
                 "\n");
         ui.choice1.setVisible(false);
@@ -3421,7 +3421,7 @@ public class Story {
                 "\"You know, I don’t usually remember the people I use to feed." +
                 " Not very well, anyway. But you,\" he grins," +
                 " \"I don’t see myself forgetting you for the next century at least.\"\n\n" +
-                "You’re getting closer to the old man, and no matter what you do, you can’t seem to break the spell.\n\n");
+                "You’re getting closer to the old man now, and no matter what you do, you can’t seem to break the spell.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3445,14 +3445,14 @@ public class Story {
                 " \"Do you know how I came to be like this?\" he asks, reaching up his free hand to caress your face.\n\n" +
                 "You ignore his hand, instead working to strike the match against the box. " +
                 "You swipe it once and it doesn't light.\n\n" +
-                "\"I killed my best friend, and drank his blood on the floor of a church, and I still have his portrait" +
+                "\"I killed my best friend, and drank his blood on the floor of a church; I still have his portrait" +
                 " hanging in my house,\" he grins, holding your chin so you have no choice but to look into his eyes, " +
                 "\"Your efforts, though precious, will do nothing to me.\"\n\n" +
                 "You desperately swipe the match again, and this time it lights. " +
                 "You dare to hope as the flame continues burning and you throw the match at the old man, " +
                 "hoping that his robe is flammable enough to light.\n\n" +
-                "You watch as his smug grin changes to a look of anger and terror as his robe catches goes in flames." +
-                " It spreads much quicker than you feel it have, " +
+                "You watch as his smug grin changes to a look of anger and terror as his robe catches and goes in up flames." +
+                " It spreads much quicker than you feel it should have, " +
                 "and before you know it the old man’s skin itself is burning with brilliant intensity.\n\n" +
                 "You feel yourself regain control of your legs, and don’t bother looking back as you sprint to the door " +
                 "on the other side of the cellar. The old man’s horrific screams echo throughout the cellar as you twist" +
@@ -3471,7 +3471,7 @@ public class Story {
 
     public void matchesEnding() {
         ui.ImageLabel.setVisible(false);
-        ui.mainTextArea.setText("As you run, you hear a crashing behind you and look back only to Huxley Manor" +
+        ui.mainTextArea.setText("As you run, you hear a crashing behind you and look back only to see Huxley Manor" +
                 "collapsing in on itself, dust rising high into the air as it implodes.\\n\\n " +
                 "Once you’re a safe distance away, you collapse onto the ground and simply watch as the place " +
                 "completely crumbles into the earth. It’s then that you see a small black cat run from the wreckage " +
