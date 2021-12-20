@@ -438,24 +438,25 @@ public class Story {
     }
 
     public void stairsCont(){
-             ui.mainTextArea.setText("Neither one speaks, though, through eye-contact alone, it seems an entire conversation takes " +
-                    "place in seconds. The boy's posture shifts fearfully as the old man's brow furrows, then " +
-                    "after a quick, wide-eyed shake of the head from the boy, both relax as if the situation is " +
-                    "resolved.\n\n" +
-                    "The man with white gloves wordlessly stands when he has finished sweeping up the glass and " +
-                    "goes back into the kitchen.\n\n" +
-                    "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if " +
-                    "ready to bolt in case any more plates decide to come crashing down.\n\n" +
-                    "A smile returns to the old man's face as he introduces you to the boy, who is apparently " +
-                    "named Mallory.\n\n \"He can be a bit clumsy sometimes, but he's a good worker,\" the old man " +
-                    "says, jovially clasping a hand onto the shoulders of a very uncomfortable Mallory. Even so, " +
-                    "the boy seems to try to keep up a smile.\n\n" +
-                    "\"I'll let you two get acquainted,\" says the old man, picking up the cat and heading into " +
-                    "the kitchen, leaving the two of you alone.\n\n" +
-                    "Mallory's gaze seems to linger on you a moment before going back to his task, and though " +
-                    "on the surface he seems genuinely happy to meet you, there is also an almost mournful " +
-                    "disposition underneath. He goes back to setting the table before you can dwell on it " +
-                    "too long.\n\n");
+        ui.mainTextArea.setText("Neither one speaks, though, through eye-contact alone, it seems an entire " +
+                "conversation takes place in seconds. The boy's posture shifts fearfully as the old man's " +
+                "brow furrows, then after a quick, wide-eyed shake of the head from the boy, both relax " +
+                "as if the situation is resolved.\n\n" +
+                "The man with white gloves wordlessly stands when he has finished sweeping up the glass and " +
+                "goes back into the kitchen.\n\n" +
+                "A moment later, the cat cautiously slinks back out into the dining room, keeping low as if " +
+                "ready to bolt in case any more plates decide to come crashing down.\n\n" +
+                "A smile returns to the old man's face as he introduces you to the boy, who is apparently " +
+                "named Mallory.\n\n" +
+                "\"He can be a bit clumsy sometimes, but he's a good worker,\" the old man says, jovially " +
+                "clasping a hand onto the shoulders of a very uncomfortable Mallory. Even so, the boy " +
+                "seems to try to keep up a smile.\n\n" +
+                "\"I'll let you two get acquainted,\" says the old man, picking up the cat and heading into " +
+                "the kitchen, leaving the two of you alone.\n\n" +
+                "Mallory's gaze seems to linger on you a moment before going back to his task, and though " +
+                "on the surface he seems genuinely happy to meet you, there is also an almost mournful " +
+                "disposition underneath. He goes back to setting the table before you can dwell on it " +
+                "too long.\n\n");
             ui.choice1.setVisible(false);
             ui.choice2.setVisible(false);
             ui.choice3.setVisible(true);
@@ -1477,10 +1478,10 @@ public class Story {
                 "or bits underlined as if to mark the things that Mallory must have thought to be important. " +
                 "All of them seem to pertain to reversing immortality. Little notes written in the margins ask " +
                 "questions and make statements:\n\n" +
-                " “Does he have to participate??”\n\n" +
-                "“Blood needed”\n\n" +
-                "“Bad idea - last resort”\n\n" +
-                "“House bound to him?????”\n\n" +
+                "\"Does he have to participate??\"\n\n" +
+                "\"Blood needed\"\n\n" +
+                "\"Bad idea - last resort\"\n\n" +
+                "\"House bound to him?????\"\n\n" +
                 "And so on.\n\n" +
                 "The book seems to take itself rather seriously and is almost written in the style of a textbook " +
                 "in some places, dealing with a different spell or ritual every few pages. On its own, you might " +
@@ -1566,7 +1567,7 @@ public class Story {
         ui.mainTextArea.setText("You decide you've had your fill of snooping around Mallory's desk, and chuckle " +
                 "a little to yourself as you realize how he's going to be pissed when he--\n\n" +
                 "The blood smeared across the room jolts you back to where you are, and the small smile drops " +
-                "from your face. There is no “when”. Not anymore.\n\n" +
+                "from your face. There is no \"when.\" Not anymore.\n\n" +
                 "Clenching your jaw and, attempting to swallow back the rock in your throat, you turn your " +
                 "attention back to the room. \n\n");
         ui.choice1.setVisible(false);
@@ -2045,7 +2046,7 @@ public class Story {
                 "staring at you in agony.\n\n" +
                 "He stumbles towards you, gripping your shoulder with fingers that feel more like claws as his " +
                 "muscles beneath continue to morph and contort. He pleads with you in a voice that's only half his " +
-                "own, somehow mixed with a low, animalistic growl, “Run!”\n\n" +
+                "own, somehow mixed with a low, animalistic growl, \"Run!\"\n\n" +
                 "Just that single word seems to take a world of effort as he releases you and flails backwards, " +
                 "growing several feet taller, his hands turning to massive talons as his fur begins to regrow.\n\n" +
                 "When he suddenly turns back to you, a ravenousness has taken over his expression, and he lunges.\n\n" +
@@ -2073,17 +2074,17 @@ public class Story {
     //Duck down (pet cat)
     public void DuckingDown() {
         if(pet){
-            ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until you " +
-                    "feel the cold wall bump against your back. The monster continues to charge at you, but you " +
-                    "notice a jerkiness in its movements, as if he's trying to hold himself back. He's almost upon " +
-                    "you now. You watch helplessly as he draws back an enormous claw, winding up to strike, and " +
-                    "you squeeze your eyes shut as you prepare for the talons to come slicing down on you.\n\n" +
+            ui.mainTextArea.setText("You dive down to the ground to avoid the attack, scrambling backwards until " +
+                    "you feel the cold wall bump against your back. The monster continues to charge at you, but " +
+                    "you notice a jerkiness in its movements, as if he's trying to hold himself back. He's almost " +
+                    "upon you now. You watch helplessly as he draws back an enormous claw, winding up to strike, " +
+                    "and you squeeze your eyes shut as you prepare for the talons to come slicing down on you.\n\n" +
                     "You hear an agonized roar from the creature as the wall behind you shakes.\n\n " +
                     "Your eyes fly open and you find that you're unscathed. The creature's claw is lodged in the " +
                     "wall just centimeters above your head, flexing and twitching as if it's an effort for him " +
                     "to keep it there. \n\n" +
                     "He locks eyes with you, once more managing a tortured yell:\n\n" +
-                    " “RUN!”\n\n" +
+                    "\"RUN!\"\n\n" +
                     "You nod quickly as you scramble from beneath the hulking creature and bolt towards the open " +
                     "door.\n\n" +
                     "You leap over one of the couches as you hear the wall behind you being torn from itself and " +
@@ -2384,9 +2385,9 @@ public class Story {
     }
 
     public void voidDeathCont(){
-        ui.mainTextArea.setText("Yikes! You discovered one of the many ways to die in this game! It IS beatable, so if you want, " +
-                "you can restart and try again. A word of advice before you go though: maybe don't kick the cat " +
-                "next time. \n\n");
+        ui.mainTextArea.setText("Yikes! You discovered one of the many ways to die in this game! It IS beatable, so " +
+                "if you want, you can restart and try again. A word of advice before you go though: maybe don't " +
+                "kick the cat next time.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -2445,9 +2446,9 @@ public class Story {
                 "however, these are small vials of liquid. \n\n" +
                 "One, a purple substance with a faded label, seems to have a slight glow to it. \n\n" +
                 "Another, sitting solidly on the table, is a yellow liquid that also seems to glow, but less so. " +
-                "Its label is a little easier to read and clearly says in large letters, “PLAN B”.\n\n" +
+                "Its label is a little easier to read and clearly says in large letters, \"PLAN B\".\n\n" +
                 "There are two other vials, both filled with clear liquid. \n\n" +
-                "One is labeled “Sanitatem” and the other has no label at all.\n\n" +
+                "One is labeled \"Sanitatem\" and the other has no label at all.\n\n" +
                 "You begin to realize where in the house you are.\n\n" +
                 "Usually both this room and the one you were just in are locked tight, and Mallory used to joke " +
                 "that this one was the old man's potion room. Now that you stand here, you're starting to think " +
@@ -2478,7 +2479,7 @@ public class Story {
         purpPotion = true;
         ui.mainTextArea.setText("You cautiously pick up the glowing vial and look it over, noticing that the " +
                 "faded label says \"Aspectum.\" You're not well-versed in latin by any stretch, but you remember " +
-                "a middle school teacher once telling you that that word meant “Sight”. You shrug. Maybe " +
+                "a middle school teacher once telling you that that word meant \"Sight\". You shrug. Maybe " +
                 "it does.\n\n" +
                 "Either way, you pop the cork off the vial and drink it down in one swig.\n\n" +
                 "It tastes sweet, almost like a plum, and is rather smooth on the way down.\n\n" +
@@ -2602,8 +2603,8 @@ public class Story {
                 "If you hadn't known any better, you would have thought it was water.\n\n" +
                 "Shit.\n\n" +
                 "Was it poison?\n\n" +
-                "You've seen too many spy movies where someone is slipped a tasteless, odorless poison, and in a room " +
-                "like this one...\n\n" +
+                "You've seen too many spy movies where someone is slipped a tasteless, odorless poison, and in a " +
+                "room like this one...\n\n" +
                 "Your heartbeat quickens as you pick up the vial and the cork, examining both in a frantic attempt " +
                 "to find any hint of what it might be. \n\n" +
                 "It's then that you see it.\n\n" +
@@ -2651,11 +2652,11 @@ public class Story {
                 "You pull the door open and slowly step out into the hallway, hoping to make sure that they " +
                 "won't start moving if you leave the room. Still, they hang there harmlessly, allowing you " +
                 "to push them to the side and weave between them. \n\n" +
-                "Finally, you reach the stairs. They lead downward into the darkness that you know to be the kitchen. " +
-                "You feel a bit of fear bubbling up inside you as you look down the descending corridor." +
+                "Finally, you reach the stairs. They lead downward into the darkness that you know to be the " +
+                "kitchen. You feel a bit of fear bubbling up inside you as you look down the descending corridor." +
                 " You know that these stairs will creak when you step on them. \n\n" +
-                "Beside them is an open door leading to a bathroom, and on the opposite side of the hall is a boarded " +
-                "up door that, after everything that's happened, you'd like to keep that way. \n\n" +
+                "Beside them is an open door leading to a bathroom, and on the opposite side of the hall is a " +
+                "boarded up door that, after everything that's happened, you'd like to keep that way. \n\n" +
                 "What do you do?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -2714,15 +2715,16 @@ public class Story {
                 "The slippers pause for a moment at the base of the stairs, and you see the faint shadow of " +
                 "the old man cast by the light of the window.\n\n" +
                 "\"I know you're up there,\" he coos.\n\n" +
-                "You feel a lump form in the pit of your stomach as you hear the old man move onto the first step.\n\n" +
+                "You feel a lump form in the pit of your stomach as you hear the old man move onto the first " +
+                "step.\n\n" +
                 "\"I thought I told you to go back to bed.\"\n\n" +
                 "At this point, you go to run, but when you try to move, you realize that you can't. It's not a " +
                 "matter of fear or weakness. You physically can't move.\n\n" +
                 "The old man slowly climbs the stairs until he's reached your landing. Your heart pounds in your " +
                 "chest as every muscle in your body begs you to run but in the same breath refuses to do so. \n\n" +
-                "The old man clicks his tongue as he runs a hand down your face, \"I'd hoped you would last longer,\" " +
-                "he mutters, then laughs quietly, “And to think you might have actually done it if those shoes " +
-                "weren't so loud.”\n\n" +
+                "The old man clicks his tongue as he runs a hand down your face, \"I'd hoped you would last " +
+                "longer,\" he mutters, then laughs quietly, \"And to think you might have actually done it if " +
+                "those shoes weren't so loud.\"\n\n" +
                 "He draws in breath through gritted teeth, then snaps his fingers. In an instant, you feel every " +
                 "muscle your body give out, and as you crumple to the ground, everything goes black. \n\n" +
                 "\n" +
@@ -2961,7 +2963,7 @@ public class Story {
                 "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out " +
                 "from the kitchen with great urgency.\n\n" +
                 "For a moment, a part of you begins to hope that he might-- \n\n" +
-                "The old man lets out an annoyed sigh, snapping his fingers, “You stay there, Silas.”\n\n" +
+                "The old man lets out an annoyed sigh, snapping his fingers, \"You stay there, Silas.\"\n\n" +
                 "The butler freezes as the old man continues, \"I won't have your sympathy getting in my way.\"\n\n" +
                 "The old man turns his attention back to you and places a hand on your cheek, still grinning " +
                 "wildly. You watch as he passes his tongue over his teeth, drawing in a hissing breath before " +
@@ -2984,7 +2986,7 @@ public class Story {
     }
     public void PunchOldMan() {
         ui.mainTextArea.setText("Unsure of what else to do, you wait for the old man to get close as he continues " +
-                "rambling about how he had hoped you would “last longer”, as he puts it. \n\n" +
+                "rambling about how he had hoped you would \"last longer\", as he puts it. \n\n" +
                 "When he's within arms reach, you waste no time raising your fist and swing it at the old man, " +
                 "landing squarely on his left eye.\n\n" +
                 "He staggers backwards and for a moment, clutching his face, and in an instant you can move " +
@@ -2995,12 +2997,12 @@ public class Story {
                 "The old man, still facing away from you, begins...laughing.\n\n" +
                 "It starts out quiet, but grows until it echoes through the otherwise silent halls of the " +
                 "mansion.\n\n" +
-                "He turns to you, grinning, “You're going to be fun.”\n\n" +
+                "He turns to you, grinning, \"You're going to be fun.\"\n\n" +
                 "You hear the stairs squeak as if someone is descending them, and watch as the butler steps out " +
                 "from the kitchen with great urgency. \n\n" +
                 "For a moment, a part of you begins to hope that he might-- \n\n" +
-                "The old man lets out an annoyed sigh, snapping his fingers, “You stay there, Silas.”\n\n" +
-                "The butler freezes as the old man continues, “I won't have your sympathy getting in my way.”\n\n" +
+                "The old man lets out an annoyed sigh, snapping his fingers, \"You stay there, Silas.\"\n\n" +
+                "The butler freezes as the old man continues, \"I won't have your sympathy getting in my way.\"\n\n" +
                 "The old man places a hand on your cheek, still grinning wildly. You watch as he passes his " +
                 "tongue over his teeth, drawing in a hissing breath before he snaps his fingers. In an instant " +
                 "your legs buckle under you and you fall to the ground, smashing your head on the wall as " +
@@ -3025,10 +3027,10 @@ public class Story {
                 "In a flurry of frantic motion, you quickly grab it from your pocket and open to a random page.\n\n" +
                 "\"Invisibility of Sight And Presence\" the header reads. You begin reading the spell aloud as " +
                 "fast as you can, throwing pronunciation to the wind.\n\n" +
-                "You hear the old man laugh, “That's adorable. You really think I'd keep a book of spells in " +
-                "this house that could harm me?”\n\n" +
+                "You hear the old man laugh, \"That's adorable. You really think I'd keep a book of spells in " +
+                "this house that could harm me?\"\n\n" +
                 "Your heart begins to race as you finish the first half of the page.\n\n" +
-                "\"Go on,\" the old man taunts,\" finish your little incantation. See what it does.\" You " +
+                "\"Go on,\" the old man taunts, \"finish your little incantation. See what it does.\" You " +
                 "hear an amused scoff as he seemingly waits for you to finish reading. \n\n" +
                 "You can't hide the smile that creeps across your face as the old man's pride buys you time.\n\n" +
                 "As you say the last word, you watch your body disappear as the old man's eyes widen. \n\n" +
@@ -3089,7 +3091,7 @@ public class Story {
                 "can't seem to scrunch down enough to get your head inside, which is a problem.\n\n" +
                 "You watch fearfully as the old man enters the room as you sit there, only half inside your " +
                 "hiding spot. \n\n" +
-                "He stops, looking directly at you and laughing, “I see you're not one for hide and seek.”\n\n" +
+                "He stops, looking directly at you and laughing, \"I see you're not one for hide and seek.\"\n\n" +
                 "You feel your muscles tighten against your will, and your body begins to stand.\n\n" +
                 "Once you're on your feet, the old man smiles. With a flick of his hand, your neck dislodges " +
                 "from your spine and everything goes black.\n\n" +
@@ -3284,9 +3286,10 @@ public class Story {
 
     public void noMatchesOrPets() {
         ui.ImageLabel.setIcon(Cellar3);
-        ui.mainTextArea.setText("\"You know,\" the old man begins, \"In all my 300 years, I’ve never had one escape. Not one!\"\n\n" +
+        ui.mainTextArea.setText("\"You know,\" the old man begins, \"In all my 300 years, I've never had one " +
+                "escape. Not one!\"\n\n" +
                 "Your legs continue to walk towards the old man, stepping on and over the corpses of " +
-                "the old man’s past victims. You watch helplessly as his extended fingers move" +
+                "the old man's past victims. You watch helplessly as his extended fingers move" +
                 " rhythmically with every step you take, pulling you ever-closer.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3303,11 +3306,11 @@ public class Story {
         ui.ImageLabel.setIcon(Cellar4);
         ui.mainTextArea.setText("You struggle to regain control of your limbs, " +
                 "but they continue to move despite your every attempt to make them stop.\n\n" +
-                "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\n\n" +
+                "\"To think, someone as insignificant you might have actually broken my streak,\" he laughs.\n\n" +
                 "As he does, he begins to move his fingers less methodically, " +
                 "jerking your legs painfully as you continue to walk.\n\n" +
-                "“I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time.”\n" +
-                "\n");
+                "\"I have to give you credit: you were by far the most exhilarating kill I've had in quite a long " +
+                "time.\"\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -3323,9 +3326,11 @@ public class Story {
         ui.ImageLabel.setIcon(Cellar4);
         ui.mainTextArea.setText("You begin to grab and claw at your legs, hoping that your own " +
                 "physical force might be enough to make it stop, but still they continue.\n\n" +
-                "\"You know, I don’t usually remember the people I use to feed. " +
-                "Not very well, anyway. But you,\" he grins, \"I don’t see myself forgetting you for the next century at least.\"\n\n" +
-                "You’re getting closer to the old man, and no matter what you do, you can’t seem to break the spell.\n\n" +
+                "\"You know, I don't usually remember the people I use to feed. " +
+                "Not very well, anyway. But you,\" he grins, \"I don't see myself forgetting you for the next " +
+                "century at least.\"\n\n" +
+                "You're getting closer to the old man, and no matter what you do, you can't seem to break the " +
+                "spell.\n\n" +
                 " \n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3340,17 +3345,19 @@ public class Story {
 
     public void Fight3() {
         ui.ImageLabel.setIcon(Cellar5);
-        ui.mainTextArea.setText("You’re just a few feet away from him now, and as you struggle," +
-                " you begin to cry out both in frustration and in some vain attempt to beg for your life.\n\n" +
-                "The old man simply chuckles, continuing to pull you towards him, \"Do you know how I came to be like this?\"" +
-                " he asks, reaching up his free hand to caress your face, " +
-                "\"I killed my best friend, and drank his blood on the floor of a church; I still have his portrait hanging in my house,\"" +
-                " he grins, holding your chin so you have no choice but to look into his eyes, \"Your pleas mean nothing to me.\"\n\n" +
-                "With that, he withdraws his hand from your face and reaches into his robe." +
-                " Before you can even process what he’s grabbed, he slices something over your throat and blood begins spewing outward. " +
+        ui.mainTextArea.setText("You're just a few feet away from him now, and as you struggle, you begin to cry " +
+                "out both in frustration and in some vain attempt to beg for your life.\n\n" +
+                "The old man simply chuckles, continuing to pull you towards him, \"Do you know how I came to be " +
+                "like this?\" he asks, reaching up his free hand to caress your face, \"I killed my best friend, " +
+                "and drank his blood on the floor of a church; I still have his portrait hanging in my house,\" " +
+                "he grins, holding your chin so you have no choice but to look into his eyes, \"Your pleas mean " +
+                "nothing to me.\"\n\n" +
+                "With that, he withdraws his hand from your face and reaches into his robe. Before you can even " +
+                "process what he's grabbed, he slices something over your throat and blood begins spewing outward. " +
                 "You simply stare at him in horror before you fall to your knees, then everything goes black. \n\n\n" +
-                "Arrrggg you almost made it! So close! This game IS beatable, so since you made it this far you might as well restart and try again! " +
-                "Perhaps if you make some different choices, things will turn out better?\n\n");
+                "Arrrggg you almost made it! So close! This game IS beatable, so since you made it this far " +
+                "you might as well restart and try again! Perhaps if you make some different choices, things " +
+                "will turn out better?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -3365,14 +3372,15 @@ public class Story {
     //Matches ending
     public void ifMatches() {
         ui.ImageLabel.setIcon(Cellar3);
-        ui.mainTextArea.setText("\"You know,\" the old man begins, " +
-                "\"In all my 300 years, I’ve never had one escape. Not one. Of all of them, though, you’ve gotten the closest.\"\n\n" +
-                "Your legs continue to walk towards the old man, stepping on and over the corpses of the old man’s past victims." +
-                " You watch helplessly as his extended fingers move rhythmically with every step you take as he puppeteers your body, pulling you ever-closer.\n\n" +
+        ui.mainTextArea.setText("\"You know,\" the old man begins, \"In all my 300 years, I've never had one escape. " +
+                "Not one. Of all of them, though, you've gotten the closest.\"\n\n" +
+                "Your legs continue to walk towards the old man, stepping on and over the corpses of the old " +
+                "man's past victims. You watch helplessly as his extended fingers move rhythmically with every " +
+                "step you take as he puppeteers your body, pulling you ever-closer.\n\n" +
                 "As you struggle, your hand brushes your pocket and you feel a small box.\n\n" +
                 "The matches.\n\n" +
-                "You’d nearly forgotten that you’d taken them with you, but now, " +
-                "as you’re pulled inevitably towards your death, you wonder whether they might be of some use.\n\n" +
+                "You'd nearly forgotten that you'd taken them with you, but now, as you're pulled inevitably " +
+                "towards your death, you wonder whether they might be of some use.\n\n" +
                 "What do you do?\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3390,22 +3398,23 @@ public class Story {
     //Try to use the matches
     public void tryMatches() {
         ui.ImageLabel.setIcon(Cellar4);
-        ui.mainTextArea.setText("As you struggle to regain control of your limbs, you reach into your pocket and pull out the matchbox.\n\n" +
-                "There aren’t very many inside, but if you do this right, you’ll only need one.\n\n" +
+        ui.mainTextArea.setText("As you struggle to regain control of your limbs, you reach into your pocket and " +
+                "pull out the matchbox.\n\n" +
+                "There aren't very many inside, but if you do this right, you'll only need one.\n\n" +
                 "Fumbling, you take one out of the box and attempt to strike it. It breaks.\n\n" +
-                "“To think, someone as insignificant you might have actually broken my streak,” he laughs.\n\n" +
-                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you continue to walk.\n\n" +
-                "\"I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,\" he continues to chuckle, " +
-                "\"I’d almost forgotten the thrill of the hunt.\"\n\n" +
-                "\n");
+                "\"To think, someone as insignificant you might have actually broken my streak,\" he laughs.\n\n" +
+                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you " +
+                "continue to walk.\n\n" +
+                "\"I have to give you credit: you were by far the most exhilarating kill I've had in quite a long " +
+                "time,\" he continues to chuckle, \"I'd almost forgotten the thrill of the hunt.\"\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice5.setText("Give in");
         ui.choice4.setText("Try again");
+        ui.choice5.setText("Give in");
 
         game.position4 = "tryAgain";
         game.position5 = "giveIn2";
@@ -3413,15 +3422,16 @@ public class Story {
 
     public void tryAgain() {
         ui.ImageLabel.setIcon(Cellar4);
-        ui.mainTextArea.setText("You struggle to pull a second match from the pack, praying that this one will light.\n\n" +
-                "Shakily, you strike it against the side of the box, and for a moment, " +
-                "a tiny flame ignites at the end of the match, but goes out as quickly as it started. \n\n" +
+        ui.mainTextArea.setText("You struggle to pull a second match from the pack, praying that this one will " +
+                "light.\n\n" +
+                "Shakily, you strike it against the side of the box, and for a moment, a tiny flame ignites at " +
+                "the end of the match, but goes out as quickly as it started.\n\n" +
                 "Angrily, you throw the match onto the ground.\n\n" +
                 "The old man hums at your feeble attempts, \"How cute,\" he sneers.\n\n" +
-                "\"You know, I don’t usually remember the people I use to feed." +
-                " Not very well, anyway. But you,\" he grins," +
-                " \"I don’t see myself forgetting you for the next century at least.\"\n\n" +
-                "You’re getting closer to the old man now, and no matter what you do, you can’t seem to break the spell.\n\n");
+                "\"You know, I don't usually remember the people I use to feed. Not very well, anyway. But you,\" " +
+                "he grins, \"I don't see myself forgetting you for the next century at least.\"\n\n" +
+                "You're getting closer to the old man now, and no matter what you do, you can't seem to break " +
+                "the spell.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3439,24 +3449,25 @@ public class Story {
     //room 9 - chamber (butler fight scene)
     public void matchesOneMoreTime(){
         ui.ImageLabel.setIcon(Cellar5);
-        ui.mainTextArea.setText("You’re just a few feet away from him now, and as a last-ditch effort, " +
-                "you pull a final match from the box.\n\n" +
-                "As you do so, the old man simply chuckles, continuing to pull you towards him," +
-                " \"Do you know how I came to be like this?\" he asks, reaching up his free hand to caress your face.\n\n" +
-                "You ignore his hand, instead working to strike the match against the box. " +
-                "You swipe it once and it doesn't light.\n\n" +
-                "\"I killed my best friend, and drank his blood on the floor of a church; I still have his portrait" +
-                " hanging in my house,\" he grins, holding your chin so you have no choice but to look into his eyes, " +
+        ui.mainTextArea.setText("You're just a few feet away from him now, and as a last-ditch effort, you pull " +
+                "a final match from the box.\n\n" +
+                "As you do so, the old man simply chuckles, continuing to pull you towards him, \"Do you know how " +
+                "I came to be like this?\" he asks, reaching up his free hand to caress your face.\n\n" +
+                "You ignore his hand, instead working to strike the match against the box. You swipe it once and " +
+                "it doesn't light.\n\n" +
+                "\"I killed my best friend, and drank his blood on the floor of a church; I still have his portrait " +
+                "hanging in this house,\" he grins, holding your chin so you have no choice but to look into his eyes, " +
                 "\"Your efforts, though precious, will do nothing to me.\"\n\n" +
-                "You desperately swipe the match again, and this time it lights. " +
-                "You dare to hope as the flame continues burning and you throw the match at the old man, " +
-                "hoping that his robe is flammable enough to light.\n\n" +
-                "You watch as his smug grin changes to a look of anger and terror as his robe catches and goes in up flames." +
-                " It spreads much quicker than you feel it should have, " +
-                "and before you know it the old man’s skin itself is burning with brilliant intensity.\n\n" +
-                "You feel yourself regain control of your legs, and don’t bother looking back as you sprint to the door " +
-                "on the other side of the cellar. The old man’s horrific screams echo throughout the cellar as you twist" +
-                " the handle and fling open the door, the early light of dawn bursting into the room as you sprint from the mansion.\n\n" );
+                "You desperately swipe the match again, and this time it lights. You dare to hope as the flame " +
+                "continues burning and you throw the match at the old man, hoping that his robe is flammable enough " +
+                "to light.\n\n" +
+                "You watch as his smug grin changes to a look of anger and terror as his robe catches and goes " +
+                "in up flames. It spreads much quicker than you feel it should have, and before you know it the " +
+                "old man's skin itself is burning with brilliant intensity.\n\n" +
+                "You feel yourself regain control of your legs, and don't bother looking back as you sprint to " +
+                "the door on the other side of the cellar. The old man's horrific screams echo throughout the " +
+                "cellar as you twist the handle and fling open the door, the early light of dawn bursting into the " +
+                "room as you sprint from the mansion.\n\n" );
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3472,16 +3483,17 @@ public class Story {
     public void matchesEnding() {
         ui.ImageLabel.setVisible(false);
         ui.mainTextArea.setText("As you run, you hear a crashing behind you and look back only to see Huxley Manor" +
-                "collapsing in on itself, dust rising high into the air as it implodes.\\n\\n " +
-                "Once you’re a safe distance away, you collapse onto the ground and simply watch as the place " +
-                "completely crumbles into the earth. It’s then that you see a small black cat run from the wreckage " +
+                "collapsing in on itself, dust rising high into the air as it implodes.\n\n " +
+                "Once you're a safe distance away, you collapse onto the ground and simply watch as the place " +
+                "completely crumbles into the earth. It's then that you see a small black cat run from the wreckage " +
                 "and out towards the forest on the edges of the property. It stops, looking back at you a moment, and " +
-                "lets out a small happy chirp. If you didn’t know any better, you would have thought that the meow sounded" +
-                " like a “Thank you”\n\n\n" +
-                "Congratulations! You’ve beaten the game! You’ve won! How does it feel to have unlocked one of the only" +
-                " two endings that aren't deaths? It must feel pretty good. Just so you know, your character went on to" +
-                " find their way off the streets and live a relatively happy life when all was said and done, but they " +
-                "never truly forgot (or got over) that week they spent at Huxley Manor. \n\n\n");
+                "lets out a small happy chirp. If you didn't know any better, you would have thought that the " +
+                "meow sounded like a \"Thank you\"\n\n\n" +
+                "Congratulations! You've beaten the game! You've won! How does it feel to have unlocked one " +
+                "of the only two endings that aren't deaths? It must feel pretty good. Just so you know, your " +
+                "character went on to find their way off the streets and live a relatively happy life when all " +
+                "was said and done, but they never truly forgot (or got over) that week they spent at Huxley " +
+                "Manor.\n\n");
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);
@@ -3497,16 +3509,17 @@ public class Story {
 
     public void giveIn1() {
         ui.ImageLabel.setIcon(Cellar5);
-        ui.mainTextArea.setText("You sigh, accepting your fate. Matches won’t fix the fact that you’re being controlled" +
-                " by a maniac. If anything, you figure they might even make things worse. " +
-                "So, you give in, allowing him to puppet your every move.\n\n" +
+        ui.mainTextArea.setText("You sigh, accepting your fate. Matches won't fix the fact that you're being " +
+                "controlled by a maniac. If anything, you figure they might even make things worse. So, you give " +
+                "in, allowing him to puppet your every move.\n\n" +
                 "\"To think, someone as insignificant you might have actually broken my streak,\" he laughs.\n\n" +
-                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you" +
-                " continue to walk.\n\n" +
-                "\"I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time.\"\n\n" +
-                "He continues, “You know, I don’t usually remember the people I use to feed. Not very well, anyway." +
-                " But you,\" he says, grinning, \"I don’t see myself forgetting you for the next century!\"\n\n" +
-                "You’re just a few feet away from him now, and though you’ve resigned yourself to death, you still" +
+                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you " +
+                "continue to walk.\n\n" +
+                "\"I have to give you credit: you were by far the most exhilarating kill I've had in quite a long " +
+                "time.\"\n\n" +
+                "He continues, \"You know, I don't usually remember the people I use to feed. Not very well, anyway. " +
+                "But you,\" he says, grinning, \"I don't see myself forgetting you for the next century!\"\n\n" +
+                "You're just a few feet away from him now, and though you've resigned yourself to death, you still" +
                 " begin to feel the terror rising up within you. A few tears escape your eyes as you fully realize " +
                 "that these are your final moments.\n\n" +
                 "The old man simply chuckles, continuing to pull you towards him, " +
@@ -3515,7 +3528,7 @@ public class Story {
                 "hanging in my house.\" he grins, holding your chin so you have no choice but to look into his eyes, " +
                 "\"Your tears mean nothing to me.\"\n\n" +
                 "With that, he withdraws his hand from your face and reaches into his robe. " +
-                "Before you can even process what he’s grabbing, he slices something over your throat and blood begins" +
+                "Before you can even process what he's grabbing, he slices something over your throat and blood begins" +
                 " spewing outward. You simply stare at his blood-spattered grin in horror as you fall to your knees," +
                 " then everything goes black. \n\n\n" +
                 "\n" +
@@ -3537,12 +3550,12 @@ public class Story {
 
     public void giveIn2() {
         ui.ImageLabel.setIcon(Cellar5);
-        ui.mainTextArea.setText("You sigh, accepting your fate. Matches won’t fix the fact that you’re being controlled" +
+        ui.mainTextArea.setText("You sigh, accepting your fate. Matches won't fix the fact that you're being controlled" +
                 " by a maniac. If anything, you figure they might even make things worse. " +
                 "So, you give in, allowing him to puppet your every move.\n\n" +
-                "He continues, “You know, I don’t usually remember the people I use to feed. Not very well, anyway." +
-                " But you,\" he says, grinning, \"I don’t see myself forgetting you for the next century!\"\n\n" +
-                "You’re just a few feet away from him now, and though you’ve resigned yourself to death, you still" +
+                "He continues, “You know, I don't usually remember the people I use to feed. Not very well, anyway." +
+                " But you,\" he says, grinning, \"I don't see myself forgetting you for the next century!\"\n\n" +
+                "You're just a few feet away from him now, and though you've resigned yourself to death, you still" +
                 " begin to feel the terror rising up within you. A few tears escape your eyes as you fully realize " +
                 "that these are your final moments.\n\n" +
                 "The old man simply chuckles, continuing to pull you towards him, " +
@@ -3551,7 +3564,7 @@ public class Story {
                 "hanging in my house.\" he grins, holding your chin so you have no choice but to look into his eyes, " +
                 "\"Your tears mean nothing to me.\"\n\n" +
                 "With that, he withdraws his hand from your face and reaches into his robe. " +
-                "Before you can even process what he’s grabbing, he slices something over your throat and blood begins" +
+                "Before you can even process what he's grabbing, he slices something over your throat and blood begins" +
                 " spewing outward. You simply stare at his blood-spattered grin in horror as you fall to your knees," +
                 " then everything goes black. \n\n\n" +
                 "\n" +
@@ -3573,26 +3586,24 @@ public class Story {
 
     public void giveIn3() {
         ui.ImageLabel.setIcon(Cellar5);
-        ui.mainTextArea.setText("You sigh, accepting your fate. Matches won’t fix the fact that you’re being controlled" +
-                " by a maniac. If anything, you figure they might even make things worse. " +
-                "So, you give in, allowing him to puppet your every move.\n\n" +
-                "You’re just a few feet away from him now, and though you’ve resigned yourself to death, you still" +
-                " begin to feel the terror rising up within you. A few tears escape your eyes as you fully realize " +
+        ui.mainTextArea.setText("You sigh, accepting your fate. Matches won't fix the fact that you're being " +
+                "controlled by a maniac. If anything, you figure they might even make things worse. So, you give " +
+                "in, allowing him to puppet your every move.\n\n" +
+                "You're just a few feet away from him now, and though you've resigned yourself to death, you still " +
+                "begin to feel the terror rising up within you. A few tears escape your eyes as you fully realize " +
                 "that these are your final moments.\n\n" +
-                "The old man simply chuckles, continuing to pull you towards him, " +
-                "\"Do you know how I came to be like this?\" he asks, reaching up his free hand to caress your face, " +
-                "\"I killed my best friend, and drank his blood on the floor of a church; I still have his portrait " +
-                "hanging in my house.\" he grins, holding your chin so you have no choice but to look into his eyes, " +
-                "\"Your tears mean nothing to me.\"\n\n" +
-                "With that, he withdraws his hand from your face and reaches into his robe. " +
-                "Before you can even process what he’s grabbing, he slices something over your throat and blood begins" +
-                " spewing outward. You simply stare at his blood-spattered grin in horror as you fall to your knees," +
-                " then everything goes black. \n\n\n" +
-                "\n" +
-                "Arrrggg you almost made it! So close! " +
-                "This game IS beatable, though, and you were right there knocking on the door of victory, " +
-                "so since you made it this far you might as well restart and try again! " +
-                "Perhaps if you were a little more persistent, things may have turned out better?\n\n");
+                "The old man simply chuckles, continuing to pull you towards him, \"Do you know how I came to be " +
+                "like this?\" he asks, reaching up his free hand to caress your face, \"I killed my best friend, " +
+                "and drank his blood on the floor of a church; I still have his portrait hanging in this house.\" " +
+                "he grins, holding your chin so you have no choice but to look into his eyes, \"Your tears mean " +
+                "nothing to me.\"\n\n" +
+                "With that, he withdraws his hand from your face and reaches into his robe. Before you can even " +
+                "process what he's grabbing, he slices something over your throat and blood begins spewing outward. " +
+                "You simply stare at his blood-spattered grin in horror as you fall to your knees, then everything " +
+                "goes black.\n\n\n" +
+                "Arrrggg you almost made it! So close! This game IS beatable, though, and you were right there " +
+                "knocking on the door of victory, so since you made it this far you might as well restart and try " +
+                "again! Perhaps if you were a little more persistent, things may have turned out better?\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3607,16 +3618,15 @@ public class Story {
 
     public void petCatEnding1() {
         ui.ImageLabel.setIcon(Cellar3);
-        ui.mainTextArea.setText("\"You know,\" the old man begins," +
-                "\"In all my 300 years, I’ve never had one escape. " +
-                "Not one. Of all of them, though, you’ve gotten the closest.\"\n\n" +
-                "Your legs continue to walk towards the old man, stepping on and over the corpses of past victims." +
-                " You watch helplessly as his extended fingers move rhythmically with every step you take, " +
-                "pulling you ever-closer.\n\n" +
+        ui.mainTextArea.setText("\"You know,\" the old man begins, \"In all my 300 years, I've never had one escape. " +
+                "Not one. Of all of them, though, you've gotten the closest.\"\n\n" +
+                "Your legs continue to walk towards the old man, stepping on and over the corpses of past victims. " +
+                "You watch helplessly as his extended fingers move rhythmically with every step you take, pulling " +
+                "you ever-closer.\n\n" +
                 "As you struggle, you see someone quietly coming down the stairs.\n\n" +
-                "It’s the butler.\n\n" +
-                "You watch as he places a finger to his lips, as if to tell you to stay silent, then points at the old" +
-                " man before shushing you once more. \n\n");
+                "It's the butler.\n\n" +
+                "You watch as he places a finger to his lips, as if to tell you to stay silent, then points at the " +
+                "old man before shushing you once more. \n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3632,17 +3642,17 @@ public class Story {
 
     public void petCatEnding2() {
         ui.ImageLabel.setIcon(Cellar4);
-        ui.mainTextArea.setText("As you struggle to regain control of your limbs, you watch as the butler slowly descends the stairs, " +
-                "his eyes locked on the old man like a hunter eyeing its prey.\n\n" +
-                "\"To think, someone as insignificant you might have actually broken my streak,\"" +
-                " the old man laughs.\n\n" +
-                "As he does, he begins to move his fingers less methodically," +
-                " jerking your legs painfully as you continue to walk.\n\n" +
-                "\"I have to give you credit: you were by far the most exhilarating kill I’ve had in quite a long time,\"" +
-                " he continues to chuckle, \"I’d almost forgotten the thrill of the hunt.\"\n\n" +
-                "You’re just a few feet away from him now, and as you struggle, beginning to plead with the old man to " +
-                "please let you live, you see the butler approach him from behind, " +
-                "though the old man still doesn't seem to notice.\n\n");
+        ui.mainTextArea.setText("As you struggle to regain control of your limbs, you watch as the butler slowly " +
+                "descends the stairs, his eyes locked on the old man like a hunter eyeing its prey.\n\n" +
+                "\"To think, someone as insignificant you might have actually broken my streak,\" the old " +
+                "man laughs.\n\n" +
+                "As he does, he begins to move his fingers less methodically, jerking your legs painfully as you " +
+                "continue to walk.\n\n" +
+                "\"I have to give you credit: you were by far the most exhilarating kill I've had in quite a long " +
+                "time,\" he continues to chuckle, \"I'd almost forgotten the thrill of the hunt.\"\n\n" +
+                "You're just a few feet away from him now, and as you struggle, beginning to plead with the old man " +
+                "to please let you live, you see the butler approach him from behind, though the old man " +
+                "doesn't seem to notice.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
@@ -3659,30 +3669,29 @@ public class Story {
     public void petCatEnding3() {
         ui.ImageLabel.setIcon(Cellar5);
         ui.mainTextArea.setText("\"Do you know how I came to be like this?\" he asks, reaching up his free hand to " +
-                "caress your face, " +
-                "\"I killed my best friend, and drank his blood on the floor of a church. I still have his portrait " +
-                "hanging in my house,” he grins, holding your chin so you have no choice but to look into his eyes," +
-                " \"Your pleas mean nothing to me.\"\n\n" +
-                "You see a pair of gloved hands place themselves on the old man’s head: one on the top, and one" +
-                " under his chin. Before the old man has a chance to comprehend what’s happening, his neck is" +
-                " twisted from his spine and he crumples to the ground.\n\n" +
+                "caress your face, \"I killed my best friend, and drank his blood on the floor of a church. I still " +
+                "have his portrait hanging in my house,\" he grins, holding your chin so you have no choice but " +
+                "to look into his eyes, \"Your pleas mean nothing to me.\"\n\n" +
+                "You see a pair of gloved hands place themselves on the old man's head: one on the top, and one " +
+                "under his chin. Before the old man has a chance to comprehend what's happening, his neck is " +
+                "twisted from his spine and he crumples to the ground.\n\n" +
                 "You also nearly fall to your knees as the old man loses control of your legs, but the butler catches " +
                 "you and helps you to your feet, though he, too, seems weak.\n\n" +
-                "He points at the door, \"Get out of here! This place is going to collapse.\" He seems to almost beg you " +
-                "as his commands border on a yell.\n\n" +
+                "He points at the door, \"Get out of here! This place is going to collapse.\" He seems to almost beg " +
+                "you as his commands border on a yell.\n\n" +
                 "You go to leave and see the butler begin to sink to his knees. For a moment, you hesitate.\n\n" +
-                "\"Go!\" he screams hoarsely, \"I am going to die because I killed the man I’m bound to, but YOU can " +
-                "live. GO!”\n\n" +
-                "You watch as he falls forward before his elbows give out and he sinks into the pile of bodies that" +
-                " litter the ground. Slowly his body begins to morph, shrinking back into that of a cat before curling " +
+                "\"Go!\" he screams hoarsely, \"I am going to die because I killed the man I'm bound to, but YOU can " +
+                "live. GO!\"\n\n" +
+                "You watch as he falls forward before his elbows give out and he sinks into the pile of bodies that " +
+                "litter the ground. Slowly his body begins to morph, shrinking back into that of a cat before curling " +
                 "into a tight ball. Then, after a moment, he goes limp. \n\n" +
-                "You hear the walls begin to crack and realize you haven’t got much time. So, quickly as you can, you" +
-                " sprint to the door and fling it open, running out into the light of dawn as Huxley Manor caves" +
-                " in behind you.\n\n" +
-                "Congratulations! You’ve beaten the game! You’ve won! How does it feel to have unlocked one of the " +
+                "You hear the walls begin to crack and realize you haven't got much time. So, quickly as you can, " +
+                "you sprint to the door and fling it open, running out into the light of dawn as Huxley Manor " +
+                "caves in behind you.\n\n\n" +
+                "Congratulations! You've beaten the game! You've won! How does it feel to have unlocked one of the " +
                 "only two endings that aren't deaths? It must feel pretty good. Just so you know, your character " +
                 "went on to find their way off the streets and live a relatively happy life when all was said and " +
-                "done, but they never truly forgot (or got over) that week they spent at Huxley Manor. \n\n");
+                "done, but they never truly forgot (or got over) that week they spent at Huxley Manor.\n\n");
 
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
