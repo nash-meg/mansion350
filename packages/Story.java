@@ -2466,10 +2466,10 @@ public class Story {
         ui.choice2.setText("Drink the purple potion");
         ui.choice3.setText("Drink the yellow potion");
         ui.choice4.setText("Drink the labeled clear potion");
-        ui.choice5.setText("Drink the unlabeled clear potion");  //map?? Potion Room (10)
+        ui.choice5.setText("Drink the unlabeled clear potion");
 
         game.position2 = "purplePotion";
-        game.position3 = " yellowPotion";
+        game.position3 = "yellowPotion";
         game.position4 = "labeledClearPotion";
         game.position5 = "unlabeledClearPotion";
 
@@ -2583,13 +2583,13 @@ public class Story {
         ui.choice4.setVisible(true);
         ui.choice5.setVisible(true);
 
-        ui.choice3.setText("Drink the unlabeled clear potion");
         ui.choice2.setText("Drink the purple potion");
+        ui.choice3.setText("Drink the unlabeled clear potion");
         ui.choice4.setText("Drink the yellow potion");
         ui.choice5.setText("Leave room"); //map?? Potion Room (10)
 
-        game.position3 = "unlabeledClearPotion";
         game.position2 = "purplePotion";
+        game.position3 = "unlabeledClearPotion";
         game.position4 = "yellowPotion";
         game.position5 = "LeaveRoom10";
     }
